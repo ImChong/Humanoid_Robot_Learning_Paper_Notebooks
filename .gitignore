@@ -1,0 +1,3 @@
+# PDF files (too large for git)
+*.pdf
+.obsidian/

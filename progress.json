@@ -1,0 +1,207 @@
+{
+  "current_paper_index": 2,
+  "confirmed": false,
+  "section": "Loco-Manipulation and Whole-Body-Control",
+  "papers": [
+    {
+      "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
+      "arxiv": "https://arxiv.org/abs/2603.03279",
+      "folder": "papers/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation",
+      "note_file": "ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.md",
+      "pdf_file": "ULTRA.pdf",
+      "status": "done",
+      "start_date": "2026-03-07",
+      "done_date": "2026-03-08"
+    },
+    {
+      "title": "OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control",
+      "arxiv": "https://arxiv.org/abs/2602.23843",
+      "folder": "papers/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control",
+      "note_file": "OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.md",
+      "pdf_file": "OmniXtreme.pdf",
+      "status": "done",
+      "start_date": "2026-03-08",
+      "done_date": "2026-03-08"
+    },
+    {
+      "title": "PPO: Proximal Policy Optimization",
+      "arxiv": "https://arxiv.org/abs/1707.06347",
+      "folder": "papers/PPO_Proximal_Policy_Optimization",
+      "note_file": "PPO_Proximal_Policy_Optimization.md",
+      "pdf_file": "PPO_Proximal_Policy_Optimization.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "AWR: Advantage Weighted Regression",
+      "arxiv": "https://arxiv.org/abs/1910.00177",
+      "folder": "papers/AWR_Advantage_Weighted_Regression",
+      "note_file": "AWR_Advantage_Weighted_Regression.md",
+      "pdf_file": "AWR.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills",
+      "arxiv": "https://arxiv.org/abs/1804.02717",
+      "folder": "papers/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills",
+      "note_file": "DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.md",
+      "pdf_file": "DeepMimic.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
+      "arxiv": "https://arxiv.org/abs/2104.02180",
+      "folder": "papers/AMP_Adversarial_Motion_Priors",
+      "note_file": "AMP_Adversarial_Motion_Priors.md",
+      "pdf_file": "AMP.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "PHC: Perpetual Humanoid Control for Real-time Simulated Avatars",
+      "arxiv": "https://arxiv.org/abs/2305.06456",
+      "folder": "papers/PHC_Perpetual_Humanoid_Control",
+      "note_file": "PHC_Perpetual_Humanoid_Control.md",
+      "pdf_file": "PHC.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "ADD: Adversarial Disentanglement and Distillation for Physically Simulated Character Control",
+      "arxiv": "https://arxiv.org/abs/2501.09459",
+      "folder": "papers/ADD_Adversarial_Disentanglement_and_Distillation",
+      "note_file": "ADD_Adversarial_Disentanglement_and_Distillation.md",
+      "pdf_file": "ADD.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "ASE: Adversarial Skill Embeddings for Large-Scale Motion Control",
+      "arxiv": "https://arxiv.org/abs/2205.01906",
+      "folder": "papers/ASE_Adversarial_Skill_Embeddings",
+      "note_file": "ASE_Adversarial_Skill_Embeddings.md",
+      "pdf_file": "ASE.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "CALM: Conditional Adversarial Latent Models for Directable Virtual Characters",
+      "arxiv": "https://arxiv.org/abs/2305.02195",
+      "folder": "papers/CALM_Conditional_Adversarial_Latent_Models",
+      "note_file": "CALM_Conditional_Adversarial_Latent_Models.md",
+      "pdf_file": "CALM.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "PULSE: Physically Plausible Universal Latent Skill Extraction",
+      "arxiv": "https://arxiv.org/abs/2310.15474",
+      "folder": "papers/PULSE_Physically_Plausible_Universal_Latent_Skill_Extraction",
+      "note_file": "PULSE_Physically_Plausible_Universal_Latent_Skill_Extraction.md",
+      "pdf_file": "PULSE.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+      "arxiv": "https://arxiv.org/abs/2303.04137",
+      "folder": "papers/Diffusion_Policy_Visuomotor_Policy_Learning",
+      "note_file": "Diffusion_Policy_Visuomotor_Policy_Learning.md",
+      "pdf_file": "Diffusion_Policy.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion",
+      "arxiv": "https://arxiv.org/abs/2508.08241",
+      "folder": "papers/BeyondMimic_From_Motion_Tracking_to_Versatile_Humanoid_Control",
+      "note_file": "BeyondMimic_From_Motion_Tracking_to_Versatile_Humanoid_Control.md",
+      "pdf_file": "BeyondMimic.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "LCP: Learning Continuous Control with Locally Conditioned Policies",
+      "arxiv": "https://arxiv.org/abs/2501.09459",
+      "folder": "papers/LCP_Sim-to-Real_Action_Smoothing",
+      "note_file": "LCP_Sim-to-Real_Action_Smoothing.md",
+      "pdf_file": "LCP.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations",
+      "arxiv": "https://arxiv.org/abs/2602.21723",
+      "folder": "papers/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations",
+      "note_file": "LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.md",
+      "pdf_file": "LessMimic.pdf",
+      "status": "reading",
+      "start_date": "2026-03-08"
+    },
+    {
+      "title": "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
+      "arxiv": "https://arxiv.org/abs/2602.16705",
+      "folder": "papers/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation",
+      "note_file": "Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.md",
+      "pdf_file": "Learning_Humanoid_End-Effector.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety",
+      "arxiv": "https://arxiv.org/abs/2602.16511",
+      "folder": "papers/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety",
+      "note_file": "VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.md",
+      "pdf_file": "VIGOR.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
+      "arxiv": "https://arxiv.org/abs/2603.12263",
+      "folder": "papers/Psi0_An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation",
+      "note_file": "Psi0_An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation.md",
+      "pdf_file": "Psi0.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL",
+      "arxiv": "https://arxiv.org/abs/2603.10306",
+      "folder": "papers/SteadyTray_Learning_Object_Balancing_Tasks_via_Residual_RL",
+      "note_file": "SteadyTray_Learning_Object_Balancing_Tasks_via_Residual_RL.md",
+      "pdf_file": "SteadyTray.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",
+      "arxiv": "https://arxiv.org/abs/2603.09170",
+      "folder": "papers/ZeroWBC_Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video",
+      "note_file": "ZeroWBC_Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video.md",
+      "pdf_file": "ZeroWBC.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "Embedding Classical Balance Control Principles in RL for Humanoid Recovery",
+      "arxiv": "https://arxiv.org/abs/2603.08619",
+      "folder": "papers/Embedding_Classical_Balance_Control_in_RL_for_Humanoid_Recovery",
+      "note_file": "Embedding_Classical_Balance_Control_in_RL_for_Humanoid_Recovery.md",
+      "pdf_file": "Embedding_Classical_Balance_Control.pdf",
+      "status": "pending",
+      "start_date": null
+    },
+    {
+      "title": "FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid",
+      "arxiv": "https://arxiv.org/abs/2603.08961",
+      "folder": "papers/FAME_Force-Adaptive_RL_for_Expanding_Manipulation_Envelope",
+      "note_file": "FAME_Force-Adaptive_RL_for_Expanding_Manipulation_Envelope.md",
+      "pdf_file": "FAME.pdf",
+      "status": "pending",
+      "start_date": null
+    }
+  ]
+}
