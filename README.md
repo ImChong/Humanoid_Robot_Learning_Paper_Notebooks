@@ -47,17 +47,12 @@
 
 ## 进度
 
-### 已完成（Loco-Manipulation 前置）
-
-| #   | 论文                                                                                       | 笔记                                                                                          | PDF           | 状态     | 日期         |
-| --- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------- | ------ | ---------- |
-| 1   | ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation   | [[ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation]]   | [[ULTRA.pdf]] | ✅ 完成  | 2026-03-07 |
-| 2   | OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control             | [[OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control]]             | [[OmniXtreme.pdf]] | ✅ 完成  | 2026-03-08 |
-
-### 基础路线图（当前）
+### Loco-Manipulation & 基础路线图
 
 | #   | 论文                                                                                       | 笔记                                                                                          | PDF           | 状态     | 日期         | 路线 |
 | --- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------- | ------ | ---------- | ---- |
+| 1   | ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation   | [[ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation]]   | [[ULTRA.pdf]] | ✅ 完成  | 2026-03-07 | Loco-Manip |
+| 2   | OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control             | [[OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control]]             | [[OmniXtreme.pdf]] | ✅ 完成  | 2026-03-08 | Loco-Manip |
 | 3   | PPO: Proximal Policy Optimization                                                        | [[PPO_Proximal_Policy_Optimization]]                                                        | [[PPO_Proximal_Policy_Optimization.pdf]] | 📖 进行中 | -          | 基础RL |
 | 4   | AWR: Advantage Weighted Regression                                                       | [[AWR_Advantage_Weighted_Regression]]                                                       | [[AWR.pdf]] | ⏳ 待读   | -          | 基础RL |
 | 5   | DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills                     | [[DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills]]                     | [[DeepMimic.pdf]] | ⏳ 待读   | -          | 精确模仿 |
@@ -71,6 +66,14 @@
 | 13  | BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion     | [[BeyondMimic_From_Motion_Tracking_to_Versatile_Humanoid_Control]]                          | [[BeyondMimic.pdf]] | ⏳ 待读   | -          | 扩散+控制 |
 | 14  | Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World | [[Domain_Randomization_Sim-to-Real_Transfer]]                                               | [[Domain_Randomization.pdf]] | ⏳ 待读   | -          | Sim-to-Real |
 | 15  | LCP: Sim-to-Real Action Smoothing                                                        | [[LCP_Sim-to-Real_Action_Smoothing]]                                                        | [[LCP.pdf]] | ⏳ 待读   | -          | Sim-to-Real |
+| 16  | LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations | [[LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations]] | [[LessMimic.pdf]]  | ⏳ 待读   | -          | Loco-Manip |
+| 17  | Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation      | [[Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation]]     | [[Learning_Humanoid_End-Effector.pdf]] | ⏳ 待读   | -          | Loco-Manip |
+| 18  | VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety                 | [[VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety]]                 | [[VIGOR.pdf]]      | ⏳ 待读   | -          | Loco-Manip |
+| 19  | Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation               | [[Psi0_An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation]]               | [[Psi0.pdf]] | ⏳ 待读   | -          | Loco-Manip |
+| 20  | SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL   | [[SteadyTray_Learning_Object_Balancing_Tasks_via_Residual_RL]]                               | [[SteadyTray.pdf]] | ⏳ 待读   | -          | Loco-Manip |
+| 21  | ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video              | [[ZeroWBC_Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video]]               | [[ZeroWBC.pdf]] | ⏳ 待读   | -          | Loco-Manip |
+| 22  | Embedding Classical Balance Control Principles in RL for Humanoid Recovery               | [[Embedding_Classical_Balance_Control_in_RL_for_Humanoid_Recovery]]                          | [[Embedding_Classical_Balance_Control.pdf]] | ⏳ 待读   | -          | Loco-Manip |
+| 23  | FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid | [[FAME_Force-Adaptive_RL_for_Expanding_Manipulation_Envelope]]                               | [[FAME.pdf]] | ⏳ 待读   | -          | Loco-Manip |
 
 ### ⭐ 高影响力精选（基础路线图之后优先读）
 
@@ -123,19 +126,6 @@
 | H21 | [Humanoid-Gym: RL for Humanoid Robot with Zero-Shot Sim2Real Transfer](https://arxiv.org/abs/2404.05695) | Sim | 人形机器人 RL 训练平台 |
 | H22 | [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](https://arxiv.org/abs/2403.10506) | Sim | 标准 benchmark |
 | H23 | [BEHAVIOR Robot Suite: Real-World Whole-Body Manipulation for Everyday Tasks](https://arxiv.org/abs/2503.05652) 🌟 | Sim | 真实世界全身操作 benchmark |
-
-### Loco-Manipulation 论文（路线图之后）
-
-| #   | 论文                                                                                       | 笔记                                                                                          | PDF           | 状态     | 日期         |
-| --- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------- | ------ | ---------- |
-| 16  | LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations | [[LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations]] | [[LessMimic.pdf]]  | ⏳ 待读   | -          |
-| 17  | Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation      | [[Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation]]     | [[Learning_Humanoid_End-Effector.pdf]] | ⏳ 待读   | -          |
-| 18  | VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety                 | [[VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety]]                 | [[VIGOR.pdf]]      | ⏳ 待读   | -          |
-| 19  | Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation               | [[Psi0_An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation]]               | [[Psi0.pdf]] | ⏳ 待读   | -          |
-| 20  | SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL   | [[SteadyTray_Learning_Object_Balancing_Tasks_via_Residual_RL]]                               | [[SteadyTray.pdf]] | ⏳ 待读   | -          |
-| 21  | ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video              | [[ZeroWBC_Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video]]               | [[ZeroWBC.pdf]] | ⏳ 待读   | -          |
-| 22  | Embedding Classical Balance Control Principles in RL for Humanoid Recovery               | [[Embedding_Classical_Balance_Control_in_RL_for_Humanoid_Recovery]]                          | [[Embedding_Classical_Balance_Control.pdf]] | ⏳ 待读   | -          |
-| 23  | FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid | [[FAME_Force-Adaptive_RL_for_Expanding_Manipulation_Envelope]]                               | [[FAME.pdf]] | ⏳ 待读   | -          |
 
 ### Loco-Manipulation and Whole-Body-Control（151篇）
 
