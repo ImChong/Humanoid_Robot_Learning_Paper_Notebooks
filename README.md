@@ -72,6 +72,58 @@
 | 14  | Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World | [[Domain_Randomization_Sim-to-Real_Transfer]]                                               | [[Domain_Randomization.pdf]] | ⏳ 待读   | -          | Sim-to-Real |
 | 15  | LCP: Sim-to-Real Action Smoothing                                                        | [[LCP_Sim-to-Real_Action_Smoothing]]                                                        | [[LCP.pdf]] | ⏳ 待读   | -          | Sim-to-Real |
 
+### ⭐ 高影响力精选（基础路线图之后优先读）
+
+> 从 445 篇新论文中筛选出的高影响力工作。选择标准：🌟开源、经典/奠基性、与 RL/模仿学习运动控制高度相关、知名实验室代表作。
+
+#### Whole-Body Control 核心
+
+| #   | 论文 | 来源 | 理由 |
+| --- | ---- | ---- | ---- |
+| H1  | [Expressive Whole-Body Control for Humanoid Robots](https://arxiv.org/abs/2402.16796) 🌟 | WBC | 开源，表达性全身控制的基础工作 |
+| H2  | [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](https://arxiv.org/abs/2410.21229) | WBC | 通用神经 WBC，影响力极大 |
+| H3  | [ExBody2: Advanced Expressive Humanoid Whole-Body Control](https://arxiv.org/abs/2412.13196) | WBC | ExBody 系列进化，实机验证 |
+| H4  | [HugWBC: A Unified and General Humanoid Whole-Body Controller](https://arxiv.org/abs/2502.03206) | WBC | 统一框架，工程参考价值高 |
+| H5  | [SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control](https://arxiv.org/abs/2511.07820) | WBC | NVIDIA，大规模 motion tracking |
+| H6  | [Learning from Massive Human Videos for Universal Humanoid Pose Control](https://arxiv.org/abs/2412.14172) | WBC | UH-1，海量人类视频学习 |
+
+#### 遥操作与模仿学习
+
+| #   | 论文 | 来源 | 理由 |
+| --- | ---- | ---- | ---- |
+| H7  | [HumanPlus: Humanoid Shadowing and Imitation from Humans](https://arxiv.org/abs/2406.10454) 🌟 | Teleop | Stanford，人形遥操作开山之作 |
+| H8  | [OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation](https://arxiv.org/abs/2406.08858) 🌟 | Teleop | LeCAR-Lab，通用 H2H 遥操作 |
+| H9  | [HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit](https://arxiv.org/abs/2502.13013) 🌟 | Teleop | OpenRobotLab，外骨骼遥操作 |
+| H10 | [EgoMimic: Scaling Imitation Learning via Egocentric Video](https://arxiv.org/abs/2410.24221) 🌟 | Manip | 自我中心视角模仿学习 |
+| H11 | [Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies](https://arxiv.org/abs/2410.10803) 🌟 | Manip | 泽洋杰，3D 扩散策略 |
+
+#### Locomotion 经典
+
+| #   | 论文 | 来源 | 理由 |
+| --- | ---- | ---- | ---- |
+| H12 | [Real-World Humanoid Locomotion with Reinforcement Learning](https://arxiv.org/abs/2303.03381) | Loco | Berkeley，首个真实世界人形 RL 行走 |
+| H13 | [Humanoid Locomotion as Next Token Prediction](https://arxiv.org/abs/2402.19469) | Loco | 把运动控制建模为 token 预测，新范式 |
+| H14 | [Humanoid Parkour Learning](https://arxiv.org/abs/2406.10759) | Loco | 人形跑酷，高动态控制 |
+| H15 | [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](https://arxiv.org/abs/2512.01996) | Loco | 极快 sim-to-real，工程价值高 |
+| H16 | [ECO: Energy-Constrained Optimization with RL for Humanoid Walking](https://arxiv.org/abs/2602.06445) 🌟 | Loco | 能量优化行走，开源 |
+
+#### Sim-to-Real & Foundation Model
+
+| #   | 论文 | 来源 | 理由 |
+| --- | ---- | ---- | ---- |
+| H17 | [Learning Agile and Dynamic Motor Skills for Legged Robots](https://arxiv.org/abs/1901.08652) | S2R | ANYmal 经典，sim-to-real RL 奠基 |
+| H18 | [ASAP: Aligning Simulation and Real-World Physics for Agile Humanoid Skills](https://agile.human2humanoid.com/) | S2R | sim-real 物理对齐 |
+| H19 | [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](https://arxiv.org/abs/2503.14734) | Manip | NVIDIA，人形机器人基础模型 |
+| H20 | [Behavior Foundation Model for Humanoid Robots](https://arxiv.org/abs/2509.13780) | WBC | 行为基础模型 |
+
+#### 仿真平台 & 工具
+
+| #   | 论文 | 来源 | 理由 |
+| --- | ---- | ---- | ---- |
+| H21 | [Humanoid-Gym: RL for Humanoid Robot with Zero-Shot Sim2Real Transfer](https://arxiv.org/abs/2404.05695) | Sim | 人形机器人 RL 训练平台 |
+| H22 | [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](https://arxiv.org/abs/2403.10506) | Sim | 标准 benchmark |
+| H23 | [BEHAVIOR Robot Suite: Real-World Whole-Body Manipulation for Everyday Tasks](https://arxiv.org/abs/2503.05652) 🌟 | Sim | 真实世界全身操作 benchmark |
+
 ### Loco-Manipulation 论文（路线图之后）
 
 | #   | 论文                                                                                       | 笔记                                                                                          | PDF           | 状态     | 日期         |
