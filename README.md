@@ -51,34 +51,19 @@
 
 | #   | 论文                                                                                       | 笔记                                                                                          | PDF           | 状态     | 日期         | 路线 |
 | --- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------- | ------ | ---------- | ---- |
-| 1   | ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation   | [[ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation]]   | [[ULTRA.pdf]] | ✅ 完成  | 2026-03-07 | 前置 |
-| 2   | OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control             | [[OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control]]             | [[OmniXtreme.pdf]] | ✅ 完成  | 2026-03-08 | 前置 |
-| 3   | PPO: Proximal Policy Optimization                                                        | [[PPO_Proximal_Policy_Optimization]]                                                        | [[PPO_Proximal_Policy_Optimization.pdf]] | 📖 进行中 | -          | 基础RL |
-| 4   | AWR: Advantage Weighted Regression                                                       | [[AWR_Advantage_Weighted_Regression]]                                                       | [[AWR.pdf]] | ⏳ 待读   | -          | 基础RL |
-| 5   | DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills                     | [[DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills]]                     | [[DeepMimic.pdf]] | ⏳ 待读   | -          | 精确模仿 |
-| 6   | AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control              | [[AMP_Adversarial_Motion_Priors]]                                                           | [[AMP.pdf]] | ⏳ 待读   | -          | 风格学习 |
-| 7   | PHC: Perpetual Humanoid Control for Real-time Simulated Avatars                          | [[PHC_Perpetual_Humanoid_Control]]                                                          | [[PHC.pdf]] | ⏳ 待读   | -          | 精确模仿 |
-| 8   | ADD: Adversarial Disentanglement and Distillation                                        | [[ADD_Adversarial_Disentanglement_and_Distillation]]                                        | [[ADD.pdf]] | ⏳ 待读   | -          | 风格学习 |
-| 9   | ASE: Adversarial Skill Embeddings for Large-Scale Motion Control                         | [[ASE_Adversarial_Skill_Embeddings]]                                                        | [[ASE.pdf]] | ⏳ 待读   | -          | 技能组合 |
-| 10  | CALM: Conditional Adversarial Latent Models for Directable Virtual Characters            | [[CALM_Conditional_Adversarial_Latent_Models]]                                              | [[CALM.pdf]] | ⏳ 待读   | -          | 技能组合 |
-| 11  | PULSE: Physically Plausible Universal Latent Skill Extraction                            | [[PULSE_Physically_Plausible_Universal_Latent_Skill_Extraction]]                            | [[PULSE.pdf]] | ⏳ 待读   | -          | 技能组合 |
-| 12  | Diffusion Policy: Visuomotor Policy Learning via Action Diffusion                        | [[Diffusion_Policy_Visuomotor_Policy_Learning]]                                             | [[Diffusion_Policy.pdf]] | ⏳ 待读   | -          | 扩散+控制 |
-| 13  | BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion     | [[BeyondMimic_From_Motion_Tracking_to_Versatile_Humanoid_Control]]                          | [[BeyondMimic.pdf]] | ⏳ 待读   | -          | 扩散+控制 |
-| 14  | Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World | [[Domain_Randomization_Sim-to-Real_Transfer]]                                               | [[Domain_Randomization.pdf]] | ⏳ 待读   | -          | Sim-to-Real |
-| 15  | LCP: Sim-to-Real Action Smoothing                                                        | [[LCP_Sim-to-Real_Action_Smoothing]]                                                        | [[LCP.pdf]] | ⏳ 待读   | -          | Sim-to-Real |
-
-### Loco-Manipulation（路线图之后）
-
-| #   | 论文                                                                                       | 笔记                                                                                          | PDF           | 状态     | 日期         |
-| --- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------- | ------ | ---------- |
-| 16  | LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations | [[LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations]] | [[LessMimic.pdf]]  | ⏳ 待读   | -          |
-| 17  | Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation      | [[Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation]]     | [[Learning_Humanoid_End-Effector.pdf]] | ⏳ 待读   | -          |
-| 18  | VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety                 | [[VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety]]                 | [[VIGOR.pdf]]      | ⏳ 待读   | -          |
-| 19  | Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation               | [[Psi0_An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation]]               | [[Psi0.pdf]] | ⏳ 待读   | -          |
-| 20  | SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL   | [[SteadyTray_Learning_Object_Balancing_Tasks_via_Residual_RL]]                               | [[SteadyTray.pdf]] | ⏳ 待读   | -          |
-| 21  | ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video              | [[ZeroWBC_Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video]]               | [[ZeroWBC.pdf]] | ⏳ 待读   | -          |
-| 22  | Embedding Classical Balance Control Principles in RL for Humanoid Recovery               | [[Embedding_Classical_Balance_Control_in_RL_for_Humanoid_Recovery]]                          | [[Embedding_Classical_Balance_Control.pdf]] | ⏳ 待读   | -          |
-| 23  | FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid | [[FAME_Force-Adaptive_RL_for_Expanding_Manipulation_Envelope]]                               | [[FAME.pdf]] | ⏳ 待读   | -          |
+| 1   | PPO: Proximal Policy Optimization                                                        | [[PPO_Proximal_Policy_Optimization]]                                                        | [[PPO_Proximal_Policy_Optimization.pdf]] | 📖 进行中 | -          | 基础RL |
+| 2   | AWR: Advantage Weighted Regression                                                       | [[AWR_Advantage_Weighted_Regression]]                                                       | [[AWR.pdf]] | ⏳ 待读   | -          | 基础RL |
+| 3   | DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills                     | [[DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills]]                     | [[DeepMimic.pdf]] | ⏳ 待读   | -          | 精确模仿 |
+| 4   | AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control              | [[AMP_Adversarial_Motion_Priors]]                                                           | [[AMP.pdf]] | ⏳ 待读   | -          | 风格学习 |
+| 5   | PHC: Perpetual Humanoid Control for Real-time Simulated Avatars                          | [[PHC_Perpetual_Humanoid_Control]]                                                          | [[PHC.pdf]] | ⏳ 待读   | -          | 精确模仿 |
+| 6   | ADD: Adversarial Disentanglement and Distillation                                        | [[ADD_Adversarial_Disentanglement_and_Distillation]]                                        | [[ADD.pdf]] | ⏳ 待读   | -          | 风格学习 |
+| 7   | ASE: Adversarial Skill Embeddings for Large-Scale Motion Control                         | [[ASE_Adversarial_Skill_Embeddings]]                                                        | [[ASE.pdf]] | ⏳ 待读   | -          | 技能组合 |
+| 8   | CALM: Conditional Adversarial Latent Models for Directable Virtual Characters            | [[CALM_Conditional_Adversarial_Latent_Models]]                                              | [[CALM.pdf]] | ⏳ 待读   | -          | 技能组合 |
+| 9   | PULSE: Physically Plausible Universal Latent Skill Extraction                            | [[PULSE_Physically_Plausible_Universal_Latent_Skill_Extraction]]                            | [[PULSE.pdf]] | ⏳ 待读   | -          | 技能组合 |
+| 10  | Diffusion Policy: Visuomotor Policy Learning via Action Diffusion                        | [[Diffusion_Policy_Visuomotor_Policy_Learning]]                                             | [[Diffusion_Policy.pdf]] | ⏳ 待读   | -          | 扩散+控制 |
+| 11  | BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion     | [[BeyondMimic_From_Motion_Tracking_to_Versatile_Humanoid_Control]]                          | [[BeyondMimic.pdf]] | ⏳ 待读   | -          | 扩散+控制 |
+| 12  | Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World | [[Domain_Randomization_Sim-to-Real_Transfer]]                                               | [[Domain_Randomization.pdf]] | ⏳ 待读   | -          | Sim-to-Real |
+| 13  | LCP: Sim-to-Real Action Smoothing                                                        | [[LCP_Sim-to-Real_Action_Smoothing]]                                                        | [[LCP.pdf]] | ⏳ 待读   | -          | Sim-to-Real |
 
 ### ⭐ 高影响力精选（基础路线图之后优先读）
 
@@ -132,46 +117,54 @@
 | H22 | [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](https://arxiv.org/abs/2403.10506) | Sim | 标准 benchmark |
 | H23 | [BEHAVIOR Robot Suite: Real-World Whole-Body Manipulation for Everyday Tasks](https://arxiv.org/abs/2503.05652) 🌟 | Sim | 真实世界全身操作 benchmark |
 
-### Loco-Manipulation and Whole-Body-Control（151篇）
+### Loco-Manipulation and Whole-Body-Control
 
 | #   | 论文 | 日期 | 🌟 | 状态 |
 | --- | ---- | ---- | -- | ---- |
-| 24  | LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data | 2026.03 |  | ⏳ 待读 |
-| 25  | [Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching](https://arxiv.org/abs/2602.15827) | 2026.02 |  | ⏳ 待读 |
-| 26  | [MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction](https://arxiv.org/abs/2602.15733) | 2026.02 |  | ⏳ 待读 |
-| 27  | [General Humanoid Whole-Body Control via Pretraining and Fast Adaptation](https://arxiv.org/abs/2602.11929) | 2026.02 |  | ⏳ 待读 |
-| 28  | [HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model](https://arxiv.org/abs/2602.11758) | 2026.02 |  | ⏳ 待读 |
-| 29  | [EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration](https://arxiv.org/abs/2602.10106) | 2026.02 |  | ⏳ 待读 |
-| 30  | [MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation](https://arxiv.org/abs/2602.08594) | 2026.02 |  | ⏳ 待读 |
-| 31  | [Learning Human-Like Badminton Skills for Humanoid Robots](https://arxiv.org/abs/2602.08370) | 2026.02 |  | ⏳ 待读 |
-| 32  | [TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control](https://arxiv.org/abs/2602.07439) | 2026.02 |  | ⏳ 待读 |
-| 33  | [Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations](https://arxiv.org/abs/2602.06643) | 2026.02 |  | ⏳ 待读 |
-| 34  | [HiWET: Hierarchical World-Frame End-Effector Tracking for Long-Horizon Humanoid Loco-Manipulation](https://arxiv.org/abs/2602.06341) | 2026.02 |  | ⏳ 待读 |
-| 35  | [Learning Soccer Skills for Humanoid Robots:   A Progressive Perception-Action Framework](https://arxiv.org/abs/2602.05310) | 2026.02 |  | ⏳ 待读 |
-| 36  | [PDF-HR: Pose Distance Fields for Humanoid Robots](https://arxiv.org/abs/2602.04851) | 2026.02 |  | ⏳ 待读 |
-| 37  | [HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control](https://arxiv.org/abs/2602.03205) | 2026.02 |  | ⏳ 待读 |
-| 38  | [Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control](https://arxiv.org/abs/2602.02960) | 2026.02 |  | ⏳ 待读 |
-| 39  | [HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos](https://arxiv.org/abs/2602.02473) | 2026.02 |  | ⏳ 待读 |
-| 40  | [TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour](https://arxiv.org/abs/2602.02331) | 2026.02 |  | ⏳ 待读 |
-| 41  | [ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control](https://arxiv.org/abs/2602.00401) | 2026.02 |  | ⏳ 待读 |
-| 42  | [Robust and Generalized Humanoid Motion Tracking](https://arxiv.org/abs/2601.23080) | 2026.01 |  | ⏳ 待读 |
-| 43  | [RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing](https://arxiv.org/abs/2601.22517) | 2026.01 |  | ⏳ 待读 |
-| 44  | [PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes](https://arxiv.org/abs/2601.17440) | 2026.01 |  | ⏳ 待读 |
-| 45  | [Collision-Free Humanoid Traversal in Cluttered Indoor Scenes](https://arxiv.org/abs/2601.16035) | 2026.01 |  | ⏳ 待读 |
-| 46  | [FRoM-W1: Towards General Humanoid Whole-Body Control with Language Instructions](https://arxiv.org/abs/2601.12799) | 2026.01 |  | ⏳ 待读 |
-| 47  | [Learning Whole-Body Human-Humanoid Interaction from Human-Human Demonstrations](https://arxiv.org/abs/2601.09518) | 2026.01 |  | ⏳ 待读 |
-| 48  | [Hiking in the Wild: A Scalable Perceptive Parkour Framework for Humanoids](https://arxiv.org/abs/2601.07718) | 2026.01 |  | ⏳ 待读 |
-| 49  | [Deep Whole-body Parkour](https://arxiv.org/abs/2601.07701) | 2026.01 |  | ⏳ 待读 |
-| 50  | [Coordinated Humanoid Manipulation with Choice Policies](https://arxiv.org/abs/2512.25072) | 2025.12 |  | ⏳ 待读 |
-| 51  | [UniAct: Unified Motion Generation and Action Streaming for Humanoid Robots](https://arxiv.org/abs/2512.24321) | 2025.12 |  | ⏳ 待读 |
-| 52  | [EGM: Efficiently Learning General Motion Tracking Policy for High Dynamic Humanoid Whole-Body Control](https://arxiv.org/abs/2512.19043) | 2025.12 |  | ⏳ 待读 |
-| 53  | [Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots](https://arxiv.org/abs/2512.17183) | 2025.12 |  | ⏳ 待读 |
-| 54  | [CHIP: Adaptive Compliance for Humanoid Control through Hindsight Perturbation](https://arxiv.org/abs/2512.14689) | 2025.12 |  | ⏳ 待读 |
-| 55  | [PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations](https://arxiv.org/abs/2512.13093) | 2025.12 |  | ⏳ 待读 |
-| 56  | [Learning Agile Striker Skills for Humanoid Soccer Robots from Noisy Sensory Input](https://arxiv.org/abs/2512.06571) | 2025.12 |  | ⏳ 待读 |
-| 57  | [Discovering Self-Protective Falling Policy for Humanoid Robot via Deep Reinforcement Learning](https://arxiv.org/abs/2512.01336) | 2025.12 |  | ⏳ 待读 |
-| 58  | [Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer](https://arxiv.org/abs/2512.01061) | 2025.12 |  | ⏳ 待读 |
-| 59  | WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control | 2025.12 |  | ⏳ 待读 |
+| 16  | LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data | 2026.03 |  | ⏳ 待读 |
+| 17  | Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation | - |  | ⏳ 待读 |
+| 18  | SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL | - |  | ⏳ 待读 |
+| 19  | ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video | - |  | ⏳ 待读 |
+| 20  | Embedding Classical Balance Control Principles in RL for Humanoid Recovery | - |  | ⏳ 待读 |
+| 21  | ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation | 2026-03-07 |  | ✅ 完成 |
+| 22  | OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control | 2026-03-08 |  | ✅ 完成 |
+| 23  | LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations | - |  | ⏳ 待读 |
+| 24  | Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation | - |  | ⏳ 待读 |
+| 25  | VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety | - |  | ⏳ 待读 |
+| 26  | [Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching](https://arxiv.org/abs/2602.15827) | 2026.02 |  | ⏳ 待读 |
+| 27  | [MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction](https://arxiv.org/abs/2602.15733) | 2026.02 |  | ⏳ 待读 |
+| 28  | [General Humanoid Whole-Body Control via Pretraining and Fast Adaptation](https://arxiv.org/abs/2602.11929) | 2026.02 |  | ⏳ 待读 |
+| 29  | [HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model](https://arxiv.org/abs/2602.11758) | 2026.02 |  | ⏳ 待读 |
+| 30  | [EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration](https://arxiv.org/abs/2602.10106) | 2026.02 |  | ⏳ 待读 |
+| 31  | [MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation](https://arxiv.org/abs/2602.08594) | 2026.02 |  | ⏳ 待读 |
+| 32  | [Learning Human-Like Badminton Skills for Humanoid Robots](https://arxiv.org/abs/2602.08370) | 2026.02 |  | ⏳ 待读 |
+| 33  | [TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control](https://arxiv.org/abs/2602.07439) | 2026.02 |  | ⏳ 待读 |
+| 34  | [Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations](https://arxiv.org/abs/2602.06643) | 2026.02 |  | ⏳ 待读 |
+| 35  | [HiWET: Hierarchical World-Frame End-Effector Tracking for Long-Horizon Humanoid Loco-Manipulation](https://arxiv.org/abs/2602.06341) | 2026.02 |  | ⏳ 待读 |
+| 36  | [Learning Soccer Skills for Humanoid Robots:   A Progressive Perception-Action Framework](https://arxiv.org/abs/2602.05310) | 2026.02 |  | ⏳ 待读 |
+| 37  | [PDF-HR: Pose Distance Fields for Humanoid Robots](https://arxiv.org/abs/2602.04851) | 2026.02 |  | ⏳ 待读 |
+| 38  | [HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control](https://arxiv.org/abs/2602.03205) | 2026.02 |  | ⏳ 待读 |
+| 39  | [Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control](https://arxiv.org/abs/2602.02960) | 2026.02 |  | ⏳ 待读 |
+| 40  | [HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos](https://arxiv.org/abs/2602.02473) | 2026.02 |  | ⏳ 待读 |
+| 41  | [TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour](https://arxiv.org/abs/2602.02331) | 2026.02 |  | ⏳ 待读 |
+| 42  | [ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control](https://arxiv.org/abs/2602.00401) | 2026.02 |  | ⏳ 待读 |
+| 43  | [Robust and Generalized Humanoid Motion Tracking](https://arxiv.org/abs/2601.23080) | 2026.01 |  | ⏳ 待读 |
+| 44  | [RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing](https://arxiv.org/abs/2601.22517) | 2026.01 |  | ⏳ 待读 |
+| 45  | [PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes](https://arxiv.org/abs/2601.17440) | 2026.01 |  | ⏳ 待读 |
+| 46  | [Collision-Free Humanoid Traversal in Cluttered Indoor Scenes](https://arxiv.org/abs/2601.16035) | 2026.01 |  | ⏳ 待读 |
+| 47  | [FRoM-W1: Towards General Humanoid Whole-Body Control with Language Instructions](https://arxiv.org/abs/2601.12799) | 2026.01 |  | ⏳ 待读 |
+| 48  | [Learning Whole-Body Human-Humanoid Interaction from Human-Human Demonstrations](https://arxiv.org/abs/2601.09518) | 2026.01 |  | ⏳ 待读 |
+| 49  | [Hiking in the Wild: A Scalable Perceptive Parkour Framework for Humanoids](https://arxiv.org/abs/2601.07718) | 2026.01 |  | ⏳ 待读 |
+| 50  | [Deep Whole-body Parkour](https://arxiv.org/abs/2601.07701) | 2026.01 |  | ⏳ 待读 |
+| 51  | [Coordinated Humanoid Manipulation with Choice Policies](https://arxiv.org/abs/2512.25072) | 2025.12 |  | ⏳ 待读 |
+| 52  | [UniAct: Unified Motion Generation and Action Streaming for Humanoid Robots](https://arxiv.org/abs/2512.24321) | 2025.12 |  | ⏳ 待读 |
+| 53  | [EGM: Efficiently Learning General Motion Tracking Policy for High Dynamic Humanoid Whole-Body Control](https://arxiv.org/abs/2512.19043) | 2025.12 |  | ⏳ 待读 |
+| 54  | [Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots](https://arxiv.org/abs/2512.17183) | 2025.12 |  | ⏳ 待读 |
+| 55  | [CHIP: Adaptive Compliance for Humanoid Control through Hindsight Perturbation](https://arxiv.org/abs/2512.14689) | 2025.12 |  | ⏳ 待读 |
+| 56  | [PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations](https://arxiv.org/abs/2512.13093) | 2025.12 |  | ⏳ 待读 |
+| 57  | [Learning Agile Striker Skills for Humanoid Soccer Robots from Noisy Sensory Input](https://arxiv.org/abs/2512.06571) | 2025.12 |  | ⏳ 待读 |
+| 58  | [Discovering Self-Protective Falling Policy for Humanoid Robot via Deep Reinforcement Learning](https://arxiv.org/abs/2512.01336) | 2025.12 |  | ⏳ 待读 |
+| 59  | [Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer](https://arxiv.org/abs/2512.01061) | 2025.12 |  | ⏳ 待读 |
 | 60  | [Commanding Humanoid by Free-form Language: A Large Language Action Model with Unified Motion Vocabulary](https://arxiv.org/abs/2511.22963) | 2025.11 |  | ⏳ 待读 |
 | 61  | [Kinematics-Aware Multi-Policy Reinforcement Learning for Force-Capable Humanoid Loco-Manipulation](https://arxiv.org/abs/2511.21169) | 2025.11 |  | ⏳ 待读 |
 | 62  | [HAFO: A Force-Adaptive Control Framework for Humanoid Robots in Intense Interaction Environments](https://arxiv.org/abs/2511.20275) | 2025.11 |  | ⏳ 待读 |
@@ -190,104 +183,105 @@
 | 75  | [BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning](https://arxiv.org/abs/2511.04131) | 2025.11 |  | ⏳ 待读 |
 | 76  | [Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots](https://arxiv.org/abs/2511.03996) | 2025.11 |  | ⏳ 待读 |
 | 77  | [TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System](https://arxiv.org/abs/2511.02832) | 2025.11 |  | ⏳ 待读 |
-| 78  | SPIDER: Scalable Physics-Informed DExterous Retargeting | 2025.11 |  | ⏳ 待读 |
-| 79  | [Thor: Towards Human-Level Whole-Body Reactions for Intense Contact-Rich Environments](https://arxiv.org/abs/2510.26280) | 2025.10 |  | ⏳ 待读 |
-| 80  | [One-shot Humanoid Whole-body Motion Learning](https://arxiv.org/abs/2510.25241) | 2025.10 |  | ⏳ 待读 |
-| 81  | [Humanoid Goalkeeper: Learning from Position Conditioned Task-Motion Constraints](https://arxiv.org/abs/2510.18002) | 2025.10 |  | ⏳ 待读 |
-| 82  | [From Language to Locomotion: Retargeting-free Humanoid Control via Motion Latent Guidance](https://arxiv.org/abs/2510.14952) | 2025.10 |  | ⏳ 待读 |
-| 83  | [Towards Adaptable Humanoid Control via Adaptive Motion Tracking](https://arxiv.org/abs/2510.14454) | 2025.10 |  | ⏳ 待读 |
-| 84  | [Learning Human-Humanoid Coordination for Collaborative Object Carrying](https://arxiv.org/abs/2510.14293) | 2025.10 |  | ⏳ 待读 |
-| 85  | [Ego-Vision World Model for Humanoid Contact Planning](https://arxiv.org/abs/2510.11682) | 2025.10 |  | ⏳ 待读 |
-| 86  | [DemoHLM: From One Demonstration to Generalizable Humanoid Loco-Manipulation](https://arxiv.org/abs/2510.11258) | 2025.10 |  | ⏳ 待读 |
-| 87  | [PhysHSI: Towards a Real-World Generalizable and Natural Humanoid-Scene Interaction System](https://arxiv.org/abs/2510.11072) | 2025.10 |  | ⏳ 待读 |
-| 88  | [It Takes Two: Learning Interactive Whole-Body Control Between Humanoid Robots](https://arxiv.org/abs/2510.10206) | 2025.10 |  | ⏳ 待读 |
-| 89  | [ResMimic: From General Motion Tracking to Humanoid Whole-body Loco-Manipulation via Residual Learning](https://arxiv.org/abs/2510.05070) | 2025.10 |  | ⏳ 待读 |
-| 90  | [HumanoidExo: Scalable Whole-Body Humanoid Manipulation via Wearable Exoskeleton](https://arxiv.org/abs/2510.03022) | 2025.10 |  | ⏳ 待读 |
-| 91  | [Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking](https://arxiv.org/abs/2510.02252) | 2025.10 |  | ⏳ 待读 |
-| 92  | [VisualMimic: Visual Humanoid Loco-Manipulation via Motion Tracking and Generation](https://arxiv.org/abs/2509.20322) | 2025.10 |  | ⏳ 待读 |
-| 93  | AdaMimic: Towards Adaptable Humanoid Control via Adaptive Motion Tracking | 2025.10 |  | ⏳ 待读 |
-| 94  | [OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction](https://arxiv.org/abs/2509.26633) | 2025.09 |  | ⏳ 待读 |
-| 95  | [Towards Versatile Humanoid Table Tennis: Unified Reinforcement Learning with Prediction Augmentation](https://arxiv.org/abs/2509.21690) | 2025.09 |  | ⏳ 待读 |
-| 96  | [SEEC: Stable End-Effector Control with Model-Enhanced Residual Learning for Humanoid Loco-Manipulation](https://arxiv.org/abs/2509.21231) | 2025.09 |  | ⏳ 待读 |
-| 97  | [HDMI: Learning Interactive Humanoid Whole-Body Control from Human Videos](https://arxiv.org/abs/2509.16757) | 2025.09 |  | ⏳ 待读 |
-| 98  | [KungfuBot 2: Learning Versatile Motion Skills for Humanoid Whole-Body Control](https://arxiv.org/abs/2509.16638) | 2025.09 |  | ⏳ 待读 |
-| 99  | [Implicit Kinodynamic Motion Retargeting for Human-to-humanoid Imitation Learning](https://arxiv.org/abs/2509.15443) | 2025.09 |  | ⏳ 待读 |
-| 100  | [DreamControl: Human-Inspired Whole-Body Humanoid Control for Scene Interaction via Guided Diffusion](https://arxiv.org/abs/2509.14353) | 2025.09 |  | ⏳ 待读 |
-| 101  | [Track Any Motions under Any Disturbances](https://arxiv.org/abs/2509.13833) | 2025.09 |  | ⏳ 待读 |
-| 102  | [Behavior Foundation Model for Humanoid Robots](https://arxiv.org/abs/2509.13780) | 2025.09 |  | ⏳ 待读 |
-| 103  | [Embracing Bulky Objects with Humanoid Robots: Whole-Body Manipulation with Reinforcement Learning](https://arxiv.org/abs/2509.13534) | 2025.09 |  | ⏳ 待读 |
-| 104  | [StageACT: Stage-Conditioned Imitation for Robust Humanoid Door Opening](https://arxiv.org/abs/2509.13200) | 2025.09 |  | ⏳ 待读 |
-| 105  | [TrajBooster: Boosting Humanoid Whole-Body Manipulation via Trajectory-Centric Learning](https://arxiv.org/abs/2509.11839) | 2025.09 |  | ⏳ 待读 |
-| 106  | [HITTER: A HumanoId Table TEnnis Robot via Hierarchical Planning and Learning](https://arxiv.org/abs/2508.21043) | 2025.08 |  | ⏳ 待读 |
-| 107  | [HuBE: Cross-Embodiment Human-like Behavior Execution for Humanoid Robots](https://arxiv.org/abs/2508.19002) | 2025.08 |  | ⏳ 待读 |
-| 108  | [HumanoidVerse: A Versatile Humanoid for Vision-Language Guided Multi-Object Rearrangement](https://arxiv.org/abs/2508.16943) | 2025.08 |  | ⏳ 待读 |
-| 109  | [Task and Motion Planning for Humanoid Loco-manipulation](https://arxiv.org/abs/2508.14099) | 2025.08 |  | ⏳ 待读 |
-| 110  | [GBC: Generalized Behavior-Cloning Framework for Whole-Body Humanoid Imitation](https://arxiv.org/abs/2508.09960) | 2025.08 |  | ⏳ 待读 |
-| 111  | [A Whole-Body Motion Imitation Framework from Human Data for Full-Size Humanoid Robot](https://arxiv.org/abs/2508.00362) | 2025.08 |  | ⏳ 待读 |
-| 112  | [EMP: Executable Motion Prior for Humanoid Robot Standing Upper-body Motion Imitation](https://arxiv.org/abs/2507.15649) | 2025.07 |  | ⏳ 待读 |
-| 113  | [Keep on Going: Learning Robust Humanoid Motion Skills via Selective Adversarial Training](https://arxiv.org/abs/2507.08303) | 2025.07 |  | ⏳ 待读 |
-| 114  | [UniTracker: Learning Universal Whole-Body Motion Tracker for Humanoid Robots](https://arxiv.org/abs/2507.07356) | 2025.07 |  | ⏳ 待读 |
-| 115  | [ULC: A Unified and Fine-Grained Controller for Humanoid Loco-Manipulation](https://arxiv.org/abs/2507.06905) | 2025.07 |  | ⏳ 待读 |
-| 116  | [Learning Motion Skills with Adaptive Assistive Curriculum Force in Humanoid Robots](https://arxiv.org/abs/2506.23125) | 2025.06 |  | ⏳ 待读 |
-| 117  | [A Survey of Behavior Foundation Model: Next-Generation Whole-Body Control System of Humanoid Robots](https://arxiv.org/abs/2506.20487) | 2025.06 |  | ⏳ 待读 |
-| 118  | [TACT: Humanoid Whole-body Contact Manipulation through Deep Imitation Learning with Tactile Modality](https://arxiv.org/abs/2506.15146) | 2025.06 |  | ⏳ 待读 |
-| 119  | [GMT: General Motion Tracking for Humanoid Whole-Body Control](https://arxiv.org/abs/2506.14770) | 2025.06 |  | ⏳ 待读 |
-| 120  | [LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](https://arxiv.org/abs/2506.13751) | 2025.06 |  | ⏳ 待读 |
-| 121  | [From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots](https://arxiv.org/abs/2506.12779) | 2025.06 |  | ⏳ 待读 |
-| 122  | [SkillBlender: Towards Versatile Humanoid Whole-Body Loco-Manipulation via Skill Blending](https://arxiv.org/abs/2506.09366) | 2025.06 |  | ⏳ 待读 |
-| 123  | [SLAC: Simulation-Pretrained Latent Action Space for Whole-Body Real-World Reinforcement Learning](https://arxiv.org/abs/2506.04147) | 2025.06 |  | ⏳ 待读 |
-| 124  | [Hierarchical Intention-Aware Expressive Motion Generation for Humanoid Robots](https://arxiv.org/abs/2506.01563) | 2025.06 |  | ⏳ 待读 |
-| 125  | [From Motion to Behavior: Hierarchical Modeling of Humanoid Generative Behavior Control](https://arxiv.org/abs/2506.00043) | 2025.06 |  | ⏳ 待读 |
-| 126  | General Motion Tracking for Humanoid Whole-Body Control | 2025.06 |  | ⏳ 待读 |
-| 127  | CLONE: Holistic Closed-Loop Whole-Body Teleoperation for Long-Horizon Humanoid Control | 2025.06 |  | ⏳ 待读 |
-| 128  | [SignBot: Learning Human-to-Humanoid Sign Language Interaction](https://arxiv.org/abs/2505.24266) | 2025.05 |  | ⏳ 待读 |
-| 129  | [Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control](https://arxiv.org/abs/2505.24198) | 2025.05 |  | ⏳ 待读 |
-| 130  | [Mobi-π: Mobilizing Your Robot Learning Policy](https://arxiv.org/abs/2505.23692) | 2025.05 |  | ⏳ 待读 |
-| 131  | [SMAP: Self-supervised Motion Adaptation for Physically Plausible Humanoid Whole-body Control](https://arxiv.org/abs/2505.19463) | 2025.05 |  | ⏳ 待读 |
-| 132  | H2-COMPACT: Human-Humanoid Co-Manipulation via Adaptive Contact Trajectory Policies | 2025.05 |  | ⏳ 待读 |
-| 133  | [Unleashing Humanoid Reaching Potential via Real-world-Ready Skill Space](https://arxiv.org/abs/2505.10918) | 2025.05 |  | ⏳ 待读 |
-| 134  | [HuB: Learning Extreme Humanoid Balance](https://arxiv.org/abs/2505.07294) | 2025.05 |  | ⏳ 待读 |
-| 135  | [FALCON: Learning Force-Adaptive Humanoid Loco-Manipulation](https://arxiv.org/abs/2505.06776) | 2025.05 |  | ⏳ 待读 |
-| 136  | [JAEGER: Dual-Level Humanoid Whole-Body Controller](https://arxiv.org/abs/2505.06584) | 2025.05 |  | ⏳ 待读 |
-| 137  | [AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control](https://arxiv.org/abs/2505.03738) | 2025.05 |  | ⏳ 待读 |
-| 138  | [PyRoki: A Modular Toolkit for Robot Kinematic Optimization](https://arxiv.org/abs/2505.03728) | 2025.05 |  | ⏳ 待读 |
-| 139  | [TWIST: Teleoperated Whole-Body Imitation System](https://arxiv.org/abs/2505.02833) | 2025.05 |  | ⏳ 待读 |
-| 140  | [LangWBC: Language-directed Humanoid Whole-Body Control via End-to-end Learning](https://arxiv.org/abs/2504.21738) | 2025.04 |  | ⏳ 待读 |
-| 141  | [Physically Consistent Humanoid Loco-Manipulation using Latent Diffusion Models](https://arxiv.org/abs/2504.16843v1) | 2025.04 |  | ⏳ 待读 |
-| 142  | [Adversarial Locomotion and Motion Imitation for Humanoid Policy Learning](https://arxiv.org/abs/2504.14305) | 2025.04 |  | ⏳ 待读 |
-| 143  | [website],Embodied Chain of Action Reasoning with Multi-Modal Foundation Model for Humanoid Loco-manipulation | 2025.04 |  | ⏳ 待读 |
-| 144  | [Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills](https://arxiv.org/abs/2503.12533) | 2025.03 |  | ⏳ 待读 |
-| 145  | [Trinity: A Modular Humanoid Robot AI System](https://arxiv.org/abs/2503.08338) | 2025.03 |  | ⏳ 待读 |
-| 146  | [BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities](https://arxiv.org/abs/2503.05652) | 2025.03 |  | ⏳ 待读 |
-| 147  | [Whole-Body Model-Predictive Control of Legged Robots with MuJoCo](https://arxiv.org/abs/2503.04613) | 2025.03 |  | ⏳ 待读 |
-| 148  | [HiFAR: Multi-Stage Curriculum Learning for High-Dynamics Humanoid Fall Recovery](https://arxiv.org/abs/2502.20061) | 2025.02 |  | ⏳ 待读 |
-| 149  | [HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit](https://arxiv.org/abs/2502.13013) | 2025.02 |  | ⏳ 待读 |
-| 150  | [Learning Getting-Up Policies for Real-World Humanoid Robots](https://arxiv.org/abs/2502.12152) | 2025.02 |  | ⏳ 待读 |
-| 151  | [Learning Humanoid Standing-up Control across Diverse Postures](https://arxiv.org/abs/2502.08378) | 2025.02 |  | ⏳ 待读 |
-| 152  | [HugWBC: A Unified and General Humanoid Whole-Body Controller](https://arxiv.org/abs/2502.03206) | 2025.02 |  | ⏳ 待读 |
-| 153  | [SPARK: A Toolbox for Safe Humanoid Autonomy and Teleoperation](https://arxiv.org/abs/2502.03132) | 2025.02 |  | ⏳ 待读 |
-| 154  | [Embrace Collisions: Humanoid Shadowing for Deployable Contact-Agnostics Motions](https://arxiv.org/abs/2502.01465) | 2025.02 |  | ⏳ 待读 |
-| 155  | ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills | 2025.02 |  | ⏳ 待读 |
-| 156  | [Human-Humanoid Robots Cross-Embodiment Behavior-Skill Transfer Using Decomposed Adversarial Learning from Demonstration](https://arxiv.org/abs/2412.15166) | 2024.12 |  | ⏳ 待读 |
-| 157  | [Learning from Massive Human Videos for Universal Humanoid Pose Control](https://arxiv.org/abs/2412.14172) | 2024.12 |  | ⏳ 待读 |
-| 158  | [ExBody2: Advanced Expressive Humanoid Whole-Body Control](https://arxiv.org/abs/2412.13196) | 2024.12 |  | ⏳ 待读 |
-| 159  | [Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control](https://arxiv.org/abs/2412.07773) | 2024.12 |  | ⏳ 待读 |
-| 160  | [A Behavior Architecture for Fast Humanoid Robot Door Traversals](https://arxiv.org/abs/2411.03532) | 2024.11 |  | ⏳ 待读 |
-| 161  | [EMOTION: Expressive Motion Sequence Generation for Humanoid Robots with In-Context Learning](https://arxiv.org/abs/2410.23234) | 2024.10 |  | ⏳ 待读 |
-| 162  | [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](https://arxiv.org/abs/2410.21229) | 2024.10 |  | ⏳ 待读 |
-| 163  | [Harmon: Whole-Body Motion Generation of Humanoid Robots from Language Descriptions](https://arxiv.org/abs/2410.12773) | 2024.10 |  | ⏳ 待读 |
-| 164  | [Whole-Body Dynamic Throwing with Legged Manipulators](https://arxiv.org/abs/2410.05681) | 2024.10 |  | ⏳ 待读 |
-| 165  | [Opt2Skill: Imitating Dynamically-feasible Whole-Body Trajectories for Versatile Humanoid Loco-Manipulation](https://arxiv.org/abs/2409.20514) | 2024.09 |  | ⏳ 待读 |
-| 166  | VMP: Versatile Motion Priors for Robustly Tracking Motion on Physical Characters | 2024.08 |  | ⏳ 待读 |
-| 167  | Robot Motion Diffusion Model: Motion Generation for Robotic Characters | 2024.07 |  | ⏳ 待读 |
-| 168  | [HYPERmotion: Learning Hybrid Behavior Planning for Autonomous Loco-manipulation](https://arxiv.org/abs/2406.14655v1) | 2024.06 |  | ⏳ 待读 |
-| 169  | [HumanPlus: Humanoid Shadowing and Imitation from Humans](https://arxiv.org/abs/2406.10454) | 2024.06 |  | ⏳ 待读 |
-| 170  | [OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning](https://arxiv.org/abs/2406.08858) | 2024.06 |  | ⏳ 待读 |
-| 171  | [WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts](https://arxiv.org/abs/2406.06005) | 2024.06 |  | ⏳ 待读 |
-| 172  | [Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation](https://arxiv.org/abs/2403.04436) | 2024.03 |  | ⏳ 待读 |
-| 173  | [Expressive Whole-Body Control for Humanoid Robots](https://arxiv.org/abs/2402.16796) | 2024.02 |  | ⏳ 待读 |
-| 174  | [Sim-to-Real Learning for Humanoid Box Loco-Manipulation](https://arxiv.org/abs/2310.03191) | 2023.10 |  | ⏳ 待读 |
-
+| 78  | [Thor: Towards Human-Level Whole-Body Reactions for Intense Contact-Rich Environments](https://arxiv.org/abs/2510.26280) | 2025.10 |  | ⏳ 待读 |
+| 79  | [One-shot Humanoid Whole-body Motion Learning](https://arxiv.org/abs/2510.25241) | 2025.10 |  | ⏳ 待读 |
+| 80  | [Humanoid Goalkeeper: Learning from Position Conditioned Task-Motion Constraints](https://arxiv.org/abs/2510.18002) | 2025.10 |  | ⏳ 待读 |
+| 81  | [From Language to Locomotion: Retargeting-free Humanoid Control via Motion Latent Guidance](https://arxiv.org/abs/2510.14952) | 2025.10 |  | ⏳ 待读 |
+| 82  | [Towards Adaptable Humanoid Control via Adaptive Motion Tracking](https://arxiv.org/abs/2510.14454) | 2025.10 |  | ⏳ 待读 |
+| 83  | [Learning Human-Humanoid Coordination for Collaborative Object Carrying](https://arxiv.org/abs/2510.14293) | 2025.10 |  | ⏳ 待读 |
+| 84  | [Ego-Vision World Model for Humanoid Contact Planning](https://arxiv.org/abs/2510.11682) | 2025.10 |  | ⏳ 待读 |
+| 85  | [DemoHLM: From One Demonstration to Generalizable Humanoid Loco-Manipulation](https://arxiv.org/abs/2510.11258) | 2025.10 |  | ⏳ 待读 |
+| 86  | [PhysHSI: Towards a Real-World Generalizable and Natural Humanoid-Scene Interaction System](https://arxiv.org/abs/2510.11072) | 2025.10 |  | ⏳ 待读 |
+| 87  | [It Takes Two: Learning Interactive Whole-Body Control Between Humanoid Robots](https://arxiv.org/abs/2510.10206) | 2025.10 |  | ⏳ 待读 |
+| 88  | [ResMimic: From General Motion Tracking to Humanoid Whole-body Loco-Manipulation via Residual Learning](https://arxiv.org/abs/2510.05070) | 2025.10 |  | ⏳ 待读 |
+| 89  | [HumanoidExo: Scalable Whole-Body Humanoid Manipulation via Wearable Exoskeleton](https://arxiv.org/abs/2510.03022) | 2025.10 |  | ⏳ 待读 |
+| 90  | [Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking](https://arxiv.org/abs/2510.02252) | 2025.10 |  | ⏳ 待读 |
+| 91  | [OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction](https://arxiv.org/abs/2509.26633) | 2025.09 |  | ⏳ 待读 |
+| 92  | [Towards Versatile Humanoid Table Tennis: Unified Reinforcement Learning with Prediction Augmentation](https://arxiv.org/abs/2509.21690) | 2025.09 |  | ⏳ 待读 |
+| 93  | [SEEC: Stable End-Effector Control with Model-Enhanced Residual Learning for Humanoid Loco-Manipulation](https://arxiv.org/abs/2509.21231) | 2025.09 |  | ⏳ 待读 |
+| 94  | [VisualMimic: Visual Humanoid Loco-Manipulation via Motion Tracking and Generation](https://arxiv.org/abs/2509.20322) | 2025.10 |  | ⏳ 待读 |
+| 95  | [HDMI: Learning Interactive Humanoid Whole-Body Control from Human Videos](https://arxiv.org/abs/2509.16757) | 2025.09 |  | ⏳ 待读 |
+| 96  | [KungfuBot 2: Learning Versatile Motion Skills for Humanoid Whole-Body Control](https://arxiv.org/abs/2509.16638) | 2025.09 |  | ⏳ 待读 |
+| 97  | [Implicit Kinodynamic Motion Retargeting for Human-to-humanoid Imitation Learning](https://arxiv.org/abs/2509.15443) | 2025.09 |  | ⏳ 待读 |
+| 98  | [DreamControl: Human-Inspired Whole-Body Humanoid Control for Scene Interaction via Guided Diffusion](https://arxiv.org/abs/2509.14353) | 2025.09 |  | ⏳ 待读 |
+| 99  | [Track Any Motions under Any Disturbances](https://arxiv.org/abs/2509.13833) | 2025.09 |  | ⏳ 待读 |
+| 100  | [Behavior Foundation Model for Humanoid Robots](https://arxiv.org/abs/2509.13780) | 2025.09 |  | ⏳ 待读 |
+| 101  | [Embracing Bulky Objects with Humanoid Robots: Whole-Body Manipulation with Reinforcement Learning](https://arxiv.org/abs/2509.13534) | 2025.09 |  | ⏳ 待读 |
+| 102  | [StageACT: Stage-Conditioned Imitation for Robust Humanoid Door Opening](https://arxiv.org/abs/2509.13200) | 2025.09 |  | ⏳ 待读 |
+| 103  | [TrajBooster: Boosting Humanoid Whole-Body Manipulation via Trajectory-Centric Learning](https://arxiv.org/abs/2509.11839) | 2025.09 |  | ⏳ 待读 |
+| 104  | [HITTER: A HumanoId Table TEnnis Robot via Hierarchical Planning and Learning](https://arxiv.org/abs/2508.21043) | 2025.08 |  | ⏳ 待读 |
+| 105  | [HuBE: Cross-Embodiment Human-like Behavior Execution for Humanoid Robots](https://arxiv.org/abs/2508.19002) | 2025.08 |  | ⏳ 待读 |
+| 106  | [HumanoidVerse: A Versatile Humanoid for Vision-Language Guided Multi-Object Rearrangement](https://arxiv.org/abs/2508.16943) | 2025.08 |  | ⏳ 待读 |
+| 107  | [Task and Motion Planning for Humanoid Loco-manipulation](https://arxiv.org/abs/2508.14099) | 2025.08 |  | ⏳ 待读 |
+| 108  | [GBC: Generalized Behavior-Cloning Framework for Whole-Body Humanoid Imitation](https://arxiv.org/abs/2508.09960) | 2025.08 |  | ⏳ 待读 |
+| 109  | [A Whole-Body Motion Imitation Framework from Human Data for Full-Size Humanoid Robot](https://arxiv.org/abs/2508.00362) | 2025.08 |  | ⏳ 待读 |
+| 110  | [EMP: Executable Motion Prior for Humanoid Robot Standing Upper-body Motion Imitation](https://arxiv.org/abs/2507.15649) | 2025.07 |  | ⏳ 待读 |
+| 111  | [Keep on Going: Learning Robust Humanoid Motion Skills via Selective Adversarial Training](https://arxiv.org/abs/2507.08303) | 2025.07 |  | ⏳ 待读 |
+| 112  | [UniTracker: Learning Universal Whole-Body Motion Tracker for Humanoid Robots](https://arxiv.org/abs/2507.07356) | 2025.07 |  | ⏳ 待读 |
+| 113  | [ULC: A Unified and Fine-Grained Controller for Humanoid Loco-Manipulation](https://arxiv.org/abs/2507.06905) | 2025.07 |  | ⏳ 待读 |
+| 114  | [Learning Motion Skills with Adaptive Assistive Curriculum Force in Humanoid Robots](https://arxiv.org/abs/2506.23125) | 2025.06 |  | ⏳ 待读 |
+| 115  | [A Survey of Behavior Foundation Model: Next-Generation Whole-Body Control System of Humanoid Robots](https://arxiv.org/abs/2506.20487) | 2025.06 |  | ⏳ 待读 |
+| 116  | [TACT: Humanoid Whole-body Contact Manipulation through Deep Imitation Learning with Tactile Modality](https://arxiv.org/abs/2506.15146) | 2025.06 |  | ⏳ 待读 |
+| 117  | [GMT: General Motion Tracking for Humanoid Whole-Body Control](https://arxiv.org/abs/2506.14770) | 2025.06 |  | ⏳ 待读 |
+| 118  | [LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](https://arxiv.org/abs/2506.13751) | 2025.06 |  | ⏳ 待读 |
+| 119  | [From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots](https://arxiv.org/abs/2506.12779) | 2025.06 |  | ⏳ 待读 |
+| 120  | [SkillBlender: Towards Versatile Humanoid Whole-Body Loco-Manipulation via Skill Blending](https://arxiv.org/abs/2506.09366) | 2025.06 |  | ⏳ 待读 |
+| 121  | [SLAC: Simulation-Pretrained Latent Action Space for Whole-Body Real-World Reinforcement Learning](https://arxiv.org/abs/2506.04147) | 2025.06 |  | ⏳ 待读 |
+| 122  | [Hierarchical Intention-Aware Expressive Motion Generation for Humanoid Robots](https://arxiv.org/abs/2506.01563) | 2025.06 |  | ⏳ 待读 |
+| 123  | [From Motion to Behavior: Hierarchical Modeling of Humanoid Generative Behavior Control](https://arxiv.org/abs/2506.00043) | 2025.06 |  | ⏳ 待读 |
+| 124  | [SignBot: Learning Human-to-Humanoid Sign Language Interaction](https://arxiv.org/abs/2505.24266) | 2025.05 |  | ⏳ 待读 |
+| 125  | [Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control](https://arxiv.org/abs/2505.24198) | 2025.05 |  | ⏳ 待读 |
+| 126  | [Mobi-π: Mobilizing Your Robot Learning Policy](https://arxiv.org/abs/2505.23692) | 2025.05 |  | ⏳ 待读 |
+| 127  | [SMAP: Self-supervised Motion Adaptation for Physically Plausible Humanoid Whole-body Control](https://arxiv.org/abs/2505.19463) | 2025.05 |  | ⏳ 待读 |
+| 128  | H2-COMPACT: Human-Humanoid Co-Manipulation via Adaptive Contact Trajectory Policies | 2025.05 |  | ⏳ 待读 |
+| 129  | [Unleashing Humanoid Reaching Potential via Real-world-Ready Skill Space](https://arxiv.org/abs/2505.10918) | 2025.05 |  | ⏳ 待读 |
+| 130  | [HuB: Learning Extreme Humanoid Balance](https://arxiv.org/abs/2505.07294) | 2025.05 |  | ⏳ 待读 |
+| 131  | [FALCON: Learning Force-Adaptive Humanoid Loco-Manipulation](https://arxiv.org/abs/2505.06776) | 2025.05 |  | ⏳ 待读 |
+| 132  | FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid | - |  | ⏳ 待读 |
+| 133  | [JAEGER: Dual-Level Humanoid Whole-Body Controller](https://arxiv.org/abs/2505.06584) | 2025.05 |  | ⏳ 待读 |
+| 134  | [AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control](https://arxiv.org/abs/2505.03738) | 2025.05 |  | ⏳ 待读 |
+| 135  | [PyRoki: A Modular Toolkit for Robot Kinematic Optimization](https://arxiv.org/abs/2505.03728) | 2025.05 |  | ⏳ 待读 |
+| 136  | [TWIST: Teleoperated Whole-Body Imitation System](https://arxiv.org/abs/2505.02833) | 2025.05 |  | ⏳ 待读 |
+| 137  | [LangWBC: Language-directed Humanoid Whole-Body Control via End-to-end Learning](https://arxiv.org/abs/2504.21738) | 2025.04 |  | ⏳ 待读 |
+| 138  | [Physically Consistent Humanoid Loco-Manipulation using Latent Diffusion Models](https://arxiv.org/abs/2504.16843v1) | 2025.04 |  | ⏳ 待读 |
+| 139  | [Adversarial Locomotion and Motion Imitation for Humanoid Policy Learning](https://arxiv.org/abs/2504.14305) | 2025.04 |  | ⏳ 待读 |
+| 140  | [Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills](https://arxiv.org/abs/2503.12533) | 2025.03 |  | ⏳ 待读 |
+| 141  | [Trinity: A Modular Humanoid Robot AI System](https://arxiv.org/abs/2503.08338) | 2025.03 |  | ⏳ 待读 |
+| 142  | [BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities](https://arxiv.org/abs/2503.05652) | 2025.03 |  | ⏳ 待读 |
+| 143  | [Whole-Body Model-Predictive Control of Legged Robots with MuJoCo](https://arxiv.org/abs/2503.04613) | 2025.03 |  | ⏳ 待读 |
+| 144  | [HiFAR: Multi-Stage Curriculum Learning for High-Dynamics Humanoid Fall Recovery](https://arxiv.org/abs/2502.20061) | 2025.02 |  | ⏳ 待读 |
+| 145  | [HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit](https://arxiv.org/abs/2502.13013) | 2025.02 |  | ⏳ 待读 |
+| 146  | [Learning Getting-Up Policies for Real-World Humanoid Robots](https://arxiv.org/abs/2502.12152) | 2025.02 |  | ⏳ 待读 |
+| 147  | [Learning Humanoid Standing-up Control across Diverse Postures](https://arxiv.org/abs/2502.08378) | 2025.02 |  | ⏳ 待读 |
+| 148  | [HugWBC: A Unified and General Humanoid Whole-Body Controller](https://arxiv.org/abs/2502.03206) | 2025.02 |  | ⏳ 待读 |
+| 149  | [SPARK: A Toolbox for Safe Humanoid Autonomy and Teleoperation](https://arxiv.org/abs/2502.03132) | 2025.02 |  | ⏳ 待读 |
+| 150  | [Embrace Collisions: Humanoid Shadowing for Deployable Contact-Agnostics Motions](https://arxiv.org/abs/2502.01465) | 2025.02 |  | ⏳ 待读 |
+| 151  | [Human-Humanoid Robots Cross-Embodiment Behavior-Skill Transfer Using Decomposed Adversarial Learning from Demonstration](https://arxiv.org/abs/2412.15166) | 2024.12 |  | ⏳ 待读 |
+| 152  | [Learning from Massive Human Videos for Universal Humanoid Pose Control](https://arxiv.org/abs/2412.14172) | 2024.12 |  | ⏳ 待读 |
+| 153  | [ExBody2: Advanced Expressive Humanoid Whole-Body Control](https://arxiv.org/abs/2412.13196) | 2024.12 |  | ⏳ 待读 |
+| 154  | [Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control](https://arxiv.org/abs/2412.07773) | 2024.12 |  | ⏳ 待读 |
+| 155  | [A Behavior Architecture for Fast Humanoid Robot Door Traversals](https://arxiv.org/abs/2411.03532) | 2024.11 |  | ⏳ 待读 |
+| 156  | [EMOTION: Expressive Motion Sequence Generation for Humanoid Robots with In-Context Learning](https://arxiv.org/abs/2410.23234) | 2024.10 |  | ⏳ 待读 |
+| 157  | [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](https://arxiv.org/abs/2410.21229) | 2024.10 |  | ⏳ 待读 |
+| 158  | [Harmon: Whole-Body Motion Generation of Humanoid Robots from Language Descriptions](https://arxiv.org/abs/2410.12773) | 2024.10 |  | ⏳ 待读 |
+| 159  | [Whole-Body Dynamic Throwing with Legged Manipulators](https://arxiv.org/abs/2410.05681) | 2024.10 |  | ⏳ 待读 |
+| 160  | [Opt2Skill: Imitating Dynamically-feasible Whole-Body Trajectories for Versatile Humanoid Loco-Manipulation](https://arxiv.org/abs/2409.20514) | 2024.09 |  | ⏳ 待读 |
+| 161  | [HYPERmotion: Learning Hybrid Behavior Planning for Autonomous Loco-manipulation](https://arxiv.org/abs/2406.14655v1) | 2024.06 |  | ⏳ 待读 |
+| 162  | [HumanPlus: Humanoid Shadowing and Imitation from Humans](https://arxiv.org/abs/2406.10454) | 2024.06 |  | ⏳ 待读 |
+| 163  | [OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning](https://arxiv.org/abs/2406.08858) | 2024.06 |  | ⏳ 待读 |
+| 164  | [WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts](https://arxiv.org/abs/2406.06005) | 2024.06 |  | ⏳ 待读 |
+| 165  | [Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation](https://arxiv.org/abs/2403.04436) | 2024.03 |  | ⏳ 待读 |
+| 166  | [Expressive Whole-Body Control for Humanoid Robots](https://arxiv.org/abs/2402.16796) | 2024.02 |  | ⏳ 待读 |
+| 167  | [Sim-to-Real Learning for Humanoid Box Loco-Manipulation](https://arxiv.org/abs/2310.03191) | 2023.10 |  | ⏳ 待读 |
+| 168  | WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control | 2025.12 |  | ⏳ 待读 |
+| 169  | SPIDER: Scalable Physics-Informed DExterous Retargeting | 2025.11 |  | ⏳ 待读 |
+| 170  | AdaMimic: Towards Adaptable Humanoid Control via Adaptive Motion Tracking | 2025.10 |  | ⏳ 待读 |
+| 171  | General Motion Tracking for Humanoid Whole-Body Control | 2025.06 |  | ⏳ 待读 |
+| 172  | CLONE: Holistic Closed-Loop Whole-Body Teleoperation for Long-Horizon Humanoid Control | 2025.06 |  | ⏳ 待读 |
+| 173  | ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills | 2025.02 |  | ⏳ 待读 |
+| 174  | VMP: Versatile Motion Priors for Robustly Tracking Motion on Physical Characters | 2024.08 |  | ⏳ 待读 |
+| 175  | Robot Motion Diffusion Model: Motion Generation for Robotic Characters | 2024.07 |  | ⏳ 待读 |
+| 176  | [website],Embodied Chain of Action Reasoning with Multi-Modal Foundation Model for Humanoid Loco-manipulation | 2025.04 |  | ⏳ 待读 |
 ### Locomotion（84篇）
 
 | #   | 论文 | 日期 | 🌟 | 状态 |
