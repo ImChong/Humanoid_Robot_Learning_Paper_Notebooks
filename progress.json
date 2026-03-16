@@ -6,7 +6,7 @@
     {
       "title": "PPO: Proximal Policy Optimization",
       "arxiv": "",
-      "folder": "papers/PPO__Proximal_Policy_Optimization",
+      "folder": "papers/01_基础路线图/PPO__Proximal_Policy_Optimization",
       "note_file": "PPO__Proximal_Policy_Optimization.md",
       "pdf_file": "PPO.pdf",
       "status": "reading",
@@ -17,7 +17,7 @@
     {
       "title": "AWR: Advantage Weighted Regression",
       "arxiv": "",
-      "folder": "papers/AWR__Advantage_Weighted_Regression",
+      "folder": "papers/01_基础路线图/AWR__Advantage_Weighted_Regression",
       "note_file": "AWR__Advantage_Weighted_Regression.md",
       "pdf_file": "AWR.pdf",
       "status": "pending",
@@ -28,7 +28,7 @@
     {
       "title": "DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills",
       "arxiv": "",
-      "folder": "papers/DeepMimic__Example-Guided_Deep_RL_of_Physics-Based_Character_Skills",
+      "folder": "papers/01_基础路线图/DeepMimic__Example-Guided_Deep_RL_of_Physics-Based_Character_Skills",
       "note_file": "DeepMimic__Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.md",
       "pdf_file": "DeepMimic.pdf",
       "status": "pending",
@@ -39,7 +39,7 @@
     {
       "title": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
       "arxiv": "",
-      "folder": "papers/AMP__Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control",
+      "folder": "papers/01_基础路线图/AMP__Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control",
       "note_file": "AMP__Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.md",
       "pdf_file": "AMP.pdf",
       "status": "pending",
@@ -50,7 +50,7 @@
     {
       "title": "PHC: Perpetual Humanoid Control for Real-time Simulated Avatars",
       "arxiv": "",
-      "folder": "papers/PHC__Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars",
+      "folder": "papers/01_基础路线图/PHC__Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars",
       "note_file": "PHC__Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars.md",
       "pdf_file": "PHC.pdf",
       "status": "pending",
@@ -61,7 +61,7 @@
     {
       "title": "ADD: Adversarial Disentanglement and Distillation",
       "arxiv": "",
-      "folder": "papers/ADD__Adversarial_Disentanglement_and_Distillation",
+      "folder": "papers/01_基础路线图/ADD__Adversarial_Disentanglement_and_Distillation",
       "note_file": "ADD__Adversarial_Disentanglement_and_Distillation.md",
       "pdf_file": "ADD.pdf",
       "status": "pending",
@@ -72,7 +72,7 @@
     {
       "title": "ASE: Adversarial Skill Embeddings for Large-Scale Motion Control",
       "arxiv": "",
-      "folder": "papers/ASE__Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control",
+      "folder": "papers/01_基础路线图/ASE__Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control",
       "note_file": "ASE__Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.md",
       "pdf_file": "ASE.pdf",
       "status": "pending",
@@ -83,7 +83,7 @@
     {
       "title": "CALM: Conditional Adversarial Latent Models for Directable Virtual Characters",
       "arxiv": "",
-      "folder": "papers/CALM__Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters",
+      "folder": "papers/01_基础路线图/CALM__Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters",
       "note_file": "CALM__Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters.md",
       "pdf_file": "CALM.pdf",
       "status": "pending",
@@ -94,7 +94,7 @@
     {
       "title": "PULSE: Physically Plausible Universal Latent Skill Extraction",
       "arxiv": "",
-      "folder": "papers/PULSE__Physically_Plausible_Universal_Latent_Skill_Extraction",
+      "folder": "papers/01_基础路线图/PULSE__Physically_Plausible_Universal_Latent_Skill_Extraction",
       "note_file": "PULSE__Physically_Plausible_Universal_Latent_Skill_Extraction.md",
       "pdf_file": "PULSE.pdf",
       "status": "pending",
@@ -105,7 +105,7 @@
     {
       "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
       "arxiv": "",
-      "folder": "papers/Diffusion_Policy__Visuomotor_Policy_Learning_via_Action_Diffusion",
+      "folder": "papers/01_基础路线图/Diffusion_Policy__Visuomotor_Policy_Learning_via_Action_Diffusion",
       "note_file": "Diffusion_Policy__Visuomotor_Policy_Learning_via_Action_Diffusion.md",
       "pdf_file": "Diffusion.pdf",
       "status": "pending",
@@ -116,7 +116,7 @@
     {
       "title": "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion",
       "arxiv": "",
-      "folder": "papers/BeyondMimic__From_Motion_Tracking_to_Versatile_Humanoid_Control_via_Guided_Diffu",
+      "folder": "papers/01_基础路线图/BeyondMimic__From_Motion_Tracking_to_Versatile_Humanoid_Control_via_Guided_Diffu",
       "note_file": "BeyondMimic__From_Motion_Tracking_to_Versatile_Humanoid_Control_via_Guided_Diffu.md",
       "pdf_file": "BeyondMimic.pdf",
       "status": "pending",
@@ -127,7 +127,7 @@
     {
       "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
       "arxiv": "",
-      "folder": "papers/Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_th",
+      "folder": "papers/01_基础路线图/Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_th",
       "note_file": "Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_th.md",
       "pdf_file": "Domain.pdf",
       "status": "pending",
@@ -138,7 +138,7 @@
     {
       "title": "LCP: Sim-to-Real Action Smoothing",
       "arxiv": "",
-      "folder": "papers/LCP__Sim-to-Real_Action_Smoothing",
+      "folder": "papers/01_基础路线图/LCP__Sim-to-Real_Action_Smoothing",
       "note_file": "LCP__Sim-to-Real_Action_Smoothing.md",
       "pdf_file": "LCP.pdf",
       "status": "pending",
@@ -149,7 +149,7 @@
     {
       "title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
       "arxiv": "",
-      "folder": "papers/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat",
       "note_file": "LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.md",
       "pdf_file": "LATENT.pdf",
       "status": "pending",
@@ -160,7 +160,7 @@
     {
       "title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
       "arxiv": "",
-      "folder": "papers/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation",
       "note_file": "Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation.md",
       "pdf_file": "Ψ₀.pdf",
       "status": "pending",
@@ -171,7 +171,7 @@
     {
       "title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL",
       "arxiv": "",
-      "folder": "papers/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid",
       "note_file": "SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid.md",
       "pdf_file": "SteadyTray.pdf",
       "status": "pending",
@@ -182,7 +182,7 @@
     {
       "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",
       "arxiv": "",
-      "folder": "papers/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video",
       "note_file": "ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video.md",
       "pdf_file": "ZeroWBC.pdf",
       "status": "pending",
@@ -193,7 +193,7 @@
     {
       "title": "Embedding Classical Balance Control Principles in RL for Humanoid Recovery",
       "arxiv": "",
-      "folder": "papers/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery",
       "note_file": "Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.md",
       "pdf_file": "Embedding.pdf",
       "status": "pending",
@@ -204,7 +204,7 @@
     {
       "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
       "arxiv": "",
-      "folder": "papers/ULTRA__Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipu",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/ULTRA__Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipu",
       "note_file": "ULTRA__Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipu.md",
       "pdf_file": "ULTRA.pdf",
       "status": "pending",
@@ -215,7 +215,7 @@
     {
       "title": "OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control",
       "arxiv": "",
-      "folder": "papers/OmniXtreme__Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/OmniXtreme__Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control",
       "note_file": "OmniXtreme__Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.md",
       "pdf_file": "OmniXtreme.pdf",
       "status": "pending",
@@ -226,7 +226,7 @@
     {
       "title": "LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations",
       "arxiv": "",
-      "folder": "papers/LessMimic__Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Represe",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/LessMimic__Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Represe",
       "note_file": "LessMimic__Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Represe.md",
       "pdf_file": "LessMimic.pdf",
       "status": "pending",
@@ -237,7 +237,7 @@
     {
       "title": "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
       "arxiv": "",
-      "folder": "papers/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulat",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulat",
       "note_file": "Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulat.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -248,7 +248,7 @@
     {
       "title": "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety",
       "arxiv": "",
-      "folder": "papers/VIGOR__Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/VIGOR__Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety",
       "note_file": "VIGOR__Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.md",
       "pdf_file": "VIGOR.pdf",
       "status": "pending",
@@ -259,7 +259,7 @@
     {
       "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
       "arxiv": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
-      "folder": "papers/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching",
       "note_file": "Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching.md",
       "pdf_file": "Perceptive.pdf",
       "status": "pending",
@@ -270,7 +270,7 @@
     {
       "title": "MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction",
       "arxiv": "MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction",
-      "folder": "papers/MeshMimic__Geometry-Aware_Humanoid_Motion_Learning_through_3D_Scene_Reconstructi",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/MeshMimic__Geometry-Aware_Humanoid_Motion_Learning_through_3D_Scene_Reconstructi",
       "note_file": "MeshMimic__Geometry-Aware_Humanoid_Motion_Learning_through_3D_Scene_Reconstructi.md",
       "pdf_file": "MeshMimic.pdf",
       "status": "pending",
@@ -281,7 +281,7 @@
     {
       "title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
       "arxiv": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
-      "folder": "papers/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation",
       "note_file": "General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation.md",
       "pdf_file": "General.pdf",
       "status": "pending",
@@ -292,7 +292,7 @@
     {
       "title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
       "arxiv": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
-      "folder": "papers/HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model",
       "note_file": "HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model.md",
       "pdf_file": "HAIC.pdf",
       "status": "pending",
@@ -303,7 +303,7 @@
     {
       "title": "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
       "arxiv": "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
-      "folder": "papers/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_",
       "note_file": "EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_.md",
       "pdf_file": "EgoHumanoid.pdf",
       "status": "pending",
@@ -314,7 +314,7 @@
     {
       "title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
       "arxiv": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
-      "folder": "papers/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_",
       "note_file": "MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_.md",
       "pdf_file": "MOSAIC.pdf",
       "status": "pending",
@@ -325,7 +325,7 @@
     {
       "title": "Learning Human-Like Badminton Skills for Humanoid Robots",
       "arxiv": "Learning Human-Like Badminton Skills for Humanoid Robots",
-      "folder": "papers/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots",
       "note_file": "Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -336,7 +336,7 @@
     {
       "title": "TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control",
       "arxiv": "TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control",
-      "folder": "papers/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C",
       "note_file": "TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C.md",
       "pdf_file": "TextOp.pdf",
       "status": "pending",
@@ -347,7 +347,7 @@
     {
       "title": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
       "arxiv": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
-      "folder": "papers/Humanoid_Manipulation_Interface__Humanoid_Whole-Body_Manipulation_from_Robot-Fre",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Humanoid_Manipulation_Interface__Humanoid_Whole-Body_Manipulation_from_Robot-Fre",
       "note_file": "Humanoid_Manipulation_Interface__Humanoid_Whole-Body_Manipulation_from_Robot-Fre.md",
       "pdf_file": "Humanoid.pdf",
       "status": "pending",
@@ -358,7 +358,7 @@
     {
       "title": "HiWET: Hierarchical World-Frame End-Effector Tracking for Long-Horizon Humanoid Loco-Manipulation",
       "arxiv": "HiWET: Hierarchical World-Frame End-Effector Tracking for Long-Horizon Humanoid Loco-Manipulation",
-      "folder": "papers/HiWET__Hierarchical_World-Frame_End-Effector_Tracking_for_Long-Horizon_Humanoid_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HiWET__Hierarchical_World-Frame_End-Effector_Tracking_for_Long-Horizon_Humanoid_",
       "note_file": "HiWET__Hierarchical_World-Frame_End-Effector_Tracking_for_Long-Horizon_Humanoid_.md",
       "pdf_file": "HiWET.pdf",
       "status": "pending",
@@ -369,7 +369,7 @@
     {
       "title": "Learning Soccer Skills for Humanoid Robots:   A Progressive Perception-Action Framework",
       "arxiv": "Learning Soccer Skills for Humanoid Robots:   A Progressive Perception-Action Framework",
-      "folder": "papers/Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr",
       "note_file": "Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -380,7 +380,7 @@
     {
       "title": "PDF-HR: Pose Distance Fields for Humanoid Robots",
       "arxiv": "PDF-HR: Pose Distance Fields for Humanoid Robots",
-      "folder": "papers/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots",
       "note_file": "PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots.md",
       "pdf_file": "PDF-HR.pdf",
       "status": "pending",
@@ -391,7 +391,7 @@
     {
       "title": "HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control",
       "arxiv": "HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control",
-      "folder": "papers/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control",
       "note_file": "HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control.md",
       "pdf_file": "HUSKY.pdf",
       "status": "pending",
@@ -402,7 +402,7 @@
     {
       "title": "Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control",
       "arxiv": "Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control",
-      "folder": "papers/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B",
       "note_file": "Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B.md",
       "pdf_file": "Embodiment-Aware.pdf",
       "status": "pending",
@@ -413,7 +413,7 @@
     {
       "title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
       "arxiv": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
-      "folder": "papers/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi",
       "note_file": "HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi.md",
       "pdf_file": "HumanX.pdf",
       "status": "pending",
@@ -424,7 +424,7 @@
     {
       "title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
       "arxiv": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
-      "folder": "papers/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour",
       "note_file": "TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour.md",
       "pdf_file": "TTT-Parkour.pdf",
       "status": "pending",
@@ -435,7 +435,7 @@
     {
       "title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
       "arxiv": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
-      "folder": "papers/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control",
       "note_file": "ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control.md",
       "pdf_file": "ZEST.pdf",
       "status": "pending",
@@ -446,7 +446,7 @@
     {
       "title": "Robust and Generalized Humanoid Motion Tracking",
       "arxiv": "Robust and Generalized Humanoid Motion Tracking",
-      "folder": "papers/Robust_and_Generalized_Humanoid_Motion_Tracking",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Robust_and_Generalized_Humanoid_Motion_Tracking",
       "note_file": "Robust_and_Generalized_Humanoid_Motion_Tracking.md",
       "pdf_file": "Robust.pdf",
       "status": "pending",
@@ -457,7 +457,7 @@
     {
       "title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
       "arxiv": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
-      "folder": "papers/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing",
       "note_file": "RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing.md",
       "pdf_file": "RoboStriker.pdf",
       "status": "pending",
@@ -468,7 +468,7 @@
     {
       "title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
       "arxiv": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
-      "folder": "papers/PILOT__A_Perceptive_Integrated_Low-level_Controller_for_Loco-manipulation_over_U",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/PILOT__A_Perceptive_Integrated_Low-level_Controller_for_Loco-manipulation_over_U",
       "note_file": "PILOT__A_Perceptive_Integrated_Low-level_Controller_for_Loco-manipulation_over_U.md",
       "pdf_file": "PILOT.pdf",
       "status": "pending",
@@ -479,7 +479,7 @@
     {
       "title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
       "arxiv": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
-      "folder": "papers/Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes",
       "note_file": "Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes.md",
       "pdf_file": "Collision-Free.pdf",
       "status": "pending",
@@ -490,7 +490,7 @@
     {
       "title": "FRoM-W1: Towards General Humanoid Whole-Body Control with Language Instructions",
       "arxiv": "FRoM-W1: Towards General Humanoid Whole-Body Control with Language Instructions",
-      "folder": "papers/FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions",
       "note_file": "FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions.md",
       "pdf_file": "FRoM-W1.pdf",
       "status": "pending",
@@ -501,7 +501,7 @@
     {
       "title": "Learning Whole-Body Human-Humanoid Interaction from Human-Human Demonstrations",
       "arxiv": "Learning Whole-Body Human-Humanoid Interaction from Human-Human Demonstrations",
-      "folder": "papers/Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations",
       "note_file": "Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -512,7 +512,7 @@
     {
       "title": "Hiking in the Wild: A Scalable Perceptive Parkour Framework for Humanoids",
       "arxiv": "Hiking in the Wild: A Scalable Perceptive Parkour Framework for Humanoids",
-      "folder": "papers/Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids",
       "note_file": "Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids.md",
       "pdf_file": "Hiking.pdf",
       "status": "pending",
@@ -523,7 +523,7 @@
     {
       "title": "Deep Whole-body Parkour",
       "arxiv": "Deep Whole-body Parkour",
-      "folder": "papers/Deep_Whole-body_Parkour",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Deep_Whole-body_Parkour",
       "note_file": "Deep_Whole-body_Parkour.md",
       "pdf_file": "Deep.pdf",
       "status": "pending",
@@ -534,7 +534,7 @@
     {
       "title": "Coordinated Humanoid Manipulation with Choice Policies",
       "arxiv": "Coordinated Humanoid Manipulation with Choice Policies",
-      "folder": "papers/Coordinated_Humanoid_Manipulation_with_Choice_Policies",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Coordinated_Humanoid_Manipulation_with_Choice_Policies",
       "note_file": "Coordinated_Humanoid_Manipulation_with_Choice_Policies.md",
       "pdf_file": "Coordinated.pdf",
       "status": "pending",
@@ -545,7 +545,7 @@
     {
       "title": "UniAct: Unified Motion Generation and Action Streaming for Humanoid Robots",
       "arxiv": "UniAct: Unified Motion Generation and Action Streaming for Humanoid Robots",
-      "folder": "papers/UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots",
       "note_file": "UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots.md",
       "pdf_file": "UniAct.pdf",
       "status": "pending",
@@ -556,7 +556,7 @@
     {
       "title": "EGM: Efficiently Learning General Motion Tracking Policy for High Dynamic Humanoid Whole-Body Control",
       "arxiv": "EGM: Efficiently Learning General Motion Tracking Policy for High Dynamic Humanoid Whole-Body Control",
-      "folder": "papers/EGM__Efficiently_Learning_General_Motion_Tracking_Policy_for_High_Dynamic_Humano",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/EGM__Efficiently_Learning_General_Motion_Tracking_Policy_for_High_Dynamic_Humano",
       "note_file": "EGM__Efficiently_Learning_General_Motion_Tracking_Policy_for_High_Dynamic_Humano.md",
       "pdf_file": "EGM.pdf",
       "status": "pending",
@@ -567,7 +567,7 @@
     {
       "title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
       "arxiv": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
-      "folder": "papers/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots",
       "note_file": "Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.md",
       "pdf_file": "Semantic.pdf",
       "status": "pending",
@@ -578,7 +578,7 @@
     {
       "title": "CHIP: Adaptive Compliance for Humanoid Control through Hindsight Perturbation",
       "arxiv": "CHIP: Adaptive Compliance for Humanoid Control through Hindsight Perturbation",
-      "folder": "papers/CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation",
       "note_file": "CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation.md",
       "pdf_file": "CHIP.pdf",
       "status": "pending",
@@ -589,7 +589,7 @@
     {
       "title": "PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations",
       "arxiv": "PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations",
-      "folder": "papers/PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contr",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contr",
       "note_file": "PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contr.md",
       "pdf_file": "PvP.pdf",
       "status": "pending",
@@ -600,7 +600,7 @@
     {
       "title": "Learning Agile Striker Skills for Humanoid Soccer Robots from Noisy Sensory Input",
       "arxiv": "Learning Agile Striker Skills for Humanoid Soccer Robots from Noisy Sensory Input",
-      "folder": "papers/Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Inpu",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Inpu",
       "note_file": "Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Inpu.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -611,7 +611,7 @@
     {
       "title": "Discovering Self-Protective Falling Policy for Humanoid Robot via Deep Reinforcement Learning",
       "arxiv": "Discovering Self-Protective Falling Policy for Humanoid Robot via Deep Reinforcement Learning",
-      "folder": "papers/Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_Reinforce",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_Reinforce",
       "note_file": "Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_Reinforce.md",
       "pdf_file": "Discovering.pdf",
       "status": "pending",
@@ -622,7 +622,7 @@
     {
       "title": "Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer",
       "arxiv": "Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer",
-      "folder": "papers/Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer",
       "note_file": "Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer.md",
       "pdf_file": "Opening.pdf",
       "status": "pending",
@@ -633,7 +633,7 @@
     {
       "title": "Commanding Humanoid by Free-form Language: A Large Language Action Model with Unified Motion Vocabulary",
       "arxiv": "Commanding Humanoid by Free-form Language: A Large Language Action Model with Unified Motion Vocabulary",
-      "folder": "papers/Commanding_Humanoid_by_Free-form_Language__A_Large_Language_Action_Model_with_Un",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Commanding_Humanoid_by_Free-form_Language__A_Large_Language_Action_Model_with_Un",
       "note_file": "Commanding_Humanoid_by_Free-form_Language__A_Large_Language_Action_Model_with_Un.md",
       "pdf_file": "Commanding.pdf",
       "status": "pending",
@@ -644,7 +644,7 @@
     {
       "title": "Kinematics-Aware Multi-Policy Reinforcement Learning for Force-Capable Humanoid Loco-Manipulation",
       "arxiv": "Kinematics-Aware Multi-Policy Reinforcement Learning for Force-Capable Humanoid Loco-Manipulation",
-      "folder": "papers/Kinematics-Aware_Multi-Policy_Reinforcement_Learning_for_Force-Capable_Humanoid_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Kinematics-Aware_Multi-Policy_Reinforcement_Learning_for_Force-Capable_Humanoid_",
       "note_file": "Kinematics-Aware_Multi-Policy_Reinforcement_Learning_for_Force-Capable_Humanoid_.md",
       "pdf_file": "Kinematics-Aware.pdf",
       "status": "pending",
@@ -655,7 +655,7 @@
     {
       "title": "HAFO: A Force-Adaptive Control Framework for Humanoid Robots in Intense Interaction Environments",
       "arxiv": "HAFO: A Force-Adaptive Control Framework for Humanoid Robots in Intense Interaction Environments",
-      "folder": "papers/HAFO__A_Force-Adaptive_Control_Framework_for_Humanoid_Robots_in_Intense_Interact",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HAFO__A_Force-Adaptive_Control_Framework_for_Humanoid_Robots_in_Intense_Interact",
       "note_file": "HAFO__A_Force-Adaptive_Control_Framework_for_Humanoid_Robots_in_Intense_Interact.md",
       "pdf_file": "HAFO.pdf",
       "status": "pending",
@@ -666,7 +666,7 @@
     {
       "title": "SENTINEL: A Fully End-to-End Language-Action Model for Humanoid Whole Body Control",
       "arxiv": "SENTINEL: A Fully End-to-End Language-Action Model for Humanoid Whole Body Control",
-      "folder": "papers/SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Contr",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Contr",
       "note_file": "SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Contr.md",
       "pdf_file": "SENTINEL.pdf",
       "status": "pending",
@@ -677,7 +677,7 @@
     {
       "title": "SafeFall: Learning Protective Control for Humanoid Robots",
       "arxiv": "SafeFall: Learning Protective Control for Humanoid Robots",
-      "folder": "papers/SafeFall__Learning_Protective_Control_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SafeFall__Learning_Protective_Control_for_Humanoid_Robots",
       "note_file": "SafeFall__Learning_Protective_Control_for_Humanoid_Robots.md",
       "pdf_file": "SafeFall.pdf",
       "status": "pending",
@@ -688,7 +688,7 @@
     {
       "title": "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data",
       "arxiv": "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data",
-      "folder": "papers/Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data",
       "note_file": "Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data.md",
       "pdf_file": "Agility.pdf",
       "status": "pending",
@@ -699,7 +699,7 @@
     {
       "title": "VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation",
       "arxiv": "VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation",
-      "folder": "papers/VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation",
       "note_file": "VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation.md",
       "pdf_file": "VIRAL.pdf",
       "status": "pending",
@@ -710,7 +710,7 @@
     {
       "title": "HMC: Learning Heterogeneous Meta-Control for Contact-Rich Loco-Manipulation",
       "arxiv": "HMC: Learning Heterogeneous Meta-Control for Contact-Rich Loco-Manipulation",
-      "folder": "papers/HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation",
       "note_file": "HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation.md",
       "pdf_file": "HMC.pdf",
       "status": "pending",
@@ -721,7 +721,7 @@
     {
       "title": "Humanoid Whole-Body Badminton via Multi-Stage Reinforcement Learning",
       "arxiv": "Humanoid Whole-Body Badminton via Multi-Stage Reinforcement Learning",
-      "folder": "papers/Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning",
       "note_file": "Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning.md",
       "pdf_file": "Humanoid.pdf",
       "status": "pending",
@@ -732,7 +732,7 @@
     {
       "title": "Robot Crash Course: Learning Soft and Stylized Falling",
       "arxiv": "Robot Crash Course: Learning Soft and Stylized Falling",
-      "folder": "papers/Robot_Crash_Course__Learning_Soft_and_Stylized_Falling",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Robot_Crash_Course__Learning_Soft_and_Stylized_Falling",
       "note_file": "Robot_Crash_Course__Learning_Soft_and_Stylized_Falling.md",
       "pdf_file": "Robot.pdf",
       "status": "pending",
@@ -743,7 +743,7 @@
     {
       "title": "Unveiling the Impact of Data and Model Scaling on High-Level Control for Humanoid Robots",
       "arxiv": "Unveiling the Impact of Data and Model Scaling on High-Level Control for Humanoid Robots",
-      "folder": "papers/Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoi",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoi",
       "note_file": "Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoi.md",
       "pdf_file": "Unveiling.pdf",
       "status": "pending",
@@ -754,7 +754,7 @@
     {
       "title": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
       "arxiv": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
-      "folder": "papers/SONIC__Supersizing_Motion_Tracking_for_Natural_Humanoid_Whole-Body_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SONIC__Supersizing_Motion_Tracking_for_Natural_Humanoid_Whole-Body_Control",
       "note_file": "SONIC__Supersizing_Motion_Tracking_for_Natural_Humanoid_Whole-Body_Control.md",
       "pdf_file": "SONIC.pdf",
       "status": "pending",
@@ -765,7 +765,7 @@
     {
       "title": "Unified Humanoid Fall-Safety Policy from a Few Demonstrations",
       "arxiv": "Unified Humanoid Fall-Safety Policy from a Few Demonstrations",
-      "folder": "papers/Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations",
       "note_file": "Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations.md",
       "pdf_file": "Unified.pdf",
       "status": "pending",
@@ -776,7 +776,7 @@
     {
       "title": "Towards Adaptive Humanoid Control via Multi-Behavior Distillation and Reinforced Fine-Tuning",
       "arxiv": "Towards Adaptive Humanoid Control via Multi-Behavior Distillation and Reinforced Fine-Tuning",
-      "folder": "papers/Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced",
       "note_file": "Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced.md",
       "pdf_file": "Towards.pdf",
       "status": "pending",
@@ -787,7 +787,7 @@
     {
       "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
       "arxiv": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
-      "folder": "papers/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object",
       "note_file": "GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
       "pdf_file": "GentleHumanoid.pdf",
       "status": "pending",
@@ -798,7 +798,7 @@
     {
       "title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",
       "arxiv": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",
-      "folder": "papers/BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control_Using_Un",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control_Using_Un",
       "note_file": "BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control_Using_Un.md",
       "pdf_file": "BFM-Zero.pdf",
       "status": "pending",
@@ -809,7 +809,7 @@
     {
       "title": "Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots",
       "arxiv": "Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots",
-      "folder": "papers/Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots",
       "note_file": "Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -820,7 +820,7 @@
     {
       "title": "TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System",
       "arxiv": "TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System",
-      "folder": "papers/TWIST2__Scalable,_Portable,_and_Holistic_Humanoid_Data_Collection_System",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/TWIST2__Scalable,_Portable,_and_Holistic_Humanoid_Data_Collection_System",
       "note_file": "TWIST2__Scalable,_Portable,_and_Holistic_Humanoid_Data_Collection_System.md",
       "pdf_file": "TWIST2.pdf",
       "status": "pending",
@@ -831,7 +831,7 @@
     {
       "title": "Thor: Towards Human-Level Whole-Body Reactions for Intense Contact-Rich Environments",
       "arxiv": "Thor: Towards Human-Level Whole-Body Reactions for Intense Contact-Rich Environments",
-      "folder": "papers/Thor__Towards_Human-Level_Whole-Body_Reactions_for_Intense_Contact-Rich_Environm",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Thor__Towards_Human-Level_Whole-Body_Reactions_for_Intense_Contact-Rich_Environm",
       "note_file": "Thor__Towards_Human-Level_Whole-Body_Reactions_for_Intense_Contact-Rich_Environm.md",
       "pdf_file": "Thor.pdf",
       "status": "pending",
@@ -842,7 +842,7 @@
     {
       "title": "One-shot Humanoid Whole-body Motion Learning",
       "arxiv": "One-shot Humanoid Whole-body Motion Learning",
-      "folder": "papers/One-shot_Humanoid_Whole-body_Motion_Learning",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/One-shot_Humanoid_Whole-body_Motion_Learning",
       "note_file": "One-shot_Humanoid_Whole-body_Motion_Learning.md",
       "pdf_file": "One-shot.pdf",
       "status": "pending",
@@ -853,7 +853,7 @@
     {
       "title": "Humanoid Goalkeeper: Learning from Position Conditioned Task-Motion Constraints",
       "arxiv": "Humanoid Goalkeeper: Learning from Position Conditioned Task-Motion Constraints",
-      "folder": "papers/Humanoid_Goalkeeper__Learning_from_Position_Conditioned_Task-Motion_Constraints",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Humanoid_Goalkeeper__Learning_from_Position_Conditioned_Task-Motion_Constraints",
       "note_file": "Humanoid_Goalkeeper__Learning_from_Position_Conditioned_Task-Motion_Constraints.md",
       "pdf_file": "Humanoid.pdf",
       "status": "pending",
@@ -864,7 +864,7 @@
     {
       "title": "From Language to Locomotion: Retargeting-free Humanoid Control via Motion Latent Guidance",
       "arxiv": "From Language to Locomotion: Retargeting-free Humanoid Control via Motion Latent Guidance",
-      "folder": "papers/From_Language_to_Locomotion__Retargeting-free_Humanoid_Control_via_Motion_Latent",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/From_Language_to_Locomotion__Retargeting-free_Humanoid_Control_via_Motion_Latent",
       "note_file": "From_Language_to_Locomotion__Retargeting-free_Humanoid_Control_via_Motion_Latent.md",
       "pdf_file": "From.pdf",
       "status": "pending",
@@ -875,7 +875,7 @@
     {
       "title": "Towards Adaptable Humanoid Control via Adaptive Motion Tracking",
       "arxiv": "Towards Adaptable Humanoid Control via Adaptive Motion Tracking",
-      "folder": "papers/Towards_Adaptable_Humanoid_Control_via_Adaptive_Motion_Tracking",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Towards_Adaptable_Humanoid_Control_via_Adaptive_Motion_Tracking",
       "note_file": "Towards_Adaptable_Humanoid_Control_via_Adaptive_Motion_Tracking.md",
       "pdf_file": "Towards.pdf",
       "status": "pending",
@@ -886,7 +886,7 @@
     {
       "title": "Learning Human-Humanoid Coordination for Collaborative Object Carrying",
       "arxiv": "Learning Human-Humanoid Coordination for Collaborative Object Carrying",
-      "folder": "papers/Learning_Human-Humanoid_Coordination_for_Collaborative_Object_Carrying",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Human-Humanoid_Coordination_for_Collaborative_Object_Carrying",
       "note_file": "Learning_Human-Humanoid_Coordination_for_Collaborative_Object_Carrying.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -897,7 +897,7 @@
     {
       "title": "Ego-Vision World Model for Humanoid Contact Planning",
       "arxiv": "Ego-Vision World Model for Humanoid Contact Planning",
-      "folder": "papers/Ego-Vision_World_Model_for_Humanoid_Contact_Planning",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Ego-Vision_World_Model_for_Humanoid_Contact_Planning",
       "note_file": "Ego-Vision_World_Model_for_Humanoid_Contact_Planning.md",
       "pdf_file": "Ego-Vision.pdf",
       "status": "pending",
@@ -908,7 +908,7 @@
     {
       "title": "DemoHLM: From One Demonstration to Generalizable Humanoid Loco-Manipulation",
       "arxiv": "DemoHLM: From One Demonstration to Generalizable Humanoid Loco-Manipulation",
-      "folder": "papers/DemoHLM__From_One_Demonstration_to_Generalizable_Humanoid_Loco-Manipulation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/DemoHLM__From_One_Demonstration_to_Generalizable_Humanoid_Loco-Manipulation",
       "note_file": "DemoHLM__From_One_Demonstration_to_Generalizable_Humanoid_Loco-Manipulation.md",
       "pdf_file": "DemoHLM.pdf",
       "status": "pending",
@@ -919,7 +919,7 @@
     {
       "title": "PhysHSI: Towards a Real-World Generalizable and Natural Humanoid-Scene Interaction System",
       "arxiv": "PhysHSI: Towards a Real-World Generalizable and Natural Humanoid-Scene Interaction System",
-      "folder": "papers/PhysHSI__Towards_a_Real-World_Generalizable_and_Natural_Humanoid-Scene_Interacti",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/PhysHSI__Towards_a_Real-World_Generalizable_and_Natural_Humanoid-Scene_Interacti",
       "note_file": "PhysHSI__Towards_a_Real-World_Generalizable_and_Natural_Humanoid-Scene_Interacti.md",
       "pdf_file": "PhysHSI.pdf",
       "status": "pending",
@@ -930,7 +930,7 @@
     {
       "title": "It Takes Two: Learning Interactive Whole-Body Control Between Humanoid Robots",
       "arxiv": "It Takes Two: Learning Interactive Whole-Body Control Between Humanoid Robots",
-      "folder": "papers/It_Takes_Two__Learning_Interactive_Whole-Body_Control_Between_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/It_Takes_Two__Learning_Interactive_Whole-Body_Control_Between_Humanoid_Robots",
       "note_file": "It_Takes_Two__Learning_Interactive_Whole-Body_Control_Between_Humanoid_Robots.md",
       "pdf_file": "It.pdf",
       "status": "pending",
@@ -941,7 +941,7 @@
     {
       "title": "ResMimic: From General Motion Tracking to Humanoid Whole-body Loco-Manipulation via Residual Learning",
       "arxiv": "ResMimic: From General Motion Tracking to Humanoid Whole-body Loco-Manipulation via Residual Learning",
-      "folder": "papers/ResMimic__From_General_Motion_Tracking_to_Humanoid_Whole-body_Loco-Manipulation_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/ResMimic__From_General_Motion_Tracking_to_Humanoid_Whole-body_Loco-Manipulation_",
       "note_file": "ResMimic__From_General_Motion_Tracking_to_Humanoid_Whole-body_Loco-Manipulation_.md",
       "pdf_file": "ResMimic.pdf",
       "status": "pending",
@@ -952,7 +952,7 @@
     {
       "title": "HumanoidExo: Scalable Whole-Body Humanoid Manipulation via Wearable Exoskeleton",
       "arxiv": "HumanoidExo: Scalable Whole-Body Humanoid Manipulation via Wearable Exoskeleton",
-      "folder": "papers/HumanoidExo__Scalable_Whole-Body_Humanoid_Manipulation_via_Wearable_Exoskeleton",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HumanoidExo__Scalable_Whole-Body_Humanoid_Manipulation_via_Wearable_Exoskeleton",
       "note_file": "HumanoidExo__Scalable_Whole-Body_Humanoid_Manipulation_via_Wearable_Exoskeleton.md",
       "pdf_file": "HumanoidExo.pdf",
       "status": "pending",
@@ -963,7 +963,7 @@
     {
       "title": "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking",
       "arxiv": "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking",
-      "folder": "papers/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking",
       "note_file": "Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking.md",
       "pdf_file": "Retargeting.pdf",
       "status": "pending",
@@ -974,7 +974,7 @@
     {
       "title": "OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction",
       "arxiv": "OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction",
-      "folder": "papers/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc",
       "note_file": "OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc.md",
       "pdf_file": "OmniRetarget.pdf",
       "status": "pending",
@@ -985,7 +985,7 @@
     {
       "title": "Towards Versatile Humanoid Table Tennis: Unified Reinforcement Learning with Prediction Augmentation",
       "arxiv": "Towards Versatile Humanoid Table Tennis: Unified Reinforcement Learning with Prediction Augmentation",
-      "folder": "papers/Towards_Versatile_Humanoid_Table_Tennis__Unified_Reinforcement_Learning_with_Pre",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Towards_Versatile_Humanoid_Table_Tennis__Unified_Reinforcement_Learning_with_Pre",
       "note_file": "Towards_Versatile_Humanoid_Table_Tennis__Unified_Reinforcement_Learning_with_Pre.md",
       "pdf_file": "Towards.pdf",
       "status": "pending",
@@ -996,7 +996,7 @@
     {
       "title": "SEEC: Stable End-Effector Control with Model-Enhanced Residual Learning for Humanoid Loco-Manipulation",
       "arxiv": "SEEC: Stable End-Effector Control with Model-Enhanced Residual Learning for Humanoid Loco-Manipulation",
-      "folder": "papers/SEEC__Stable_End-Effector_Control_with_Model-Enhanced_Residual_Learning_for_Huma",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SEEC__Stable_End-Effector_Control_with_Model-Enhanced_Residual_Learning_for_Huma",
       "note_file": "SEEC__Stable_End-Effector_Control_with_Model-Enhanced_Residual_Learning_for_Huma.md",
       "pdf_file": "SEEC.pdf",
       "status": "pending",
@@ -1007,7 +1007,7 @@
     {
       "title": "VisualMimic: Visual Humanoid Loco-Manipulation via Motion Tracking and Generation",
       "arxiv": "VisualMimic: Visual Humanoid Loco-Manipulation via Motion Tracking and Generation",
-      "folder": "papers/VisualMimic__Visual_Humanoid_Loco-Manipulation_via_Motion_Tracking_and_Generatio",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/VisualMimic__Visual_Humanoid_Loco-Manipulation_via_Motion_Tracking_and_Generatio",
       "note_file": "VisualMimic__Visual_Humanoid_Loco-Manipulation_via_Motion_Tracking_and_Generatio.md",
       "pdf_file": "VisualMimic.pdf",
       "status": "pending",
@@ -1018,7 +1018,7 @@
     {
       "title": "HDMI: Learning Interactive Humanoid Whole-Body Control from Human Videos",
       "arxiv": "HDMI: Learning Interactive Humanoid Whole-Body Control from Human Videos",
-      "folder": "papers/HDMI__Learning_Interactive_Humanoid_Whole-Body_Control_from_Human_Videos",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HDMI__Learning_Interactive_Humanoid_Whole-Body_Control_from_Human_Videos",
       "note_file": "HDMI__Learning_Interactive_Humanoid_Whole-Body_Control_from_Human_Videos.md",
       "pdf_file": "HDMI.pdf",
       "status": "pending",
@@ -1029,7 +1029,7 @@
     {
       "title": "KungfuBot 2: Learning Versatile Motion Skills for Humanoid Whole-Body Control",
       "arxiv": "KungfuBot 2: Learning Versatile Motion Skills for Humanoid Whole-Body Control",
-      "folder": "papers/KungfuBot_2__Learning_Versatile_Motion_Skills_for_Humanoid_Whole-Body_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/KungfuBot_2__Learning_Versatile_Motion_Skills_for_Humanoid_Whole-Body_Control",
       "note_file": "KungfuBot_2__Learning_Versatile_Motion_Skills_for_Humanoid_Whole-Body_Control.md",
       "pdf_file": "KungfuBot.pdf",
       "status": "pending",
@@ -1040,7 +1040,7 @@
     {
       "title": "Implicit Kinodynamic Motion Retargeting for Human-to-humanoid Imitation Learning",
       "arxiv": "Implicit Kinodynamic Motion Retargeting for Human-to-humanoid Imitation Learning",
-      "folder": "papers/Implicit_Kinodynamic_Motion_Retargeting_for_Human-to-humanoid_Imitation_Learning",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Implicit_Kinodynamic_Motion_Retargeting_for_Human-to-humanoid_Imitation_Learning",
       "note_file": "Implicit_Kinodynamic_Motion_Retargeting_for_Human-to-humanoid_Imitation_Learning.md",
       "pdf_file": "Implicit.pdf",
       "status": "pending",
@@ -1051,7 +1051,7 @@
     {
       "title": "DreamControl: Human-Inspired Whole-Body Humanoid Control for Scene Interaction via Guided Diffusion",
       "arxiv": "DreamControl: Human-Inspired Whole-Body Humanoid Control for Scene Interaction via Guided Diffusion",
-      "folder": "papers/DreamControl__Human-Inspired_Whole-Body_Humanoid_Control_for_Scene_Interaction_v",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/DreamControl__Human-Inspired_Whole-Body_Humanoid_Control_for_Scene_Interaction_v",
       "note_file": "DreamControl__Human-Inspired_Whole-Body_Humanoid_Control_for_Scene_Interaction_v.md",
       "pdf_file": "DreamControl.pdf",
       "status": "pending",
@@ -1062,7 +1062,7 @@
     {
       "title": "Track Any Motions under Any Disturbances",
       "arxiv": "Track Any Motions under Any Disturbances",
-      "folder": "papers/Track_Any_Motions_under_Any_Disturbances",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Track_Any_Motions_under_Any_Disturbances",
       "note_file": "Track_Any_Motions_under_Any_Disturbances.md",
       "pdf_file": "Track.pdf",
       "status": "pending",
@@ -1073,7 +1073,7 @@
     {
       "title": "Behavior Foundation Model for Humanoid Robots",
       "arxiv": "Behavior Foundation Model for Humanoid Robots",
-      "folder": "papers/Behavior_Foundation_Model_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Behavior_Foundation_Model_for_Humanoid_Robots",
       "note_file": "Behavior_Foundation_Model_for_Humanoid_Robots.md",
       "pdf_file": "Behavior.pdf",
       "status": "pending",
@@ -1084,7 +1084,7 @@
     {
       "title": "Embracing Bulky Objects with Humanoid Robots: Whole-Body Manipulation with Reinforcement Learning",
       "arxiv": "Embracing Bulky Objects with Humanoid Robots: Whole-Body Manipulation with Reinforcement Learning",
-      "folder": "papers/Embracing_Bulky_Objects_with_Humanoid_Robots__Whole-Body_Manipulation_with_Reinf",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Embracing_Bulky_Objects_with_Humanoid_Robots__Whole-Body_Manipulation_with_Reinf",
       "note_file": "Embracing_Bulky_Objects_with_Humanoid_Robots__Whole-Body_Manipulation_with_Reinf.md",
       "pdf_file": "Embracing.pdf",
       "status": "pending",
@@ -1095,7 +1095,7 @@
     {
       "title": "StageACT: Stage-Conditioned Imitation for Robust Humanoid Door Opening",
       "arxiv": "StageACT: Stage-Conditioned Imitation for Robust Humanoid Door Opening",
-      "folder": "papers/StageACT__Stage-Conditioned_Imitation_for_Robust_Humanoid_Door_Opening",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/StageACT__Stage-Conditioned_Imitation_for_Robust_Humanoid_Door_Opening",
       "note_file": "StageACT__Stage-Conditioned_Imitation_for_Robust_Humanoid_Door_Opening.md",
       "pdf_file": "StageACT.pdf",
       "status": "pending",
@@ -1106,7 +1106,7 @@
     {
       "title": "TrajBooster: Boosting Humanoid Whole-Body Manipulation via Trajectory-Centric Learning",
       "arxiv": "TrajBooster: Boosting Humanoid Whole-Body Manipulation via Trajectory-Centric Learning",
-      "folder": "papers/TrajBooster__Boosting_Humanoid_Whole-Body_Manipulation_via_Trajectory-Centric_Le",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/TrajBooster__Boosting_Humanoid_Whole-Body_Manipulation_via_Trajectory-Centric_Le",
       "note_file": "TrajBooster__Boosting_Humanoid_Whole-Body_Manipulation_via_Trajectory-Centric_Le.md",
       "pdf_file": "TrajBooster.pdf",
       "status": "pending",
@@ -1117,7 +1117,7 @@
     {
       "title": "HITTER: A HumanoId Table TEnnis Robot via Hierarchical Planning and Learning",
       "arxiv": "HITTER: A HumanoId Table TEnnis Robot via Hierarchical Planning and Learning",
-      "folder": "papers/HITTER__A_HumanoId_Table_TEnnis_Robot_via_Hierarchical_Planning_and_Learning",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HITTER__A_HumanoId_Table_TEnnis_Robot_via_Hierarchical_Planning_and_Learning",
       "note_file": "HITTER__A_HumanoId_Table_TEnnis_Robot_via_Hierarchical_Planning_and_Learning.md",
       "pdf_file": "HITTER.pdf",
       "status": "pending",
@@ -1128,7 +1128,7 @@
     {
       "title": "HuBE: Cross-Embodiment Human-like Behavior Execution for Humanoid Robots",
       "arxiv": "HuBE: Cross-Embodiment Human-like Behavior Execution for Humanoid Robots",
-      "folder": "papers/HuBE__Cross-Embodiment_Human-like_Behavior_Execution_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HuBE__Cross-Embodiment_Human-like_Behavior_Execution_for_Humanoid_Robots",
       "note_file": "HuBE__Cross-Embodiment_Human-like_Behavior_Execution_for_Humanoid_Robots.md",
       "pdf_file": "HuBE.pdf",
       "status": "pending",
@@ -1139,7 +1139,7 @@
     {
       "title": "HumanoidVerse: A Versatile Humanoid for Vision-Language Guided Multi-Object Rearrangement",
       "arxiv": "HumanoidVerse: A Versatile Humanoid for Vision-Language Guided Multi-Object Rearrangement",
-      "folder": "papers/HumanoidVerse__A_Versatile_Humanoid_for_Vision-Language_Guided_Multi-Object_Rear",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HumanoidVerse__A_Versatile_Humanoid_for_Vision-Language_Guided_Multi-Object_Rear",
       "note_file": "HumanoidVerse__A_Versatile_Humanoid_for_Vision-Language_Guided_Multi-Object_Rear.md",
       "pdf_file": "HumanoidVerse.pdf",
       "status": "pending",
@@ -1150,7 +1150,7 @@
     {
       "title": "Task and Motion Planning for Humanoid Loco-manipulation",
       "arxiv": "Task and Motion Planning for Humanoid Loco-manipulation",
-      "folder": "papers/Task_and_Motion_Planning_for_Humanoid_Loco-manipulation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Task_and_Motion_Planning_for_Humanoid_Loco-manipulation",
       "note_file": "Task_and_Motion_Planning_for_Humanoid_Loco-manipulation.md",
       "pdf_file": "Task.pdf",
       "status": "pending",
@@ -1161,7 +1161,7 @@
     {
       "title": "GBC: Generalized Behavior-Cloning Framework for Whole-Body Humanoid Imitation",
       "arxiv": "GBC: Generalized Behavior-Cloning Framework for Whole-Body Humanoid Imitation",
-      "folder": "papers/GBC__Generalized_Behavior-Cloning_Framework_for_Whole-Body_Humanoid_Imitation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/GBC__Generalized_Behavior-Cloning_Framework_for_Whole-Body_Humanoid_Imitation",
       "note_file": "GBC__Generalized_Behavior-Cloning_Framework_for_Whole-Body_Humanoid_Imitation.md",
       "pdf_file": "GBC.pdf",
       "status": "pending",
@@ -1172,7 +1172,7 @@
     {
       "title": "A Whole-Body Motion Imitation Framework from Human Data for Full-Size Humanoid Robot",
       "arxiv": "A Whole-Body Motion Imitation Framework from Human Data for Full-Size Humanoid Robot",
-      "folder": "papers/A_Whole-Body_Motion_Imitation_Framework_from_Human_Data_for_Full-Size_Humanoid_R",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/A_Whole-Body_Motion_Imitation_Framework_from_Human_Data_for_Full-Size_Humanoid_R",
       "note_file": "A_Whole-Body_Motion_Imitation_Framework_from_Human_Data_for_Full-Size_Humanoid_R.md",
       "pdf_file": "A.pdf",
       "status": "pending",
@@ -1183,7 +1183,7 @@
     {
       "title": "EMP: Executable Motion Prior for Humanoid Robot Standing Upper-body Motion Imitation",
       "arxiv": "EMP: Executable Motion Prior for Humanoid Robot Standing Upper-body Motion Imitation",
-      "folder": "papers/EMP__Executable_Motion_Prior_for_Humanoid_Robot_Standing_Upper-body_Motion_Imita",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/EMP__Executable_Motion_Prior_for_Humanoid_Robot_Standing_Upper-body_Motion_Imita",
       "note_file": "EMP__Executable_Motion_Prior_for_Humanoid_Robot_Standing_Upper-body_Motion_Imita.md",
       "pdf_file": "EMP.pdf",
       "status": "pending",
@@ -1194,7 +1194,7 @@
     {
       "title": "Keep on Going: Learning Robust Humanoid Motion Skills via Selective Adversarial Training",
       "arxiv": "Keep on Going: Learning Robust Humanoid Motion Skills via Selective Adversarial Training",
-      "folder": "papers/Keep_on_Going__Learning_Robust_Humanoid_Motion_Skills_via_Selective_Adversarial_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Keep_on_Going__Learning_Robust_Humanoid_Motion_Skills_via_Selective_Adversarial_",
       "note_file": "Keep_on_Going__Learning_Robust_Humanoid_Motion_Skills_via_Selective_Adversarial_.md",
       "pdf_file": "Keep.pdf",
       "status": "pending",
@@ -1205,7 +1205,7 @@
     {
       "title": "UniTracker: Learning Universal Whole-Body Motion Tracker for Humanoid Robots",
       "arxiv": "UniTracker: Learning Universal Whole-Body Motion Tracker for Humanoid Robots",
-      "folder": "papers/UniTracker__Learning_Universal_Whole-Body_Motion_Tracker_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/UniTracker__Learning_Universal_Whole-Body_Motion_Tracker_for_Humanoid_Robots",
       "note_file": "UniTracker__Learning_Universal_Whole-Body_Motion_Tracker_for_Humanoid_Robots.md",
       "pdf_file": "UniTracker.pdf",
       "status": "pending",
@@ -1216,7 +1216,7 @@
     {
       "title": "ULC: A Unified and Fine-Grained Controller for Humanoid Loco-Manipulation",
       "arxiv": "ULC: A Unified and Fine-Grained Controller for Humanoid Loco-Manipulation",
-      "folder": "papers/ULC__A_Unified_and_Fine-Grained_Controller_for_Humanoid_Loco-Manipulation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/ULC__A_Unified_and_Fine-Grained_Controller_for_Humanoid_Loco-Manipulation",
       "note_file": "ULC__A_Unified_and_Fine-Grained_Controller_for_Humanoid_Loco-Manipulation.md",
       "pdf_file": "ULC.pdf",
       "status": "pending",
@@ -1227,7 +1227,7 @@
     {
       "title": "Learning Motion Skills with Adaptive Assistive Curriculum Force in Humanoid Robots",
       "arxiv": "Learning Motion Skills with Adaptive Assistive Curriculum Force in Humanoid Robots",
-      "folder": "papers/Learning_Motion_Skills_with_Adaptive_Assistive_Curriculum_Force_in_Humanoid_Robo",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Motion_Skills_with_Adaptive_Assistive_Curriculum_Force_in_Humanoid_Robo",
       "note_file": "Learning_Motion_Skills_with_Adaptive_Assistive_Curriculum_Force_in_Humanoid_Robo.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -1238,7 +1238,7 @@
     {
       "title": "A Survey of Behavior Foundation Model: Next-Generation Whole-Body Control System of Humanoid Robots",
       "arxiv": "A Survey of Behavior Foundation Model: Next-Generation Whole-Body Control System of Humanoid Robots",
-      "folder": "papers/A_Survey_of_Behavior_Foundation_Model__Next-Generation_Whole-Body_Control_System",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/A_Survey_of_Behavior_Foundation_Model__Next-Generation_Whole-Body_Control_System",
       "note_file": "A_Survey_of_Behavior_Foundation_Model__Next-Generation_Whole-Body_Control_System.md",
       "pdf_file": "A.pdf",
       "status": "pending",
@@ -1249,7 +1249,7 @@
     {
       "title": "TACT: Humanoid Whole-body Contact Manipulation through Deep Imitation Learning with Tactile Modality",
       "arxiv": "TACT: Humanoid Whole-body Contact Manipulation through Deep Imitation Learning with Tactile Modality",
-      "folder": "papers/TACT__Humanoid_Whole-body_Contact_Manipulation_through_Deep_Imitation_Learning_w",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/TACT__Humanoid_Whole-body_Contact_Manipulation_through_Deep_Imitation_Learning_w",
       "note_file": "TACT__Humanoid_Whole-body_Contact_Manipulation_through_Deep_Imitation_Learning_w.md",
       "pdf_file": "TACT.pdf",
       "status": "pending",
@@ -1260,7 +1260,7 @@
     {
       "title": "GMT: General Motion Tracking for Humanoid Whole-Body Control",
       "arxiv": "GMT: General Motion Tracking for Humanoid Whole-Body Control",
-      "folder": "papers/GMT__General_Motion_Tracking_for_Humanoid_Whole-Body_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/GMT__General_Motion_Tracking_for_Humanoid_Whole-Body_Control",
       "note_file": "GMT__General_Motion_Tracking_for_Humanoid_Whole-Body_Control.md",
       "pdf_file": "GMT.pdf",
       "status": "pending",
@@ -1271,7 +1271,7 @@
     {
       "title": "LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction",
       "arxiv": "LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction",
-      "folder": "papers/LeVERB__Humanoid_Whole-Body_Control_with_Latent_Vision-Language_Instruction",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/LeVERB__Humanoid_Whole-Body_Control_with_Latent_Vision-Language_Instruction",
       "note_file": "LeVERB__Humanoid_Whole-Body_Control_with_Latent_Vision-Language_Instruction.md",
       "pdf_file": "LeVERB.pdf",
       "status": "pending",
@@ -1282,7 +1282,7 @@
     {
       "title": "From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots",
       "arxiv": "From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots",
-      "folder": "papers/From_Experts_to_a_Generalist__Toward_General_Whole-Body_Control_for_Humanoid_Rob",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/From_Experts_to_a_Generalist__Toward_General_Whole-Body_Control_for_Humanoid_Rob",
       "note_file": "From_Experts_to_a_Generalist__Toward_General_Whole-Body_Control_for_Humanoid_Rob.md",
       "pdf_file": "From.pdf",
       "status": "pending",
@@ -1293,7 +1293,7 @@
     {
       "title": "SkillBlender: Towards Versatile Humanoid Whole-Body Loco-Manipulation via Skill Blending",
       "arxiv": "SkillBlender: Towards Versatile Humanoid Whole-Body Loco-Manipulation via Skill Blending",
-      "folder": "papers/SkillBlender__Towards_Versatile_Humanoid_Whole-Body_Loco-Manipulation_via_Skill_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SkillBlender__Towards_Versatile_Humanoid_Whole-Body_Loco-Manipulation_via_Skill_",
       "note_file": "SkillBlender__Towards_Versatile_Humanoid_Whole-Body_Loco-Manipulation_via_Skill_.md",
       "pdf_file": "SkillBlender.pdf",
       "status": "pending",
@@ -1304,7 +1304,7 @@
     {
       "title": "SLAC: Simulation-Pretrained Latent Action Space for Whole-Body Real-World Reinforcement Learning",
       "arxiv": "SLAC: Simulation-Pretrained Latent Action Space for Whole-Body Real-World Reinforcement Learning",
-      "folder": "papers/SLAC__Simulation-Pretrained_Latent_Action_Space_for_Whole-Body_Real-World_Reinfo",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SLAC__Simulation-Pretrained_Latent_Action_Space_for_Whole-Body_Real-World_Reinfo",
       "note_file": "SLAC__Simulation-Pretrained_Latent_Action_Space_for_Whole-Body_Real-World_Reinfo.md",
       "pdf_file": "SLAC.pdf",
       "status": "pending",
@@ -1315,7 +1315,7 @@
     {
       "title": "Hierarchical Intention-Aware Expressive Motion Generation for Humanoid Robots",
       "arxiv": "Hierarchical Intention-Aware Expressive Motion Generation for Humanoid Robots",
-      "folder": "papers/Hierarchical_Intention-Aware_Expressive_Motion_Generation_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Hierarchical_Intention-Aware_Expressive_Motion_Generation_for_Humanoid_Robots",
       "note_file": "Hierarchical_Intention-Aware_Expressive_Motion_Generation_for_Humanoid_Robots.md",
       "pdf_file": "Hierarchical.pdf",
       "status": "pending",
@@ -1326,7 +1326,7 @@
     {
       "title": "From Motion to Behavior: Hierarchical Modeling of Humanoid Generative Behavior Control",
       "arxiv": "From Motion to Behavior: Hierarchical Modeling of Humanoid Generative Behavior Control",
-      "folder": "papers/From_Motion_to_Behavior__Hierarchical_Modeling_of_Humanoid_Generative_Behavior_C",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/From_Motion_to_Behavior__Hierarchical_Modeling_of_Humanoid_Generative_Behavior_C",
       "note_file": "From_Motion_to_Behavior__Hierarchical_Modeling_of_Humanoid_Generative_Behavior_C.md",
       "pdf_file": "From.pdf",
       "status": "pending",
@@ -1337,7 +1337,7 @@
     {
       "title": "SignBot: Learning Human-to-Humanoid Sign Language Interaction",
       "arxiv": "SignBot: Learning Human-to-Humanoid Sign Language Interaction",
-      "folder": "papers/SignBot__Learning_Human-to-Humanoid_Sign_Language_Interaction",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SignBot__Learning_Human-to-Humanoid_Sign_Language_Interaction",
       "note_file": "SignBot__Learning_Human-to-Humanoid_Sign_Language_Interaction.md",
       "pdf_file": "SignBot.pdf",
       "status": "pending",
@@ -1348,7 +1348,7 @@
     {
       "title": "Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control",
       "arxiv": "Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control",
-      "folder": "papers/Learning_Gentle_Humanoid_Locomotion_and_End-Effector_Stabilization_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Gentle_Humanoid_Locomotion_and_End-Effector_Stabilization_Control",
       "note_file": "Learning_Gentle_Humanoid_Locomotion_and_End-Effector_Stabilization_Control.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -1359,7 +1359,7 @@
     {
       "title": "Mobi-π: Mobilizing Your Robot Learning Policy",
       "arxiv": "Mobi-π: Mobilizing Your Robot Learning Policy",
-      "folder": "papers/Mobi-π__Mobilizing_Your_Robot_Learning_Policy",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Mobi-π__Mobilizing_Your_Robot_Learning_Policy",
       "note_file": "Mobi-π__Mobilizing_Your_Robot_Learning_Policy.md",
       "pdf_file": "Mobi-π.pdf",
       "status": "pending",
@@ -1370,7 +1370,7 @@
     {
       "title": "SMAP: Self-supervised Motion Adaptation for Physically Plausible Humanoid Whole-body Control",
       "arxiv": "SMAP: Self-supervised Motion Adaptation for Physically Plausible Humanoid Whole-body Control",
-      "folder": "papers/SMAP__Self-supervised_Motion_Adaptation_for_Physically_Plausible_Humanoid_Whole-",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SMAP__Self-supervised_Motion_Adaptation_for_Physically_Plausible_Humanoid_Whole-",
       "note_file": "SMAP__Self-supervised_Motion_Adaptation_for_Physically_Plausible_Humanoid_Whole-.md",
       "pdf_file": "SMAP.pdf",
       "status": "pending",
@@ -1381,7 +1381,7 @@
     {
       "title": "H2-COMPACT: Human-Humanoid Co-Manipulation via Adaptive Contact Trajectory Policies",
       "arxiv": "",
-      "folder": "papers/H2-COMPACT__Human-Humanoid_Co-Manipulation_via_Adaptive_Contact_Trajectory_Polic",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/H2-COMPACT__Human-Humanoid_Co-Manipulation_via_Adaptive_Contact_Trajectory_Polic",
       "note_file": "H2-COMPACT__Human-Humanoid_Co-Manipulation_via_Adaptive_Contact_Trajectory_Polic.md",
       "pdf_file": "H2-COMPACT.pdf",
       "status": "pending",
@@ -1392,7 +1392,7 @@
     {
       "title": "Unleashing Humanoid Reaching Potential via Real-world-Ready Skill Space",
       "arxiv": "Unleashing Humanoid Reaching Potential via Real-world-Ready Skill Space",
-      "folder": "papers/Unleashing_Humanoid_Reaching_Potential_via_Real-world-Ready_Skill_Space",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Unleashing_Humanoid_Reaching_Potential_via_Real-world-Ready_Skill_Space",
       "note_file": "Unleashing_Humanoid_Reaching_Potential_via_Real-world-Ready_Skill_Space.md",
       "pdf_file": "Unleashing.pdf",
       "status": "pending",
@@ -1403,7 +1403,7 @@
     {
       "title": "HuB: Learning Extreme Humanoid Balance",
       "arxiv": "HuB: Learning Extreme Humanoid Balance",
-      "folder": "papers/HuB__Learning_Extreme_Humanoid_Balance",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HuB__Learning_Extreme_Humanoid_Balance",
       "note_file": "HuB__Learning_Extreme_Humanoid_Balance.md",
       "pdf_file": "HuB.pdf",
       "status": "pending",
@@ -1414,7 +1414,7 @@
     {
       "title": "FALCON: Learning Force-Adaptive Humanoid Loco-Manipulation",
       "arxiv": "FALCON: Learning Force-Adaptive Humanoid Loco-Manipulation",
-      "folder": "papers/FALCON__Learning_Force-Adaptive_Humanoid_Loco-Manipulation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/FALCON__Learning_Force-Adaptive_Humanoid_Loco-Manipulation",
       "note_file": "FALCON__Learning_Force-Adaptive_Humanoid_Loco-Manipulation.md",
       "pdf_file": "FALCON.pdf",
       "status": "pending",
@@ -1425,7 +1425,7 @@
     {
       "title": "FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid",
       "arxiv": "",
-      "folder": "papers/FAME__Force-Adaptive_RL_for_Expanding_the_Manipulation_Envelope_of_a_Full-Scale_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/FAME__Force-Adaptive_RL_for_Expanding_the_Manipulation_Envelope_of_a_Full-Scale_",
       "note_file": "FAME__Force-Adaptive_RL_for_Expanding_the_Manipulation_Envelope_of_a_Full-Scale_.md",
       "pdf_file": "FAME.pdf",
       "status": "pending",
@@ -1436,7 +1436,7 @@
     {
       "title": "JAEGER: Dual-Level Humanoid Whole-Body Controller",
       "arxiv": "JAEGER: Dual-Level Humanoid Whole-Body Controller",
-      "folder": "papers/JAEGER__Dual-Level_Humanoid_Whole-Body_Controller",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/JAEGER__Dual-Level_Humanoid_Whole-Body_Controller",
       "note_file": "JAEGER__Dual-Level_Humanoid_Whole-Body_Controller.md",
       "pdf_file": "JAEGER.pdf",
       "status": "pending",
@@ -1447,7 +1447,7 @@
     {
       "title": "AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control",
       "arxiv": "AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control",
-      "folder": "papers/AMO__Adaptive_Motion_Optimization_for_Hyper-Dexterous_Humanoid_Whole-Body_Contro",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/AMO__Adaptive_Motion_Optimization_for_Hyper-Dexterous_Humanoid_Whole-Body_Contro",
       "note_file": "AMO__Adaptive_Motion_Optimization_for_Hyper-Dexterous_Humanoid_Whole-Body_Contro.md",
       "pdf_file": "AMO.pdf",
       "status": "pending",
@@ -1458,7 +1458,7 @@
     {
       "title": "PyRoki: A Modular Toolkit for Robot Kinematic Optimization",
       "arxiv": "PyRoki: A Modular Toolkit for Robot Kinematic Optimization",
-      "folder": "papers/PyRoki__A_Modular_Toolkit_for_Robot_Kinematic_Optimization",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/PyRoki__A_Modular_Toolkit_for_Robot_Kinematic_Optimization",
       "note_file": "PyRoki__A_Modular_Toolkit_for_Robot_Kinematic_Optimization.md",
       "pdf_file": "PyRoki.pdf",
       "status": "pending",
@@ -1469,7 +1469,7 @@
     {
       "title": "TWIST: Teleoperated Whole-Body Imitation System",
       "arxiv": "TWIST: Teleoperated Whole-Body Imitation System",
-      "folder": "papers/TWIST__Teleoperated_Whole-Body_Imitation_System",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/TWIST__Teleoperated_Whole-Body_Imitation_System",
       "note_file": "TWIST__Teleoperated_Whole-Body_Imitation_System.md",
       "pdf_file": "TWIST.pdf",
       "status": "pending",
@@ -1480,7 +1480,7 @@
     {
       "title": "LangWBC: Language-directed Humanoid Whole-Body Control via End-to-end Learning",
       "arxiv": "LangWBC: Language-directed Humanoid Whole-Body Control via End-to-end Learning",
-      "folder": "papers/LangWBC__Language-directed_Humanoid_Whole-Body_Control_via_End-to-end_Learning",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/LangWBC__Language-directed_Humanoid_Whole-Body_Control_via_End-to-end_Learning",
       "note_file": "LangWBC__Language-directed_Humanoid_Whole-Body_Control_via_End-to-end_Learning.md",
       "pdf_file": "LangWBC.pdf",
       "status": "pending",
@@ -1491,7 +1491,7 @@
     {
       "title": "Physically Consistent Humanoid Loco-Manipulation using Latent Diffusion Models",
       "arxiv": "Physically Consistent Humanoid Loco-Manipulation using Latent Diffusion Models",
-      "folder": "papers/Physically_Consistent_Humanoid_Loco-Manipulation_using_Latent_Diffusion_Models",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Physically_Consistent_Humanoid_Loco-Manipulation_using_Latent_Diffusion_Models",
       "note_file": "Physically_Consistent_Humanoid_Loco-Manipulation_using_Latent_Diffusion_Models.md",
       "pdf_file": "Physically.pdf",
       "status": "pending",
@@ -1502,7 +1502,7 @@
     {
       "title": "Adversarial Locomotion and Motion Imitation for Humanoid Policy Learning",
       "arxiv": "Adversarial Locomotion and Motion Imitation for Humanoid Policy Learning",
-      "folder": "papers/Adversarial_Locomotion_and_Motion_Imitation_for_Humanoid_Policy_Learning",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Adversarial_Locomotion_and_Motion_Imitation_for_Humanoid_Policy_Learning",
       "note_file": "Adversarial_Locomotion_and_Motion_Imitation_for_Humanoid_Policy_Learning.md",
       "pdf_file": "Adversarial.pdf",
       "status": "pending",
@@ -1513,7 +1513,7 @@
     {
       "title": "Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills",
       "arxiv": "Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills",
-      "folder": "papers/Being-0__A_Humanoid_Robotic_Agent_with_Vision-Language_Models_and_Modular_Skills",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Being-0__A_Humanoid_Robotic_Agent_with_Vision-Language_Models_and_Modular_Skills",
       "note_file": "Being-0__A_Humanoid_Robotic_Agent_with_Vision-Language_Models_and_Modular_Skills.md",
       "pdf_file": "Being-0.pdf",
       "status": "pending",
@@ -1524,7 +1524,7 @@
     {
       "title": "Trinity: A Modular Humanoid Robot AI System",
       "arxiv": "Trinity: A Modular Humanoid Robot AI System",
-      "folder": "papers/Trinity__A_Modular_Humanoid_Robot_AI_System",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Trinity__A_Modular_Humanoid_Robot_AI_System",
       "note_file": "Trinity__A_Modular_Humanoid_Robot_AI_System.md",
       "pdf_file": "Trinity.pdf",
       "status": "pending",
@@ -1535,7 +1535,7 @@
     {
       "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
       "arxiv": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
-      "folder": "papers/BEHAVIOR_Robot_Suite__Streamlining_Real-World_Whole-Body_Manipulation_for_Everyd",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/BEHAVIOR_Robot_Suite__Streamlining_Real-World_Whole-Body_Manipulation_for_Everyd",
       "note_file": "BEHAVIOR_Robot_Suite__Streamlining_Real-World_Whole-Body_Manipulation_for_Everyd.md",
       "pdf_file": "BEHAVIOR.pdf",
       "status": "pending",
@@ -1546,7 +1546,7 @@
     {
       "title": "Whole-Body Model-Predictive Control of Legged Robots with MuJoCo",
       "arxiv": "Whole-Body Model-Predictive Control of Legged Robots with MuJoCo",
-      "folder": "papers/Whole-Body_Model-Predictive_Control_of_Legged_Robots_with_MuJoCo",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Whole-Body_Model-Predictive_Control_of_Legged_Robots_with_MuJoCo",
       "note_file": "Whole-Body_Model-Predictive_Control_of_Legged_Robots_with_MuJoCo.md",
       "pdf_file": "Whole-Body.pdf",
       "status": "pending",
@@ -1557,7 +1557,7 @@
     {
       "title": "HiFAR: Multi-Stage Curriculum Learning for High-Dynamics Humanoid Fall Recovery",
       "arxiv": "HiFAR: Multi-Stage Curriculum Learning for High-Dynamics Humanoid Fall Recovery",
-      "folder": "papers/HiFAR__Multi-Stage_Curriculum_Learning_for_High-Dynamics_Humanoid_Fall_Recovery",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HiFAR__Multi-Stage_Curriculum_Learning_for_High-Dynamics_Humanoid_Fall_Recovery",
       "note_file": "HiFAR__Multi-Stage_Curriculum_Learning_for_High-Dynamics_Humanoid_Fall_Recovery.md",
       "pdf_file": "HiFAR.pdf",
       "status": "pending",
@@ -1568,7 +1568,7 @@
     {
       "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
       "arxiv": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
-      "folder": "papers/HOMIE__Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HOMIE__Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
       "note_file": "HOMIE__Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md",
       "pdf_file": "HOMIE.pdf",
       "status": "pending",
@@ -1579,7 +1579,7 @@
     {
       "title": "Learning Getting-Up Policies for Real-World Humanoid Robots",
       "arxiv": "Learning Getting-Up Policies for Real-World Humanoid Robots",
-      "folder": "papers/Learning_Getting-Up_Policies_for_Real-World_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Getting-Up_Policies_for_Real-World_Humanoid_Robots",
       "note_file": "Learning_Getting-Up_Policies_for_Real-World_Humanoid_Robots.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -1590,7 +1590,7 @@
     {
       "title": "Learning Humanoid Standing-up Control across Diverse Postures",
       "arxiv": "Learning Humanoid Standing-up Control across Diverse Postures",
-      "folder": "papers/Learning_Humanoid_Standing-up_Control_across_Diverse_Postures",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Humanoid_Standing-up_Control_across_Diverse_Postures",
       "note_file": "Learning_Humanoid_Standing-up_Control_across_Diverse_Postures.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -1601,7 +1601,7 @@
     {
       "title": "HugWBC: A Unified and General Humanoid Whole-Body Controller",
       "arxiv": "HugWBC: A Unified and General Humanoid Whole-Body Controller",
-      "folder": "papers/HugWBC__A_Unified_and_General_Humanoid_Whole-Body_Controller",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HugWBC__A_Unified_and_General_Humanoid_Whole-Body_Controller",
       "note_file": "HugWBC__A_Unified_and_General_Humanoid_Whole-Body_Controller.md",
       "pdf_file": "HugWBC.pdf",
       "status": "pending",
@@ -1612,7 +1612,7 @@
     {
       "title": "SPARK: A Toolbox for Safe Humanoid Autonomy and Teleoperation",
       "arxiv": "SPARK: A Toolbox for Safe Humanoid Autonomy and Teleoperation",
-      "folder": "papers/SPARK__A_Toolbox_for_Safe_Humanoid_Autonomy_and_Teleoperation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SPARK__A_Toolbox_for_Safe_Humanoid_Autonomy_and_Teleoperation",
       "note_file": "SPARK__A_Toolbox_for_Safe_Humanoid_Autonomy_and_Teleoperation.md",
       "pdf_file": "SPARK.pdf",
       "status": "pending",
@@ -1623,7 +1623,7 @@
     {
       "title": "Embrace Collisions: Humanoid Shadowing for Deployable Contact-Agnostics Motions",
       "arxiv": "Embrace Collisions: Humanoid Shadowing for Deployable Contact-Agnostics Motions",
-      "folder": "papers/Embrace_Collisions__Humanoid_Shadowing_for_Deployable_Contact-Agnostics_Motions",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Embrace_Collisions__Humanoid_Shadowing_for_Deployable_Contact-Agnostics_Motions",
       "note_file": "Embrace_Collisions__Humanoid_Shadowing_for_Deployable_Contact-Agnostics_Motions.md",
       "pdf_file": "Embrace.pdf",
       "status": "pending",
@@ -1634,7 +1634,7 @@
     {
       "title": "Human-Humanoid Robots Cross-Embodiment Behavior-Skill Transfer Using Decomposed Adversarial Learning from Demonstration",
       "arxiv": "Human-Humanoid Robots Cross-Embodiment Behavior-Skill Transfer Using Decomposed Adversarial Learning from Demonstration",
-      "folder": "papers/Human-Humanoid_Robots_Cross-Embodiment_Behavior-Skill_Transfer_Using_Decomposed_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Human-Humanoid_Robots_Cross-Embodiment_Behavior-Skill_Transfer_Using_Decomposed_",
       "note_file": "Human-Humanoid_Robots_Cross-Embodiment_Behavior-Skill_Transfer_Using_Decomposed_.md",
       "pdf_file": "Human-Humanoid.pdf",
       "status": "pending",
@@ -1645,7 +1645,7 @@
     {
       "title": "Learning from Massive Human Videos for Universal Humanoid Pose Control",
       "arxiv": "Learning from Massive Human Videos for Universal Humanoid Pose Control",
-      "folder": "papers/Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
       "note_file": "Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -1656,7 +1656,7 @@
     {
       "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
       "arxiv": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
-      "folder": "papers/ExBody2__Advanced_Expressive_Humanoid_Whole-Body_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/ExBody2__Advanced_Expressive_Humanoid_Whole-Body_Control",
       "note_file": "ExBody2__Advanced_Expressive_Humanoid_Whole-Body_Control.md",
       "pdf_file": "ExBody2.pdf",
       "status": "pending",
@@ -1667,7 +1667,7 @@
     {
       "title": "Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control",
       "arxiv": "Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control",
-      "folder": "papers/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control",
       "note_file": "Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control.md",
       "pdf_file": "Mobile-TeleVision.pdf",
       "status": "pending",
@@ -1678,7 +1678,7 @@
     {
       "title": "A Behavior Architecture for Fast Humanoid Robot Door Traversals",
       "arxiv": "A Behavior Architecture for Fast Humanoid Robot Door Traversals",
-      "folder": "papers/A_Behavior_Architecture_for_Fast_Humanoid_Robot_Door_Traversals",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/A_Behavior_Architecture_for_Fast_Humanoid_Robot_Door_Traversals",
       "note_file": "A_Behavior_Architecture_for_Fast_Humanoid_Robot_Door_Traversals.md",
       "pdf_file": "A.pdf",
       "status": "pending",
@@ -1689,7 +1689,7 @@
     {
       "title": "EMOTION: Expressive Motion Sequence Generation for Humanoid Robots with In-Context Learning",
       "arxiv": "EMOTION: Expressive Motion Sequence Generation for Humanoid Robots with In-Context Learning",
-      "folder": "papers/EMOTION__Expressive_Motion_Sequence_Generation_for_Humanoid_Robots_with_In-Conte",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/EMOTION__Expressive_Motion_Sequence_Generation_for_Humanoid_Robots_with_In-Conte",
       "note_file": "EMOTION__Expressive_Motion_Sequence_Generation_for_Humanoid_Robots_with_In-Conte.md",
       "pdf_file": "EMOTION.pdf",
       "status": "pending",
@@ -1700,7 +1700,7 @@
     {
       "title": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
       "arxiv": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
-      "folder": "papers/HOVER__Versatile_Neural_Whole-Body_Controller_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HOVER__Versatile_Neural_Whole-Body_Controller_for_Humanoid_Robots",
       "note_file": "HOVER__Versatile_Neural_Whole-Body_Controller_for_Humanoid_Robots.md",
       "pdf_file": "HOVER.pdf",
       "status": "pending",
@@ -1711,7 +1711,7 @@
     {
       "title": "Harmon: Whole-Body Motion Generation of Humanoid Robots from Language Descriptions",
       "arxiv": "Harmon: Whole-Body Motion Generation of Humanoid Robots from Language Descriptions",
-      "folder": "papers/Harmon__Whole-Body_Motion_Generation_of_Humanoid_Robots_from_Language_Descriptio",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Harmon__Whole-Body_Motion_Generation_of_Humanoid_Robots_from_Language_Descriptio",
       "note_file": "Harmon__Whole-Body_Motion_Generation_of_Humanoid_Robots_from_Language_Descriptio.md",
       "pdf_file": "Harmon.pdf",
       "status": "pending",
@@ -1722,7 +1722,7 @@
     {
       "title": "Whole-Body Dynamic Throwing with Legged Manipulators",
       "arxiv": "Whole-Body Dynamic Throwing with Legged Manipulators",
-      "folder": "papers/Whole-Body_Dynamic_Throwing_with_Legged_Manipulators",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Whole-Body_Dynamic_Throwing_with_Legged_Manipulators",
       "note_file": "Whole-Body_Dynamic_Throwing_with_Legged_Manipulators.md",
       "pdf_file": "Whole-Body.pdf",
       "status": "pending",
@@ -1733,7 +1733,7 @@
     {
       "title": "Opt2Skill: Imitating Dynamically-feasible Whole-Body Trajectories for Versatile Humanoid Loco-Manipulation",
       "arxiv": "Opt2Skill: Imitating Dynamically-feasible Whole-Body Trajectories for Versatile Humanoid Loco-Manipulation",
-      "folder": "papers/Opt2Skill__Imitating_Dynamically-feasible_Whole-Body_Trajectories_for_Versatile_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Opt2Skill__Imitating_Dynamically-feasible_Whole-Body_Trajectories_for_Versatile_",
       "note_file": "Opt2Skill__Imitating_Dynamically-feasible_Whole-Body_Trajectories_for_Versatile_.md",
       "pdf_file": "Opt2Skill.pdf",
       "status": "pending",
@@ -1744,7 +1744,7 @@
     {
       "title": "HYPERmotion: Learning Hybrid Behavior Planning for Autonomous Loco-manipulation",
       "arxiv": "HYPERmotion: Learning Hybrid Behavior Planning for Autonomous Loco-manipulation",
-      "folder": "papers/HYPERmotion__Learning_Hybrid_Behavior_Planning_for_Autonomous_Loco-manipulation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HYPERmotion__Learning_Hybrid_Behavior_Planning_for_Autonomous_Loco-manipulation",
       "note_file": "HYPERmotion__Learning_Hybrid_Behavior_Planning_for_Autonomous_Loco-manipulation.md",
       "pdf_file": "HYPERmotion.pdf",
       "status": "pending",
@@ -1755,7 +1755,7 @@
     {
       "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
       "arxiv": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
-      "folder": "papers/HumanPlus__Humanoid_Shadowing_and_Imitation_from_Humans",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/HumanPlus__Humanoid_Shadowing_and_Imitation_from_Humans",
       "note_file": "HumanPlus__Humanoid_Shadowing_and_Imitation_from_Humans.md",
       "pdf_file": "HumanPlus.pdf",
       "status": "pending",
@@ -1766,7 +1766,7 @@
     {
       "title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
       "arxiv": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
-      "folder": "papers/OmniH2O__Universal_and_Dexterous_Human-to-Humanoid_Whole-Body_Teleoperation_and_",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/OmniH2O__Universal_and_Dexterous_Human-to-Humanoid_Whole-Body_Teleoperation_and_",
       "note_file": "OmniH2O__Universal_and_Dexterous_Human-to-Humanoid_Whole-Body_Teleoperation_and_.md",
       "pdf_file": "OmniH2O.pdf",
       "status": "pending",
@@ -1777,7 +1777,7 @@
     {
       "title": "WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts",
       "arxiv": "WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts",
-      "folder": "papers/WoCoCo__Learning_Whole-Body_Humanoid_Control_with_Sequential_Contacts",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/WoCoCo__Learning_Whole-Body_Humanoid_Control_with_Sequential_Contacts",
       "note_file": "WoCoCo__Learning_Whole-Body_Humanoid_Control_with_Sequential_Contacts.md",
       "pdf_file": "WoCoCo.pdf",
       "status": "pending",
@@ -1788,7 +1788,7 @@
     {
       "title": "Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation",
       "arxiv": "Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation",
-      "folder": "papers/Learning_Human-to-Humanoid_Real-Time_Whole-Body_Teleoperation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Learning_Human-to-Humanoid_Real-Time_Whole-Body_Teleoperation",
       "note_file": "Learning_Human-to-Humanoid_Real-Time_Whole-Body_Teleoperation.md",
       "pdf_file": "Learning.pdf",
       "status": "pending",
@@ -1799,7 +1799,7 @@
     {
       "title": "Expressive Whole-Body Control for Humanoid Robots",
       "arxiv": "Expressive Whole-Body Control for Humanoid Robots",
-      "folder": "papers/Expressive_Whole-Body_Control_for_Humanoid_Robots",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Expressive_Whole-Body_Control_for_Humanoid_Robots",
       "note_file": "Expressive_Whole-Body_Control_for_Humanoid_Robots.md",
       "pdf_file": "Expressive.pdf",
       "status": "pending",
@@ -1810,7 +1810,7 @@
     {
       "title": "Sim-to-Real Learning for Humanoid Box Loco-Manipulation",
       "arxiv": "Sim-to-Real Learning for Humanoid Box Loco-Manipulation",
-      "folder": "papers/Sim-to-Real_Learning_for_Humanoid_Box_Loco-Manipulation",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Sim-to-Real_Learning_for_Humanoid_Box_Loco-Manipulation",
       "note_file": "Sim-to-Real_Learning_for_Humanoid_Box_Loco-Manipulation.md",
       "pdf_file": "Sim-to-Real.pdf",
       "status": "pending",
@@ -1821,7 +1821,7 @@
     {
       "title": "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control",
       "arxiv": "",
-      "folder": "papers/WholeBodyVLA__Towards_Unified_Latent_VLA_for_Whole-body_Loco-manipulation_Contro",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/WholeBodyVLA__Towards_Unified_Latent_VLA_for_Whole-body_Loco-manipulation_Contro",
       "note_file": "WholeBodyVLA__Towards_Unified_Latent_VLA_for_Whole-body_Loco-manipulation_Contro.md",
       "pdf_file": "WholeBodyVLA.pdf",
       "status": "pending",
@@ -1832,7 +1832,7 @@
     {
       "title": "SPIDER: Scalable Physics-Informed DExterous Retargeting",
       "arxiv": "",
-      "folder": "papers/SPIDER__Scalable_Physics-Informed_DExterous_Retargeting",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/SPIDER__Scalable_Physics-Informed_DExterous_Retargeting",
       "note_file": "SPIDER__Scalable_Physics-Informed_DExterous_Retargeting.md",
       "pdf_file": "SPIDER.pdf",
       "status": "pending",
@@ -1843,7 +1843,7 @@
     {
       "title": "AdaMimic: Towards Adaptable Humanoid Control via Adaptive Motion Tracking",
       "arxiv": "",
-      "folder": "papers/AdaMimic__Towards_Adaptable_Humanoid_Control_via_Adaptive_Motion_Tracking",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/AdaMimic__Towards_Adaptable_Humanoid_Control_via_Adaptive_Motion_Tracking",
       "note_file": "AdaMimic__Towards_Adaptable_Humanoid_Control_via_Adaptive_Motion_Tracking.md",
       "pdf_file": "AdaMimic.pdf",
       "status": "pending",
@@ -1854,7 +1854,7 @@
     {
       "title": "General Motion Tracking for Humanoid Whole-Body Control",
       "arxiv": "",
-      "folder": "papers/General_Motion_Tracking_for_Humanoid_Whole-Body_Control",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/General_Motion_Tracking_for_Humanoid_Whole-Body_Control",
       "note_file": "General_Motion_Tracking_for_Humanoid_Whole-Body_Control.md",
       "pdf_file": "General.pdf",
       "status": "pending",
@@ -1865,7 +1865,7 @@
     {
       "title": "CLONE: Holistic Closed-Loop Whole-Body Teleoperation for Long-Horizon Humanoid Control",
       "arxiv": "",
-      "folder": "papers/CLONE__Holistic_Closed-Loop_Whole-Body_Teleoperation_for_Long-Horizon_Humanoid_C",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/CLONE__Holistic_Closed-Loop_Whole-Body_Teleoperation_for_Long-Horizon_Humanoid_C",
       "note_file": "CLONE__Holistic_Closed-Loop_Whole-Body_Teleoperation_for_Long-Horizon_Humanoid_C.md",
       "pdf_file": "CLONE.pdf",
       "status": "pending",
@@ -1876,7 +1876,7 @@
     {
       "title": "ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills",
       "arxiv": "",
-      "folder": "papers/ASAP__Aligning_Simulation_and_Real-World_Physics_for_Learning_Agile_Humanoid_Who",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/ASAP__Aligning_Simulation_and_Real-World_Physics_for_Learning_Agile_Humanoid_Who",
       "note_file": "ASAP__Aligning_Simulation_and_Real-World_Physics_for_Learning_Agile_Humanoid_Who.md",
       "pdf_file": "ASAP.pdf",
       "status": "pending",
@@ -1887,7 +1887,7 @@
     {
       "title": "VMP: Versatile Motion Priors for Robustly Tracking Motion on Physical Characters",
       "arxiv": "",
-      "folder": "papers/VMP__Versatile_Motion_Priors_for_Robustly_Tracking_Motion_on_Physical_Characters",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/VMP__Versatile_Motion_Priors_for_Robustly_Tracking_Motion_on_Physical_Characters",
       "note_file": "VMP__Versatile_Motion_Priors_for_Robustly_Tracking_Motion_on_Physical_Characters.md",
       "pdf_file": "VMP.pdf",
       "status": "pending",
@@ -1898,7 +1898,7 @@
     {
       "title": "Robot Motion Diffusion Model: Motion Generation for Robotic Characters",
       "arxiv": "",
-      "folder": "papers/Robot_Motion_Diffusion_Model__Motion_Generation_for_Robotic_Characters",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/Robot_Motion_Diffusion_Model__Motion_Generation_for_Robotic_Characters",
       "note_file": "Robot_Motion_Diffusion_Model__Motion_Generation_for_Robotic_Characters.md",
       "pdf_file": "Robot.pdf",
       "status": "pending",
@@ -1909,7 +1909,7 @@
     {
       "title": "[website],Embodied Chain of Action Reasoning with Multi-Modal Foundation Model for Humanoid Loco-manipulation",
       "arxiv": "",
-      "folder": "papers/[website],Embodied_Chain_of_Action_Reasoning_with_Multi-Modal_Foundation_Model_f",
+      "folder": "papers/03_Loco-Manipulation_and_WBC/[website],Embodied_Chain_of_Action_Reasoning_with_Multi-Modal_Foundation_Model_f",
       "note_file": "[website],Embodied_Chain_of_Action_Reasoning_with_Multi-Modal_Foundation_Model_f.md",
       "pdf_file": "[website],Embodied.pdf",
       "status": "pending",
