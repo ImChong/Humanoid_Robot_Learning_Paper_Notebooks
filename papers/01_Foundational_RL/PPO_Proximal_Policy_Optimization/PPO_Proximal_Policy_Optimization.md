@@ -424,6 +424,62 @@ for epoch in range(10):
 - **Critic**: MLP (Value Network) → 输出状态价值估计
 - 共享部分 backbone 是常见做法
 
+### 🎯 Loss 函数详解
+
+PPO 的 total loss 由两部分组成：
+
+$$\mathcal{L}_{total}(\theta, \phi) = \underbrace{-\mathbb{E}\left[ L^{CLIP}(\theta) \right]}_{\text{策略损失}} + \underbrace{\frac{1}{2} \mathbb{E}\left[ \left( V_\phi(s) - R_t \right)^2 \right]}_{\text{价值损失}}$$
+
+#### 1. 策略损失：为什么要加负号？
+
+代码中用的是 `loss = -mean(L_clip)`，这是因为：
+
+- PPO 的目标是 **最大化** $L^{CLIP}(\theta)$（让好动作的概率更大）
+- 但 PyTorch/TensorFlow 的 optimizer 默认只做 **最小化**（梯度下降）
+- 所以加个负号：minimize $(-L^{CLIP})$ ⟺ maximize $L^{CLIP}$
+
+#### 2. 价值损失
+
+$$\mathcal{L}_V = \frac{1}{2} \| V_\phi(s) - R_t \|^2$$
+
+让价值网络 $V_\phi(s)$ 去拟合**目标值** $R_t$（通常是 GAE 累加后的回报）。
+
+- $R_t$ 是用 GAE 计算的优势估计，需要一个准确的 baseline $V(s)$ 才能得到
+- 所以价值网络和策略网络是**互相依赖**的：V 准 → 优势估计准 → 策略学得更好 → 新数据更丰富 → V 估计更准
+
+#### 3. 两个网络可以独立也可以共享
+
+| 架构 | 结构 | 特点 |
+|------|------|------|
+| **共享 backbone** | 输入 → 共享 MLP → 分叉 → Actor/Critic head | 共享层被两个 loss 同时更新，省显存但可能互相干扰 |
+| **完全独立** | Actor MLP (独立) + Critic MLP (独立) | 各自有完整参数，互不干扰，**人形机器人领域更常用** |
+
+> 💡 **主流实践**：Isaac Lab、legged_gym 等机器人 RL 框架默认用**完全独立**的两个网络，因为更稳定。
+
+#### 4. 梯度流示意（以共享 backbone 为例）
+
+```
+输入 s
+   │
+   ▼
+┌──────────────────────┐
+│    共享 MLP 层       │ ← 被两路梯度同时更新
+└──────────────────────┘
+   │                    │
+   ▼                    ▼
+┌────────┐         ┌────────┐
+│ Actor  │         │ Critic │
+│ head   │         │ head   │
+└────────┘         └────────┘
+   │                    │
+   ▼                    ▼
+动作 π(a|s)         价值 V(s)
+   │                    
+   ▼                    
+梯度: -L_clip      梯度: MSE
+(只更新actor)      (只更新critic)
+```
+
 ### 优势估计 (Advantage Estimation)
 
 - 使用 **GAE (Generalized Advantage Estimation)**
