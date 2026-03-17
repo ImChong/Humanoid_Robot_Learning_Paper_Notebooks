@@ -151,6 +151,17 @@ body {
   font-size: 1.05rem;
 }
 
+.index-header .subtitle {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.paper-count {
+  font-size: 0.85em;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
 .category-section {
   margin-bottom: 2rem;
 }

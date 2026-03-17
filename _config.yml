@@ -9,11 +9,11 @@ kramdown:
   input: GFM
   hard_wrap: false
 
-# Include papers directory
+# Include papers directory (Jekyll ignores dirs starting with _ by default)
 include:
   - papers
 
-# Exclude unnecessary files
+# Exclude unnecessary files from build
 exclude:
   - README.md
   - progress.json
@@ -22,15 +22,13 @@ exclude:
   - "*.pdf"
   - Gemfile
   - Gemfile.lock
+  - LICENSE
+  - CNAME
 
-# Default front matter
+# Default front matter for paper pages
 defaults:
   - scope:
       path: "papers"
       type: "pages"
     values:
       layout: "paper"
-
-# Plugins
-plugins:
-  - jekyll-seo-tag
