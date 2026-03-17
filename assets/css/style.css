@@ -130,6 +130,13 @@ body {
   padding: 2rem 1.5rem;
 }
 
+/* Paper pages: shift right to make room for left TOC */
+@media (min-width: 1201px) {
+  .paper-content {
+    position: relative;
+  }
+}
+
 /* ===== Index Page ===== */
 .index-header {
   text-align: center;
@@ -215,6 +222,107 @@ body {
 
 .paper-card .paper-title {
   font-weight: 600;
+}
+
+/* ===== Paper Layout with TOC ===== */
+.paper-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.paper-body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ===== TOC Sidebar ===== */
+.toc-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 70px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  order: -1;
+  margin-left: -260px;
+}
+
+.toc-wrapper {
+  padding: 0.8rem 0;
+}
+
+.toc-title {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-item {
+  margin-bottom: 0.15rem;
+}
+
+.toc-item.toc-h3 {
+  padding-left: 0.8rem;
+}
+
+.toc-link {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  border-radius: 0 3px 3px 0;
+  transition: all 0.15s ease;
+}
+
+.toc-link:hover {
+  color: var(--link);
+  background: var(--bg-secondary);
+}
+
+.toc-link.active {
+  color: var(--link);
+  border-left-color: var(--link);
+  font-weight: 600;
+  background: var(--bg-secondary);
+}
+
+/* TOC scrollbar */
+.toc-sidebar::-webkit-scrollbar {
+  width: 3px;
+}
+.toc-sidebar::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+/* Show TOC only on wide screens */
+@media (max-width: 1200px) {
+  .toc-sidebar {
+    display: none;
+  }
+  .paper-layout {
+    display: block;
+  }
+}
+
+/* Wider container for paper pages to accommodate TOC */
+.paper-content .paper-layout {
+  max-width: none;
 }
 
 /* ===== Breadcrumb ===== */

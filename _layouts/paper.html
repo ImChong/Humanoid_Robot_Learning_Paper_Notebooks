@@ -11,11 +11,74 @@ layout: default
     {% endif %}
   </nav>
 
-  <div class="paper-body">
-    {{ content }}
+  <div class="paper-layout">
+    <aside class="toc-sidebar" id="toc-sidebar">
+      <div class="toc-wrapper">
+        <h3 class="toc-title">📑 目录</h3>
+        <nav class="toc-nav" id="toc-nav"></nav>
+      </div>
+    </aside>
+
+    <div class="paper-body" id="paper-body">
+      {{ content }}
+    </div>
   </div>
 
   <div class="paper-nav">
     <a href="{{ '/' | relative_url }}" class="back-link">← 返回论文列表</a>
   </div>
 </article>
+
+<script>
+(function() {
+  var body = document.getElementById('paper-body');
+  var nav = document.getElementById('toc-nav');
+  if (!body || !nav) return;
+
+  var headings = body.querySelectorAll('h2, h3');
+  if (headings.length === 0) {
+    document.getElementById('toc-sidebar').style.display = 'none';
+    return;
+  }
+
+  var ul = document.createElement('ul');
+  ul.className = 'toc-list';
+
+  headings.forEach(function(h, i) {
+    // Ensure heading has an id for anchor
+    if (!h.id) {
+      h.id = 'heading-' + i;
+    }
+    var li = document.createElement('li');
+    li.className = 'toc-item toc-' + h.tagName.toLowerCase();
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    a.className = 'toc-link';
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  nav.appendChild(ul);
+
+  // Highlight active section on scroll
+  var links = nav.querySelectorAll('.toc-link');
+  var headingArr = Array.from(headings);
+
+  function updateActive() {
+    var scrollPos = window.scrollY + 100;
+    var current = -1;
+    for (var i = 0; i < headingArr.length; i++) {
+      if (headingArr[i].offsetTop <= scrollPos) {
+        current = i;
+      }
+    }
+    links.forEach(function(link, idx) {
+      link.classList.toggle('active', idx === current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActive);
+  updateActive();
+})();
+</script>
