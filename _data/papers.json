@@ -1,11 +1,17 @@
 {
-  "01_基础路线图": {
-    "display_name": "基础路线图",
+  "01_Foundational_RL": {
+    "display_name": "Foundational RL",
     "papers": [
       {
+        "title": "Advantage Weighted Regression (AWR)",
+        "path": "papers/01_Foundational_RL/AWR_Advantage_Weighted_Regression/AWR_Advantage_Weighted_Regression.md",
+        "url": "/papers/01_Foundational_RL/AWR_Advantage_Weighted_Regression/AWR_Advantage_Weighted_Regression.html",
+        "dir": "AWR_Advantage_Weighted_Regression"
+      },
+      {
         "title": "Proximal Policy Optimization Algorithms (PPO)",
-        "path": "papers/01_基础路线图/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.md",
-        "url": "/papers/01_基础路线图/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.html",
+        "path": "papers/01_Foundational_RL/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.md",
+        "url": "/papers/01_Foundational_RL/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.html",
         "dir": "PPO_Proximal_Policy_Optimization"
       }
     ]
