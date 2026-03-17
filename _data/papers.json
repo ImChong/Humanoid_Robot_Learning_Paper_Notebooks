@@ -16,6 +16,10 @@
       }
     ]
   },
+  "02_High_Impact_Selection": {
+    "display_name": "High Impact Selection",
+    "papers": []
+  },
   "03_Loco-Manipulation_and_WBC": {
     "display_name": "Loco-Manipulation and WBC",
     "papers": [
@@ -50,5 +54,45 @@
         "dir": "VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety"
       }
     ]
+  },
+  "04_Locomotion": {
+    "display_name": "Locomotion",
+    "papers": []
+  },
+  "05_Manipulation": {
+    "display_name": "Manipulation",
+    "papers": []
+  },
+  "06_Teleoperation": {
+    "display_name": "Teleoperation",
+    "papers": []
+  },
+  "07_Navigation": {
+    "display_name": "Navigation",
+    "papers": []
+  },
+  "08_State_Estimation": {
+    "display_name": "State Estimation",
+    "papers": []
+  },
+  "09_Sim-to-Real": {
+    "display_name": "Sim-to-Real",
+    "papers": []
+  },
+  "10_Simulation_Benchmark": {
+    "display_name": "Simulation Benchmark",
+    "papers": []
+  },
+  "11_Hardware_Design": {
+    "display_name": "Hardware Design",
+    "papers": []
+  },
+  "12_Physics-Based_Animation": {
+    "display_name": "Physics-Based Animation",
+    "papers": []
+  },
+  "13_Human_Motion": {
+    "display_name": "Human Motion",
+    "papers": []
   }
 }

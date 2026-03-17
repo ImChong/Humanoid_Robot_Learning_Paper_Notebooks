@@ -180,15 +180,27 @@ def process_papers():
                 'papers': papers
             }
 
+    # Ensure ALL category directories appear (even if empty)
+    for category_dir in sorted(os.listdir(PAPERS_DIR)):
+        category_path = os.path.join(PAPERS_DIR, category_dir)
+        if os.path.isdir(category_path) and category_dir not in index_data:
+            index_data[category_dir] = {
+                'display_name': get_category_name(category_dir),
+                'papers': []
+            }
+
+    # Sort by category directory name prefix (01_, 02_, etc.)
+    sorted_data = dict(sorted(index_data.items()))
+
     # Write index data
     data_dir = os.path.join(BASE_DIR, '_data')
     os.makedirs(data_dir, exist_ok=True)
 
     with open(os.path.join(data_dir, 'papers.json'), 'w', encoding='utf-8') as f:
-        json.dump(index_data, f, ensure_ascii=False, indent=2)
+        json.dump(sorted_data, f, ensure_ascii=False, indent=2)
 
-    total = sum(len(v['papers']) for v in index_data.values())
-    print(f"\nGenerated _data/papers.json with {total} papers in {len(index_data)} categories")
+    total = sum(len(v['papers']) for v in sorted_data.values())
+    print(f"\nGenerated _data/papers.json with {total} papers in {len(sorted_data)} categories")
 
 
 if __name__ == '__main__':

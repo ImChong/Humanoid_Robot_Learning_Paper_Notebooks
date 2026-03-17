@@ -162,6 +162,13 @@ body {
   color: var(--text-secondary);
 }
 
+.empty-hint {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 0.5rem 1rem;
+}
+
 .category-section {
   margin-bottom: 2rem;
 }

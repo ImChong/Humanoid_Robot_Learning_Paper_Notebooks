@@ -26,6 +26,7 @@ title: "Home"
 
     <div class="category-section">
       <h2 class="category-title"><span class="cat-icon">{{ icon }}</span> {{ cat_data.display_name }} <span class="paper-count">({{ cat_data.papers | size }})</span></h2>
+      {% if cat_data.papers.size > 0 %}
       <ul class="paper-list">
         {% for paper in cat_data.papers %}
         <li>
@@ -35,6 +36,9 @@ title: "Home"
         </li>
         {% endfor %}
       </ul>
+      {% else %}
+      <p class="empty-hint">📭 暂无笔记，敬请期待...</p>
+      {% endif %}
     </div>
   {% endfor %}
 
