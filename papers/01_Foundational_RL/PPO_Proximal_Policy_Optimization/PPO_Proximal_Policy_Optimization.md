@@ -5,6 +5,7 @@ category: "基础路线图"
 ---
 
 # Proximal Policy Optimization Algorithms (PPO)
+**近端策略优化算法**
 
 > 📅 阅读日期: 2026-03-11  
 > 🏷️ 板块: Reinforcement Learning / Policy Optimization

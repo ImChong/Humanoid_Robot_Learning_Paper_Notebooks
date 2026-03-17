@@ -5,6 +5,7 @@ category: "Loco-Manipulation and WBC"
 ---
 
 # VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety
+**基于视觉目标上下文推理的统一人形摔倒安全控制**
 
 > 📅 阅读日期: 待定
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control

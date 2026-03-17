@@ -5,6 +5,7 @@ category: "Foundational RL"
 ---
 
 # Advantage Weighted Regression (AWR)
+**优势加权回归**
 
 > 📅 阅读日期: -  
 > 🏷️ 板块: Reinforcement Learning / Policy Optimization

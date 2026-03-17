@@ -5,6 +5,7 @@ category: "Loco-Manipulation and WBC"
 ---
 
 # ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation
+**统一多模态控制：实现人形机器人自主全身移动操作**
 
 > 📅 阅读日期: 2026-03-07  
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control

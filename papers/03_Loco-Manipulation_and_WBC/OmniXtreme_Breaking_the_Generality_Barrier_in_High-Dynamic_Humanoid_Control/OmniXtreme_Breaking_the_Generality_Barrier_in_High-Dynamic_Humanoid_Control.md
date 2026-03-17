@@ -5,6 +5,7 @@ category: "Loco-Manipulation and WBC"
 ---
 
 # OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control
+**突破高动态人形机器人控制的通用性瓶颈**
 
 > 📅 阅读日期: 2026-03-08
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control

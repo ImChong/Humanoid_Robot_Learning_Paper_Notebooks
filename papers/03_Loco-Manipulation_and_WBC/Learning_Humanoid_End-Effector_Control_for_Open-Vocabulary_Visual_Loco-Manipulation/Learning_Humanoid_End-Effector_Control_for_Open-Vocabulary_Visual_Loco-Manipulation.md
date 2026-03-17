@@ -5,6 +5,7 @@ category: "Loco-Manipulation and WBC"
 ---
 
 # Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation (HERO)
+**学习人形机器人末端执行器控制：面向开放词汇的视觉移动操作**
 
 > 📅 阅读日期: 待定
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control

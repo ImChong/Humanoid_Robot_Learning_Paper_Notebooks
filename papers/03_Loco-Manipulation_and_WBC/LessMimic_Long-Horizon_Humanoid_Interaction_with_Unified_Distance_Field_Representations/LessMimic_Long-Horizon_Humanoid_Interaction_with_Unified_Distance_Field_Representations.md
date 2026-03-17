@@ -5,6 +5,7 @@ category: "Loco-Manipulation and WBC"
 ---
 
 # LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations
+**基于统一距离场表示的长时域人形交互**
 
 > 📅 阅读日期: 2026-03-08
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control
