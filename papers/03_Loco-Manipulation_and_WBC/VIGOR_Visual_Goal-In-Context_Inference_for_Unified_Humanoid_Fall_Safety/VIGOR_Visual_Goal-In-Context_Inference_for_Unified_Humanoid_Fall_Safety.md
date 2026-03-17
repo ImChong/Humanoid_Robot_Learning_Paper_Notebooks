@@ -1,3 +1,9 @@
+---
+layout: paper
+title: "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety"
+category: "Loco-Manipulation and WBC"
+---
+
 # VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety
 
 > 📅 阅读日期: 待定

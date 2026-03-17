@@ -1,0 +1,48 @@
+{
+  "01_基础路线图": {
+    "display_name": "基础路线图",
+    "papers": [
+      {
+        "title": "Proximal Policy Optimization Algorithms (PPO)",
+        "path": "papers/01_基础路线图/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.md",
+        "url": "/papers/01_基础路线图/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.html",
+        "dir": "PPO_Proximal_Policy_Optimization"
+      }
+    ]
+  },
+  "03_Loco-Manipulation_and_WBC": {
+    "display_name": "Loco-Manipulation and WBC",
+    "papers": [
+      {
+        "title": "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation (HERO)",
+        "path": "papers/03_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.md",
+        "url": "/papers/03_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.html",
+        "dir": "Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation"
+      },
+      {
+        "title": "LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations",
+        "path": "papers/03_Loco-Manipulation_and_WBC/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.md",
+        "url": "/papers/03_Loco-Manipulation_and_WBC/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.html",
+        "dir": "LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations"
+      },
+      {
+        "title": "OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control",
+        "path": "papers/03_Loco-Manipulation_and_WBC/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.md",
+        "url": "/papers/03_Loco-Manipulation_and_WBC/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.html",
+        "dir": "OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control"
+      },
+      {
+        "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
+        "path": "papers/03_Loco-Manipulation_and_WBC/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.md",
+        "url": "/papers/03_Loco-Manipulation_and_WBC/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.html",
+        "dir": "ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation"
+      },
+      {
+        "title": "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety",
+        "path": "papers/03_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.md",
+        "url": "/papers/03_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.html",
+        "dir": "VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety"
+      }
+    ]
+  }
+}

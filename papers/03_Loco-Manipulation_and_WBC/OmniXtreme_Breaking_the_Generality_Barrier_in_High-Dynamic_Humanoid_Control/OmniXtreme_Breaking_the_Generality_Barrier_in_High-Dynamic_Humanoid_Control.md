@@ -1,3 +1,9 @@
+---
+layout: paper
+title: "OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control"
+category: "Loco-Manipulation and WBC"
+---
+
 # OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control
 
 > 📅 阅读日期: 2026-03-08

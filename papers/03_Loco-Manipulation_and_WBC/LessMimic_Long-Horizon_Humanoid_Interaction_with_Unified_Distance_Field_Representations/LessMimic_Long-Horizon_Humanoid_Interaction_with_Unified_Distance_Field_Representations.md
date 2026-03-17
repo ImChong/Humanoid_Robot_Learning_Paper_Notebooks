@@ -1,3 +1,9 @@
+---
+layout: paper
+title: "LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations"
+category: "Loco-Manipulation and WBC"
+---
+
 # LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations
 
 > 📅 阅读日期: 2026-03-08

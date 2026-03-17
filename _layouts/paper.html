@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="paper-content">
+  <nav class="breadcrumb">
+    <a href="{{ '/' | relative_url }}">🏠 Home</a>
+    {% assign path_parts = page.url | split: '/' %}
+    {% if path_parts.size > 3 %}
+      <span class="sep">›</span>
+      <span class="crumb-category">{{ path_parts[2] | replace: '_', ' ' }}</span>
+    {% endif %}
+  </nav>
+
+  <div class="paper-body">
+    {{ content }}
+  </div>
+
+  <div class="paper-nav">
+    <a href="{{ '/' | relative_url }}" class="back-link">← 返回论文列表</a>
+  </div>
+</article>

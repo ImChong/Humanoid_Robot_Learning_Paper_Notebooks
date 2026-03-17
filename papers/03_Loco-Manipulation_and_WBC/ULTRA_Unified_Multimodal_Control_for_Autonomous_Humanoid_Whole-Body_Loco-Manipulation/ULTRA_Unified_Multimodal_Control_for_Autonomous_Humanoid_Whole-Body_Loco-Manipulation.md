@@ -1,3 +1,9 @@
+---
+layout: paper
+title: "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation"
+category: "Loco-Manipulation and WBC"
+---
+
 # ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation
 
 > 📅 阅读日期: 2026-03-07  

@@ -1,0 +1,421 @@
+/* ===== CSS Variables ===== */
+:root,
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-secondary: #f8f8f8;
+  --text: #333333;
+  --text-secondary: #666666;
+  --link: #b31b1b;
+  --link-hover: #8b1515;
+  --border: #e0e0e0;
+  --code-bg: #f5f5f5;
+  --code-border: #e0e0e0;
+  --header-bg: #fafafa;
+  --header-border: #ddd;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0,0,0,0.08);
+  --blockquote-border: #b31b1b;
+  --blockquote-bg: #fdf6f6;
+  --table-stripe: #f9f9f9;
+  --kbd-bg: #eee;
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a2e;
+  --bg-secondary: #16213e;
+  --text: #e0e0e0;
+  --text-secondary: #a0a0b0;
+  --link: #ff6b6b;
+  --link-hover: #ff9b9b;
+  --border: #2d2d44;
+  --code-bg: #2d2d44;
+  --code-border: #3d3d55;
+  --header-bg: #16213e;
+  --header-border: #2d2d44;
+  --card-bg: #16213e;
+  --card-shadow: rgba(0,0,0,0.3);
+  --blockquote-border: #ff6b6b;
+  --blockquote-bg: #1e1e35;
+  --table-stripe: #1e1e35;
+  --kbd-bg: #2d2d44;
+}
+
+/* ===== Transitions ===== */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Linux Libertine', 'Georgia', 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+.site-title:hover {
+  color: var(--link);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.github-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.github-link:hover {
+  color: var(--link);
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.theme-toggle:hover {
+  border-color: var(--link);
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ===== Index Page ===== */
+.index-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.index-header h1 {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.index-header p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.category-section {
+  margin-bottom: 2rem;
+}
+
+.category-title {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.category-title .cat-icon {
+  margin-right: 0.4rem;
+}
+
+.paper-list {
+  list-style: none;
+  padding: 0;
+}
+
+.paper-list li {
+  margin-bottom: 0.4rem;
+}
+
+.paper-card {
+  display: block;
+  padding: 0.7rem 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.paper-card:hover {
+  border-color: var(--link);
+  box-shadow: 0 2px 8px var(--card-shadow);
+  color: var(--link);
+}
+
+.paper-card .paper-title {
+  font-weight: 600;
+}
+
+/* ===== Breadcrumb ===== */
+.breadcrumb {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.breadcrumb a {
+  color: var(--link);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .sep {
+  margin: 0 0.5rem;
+  color: var(--text-secondary);
+}
+
+/* ===== Paper Content ===== */
+.paper-body h1 {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.paper-body h2 {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.paper-body h3 {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.paper-body h4, .paper-body h5, .paper-body h6 {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.paper-body p {
+  margin-bottom: 1rem;
+}
+
+.paper-body a {
+  color: var(--link);
+  text-decoration: none;
+}
+.paper-body a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+/* Lists */
+.paper-body ul, .paper-body ol {
+  margin-bottom: 1rem;
+  padding-left: 1.8rem;
+}
+.paper-body li {
+  margin-bottom: 0.3rem;
+}
+
+/* Blockquotes */
+.paper-body blockquote {
+  border-left: 3px solid var(--blockquote-border);
+  background: var(--blockquote-bg);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+  color: var(--text-secondary);
+}
+.paper-body blockquote p {
+  margin-bottom: 0.3rem;
+}
+
+/* Code */
+.paper-body code {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.88em;
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  border: 1px solid var(--code-border);
+}
+
+.paper-body pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.paper-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85em;
+}
+
+/* Tables */
+.paper-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.92em;
+}
+
+.paper-body th, .paper-body td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+}
+
+.paper-body th {
+  background: var(--bg-secondary);
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+}
+
+.paper-body tr:nth-child(even) {
+  background: var(--table-stripe);
+}
+
+/* Images */
+.paper-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* HR */
+.paper-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* KaTeX overrides */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+/* ===== Paper Nav ===== */
+.paper-nav {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.back-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  color: var(--link);
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  .paper-body h1 {
+    font-size: 1.4rem;
+  }
+  .paper-body h2 {
+    font-size: 1.15rem;
+  }
+  .index-header h1 {
+    font-size: 1.5rem;
+  }
+  .header-inner {
+    padding: 0.6rem 1rem;
+  }
+}

@@ -1,0 +1,36 @@
+title: "Humanoid Robot Learning Paper Notebooks"
+description: "人形机器人学习论文笔记"
+url: "https://imchong.github.io"
+baseurl: "/Humanoid_Robot_Learning_Paper_Notebooks"
+
+markdown: kramdown
+kramdown:
+  math_engine: null
+  input: GFM
+  hard_wrap: false
+
+# Include papers directory
+include:
+  - papers
+
+# Exclude unnecessary files
+exclude:
+  - README.md
+  - progress.json
+  - scripts/
+  - .obsidian/
+  - "*.pdf"
+  - Gemfile
+  - Gemfile.lock
+
+# Default front matter
+defaults:
+  - scope:
+      path: "papers"
+      type: "pages"
+    values:
+      layout: "paper"
+
+# Plugins
+plugins:
+  - jekyll-seo-tag

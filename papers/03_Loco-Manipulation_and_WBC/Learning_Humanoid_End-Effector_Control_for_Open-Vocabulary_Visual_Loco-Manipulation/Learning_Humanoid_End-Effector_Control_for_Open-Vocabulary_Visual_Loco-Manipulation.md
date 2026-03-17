@@ -1,3 +1,9 @@
+---
+layout: paper
+title: "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation (HERO)"
+category: "Loco-Manipulation and WBC"
+---
+
 # Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation (HERO)
 
 > 📅 阅读日期: 待定

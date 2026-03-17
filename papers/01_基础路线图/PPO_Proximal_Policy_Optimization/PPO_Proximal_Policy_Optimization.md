@@ -1,3 +1,9 @@
+---
+layout: paper
+title: "Proximal Policy Optimization Algorithms (PPO)"
+category: "基础路线图"
+---
+
 # Proximal Policy Optimization Algorithms (PPO)
 
 > 📅 阅读日期: 2026-03-11  
