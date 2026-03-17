@@ -21,23 +21,23 @@
 }
 
 [data-theme="dark"] {
-  --bg: #1a1a2e;
-  --bg-secondary: #16213e;
-  --text: #e0e0e0;
-  --text-secondary: #a0a0b0;
-  --link: #ff6b6b;
-  --link-hover: #ff9b9b;
-  --border: #2d2d44;
-  --code-bg: #2d2d44;
-  --code-border: #3d3d55;
-  --header-bg: #16213e;
-  --header-border: #2d2d44;
-  --card-bg: #16213e;
-  --card-shadow: rgba(0,0,0,0.3);
-  --blockquote-border: #ff6b6b;
-  --blockquote-bg: #1e1e35;
-  --table-stripe: #1e1e35;
-  --kbd-bg: #2d2d44;
+  --bg: #1e1e1e;
+  --bg-secondary: #252526;
+  --text: #d4d4d4;
+  --text-secondary: #858585;
+  --link: #569cd6;
+  --link-hover: #9cdcfe;
+  --border: #3c3c3c;
+  --code-bg: #1e1e1e;
+  --code-border: #3c3c3c;
+  --header-bg: #252526;
+  --header-border: #3c3c3c;
+  --card-bg: #252526;
+  --card-shadow: rgba(0,0,0,0.4);
+  --blockquote-border: #569cd6;
+  --blockquote-bg: #252526;
+  --table-stripe: #2d2d2d;
+  --kbd-bg: #333333;
 }
 
 /* ===== Transitions ===== */
