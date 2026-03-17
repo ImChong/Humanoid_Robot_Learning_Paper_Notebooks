@@ -325,6 +325,32 @@ body {
   max-width: none;
 }
 
+/* ===== Index Layout with TOC ===== */
+.index-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.index-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.index-layout .toc-sidebar {
+  margin-left: 0;
+  order: -1;
+}
+
+@media (max-width: 1200px) {
+  .index-layout {
+    display: block;
+  }
+  .index-layout .toc-sidebar {
+    display: none;
+  }
+}
+
 /* ===== Breadcrumb ===== */
 .breadcrumb {
   font-family: 'Arial', sans-serif;
