@@ -8,16 +8,7 @@
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-    onload="renderMathInElement(document.body, {
-      delimiters: [
-        {left: '$$', right: '$$', display: true},
-        {left: '$', right: '$', display: false},
-        {left: '\\\\(', right: '\\\\)', display: false},
-        {left: '\\\\[', right: '\\\\]', display: true}
-      ],
-      throwOnError: false
-    });"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 </head>
 <body>
   {% include header.html %}
@@ -25,6 +16,43 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  <script>
+    // KaTeX auto-render with HTML entity fix
+    function initKaTeX() {
+      if (typeof renderMathInElement === 'undefined') return false;
+
+      // Fix HTML entities inside math before rendering
+      // Kramdown converts > to &gt; and < to &lt; inside table cells etc.
+      document.querySelectorAll('td, th, li, p, span').forEach(function(el) {
+        var html = el.innerHTML;
+        // Only process if there's a $ or \[ that suggests math content
+        if (html.indexOf('$') === -1 && html.indexOf('\\[') === -1) return;
+        // Replace HTML entities back inside math delimiters
+        html = html.replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+        el.innerHTML = html;
+      });
+
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "\\[", right: "\\]", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\(", right: "\\)", display: false}
+        ],
+        throwOnError: false,
+        strict: false
+      });
+      return true;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      if (!initKaTeX()) {
+        var check = setInterval(function() {
+          if (initKaTeX()) clearInterval(check);
+        }, 100);
+      }
+    });
+  </script>
   <script>
     // Dark/Light mode
     (function() {
