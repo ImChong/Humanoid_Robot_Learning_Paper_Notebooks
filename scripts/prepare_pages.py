@@ -2,15 +2,16 @@
 """
 Prepare paper markdown files for Jekyll:
 1. Add minimal front matter if not present (Jekyll requires it to process files)
-2. Generate index data (category -> papers mapping)
+2. Generate index data (category -> papers mapping) ordered by README appearance
 """
 
 import os
 import re
 import json
 
-PAPERS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'papers')
-FRONTMATTER_MARKER = '---'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PAPERS_DIR = os.path.join(BASE_DIR, 'papers')
+README_PATH = os.path.join(BASE_DIR, 'README.md')
 
 
 def has_frontmatter(content):
@@ -20,13 +21,11 @@ def has_frontmatter(content):
 
 def extract_title(content):
     """Extract title from first H1 heading."""
-    # Remove front matter first if present
     text = content
     if has_frontmatter(text):
         parts = text.split('---', 2)
         if len(parts) >= 3:
             text = parts[2]
-    
     match = re.search(r'^#\s+(.+)$', text, re.MULTILINE)
     if match:
         return match.group(1).strip()
@@ -35,46 +34,118 @@ def extract_title(content):
 
 def get_category_name(category_dir):
     """Clean category directory name for display."""
-    name = category_dir
-    # Remove leading number prefix like "01_"
-    name = re.sub(r'^\d+_', '', name)
-    # Replace underscores with spaces
+    name = re.sub(r'^\d+_', '', category_dir)
     name = name.replace('_', ' ')
     return name
 
 
+def parse_readme_order():
+    """
+    Parse README.md to extract paper ordering within each section.
+    Returns a dict: { normalized_paper_name: order_index }
+    We use the paper title/name from the README table rows.
+    """
+    if not os.path.exists(README_PATH):
+        return {}
+
+    with open(README_PATH, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Extract all paper names mentioned in table rows (| # | paper_name | ... |)
+    # This captures the order they appear in README
+    order = {}
+    idx = 0
+
+    for line in content.split('\n'):
+        line = line.strip()
+        if not line.startswith('|'):
+            continue
+        # Skip header/separator rows
+        cols = [c.strip() for c in line.split('|')]
+        cols = [c for c in cols if c]  # remove empty
+        if len(cols) < 2:
+            continue
+        if cols[0] in ('#', '---', '----', '-----') or re.match(r'^-+$', cols[0]):
+            continue
+        # First col is usually the number, second is paper name/title
+        paper_col = cols[1] if len(cols) > 1 else cols[0]
+
+        # Extract the key text (remove markdown links, bold, etc.)
+        paper_text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', paper_col)
+        paper_text = re.sub(r'[*_`\[\]]', '', paper_text)
+        paper_text = paper_text.strip()
+
+        if not paper_text or paper_text in ('论文', '---', '笔记', '状态', '日期', '路线'):
+            continue
+
+        # Normalize for matching: lowercase, remove special chars
+        normalized = normalize_name(paper_text)
+        if normalized and len(normalized) > 3:
+            order[normalized] = idx
+            idx += 1
+
+    return order
+
+
+def normalize_name(name):
+    """Normalize a name for fuzzy matching."""
+    name = name.lower()
+    name = re.sub(r'[^a-z0-9\s]', '', name)
+    name = re.sub(r'\s+', ' ', name).strip()
+    return name
+
+
+def match_paper_order(paper_title, paper_dir, readme_order):
+    """Find the README order index for a paper. Lower = earlier in README."""
+    # Try matching by title
+    norm_title = normalize_name(paper_title)
+    for key, idx in readme_order.items():
+        if norm_title and (norm_title in key or key in norm_title):
+            return idx
+
+    # Try matching by directory name
+    norm_dir = normalize_name(paper_dir.replace('_', ' '))
+    for key, idx in readme_order.items():
+        if norm_dir and (norm_dir in key or key in norm_dir):
+            return idx
+
+    # Not found - put at end
+    return 99999
+
+
 def process_papers():
     """Walk through papers directory and add front matter."""
+    readme_order = parse_readme_order()
     index_data = {}
-    
+
     if not os.path.exists(PAPERS_DIR):
         print(f"Papers directory not found: {PAPERS_DIR}")
         return
-    
+
     for category_dir in sorted(os.listdir(PAPERS_DIR)):
         category_path = os.path.join(PAPERS_DIR, category_dir)
         if not os.path.isdir(category_path):
             continue
-        
+
         category_display = get_category_name(category_dir)
         papers = []
-        
-        for paper_dir in sorted(os.listdir(category_path)):
+
+        for paper_dir in os.listdir(category_path):
             paper_path = os.path.join(category_path, paper_dir)
             if not os.path.isdir(paper_path):
                 continue
-            
+
             for fname in os.listdir(paper_path):
                 if not fname.endswith('.md'):
                     continue
-                
+
                 fpath = os.path.join(paper_path, fname)
-                
+
                 with open(fpath, 'r', encoding='utf-8') as f:
                     content = f.read()
-                
+
                 title = extract_title(content) or paper_dir.replace('_', ' ')
-                
+
                 # Add front matter if not present
                 if not has_frontmatter(content):
                     frontmatter = f'---\nlayout: paper\ntitle: "{title}"\ncategory: "{category_display}"\n---\n\n'
@@ -83,33 +154,41 @@ def process_papers():
                     print(f"  Added front matter: {fpath}")
                 else:
                     print(f"  Already has front matter: {fpath}")
-                
-                # Build relative URL
-                rel_path = os.path.relpath(fpath, os.path.dirname(PAPERS_DIR))
-                # Remove .md extension for URL
+
+                rel_path = os.path.relpath(fpath, BASE_DIR)
                 url_path = '/' + rel_path.rsplit('.md', 1)[0] + '.html'
-                
+
+                order_idx = match_paper_order(title, paper_dir, readme_order)
+
                 papers.append({
                     'title': title,
                     'path': rel_path,
                     'url': url_path,
-                    'dir': paper_dir
+                    'dir': paper_dir,
+                    '_order': order_idx
                 })
-        
+
+        # Sort by README order
+        papers.sort(key=lambda p: p['_order'])
+        # Remove internal _order field
+        for p in papers:
+            del p['_order']
+
         if papers:
             index_data[category_dir] = {
                 'display_name': category_display,
                 'papers': papers
             }
-    
-    # Write index data for Jekyll to use
-    data_dir = os.path.join(os.path.dirname(PAPERS_DIR), '_data')
+
+    # Write index data
+    data_dir = os.path.join(BASE_DIR, '_data')
     os.makedirs(data_dir, exist_ok=True)
-    
+
     with open(os.path.join(data_dir, 'papers.json'), 'w', encoding='utf-8') as f:
         json.dump(index_data, f, ensure_ascii=False, indent=2)
-    
-    print(f"\nGenerated _data/papers.json with {sum(len(v['papers']) for v in index_data.values())} papers in {len(index_data)} categories")
+
+    total = sum(len(v['papers']) for v in index_data.values())
+    print(f"\nGenerated _data/papers.json with {total} papers in {len(index_data)} categories")
 
 
 if __name__ == '__main__':
