@@ -76,6 +76,18 @@
       "title_cn": "对抗解耦与蒸馏"
     },
     {
+      "title": "MimicKit: A Reinforcement Learning Framework for Motion Imitation and Control",
+      "arxiv": "https://arxiv.org/abs/2510.13794",
+      "folder": "papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control",
+      "note_file": "MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.md",
+      "pdf_file": "MimicKit.pdf",
+      "status": "pending",
+      "start_date": null,
+      "done_date": null,
+      "route": "工程框架",
+      "title_cn": "MimicKit：运动模仿与控制的强化学习框架"
+    },
+    {
       "title": "ASE: Adversarial Skill Embeddings for Large-Scale Motion Control",
       "arxiv": "",
       "folder": "papers/01_基础路线图/ASE__Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control",
