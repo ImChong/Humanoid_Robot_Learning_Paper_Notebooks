@@ -35,7 +35,7 @@ AWR 把强化学习变成了一个**加权监督学习**问题——从经验中
 
 学完 PPO 之后，你已经知道策略梯度的基本思路：试错 → 评估 → 更新策略。PPO 通过裁剪概率比来控制更新幅度，效果很好但还有几个麻烦：
 
-1. **重要性采样方差大**：PPO 依赖新旧策略的概率比 $r_t = \frac{\pi_\theta(a|s)}{\pi_{\theta_{old}}(a|s)}$，当新旧策略差异大时，这个比值可能非常大或非常小，导致梯度估计不稳定
+1. **重要性采样方差大**：PPO 依赖新旧策略的概率比 $r_t = \frac{\pi_\theta(a \mid s)}{\pi_{\theta_{old}}(a \mid s)}$，当新旧策略差异大时，这个比值可能非常大或非常小，导致梯度估计不稳定
 2. **只能用当前数据**：PPO 是 on-policy 算法，每轮收集的数据用完就丢，历史经验无法复用
 3. **裁剪需要调参**：$\epsilon$ 的选择影响训练效果，不同任务可能需要不同的值
 
@@ -69,7 +69,7 @@ $$A(s_t, a_t) = R_t - V_\phi(s_t)$$
 
 用指数优势作为权重，做加权最大似然回归：
 
-$$\mathcal{L}(\theta) = \mathbb{E}\left[ w(s,a) \cdot \log \pi_\theta(a | s) \right]$$
+$$\mathcal{L}(\theta) = \mathbb{E}\left[ w(s,a) \cdot \log \pi_\theta(a \mid s) \right]$$
 
 其中权重：
 

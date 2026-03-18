@@ -12,7 +12,8 @@
       "status": "reading",
       "start_date": "2026-03-16",
       "done_date": null,
-      "route": "基础RL"
+      "route": "基础RL",
+      "title_cn": "近端策略优化"
     },
     {
       "title": "AWR: Advantage Weighted Regression",
@@ -23,7 +24,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "基础RL"
+      "route": "基础RL",
+      "title_cn": "优势加权回归"
     },
     {
       "title": "DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills",
@@ -34,7 +36,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "精确模仿"
+      "route": "精确模仿",
+      "title_cn": "深度模仿：基于示例引导的物理角色技能深度强化学习"
     },
     {
       "title": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
@@ -45,7 +48,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "风格学习"
+      "route": "风格学习",
+      "title_cn": "对抗运动先验：风格化物理角色控制"
     },
     {
       "title": "PHC: Perpetual Humanoid Control for Real-time Simulated Avatars",
@@ -56,7 +60,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "精确模仿"
+      "route": "精确模仿",
+      "title_cn": "持续人形控制：实时仿真虚拟角色"
     },
     {
       "title": "ADD: Adversarial Disentanglement and Distillation",
@@ -67,7 +72,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "风格学习"
+      "route": "风格学习",
+      "title_cn": "对抗解耦与蒸馏"
     },
     {
       "title": "ASE: Adversarial Skill Embeddings for Large-Scale Motion Control",
@@ -78,7 +84,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "技能组合"
+      "route": "技能组合",
+      "title_cn": "对抗技能嵌入：大规模运动控制"
     },
     {
       "title": "CALM: Conditional Adversarial Latent Models for Directable Virtual Characters",
@@ -89,7 +96,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "技能组合"
+      "route": "技能组合",
+      "title_cn": "条件对抗潜变量模型：可控虚拟角色"
     },
     {
       "title": "PULSE: Physically Plausible Universal Latent Skill Extraction",
@@ -100,7 +108,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "技能组合"
+      "route": "技能组合",
+      "title_cn": "物理可行的通用潜在技能提取"
     },
     {
       "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
@@ -111,7 +120,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "扩散+控制"
+      "route": "扩散+控制",
+      "title_cn": "扩散策略：基于动作扩散的视觉运动策略学习"
     },
     {
       "title": "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion",
@@ -122,7 +132,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "扩散+控制"
+      "route": "扩散+控制",
+      "title_cn": "超越模仿：从运动跟踪到引导扩散的多功能人形控制"
     },
     {
       "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
@@ -133,7 +144,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Sim-to-Real"
+      "route": "Sim-to-Real",
+      "title_cn": "域随机化：从仿真到真实世界的深度神经网络迁移"
     },
     {
       "title": "LCP: Sim-to-Real Action Smoothing",
@@ -144,7 +156,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Sim-to-Real"
+      "route": "Sim-to-Real",
+      "title_cn": "LCP：仿真到真实的动作平滑"
     },
     {
       "title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
@@ -155,7 +168,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
@@ -166,7 +180,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL",
@@ -177,7 +192,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",
@@ -188,7 +204,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Embedding Classical Balance Control Principles in RL for Humanoid Recovery",
@@ -199,7 +216,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
@@ -210,7 +228,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control",
@@ -221,7 +240,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations",
@@ -232,7 +252,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
@@ -243,7 +264,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety",
@@ -254,7 +276,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
@@ -265,7 +288,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction",
@@ -276,7 +300,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
@@ -287,7 +312,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
@@ -298,7 +324,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
@@ -309,7 +336,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
@@ -320,7 +348,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Human-Like Badminton Skills for Humanoid Robots",
@@ -331,7 +360,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control",
@@ -342,7 +372,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
@@ -353,7 +384,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HiWET: Hierarchical World-Frame End-Effector Tracking for Long-Horizon Humanoid Loco-Manipulation",
@@ -364,7 +396,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Soccer Skills for Humanoid Robots:   A Progressive Perception-Action Framework",
@@ -375,7 +408,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "PDF-HR: Pose Distance Fields for Humanoid Robots",
@@ -386,7 +420,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control",
@@ -397,7 +432,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control",
@@ -408,7 +444,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
@@ -419,7 +456,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
@@ -430,7 +468,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
@@ -441,7 +480,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Robust and Generalized Humanoid Motion Tracking",
@@ -452,7 +492,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
@@ -463,7 +504,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
@@ -474,7 +516,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
@@ -485,7 +528,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "FRoM-W1: Towards General Humanoid Whole-Body Control with Language Instructions",
@@ -496,7 +540,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Whole-Body Human-Humanoid Interaction from Human-Human Demonstrations",
@@ -507,7 +552,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Hiking in the Wild: A Scalable Perceptive Parkour Framework for Humanoids",
@@ -518,7 +564,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Deep Whole-body Parkour",
@@ -529,7 +576,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Coordinated Humanoid Manipulation with Choice Policies",
@@ -540,7 +588,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "UniAct: Unified Motion Generation and Action Streaming for Humanoid Robots",
@@ -551,7 +600,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "EGM: Efficiently Learning General Motion Tracking Policy for High Dynamic Humanoid Whole-Body Control",
@@ -562,7 +612,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
@@ -573,7 +624,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "CHIP: Adaptive Compliance for Humanoid Control through Hindsight Perturbation",
@@ -584,7 +636,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations",
@@ -595,7 +648,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Agile Striker Skills for Humanoid Soccer Robots from Noisy Sensory Input",
@@ -606,7 +660,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Discovering Self-Protective Falling Policy for Humanoid Robot via Deep Reinforcement Learning",
@@ -617,7 +672,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer",
@@ -628,7 +684,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Commanding Humanoid by Free-form Language: A Large Language Action Model with Unified Motion Vocabulary",
@@ -639,7 +696,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Kinematics-Aware Multi-Policy Reinforcement Learning for Force-Capable Humanoid Loco-Manipulation",
@@ -650,7 +708,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HAFO: A Force-Adaptive Control Framework for Humanoid Robots in Intense Interaction Environments",
@@ -661,7 +720,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SENTINEL: A Fully End-to-End Language-Action Model for Humanoid Whole Body Control",
@@ -672,7 +732,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SafeFall: Learning Protective Control for Humanoid Robots",
@@ -683,7 +744,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data",
@@ -694,7 +756,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation",
@@ -705,7 +768,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HMC: Learning Heterogeneous Meta-Control for Contact-Rich Loco-Manipulation",
@@ -716,7 +780,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Humanoid Whole-Body Badminton via Multi-Stage Reinforcement Learning",
@@ -727,7 +792,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Robot Crash Course: Learning Soft and Stylized Falling",
@@ -738,7 +804,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Unveiling the Impact of Data and Model Scaling on High-Level Control for Humanoid Robots",
@@ -749,7 +816,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
@@ -760,7 +828,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Unified Humanoid Fall-Safety Policy from a Few Demonstrations",
@@ -771,7 +840,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Towards Adaptive Humanoid Control via Multi-Behavior Distillation and Reinforced Fine-Tuning",
@@ -782,7 +852,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
@@ -793,7 +864,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",
@@ -804,7 +876,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots",
@@ -815,7 +888,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System",
@@ -826,7 +900,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Thor: Towards Human-Level Whole-Body Reactions for Intense Contact-Rich Environments",
@@ -837,7 +912,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "One-shot Humanoid Whole-body Motion Learning",
@@ -848,7 +924,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Humanoid Goalkeeper: Learning from Position Conditioned Task-Motion Constraints",
@@ -859,7 +936,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "From Language to Locomotion: Retargeting-free Humanoid Control via Motion Latent Guidance",
@@ -870,7 +948,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Towards Adaptable Humanoid Control via Adaptive Motion Tracking",
@@ -881,7 +960,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Human-Humanoid Coordination for Collaborative Object Carrying",
@@ -892,7 +972,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Ego-Vision World Model for Humanoid Contact Planning",
@@ -903,7 +984,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "DemoHLM: From One Demonstration to Generalizable Humanoid Loco-Manipulation",
@@ -914,7 +996,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "PhysHSI: Towards a Real-World Generalizable and Natural Humanoid-Scene Interaction System",
@@ -925,7 +1008,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "It Takes Two: Learning Interactive Whole-Body Control Between Humanoid Robots",
@@ -936,7 +1020,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "ResMimic: From General Motion Tracking to Humanoid Whole-body Loco-Manipulation via Residual Learning",
@@ -947,7 +1032,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HumanoidExo: Scalable Whole-Body Humanoid Manipulation via Wearable Exoskeleton",
@@ -958,7 +1044,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking",
@@ -969,7 +1056,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction",
@@ -980,7 +1068,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Towards Versatile Humanoid Table Tennis: Unified Reinforcement Learning with Prediction Augmentation",
@@ -991,7 +1080,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SEEC: Stable End-Effector Control with Model-Enhanced Residual Learning for Humanoid Loco-Manipulation",
@@ -1002,7 +1092,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "VisualMimic: Visual Humanoid Loco-Manipulation via Motion Tracking and Generation",
@@ -1013,7 +1104,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HDMI: Learning Interactive Humanoid Whole-Body Control from Human Videos",
@@ -1024,7 +1116,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "KungfuBot 2: Learning Versatile Motion Skills for Humanoid Whole-Body Control",
@@ -1035,7 +1128,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Implicit Kinodynamic Motion Retargeting for Human-to-humanoid Imitation Learning",
@@ -1046,7 +1140,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "DreamControl: Human-Inspired Whole-Body Humanoid Control for Scene Interaction via Guided Diffusion",
@@ -1057,7 +1152,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Track Any Motions under Any Disturbances",
@@ -1068,7 +1164,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Behavior Foundation Model for Humanoid Robots",
@@ -1079,7 +1176,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Embracing Bulky Objects with Humanoid Robots: Whole-Body Manipulation with Reinforcement Learning",
@@ -1090,7 +1188,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "StageACT: Stage-Conditioned Imitation for Robust Humanoid Door Opening",
@@ -1101,7 +1200,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "TrajBooster: Boosting Humanoid Whole-Body Manipulation via Trajectory-Centric Learning",
@@ -1112,7 +1212,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HITTER: A HumanoId Table TEnnis Robot via Hierarchical Planning and Learning",
@@ -1123,7 +1224,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HuBE: Cross-Embodiment Human-like Behavior Execution for Humanoid Robots",
@@ -1134,7 +1236,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HumanoidVerse: A Versatile Humanoid for Vision-Language Guided Multi-Object Rearrangement",
@@ -1145,7 +1248,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Task and Motion Planning for Humanoid Loco-manipulation",
@@ -1156,7 +1260,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "GBC: Generalized Behavior-Cloning Framework for Whole-Body Humanoid Imitation",
@@ -1167,7 +1272,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "A Whole-Body Motion Imitation Framework from Human Data for Full-Size Humanoid Robot",
@@ -1178,7 +1284,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "EMP: Executable Motion Prior for Humanoid Robot Standing Upper-body Motion Imitation",
@@ -1189,7 +1296,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Keep on Going: Learning Robust Humanoid Motion Skills via Selective Adversarial Training",
@@ -1200,7 +1308,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "UniTracker: Learning Universal Whole-Body Motion Tracker for Humanoid Robots",
@@ -1211,7 +1320,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "ULC: A Unified and Fine-Grained Controller for Humanoid Loco-Manipulation",
@@ -1222,7 +1332,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Motion Skills with Adaptive Assistive Curriculum Force in Humanoid Robots",
@@ -1233,7 +1344,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "A Survey of Behavior Foundation Model: Next-Generation Whole-Body Control System of Humanoid Robots",
@@ -1244,7 +1356,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "TACT: Humanoid Whole-body Contact Manipulation through Deep Imitation Learning with Tactile Modality",
@@ -1255,7 +1368,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "GMT: General Motion Tracking for Humanoid Whole-Body Control",
@@ -1266,7 +1380,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction",
@@ -1277,7 +1392,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots",
@@ -1288,7 +1404,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SkillBlender: Towards Versatile Humanoid Whole-Body Loco-Manipulation via Skill Blending",
@@ -1299,7 +1416,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SLAC: Simulation-Pretrained Latent Action Space for Whole-Body Real-World Reinforcement Learning",
@@ -1310,7 +1428,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Hierarchical Intention-Aware Expressive Motion Generation for Humanoid Robots",
@@ -1321,7 +1440,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "From Motion to Behavior: Hierarchical Modeling of Humanoid Generative Behavior Control",
@@ -1332,7 +1452,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SignBot: Learning Human-to-Humanoid Sign Language Interaction",
@@ -1343,7 +1464,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control",
@@ -1354,7 +1476,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Mobi-π: Mobilizing Your Robot Learning Policy",
@@ -1365,7 +1488,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SMAP: Self-supervised Motion Adaptation for Physically Plausible Humanoid Whole-body Control",
@@ -1376,7 +1500,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "H2-COMPACT: Human-Humanoid Co-Manipulation via Adaptive Contact Trajectory Policies",
@@ -1387,7 +1512,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Unleashing Humanoid Reaching Potential via Real-world-Ready Skill Space",
@@ -1398,7 +1524,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HuB: Learning Extreme Humanoid Balance",
@@ -1409,7 +1536,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "FALCON: Learning Force-Adaptive Humanoid Loco-Manipulation",
@@ -1420,7 +1548,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid",
@@ -1431,7 +1560,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "JAEGER: Dual-Level Humanoid Whole-Body Controller",
@@ -1442,7 +1572,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control",
@@ -1453,7 +1584,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "PyRoki: A Modular Toolkit for Robot Kinematic Optimization",
@@ -1464,7 +1596,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "TWIST: Teleoperated Whole-Body Imitation System",
@@ -1475,7 +1608,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "LangWBC: Language-directed Humanoid Whole-Body Control via End-to-end Learning",
@@ -1486,7 +1620,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Physically Consistent Humanoid Loco-Manipulation using Latent Diffusion Models",
@@ -1497,7 +1632,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Adversarial Locomotion and Motion Imitation for Humanoid Policy Learning",
@@ -1508,7 +1644,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills",
@@ -1519,7 +1656,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Trinity: A Modular Humanoid Robot AI System",
@@ -1530,7 +1668,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
@@ -1541,7 +1680,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Whole-Body Model-Predictive Control of Legged Robots with MuJoCo",
@@ -1552,7 +1692,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HiFAR: Multi-Stage Curriculum Learning for High-Dynamics Humanoid Fall Recovery",
@@ -1563,7 +1704,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
@@ -1574,7 +1716,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Getting-Up Policies for Real-World Humanoid Robots",
@@ -1585,7 +1728,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Humanoid Standing-up Control across Diverse Postures",
@@ -1596,7 +1740,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HugWBC: A Unified and General Humanoid Whole-Body Controller",
@@ -1607,7 +1752,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SPARK: A Toolbox for Safe Humanoid Autonomy and Teleoperation",
@@ -1618,7 +1764,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Embrace Collisions: Humanoid Shadowing for Deployable Contact-Agnostics Motions",
@@ -1629,7 +1776,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Human-Humanoid Robots Cross-Embodiment Behavior-Skill Transfer Using Decomposed Adversarial Learning from Demonstration",
@@ -1640,7 +1788,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning from Massive Human Videos for Universal Humanoid Pose Control",
@@ -1651,7 +1800,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
@@ -1662,7 +1812,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control",
@@ -1673,7 +1824,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "A Behavior Architecture for Fast Humanoid Robot Door Traversals",
@@ -1684,7 +1836,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "EMOTION: Expressive Motion Sequence Generation for Humanoid Robots with In-Context Learning",
@@ -1695,7 +1848,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
@@ -1706,7 +1860,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Harmon: Whole-Body Motion Generation of Humanoid Robots from Language Descriptions",
@@ -1717,7 +1872,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Whole-Body Dynamic Throwing with Legged Manipulators",
@@ -1728,7 +1884,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Opt2Skill: Imitating Dynamically-feasible Whole-Body Trajectories for Versatile Humanoid Loco-Manipulation",
@@ -1739,7 +1896,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HYPERmotion: Learning Hybrid Behavior Planning for Autonomous Loco-manipulation",
@@ -1750,7 +1908,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
@@ -1761,7 +1920,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
@@ -1772,7 +1932,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts",
@@ -1783,7 +1944,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation",
@@ -1794,7 +1956,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Expressive Whole-Body Control for Humanoid Robots",
@@ -1805,7 +1968,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Sim-to-Real Learning for Humanoid Box Loco-Manipulation",
@@ -1816,7 +1980,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control",
@@ -1827,7 +1992,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "SPIDER: Scalable Physics-Informed DExterous Retargeting",
@@ -1838,7 +2004,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "AdaMimic: Towards Adaptable Humanoid Control via Adaptive Motion Tracking",
@@ -1849,7 +2016,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "General Motion Tracking for Humanoid Whole-Body Control",
@@ -1860,7 +2028,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "CLONE: Holistic Closed-Loop Whole-Body Teleoperation for Long-Horizon Humanoid Control",
@@ -1871,7 +2040,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills",
@@ -1882,7 +2052,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "VMP: Versatile Motion Priors for Robustly Tracking Motion on Physical Characters",
@@ -1893,7 +2064,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "Robot Motion Diffusion Model: Motion Generation for Robotic Characters",
@@ -1904,7 +2076,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     },
     {
       "title": "[website],Embodied Chain of Action Reasoning with Multi-Modal Foundation Model for Humanoid Loco-manipulation",
@@ -1915,7 +2088,8 @@
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation"
+      "route": "Loco-Manipulation",
+      "title_cn": ""
     }
   ]
 }
