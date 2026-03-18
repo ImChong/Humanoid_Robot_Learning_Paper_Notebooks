@@ -30,8 +30,8 @@
     {
       "title": "DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills",
       "arxiv": "",
-      "folder": "papers/01_基础路线图/DeepMimic__Example-Guided_Deep_RL_of_Physics-Based_Character_Skills",
-      "note_file": "DeepMimic__Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.md",
+      "folder": "papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills",
+      "note_file": "DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.md",
       "pdf_file": "DeepMimic.pdf",
       "status": "pending",
       "start_date": null,
@@ -42,8 +42,8 @@
     {
       "title": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
       "arxiv": "",
-      "folder": "papers/01_基础路线图/AMP__Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control",
-      "note_file": "AMP__Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.md",
+      "folder": "papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control",
+      "note_file": "AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.md",
       "pdf_file": "AMP.pdf",
       "status": "pending",
       "start_date": null,
