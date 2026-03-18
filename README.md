@@ -13,16 +13,18 @@
 ## 项目结构
 
 ```
-├── papers/                    # 论文笔记（按类别分目录）
-│   ├── 01_Foundational_RL/    # 基础 RL 算法（PPO、AWR、DeepMimic、AMP 等）
+├── papers/                        # 论文笔记（按类别分目录）
+│   ├── 01_Foundational_RL/        # 基础 RL 算法（PPO、AWR、DeepMimic、AMP 等）
 │   ├── 03_Loco-Manipulation_and_WBC/  # 全身控制与移动操作
-│   ├── 04_Locomotion/         # 行走/跑酷等运动控制
-│   ├── ...                    # 其他类别（操作、遥操作、导航、仿真等）
-│   └── 每篇论文一个子目录/      # 包含 .md 笔记和 .pdf 原文
-├── progress.json              # 阅读进度追踪（当前论文、状态、日期）
-├── scripts/                   # 自动化脚本（每日提醒、系统报告等）
-├── _layouts/ _includes/ assets/  # Jekyll 网页模板和样式
-└── README.md                  # 本文件
+│   ├── 04_Locomotion/             # 行走/跑酷等运动控制
+│   ├── ...                        # 其他类别（操作、遥操作、导航、仿真等）
+│   └── 每篇论文一个子目录/          # 包含 .md 笔记和 .pdf 原文
+├── progress.json                  # 阅读进度追踪（当前论文、状态、日期）
+├── scripts/                       # 辅助脚本
+│   └── prepare_pages.py           # GitHub Pages 部署预处理
+├── _layouts/ _includes/ assets/   # Jekyll 网页模板和样式
+├── _config.yml                    # Jekyll 配置
+└── README.md                      # 本文件
 ```
 
 每篇论文的笔记通过 [GitHub Pages](https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/) 自动部署为在线网页。
