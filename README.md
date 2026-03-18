@@ -2,8 +2,6 @@
 
 **来源**: [awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning)
 
-**当前板块**: Loco-Manipulation and Whole-Body-Control
-
 ## 规则
 
 1. 每天早上 7:00 推送当日论文阅读提醒
@@ -11,6 +9,9 @@
 3. 如果当天没有回复"理解了"，第二天继续提醒同一篇
 4. 回复"理解了"后，对话记录也会保存到对应的 MD 笔记中
 5. 可以随时说"读下一篇"跳到一篇
+
+## 项目结构
+
 
 ## 笔记说明
 
