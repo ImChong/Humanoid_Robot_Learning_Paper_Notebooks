@@ -13,6 +13,18 @@
         "path": "papers/01_Foundational_RL/AWR_Advantage_Weighted_Regression/AWR_Advantage_Weighted_Regression.md",
         "url": "/papers/01_Foundational_RL/AWR_Advantage_Weighted_Regression/AWR_Advantage_Weighted_Regression.html",
         "dir": "AWR_Advantage_Weighted_Regression"
+      },
+      {
+        "title": "DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills",
+        "path": "papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.md",
+        "url": "/papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.html",
+        "dir": "DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills"
+      },
+      {
+        "title": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
+        "path": "papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.md",
+        "url": "/papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.html",
+        "dir": "AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control"
       }
     ]
   },
@@ -26,7 +38,9 @@
         "papers": [
           {
             "title": "Expressive Whole-Body Control for Humanoid Robots",
-            "url": "/papers/02_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.html"
+            "path": "papers/02_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.md",
+            "url": "/papers/02_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.html",
+            "dir": "Expressive_Whole-Body_Control_for_Humanoid_Robots"
           }
         ]
       },

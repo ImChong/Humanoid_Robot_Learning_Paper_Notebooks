@@ -118,6 +118,16 @@ def process_papers():
     readme_order = parse_readme_order()
     index_data = {}
 
+    # Load existing papers.json to preserve metadata (subtitle, subcategories)
+    existing_papers_json_path = os.path.join(BASE_DIR, '_data', 'papers.json')
+    existing_papers_json = {}
+    if os.path.exists(existing_papers_json_path):
+        try:
+            with open(existing_papers_json_path, 'r', encoding='utf-8') as f:
+                existing_papers_json = json.load(f)
+        except Exception:
+            pass
+
     if not os.path.exists(PAPERS_DIR):
         print(f"Papers directory not found: {PAPERS_DIR}")
         return
@@ -174,20 +184,67 @@ def process_papers():
         for p in papers:
             del p['_order']
 
+        # Load existing category meta (subtitle, subcategories) from current papers.json
+        existing_meta = existing_papers_json.get(category_dir, {})
+
         if papers:
-            index_data[category_dir] = {
+            entry = {
                 'display_name': category_display,
                 'papers': papers
             }
+        else:
+            entry = {
+                'display_name': category_display,
+                'papers': []
+            }
+
+        # Preserve subtitle if exists
+        if 'subtitle' in existing_meta:
+            entry['subtitle'] = existing_meta['subtitle']
+
+        # Distribute papers into subcategories if defined
+        if 'subcategories' in existing_meta:
+            subcats = [dict(s) for s in existing_meta['subcategories']]
+            # Reset papers in each subcat
+            for s in subcats:
+                s['papers'] = []
+            subcat_map = {s['name']: s for s in subcats}
+            ungrouped = []
+            for paper in papers:
+                # Read paper front matter to get subcategory
+                paper_subcat = None
+                try:
+                    with open(os.path.join(BASE_DIR, paper['path']), 'r', encoding='utf-8') as pf:
+                        pcontent = pf.read()
+                    fm_match = re.search(r'^subcategory:\s*["\']?(.+?)["\']?\s*$', pcontent, re.MULTILINE)
+                    if fm_match:
+                        paper_subcat = fm_match.group(1).strip()
+                except Exception:
+                    pass
+                if paper_subcat and paper_subcat in subcat_map:
+                    subcat_map[paper_subcat]['papers'].append(paper)
+                else:
+                    ungrouped.append(paper)
+            entry['subcategories'] = subcats
+            # ungrouped papers stay in top-level papers list
+            entry['papers'] = ungrouped
+
+        index_data[category_dir] = entry
 
     # Ensure ALL category directories appear (even if empty)
     for category_dir in sorted(os.listdir(PAPERS_DIR)):
         category_path = os.path.join(PAPERS_DIR, category_dir)
         if os.path.isdir(category_path) and category_dir not in index_data:
-            index_data[category_dir] = {
+            existing_meta = existing_papers_json.get(category_dir, {})
+            entry = {
                 'display_name': get_category_name(category_dir),
                 'papers': []
             }
+            if 'subtitle' in existing_meta:
+                entry['subtitle'] = existing_meta['subtitle']
+            if 'subcategories' in existing_meta:
+                entry['subcategories'] = [dict(s, papers=[]) for s in existing_meta['subcategories']]
+            index_data[category_dir] = entry
 
     # Sort by category directory name prefix (01_, 02_, etc.)
     sorted_data = dict(sorted(index_data.items()))
