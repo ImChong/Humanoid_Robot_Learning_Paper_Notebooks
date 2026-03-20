@@ -23,7 +23,12 @@
     "subcategories": [
       {
         "name": "Whole-Body Control 核心",
-        "papers": []
+        "papers": [
+          {
+            "title": "Expressive Whole-Body Control for Humanoid Robots",
+            "url": "/papers/02_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.html"
+          }
+        ]
       },
       {
         "name": "遥操作与模仿学习",
