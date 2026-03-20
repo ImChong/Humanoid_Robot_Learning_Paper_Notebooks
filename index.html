@@ -15,13 +15,19 @@ title: "Home"
       <nav class="toc-nav">
         <ul class="toc-list">
           {% for cat in site.data.papers %}
+          {% assign total_count = cat[1].papers | size %}
+          {% if cat[1].subcategories %}
+            {% for subcat in cat[1].subcategories %}
+              {% assign total_count = total_count | plus: subcat.papers.size %}
+            {% endfor %}
+          {% endif %}
           <li class="toc-item toc-h2">
-            <a href="#cat-{{ forloop.index }}" class="toc-link">{{ cat[1].display_name }} ({{ cat[1].papers | size }})</a>
+            <a href="#cat-{{ forloop.index }}" class="toc-link">{{ cat[1].display_name }} ({{ total_count }})</a>
             {% if cat[1].subcategories %}
             <ul class="toc-sublist">
               {% for subcat in cat[1].subcategories %}
               <li class="toc-item toc-h3">
-                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub">{{ subcat.name }}</a>
+                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub">{{ subcat.name }} ({{ subcat.papers | size }})</a>
               </li>
               {% endfor %}
             </ul>
@@ -52,12 +58,18 @@ title: "Home"
     {% endfor %}
 
     <div class="category-section">
-      <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> {{ cat_data.display_name }} <span class="paper-count">({{ cat_data.papers | size }})</span></h2>
+      {% assign main_total = cat_data.papers | size %}
+      {% if cat_data.subcategories %}
+        {% for subcat in cat_data.subcategories %}
+          {% assign main_total = main_total | plus: subcat.papers.size %}
+        {% endfor %}
+      {% endif %}
+      <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> {{ cat_data.display_name }} <span class="paper-count">({{ main_total }})</span></h2>
       {% if cat_data.subtitle %}<p class="category-subtitle">{{ cat_data.subtitle }}</p>{% endif %}
       {% if cat_data.subcategories %}
         {% for subcat in cat_data.subcategories %}
         <div class="subcategory-section">
-          <h3 class="subcategory-title" id="subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}">{{ subcat.name }}</h3>
+          <h3 class="subcategory-title" id="subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}">{{ subcat.name }} <span class="paper-count">({{ subcat.papers | size }})</span></h3>
           {% if subcat.papers.size > 0 %}
           <ul class="paper-list">
             {% for paper in subcat.papers %}
