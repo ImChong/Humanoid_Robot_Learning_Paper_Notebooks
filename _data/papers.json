@@ -22,7 +22,7 @@
     "subtitle": "精选高影响力、里程碑式的人形机器人学习论文",
     "subcategories": [
       {
-        "name": "Whole-Body Control",
+        "name": "Whole-Body Control 核心",
         "papers": []
       },
       {
@@ -31,6 +31,14 @@
       },
       {
         "name": "Locomotion 经典",
+        "papers": []
+      },
+      {
+        "name": "Sim-to-Real & Foundation Model",
+        "papers": []
+      },
+      {
+        "name": "仿真平台 & 工具",
         "papers": []
       }
     ]
