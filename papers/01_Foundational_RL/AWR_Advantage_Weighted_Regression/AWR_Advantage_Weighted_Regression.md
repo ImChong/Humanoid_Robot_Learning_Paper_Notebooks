@@ -104,9 +104,11 @@ $\beta$ 是温度参数，控制权重的"尖锐程度"：
 
 ---
 
-## 🚶 具体实例：用 AWR 训练 MuJoCo HalfCheetah 奔跑
+## 🚶 具体实例：用 AWR 训练 HalfCheetah 奔跑
 
-下面用 MuJoCo 的 **HalfCheetah-v4** 环境，走一遍 AWR 的完整流程。HalfCheetah 是一个 6 关节的"半豹"机器人，目标是学会向前奔跑。
+> 💡 **平台说明**：官方开源代码（[xbpeng/awr](https://github.com/xbpeng/awr)）基于 **OpenAI Gym** 接口，底层物理引擎为 **MuJoCo**。训练命令如 `python run.py --env HalfCheetah-v2`，使用的是 Gym 封装的 MuJoCo 环境（非直接调用 MuJoCo）。
+
+下面用 OpenAI Gym 的 **HalfCheetah-v2** 环境（官方代码使用 v2，非 v4），走一遍 AWR 的完整流程。HalfCheetah 是一个 6 关节的"半豹"机器人，目标是学会向前奔跑。
 
 ### 环境设定
 
