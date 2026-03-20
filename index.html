@@ -44,6 +44,7 @@ title: "Home"
 
     <div class="category-section">
       <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> {{ cat_data.display_name }} <span class="paper-count">({{ cat_data.papers | size }})</span></h2>
+      {% if cat_data.subtitle %}<p class="category-subtitle">{{ cat_data.subtitle }}</p>{% endif %}
       {% if cat_data.papers.size > 0 %}
       <ul class="paper-list">
         {% for paper in cat_data.papers %}

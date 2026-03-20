@@ -18,7 +18,8 @@
   },
   "02_High_Impact_Selection": {
     "display_name": "High Impact Selection",
-    "papers": []
+    "papers": [],
+    "subtitle": "精选高影响力、里程碑式的人形机器人学习论文"
   },
   "03_Loco-Manipulation_and_WBC": {
     "display_name": "Loco-Manipulation and WBC",

@@ -194,6 +194,14 @@ body {
   margin-right: 0.4rem;
 }
 
+.category-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted, #888);
+  margin-top: -0.4rem;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
 .paper-list {
   list-style: none;
   padding: 0;
