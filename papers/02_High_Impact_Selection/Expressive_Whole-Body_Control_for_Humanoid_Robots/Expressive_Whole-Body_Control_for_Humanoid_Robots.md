@@ -2,7 +2,7 @@
 layout: paper
 title: "Expressive Whole-Body Control for Humanoid Robots"
 category: "High Impact Selection"
-subcategory: "Whole-Body Control 核心"
+subcategory: "Whole-Body Control Core"
 ---
 
 # Expressive Whole-Body Control for Humanoid Robots

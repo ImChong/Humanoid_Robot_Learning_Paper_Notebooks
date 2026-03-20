@@ -31,10 +31,10 @@
   "02_High_Impact_Selection": {
     "display_name": "High Impact Selection",
     "papers": [],
-    "subtitle": "精选高影响力、里程碑式的人形机器人学习论文",
+    "subtitle": "Curated high-impact and milestone papers in humanoid robot learning",
     "subcategories": [
       {
-        "name": "Whole-Body Control 核心",
+        "name": "Whole-Body Control Core",
         "papers": [
           {
             "title": "Expressive Whole-Body Control for Humanoid Robots",
@@ -45,11 +45,11 @@
         ]
       },
       {
-        "name": "遥操作与模仿学习",
+        "name": "Teleoperation & Imitation Learning",
         "papers": []
       },
       {
-        "name": "Locomotion 经典",
+        "name": "Locomotion Classics",
         "papers": []
       },
       {
@@ -57,7 +57,7 @@
         "papers": []
       },
       {
-        "name": "仿真平台 & 工具",
+        "name": "Simulation Platform & Tools",
         "papers": []
       }
     ]
