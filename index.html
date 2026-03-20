@@ -17,6 +17,15 @@ title: "Home"
           {% for cat in site.data.papers %}
           <li class="toc-item toc-h2">
             <a href="#cat-{{ forloop.index }}" class="toc-link">{{ cat[1].display_name }} ({{ cat[1].papers | size }})</a>
+            {% if cat[1].subcategories %}
+            <ul class="toc-sublist">
+              {% for subcat in cat[1].subcategories %}
+              <li class="toc-item toc-h3">
+                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub">{{ subcat.name }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>
@@ -48,7 +57,7 @@ title: "Home"
       {% if cat_data.subcategories %}
         {% for subcat in cat_data.subcategories %}
         <div class="subcategory-section">
-          <h3 class="subcategory-title">{{ subcat.name }}</h3>
+          <h3 class="subcategory-title" id="subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}">{{ subcat.name }}</h3>
           {% if subcat.papers.size > 0 %}
           <ul class="paper-list">
             {% for paper in subcat.papers %}
