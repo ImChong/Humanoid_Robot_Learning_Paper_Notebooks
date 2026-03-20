@@ -202,6 +202,19 @@ body {
   font-style: italic;
 }
 
+.subcategory-section {
+  margin-bottom: 1.2rem;
+}
+
+.subcategory-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  padding-left: 0.8rem;
+  border-left: 3px solid var(--accent, #4a9eff);
+}
+
 .paper-list {
   list-style: none;
   padding: 0;
