@@ -360,25 +360,25 @@ body {
 
 /* ===== Index Layout with TOC ===== */
 .index-layout {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  display: block;
+  position: relative;
 }
 
 .index-main {
-  flex: 1;
   min-width: 0;
 }
 
 .index-layout .toc-sidebar {
-  margin-left: 0;
-  order: -1;
+  position: sticky;
+  top: 70px;
+  float: left;
+  width: 220px;
+  margin-left: -260px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
 @media (max-width: 1200px) {
-  .index-layout {
-    display: block;
-  }
   .index-layout .toc-sidebar {
     display: none;
   }
