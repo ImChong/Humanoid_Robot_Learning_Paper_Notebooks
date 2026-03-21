@@ -71,12 +71,18 @@ $$r_t = w^I \cdot r_t^I + w^G \cdot r_t^G$$
 
 $$r_t^I = w^p \cdot r_t^p + w^v \cdot r_t^v + w^{ee} \cdot r_t^{ee} + w^{com} \cdot r_t^{com}$$
 
-| 分量 | 衡量什么 | 计算方式 |
-|------|---------|---------|
-| $r^p$（关节姿态） | 每个关节角度是否匹配 | $\exp\left(-2 \sum_j | \hat{q}_{j} - q_{j} |^2\right)$ |
-| $r^v$（关节速度） | 每个关节角速度是否匹配 | $\exp\left(-2 \sum_j | \dot{\hat{q}}_{j} - \dot{q}_{j} |^2\right)$ |
-| $r^{ee}$（末端位置） | 手脚位置是否正确 | $\exp\left(-k_{ee} \sum_e | \hat{p}_{e} - p_{e} |^2\right)$ |
-| $r^{com}$（质心位置） | 身体重心是否在对的位置 | $\exp\left(-k_{com} | \hat{p}_{com} - p_{com} |^2\right)$ |
+<table>
+  <thead>
+    <tr><th>分量</th><th>衡量什么</th><th>计算方式</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>$r^p$（关节姿态）</td><td>每个关节角度是否匹配</td><td>$\exp\left(-2 \sum_j | \hat{q}_{j} - q_{j} |^2\right)$</td></tr>
+    <tr><td>$r^v$（关节速度）</td><td>每个关节角速度是否匹配</td><td>$\exp\left(-2 \sum_j | \dot{\hat{q}}_{j} - \dot{q}_{j} |^2\right)$</td></tr>
+    <tr><td>$r^{ee}$（末端位置）</td><td>手脚位置是否正确</td><td>$\exp\left(-k_{ee} \sum_e | \hat{p}_{e} - p_{e} |^2\right)$</td></tr>
+    <tr><td>$r^{com}$（质心位置）</td><td>身体重心是否在对的位置</td><td>$\exp\left(-k_{com} | \hat{p}_{com} - p_{com} |^2\right)$</td></tr>
+  </tbody>
+</table>
+
 
 其中 $\hat{\cdot}$ 表示参考动捕数据中的值，无 hat 的是仿真角色的实际值。
 
