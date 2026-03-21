@@ -27,7 +27,7 @@
         "dir": "AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control"
       }
     ],
-    "subtitle": "强化学习基础理论与经典算法，理解后续研究的必备前置知识"
+    "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research"
   },
   "02_High_Impact_Selection": {
     "display_name": "High Impact Selection",
