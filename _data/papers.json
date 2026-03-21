@@ -26,7 +26,8 @@
         "url": "/papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.html",
         "dir": "AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control"
       }
-    ]
+    ],
+    "subtitle": "强化学习基础理论与经典算法，理解后续研究的必备前置知识"
   },
   "02_High_Impact_Selection": {
     "display_name": "High Impact Selection",
