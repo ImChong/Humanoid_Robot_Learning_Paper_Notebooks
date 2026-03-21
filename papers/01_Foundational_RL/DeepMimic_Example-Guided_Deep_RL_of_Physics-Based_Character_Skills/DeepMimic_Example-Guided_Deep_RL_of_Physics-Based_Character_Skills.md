@@ -73,10 +73,10 @@ $$r_t^I = w^p \cdot r_t^p + w^v \cdot r_t^v + w^{ee} \cdot r_t^{ee} + w^{com} \c
 
 | 分量 | 衡量什么 | 计算方式 |
 |------|---------|---------|
-| $r^p$（关节姿态） | 每个关节角度是否匹配 | $\exp\left(-k_p \sum_j \lVert \hat{q}_j - q_j \rVert^2\right)$ |
-| $r^v$（关节速度） | 每个关节角速度是否匹配 | $\exp\left(-k_v \sum_j \lVert \hat{\dot{q}}_j - \dot{q}_j \rVert^2\right)$ |
-| $r^{ee}$（末端位置） | 手脚位置是否正确 | $\exp\left(-k_{ee} \sum_e \lVert \hat{p}_e - p_e \rVert^2\right)$ |
-| $r^{com}$（质心位置） | 身体重心是否在对的位置 | $\exp\left(-k_{com} \lVert \hat{p}_{com} - p_{com} \rVert^2\right)$ |
+| $r^p$（关节姿态） | 每个关节角度是否匹配 | $\exp\left(-2 \sum_j | \hat{q}_{j} - q_{j} |^2\right)$ |
+| $r^v$（关节速度） | 每个关节角速度是否匹配 | $\exp\left(-2 \sum_j | \dot{\hat{q}}_{j} - \dot{q}_{j} |^2\right)$ |
+| $r^{ee}$（末端位置） | 手脚位置是否正确 | $\exp\left(-k_{ee} \sum_e | \hat{p}_{e} - p_{e} |^2\right)$ |
+| $r^{com}$（质心位置） | 身体重心是否在对的位置 | $\exp\left(-k_{com} | \hat{p}_{com} - p_{com} |^2\right)$ |
 
 其中 $\hat{\cdot}$ 表示参考动捕数据中的值，无 hat 的是仿真角色的实际值。
 
