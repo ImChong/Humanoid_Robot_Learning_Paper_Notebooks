@@ -556,6 +556,47 @@ DeepMimic 使用的不是普通 PD，而是 **Stable PD Controller**（Tan et al
 
 > 💡 **为什么 DeepMimic 用 Stable PD？** 因为物理仿真步长虽然是 1/1200s，但 PD 增益需要设得比较大才能让角色快速跟踪目标姿态（做空翻需要大扭矩），普通 PD 在高增益下会不稳定。
 
+#### Stable PD 的数学原理：隐式积分耦合
+
+**普通 PD 的问题**——"显式"计算，先算扭矩再推进仿真：
+
+```
+① 用当前状态算扭矩:  τ = kₚ(â - qₜ) + k_d(0 - q̇ₜ)
+② 用扭矩推进仿真:    q̇ₜ₊₁ = q̇ₜ + Δt · M⁻¹ · τ
+                      qₜ₊₁ = qₜ + Δt · q̇ₜ₊₁
+```
+
+当 $k_p$ 很大时（做空翻需要大力矩），步骤①算出巨大扭矩 → 步骤②过冲 → 下一步反向纠正 → 再过冲 → **振荡发散** 💥
+
+**Stable PD 的做法**——把 PD 力写成**下一时刻状态的函数**，和运动方程**联立求解**：
+
+$$\tau = k_p(\hat{a} - q_{t+1}) + k_d(0 - \dot{q}_{t+1})$$
+
+注意用的是 $q_{t+1}$ 和 $\dot{q}_{t+1}$，而不是 $q_t$。结合隐式欧拉积分的运动方程：
+
+$$\dot{q}_{t+1} = \dot{q}_t + \Delta t \cdot M^{-1} \cdot (\tau + f_{ext})$$
+$$q_{t+1} = q_t + \Delta t \cdot \dot{q}_{t+1}$$
+
+把 PD 公式和 $q_{t+1} = q_t + \Delta t \cdot \dot{q}_{t+1}$ 代入运动方程，整理得到**线性方程组**：
+
+$$\underbrace{(M + \Delta t \cdot k_d + \Delta t^2 \cdot k_p)}_{A} \cdot \dot{q}_{t+1} = M \cdot \dot{q}_t + \Delta t \cdot [k_p(\hat{a} - q_t) + f_{ext}]$$
+
+这就是 $A \cdot x = b$，直接解出 $\dot{q}_{t+1}$，再算 $q_{t+1}$。
+
+**为什么稳定？** 矩阵 $A = M + \Delta t \cdot k_d + \Delta t^2 \cdot k_p$：
+- $M$（质量矩阵）正定
+- $\Delta t \cdot k_d$ 和 $\Delta t^2 \cdot k_p$ 都是正的
+- 所以 $A$ **总是正定**，无论 $k_p, k_d$ 多大，方程总有唯一解
+
+直觉：$k_p$ 越大 → $A$ 对角线越大 → $A^{-1}$ 越小 → $\dot{q}_{t+1}$ 越受约束 → **大增益不会导致大速度，而是更精确的跟踪**。
+
+```
+普通 PD:    大 kₚ → 大扭矩 → 大加速度 → 过冲 → 💥 发散
+Stable PD:  大 kₚ → A 矩阵更大 → A⁻¹更小 → 速度受限 → ✅ 精确跟踪
+```
+
+**实现成本**：物理引擎每步本来就要解 $M \cdot \ddot{q} = f$。Stable PD 只是把 $M$ 换成 $M + \Delta t \cdot k_d + \Delta t^2 \cdot k_p$——**几乎无额外开销**，只修改了质量矩阵。
+
 #### 对后续工作的影响
 
 | 工作 | 动作空间选择 | 说明 |
