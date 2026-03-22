@@ -1,6 +1,6 @@
 {
-  "current_paper_index": 0,
-  "confirmed": false,
+  "current_paper_index": 2,
+  "confirmed": true,
   "section": "基础路线图",
   "papers": [
     {
@@ -9,9 +9,9 @@
       "folder": "papers/01_基础路线图/PPO__Proximal_Policy_Optimization",
       "note_file": "PPO__Proximal_Policy_Optimization.md",
       "pdf_file": "PPO.pdf",
-      "status": "reading",
+      "status": "done",
       "start_date": "2026-03-16",
-      "done_date": null,
+      "done_date": "2026-03-22",
       "route": "基础RL",
       "title_cn": "近端策略优化"
     },
@@ -21,9 +21,9 @@
       "folder": "papers/01_基础路线图/AWR__Advantage_Weighted_Regression",
       "note_file": "AWR__Advantage_Weighted_Regression.md",
       "pdf_file": "AWR.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-03-22",
       "route": "基础RL",
       "title_cn": "优势加权回归"
     },
