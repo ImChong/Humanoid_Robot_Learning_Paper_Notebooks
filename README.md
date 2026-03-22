@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/Papers-468-orange.svg)](papers/PROGRESS.md)
-[![Notes](https://img.shields.io/badge/Notes-10-green.svg)](papers/)
+[![Notes](https://img.shields.io/badge/Notes-11-green.svg)](papers/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen.svg)](https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/)
 [![Deploy](https://github.com/ImChong/Humanoid_Robot_Learning_Paper_Notebooks/actions/workflows/deploy.yml/badge.svg)](https://github.com/ImChong/Humanoid_Robot_Learning_Paper_Notebooks/actions/workflows/deploy.yml)
 [![Update Badges](https://github.com/ImChong/Humanoid_Robot_Learning_Paper_Notebooks/actions/workflows/update-badges.yml/badge.svg)](https://github.com/ImChong/Humanoid_Robot_Learning_Paper_Notebooks/actions/workflows/update-badges.yml)
