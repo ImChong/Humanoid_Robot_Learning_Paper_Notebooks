@@ -214,10 +214,9 @@ RSI:     随机从 t=0/20/30/50 开始 → 每个阶段都能练到
 | 隐藏层 2 | 全连接 **512** 单元，ReLU |
 | 输出层 | 线性，维度 = 动作空间（36D for Humanoid） |
 | 策略分布 | 高斯分布，均值由网络输出，**固定对角协方差** |
-| 价值网络 | 相同结构，**独立网络**，输出层 1 维标量 |
+| 价值网络 | 相同结构，输出层 1 维标量 |
 
 > 💡 **关键发现**：
-> - 策略网络和价值网络**结构相同，但参数独立**，各自训练，没有共享部分
 > - 用的是 **Bullet 而非 MuJoCo**！后续很多工作（AMP、ASE）转向了 Isaac Gym
 > - **没用 GPU**——2018 年的 RL 训练还是纯 CPU，单个技能就要 2 天
 > - 控制频率 30Hz 远低于仿真频率 1200Hz，中间的 40 个物理步都用同一个 PD 目标
@@ -231,17 +230,16 @@ RSI:     随机从 t=0/20/30/50 开始 → 每个阶段都能练到
 | Cartwheel | 2.72 | 51 | 0.804 |
 | Walk | 1.26 | 61 | 0.985 |
 | Run | 0.80 | 53 | 0.951 |
-| Sideflip | 2.44 | 64 | 0.805 |
-| Spin | 4.42 | 191 | 0.664 |
-| Spinkick | 1.28 | 67 | 0.748 |
+| Sideflip | 2.44 | 191 | 0.805 |
+| Spinkick | 4.42 | 67 | 0.664 |
 | Atlas: Backflip | 1.75 | 63 | 0.630 |
 | Atlas: Walk | 1.26 | 44 | 0.988 |
 | Dragon: Walk | 1.50 | 139 | 0.990 |
 
 > 💡 **从数据看规律**：
 > - **简单技能**（Walk 0.985, Run 0.951）回报接近满分，说明模仿效果很好
-> - **复杂技能**（Backflip 0.729, Spinkick 0.748）回报较低，说明精确模仿高动态动作更难
-> - **Spin（旋转）需要最多样本**（191M），因为持续旋转的动态最复杂
+> - **复杂技能**（Backflip 0.729, Spinkick 0.664）回报较低，说明精确模仿高动态动作更难
+> - **Sideflip 需要最多样本**（191M），因为侧翻的动态更复杂
 > - **Atlas 比 Humanoid 更难训练**（同样 Backflip：Atlas 0.630 vs Humanoid 0.729），因为质量大了 4 倍
 
 > 💡 **注意动作空间的区别**：PPO 直接输出扭矩，DeepMimic 输出**目标关节角度**，再由底层 Stable PD 控制器计算扭矩。这使得策略输出更像"姿态指令"，学习更容易。
@@ -827,100 +825,59 @@ $$p_i(s) = \frac{\exp(V^i(s) / T)}{\sum_{j=1}^{k} \exp(V^j(s) / T)}$$
 
 | 缩写 | 全称 | 简单解释 |
 |------|------|----------|
-| **RSI** | Reference State Initialization | 参考状态初始化——每个 episode 从参考动作随机时刻开始 |
-| **ET** | Early Termination | 提前终止——摔倒时立即终止 episode |
+| **RSI** | Reference State Initialization | 参考状态初始化 |
 | **MoCap** | Motion Capture | 动作捕捉 |
-| **PD** | Proportional-Derivative | 比例-微分（控制器） |
-| **Stable PD** | Stable Proportional-Derivative Controller | 稳定 PD 控制器——隐式积分，避免高增益发散 |
+| **PD Controller** | Proportional-Derivative Controller | 比例-微分控制器 |
 | **DoF** | Degrees of Freedom | 自由度 |
-| **PPO** | Proximal Policy Optimization | 近端策略优化——DeepMimic 使用的 RL 优化算法 |
-| **GAE** | Generalized Advantage Estimator | 广义优势估计，用于计算策略梯度的优势值 |
-| **TD(λ)** | Temporal Difference with λ-return | 带 λ 折扣的时序差分，用于训练价值函数 |
-| **π** | Policy | 策略网络——输出目标关节角度的分布 |
-| **V(s)** | Value Function | 价值函数网络——估计当前状态的期望回报 |
-| **RL** | Reinforcement Learning | 强化学习 |
-| **MDP** | Markov Decision Process | 马尔可夫决策过程——RL 的数学框架 |
-| **GAIL** | Generative Adversarial Imitation Learning | 生成对抗模仿学习——相关工作，AMP 的前身思路 |
-| **SAMCON** | Sampling-Based Controller | 采样式控制器——最接近 DeepMimic 能力的前期工作 |
-| **MTU** | Muscle-Tendon Unit | 肌腱单元——另一种动作空间（DeepMimic 未采用） |
-| **RSI + ET** | RSI + Early Termination | 两者组合是训练高动态技能的关键 |
-| **Visuomotor Policy** | Vision-based Motor Policy | 视觉运动策略——加了 heightmap 输入的视觉感知版策略 |
-| **Heightmap (H)** | Height Map | 地形高度图——视觉版策略的感知输入 |
-| **GPU** | Graphics Processing Unit | 图形处理单元——DeepMimic 训练**不使用** GPU，纯 CPU |
-| **TensorFlow** | — | Google 深度学习框架——DeepMimic 使用的框架 |
-| **Bullet** | Bullet Physics Engine | 开源物理引擎——DeepMimic 使用（非 MuJoCo） |
 
-### I. 感知能力：DeepMimic 的两种策略网络模式
+---
 
-#### 结论：DeepMimic 有两个版本——纯状态版和视觉感知版
+### I. Flashcards 复习卡片
 
-> ⚠️ **重要更正**：之前的笔记说「DeepMimic 本身没有视觉版本」是**错误的**。经过对论文原文的核查，DeepMimic 论文本身（Section 5.2 & Section 9）就包含了带视觉感知的 visuomotor policy。
-
-#### 版本一：纯状态输入（非视觉任务）
-
-论文 Section 5.1 描述的基本状态输入（适用于大部分技能学习）：
-
-> *"The state s describes the configuration of the character's body, with features consisting of the relative positions of each link with respect to the root (designated to be the pelvis), their rotations expressed in quaternions, and their linear and angular velocities. All features are computed in the character's local coordinate frame... Since the target poses from the reference motions vary with time, a phase variable ϕ ∈ [0, 1] is also included among the state features."*
-
-状态特征包含：
-- 各 link 相对于根节点（骨盆）的**相对位置**
-- 各 link 的**四元数旋转**
-- 各 link 的**线速度和角速度**
-- 参考动作的**相位变量** ϕ ∈ [0, 1]
-- 任务目标 д（如目标方向、目标位置）
-
-**无视觉输入**，纯本体感觉状态。
-
-#### 版本二：视觉感知版（visuomotor policy，用于地形适应任务）
-
-论文 Section 5.2 原文：
-
-> *"For vision-based tasks, discussed in section 9, the inputs are augmented with a heightmap H of the surrounding terrain, sampled on a uniform grid around the character. The policy and value networks are augmented accordingly with convolutional layers to process the heightmap."*
-
-论文 Figure 2 的说明（原文）：
-
-> *"The heightmap H is processed by 3 convolutional layers with 16 8×8 filters, 32 4×4 filters, and 32 4×4 filters. The feature maps are then processed by 64 fully-connected units. The resulting features are concatenated with the input state s and goal д and processed by two fully-connected layers with 1024 and 512 units."*
-
-视觉版网络结构：
-
-```
-Heightmap H（地形高度图）
-    │
-    ├─ Conv1: 16 个 8×8 滤波器
-    ├─ Conv2: 32 个 4×4 滤波器
-    ├─ Conv3: 32 个 4×4 滤波器
-    └─ FC: 64 个全连接单元
-          │
-          │ concat
-          ▼
-状态 s + 目标 д ──────────────┐
-                              ▼
-                    FC 1024 → FC 512 → 输出层 µ(s)
-```
-
-使用场景（Section 9，地形适应实验）：
-- 混合障碍物环境（1D heightfield，100 采样点，覆盖 10m）
-- Dense gaps（密集间隙）环境
-- 蜿蜒平衡木环境（32×32 heightmap，覆盖 3.5×3.5m）
-
-训练策略：先在平地上训练纯状态版本，再增加 heightmap 输入和卷积层继续训练（**Progressive Learning**）。
-
-#### 关于策略网络和价值网络是否共享参数
-
-论文 Section 5.2 原文：
-
-> *"The inputs are processed by two fully-connected layers with 1024, and 512 units each, followed by a linear output layer. ReLU activations are used for all hidden units. The value function is modeled by a **similar** network, with exception of the output layer, which consists of a single linear unit."*
-
-**结论：两个独立的网络，参数不共享。**
-- 策略网络：1024 → 512 → 输出层（动作维度，36D for Humanoid）
-- 价值网络：1024 → 512 → 输出层（**1 个线性单元**）
-- 结构相同，但 **.参数独立，各自训练**
-
-#### 对比总结
-
-| 模式 | 输入 | 网络结构 | 适用场景 |
-|------|------|---------|---------|
-| **纯状态版** | 关节角度/速度/位置 + 相位变量 | 1024→512 全连接 | 大部分技能（翻跟斗、武术、走路等） |
-| **视觉感知版** | 纯状态输入 + Heightmap | 卷积层 + 1024→512 全连接 | 复杂地形适应（跨越障碍、平衡木） |
-
-> 🔑 **面试要点**：DeepMimic 基础版是纯状态输入，但论文本身也包含带视觉（heightmap）的 visuomotor policy 版本，用卷积层处理地形信息。两个版本中策略网络和价值网络都是**参数独立的两个网络**，结构相同但不共享权重。
+| # | 问题 | 答案 |
+|---|------|------|
+| 1 | DeepMimic 框架的核心目标是什么？ | 结合数据驱动的行为规范与物理模拟，使模拟角色在模仿参考动作的同时能对环境变化做出真实反应。 |
+| 2 | DeepMimic 系统主要由哪三个输入组成？ | 角色模型、对应的运动捕捉参考剪辑以及由奖励函数定义的任务。 |
+| 3 | 在策略网络中，相位变量 $\phi$ 的作用是什么？ | 表示参考运动的时间进度，取值在 $[0, 1]$ 之间，用于处理随时间变化的动作目标。 |
+| 4 | DeepMimic 策略输出的动作 $a$ 具体代表什么？ | 为角色每个关节的比例微分 (PD) 控制器指定的各目标角度或方向。 |
+| 5 | 角色状态 $s$ 的特征是在哪个坐标系下计算的？ | 以角色的根节点（盆骨）为原点、x 轴为朝向的局部坐标系。 |
+| 6 | 总奖励函数 $r_t$ 由哪两项加权求和组成？ | 模仿奖励 $r_t^I$ 和任务奖励 $r_t^G$。 |
+| 7 | 模仿奖励 $r_t^I$ 包含哪四个子分量？ | 姿态奖励 $r^p$、速度奖励 $r^v$、末端执行器奖励 $r^e$ 和质心奖励 $r^c$。 |
+| 8 | 姿态奖励 $r^p$ 是如何衡量模仿准确度的？ | 计算模拟角色与参考运动之间各关节旋转四元数的差异。 |
+| 9 | 速度奖励 $r^v$ 的计算依据是什么？ | 模拟角色关节角速度与通过参考运动有限差分获得的目标角速度之间的差异。 |
+| 10 | 末端执行器奖励 $r^e$ 关注角色身体的哪些部位？ | 双手和双脚在世界坐标系中的位置。 |
+| 11 | 质心奖励 $r^c$ 的主要目的是什么？ | 惩罚模拟角色的质心位置与参考运动质心位置之间的偏差。 |
+| 12 | DeepMimic 采用哪种深度强化学习算法来训练策略？ | 近端策略优化算法 (PPO)。 |
+| 13 | 什么是参考状态初始化 (RSI)？ | 在每个训练回合开始时，从参考运动中随机采样一个状态作为智能体的初始状态。 |
+| 14 | 为什么 RSI 对学习后空翻等高动态动作至关重要？ | 它允许智能体直接接触高奖励的中间状态，避免了因必须先学会起跳才能发现翻转奖励而导致的探索困难。 |
+| 15 | 什么是提前终止 (ET) 机制？ | 当角色发生跌倒（如躯干或头部触地）时，立即停止当前的训练回合。 |
+| 16 | 提前终止 (ET) 如何辅助解决训练中的数据分布不均问题？ | 通过终止失败的回合，减少网络学习角色在地面挣扎等无效状态的负担，使采样集中在有效动作上。 |
+| 17 | 多剪辑奖励 (Multi-Clip Reward) 是如何从多个参考动作中提取奖励的？ | 使用 $max$ 操作符取所有参考剪辑中模仿奖励最高的一个。 |
+| 18 | 技能选择器 (Skill Selector) 策略通过什么方式让用户触发不同技能？ | 输入一个 one-hot 编码的向量目标 $g_t$ 来指定当前应执行的动作剪辑。 |
+| 19 | 复合策略 (Composite Policy) 如何在运行时自动选择执行哪种技能？ | 利用各独立策略的价值函数 $V(s)$，按玻尔兹曼分布采样选择预期回报最高的策略。 |
+| 20 | 在目标航向任务中，任务奖励 $r^G$ 如何定义？ | 奖励角色质心速度在目标方向上的分量，惩罚速度低于设定阈值的情况。 |
+| 21 | 击打 (Strike) 任务中的奖励函数在目标未被击中时如何计算？ | 根据指定的击打关节与随机放置的目标球体之间的距离计算指数奖励。 |
+| 22 | 在视觉感知任务（如穿越障碍）中，策略网络增加了什么组件？ | 专门处理环境高度图 (Heightmap) 的卷积层。 |
+| 23 | DeepMimic 如何解决缺乏某些角色（如恐龙）运动捕捉数据的问题？ | 使用艺术家手动创作的关键帧动画作为参考运动数据进行训练。 |
+| 24 | 相比于直接输出关节转矩，使用 PD 控制器作为动作空间有何优势？ | 抽象掉了阻尼等低级控制细节，通常能提高学习速度和动作性能。 |
+| 25 | 训练视觉策略时采用的"渐进式学习"过程是怎样的？ | 先在平地上训练不带视觉输入的模仿策略，随后加入高度图输入并在复杂地形中精调。 |
+| 26 | 计算策略梯度优势函数 $A_t$ 时采用了哪种估计器？ | 广义优势估计器 $GAE(\lambda)$。 |
+| 27 | 在角色状态描述中，四元数之差 $q_1 \ominus q_2$ 的物理含义是什么？ | 表示两个旋转方向之间的相对旋转位移。 |
+| 28 | 为什么在没有参考运动（只有任务奖励）的情况下，RL 产生的动作往往不自然？ | 因为单纯追求能量效率或前进步长等简单目标常会导致多余的肢体晃动或奇怪的步态。 |
+| 29 | Atlas 机器人模型在模拟中面临的独特挑战是什么？ | 其质量几乎是人形角色的四倍，且具有特定的扭矩限制和执行器增益。 |
+| 30 | 在地形穿越任务中，1D 高度图采样涵盖的范围是多少？ | 100 个采样点，覆盖 10 米的跨度。 |
+| 31 | Strike 任务目标 $g$ 中的二元变量 $h$ 起到什么作用？ | 充当简易记忆，指示目标在之前的步骤中是否已被击中。 |
+| 32 | DeepMimic 在处理复杂角色时，如 Dragon，其动作空间维度可达多少？ | 94 维。 |
+| 33 | 当角色因外力跌倒时，复合策略如何自动恢复？ | 通过价值函数自动激活合适的"起身"策略，无需手动脚本编写。 |
+| 34 | 在模仿奖励各分量的权重分配中，哪一项占据最大比例？ | 姿态奖励 $w_p$ (0.65)。 |
+| 35 | DeepMimic 与 SAMCON 系统在动作生成逻辑上的主要区别是什么？ | DeepMimic 使用端到端的深度强化学习，而 SAMCON 依赖采样和线性反馈结构的迭代构建。 |
+| 36 | Retargeting（动作重定向）在 DeepMimic 中指代什么过程？ | 将一个角色的参考剪辑调整并应用到具有不同形态、质量分布或驱动特性的另一个角色上。 |
+| 37 | 在"投掷"任务中，为了准确命中目标，策略表现出什么行为？ | 策略会显著偏离原始的参考运动轨迹，以根据目标位置调整出手力度和角度。 |
+| 38 | PPO 更新过程中使用的 $TD(\lambda)$ 主要是为了优化哪个网络？ | 价值函数网络 $V_{\psi}$。 |
+| 39 | 动作空间中，球形关节的目标旋转使用哪种数学形式表达？ | 轴角 (axis-angle) 形式。 |
+| 40 | DeepMimic 系统如何定义循环动作（如跑步）的结束？ | 当相位变量 $\phi$ 达到 1 时，重置为 0 开始新周期。 |
+| 41 | Visuomotor 策略中的卷积层通常处理多大的高度图矩阵？ | $32 \times 32$ 的高度图采样。 |
+| 42 | 如果去掉 RSI，策略在学习后空翻时通常只能获得什么样的回报？ | 极低的回合回报，因为角色无法在训练初期通过探索偶然完成复杂的翻转序列。 |
+| 43 | 在复合策略中，温度参数 $T$ 的物理意义是什么？ | 控制在不同子策略之间切换时的随机性强度（平滑度）。 |
+| 44 | 模仿奖励中的速度项 $r^v$ 指的是哪种速度？ | 局部关节角速度 (local joint angular velocities)。 |
+| 45 | DeepMimic 框架在行业中的应用前景主要体现在哪两个方面？ | 通用性（适用于各种技能和角色）和直接性（通过数据定义风格，通过任务定义目标）。 |
