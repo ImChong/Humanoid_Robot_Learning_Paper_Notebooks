@@ -15,16 +15,16 @@
         "dir": "AWR_Advantage_Weighted_Regression"
       },
       {
-        "title": "DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills",
-        "path": "papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.md",
-        "url": "/papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.html",
-        "dir": "DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills"
-      },
-      {
         "title": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
         "path": "papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.md",
         "url": "/papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.html",
         "dir": "AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control"
+      },
+      {
+        "title": "DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills",
+        "path": "papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.md",
+        "url": "/papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.html",
+        "dir": "DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills"
       },
       {
         "title": "PHC: Perpetual Humanoid Control for Real-time Simulated Avatars",
