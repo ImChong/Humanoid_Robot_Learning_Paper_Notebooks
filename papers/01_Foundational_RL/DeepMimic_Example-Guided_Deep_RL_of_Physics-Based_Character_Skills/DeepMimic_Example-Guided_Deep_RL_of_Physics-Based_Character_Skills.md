@@ -831,46 +831,77 @@ $$p_i(s) = \frac{\exp(V^i(s) / T)}{\sum_{j=1}^{k} \exp(V^j(s) / T)}$$
 | **PD Controller** | Proportional-Derivative Controller | 比例-微分控制器 |
 | **DoF** | Degrees of Freedom | 自由度 |
 
-### I. 感知能力：DeepMimic 是纯状态输入，无视觉版本
+### I. 感知能力：DeepMimic 的两种策略网络模式
 
-#### 结论：原版 DeepMimic 不含视觉感知，是纯状态输入
+#### 结论：DeepMimic 有两个版本——纯状态版和视觉感知版
 
-根据论文原文（Section 5.1 States and Actions），DeepMimic 的输入是**完全基于状态的特征向量**，没有任何视觉或像素输入：
+> ⚠️ **重要更正**：之前的笔记说「DeepMimic 本身没有视觉版本」是**错误的**。经过对论文原文的核查，DeepMimic 论文本身（Section 5.2 & Section 9）就包含了带视觉感知的 visuomotor policy。
 
-> *"The state consists of the target's configuration (positions and orientations of each body segment), the character's joint angles and velocities, and the phase variable φt."*
+#### 版本一：纯状态输入（非视觉任务）
 
-也就是说策略的输入（197D for Humanoid）包含：
-- 角色自身的关节角度（四元数表示）
-- 角色自身的关节角速度
-- 质心位置和速度
-- 参考动作的**相位变量** φt（表示当前在参考动作中的进度）
+论文 Section 5.1 描述的基本状态输入（适用于大部分技能学习）：
 
-**没有任何图像、深度图、点云等视觉输入。**
+> *"The state s describes the configuration of the character's body, with features consisting of the relative positions of each link with respect to the root (designated to be the pelvis), their rotations expressed in quaternions, and their linear and angular velocities. All features are computed in the character's local coordinate frame... Since the target poses from the reference motions vary with time, a phase variable ϕ ∈ [0, 1] is also included among the state features."*
 
-#### 为什么原版不用视觉？
+状态特征包含：
+- 各 link 相对于根节点（骨盆）的**相对位置**
+- 各 link 的**四元数旋转**
+- 各 link 的**线速度和角速度**
+- 参考动作的**相位变量** ϕ ∈ [0, 1]
+- 任务目标 д（如目标方向、目标位置）
 
-2018 年 DeepMimic 发表的背景：
-- 视觉 RL 在 2018 年还不成熟（DQN 刚出来几年，Atari 才刚被解决）
-- 端到端视觉 RL 训练极慢，样本量需求大
-- DeepMimic 本身单技能就要 60M 样本，纯 CPU 训练 2 天
-- 加视觉会让训练难度和样本量进一步爆炸
+**无视觉输入**，纯本体感觉状态。
 
-因此论文聚焦于**核心问题**——如何用 RL + 动捕数据学会物理真实的动作，感知问题留给后续工作解决。
+#### 版本二：视觉感知版（visuomotor policy，用于地形适应任务）
 
-#### 后续工作的感知能力演进
+论文 Section 5.2 原文：
 
-| 工作 | 感知方式 | 说明 |
-|------|---------|------|
-| **DeepMimic** (2018) | 纯状态，无视觉 | 开创版本 |
-| **AMP** (2021) | 纯状态，无视觉 | 沿用 DeepMimic 的状态输入 |
-| **PHC** (2023) | 纯状态，无视觉 | 通用运动跟踪，无感知 |
-| **ASE** (2022) | 纯状态，无视觉 | 技能嵌入，无感知 |
-| **后续视觉工作** | RGB / Depth / 点云 | 需要看具体论文——DeepMimic 本身没有视觉版本 |
+> *"For vision-based tasks, discussed in section 9, the inputs are augmented with a heightmap H of the surrounding terrain, sampled on a uniform grid around the character. The policy and value networks are augmented accordingly with convolutional layers to process the heightmap."*
 
-#### 有没有基于 DeepMimic 的视觉版本？
+论文 Figure 2 的说明（原文）：
 
-论文正文**没有**提到视觉版本，也**没有**引用相关的视觉工作。
+> *"The heightmap H is processed by 3 convolutional layers with 16 8×8 filters, 32 4×4 filters, and 32 4×4 filters. The feature maps are then processed by 64 fully-connected units. The resulting features are concatenated with the input state s and goal д and processed by two fully-connected layers with 1024 and 512 units."*
 
-后续确实有一些工作将模仿学习与视觉感知结合（如从视频中学习），但这些是独立的工作，DeepMimic 本身不包含视觉感知能力。
+视觉版网络结构：
 
-> 🔑 **面试要点**：DeepMimic 是纯状态输入的模仿学习，策略直接接收关节角度、角速度等本体感觉信息，不需要视觉。如果被问到"DeepMimic 怎么扩展到真实视觉场景"，可以说需要引入视觉编码器（CNN/ViT）处理图像输入，这是后续很多工作的研究方向。
+```
+Heightmap H（地形高度图）
+    │
+    ├─ Conv1: 16 个 8×8 滤波器
+    ├─ Conv2: 32 个 4×4 滤波器
+    ├─ Conv3: 32 个 4×4 滤波器
+    └─ FC: 64 个全连接单元
+          │
+          │ concat
+          ▼
+状态 s + 目标 д ──────────────┐
+                              ▼
+                    FC 1024 → FC 512 → 输出层 µ(s)
+```
+
+使用场景（Section 9，地形适应实验）：
+- 混合障碍物环境（1D heightfield，100 采样点，覆盖 10m）
+- Dense gaps（密集间隙）环境
+- 蜿蜒平衡木环境（32×32 heightmap，覆盖 3.5×3.5m）
+
+训练策略：先在平地上训练纯状态版本，再增加 heightmap 输入和卷积层继续训练（**Progressive Learning**）。
+
+#### 关于策略网络和价值网络是否共享参数
+
+论文 Section 5.2 原文：
+
+> *"The inputs are processed by two fully-connected layers with 1024, and 512 units each, followed by a linear output layer. ReLU activations are used for all hidden units. The value function is modeled by a **similar** network, with exception of the output layer, which consists of a single linear unit."*
+
+**结论：两个独立的网络，参数不共享。**
+- 策略网络：1024 → 512 → 输出层（动作维度，36D for Humanoid）
+- 价值网络：1024 → 512 → 输出层（**1 个线性单元**）
+- 结构相同，但 **.参数独立，各自训练**
+
+#### 对比总结
+
+| 模式 | 输入 | 网络结构 | 适用场景 |
+|------|------|---------|---------|
+| **纯状态版** | 关节角度/速度/位置 + 相位变量 | 1024→512 全连接 | 大部分技能（翻跟斗、武术、走路等） |
+| **视觉感知版** | 纯状态输入 + Heightmap | 卷积层 + 1024→512 全连接 | 复杂地形适应（跨越障碍、平衡木） |
+
+> 🔑 **面试要点**：DeepMimic 基础版是纯状态输入，但论文本身也包含带视觉（heightmap）的 visuomotor policy 版本，用卷积层处理地形信息。两个版本中策略网络和价值网络都是**参数独立的两个网络**，结构相同但不共享权重。
