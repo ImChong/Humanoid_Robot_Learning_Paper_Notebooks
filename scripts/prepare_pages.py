@@ -11,7 +11,7 @@ import json
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAPERS_DIR = os.path.join(BASE_DIR, 'papers')
-README_PATH = os.path.join(BASE_DIR, 'README.md')
+PROGRESS_PATH = os.path.join(PAPERS_DIR, 'PROGRESS.md')
 
 
 def has_frontmatter(content):
@@ -39,16 +39,16 @@ def get_category_name(category_dir):
     return name
 
 
-def parse_readme_order():
+def parse_progress_order():
     """
-    Parse README.md to extract paper ordering within each section.
+    Parse PROGRESS.md to extract paper ordering within each section.
     Returns a dict: { normalized_paper_name: order_index }
-    We use the paper title/name from the README table rows.
+    We use the paper title/name from the PROGRESS.md table rows.
     """
-    if not os.path.exists(README_PATH):
+    if not os.path.exists(PROGRESS_PATH):
         return {}
 
-    with open(README_PATH, 'r', encoding='utf-8') as f:
+    with open(PROGRESS_PATH, 'r', encoding='utf-8') as f:
         content = f.read()
 
     # Extract all paper names mentioned in table rows (| # | paper_name | ... |)
@@ -95,17 +95,17 @@ def normalize_name(name):
     return name
 
 
-def match_paper_order(paper_title, paper_dir, readme_order):
+def match_paper_order(paper_title, paper_dir, progress_order):
     """Find the README order index for a paper. Lower = earlier in README."""
     # Try matching by title
     norm_title = normalize_name(paper_title)
-    for key, idx in readme_order.items():
+    for key, idx in progress_order.items():
         if norm_title and (norm_title in key or key in norm_title):
             return idx
 
     # Try matching by directory name
     norm_dir = normalize_name(paper_dir.replace('_', ' '))
-    for key, idx in readme_order.items():
+    for key, idx in progress_order.items():
         if norm_dir and (norm_dir in key or key in norm_dir):
             return idx
 
@@ -115,7 +115,7 @@ def match_paper_order(paper_title, paper_dir, readme_order):
 
 def process_papers():
     """Walk through papers directory and add front matter."""
-    readme_order = parse_readme_order()
+    progress_order = parse_progress_order()
     index_data = {}
 
     # Load existing papers.json to preserve metadata (subtitle, subcategories)
@@ -168,7 +168,7 @@ def process_papers():
                 rel_path = os.path.relpath(fpath, BASE_DIR)
                 url_path = '/' + rel_path.rsplit('.md', 1)[0] + '.html'
 
-                order_idx = match_paper_order(title, paper_dir, readme_order)
+                order_idx = match_paper_order(title, paper_dir, progress_order)
 
                 papers.append({
                     'title': title,
