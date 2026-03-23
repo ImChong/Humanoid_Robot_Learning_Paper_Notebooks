@@ -827,10 +827,28 @@ $$p_i(s) = \frac{\exp(V^i(s) / T)}{\sum_{j=1}^{k} \exp(V^j(s) / T)}$$
 
 | 缩写 | 全称 | 简单解释 |
 |------|------|----------|
-| **RSI** | Reference State Initialization | 参考状态初始化 |
+| **RSI** | Reference State Initialization | 参考状态初始化——每个 episode 从参考动作随机时刻开始 |
+| **ET** | Early Termination | 提前终止——摔倒时立即终止 episode |
 | **MoCap** | Motion Capture | 动作捕捉 |
-| **PD Controller** | Proportional-Derivative Controller | 比例-微分控制器 |
+| **PD** | Proportional-Derivative | 比例-微分（控制器） |
+| **Stable PD** | Stable Proportional-Derivative Controller | 稳定 PD 控制器——隐式积分，避免高增益发散 |
 | **DoF** | Degrees of Freedom | 自由度 |
+| **PPO** | Proximal Policy Optimization | 近端策略优化——DeepMimic 使用的 RL 优化算法 |
+| **GAE** | Generalized Advantage Estimator | 广义优势估计，用于计算策略梯度的优势值 |
+| **TD(λ)** | Temporal Difference with λ-return | 带 λ 折扣的时序差分，用于训练价值函数 |
+| **π** | Policy | 策略网络——输出目标关节角度的分布 |
+| **V(s)** | Value Function | 价值函数网络——估计当前状态的期望回报 |
+| **RL** | Reinforcement Learning | 强化学习 |
+| **MDP** | Markov Decision Process | 马尔可夫决策过程——RL 的数学框架 |
+| **GAIL** | Generative Adversarial Imitation Learning | 生成对抗模仿学习——相关工作，AMP 的前身思路 |
+| **SAMCON** | Sampling-Based Controller | 采样式控制器——最接近 DeepMimic 能力的前期工作 |
+| **MTU** | Muscle-Tendon Unit | 肌腱单元——另一种动作空间（DeepMimic 未采用） |
+| **RSI + ET** | RSI + Early Termination | 两者组合是训练高动态技能的关键 |
+| **Visuomotor Policy** | Vision-based Motor Policy | 视觉运动策略——加了 heightmap 输入的视觉感知版策略 |
+| **Heightmap (H)** | Height Map | 地形高度图——视觉版策略的感知输入 |
+| **GPU** | Graphics Processing Unit | 图形处理单元——DeepMimic 训练**不使用** GPU，纯 CPU |
+| **TensorFlow** | — | Google 深度学习框架——DeepMimic 使用的框架 |
+| **Bullet** | Bullet Physics Engine | 开源物理引擎——DeepMimic 使用（非 MuJoCo） |
 
 ### I. 感知能力：DeepMimic 的两种策略网络模式
 
