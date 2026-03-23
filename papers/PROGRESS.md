@@ -578,3 +578,25 @@
 | 466  | [Guided Motion Diffusion for Controllable Human Motion Synthesis](https://arxiv.org/abs/2305.12577) | 2023.05 |  | ⏳ 待读 |
 | 467  | [PhysDiff: Physics-Guided Human Motion Diffusion Model](https://arxiv.org/abs/2212.02500) | 2022.12 |  | ⏳ 待读 |
 | 468  | Generating Diverse and Natural 3D Human Motions From Text | - |  | ⏳ 待读 |
+| 469  | [Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation](https://arxiv.org/abs/2603.12263) | 2026.03 |  | ⏳ 待读 |
+| 470  | [SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL](https://arxiv.org/abs/2603.10306) | 2026.03 |  | ⏳ 待读 |
+| 471  | [ZeroWBC: Learning Natural Visuomotor Humanoid Control from Human Egocentric Video](https://arxiv.org/abs/2603.09170) | 2026.03 |  | ⏳ 待读 |
+| 472  | [FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid](https://arxiv.org/abs/2603.08961) | 2026.03 |  | ⏳ 待读 |
+| 473  | [Embedding Classical Balance Control Principles in RL for Humanoid Recovery](https://arxiv.org/abs/2603.08619) | 2026.03 |  | ⏳ 待读 |
+| 474  | [ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation](https://arxiv.org/abs/2603.03279) | 2026.03 |  | ⏳ 待读 |
+| 475  | [OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control](https://arxiv.org/abs/2602.23843) | 2026.02 |  | ⏳ 待读 |
+| 476  | [LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations](https://arxiv.org/abs/2602.21723) | 2026.02 |  | ⏳ 待读 |
+| 477  | [Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation](https://arxiv.org/abs/2602.16705) | 2026.02 |  | ⏳ 待读 |
+| 478  | [VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety](https://arxiv.org/abs/2602.16511) | 2026.02 |  | ⏳ 待读 |
+| 479  | [Humanoid Hanoi: Investigating Shared Whole-Body Control for Skill-Based Box Rearrangement](https://arxiv.org/abs/2602.13850) | 2026.02 |  | ⏳ 待读 |
+| 480  | [DynaRetarget: Dynamically-Feasible Retargeting using Sampling-Based Trajectory Optimization](https://arxiv.org/abs/2602.06827) | 2026.02 |  | ⏳ 待读 |
+| 481  | [SoftMimic: Learning Compliant Whole-body Control from Examples](https://arxiv.org/abs/2510.17792) | 2025.10 |  | ⏳ 待读 |
+| 482  | [Learning Differentiable Reachability Maps for Optimization-based Humanoid Motion Generation](https://arxiv.org/abs/2508.11275) | 2025.08 |  | ⏳ 待读 |
+| 483  | [BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion](https://arxiv.org/abs/2508.08241) | 2025.08 |  | ⏳ 待读 |
+| 484  | [KungfuBot: Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills](https://arxiv.org/abs/2506.12851) | 2025.06 |  | ⏳ 待读 |
+| 485  | [Whole-body Multi-contact Motion Control for Humanoid Robots Based on Distributed Tactile Sensors](https://arxiv.org/abs/2505.19580) | 2025.05 |  | ⏳ 待读 |
+| 486  | [FLAM: Foundation Model-Based Body Stabilization for Humanoid Locomotion and Manipulation](https://arxiv.org/abs/2503.22249) | 2025.03 |  | ⏳ 待读 |
+| 487  | [The Role of Domain Randomization in Training Diffusion Policies for Whole-Body Humanoid Control](https://arxiv.org/abs/2411.01349) | 2024.11 |  | ⏳ 待读 |
+| 488  | [Full-Order Sampling-Based MPC for Torque-Level Locomotion Control via Diffusion-Style Annealing](https://arxiv.org/abs/2409.15610) | 2024.09 |  | ⏳ 待读 |
+| 489  | [Flow Matching Imitation Learning for Multi-Support Manipulation](https://arxiv.org/abs/2407.12381) | 2024.07 |  | ⏳ 待读 |
+| 490  | [Predictive Sampling: Real-time Behaviour Synthesis with MuJoCo](https://arxiv.org/abs/2212.00541) | 2022.12 |  | ⏳ 待读 |
