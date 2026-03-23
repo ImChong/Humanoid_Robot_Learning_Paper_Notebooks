@@ -825,10 +825,24 @@ $$p_i(s) = \frac{\exp(V^i(s) / T)}{\sum_{j=1}^{k} \exp(V^j(s) / T)}$$
 
 | 缩写 | 全称 | 简单解释 |
 |------|------|----------|
-| **RSI** | Reference State Initialization | 参考状态初始化 |
-| **MoCap** | Motion Capture | 动作捕捉 |
-| **PD Controller** | Proportional-Derivative Controller | 比例-微分控制器 |
-| **DoF** | Degrees of Freedom | 自由度 |
+| **RL** | Reinforcement Learning | 强化学习 |
+| **PPO** | Proximal Policy Optimization | 近端策略优化，DeepMimic 使用的 RL 算法 |
+| **GAE** | Generalized Advantage Estimation | 广义优势估计，用于计算策略梯度的优势函数 |
+| **RSI** | Reference State Initialization | 参考状态初始化，从参考动作随机时刻初始化 episode |
+| **ET** | Early Termination | 提前终止，角色摔倒时结束 episode |
+| **MoCap** | Motion Capture | 动作捕捉，记录人体运动数据 |
+| **PD Controller** | Proportional-Derivative Controller | 比例-微分控制器，将目标角度转换为关节扭矩 |
+| **Stable PD** | Stable Proportional-Derivative Controller | 稳定 PD 控制器（Tan et al. 2011），用隐式积分避免高增益振荡 |
+| **DoF** | Degrees of Freedom | 自由度，描述关节可运动的维度数 |
+| **CoM** | Center of Mass | 质心，模仿奖励的四维分量之一 |
+| **EE** | End-Effector | 末端执行器（手脚），模仿奖励的四维分量之一 |
+| **MTU** | Muscle-Tendon Unit | 肌腱单元，一种基于肌肉模型的动作空间（Peng 2017b 中对比） |
+| **CE** | Contractile Element | 收缩元件，MTU 中肌肉纤维主动收缩产生力的部分 |
+| **SE** | Series Elastic Element | 弹性元件，MTU 中肌腱的被动弹性部分 |
+| **SGD** | Stochastic Gradient Descent | 随机梯度下降，DeepMimic 使用的优化器 |
+| **ReLU** | Rectified Linear Unit | 修正线性单元，网络隐藏层激活函数 |
+| **TD(λ)** | Temporal Difference (λ) | 时序差分学习，用于更新价值函数 |
+| **SIGGRAPH** | Special Interest Group on GRAPHics and Interactive Techniques | ACM 计算机图形学顶会，DeepMimic 发表于此 |
 
 ---
 

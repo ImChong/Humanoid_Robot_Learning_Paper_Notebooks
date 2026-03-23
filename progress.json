@@ -1,6 +1,6 @@
 {
-  "current_paper_index": 2,
-  "confirmed": true,
+  "current_paper_index": 3,
+  "confirmed": false,
   "section": "基础路线图",
   "papers": [
     {
@@ -33,9 +33,9 @@
       "folder": "papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills",
       "note_file": "DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.md",
       "pdf_file": "DeepMimic.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-03-23",
       "route": "精确模仿",
       "title_cn": "深度模仿：基于示例引导的物理角色技能深度强化学习"
     },
@@ -45,8 +45,8 @@
       "folder": "papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control",
       "note_file": "AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.md",
       "pdf_file": "AMP.pdf",
-      "status": "pending",
-      "start_date": null,
+      "status": "reading",
+      "start_date": "2026-03-23",
       "done_date": null,
       "route": "风格学习",
       "title_cn": "对抗运动先验：风格化物理角色控制"
