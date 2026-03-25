@@ -659,7 +659,33 @@ $$\dot{q}_{t+1} = \dot{q}_t + \Delta t \cdot M^{-1} \cdot (\tau + f_{ext})$$
 
 $$q_{t+1} = q_t + \Delta t \cdot \dot{q}_{t+1}$$
 
-把 PD 公式代入运动方程，整理得到**线性方程组** $A \cdot x = b$：
+把 PD 公式代入运动方程，整理得到**线性方程组** $A \cdot x = b$。推导过程如下：
+
+**第一步**：运动方程两边同乘 $M$，消去 $M^{-1}$：
+
+$$M \cdot \dot{q}_{t+1} = M \cdot \dot{q}_t + \Delta t \cdot (\tau + f_{ext})$$
+
+**第二步**：把 Stable PD 的 $\tau$ 代入。先把 $q_{t+1}$ 用运动学关系展开：
+
+$$q_{t+1} = q_t + \Delta t \cdot \dot{q}_{t+1}$$
+
+代入 $\tau = k_p(\hat{a} - q_{t+1}) - k_d \dot{q}_{t+1}$：
+
+$$\tau = k_p \big(\hat{a} - q_t - \Delta t \cdot \dot{q}_{t+1}\big) - k_d \cdot \dot{q}_{t+1}$$
+
+**第三步**：把展开后的 $\tau$ 代入第一步的运动方程：
+
+$$M \cdot \dot{q}_{t+1} = M \cdot \dot{q}_t + \Delta t \cdot \Big[ k_p \big(\hat{a} - q_t - \Delta t \cdot \dot{q}_{t+1}\big) - k_d \cdot \dot{q}_{t+1} + f_{ext} \Big]$$
+
+**第四步**：展开右边，把含 $\dot{q}\_{t+1}$ 的项移到左边：
+
+$$M \cdot \dot{q}_{t+1} + \Delta t \cdot k_d \cdot \dot{q}_{t+1} + \Delta t^2 \cdot k_p \cdot \dot{q}_{t+1} = M \cdot \dot{q}_t + \Delta t \cdot \left[ k_p \cdot (\hat{a} - q_t) + f_{ext} \right]$$
+
+**第五步**：左边提取公因子 $\dot{q}\_{t+1}$，得到标准形式：
+
+$$\underbrace{(M + \Delta t \cdot k_d + \Delta t^2 \cdot k_p)}_{A} \cdot \dot{q}_{t+1} = \underbrace{M \cdot \dot{q}_t + \Delta t \cdot \left[ k_p \cdot (\hat{a} - q_t) + f_{ext} \right]}_{b}$$
+
+即：
 
 $$A = M + \Delta t \cdot k_d + \Delta t^2 \cdot k_p$$
 
