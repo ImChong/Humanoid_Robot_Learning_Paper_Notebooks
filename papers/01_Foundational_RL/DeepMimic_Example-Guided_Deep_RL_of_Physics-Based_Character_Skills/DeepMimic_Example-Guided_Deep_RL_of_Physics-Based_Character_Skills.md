@@ -649,25 +649,25 @@ $$\tau = k_p \cdot (\hat{a} - q_t) + k_d \cdot (0 - \dot{q}_t)$$
 
 Stable PD 改为用**下一时刻状态**：
 
-$$\tau = k_p \cdot (\hat{a} - q_{t+1}) + k_d \cdot (0 - \dot{q}\_{t+1})$$
+$$\tau = k_p \cdot (\hat{a} - q_{t+1}) + k_d \cdot (0 - \dot{q}_{t+1})$$
 
-注意用的是 $q_{t+1}$ 和 $\dot{q}\_{t+1}$（下一步的角度和角速度），而不是当前的。
+注意用的是 $q_{t+1}$ 和 $\dot{q}_{t+1}$（下一步的角度和角速度），而不是当前的。
 
 结合隐式欧拉积分的运动方程：
 
-$$\dot{q}\_{t+1} = \dot{q}\_t + \Delta t \cdot M^{-1} \cdot (\tau + f\_{ext})$$
+$$\dot{q}_{t+1} = \dot{q}_t + \Delta t \cdot M^{-1} \cdot (\tau + f_{ext})$$
 
-$$q_{t+1} = q_t + \Delta t \cdot \dot{q}\_{t+1}$$
+$$q_{t+1} = q_t + \Delta t \cdot \dot{q}_{t+1}$$
 
 把 PD 公式代入运动方程，整理得到**线性方程组** $A \cdot x = b$：
 
 $$A = M + \Delta t \cdot k_d + \Delta t^2 \cdot k_p$$
 
-$$b = M \cdot \dot{q}\_t + \Delta t \cdot \left[ k_p \cdot (\hat{a} - q_t) + f\_{ext} \right]$$
+$$b = M \cdot \dot{q}_t + \Delta t \cdot \left[ k_p \cdot (\hat{a} - q_t) + f_{ext} \right]$$
 
-$$A \cdot \dot{q}\_{t+1} = b$$
+$$A \cdot \dot{q}_{t+1} = b$$
 
-直接解出下一步角速度 $\dot{q}\_{t+1}$，再算下一步角度 $q_{t+1}$。
+直接解出下一步角速度 $\dot{q}_{t+1}$，再算下一步角度 $q_{t+1}$。
 
 **为什么稳定？** 看矩阵 A 的构成：
 - M（质量矩阵）正定
