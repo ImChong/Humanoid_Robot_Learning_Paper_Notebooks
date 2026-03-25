@@ -398,7 +398,7 @@ DeepMimic 是**运动模仿学习**的开山之作，几乎所有后续的机器
 **A**:
 不是让一个策略同时学多个技能，而是**分别训练多个单技能策略**，推理时用**价值函数做 Boltzmann 选策略**：
 
-$$\Pi(a|s) = \sum_i p_i(s) \pi^i(a|s), \quad p_i(s) = \frac{\exp V^i(s)/T}{\sum_j \exp V^j(s)/T}$$
+$$\Pi(a \mid s) = \sum_i p_i(s) \pi^i(a \mid s), \quad p_i(s) = \frac{\exp V^i(s)/T}{\sum_j \exp V^j(s)/T}$$
 
 其中 $T=0.3$ 是温度参数。值函数大的策略被选概率高。角色在每个 cycle 结束时重新采样新技能，通过值函数估计自动选择合适的过渡，无需手工设计转换逻辑。摔倒时自动触发 getup 策略。
 
@@ -866,11 +866,11 @@ $$r_t^I = \max_{j=1, \ldots, k} \left( r_t^{I, (j)} \right)$$
 
 **核心思想**：与其让一个网络学所有技能（难训、易混淆），不如**分开训练各技能策略，再组合**。
 
-每个技能 i 单独训练，得到独立的策略 $\pi^i(a|s)$ 和价值函数 $V^i(s)$。
+每个技能 i 单独训练，得到独立的策略 $\pi^i(a \mid s)$ 和价值函数 $V^i(s)$ 。
 
 运行时用**价值函数做调度**——哪个技能在当前状态表现最好就用哪个：
 
-$$\Pi(a|s) = \sum_{i=1}^{k} p_i(s) \cdot \pi^i(a|s)$$
+$$\Pi(a \mid s) = \sum_{i=1}^{k} p_i(s) \cdot \pi^i(a \mid s)$$
 
 $$p_i(s) = \frac{\exp(V^i(s) / T)}{\sum_{j=1}^{k} \exp(V^j(s) / T)}$$
 
