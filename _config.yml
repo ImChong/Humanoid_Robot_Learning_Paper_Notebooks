@@ -17,6 +17,7 @@ include:
 exclude:
   - README.md
   - progress.json
+  - papers/PROGRESS.md
   - scripts/
   - .obsidian/
   - "*.pdf"
