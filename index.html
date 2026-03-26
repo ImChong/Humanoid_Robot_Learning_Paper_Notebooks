@@ -5,7 +5,7 @@ title: "Home"
 <div class="index-header">
   <h1>📚 Humanoid Robot Learning Paper Notebooks</h1>
   <p>人形机器人强化学习论文笔记</p>
-  <p class="subtitle">共 {{ site.pages | where_exp: "p", "p.url contains '/papers/'" | size }} 篇笔记</p>
+  {% assign paper_count = 0 %}{% for p in site.pages %}{% if p.url contains '/papers/' and p.layout == 'paper' %}{% assign paper_count = paper_count | plus: 1 %}{% endif %}{% endfor %}<p class="subtitle">共 {{ paper_count }} 篇笔记</p>
 </div>
 
 <div class="index-layout">
