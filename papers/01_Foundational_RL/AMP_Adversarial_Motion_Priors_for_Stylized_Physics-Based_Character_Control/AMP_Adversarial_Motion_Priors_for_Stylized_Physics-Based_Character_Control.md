@@ -22,7 +22,7 @@ category: "Foundational RL"
 | **机构** | UC Berkeley |
 | **发布时间** | 2021年（SIGGRAPH 2021） |
 | **项目主页** | [xbpeng.github.io/projects/AMP](https://xbpeng.github.io/projects/AMP/) |
-| **GitHub** | [nv-tlabs/ASE](https://github.com/nv-tlabs/ASE)（包含 AMP 实现）· [xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) |
+| **GitHub** | [nv-tlabs/ASE](https://github.com/nv-tlabs/ASE)（包含 AMP 实现）<br>[xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) |
 
 ---
 
