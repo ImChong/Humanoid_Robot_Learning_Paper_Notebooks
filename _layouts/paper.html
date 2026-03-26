@@ -16,16 +16,19 @@ layout: default
       <div class="toc-wrapper">
         <h3 class="toc-title">📑 目录</h3>
         <nav class="toc-nav" id="toc-nav"></nav>
-        <div class="toc-actions">
-          <a href="#" class="toc-action-link" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">⬆ 回到顶部</a>
-          <a href="{{ '/' | relative_url }}" class="toc-action-link">← 返回论文列表</a>
-        </div>
       </div>
     </aside>
 
     <div class="paper-body" id="paper-body">
       {{ content }}
     </div>
+
+    <aside class="right-sidebar" id="right-sidebar">
+      <div class="right-sidebar-wrapper">
+        <a href="#" class="right-sidebar-link" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">⬆ 回到顶部</a>
+        <a href="{{ '/' | relative_url }}" class="right-sidebar-link">← 返回论文列表</a>
+      </div>
+    </aside>
   </div>
 
   <div class="paper-nav">

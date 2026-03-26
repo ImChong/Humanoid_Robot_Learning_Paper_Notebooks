@@ -334,30 +334,44 @@ body {
   background: var(--bg-secondary);
 }
 
-/* TOC action links (back to top / paper list) */
-.toc-actions {
-  margin-top: 1rem;
-  padding-top: 0.8rem;
-  border-top: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+/* ===== Right Sidebar (quick actions) ===== */
+.right-sidebar {
+  width: 140px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 70px;
 }
 
-.toc-action-link {
+.right-sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.8rem 0;
+}
+
+.right-sidebar-link {
   display: block;
-  padding: 0.3rem 0.5rem;
+  padding: 0.35rem 0.6rem;
   font-family: 'Arial', sans-serif;
   font-size: 0.78rem;
   color: var(--text-secondary);
   text-decoration: none;
   border-radius: 4px;
+  border: 1px solid var(--border);
+  text-align: center;
   transition: all 0.15s ease;
 }
 
-.toc-action-link:hover {
+.right-sidebar-link:hover {
   color: var(--link);
   background: var(--bg-secondary);
+  border-color: var(--link);
+}
+
+@media (max-width: 1400px) {
+  .right-sidebar {
+    display: none;
+  }
 }
 
 /* TOC scrollbar */
