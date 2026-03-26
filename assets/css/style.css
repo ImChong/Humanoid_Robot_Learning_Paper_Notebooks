@@ -451,6 +451,15 @@ body {
 }
 
 /* ===== Paper Content ===== */
+.paper-body h1,
+.paper-body h2,
+.paper-body h3,
+.paper-body h4,
+.paper-body h5,
+.paper-body h6 {
+  scroll-margin-top: 80px;
+}
+
 .paper-body h1 {
   font-family: 'Arial', 'Helvetica Neue', sans-serif;
   font-size: 1.8rem;
