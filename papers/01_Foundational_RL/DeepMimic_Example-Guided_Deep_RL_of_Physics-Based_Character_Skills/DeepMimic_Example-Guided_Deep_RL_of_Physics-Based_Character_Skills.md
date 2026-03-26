@@ -22,6 +22,7 @@ category: "Foundational RL"
 | **机构** | UC Berkeley, University of British Columbia |
 | **发布时间** | 2018年（SIGGRAPH 2018） |
 | **项目主页** | [xbpeng.github.io/DeepMimic](https://xbpeng.github.io/DeepMimic/) |
+| **GitHub** | [xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) |
 
 ---
 
