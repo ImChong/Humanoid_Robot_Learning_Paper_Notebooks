@@ -16,6 +16,10 @@ layout: default
       <div class="toc-wrapper">
         <h3 class="toc-title">📑 目录</h3>
         <nav class="toc-nav" id="toc-nav"></nav>
+        <div class="toc-actions">
+          <a href="#" class="toc-action-link" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">⬆ 回到顶部</a>
+          <a href="{{ '/' | relative_url }}" class="toc-action-link">← 返回论文列表</a>
+        </div>
       </div>
     </aside>
 

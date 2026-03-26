@@ -334,6 +334,32 @@ body {
   background: var(--bg-secondary);
 }
 
+/* TOC action links (back to top / paper list) */
+.toc-actions {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.toc-action-link {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.toc-action-link:hover {
+  color: var(--link);
+  background: var(--bg-secondary);
+}
+
 /* TOC scrollbar */
 .toc-sidebar::-webkit-scrollbar {
   width: 3px;
