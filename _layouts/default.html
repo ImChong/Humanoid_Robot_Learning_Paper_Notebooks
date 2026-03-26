@@ -23,7 +23,7 @@
 
       // Fix HTML entities inside math before rendering
       // Kramdown converts > to &gt; and < to &lt; inside table cells etc.
-      document.querySelectorAll('td, th, li, p, span').forEach(function(el) {
+      document.querySelectorAll('td, th, li, p, span, strong, em, b, i, h1, h2, h3, h4, h5, h6').forEach(function(el) {
         var html = el.innerHTML;
         // Only process if there's a $ or \[ that suggests math content
         if (html.indexOf('$') === -1 && html.indexOf('\\[') === -1) return;
