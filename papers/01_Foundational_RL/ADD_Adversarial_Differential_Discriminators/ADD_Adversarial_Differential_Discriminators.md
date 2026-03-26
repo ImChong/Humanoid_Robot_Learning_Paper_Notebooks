@@ -1,10 +1,10 @@
 ---
 layout: paper
-title: "ADD: Physics-Based Motion Imitation with Adversarial Differential Discriminators"
+title: "ADD: Adversarial Disentanglement and Distillation"
 category: "Foundational RL"
 ---
 
-# ADD: Physics-Based Motion Imitation with Adversarial Differential Discriminators
+# ADD: Adversarial Disentanglement and Distillation
 **对抗差分鉴别器：基于物理的运动模仿**
 
 > 📅 阅读日期: -  

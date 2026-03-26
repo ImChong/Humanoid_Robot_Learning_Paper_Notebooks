@@ -1,10 +1,10 @@
 ---
 layout: paper
-title: "ASE: Large-Scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters"
+title: "ASE: Adversarial Skill Embeddings for Large-Scale Motion Control"
 category: "Foundational RL"
 ---
 
-# ASE: Large-Scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters
+# ASE: Adversarial Skill Embeddings for Large-Scale Motion Control
 **大规模可复用对抗技能嵌入：物理仿真角色**
 
 > 📅 阅读日期: -  

@@ -140,12 +140,12 @@ def process_papers():
         category_display = get_category_name(category_dir)
         papers = []
 
-        for paper_dir in os.listdir(category_path):
+        for paper_dir in sorted(os.listdir(category_path)):
             paper_path = os.path.join(category_path, paper_dir)
             if not os.path.isdir(paper_path):
                 continue
 
-            for fname in os.listdir(paper_path):
+            for fname in sorted(os.listdir(paper_path)):
                 if not fname.endswith('.md'):
                     continue
 
