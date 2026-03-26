@@ -334,31 +334,34 @@ body {
   background: var(--bg-secondary);
 }
 
-/* ===== Right Sidebar (quick actions) ===== */
+/* ===== Right Sidebar (quick actions, fixed) ===== */
 .right-sidebar {
-  width: 140px;
-  flex-shrink: 0;
-  position: sticky;
-  top: 70px;
+  position: fixed;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
 }
 
 .right-sidebar-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0.8rem 0;
 }
 
 .right-sidebar-link {
   display: block;
-  padding: 0.35rem 0.6rem;
+  padding: 0.4rem 0.6rem;
   font-family: 'Arial', sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--text-secondary);
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 1px solid var(--border);
+  background: var(--bg);
   text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   transition: all 0.15s ease;
 }
 
@@ -368,7 +371,7 @@ body {
   border-color: var(--link);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1100px) {
   .right-sidebar {
     display: none;
   }
