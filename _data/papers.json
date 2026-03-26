@@ -31,6 +31,18 @@
         "path": "papers/01_Foundational_RL/PHC_Perpetual_Humanoid_Control/PHC_Perpetual_Humanoid_Control.md",
         "url": "/papers/01_Foundational_RL/PHC_Perpetual_Humanoid_Control/PHC_Perpetual_Humanoid_Control.html",
         "dir": "PHC_Perpetual_Humanoid_Control"
+      },
+      {
+        "title": "ASE: Large-Scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters",
+        "path": "papers/01_Foundational_RL/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.md",
+        "url": "/papers/01_Foundational_RL/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.html",
+        "dir": "ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control"
+      },
+      {
+        "title": "ADD: Physics-Based Motion Imitation with Adversarial Differential Discriminators",
+        "path": "papers/01_Foundational_RL/ADD_Adversarial_Differential_Discriminators/ADD_Adversarial_Differential_Discriminators.md",
+        "url": "/papers/01_Foundational_RL/ADD_Adversarial_Differential_Discriminators/ADD_Adversarial_Differential_Discriminators.html",
+        "dir": "ADD_Adversarial_Differential_Discriminators"
       }
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research"
