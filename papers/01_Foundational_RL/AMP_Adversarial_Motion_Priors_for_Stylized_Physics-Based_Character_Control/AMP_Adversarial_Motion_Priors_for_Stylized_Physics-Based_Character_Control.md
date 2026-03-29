@@ -91,7 +91,9 @@ $$\min_\psi -\mathbb{E}_{d^M}\left[\log D_\psi(s_t, s_{t+1})\right] - \mathbb{E}
 
 这个公式直接来自 GAN 的经典目标函数（Goodfellow et al. 2014），只是把"图片"换成了"状态转移"。拆成两部分理解：
 
-**第一项** <span>$-\mathbb{E}_{d^M}[\log D_\psi(s_t, s_{t+1})]$</span>：
+{::nomarkdown}
+<p><strong>第一项</strong> $-\mathbb{E}_{d^M}[\log D_\psi(s_t, s_{t+1})]$：</p>
+{:/nomarkdown}
 
 - 从参考动捕数据 $d^M$ 中采一批 $(s_t, s_{t+1})$ 对
 - 鉴别器应该对这些"真实"样本输出**接近 1** 的分数
@@ -102,7 +104,9 @@ $$\min_\psi -\mathbb{E}_{d^M}\left[\log D_\psi(s_t, s_{t+1})\right] - \mathbb{E}
 >
 > ![Term 1: -log(D) 函数图像](log_term1_real.png)
 
-**第二项** <span>$-\mathbb{E}_{d^\pi}[\log(1 - D_\psi(s_t, s_{t+1}))]$</span>：
+{::nomarkdown}
+<p><strong>第二项</strong> $-\mathbb{E}_{d^\pi}[\log(1 - D_\psi(s_t, s_{t+1}))]$：</p>
+{:/nomarkdown}
 
 - 从策略产生的运动 $d^\pi$ 中采一批 $(s_t, s_{t+1})$ 对
 - 鉴别器应该对这些"生成"样本输出**接近 0** 的分数
