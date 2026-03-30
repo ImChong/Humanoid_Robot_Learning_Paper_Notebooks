@@ -5,7 +5,7 @@ title: "Home"
 <div class="index-header">
   <h1 data-en="📚 Humanoid Robot Learning Paper Notebooks" data-zh="📚 人形机器人学习论文笔记">📚 Humanoid Robot Learning Paper Notebooks</h1>
   <p data-en="Paper reading notes on humanoid robot reinforcement learning" data-zh="人形机器人强化学习论文阅读笔记">Paper reading notes on humanoid robot reinforcement learning</p>
-  {% assign paper_count = 0 %}{% for p in site.pages %}{% if p.url contains '/papers/' and p.layout == 'paper' %}{% assign paper_count = paper_count | plus: 1 %}{% endif %}{% endfor %}<p class="subtitle" id="paper-count-label" data-en="Total: {count} papers" data-zh="共 {count} 篇笔记">Total: {{ paper_count }} papers</p>
+  {% assign paper_count = 0 %}{% for p in site.pages %}{% if p.url contains '/papers/' and p.layout == 'paper' %}{% assign paper_count = paper_count | plus: 1 %}{% endif %}{% endfor %}<p class="subtitle" id="paper-count-label" data-en="Total: {{ paper_count }} papers" data-zh="共 {{ paper_count }} 篇笔记">Total: {{ paper_count }} papers</p>
 </div>
 
 <div class="index-layout">
@@ -22,12 +22,12 @@ title: "Home"
             {% endfor %}
           {% endif %}
           <li class="toc-item toc-h2">
-            <a href="#cat-{{ forloop.index }}" class="toc-link" data-en="{{ cat[1].display_name }}" data-zh="{{ cat[1].display_name_zh }}">{{ cat[1].display_name }} ({{ total_count }})</a>
+            <a href="#cat-{{ forloop.index }}" class="toc-link"><span data-en="{{ cat[1].display_name }}" data-zh="{{ cat[1].display_name_zh }}">{{ cat[1].display_name }}</span> ({{ total_count }})</a>
             {% if cat[1].subcategories %}
             <ul class="toc-sublist">
               {% for subcat in cat[1].subcategories %}
               <li class="toc-item toc-h3">
-                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub" data-en="{{ subcat.name }}" data-zh="{{ subcat.name_zh }}">{{ subcat.name }} ({{ subcat.papers | size }})</a>
+                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub"><span data-en="{{ subcat.name }}" data-zh="{{ subcat.name_zh }}">{{ subcat.name }}</span> ({{ subcat.papers | size }})</a>
               </li>
               {% endfor %}
             </ul>

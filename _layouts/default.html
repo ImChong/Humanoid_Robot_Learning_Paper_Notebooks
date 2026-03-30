@@ -29,7 +29,7 @@
         root.setAttribute('data-lang-mode', mode);
         localStorage.setItem(LANG_KEY, mode);
         if (langLabel) {
-          langLabel.textContent = mode === 'zh' ? '中文' : 'EN';
+          langLabel.textContent = mode === 'zh' ? 'English' : '中文';
         }
         // Update all data-en/data-zh elements
         var els = document.querySelectorAll('[data-en]');
