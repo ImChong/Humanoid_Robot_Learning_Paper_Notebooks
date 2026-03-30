@@ -65,7 +65,7 @@ title: "Home"
         {% endfor %}
       {% endif %}
       <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> <span class="cat-name" data-en="{{ cat_data.display_name }}" data-zh="{{ cat_data.zhname }}">{{ cat_data.display_name }}</span> <span class="paper-count">({{ main_total }})</span></h2>
-      {% if cat_data.subtitle %}<p class="category-subtitle">{{ cat_data.subtitle }}</p>{% endif %}
+      {% if cat_data.subtitle %}<p class="category-subtitle" data-en="{{ cat_data.subtitle }}" data-zh="{{ cat_data.subtitle_zh }}">{{ cat_data.subtitle }}</p>{% endif %}
       {% if cat_data.subcategories %}
         {% for subcat in cat_data.subcategories %}
         <div class="subcategory-section">
@@ -78,7 +78,7 @@ title: "Home"
             {% for paper in subcat.papers %}
             <li>
               <a href="{{ site.baseurl }}{{ paper.url }}" class="paper-card">
-                <span class="paper-title">{{ paper.title }}</span>
+                <span class="paper-title" data-en="{{ paper.title }}" data-zh="{{ paper.zhname }}">{{ paper.title }}</span>
               </a>
             </li>
             {% endfor %}
@@ -93,7 +93,7 @@ title: "Home"
         {% for paper in cat_data.papers %}
         <li>
           <a href="{{ site.baseurl }}{{ paper.url }}" class="paper-card">
-            <span class="paper-title">{{ paper.title }}</span>
+            <span class="paper-title" data-en="{{ paper.title }}" data-zh="{{ paper.zhname }}">{{ paper.title }}</span>
           </a>
         </li>
         {% endfor %}

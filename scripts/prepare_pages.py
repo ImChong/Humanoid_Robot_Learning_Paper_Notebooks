@@ -118,13 +118,23 @@ def process_papers():
     progress_order = parse_progress_order()
     index_data = {}
 
-    # Load existing papers.json to preserve metadata (subtitle, subcategories)
+    # Load existing papers.json to preserve metadata (subtitle, subcategories, zhname)
     existing_papers_json_path = os.path.join(BASE_DIR, '_data', 'papers.json')
     existing_papers_json = {}
+    existing_paper_zhnames = {}  # title -> zhname mapping from existing data
     if os.path.exists(existing_papers_json_path):
         try:
             with open(existing_papers_json_path, 'r', encoding='utf-8') as f:
                 existing_papers_json = json.load(f)
+            # Build zhname lookup from all papers (top-level and subcategory)
+            for cat_data in existing_papers_json.values():
+                for p in cat_data.get('papers', []):
+                    if 'zhname' in p:
+                        existing_paper_zhnames[p['title']] = p['zhname']
+                for sc in cat_data.get('subcategories', []):
+                    for p in sc.get('papers', []):
+                        if 'zhname' in p:
+                            existing_paper_zhnames[p['title']] = p['zhname']
         except Exception:
             pass
 
@@ -170,13 +180,17 @@ def process_papers():
 
                 order_idx = match_paper_order(title, paper_dir, progress_order)
 
-                papers.append({
+                paper_entry = {
                     'title': title,
                     'path': rel_path,
                     'url': url_path,
                     'dir': paper_dir,
                     '_order': order_idx
-                })
+                }
+                # Restore zhname from existing data if available
+                if title in existing_paper_zhnames:
+                    paper_entry['zhname'] = existing_paper_zhnames[title]
+                papers.append(paper_entry)
 
         # Sort by README order
         papers.sort(key=lambda p: p['_order'])
@@ -198,9 +212,11 @@ def process_papers():
                 'papers': []
             }
 
-        # Preserve subtitle and i18n name if exists
+        # Preserve subtitle, i18n names, and subtitle_zh if exists
         if 'subtitle' in existing_meta:
             entry['subtitle'] = existing_meta['subtitle']
+        if 'subtitle_zh' in existing_meta:
+            entry['subtitle_zh'] = existing_meta['subtitle_zh']
         # Support both zhname (new) and display_name_zh (legacy) field names
         if 'zhname' in existing_meta:
             entry['zhname'] = existing_meta['zhname']
@@ -249,6 +265,8 @@ def process_papers():
             }
             if 'subtitle' in existing_meta:
                 entry['subtitle'] = existing_meta['subtitle']
+            if 'subtitle_zh' in existing_meta:
+                entry['subtitle_zh'] = existing_meta['subtitle_zh']
             if 'zhname' in existing_meta:
                 entry['zhname'] = existing_meta['zhname']
             elif 'display_name_zh' in existing_meta:
