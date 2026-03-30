@@ -678,4 +678,11 @@ body {
   .header-inner {
     padding: 0.6rem 1rem;
   }
+  .site-title {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
