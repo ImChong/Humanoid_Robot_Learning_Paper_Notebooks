@@ -77,8 +77,8 @@ body {
 .header-inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 24px;
-  height: 56px;
+  padding: 8px 24px;
+  min-height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
