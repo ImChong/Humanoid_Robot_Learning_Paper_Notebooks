@@ -114,10 +114,12 @@ body {
   background: none;
   border: 1px solid var(--border);
   border-radius: 6px;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0.6rem;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   line-height: 1;
+  min-width: 36px;
+  text-align: center;
 }
 .theme-toggle:hover {
   border-color: var(--link);
@@ -644,13 +646,14 @@ body {
   border-radius: 6px;
   padding: 0.3rem 0.6rem;
   cursor: pointer;
-  font-family: 'Arial', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--text-secondary);
   transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
   line-height: 1;
   user-select: none;
+  min-width: 36px;
+  text-align: center;
 }
 .lang-toggle:hover {
   background: var(--link);
