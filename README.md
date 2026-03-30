@@ -4,8 +4,7 @@
 [![Papers](https://img.shields.io/badge/Papers-489-orange.svg)](papers/PROGRESS.md)
 [![Notes](https://img.shields.io/badge/Notes-13-green.svg)](papers/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen.svg)](https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/)
-[![Deploy](https://github.com/ImChong/Humanoid_Robot_Learning_Paper_Notebooks/actions/workflows/deploy.yml/badge.svg)](https://github.com/ImChong/Humanoid_Robot_Learning_Paper_Notebooks/actions/workflows/deploy.yml)
-[![Update Badges](https://github.com/ImChong/Humanoid_Robot_Learning_Paper_Notebooks/actions/workflows/update-badges.yml/badge.svg)](https://github.com/ImChong/Humanoid_Robot_Learning_Paper_Notebooks/actions/workflows/update-badges.yml)
+
 
 **来源**: [awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning)
 
