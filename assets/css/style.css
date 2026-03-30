@@ -77,7 +77,8 @@ body {
 .header-inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0.8rem 1.5rem;
+  padding: 0 24px;
+  height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -624,6 +625,7 @@ body {
 
 /* ===== Footer ===== */
 .site-footer {
+  padding: 24px 0 20px;
   border-top: 1px solid var(--border);
   margin-top: 3rem;
 }
@@ -631,7 +633,7 @@ body {
 .footer-inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 0 24px;
   text-align: center;
   font-family: 'Arial', sans-serif;
   font-size: 0.8rem;
@@ -681,8 +683,8 @@ body {
   .site-title {
     flex: 1;
     min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.3;
   }
 }
