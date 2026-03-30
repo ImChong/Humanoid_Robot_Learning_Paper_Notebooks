@@ -22,12 +22,12 @@ title: "Home"
             {% endfor %}
           {% endif %}
           <li class="toc-item toc-h2">
-            <a href="#cat-{{ forloop.index }}" class="toc-link">{{ cat[1].display_name }} ({{ total_count }})</a>
+            <a href="#cat-{{ forloop.index }}" class="toc-link" data-en="{{ cat[1].display_name }}" data-zh="{{ cat[1].display_name_zh }}">{{ cat[1].display_name }} ({{ total_count }})</a>
             {% if cat[1].subcategories %}
             <ul class="toc-sublist">
               {% for subcat in cat[1].subcategories %}
               <li class="toc-item toc-h3">
-                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub">{{ subcat.name }} ({{ subcat.papers | size }})</a>
+                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub" data-en="{{ subcat.name }}" data-zh="{{ subcat.name_zh }}">{{ subcat.name }} ({{ subcat.papers | size }})</a>
               </li>
               {% endfor %}
             </ul>
@@ -64,13 +64,13 @@ title: "Home"
           {% assign main_total = main_total | plus: subcat.papers.size %}
         {% endfor %}
       {% endif %}
-      <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> <span class="cat-name" data-en="{{ cat_data.display_name }}" data-zh="{{ cat_data.display_name }}">{{ cat_data.display_name }}</span> <span class="paper-count">({{ main_total }})</span></h2>
+      <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> <span class="cat-name" data-en="{{ cat_data.display_name }}" data-zh="{{ cat_data.display_name_zh }}">{{ cat_data.display_name }}</span> <span class="paper-count">({{ main_total }})</span></h2>
       {% if cat_data.subtitle %}<p class="category-subtitle">{{ cat_data.subtitle }}</p>{% endif %}
       {% if cat_data.subcategories %}
         {% for subcat in cat_data.subcategories %}
         <div class="subcategory-section">
           <h3 class="subcategory-title" id="subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}">
-            <span class="subcat-name" data-en="{{ subcat.name }}" data-zh="{{ subcat.name }}">{{ subcat.name }}</span>
+            <span class="subcat-name" data-en="{{ subcat.name }}" data-zh="{{ subcat.name_zh }}">{{ subcat.name }}</span>
             <span class="paper-count">({{ subcat.papers | size }})</span>
           </h3>
           {% if subcat.papers.size > 0 %}
@@ -132,34 +132,6 @@ title: "Home"
 
   </div>
 </div>
-
-<script>
-// Update paper count text when language changes
-(function() {
-  var paperCountEl = document.getElementById('paper-count-label');
-  if (!paperCountEl) return;
-  var count = {{ paper_count }};
-
-  function updatePaperCount(mode) {
-    if (mode === 'zh') {
-      paperCountEl.textContent = '共 ' + count + ' 篇笔记';
-    } else {
-      paperCountEl.textContent = 'Total: ' + count + ' papers';
-    }
-  }
-
-  // Watch for language changes
-  var observer = new MutationObserver(function() {
-    var mode = document.documentElement.getAttribute('data-lang-mode') || 'en';
-    updatePaperCount(mode);
-  });
-  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-lang-mode'] });
-
-  // Set initial value
-  var initialMode = document.documentElement.getAttribute('data-lang-mode') || 'en';
-  updatePaperCount(initialMode);
-})();
-</script>
 
 <script>
 (function() {

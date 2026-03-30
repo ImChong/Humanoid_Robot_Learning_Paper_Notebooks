@@ -1,6 +1,7 @@
 {
   "01_Foundational_RL": {
     "display_name": "Foundational RL",
+    "display_name_zh": "基础强化学习",
     "papers": [
       {
         "title": "Proximal Policy Optimization Algorithms (PPO)",
@@ -49,11 +50,13 @@
   },
   "02_High_Impact_Selection": {
     "display_name": "High Impact Selection",
+    "display_name_zh": "高影响力精选",
     "papers": [],
     "subtitle": "Curated high-impact and milestone papers in humanoid robot learning",
     "subcategories": [
       {
         "name": "Whole-Body Control Core",
+        "name_zh": "全身控制核心",
         "papers": [
           {
             "title": "Expressive Whole-Body Control for Humanoid Robots",
@@ -65,24 +68,29 @@
       },
       {
         "name": "Teleoperation & Imitation Learning",
+        "name_zh": "遥操作与模仿学习",
         "papers": []
       },
       {
         "name": "Locomotion Classics",
+        "name_zh": "行走经典",
         "papers": []
       },
       {
         "name": "Sim-to-Real & Foundation Model",
+        "name_zh": "仿真到现实与基座模型",
         "papers": []
       },
       {
         "name": "Simulation Platform & Tools",
+        "name_zh": "仿真平台与工具",
         "papers": []
       }
     ]
   },
   "03_Loco-Manipulation_and_WBC": {
     "display_name": "Loco-Manipulation and WBC",
+    "display_name_zh": "运动操作与全身控制",
     "papers": [
       {
         "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
@@ -118,42 +126,52 @@
   },
   "04_Locomotion": {
     "display_name": "Locomotion",
+    "display_name_zh": "行走运动",
     "papers": []
   },
   "05_Manipulation": {
     "display_name": "Manipulation",
+    "display_name_zh": "灵巧操作",
     "papers": []
   },
   "06_Teleoperation": {
     "display_name": "Teleoperation",
+    "display_name_zh": "遥操作",
     "papers": []
   },
   "07_Navigation": {
     "display_name": "Navigation",
+    "display_name_zh": "导航",
     "papers": []
   },
   "08_State_Estimation": {
     "display_name": "State Estimation",
+    "display_name_zh": "状态估计",
     "papers": []
   },
   "09_Sim-to-Real": {
     "display_name": "Sim-to-Real",
+    "display_name_zh": "仿真到现实",
     "papers": []
   },
   "10_Simulation_Benchmark": {
     "display_name": "Simulation Benchmark",
+    "display_name_zh": "仿真基准",
     "papers": []
   },
   "11_Hardware_Design": {
     "display_name": "Hardware Design",
+    "display_name_zh": "硬件设计",
     "papers": []
   },
   "12_Physics-Based_Animation": {
     "display_name": "Physics-Based Animation",
+    "display_name_zh": "物理动画",
     "papers": []
   },
   "13_Human_Motion": {
     "display_name": "Human Motion",
+    "display_name_zh": "人体运动",
     "papers": []
   }
 }
