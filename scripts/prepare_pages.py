@@ -198,16 +198,23 @@ def process_papers():
                 'papers': []
             }
 
-        # Preserve subtitle if exists
+        # Preserve subtitle and i18n name if exists
         if 'subtitle' in existing_meta:
             entry['subtitle'] = existing_meta['subtitle']
+        # Support both zhname (new) and display_name_zh (legacy) field names
+        if 'zhname' in existing_meta:
+            entry['zhname'] = existing_meta['zhname']
+        elif 'display_name_zh' in existing_meta:
+            entry['zhname'] = existing_meta['display_name_zh']
 
         # Distribute papers into subcategories if defined
         if 'subcategories' in existing_meta:
             subcats = [dict(s) for s in existing_meta['subcategories']]
-            # Reset papers in each subcat
+            # Reset papers in each subcat and migrate name_zh -> zhname
             for s in subcats:
                 s['papers'] = []
+                if 'name_zh' in s:
+                    s['zhname'] = s.pop('name_zh')
             subcat_map = {s['name']: s for s in subcats}
             ungrouped = []
             for paper in papers:
@@ -242,8 +249,15 @@ def process_papers():
             }
             if 'subtitle' in existing_meta:
                 entry['subtitle'] = existing_meta['subtitle']
+            if 'zhname' in existing_meta:
+                entry['zhname'] = existing_meta['zhname']
+            elif 'display_name_zh' in existing_meta:
+                entry['zhname'] = existing_meta['display_name_zh']
             if 'subcategories' in existing_meta:
                 entry['subcategories'] = [dict(s, papers=[]) for s in existing_meta['subcategories']]
+                for s in entry['subcategories']:
+                    if 'name_zh' in s:
+                        s['zhname'] = s.pop('name_zh')
             index_data[category_dir] = entry
 
     # Sort by category directory name prefix (01_, 02_, etc.)
