@@ -3,15 +3,15 @@ layout: default
 title: "Home"
 ---
 <div class="index-header">
-  <h1>📚 Humanoid Robot Learning Paper Notebooks</h1>
-  <p>人形机器人强化学习论文笔记</p>
-  {% assign paper_count = 0 %}{% for p in site.pages %}{% if p.url contains '/papers/' and p.layout == 'paper' %}{% assign paper_count = paper_count | plus: 1 %}{% endif %}{% endfor %}<p class="subtitle">共 {{ paper_count }} 篇笔记</p>
+  <h1 data-en="📚 Humanoid Robot Learning Paper Notebooks" data-zh="📚 人形机器人学习论文笔记">📚 Humanoid Robot Learning Paper Notebooks</h1>
+  <p data-en="Paper reading notes on humanoid robot reinforcement learning" data-zh="人形机器人强化学习论文阅读笔记">Paper reading notes on humanoid robot reinforcement learning</p>
+  {% assign paper_count = 0 %}{% for p in site.pages %}{% if p.url contains '/papers/' and p.layout == 'paper' %}{% assign paper_count = paper_count | plus: 1 %}{% endif %}{% endfor %}<p class="subtitle" id="paper-count-label" data-en="Total: {count} papers" data-zh="共 {count} 篇笔记">Total: {{ paper_count }} papers</p>
 </div>
 
 <div class="index-layout">
   <aside class="toc-sidebar" id="toc-sidebar">
     <div class="toc-wrapper">
-      <h3 class="toc-title">📑 分类导航</h3>
+      <h3 class="toc-title" data-en="📑 Categories" data-zh="📑 分类导航">📑 分类导航</h3>
       <nav class="toc-nav">
         <ul class="toc-list">
           {% for cat in site.data.papers %}
@@ -48,7 +48,7 @@ title: "Home"
   {% for cat in site.data.papers %}
     {% assign cat_key = cat[0] %}
     {% assign cat_data = cat[1] %}
-    
+
     {% assign icon = "📄" %}
     {% for ci in category_icons %}
       {% assign ci_parts = ci | split: ":" %}
@@ -64,12 +64,15 @@ title: "Home"
           {% assign main_total = main_total | plus: subcat.papers.size %}
         {% endfor %}
       {% endif %}
-      <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> {{ cat_data.display_name }} <span class="paper-count">({{ main_total }})</span></h2>
+      <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> <span class="cat-name" data-en="{{ cat_data.display_name }}" data-zh="{{ cat_data.display_name }}">{{ cat_data.display_name }}</span> <span class="paper-count">({{ main_total }})</span></h2>
       {% if cat_data.subtitle %}<p class="category-subtitle">{{ cat_data.subtitle }}</p>{% endif %}
       {% if cat_data.subcategories %}
         {% for subcat in cat_data.subcategories %}
         <div class="subcategory-section">
-          <h3 class="subcategory-title" id="subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}">{{ subcat.name }} <span class="paper-count">({{ subcat.papers | size }})</span></h3>
+          <h3 class="subcategory-title" id="subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}">
+            <span class="subcat-name" data-en="{{ subcat.name }}" data-zh="{{ subcat.name }}">{{ subcat.name }}</span>
+            <span class="paper-count">({{ subcat.papers | size }})</span>
+          </h3>
           {% if subcat.papers.size > 0 %}
           <ul class="paper-list">
             {% for paper in subcat.papers %}
@@ -81,7 +84,7 @@ title: "Home"
             {% endfor %}
           </ul>
           {% else %}
-          <p class="empty-hint">📭 暂无笔记，敬请期待...</p>
+          <p class="empty-hint" data-en="No notes yet, stay tuned..." data-zh="暂无笔记，敬请期待...">No notes yet, stay tuned...</p>
           {% endif %}
         </div>
         {% endfor %}
@@ -96,7 +99,7 @@ title: "Home"
         {% endfor %}
       </ul>
       {% else %}
-      <p class="empty-hint">📭 暂无笔记，敬请期待...</p>
+      <p class="empty-hint" data-en="No notes yet, stay tuned..." data-zh="暂无笔记，敬请期待...">No notes yet, stay tuned...</p>
       {% endif %}
     </div>
   {% endfor %}
@@ -104,7 +107,7 @@ title: "Home"
 {% else %}
   {% comment %} Fallback: iterate site.pages directly {% endcomment %}
   {% assign paper_pages = site.pages | where_exp: "p", "p.url contains '/papers/'" | sort: "url" %}
-  
+
   {% assign current_cat = "" %}
   {% for page in paper_pages %}
     {% assign parts = page.url | split: "/" %}
@@ -129,6 +132,34 @@ title: "Home"
 
   </div>
 </div>
+
+<script>
+// Update paper count text when language changes
+(function() {
+  var paperCountEl = document.getElementById('paper-count-label');
+  if (!paperCountEl) return;
+  var count = {{ paper_count }};
+
+  function updatePaperCount(mode) {
+    if (mode === 'zh') {
+      paperCountEl.textContent = '共 ' + count + ' 篇笔记';
+    } else {
+      paperCountEl.textContent = 'Total: ' + count + ' papers';
+    }
+  }
+
+  // Watch for language changes
+  var observer = new MutationObserver(function() {
+    var mode = document.documentElement.getAttribute('data-lang-mode') || 'en';
+    updatePaperCount(mode);
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-lang-mode'] });
+
+  // Set initial value
+  var initialMode = document.documentElement.getAttribute('data-lang-mode') || 'en';
+  updatePaperCount(initialMode);
+})();
+</script>
 
 <script>
 (function() {

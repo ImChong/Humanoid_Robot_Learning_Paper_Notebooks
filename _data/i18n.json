@@ -1,0 +1,56 @@
+{
+  "site_title": {
+    "en": "Humanoid Robot Learning Paper Notebooks",
+    "zh": "人形机器人学习论文笔记"
+  },
+  "site_title_full": {
+    "en": "📚 Humanoid Robot Learning Paper Notebooks",
+    "zh": "📚 人形机器人学习论文笔记"
+  },
+  "index_header_h1": {
+    "en": "Humanoid Robot Learning Paper Notebooks",
+    "zh": "人形机器人学习论文笔记"
+  },
+  "index_header_p": {
+    "en": "Paper reading notes on humanoid robot reinforcement learning",
+    "zh": "人形机器人强化学习论文阅读笔记"
+  },
+  "total_papers": {
+    "en": "{count} papers",
+    "zh": "共 {count} 篇笔记"
+  },
+  "sidebar_title": {
+    "en": "Categories",
+    "zh": "分类导航"
+  },
+  "empty_hint": {
+    "en": "No notes yet, stay tuned...",
+    "zh": "暂无笔记，敬请期待..."
+  },
+  "paper_nav": {
+    "en": "← Back to list",
+    "zh": "← 返回论文列表"
+  },
+  "back_to_top": {
+    "en": "↑ Back to top",
+    "zh": "↑ 回到顶部"
+  },
+  "home": {
+    "en": "Home",
+    "zh": "首页"
+  },
+  "breadcrumb_home": {
+    "en": "🏠 Home",
+    "zh": "🏠 首页"
+  },
+  "toc_title": {
+    "en": "Contents",
+    "zh": "目录"
+  },
+  "paper_nav_back": {
+    "en": "← Back to list",
+    "zh": "← 返回论文列表"
+  },
+  "lang_toggle_zh": "English",
+  "lang_toggle_en": "中文"
+}

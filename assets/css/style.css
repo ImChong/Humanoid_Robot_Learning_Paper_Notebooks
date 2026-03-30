@@ -636,6 +636,28 @@ body {
   color: var(--text-secondary);
 }
 
+/* ===== Language Toggle ===== */
+.lang-toggle {
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+  line-height: 1;
+  user-select: none;
+}
+.lang-toggle:hover {
+  background: var(--link);
+  color: #fff;
+  border-color: var(--link);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .container {

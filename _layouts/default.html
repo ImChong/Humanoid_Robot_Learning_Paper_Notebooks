@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN" data-theme="light" data-lang-mode="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,50 @@
     {{ content }}
   </main>
   {% include footer.html %}
+
+  <script>
+    /* ─── Language Toggle ──────────────────────────────────── */
+    (function() {
+      var LANG_KEY = 'cl-lang';
+      var root = document.documentElement;
+      var langToggle = document.getElementById('lang-toggle');
+      var langLabel = langToggle ? langToggle.querySelector('.lang-label') : null;
+
+      function applyLang(mode) {
+        root.setAttribute('data-lang-mode', mode);
+        localStorage.setItem(LANG_KEY, mode);
+        if (langLabel) {
+          langLabel.textContent = mode === 'zh' ? '中文' : 'EN';
+        }
+        // Update all data-en/data-zh elements
+        var els = document.querySelectorAll('[data-en]');
+        for (var i = 0; i < els.length; i++) {
+          var el = els[i];
+          // For elements with only data-en/data-zh (no child text nodes), swap textContent
+          var useZh = mode === 'zh';
+          var text = useZh ? el.getAttribute('data-zh') : el.getAttribute('data-en');
+          if (text !== null) {
+            el.textContent = text;
+          }
+        }
+      }
+
+      function toggleLang() {
+        var cur = root.getAttribute('data-lang-mode') || 'en';
+        applyLang(cur === 'en' ? 'zh' : 'en');
+      }
+
+      // Initialize on load
+      (function() {
+        var saved = localStorage.getItem(LANG_KEY);
+        var initial = (saved === 'zh') ? 'zh' : 'en';
+        applyLang(initial);
+      })();
+
+      if (langToggle) langToggle.addEventListener('click', toggleLang);
+    })();
+  </script>
+
   <script>
     // KaTeX auto-render with HTML entity fix
     function initKaTeX() {
@@ -56,11 +100,11 @@
   <script>
     // Dark/Light mode
     (function() {
-      const toggle = document.getElementById('theme-toggle');
-      const html = document.documentElement;
+      var toggle = document.getElementById('theme-toggle');
+      var html = document.documentElement;
 
       function getPreferred() {
-        const saved = localStorage.getItem('theme');
+        var saved = localStorage.getItem('theme');
         if (saved) return saved;
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
@@ -74,7 +118,7 @@
       setTheme(getPreferred());
 
       toggle.addEventListener('click', function() {
-        const current = html.getAttribute('data-theme');
+        var current = html.getAttribute('data-theme');
         setTheme(current === 'dark' ? 'light' : 'dark');
       });
 

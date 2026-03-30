@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="paper-content">
   <nav class="breadcrumb">
-    <a href="{{ '/' | relative_url }}">🏠 Home</a>
+    <a href="{{ '/' | relative_url }}" data-en="🏠 Home" data-zh="🏠 首页">🏠 Home</a>
     {% assign path_parts = page.url | split: '/' %}
     {% if path_parts.size > 3 %}
       <span class="sep">›</span>
@@ -14,7 +14,7 @@ layout: default
   <div class="paper-layout">
     <aside class="toc-sidebar" id="toc-sidebar">
       <div class="toc-wrapper">
-        <h3 class="toc-title">📑 目录</h3>
+        <h3 class="toc-title" data-en="📑 Contents" data-zh="📑 目录">📑 目录</h3>
         <nav class="toc-nav" id="toc-nav"></nav>
       </div>
     </aside>
@@ -25,14 +25,14 @@ layout: default
 
     <aside class="right-sidebar" id="right-sidebar">
       <div class="right-sidebar-wrapper">
-        <a href="#" class="right-sidebar-link" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ 回到顶部</a>
-        <a href="{{ '/' | relative_url }}" class="right-sidebar-link">← 返回论文列表</a>
+        <a href="#" class="right-sidebar-link" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" data-en="↑ Back to top" data-zh="↑ 回到顶部">↑ Back to top</a>
+        <a href="{{ '/' | relative_url }}" class="right-sidebar-link" data-en="← Back to list" data-zh="← 返回论文列表">← Back to list</a>
       </div>
     </aside>
   </div>
 
   <div class="paper-nav">
-    <a href="{{ '/' | relative_url }}" class="back-link">← 返回论文列表</a>
+    <a href="{{ '/' | relative_url }}" class="back-link" data-en="← Back to list" data-zh="← 返回论文列表">← Back to list</a>
   </div>
 </article>
 
