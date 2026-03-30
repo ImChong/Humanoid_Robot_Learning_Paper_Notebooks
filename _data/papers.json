@@ -46,7 +46,7 @@
       }
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research",
-    "zhName": "基础强化学习"
+    "zhname": "基础强化学习"
   },
   "02_High_Impact_Selection": {
     "display_name": "High Impact Selection",
@@ -63,30 +63,30 @@
             "dir": "Expressive_Whole-Body_Control_for_Humanoid_Robots"
           }
         ],
-        "zhName": "全身控制核心"
+        "zhname": "全身控制核心"
       },
       {
         "name": "Teleoperation & Imitation Learning",
         "papers": [],
-        "zhName": "遥操作与模仿学习"
+        "zhname": "遥操作与模仿学习"
       },
       {
         "name": "Locomotion Classics",
         "papers": [],
-        "zhName": "行走经典"
+        "zhname": "行走经典"
       },
       {
         "name": "Sim-to-Real & Foundation Model",
         "papers": [],
-        "zhName": "仿真到现实与基座模型"
+        "zhname": "仿真到现实与基座模型"
       },
       {
         "name": "Simulation Platform & Tools",
         "papers": [],
-        "zhName": "仿真平台与工具"
+        "zhname": "仿真平台与工具"
       }
     ],
-    "zhName": "高影响力精选"
+    "zhname": "高影响力精选"
   },
   "03_Loco-Manipulation_and_WBC": {
     "display_name": "Loco-Manipulation and WBC",
@@ -122,56 +122,56 @@
         "dir": "VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety"
       }
     ],
-    "zhName": "运动操作与全身控制"
+    "zhname": "运动操作与全身控制"
   },
   "04_Locomotion": {
     "display_name": "Locomotion",
     "papers": [],
-    "zhName": "行走运动"
+    "zhname": "行走运动"
   },
   "05_Manipulation": {
     "display_name": "Manipulation",
     "papers": [],
-    "zhName": "灵巧操作"
+    "zhname": "灵巧操作"
   },
   "06_Teleoperation": {
     "display_name": "Teleoperation",
     "papers": [],
-    "zhName": "遥操作"
+    "zhname": "遥操作"
   },
   "07_Navigation": {
     "display_name": "Navigation",
     "papers": [],
-    "zhName": "导航"
+    "zhname": "导航"
   },
   "08_State_Estimation": {
     "display_name": "State Estimation",
     "papers": [],
-    "zhName": "状态估计"
+    "zhname": "状态估计"
   },
   "09_Sim-to-Real": {
     "display_name": "Sim-to-Real",
     "papers": [],
-    "zhName": "仿真到现实"
+    "zhname": "仿真到现实"
   },
   "10_Simulation_Benchmark": {
     "display_name": "Simulation Benchmark",
     "papers": [],
-    "zhName": "仿真基准"
+    "zhname": "仿真基准"
   },
   "11_Hardware_Design": {
     "display_name": "Hardware Design",
     "papers": [],
-    "zhName": "硬件设计"
+    "zhname": "硬件设计"
   },
   "12_Physics-Based_Animation": {
     "display_name": "Physics-Based Animation",
     "papers": [],
-    "zhName": "物理动画"
+    "zhname": "物理动画"
   },
   "13_Human_Motion": {
     "display_name": "Human Motion",
     "papers": [],
-    "zhName": "人体运动"
+    "zhname": "人体运动"
   }
 }
