@@ -736,6 +736,7 @@ body {
   overflow: hidden;
   margin: 0;
   border-collapse: collapse;
+  border-spacing: 0;
   table-layout: fixed;
 }
 
@@ -749,23 +750,20 @@ body {
   vertical-align: top;
 }
 
-/* Line number column — fixed width, right-aligned, same line-height as code */
+/* Line number column — fixed width, right-aligned */
 .paper-body .highlighter-rouge table.rouge-table td.rouge-gutter {
   width: 3.2rem;
   white-space: nowrap;
   text-align: right;
-  padding-right: 0.75rem !important;
-  padding-top: 0.75rem !important;
-  padding-bottom: 0.75rem !important;
   vertical-align: top;
 }
 
 .paper-body .highlighter-rouge table.rouge-table td.rouge-gutter pre.lineno {
   background: transparent !important;
   border: none !important;
-  padding: 0 !important;
+  padding: 0.75rem 0.75rem 0.75rem 0 !important;
   margin: 0 !important;
-  font: 0.875rem/1.7 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font: 0.875rem/1.5 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
   color: #999 !important;
   text-align: right !important;
   display: block !important;
@@ -776,8 +774,8 @@ body {
 .paper-body .highlighter-rouge table.rouge-table td.rouge-code {
   padding-left: 0 !important;
   padding-right: 0 !important;
-  padding-top: 0.75rem !important;
-  padding-bottom: 0.75rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -785,9 +783,9 @@ body {
 .paper-body .highlighter-rouge table.rouge-table td.rouge-code pre {
   background: transparent !important;
   border: none !important;
-  padding: 0 !important;
+  padding: 0.75rem 0.75rem 0.75rem 0.75rem !important;
   margin: 0 !important;
-  font: 0.875rem/1.7 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font: 0.875rem/1.5 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
   overflow-x: auto !important;
   white-space: pre !important;
   word-break: normal !important;
@@ -801,7 +799,7 @@ body {
     border-color: #3c3c3c;
   }
   .paper-body .highlighter-rouge table.rouge-table td.rouge-gutter pre.lineno {
-    font: 0.875rem/1.7 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
+    font: 0.875rem/1.5 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
     color: #666 !important;
   }
 }
