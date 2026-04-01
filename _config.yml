@@ -9,6 +9,8 @@ kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    line_numbers: inline
 
 # Include papers directory (Jekyll ignores dirs starting with _ by default)
 include:
