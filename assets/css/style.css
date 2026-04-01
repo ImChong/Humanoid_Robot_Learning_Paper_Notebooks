@@ -765,7 +765,7 @@ body {
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  font: 0.75rem/1.7 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font: 0.875rem/1.7 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
   color: #999 !important;
   text-align: right !important;
   display: block !important;
@@ -801,6 +801,7 @@ body {
     border-color: #3c3c3c;
   }
   .paper-body .highlighter-rouge table.rouge-table td.rouge-gutter pre.lineno {
+    font: 0.875rem/1.7 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
     color: #666 !important;
   }
 }
