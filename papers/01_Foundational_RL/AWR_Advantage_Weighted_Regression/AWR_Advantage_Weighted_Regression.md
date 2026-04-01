@@ -277,6 +277,143 @@ AWR 本身在人形机器人控制中不是最常用的算法（PPO 用得更多
 
 ---
 
+## 📁 MimicKit 源码对照
+
+以下代码块对应 [MimicKit](https://github.com/xbpeng/MimicKit) 中 AWR 的实现，与上述讲解的各模块一一对应。
+
+### 1. 核心：指数优势权重计算（`_build_train_data`）
+
+```python
+# mimickit/learning/awr_agent.py - _build_train_data()
+# 第一步：用价值网络计算优势 A(s,a) = R - V(s)
+adv = new_vals - vals  # 原始优势
+
+# 归一化优势
+adv_mean, adv_std = mp_util.calc_mean_std(rand_action_adv)
+norm_adv = (adv - adv_mean) / torch.clamp_min(adv_std, 1e-5)
+
+# 第二步：计算指数权重 w = exp(A / β)
+# β (awr_temp) 控制权重的"尖锐程度"
+a_weight = torch.exp(norm_adv / self._awr_temp)
+# 权重上限，防止数值爆炸
+a_weight = torch.clamp_max(a_weight, self._a_weight_clip)
+```
+
+对应配置：
+```yaml
+awr_temp: 1.0        # 温度参数 β
+a_weight_clip: 20.0   # 权重上限，防止 exp(A) 过大
+```
+
+### 2. 核心：加权回归更新策略（`_compute_actor_loss`）
+
+```python
+# mimickit/learning/awr_agent.py - _compute_actor_loss()
+def _compute_actor_loss(self, batch):
+    norm_obs = self._obs_norm.normalize(batch["obs"])
+    norm_a = self._a_norm.normalize(batch["action"])
+    a_weight = batch["a_weight"]      # exp(A/β) 指数权重
+    rand_action_mask = batch["rand_action_mask"]
+
+    # 只用随机采样的数据计算 loss
+    rand_action_mask = (rand_action_mask == 1.0)
+    norm_obs = norm_obs[rand_action_mask]
+    norm_a = norm_a[rand_action_mask]
+    a_weight = a_weight[rand_action_mask]
+
+    a_dist = self._model.eval_actor(norm_obs)
+    a_logp = a_dist.log_prob(norm_a)
+    
+    # 加权最大似然：L = w · log π(a|s)
+    # 等价于公式 max Σ w · log πθ(a|s)
+    actor_loss = a_weight * a_logp
+    actor_loss = -torch.mean(actor_loss)  # 加负号因为 optimizer 做最小化
+```
+
+> 🔑 **对比 PPO**：PPO 用 `min(r·A, clip(r)·A)` 限制更新幅度；AWR 用 `exp(A/β)` 天然限制——差动作的权重趋近 0，好动作权重高。
+
+### 3. 价值网络损失（Critic Loss）
+
+```python
+# mimickit/learning/awr_agent.py - _compute_critic_loss()
+def _compute_critic_loss(self, batch):
+    norm_obs = self._obs_norm.normalize(batch["obs"])
+    tar_val = batch["tar_val"]      # TD-λ 回报 target
+    pred = self._model.eval_critic(norm_obs)  # V(s) 预测
+    pred = pred.squeeze(-1)
+
+    diff = tar_val - pred
+    loss = torch.mean(torch.square(diff))  # MSE
+
+    info = {"critic_loss": loss}
+    return info
+```
+
+### 4. Actor-Critic 网络结构（AWRModel）
+
+```python
+# mimickit/learning/awr_model.py
+class AWRModel(base_model.BaseModel):
+    def eval_actor(self, obs):
+        h = self._actor_layers(obs)
+        a_dist = self._action_dist(h)
+        return a_dist
+    
+    def eval_critic(self, obs):
+        h = self._critic_layers(obs)
+        val = self._critic_out(h)
+        return val
+```
+
+网络结构与 PPO 相同（独立 Actor 和 Critic），MLP 用 `fc_2layers_1024units`（1024→512 两层）。
+
+### 5. 训练循环（`_update_model`）
+
+```python
+# mimickit/learning/awr_agent.py - _update_model()
+def _update_model(self):
+    num_samples = self._exp_buffer.get_sample_count()
+    
+    # 先更新 Critic（2 个 epoch）
+    critic_batch_size = int(np.ceil(self._critic_batch_size * num_envs))
+    num_critic_steps = num_critic_batches * self._critic_epochs
+    self._update_critic(critic_batch_size, num_critic_steps)
+    
+    # 再更新 Actor（5 个 epoch）
+    # 每次更新都使用最新的 exp(A/β) 权重
+    actor_batch_size = int(np.ceil(self._actor_batch_size * num_envs))
+    num_actor_steps = num_actor_batches * self._actor_epochs
+    self._update_actor(actor_batch_size, num_actor_steps)
+```
+
+### 6. AWR 超参数一览
+
+```yaml
+# data/agents/deepmimic_humanoid_awr_agent.yaml
+agent_name: "AWR"
+
+model:
+  actor_net: "fc_2layers_1024units"   # [obs] → 1024 → 512 → [action]
+  actor_std_type: "FIXED"
+  action_std: 0.05                    # 固定动作标准差
+  critic_net: "fc_2layers_1024units"  # [obs] → 1024 → 512 → [1]
+
+discount: 0.99           # 折扣因子 γ
+td_lambda: 0.95         # GAE λ
+awr_temp: 1.0           # 温度参数 β（控制权重锐度）
+a_weight_clip: 20.0     # 权重上限
+
+actor_epochs: 5         # Actor 更新 5 个 epoch
+actor_batch_size: 4      # 每 batch 4 个环境
+critic_epochs: 2         # Critic 更新 2 个 epoch
+critic_batch_size: 2
+
+action_bound_weight: 10.0   # 动作范围惩罚
+action_entropy_weight: 0.0  # 熵正则（0 表示不用）
+```
+
+---
+
 ## 🎤 面试高频问题 & 参考回答
 
 ### Q1: AWR 和 PPO 的核心区别？
