@@ -8,6 +8,7 @@ kramdown:
   math_engine: null
   input: GFM
   hard_wrap: false
+  syntax_highlighter: rouge
 
 # Include papers directory (Jekyll ignores dirs starting with _ by default)
 include:
