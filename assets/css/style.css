@@ -692,14 +692,27 @@ body {
 /* ===========================
    Rouge Syntax Highlighting
    =========================== */
-.highlight {
-  background: var(--code-bg);
-  border: 1px solid var(--code-border);
+.highlight,
+.codehilite,
+.paper-body pre.highlight {
+  background: var(--code-bg) !important;
+  border: 1px solid var(--code-border) !important;
   border-radius: 4px;
   padding: 0.8rem 1rem;
   overflow-x: auto;
   font-size: 0.85em;
   line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.highlight code,
+.codehilite code,
+.paper-body pre.highlight code {
+  background: transparent !important;
+  border: none !important;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
 }
 .highlight .k, .highlight .kd  { color: #ff79c6; }  /* keyword / keyword.def */
 .highlight .nb, .highlight .nc { color: #bd93f9; }  /* number / name.class */
