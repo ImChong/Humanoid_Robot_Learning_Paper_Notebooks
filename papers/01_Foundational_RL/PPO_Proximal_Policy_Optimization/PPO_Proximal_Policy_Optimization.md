@@ -277,6 +277,210 @@ for epoch in range(10):
 
 ---
 
+## 📁 MimicKit 源码对照
+
+以下代码块对应 [MimicKit](https://github.com/xbpeng/MimicKit) 中 PPO 的实现，与上述讲解的各模块一一对应。
+
+### 1. Actor-Critic 网络结构（PPOModel）
+
+```python
+# mimickit/learning/ppo_model.py
+class PPOModel(base_model.BaseModel):
+    def eval_actor(self, obs):
+        h = self._actor_layers(obs)
+        a_dist = self._action_dist(h)
+        return a_dist
+    
+    def eval_critic(self, obs):
+        h = self._critic_layers(obs)
+        val = self._critic_out(h)
+        return val
+```
+
+Actor 和 Critic 各自独立（不共享 backbone），这是人形机器人领域的主流选择。
+
+### 2. MLP 网络（fc_2layers_1024units）
+
+```python
+# mimickit/learning/nets/fc_2layers_1024units.py
+def build_net(input_dict, activation):
+    layer_sizes = [1024, 512]  # 两层 MLP
+    
+    input_dim = np.sum([np.prod(curr_input.shape) for curr_input in input_dict.values()])
+    
+    in_size = input_dim
+    layers = []
+    for out_size in layer_sizes:
+        curr_layer = torch.nn.Linear(in_size, out_size)
+        torch.nn.init.zeros_(curr_layer.bias)
+        layers.append(curr_layer)
+        layers.append(activation())
+        in_size = out_size
+    
+    net = torch.nn.Sequential(*layers)
+    return net, info
+```
+
+对应 `deepmimic_humanoid_ppo_agent.yaml` 中的配置：
+```yaml
+model:
+  actor_net: "fc_2layers_1024units"  # [obs] → 1024 → 512 → [17] (动作均值)
+  critic_net: "fc_2layers_1024units" # [obs] → 1024 → 512 → [1] (价值标量)
+```
+
+### 3. 概率比计算（r_t）
+
+```python
+# mimickit/learning/ppo_agent.py - _compute_actor_loss()
+a_dist = self._model.eval_actor(norm_obs)
+a_logp = a_dist.log_prob(norm_a)
+
+# 概率比 r_t(θ) = π_θ(a|s) / π_θ_old(a|s)
+a_ratio = torch.exp(a_logp - old_a_logp)
+```
+
+### 4. PPO 裁剪机制（核心！）
+
+```python
+# mimickit/learning/ppo_agent.py - _compute_actor_loss()
+a_ratio = torch.exp(a_logp - old_a_logp)
+
+# L^CLIP(θ) = min(r_t(θ)·Â_t, clip(r_t(θ), 1-ε, 1+ε)·Â_t)
+actor_loss0 = adv * a_ratio
+actor_loss1 = adv * torch.clamp(a_ratio, 
+                                 1.0 - self._ppo_clip_ratio,  # ε=0.2 → 下界 0.8
+                                 1.0 + self._ppo_clip_ratio)  # ε=0.2 → 上界 1.2
+actor_loss = torch.minimum(actor_loss0, actor_loss1)
+actor_loss = -torch.mean(actor_loss)  # 加负号因为 optimizer 做最小化
+```
+
+对应配置：
+```yaml
+ppo_clip_ratio: 0.2   # ε = 0.2，概率比限制在 [0.8, 1.2]
+norm_adv_clip: 4.0    # 优势归一化后限制在 [-4, 4]
+```
+
+### 5. GAE / TD-λ 回报计算
+
+```python
+# mimickit/learning/rl_util.py
+def compute_td_lambda_return(r, next_vals, done, discount, td_lambda):
+    return_t = torch.zeros_like(r)
+    reset_mask = done != base_env.DoneFlags.NULL.value
+    reset_mask = reset_mask.type(torch.float)
+
+    last_val = r[-1] + discount * next_vals[-1]
+    return_t[-1] = last_val
+
+    timesteps = r.shape[0]
+    for i in reversed(range(0, timesteps - 1)):
+        curr_r = r[i]
+        curr_reset = reset_mask[i]
+        next_v = next_vals[i]
+        next_ret = return_t[i + 1]
+
+        # λ=0.95 时，遇到 done 截断，不跨越轨迹
+        curr_lambda = td_lambda * (1.0 - curr_reset)
+        curr_val = curr_r + discount * ((1.0 - curr_lambda) * next_v + curr_lambda * next_ret)
+        return_t[i] = curr_val
+    
+    return return_t
+```
+
+对应配置：
+```yaml
+td_lambda: 0.95        # GAE λ=0.95
+discount: 0.99         # 折扣因子 γ=0.99
+```
+
+### 6. 价值网络损失（Critic Loss）
+
+```python
+# mimickit/learning/ppo_agent.py - _compute_critic_loss()
+def _compute_critic_loss(self, batch):
+    norm_obs = self._obs_norm.normalize(batch["obs"])
+    tar_val = batch["tar_val"]  # TD-λ 回报 target
+    pred = self._model.eval_critic(norm_obs)  # V(s) 预测
+    pred = pred.squeeze(-1)
+
+    diff = tar_val - pred
+    loss = torch.mean(torch.square(diff))  # MSE 损失
+
+    info = {"critic_loss": loss}
+    return info
+```
+
+### 7. 训练循环（PPO Update）
+
+```python
+# mimickit/learning/ppo_agent.py - _update_model()
+def _update_model(self):
+    num_samples = self._exp_buffer.get_sample_count()
+    
+    # 先更新 Critic（多个 epoch）
+    critic_batch_size = int(np.ceil(self._critic_batch_size * num_envs))
+    num_critic_steps = num_critic_batches * self._critic_epochs
+    self._update_critic(critic_batch_size, num_critic_steps)
+    
+    # 再更新 Actor（多个 epoch）
+    actor_batch_size = int(np.ceil(self._actor_batch_size * num_envs))
+    num_actor_steps = num_actor_batches * self._actor_epochs
+    self._update_actor(actor_batch_size, num_actor_steps)
+```
+
+对应配置：
+```yaml
+actor_epochs: 5        # Actor 更新 5 个 epoch
+actor_batch_size: 4    # 每个 batch 4 个环境
+critic_epochs: 2       # Critic 更新 2 个 epoch
+critic_batch_size: 2
+```
+
+### 8. Experience Buffer
+
+```python
+# mimickit/learning/experience_buffer.py
+class ExperienceBuffer():
+    def __init__(self, buffer_length, batch_size, device):
+        self._buffer_length = buffer_length  # 每环境收集步数（如 32）
+        self._batch_size = batch_size        # 并行环境数（如 4096）
+    
+    def record(self, name, data):
+        # 记录 (s, a, r, done, logp) 等数据
+        data_buf[self._buffer_head] = data
+    
+    def sample(self, n):
+        # 随机采样 mini-batch 用于更新
+        rand_idx = self._sample_rand_idx(n)
+        ...
+```
+
+对应配置：
+```yaml
+steps_per_iter: 32     # 每轮收集 32 步 × N 个环境
+```
+
+### 9. PPO 超参数一览
+
+```yaml
+# deepmimic_humanoid_ppo_agent.yaml
+agent_name: "PPO"
+discount: 0.99              # 折扣因子 γ
+td_lambda: 0.95             # GAE λ
+ppo_clip_ratio: 0.2         # 裁剪范围 ε
+norm_adv_clip: 4.0          # 优势归一化后截断
+
+actor_epochs: 5             # Actor 更新轮数
+actor_batch_size: 4         # Actor batch size
+critic_epochs: 2            # Critic 更新轮数
+critic_batch_size: 2
+
+action_bound_weight: 10.0   # 动作范围惩罚（防止动作超出边界）
+action_entropy_weight: 0.0  # 熵正则（0 表示不用）
+```
+
+---
+
 ## 🎤 面试高频问题 & 参考回答
 
 ### Q1: PPO 和 TRPO 的区别？
