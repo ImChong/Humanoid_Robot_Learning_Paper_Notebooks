@@ -692,9 +692,26 @@ body {
 /* ===========================
    Rouge Syntax Highlighting
    =========================== */
-.highlight,
-.codehilite,
-.paper-body pre.highlight {
+/* Outermost wrapper from Rouge: <div class="language-python highlighter-rouge"> */
+.paper-body .highlighter-rouge {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 1rem 0 !important;
+}
+
+/* Rouge's own <div class="highlight"> wrapper */
+.paper-body .highlighter-rouge .highlight {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* The <pre> that should hold the border */
+.paper-body .highlighter-rouge pre.highlight {
   background: var(--code-bg) !important;
   border: 1px solid var(--code-border) !important;
   border-radius: 4px;
@@ -702,16 +719,15 @@ body {
   overflow-x: auto;
   font-size: 0.85em;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 0 !important;
 }
 
-.highlight code,
-.codehilite code,
-.paper-body pre.highlight code {
+/* Code inside pre */
+.paper-body .highlighter-rouge pre.highlight code {
   background: transparent !important;
   border: none !important;
-  padding: 0;
-  border-radius: 0;
+  padding: 0 !important;
+  border-radius: 0 !important;
   font-size: inherit;
 }
 .highlight .k, .highlight .kd  { color: #ff79c6; }  /* keyword / keyword.def */
