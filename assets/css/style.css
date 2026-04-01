@@ -745,9 +745,10 @@ body {
 .paper-body .highlighter-rouge table.rouge-table td.rouge-code {
   background: transparent !important;
   border: none !important;
-  padding: 0 !important;
   margin: 0 !important;
   vertical-align: top;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* Line number column — fixed width, right-aligned */
@@ -755,27 +756,27 @@ body {
   width: 3.2rem;
   white-space: nowrap;
   text-align: right;
-  vertical-align: top;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
 .paper-body .highlighter-rouge table.rouge-table td.rouge-gutter pre.lineno {
   background: transparent !important;
   border: none !important;
-  padding: 0.75rem 0.75rem 0.75rem 0 !important;
+  padding: 0.75rem 0 !important;
   margin: 0 !important;
-  font: 0.875rem/1.5 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font: 0.875rem 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
   color: #999 !important;
   text-align: right !important;
   display: block !important;
   user-select: none;
+  line-height: normal !important;
 }
 
 /* Code column — fills remaining space */
 .paper-body .highlighter-rouge table.rouge-table td.rouge-code {
   padding-left: 0 !important;
   padding-right: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -783,13 +784,14 @@ body {
 .paper-body .highlighter-rouge table.rouge-table td.rouge-code pre {
   background: transparent !important;
   border: none !important;
-  padding: 0.75rem 0.75rem 0.75rem 0.75rem !important;
+  padding: 0.75rem !important;
   margin: 0 !important;
-  font: 0.875rem/1.5 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font: 0.875rem 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace !important;
   overflow-x: auto !important;
   white-space: pre !important;
   word-break: normal !important;
   -webkit-overflow-scrolling: touch;
+  line-height: normal !important;
 }
 
 /* Dark mode — same single box, dark background */
