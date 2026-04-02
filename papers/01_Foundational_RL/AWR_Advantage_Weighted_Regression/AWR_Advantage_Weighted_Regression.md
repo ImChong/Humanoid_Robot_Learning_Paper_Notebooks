@@ -365,7 +365,7 @@ class AWRModel(base_model.BaseModel):
         return val
 ```
 
-网络结构与 PPO 相同（独立 Actor 和 Critic），MLP 用 `fc_2layers_1024units`（1024→512 两层）。
+网络结构与 PPO 相同（独立 Actor 和 Critic），MLP 用 fc_2layers_1024units（1024→512 两层）。
 
 ### 5. 训练循环（`_update_model`）
 
