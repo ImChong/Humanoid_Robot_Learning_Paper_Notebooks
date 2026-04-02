@@ -1041,6 +1041,121 @@ $$A = M + \Delta t \cdot k_d + \Delta t^2 \cdot k_p$$
 
 ---
 
+## K. 代码模块对照（MimicKit）
+
+> 📍 MimicKit 代码库路径：`/home/chong/Desktop/project/MimicKit`
+> 
+> 本节将论文中的核心概念对应对应到 MimicKit 的具体代码模块，方便理解理论如何落地实现。
+
+### K.1 环境与仿真核心
+
+| 论文概念 | 代码文件 | 关键函数/类 | 说明 |
+|---------|---------|-----------|------|
+| **DeepMimic 环境** | `mimickit/envs/deepmimic_env.py` | `class DeepMimicEnv(char_env.CharEnv)` | 主环境类，继承自 CharEnv，管理仿真循环和奖励计算 |
+| **仿真构建** | `mimickit/envs/deepmimic_env.py` | `_build_sim_tensors()` | 初始化参考状态 tensors（位置、旋转、速度等） |
+| **环境重置** | `mimickit/envs/deepmimic_env.py` | `_reset_char()` | 调用 RSI 初始化 + 重置参考角色 |
+| **Misc 更新** | `mimickit/envs/deepmimic_env.py` | `_update_misc()` | 每步调用 `_update_ref_motion()` 更新参考动作状态 |
+
+### K.2 参考状态初始化（RSI）
+
+| 论文概念 | 代码文件 | 关键函数 | 说明 |
+|---------|---------|---------|------|
+| **RSI 核心** | `mimickit/envs/deepmimic_env.py` | `_ref_state_init()` | 将角色状态初始化为参考动作的随机时刻 |
+| **参考动作采样** | `mimickit/anim/motion_lib.py` | `sample_time()` | 均匀采样参考动作中的时间点（phase = rand） |
+| **运动帧获取** | `mimickit/anim/motion_lib.py` | `calc_motion_frame()` | 根据 motion_id 和 time 计算参考动作的关节角度、速度等 |
+| **参考动作重置** | `mimickit/envs/deepmimic_env.py` | `_reset_ref_motion()` | 重置参考动作的 motion_id 和时间偏移 |
+
+> 💡 **对应关系**：`_sample_motion_times()` → `motion_lib.sample_time()` → `phase * motion_len` 实现均匀采样
+
+### K.3 提前终止（ET）
+
+| 论文概念 | 代码文件 | 关键函数 | 说明 |
+|---------|---------|---------|------|
+| **ET 判断** | `mimickit/envs/deepmimic_env.py` | `compute_done()` | 判断是否摔倒（接触力、姿态偏离），返回 done flags |
+| **摔倒检测** | `mimickit/envs/deepmimic_env.py` | `has_fallen` | 非脚部位触地（接触力 > 0.1N）|
+| **姿态偏离终止** | `mimickit/envs/deepmimic_env.py` | `pose_fail` | 角色姿态与参考姿态距离超过阈值 |
+| **终止条件** | `mimickit/envs/deepmimic_env.py` | `DoneFlags.FAIL` | 摔倒或姿态严重偏离时返回 FAIL |
+
+> 💡 **关键逻辑**：ET 只在第一步之后生效 `not_first_step = (time > 0.0)`，避免初始状态误判
+
+### K.4 模仿奖励计算
+
+| 论文概念 | 代码文件 | 关键函数 | 说明 |
+|---------|---------|---------|------|
+| **奖励计算核心** | `mimickit/envs/deepmimic_env.py` | `compute_reward()` | 完整的四维模仿奖励 + 任务奖励计算 |
+| **姿态奖励 $r^p$** | `mimickit/envs/deepmimic_env.py` | `pose_r = torch.exp(-pose_scale * pose_err)` | 关节四元数朝向差异的指数惩罚 |
+| **速度奖励 $r^v$** | `mimickit/envs/deepmimic_env.py` | `vel_r = torch.exp(-vel_scale * vel_err)` | 关节角速度差异的指数惩罚 |
+| **末端位置奖励 $r^{ee}$** | `mimickit/envs/deepmimic_env.py` | `key_pos_r = torch.exp(-key_pos_scale * key_pos_err)` | 手脚位置误差的指数惩罚 |
+| **质心奖励 $r^{com}$** | `mimickit/envs/deepmimic_env.py` | `root_pose_r = torch.exp(-root_pose_scale * (root_pos_err + 0.1 * root_rot_err))` | 质心位置 + 身体朝向误差 |
+| **四元数差分** | `mimickit/util/torch_util.py` | `quat_diff_angle()` | 计算两个四元数之间的旋转角度差 |
+| **权重配置** | `mimickit/envs/deepmimic_env.py` | `reward_pose_w`, `reward_vel_w`, `reward_key_pos_w` 等 | 对应 $w^p, w^v, w^{ee}, w^{com}$ |
+
+> 💡 **代码公式对照**：  
+> 论文：$r_t^p = \exp(-2 \sum_j \|\hat{q}_j \ominus q_j\|^2)$  
+> 代码：`pose_r = torch.exp(-pose_scale * pose_err)` 其中 `pose_err = torch.sum(joint_rot_err_w * pose_diff * pose_diff, dim=-1)`
+
+### K.5 动作库与运动数据
+
+| 论文概念 | 代码文件 | 关键类/函数 | 说明 |
+|---------|---------|-----------|------|
+| **运动库** | `mimickit/anim/motion_lib.py` | `class MotionLib` | 加载和管理 ASF/AMC 格式的动捕数据 |
+| **单帧运动数据** | `mimickit/anim/motion.py` | `class Motion` | 单段动作的数据结构 |
+| **关节运动学模型** | `mimickit/anim/kin_char_model.py` | `class KinCharModel` | 纯运动学角色模型（无物理仿真），用于前向运动学计算 |
+| **前向运动学** | `mimickit/anim/kin_char_model.py` | `forward_kinematics()` | 根据关节角度计算身体各部位的世界坐标 |
+| **运动帧插值** | `mimickit/anim/motion_lib.py` | `slerp()` | 两个关键帧之间使用球面线性插值（SLERP）获取连续姿态 |
+| **关节旋转转换** | `mimickit/anim/motion_lib.py` | `joint_rot_to_dof()` / `dof_to_rot()` | 关节旋转与 DOF 角度之间的转换 |
+
+### K.6 强化学习算法
+
+| 论文概念 | 代码文件 | 关键类 | 说明 |
+|---------|---------|--------|------|
+| **PPO Agent** | `mimickit/learning/ppo_agent.py` | `class PPOAgent` | PPO 强化学习智能体实现 |
+| **PPO Model** | `mimickit/learning/ppo_model.py` | `class PPOModel` | PPO 的策略网络和价值网络架构 |
+| **AWR Agent** | `mimickit/learning/awr_agent.py` | `class AWRAgent` | AWR（Advantage-Weighted Regression）算法 |
+| **AMP Agent** | `mimickit/learning/amp_agent.py` | `class AMPAgent` | AMP（Adversarial Motion Priors）算法 |
+| **经验缓冲区** | `mimickit/learning/experience_buffer.py` | `class ExperienceBuffer` | 存储和采样训练数据 |
+| **Agent 构建器** | `mimickit/learning/agent_builder.py` | `class AgentBuilder` | 根据配置构建相应的学习智能体 |
+
+### K.7 网络架构
+
+| 论文概念 | 代码文件 | 说明 |
+|---------|---------|------|
+| **网络结构定义** | `mimickit/learning/nets/` | 各种网络架构（FC、CNN 等） |
+| **全连接网络** | `mimickit/learning/nets/fc_2layers_1024units.py` 等 | 2-3 层全连接，单元数 128-1024 |
+| **网络构建器** | `mimickit/learning/nets/net_builder.py` | 根据配置创建网络 |
+
+### K.8 物理引擎
+
+| 论文概念 | 代码文件 | 说明 |
+|---------|---------|------|
+| **引擎接口** | `mimickit/engines/engine.py` | 物理引擎的统一接口 |
+| **Isaac Lab 引擎** | `mimickit/engines/isaac_lab_engine.py` | NVIDIA Isaac Lab 仿真后端 |
+| **Newton 引擎** | `mimickit/engines/newton_engine.py` | Newton Physics 仿真后端 |
+| **引擎构建器** | `mimickit/engines/engine_builder.py` | 根据配置创建物理引擎 |
+
+### K.9 关键代码线索
+
+```
+DeepMimic 训练流程代码线索：
+1. run.py                    → 入口点，解析参数并启动训练
+2. envs.deepmimic_env       → DeepMimicEnv 环境类
+3.   └─ _reset_char()        → RSI 初始化
+4.   └─ _ref_state_init()    → 从参考动作随机时刻初始化
+5.   └─ compute_reward()     → 四维模仿奖励计算
+6.   └─ compute_done()       → ET 提前终止判断
+7. anim.motion_lib           → 动捕数据加载和采样
+8. learning.ppo_agent        → PPO 算法实现
+```
+
+> 🔑 **快速定位技巧**：想找某个功能的实现？先用 `grep` 在 `/home/chong/Desktop/project/MimicKit` 目录下搜索关键词，例如：
+> ```bash
+> grep -r "ref_state_init" /home/chong/Desktop/project/MimicKit/mimickit/
+> grep -r "compute_reward" /home/chong/Desktop/project/MimicKit/mimickit/
+> grep -r "early_termination" /home/chong/Desktop/project/MimicKit/mimickit/
+> ```
+
+---
+
 ## 💬 讨论记录
 
 > 待补充
