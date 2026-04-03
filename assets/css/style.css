@@ -706,6 +706,16 @@ body {
   margin: 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  /* Prevent line wrapping — long lines scroll horizontally, keeping line numbers aligned */
+  white-space: pre !important;
+  word-wrap: normal !important;
+  overflow-wrap: normal !important;
+}
+
+.paper-body pre[class*="language-"] code,
+.paper-body .highlighter-rouge pre code {
+  white-space: pre !important;
+  word-wrap: normal !important;
 }
 
 /* Light mode: match site's neutral tone */
