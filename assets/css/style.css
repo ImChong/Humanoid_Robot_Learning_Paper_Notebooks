@@ -701,55 +701,57 @@ body {
   margin: 1.2rem 0;
 }
 
-.paper-body .code-table {
-  display: flex;
+.paper-body .code-block {
   background: #ffffff !important;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.6rem 0;
   font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
   font-size: 0.875rem;
   line-height: 1.5;
-  /* No vertical padding — rows have padding instead */
-  padding: 0;
-}
-
-/* Fixed-width line-number column — never scrolls */
-.paper-body .code-ln-col {
-  flex: 0 0 3rem;
-  width: 3rem;
-  background: #ffffff;
-  border-right: 1px solid #e0e0e0;
-  overflow: hidden;
-}
-
-/* Scrollable code column */
-.paper-body .code-scroll-col {
-  flex: 1;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  /* allow horizontal scroll of code */
   white-space: pre;
 }
 
+[data-theme="dark"] .paper-body .code-block {
+  background: #1e1e1e !important;
+  border-color: #3c3c3c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .paper-body .code-block {
+    background: #1e1e1e;
+    border-color: #3c3c3c;
+  }
+}
+
 .paper-body .code-row {
-  display: block;
-  min-height: 1.5em;
+  display: flex;
+  align-items: baseline;
+  /* Row never wraps: gutter + code stay on one visual line */
+  flex-wrap: nowrap;
+  min-width: max-content;
 }
 
 .paper-body .code-ln {
-  display: block;
+  flex: 0 0 3rem;
+  width: 3rem;
   text-align: right;
-  padding: 0 0.75rem 0 0;
+  padding-right: 0.75rem;
   color: #999;
   user-select: none;
   font-size: inherit;
   line-height: inherit;
-  white-space: nowrap;
+  /* Keep gutter fixed and opaque even when code scrolls left */
+  position: sticky;
+  left: 0;
+  background: #ffffff;
+  z-index: 1;
 }
 
 .paper-body .code-cell {
-  display: block;
+  flex: 1;
   padding-right: 1.5rem;
   white-space: pre;
   word-break: normal;
@@ -757,31 +759,10 @@ body {
   line-height: inherit;
 }
 
-/* Dark mode: two-column layout */
-[data-theme="dark"] .paper-body .code-table {
-  background: #1e1e1e !important;
-  border-color: #3c3c3c;
-}
-[data-theme="dark"] .paper-body .code-ln-col {
-  background: #1e1e1e;
-  border-right-color: #3c3c3c;
-}
+/* Dark mode (code-ln) */
 [data-theme="dark"] .paper-body .code-ln {
   color: #555;
-}
-
-@media (prefers-color-scheme: dark) {
-  .paper-body .code-table {
-    background: #1e1e1e;
-    border-color: #3c3c3c;
-  }
-  .paper-body .code-ln-col {
-    background: #1e1e1e;
-    border-right-color: #3c3c3c;
-  }
-  .paper-body .code-ln {
-    color: #555;
-  }
+  background: #1e1e1e;
 }
 
 /* ===========================
