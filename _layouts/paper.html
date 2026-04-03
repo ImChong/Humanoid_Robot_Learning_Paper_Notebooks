@@ -91,55 +91,42 @@ layout: default
 </script>
 
 <script>
-// Rebuild rouge code blocks: replace table layout with per-line divs for reliable alignment
+// Rebuild block-level rouge code blocks with per-line divs for reliable line number alignment.
+// Inline code (code.highlighter-rouge) is intentionally skipped.
 (function() {
-  document.querySelectorAll('.highlighter-rouge table.rouge-table').forEach(function(table) {
-    // Skip inline code elements (rouge-table inside <code>, not <div>)
-    var outer = table.closest('.highlighter-rouge');
-    if (!outer || outer.tagName.toLowerCase() === 'code') return;
+  document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
+    var codePre = outer.querySelector('pre.highlight code');
+    if (!codePre) return;
 
-    var gutterPre = table.querySelector('td.rouge-gutter pre.lineno');
-    var codePre   = table.querySelector('td.rouge-code pre');
-    if (!gutterPre || !codePre) return;
-
-    // Split line numbers and code lines
-    var lineNums  = gutterPre.textContent.split('\n').filter(function(l) { return l !== ''; });
-    // codePre may contain syntax-highlighted spans — split by \n inside its HTML
-    var codeHTML  = codePre.innerHTML;
-    // Normalize: remove trailing newline if present
+    var codeHTML = codePre.innerHTML;
+    // Remove single trailing newline added by rouge
     if (codeHTML.endsWith('\n')) codeHTML = codeHTML.slice(0, -1);
     var codeLines = splitHTMLByNewlines(codeHTML);
 
-    // Build replacement
     var wrapper = document.createElement('div');
     wrapper.className = 'rouge-rebuilt highlight';
 
-    var maxLen = Math.max(lineNums.length, codeLines.length);
-    for (var i = 0; i < maxLen; i++) {
+    for (var i = 0; i < codeLines.length; i++) {
       var row = document.createElement('div');
       row.className = 'rouge-line';
 
       var gutter = document.createElement('span');
       gutter.className = 'rouge-ln';
-      gutter.textContent = lineNums[i] || '';
+      gutter.textContent = String(i + 1);
 
-      var code = document.createElement('span');
-      code.className = 'rouge-code-cell';
-      code.innerHTML = codeLines[i] !== undefined ? codeLines[i] : '';
+      var cell = document.createElement('span');
+      cell.className = 'rouge-code-cell';
+      cell.innerHTML = codeLines[i];
 
       row.appendChild(gutter);
-      row.appendChild(code);
+      row.appendChild(cell);
       wrapper.appendChild(row);
     }
 
-    // Replace the entire .highlighter-rouge outer div with the new structure
-    if (outer) {
-      outer.innerHTML = '';
-      outer.appendChild(wrapper);
-    }
+    outer.innerHTML = '';
+    outer.appendChild(wrapper);
   });
 
-  // Split HTML string by literal \n, preserving inline tags (spans)
   function splitHTMLByNewlines(html) {
     var lines = [];
     var current = '';
