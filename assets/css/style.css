@@ -743,10 +743,10 @@ body {
   user-select: none;
   font-size: inherit;
   line-height: inherit;
-  /* Keep gutter fixed even when container scrolls */
+  /* Keep gutter fixed and opaque even when code scrolls left */
   position: sticky;
   left: 0;
-  background: inherit;
+  background: #ffffff;
   z-index: 1;
 }
 
