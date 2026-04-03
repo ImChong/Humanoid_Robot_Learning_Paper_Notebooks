@@ -91,25 +91,81 @@ layout: default
 </script>
 
 <script>
-// Prepare block-level code blocks for Prism.js:
-// 1. Map kramdown's language class (e.g. language-python) to Prism's expected format
-// 2. Add line-numbers class for line number rendering
-document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
-  // Extract language from outer div class, e.g. "language-python highlighter-rouge"
-  var match = outer.className.match(/language-(\S+)/);
-  var lang = match ? match[1] : 'plaintext';
+(function() {
+  // Step 1: Set Prism language classes so Prism can do syntax coloring
+  document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
+    var match = outer.className.match(/language-(\S+)/);
+    var lang = match ? match[1] : 'plaintext';
+    var pre  = outer.querySelector('pre');
+    var code = outer.querySelector('code');
+    if (!pre || !code) return;
+    pre.className  = 'language-' + lang;
+    code.className = 'language-' + lang;
+  });
 
-  var pre = outer.querySelector('pre');
-  var code = outer.querySelector('code');
-  if (!pre || !code) return;
+  // Step 2: Run Prism to apply syntax colors
+  // Step 3: After Prism is done, rebuild each block with per-line divs for line numbers
+  function rebuildWithLineNumbers() {
+    document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
+      var code = outer.querySelector('pre code');
+      if (!code) return;
 
-  // Set Prism language classes
-  pre.className = 'language-' + lang + ' line-numbers';
-  code.className = 'language-' + lang;
-});
+      var html = code.innerHTML;
+      if (html.endsWith('\n')) html = html.slice(0, -1);
+      var lines = splitByNewline(html);
 
-// Trigger Prism highlighting
-document.addEventListener('DOMContentLoaded', function() {
-  if (typeof Prism !== 'undefined') Prism.highlightAll();
-});
+      var wrapper = document.createElement('div');
+      wrapper.className = 'code-block';
+
+      lines.forEach(function(lineHTML, i) {
+        var row = document.createElement('div');
+        row.className = 'code-row';
+
+        var ln = document.createElement('span');
+        ln.className = 'code-ln';
+        ln.textContent = String(i + 1);
+
+        var cell = document.createElement('span');
+        cell.className = 'code-cell';
+        cell.innerHTML = lineHTML;
+
+        row.appendChild(ln);
+        row.appendChild(cell);
+        wrapper.appendChild(row);
+      });
+
+      outer.innerHTML = '';
+      outer.appendChild(wrapper);
+    });
+  }
+
+  // Split HTML by \n without breaking inside tags
+  function splitByNewline(html) {
+    var lines = [], cur = '', inTag = false;
+    for (var i = 0; i < html.length; i++) {
+      var c = html[i];
+      if      (c === '<') { inTag = true;  cur += c; }
+      else if (c === '>') { inTag = false; cur += c; }
+      else if (c === '\n' && !inTag) { lines.push(cur); cur = ''; }
+      else { cur += c; }
+    }
+    if (cur !== '') lines.push(cur);
+    return lines;
+  }
+
+  // Wait for Prism autoloader to finish, then rebuild
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Prism === 'undefined') { rebuildWithLineNumbers(); return; }
+    // Prism.highlightAll is async with autoloader; hook into the after-highlight callback
+    var remaining = document.querySelectorAll('div.highlighter-rouge pre code').length;
+    if (remaining === 0) { rebuildWithLineNumbers(); return; }
+
+    var origAfter = Prism.hooks.all['after-highlight'] || [];
+    Prism.hooks.add('after-highlight', function() {
+      remaining--;
+      if (remaining <= 0) rebuildWithLineNumbers();
+    });
+    Prism.highlightAll();
+  });
+})();
 </script>

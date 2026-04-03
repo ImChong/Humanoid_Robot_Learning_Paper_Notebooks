@@ -696,58 +696,74 @@ body {
   margin: 1.2rem 0;
 }
 
-/* ===== Prism.js code block overrides ===== */
-.paper-body pre[class*="language-"],
-.paper-body pre.language-plaintext,
-.paper-body .highlighter-rouge pre {
-  border-radius: 8px;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin: 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  /* Prevent line wrapping — long lines scroll horizontally, keeping line numbers aligned */
-  white-space: pre !important;
-  word-wrap: normal !important;
-  overflow-wrap: normal !important;
+/* ===== Code blocks (Prism colors + custom per-line layout) ===== */
+.paper-body .highlighter-rouge {
+  margin: 1.2rem 0;
 }
 
-.paper-body pre[class*="language-"] code,
-.paper-body .highlighter-rouge pre code {
-  white-space: pre !important;
-  word-wrap: normal !important;
-}
-
-/* Light mode: match site's neutral tone */
-:root:not([data-theme="dark"]) .paper-body pre[class*="language-"],
-:root:not([data-theme="dark"]) .paper-body pre.language-plaintext,
-:root:not([data-theme="dark"]) .paper-body .highlighter-rouge pre {
+.paper-body .code-block {
   background: #f6f8fa;
   border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.6rem 0;
+  font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  /* Single horizontal scroll container — never wraps */
+  white-space: pre;
 }
-:root:not([data-theme="dark"]) code[class*="language-"],
-:root:not([data-theme="dark"]) .paper-body .highlighter-rouge code {
-  color: #24292f;
+
+.paper-body .code-row {
+  display: flex;
+  align-items: baseline;
+  /* Row never wraps: gutter + code stay on one visual line */
+  flex-wrap: nowrap;
+  min-width: max-content;
+}
+
+.paper-body .code-ln {
+  flex: 0 0 3rem;
+  width: 3rem;
+  text-align: right;
+  padding-right: 0.75rem;
+  color: #999;
+  user-select: none;
+  font-size: inherit;
+  line-height: inherit;
+  /* Keep gutter fixed even when container scrolls */
+  position: sticky;
+  left: 0;
+  background: inherit;
+  z-index: 1;
+}
+
+.paper-body .code-cell {
+  flex: 1;
+  padding-right: 1.5rem;
+  white-space: pre;
+  word-break: normal;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 /* Dark mode */
-[data-theme="dark"] .paper-body pre[class*="language-"],
-[data-theme="dark"] .paper-body pre.language-plaintext,
-[data-theme="dark"] .paper-body .highlighter-rouge pre {
+[data-theme="dark"] .paper-body .code-block {
   background: #1e1e1e;
-  border: 1px solid #3c3c3c;
+  border-color: #3c3c3c;
 }
-
-/* Line numbers gutter */
-.paper-body pre.line-numbers {
-  padding-left: 3.5rem;
+[data-theme="dark"] .paper-body .code-ln {
+  color: #555;
+  background: #1e1e1e;
 }
-.paper-body .line-numbers .line-numbers-rows {
-  border-right: 1px solid #ddd;
-}
-[data-theme="dark"] .paper-body .line-numbers .line-numbers-rows {
-  border-right-color: #444;
-}
-[data-theme="dark"] .paper-body .line-numbers-rows > span:before {
-  color: #666;
+@media (prefers-color-scheme: dark) {
+  .paper-body .code-block {
+    background: #1e1e1e;
+    border-color: #3c3c3c;
+  }
+  .paper-body .code-ln {
+    color: #555;
+    background: #1e1e1e;
+  }
 }
