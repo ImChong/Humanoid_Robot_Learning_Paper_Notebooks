@@ -696,7 +696,7 @@ body {
   margin: 1.2rem 0;
 }
 
-/* ===== Code blocks (Prism colors + custom per-line layout) ===== */
+/* ===== Code blocks (rouge colors + custom per-line layout) ===== */
 .paper-body .highlighter-rouge {
   margin: 1.2rem 0;
 }
@@ -711,8 +711,20 @@ body {
   font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
   font-size: 0.875rem;
   line-height: 1.5;
-  /* Single horizontal scroll container — never wraps */
   white-space: pre;
+  /* Inherit highlight class for syntax color CSS rules */
+}
+
+[data-theme="dark"] .paper-body .code-block {
+  background: #1e1e1e;
+  border-color: #3c3c3c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .paper-body .code-block {
+    background: #1e1e1e;
+    border-color: #3c3c3c;
+  }
 }
 
 .paper-body .code-row {
@@ -748,24 +760,10 @@ body {
   line-height: inherit;
 }
 
-/* Dark mode */
-[data-theme="dark"] .paper-body .code-block {
-  background: #1e1e1e;
-  border-color: #3c3c3c;
-}
+/* Dark mode (code-ln) */
 [data-theme="dark"] .paper-body .code-ln {
   color: #555;
   background: #1e1e1e;
-}
-@media (prefers-color-scheme: dark) {
-  .paper-body .code-block {
-    background: #1e1e1e;
-    border-color: #3c3c3c;
-  }
-  .paper-body .code-ln {
-    color: #555;
-    background: #1e1e1e;
-  }
 }
 
 /* ===========================
