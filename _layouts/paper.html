@@ -89,3 +89,71 @@ layout: default
   updateActive();
 })();
 </script>
+
+<script>
+// Rebuild rouge code blocks: replace table layout with per-line divs for reliable alignment
+(function() {
+  document.querySelectorAll('.highlighter-rouge table.rouge-table').forEach(function(table) {
+    var gutterPre = table.querySelector('td.rouge-gutter pre.lineno');
+    var codePre   = table.querySelector('td.rouge-code pre');
+    if (!gutterPre || !codePre) return;
+
+    // Split line numbers and code lines
+    var lineNums  = gutterPre.textContent.split('\n').filter(function(l) { return l !== ''; });
+    // codePre may contain syntax-highlighted spans — split by \n inside its HTML
+    var codeHTML  = codePre.innerHTML;
+    // Normalize: remove trailing newline if present
+    if (codeHTML.endsWith('\n')) codeHTML = codeHTML.slice(0, -1);
+    var codeLines = splitHTMLByNewlines(codeHTML);
+
+    // Build replacement
+    var wrapper = document.createElement('div');
+    wrapper.className = 'rouge-rebuilt';
+
+    var maxLen = Math.max(lineNums.length, codeLines.length);
+    for (var i = 0; i < maxLen; i++) {
+      var row = document.createElement('div');
+      row.className = 'rouge-line';
+
+      var gutter = document.createElement('span');
+      gutter.className = 'rouge-ln';
+      gutter.textContent = lineNums[i] || '';
+
+      var code = document.createElement('span');
+      code.className = 'rouge-code-cell';
+      code.innerHTML = codeLines[i] !== undefined ? codeLines[i] : '';
+
+      row.appendChild(gutter);
+      row.appendChild(code);
+      wrapper.appendChild(row);
+    }
+
+    // Replace the entire .highlighter-rouge outer div with the new structure
+    var outer = table.closest('.highlighter-rouge');
+    if (outer) {
+      outer.innerHTML = '';
+      outer.appendChild(wrapper);
+    }
+  });
+
+  // Split HTML string by literal \n, preserving inline tags (spans)
+  function splitHTMLByNewlines(html) {
+    var lines = [];
+    var current = '';
+    var inTag = false;
+    for (var i = 0; i < html.length; i++) {
+      var ch = html[i];
+      if (ch === '<') { inTag = true; current += ch; }
+      else if (ch === '>') { inTag = false; current += ch; }
+      else if (ch === '\n' && !inTag) {
+        lines.push(current);
+        current = '';
+      } else {
+        current += ch;
+      }
+    }
+    if (current !== '') lines.push(current);
+    return lines;
+  }
+})();
+</script>
