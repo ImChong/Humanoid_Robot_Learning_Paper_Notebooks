@@ -94,6 +94,10 @@ layout: default
 // Rebuild rouge code blocks: replace table layout with per-line divs for reliable alignment
 (function() {
   document.querySelectorAll('.highlighter-rouge table.rouge-table').forEach(function(table) {
+    // Skip inline code elements (rouge-table inside <code>, not <div>)
+    var outer = table.closest('.highlighter-rouge');
+    if (!outer || outer.tagName.toLowerCase() === 'code') return;
+
     var gutterPre = table.querySelector('td.rouge-gutter pre.lineno');
     var codePre   = table.querySelector('td.rouge-code pre');
     if (!gutterPre || !codePre) return;
@@ -129,7 +133,6 @@ layout: default
     }
 
     // Replace the entire .highlighter-rouge outer div with the new structure
-    var outer = table.closest('.highlighter-rouge');
     if (outer) {
       outer.innerHTML = '';
       outer.appendChild(wrapper);
