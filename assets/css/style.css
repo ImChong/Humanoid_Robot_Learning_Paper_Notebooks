@@ -749,6 +749,7 @@ body {
   vertical-align: top;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+  line-height: 1.5;
 }
 
 /* Line number column — fixed width, right-aligned */
@@ -770,7 +771,7 @@ body {
   text-align: right !important;
   display: block !important;
   user-select: none;
-  line-height: normal !important;
+  line-height: 1.5 !important;
 }
 
 /* Code column — fills remaining space */
@@ -791,7 +792,7 @@ body {
   white-space: pre !important;
   word-break: normal !important;
   -webkit-overflow-scrolling: touch;
-  line-height: normal !important;
+  line-height: 1.5 !important;
 }
 
 /* Dark mode — same single box, dark background */
