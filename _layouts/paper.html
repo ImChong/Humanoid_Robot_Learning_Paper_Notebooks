@@ -91,20 +91,9 @@ layout: default
 </script>
 
 <script>
+// Rouge provides syntax-colored spans. We rebuild each block into per-line divs for line numbers.
+// Structure: div.highlighter-rouge > div.highlight > pre.highlight > code
 (function() {
-  // Step 1: Set Prism language classes so Prism can do syntax coloring
-  document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
-    var match = outer.className.match(/language-(\S+)/);
-    var lang = match ? match[1] : 'plaintext';
-    var pre  = outer.querySelector('pre');
-    var code = outer.querySelector('code');
-    if (!pre || !code) return;
-    pre.className  = 'language-' + lang;
-    code.className = 'language-' + lang;
-  });
-
-  // Step 2: Run Prism to apply syntax colors
-  // Step 3: After Prism is done, rebuild each block with per-line divs for line numbers
   function rebuildWithLineNumbers() {
     document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
       var code = outer.querySelector('pre code');
@@ -139,7 +128,6 @@ layout: default
     });
   }
 
-  // Split HTML by \n without breaking inside tags
   function splitByNewline(html) {
     var lines = [], cur = '', inTag = false;
     for (var i = 0; i < html.length; i++) {
@@ -153,19 +141,7 @@ layout: default
     return lines;
   }
 
-  // Wait for Prism autoloader to finish, then rebuild
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof Prism === 'undefined') { rebuildWithLineNumbers(); return; }
-    // Prism.highlightAll is async with autoloader; hook into the after-highlight callback
-    var remaining = document.querySelectorAll('div.highlighter-rouge pre code').length;
-    if (remaining === 0) { rebuildWithLineNumbers(); return; }
-
-    var origAfter = Prism.hooks.all['after-highlight'] || [];
-    Prism.hooks.add('after-highlight', function() {
-      remaining--;
-      if (remaining <= 0) rebuildWithLineNumbers();
-    });
-    Prism.highlightAll();
-  });
+  // Rouge has already colored the code server-side, no need to wait for Prism
+  document.addEventListener('DOMContentLoaded', rebuildWithLineNumbers);
 })();
 </script>

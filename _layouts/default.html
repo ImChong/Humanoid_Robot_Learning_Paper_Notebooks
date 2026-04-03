@@ -10,11 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
-  <!-- Prism.js syntax highlighting (no line-numbers plugin — we handle line numbers ourselves) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" id="prism-theme-light">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" id="prism-theme-dark" disabled>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
 </head>
 <body>
   {% include header.html %}
@@ -119,13 +115,7 @@
         html.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
         toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-        // Switch Prism theme
-        var light = document.getElementById('prism-theme-light');
-        var dark  = document.getElementById('prism-theme-dark');
-        if (light && dark) {
-          light.disabled = (theme === 'dark');
-          dark.disabled  = (theme !== 'dark');
-        }
+
       }
 
       setTheme(getPreferred());
