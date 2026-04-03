@@ -104,24 +104,36 @@ layout: default
       var lines = splitByNewline(html);
 
       var wrapper = document.createElement('div');
-      wrapper.className = 'code-block highlight';
+      wrapper.className = 'code-table highlight';
+
+      var lnCol = document.createElement('div');
+      lnCol.className = 'code-ln-col';
+
+      var codeCol = document.createElement('div');
+      codeCol.className = 'code-scroll-col';
 
       lines.forEach(function(lineHTML, i) {
-        var row = document.createElement('div');
-        row.className = 'code-row';
-
+        // Line number in fixed left column
+        var lnRow = document.createElement('div');
+        lnRow.className = 'code-row';
         var ln = document.createElement('span');
         ln.className = 'code-ln';
         ln.textContent = String(i + 1);
+        lnRow.appendChild(ln);
+        lnCol.appendChild(lnRow);
 
+        // Code in scrollable right column
+        var codeRow = document.createElement('div');
+        codeRow.className = 'code-row';
         var cell = document.createElement('span');
         cell.className = 'code-cell';
         cell.innerHTML = lineHTML;
-
-        row.appendChild(ln);
-        row.appendChild(cell);
-        wrapper.appendChild(row);
+        codeRow.appendChild(cell);
+        codeCol.appendChild(codeRow);
       });
+
+      wrapper.appendChild(lnCol);
+      wrapper.appendChild(codeCol);
 
       outer.innerHTML = '';
       outer.appendChild(wrapper);
