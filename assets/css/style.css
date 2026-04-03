@@ -702,7 +702,7 @@ body {
 }
 
 .paper-body .code-block {
-  background: #ffffff;
+  background: #ffffff !important;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow-x: auto;
@@ -712,11 +712,10 @@ body {
   font-size: 0.875rem;
   line-height: 1.5;
   white-space: pre;
-  /* Inherit highlight class for syntax color CSS rules */
 }
 
 [data-theme="dark"] .paper-body .code-block {
-  background: #1e1e1e;
+  background: #1e1e1e !important;
   border-color: #3c3c3c;
 }
 
