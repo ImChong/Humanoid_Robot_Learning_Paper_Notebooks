@@ -91,59 +91,25 @@ layout: default
 </script>
 
 <script>
-// Rebuild block-level rouge code blocks with per-line divs for reliable line number alignment.
-// Inline code (code.highlighter-rouge) is intentionally skipped.
-(function() {
-  document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
-    var codePre = outer.querySelector('pre.highlight code');
-    if (!codePre) return;
+// Prepare block-level code blocks for Prism.js:
+// 1. Map kramdown's language class (e.g. language-python) to Prism's expected format
+// 2. Add line-numbers class for line number rendering
+document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
+  // Extract language from outer div class, e.g. "language-python highlighter-rouge"
+  var match = outer.className.match(/language-(\S+)/);
+  var lang = match ? match[1] : 'plaintext';
 
-    var codeHTML = codePre.innerHTML;
-    // Remove single trailing newline added by rouge
-    if (codeHTML.endsWith('\n')) codeHTML = codeHTML.slice(0, -1);
-    var codeLines = splitHTMLByNewlines(codeHTML);
+  var pre = outer.querySelector('pre');
+  var code = outer.querySelector('code');
+  if (!pre || !code) return;
 
-    var wrapper = document.createElement('div');
-    wrapper.className = 'rouge-rebuilt highlight';
+  // Set Prism language classes
+  pre.className = 'language-' + lang + ' line-numbers';
+  code.className = 'language-' + lang;
+});
 
-    for (var i = 0; i < codeLines.length; i++) {
-      var row = document.createElement('div');
-      row.className = 'rouge-line';
-
-      var gutter = document.createElement('span');
-      gutter.className = 'rouge-ln';
-      gutter.textContent = String(i + 1);
-
-      var cell = document.createElement('span');
-      cell.className = 'rouge-code-cell';
-      cell.innerHTML = codeLines[i];
-
-      row.appendChild(gutter);
-      row.appendChild(cell);
-      wrapper.appendChild(row);
-    }
-
-    outer.innerHTML = '';
-    outer.appendChild(wrapper);
-  });
-
-  function splitHTMLByNewlines(html) {
-    var lines = [];
-    var current = '';
-    var inTag = false;
-    for (var i = 0; i < html.length; i++) {
-      var ch = html[i];
-      if (ch === '<') { inTag = true; current += ch; }
-      else if (ch === '>') { inTag = false; current += ch; }
-      else if (ch === '\n' && !inTag) {
-        lines.push(current);
-        current = '';
-      } else {
-        current += ch;
-      }
-    }
-    if (current !== '') lines.push(current);
-    return lines;
-  }
-})();
+// Trigger Prism highlighting
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof Prism !== 'undefined') Prism.highlightAll();
+});
 </script>
