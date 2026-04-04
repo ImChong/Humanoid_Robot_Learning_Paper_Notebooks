@@ -30,6 +30,19 @@ PPO 通过一个简单的**裁剪机制**，让强化学习的策略更新既大
 
 ---
 
+## 📌 英文缩写速查
+
+| 缩写 | 全称 | 简单解释 |
+|------|------|----------|
+| **PPO** | Proximal Policy Optimization | 近端策略优化 |
+| **RL** | Reinforcement Learning | 强化学习 |
+| **GAE** | Generalized Advantage Estimation | 广义优势估计 |
+| **KL** | Kullback-Leibler Divergence | KL散度，衡量两个分布的差异 |
+| **MuJoCo** | Multi-Joint dynamics with Contact | 物理仿真引擎 |
+| **Actor-Critic** | — | 策略网络(actor)+价值网络(critic)架构 |
+
+---
+
 ## ❓ 这篇论文要解决什么问题？
 
 假设你在训练一个人形机器人学走路。强化学习的基本思路是：让机器人**试错**，做得好就奖励，做得差就惩罚，逐步改进策略。
@@ -622,13 +635,4 @@ $$\mathcal{L}_{total}(\theta, \phi) = \underbrace{-\mathbb{E}\left[ L^{CLIP}(\th
 | **SAC** | 2018 | 软 Actor-Critic，off-policy 方法 |
 | **TD3** | 2018 | 双延迟 DDPG，off-policy 方法 |
 
-### H. 英文缩写速查
-
-| 缩写 | 全称 | 简单解释 |
-|------|------|----------|
-| **PPO** | Proximal Policy Optimization | 近端策略优化 |
-| **RL** | Reinforcement Learning | 强化学习 |
-| **GAE** | Generalized Advantage Estimation | 广义优势估计 |
-| **KL** | Kullback-Leibler Divergence | KL散度，衡量两个分布的差异 |
-| **MuJoCo** | Multi-Joint dynamics with Contact | 物理仿真引擎 |
-| **Actor-Critic** | — | 策略网络(actor)+价值网络(critic)架构 |
+*(已移至上方「📌 英文缩写速查」)*
