@@ -31,6 +31,18 @@ AWR 把强化学习变成了一个**加权监督学习**问题——从经验中
 
 ---
 
+## 📌 英文缩写速查
+
+| 缩写 | 全称 | 简单解释 |
+|------|------|----------|
+| **AWR** | Advantage Weighted Regression | 优势加权回归 |
+| **MLE** | Maximum Likelihood Estimation | 最大似然估计 |
+| **Off-policy** | Off-policy Learning | 可以用历史数据学习（数据来源策略 ≠ 当前策略） |
+| **On-policy** | On-policy Learning | 只能用当前策略生成的数据学习 |
+| **Replay Buffer** | Experience Replay Buffer | 回放缓冲区，存储历史经验 |
+
+---
+
 ## ❓ 这篇论文要解决什么问题？
 
 学完 PPO 之后，你已经知道策略梯度的基本思路：试错 → 评估 → 更新策略。PPO 通过裁剪概率比来控制更新幅度，效果很好但还有几个麻烦：
@@ -504,12 +516,3 @@ for iteration = 1, 2, ... do:
   └─ 权重: 聚焦在最高优势动作，策略趋于收敛
 ```
 
-### E. 英文缩写速查
-
-| 缩写 | 全称 | 简单解释 |
-|------|------|----------|
-| **AWR** | Advantage Weighted Regression | 优势加权回归 |
-| **MLE** | Maximum Likelihood Estimation | 最大似然估计 |
-| **Off-policy** | Off-policy Learning | 可以用历史数据学习（数据来源策略 ≠ 当前策略） |
-| **On-policy** | On-policy Learning | 只能用当前策略生成的数据学习 |
-| **Replay Buffer** | Experience Replay Buffer | 回放缓冲区，存储历史经验 |
