@@ -33,6 +33,7 @@ AMP 用 GAN 的思想替代了 DeepMimic 的手工模仿奖励——训练一个
 ---
 
 ## 📌 英文缩写速查
+
 | 缩写 | 全称 | 简单解释 |
 |---|---|---|
 | **AMP** | Adversarial Motion Priors | 对抗运动先验 |
