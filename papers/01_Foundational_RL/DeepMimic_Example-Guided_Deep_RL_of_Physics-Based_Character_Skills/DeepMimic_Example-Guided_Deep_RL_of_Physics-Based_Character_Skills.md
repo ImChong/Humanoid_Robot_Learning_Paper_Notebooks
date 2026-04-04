@@ -50,6 +50,7 @@ DeepMimic 让物理仿真角色通过**模仿动作捕捉数据**来学习技能
 | **MTU** | Muscle-Tendon Unit | 肌腱单元，一种基于肌肉模型的动作空间 |
 | **SGD** | Stochastic Gradient Descent | 随机梯度下降，DeepMimic 使用的优化器 |
 | **SIGGRAPH** | Special Interest Group on GRAPHics and Interactive Techniques | ACM 计算机图形学顶会，DeepMimic 发表于此 |
+
 ---
 ## ❓ 这篇论文要解决什么问题？
 

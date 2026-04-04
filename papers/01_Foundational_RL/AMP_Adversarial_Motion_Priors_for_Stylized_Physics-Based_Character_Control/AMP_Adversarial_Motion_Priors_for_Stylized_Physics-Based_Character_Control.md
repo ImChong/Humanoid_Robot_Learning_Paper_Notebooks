@@ -41,6 +41,7 @@ AMP 用 GAN 的思想替代了 DeepMimic 的手工模仿奖励——训练一个
 | **Discriminator** | — | 鉴别器，判断数据真假 |
 | **Style Reward** | — | 风格奖励，来自鉴别器输出 |
 | **MoCap** | Motion Capture | 动作捕捉 |
+
 ---
 ## ❓ 这篇论文要解决什么问题？
 
