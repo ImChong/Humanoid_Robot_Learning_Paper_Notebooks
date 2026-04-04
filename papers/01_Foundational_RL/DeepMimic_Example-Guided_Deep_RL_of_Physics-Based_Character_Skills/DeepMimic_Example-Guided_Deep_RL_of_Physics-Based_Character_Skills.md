@@ -34,7 +34,7 @@ DeepMimic 让物理仿真角色通过**模仿动作捕捉数据**来学习技能
 
 ## 📌 英文缩写速查
 | 缩写 | 全称 | 简单解释 |
-|------|------|----------|
+|------------------------------|------------------------------|------------------------------|
 | **RL** | Reinforcement Learning | 强化学习 |
 | **PPO** | Proximal Policy Optimization | 近端策略优化，DeepMimic 使用的 RL 算法 |
 | **GAE** | Generalized Advantage Estimation | 广义优势估计，用于计算策略梯度的优势函数 |
