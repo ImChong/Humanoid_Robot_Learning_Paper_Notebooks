@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 4
 title: "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control"
 category: "Foundational RL"
 ---

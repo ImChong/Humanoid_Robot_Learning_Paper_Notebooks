@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 5
 title: "PHC: Perpetual Humanoid Control for Real-time Simulated Avatars"
 category: "Foundational RL"
 ---

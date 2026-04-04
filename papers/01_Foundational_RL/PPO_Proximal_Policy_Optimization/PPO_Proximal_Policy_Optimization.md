@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 1
 title: "Proximal Policy Optimization Algorithms (PPO)"
 category: "基础路线图"
 ---

@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 12
 title: "OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control"
 category: "Loco-Manipulation and WBC"
 ---

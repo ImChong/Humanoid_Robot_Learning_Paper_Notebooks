@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 6
 title: "ASE: Adversarial Skill Embeddings for Large-Scale Motion Control"
 category: "Foundational RL"
 ---

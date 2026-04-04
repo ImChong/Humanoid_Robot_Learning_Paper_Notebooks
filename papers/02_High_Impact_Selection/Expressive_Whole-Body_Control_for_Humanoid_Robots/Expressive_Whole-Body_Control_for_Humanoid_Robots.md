@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 8
 title: "Expressive Whole-Body Control for Humanoid Robots"
 category: "High Impact Selection"
 subcategory: "Whole-Body Control Core"

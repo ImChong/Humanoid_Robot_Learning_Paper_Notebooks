@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 3
 title: "DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills"
 category: "Foundational RL"
 ---

@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 2
 title: "Advantage Weighted Regression (AWR)"
 category: "Foundational RL"
 ---

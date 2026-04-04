@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 11
 title: "LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations"
 category: "Loco-Manipulation and WBC"
 ---

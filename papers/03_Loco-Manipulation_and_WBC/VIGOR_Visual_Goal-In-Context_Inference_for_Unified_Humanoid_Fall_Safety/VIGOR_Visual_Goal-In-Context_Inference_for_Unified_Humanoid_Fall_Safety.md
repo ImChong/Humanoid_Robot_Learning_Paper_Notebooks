@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 9
 title: "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety"
 category: "Loco-Manipulation and WBC"
 ---

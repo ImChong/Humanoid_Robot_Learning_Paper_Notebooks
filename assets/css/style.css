@@ -611,6 +611,11 @@ body {
   margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .back-link {
@@ -621,6 +626,21 @@ body {
 }
 .back-link:hover {
   text-decoration: underline;
+}
+
+.prev-link, .next-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  color: var(--link);
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+.prev-link:hover, .next-link:hover {
+  background: var(--hover-bg);
+  text-decoration: none;
 }
 
 /* ===== Footer ===== */

@@ -31,8 +31,40 @@ layout: default
     </aside>
   </div>
 
+  {% comment %}Build ordered paper list{% endcomment %}
+  {% assign ordered_papers = '' | split: '' %}
+  {% for p in site.pages %}
+    {% if p.paper_order %}
+      {% assign ordered_papers = ordered_papers | concat: p %}
+    {% endif %}
+  {% endfor %}
+  {% assign ordered_papers = ordered_papers | sort: "paper_order" %}
+
+  {% comment %}Find prev and next papers{% endcomment %}
+  {% assign prev_paper = nil %}
+  {% assign next_paper = nil %}
+  {% assign found = false %}
+  {% for p in ordered_papers %}
+    {% if found and next_paper == nil %}
+      {% assign next_paper = p %}
+    {% endif %}
+    {% if p.url == page.url %}
+      {% assign found = true %}
+      {% continue %}
+    {% endif %}
+    {% if found == false %}
+      {% assign prev_paper = p %}
+    {% endif %}
+  {% endfor %}
+
   <div class="paper-nav">
-    <a href="{{ '/' | relative_url }}" class="back-link" data-en="← Back to list" data-zh="← 返回论文列表">← Back to list</a>
+    {% if prev_paper %}
+      <a href="{{ prev_paper.url | relative_url }}" class="prev-link">← {{ prev_paper.title | split: ' (' | first }}</a>
+    {% endif %}
+    <a href="{{ '/' | relative_url }}" class="back-link" data-en="← Back to list" data-zh="← 返回论文列表">← 返回论文列表</a>
+    {% if next_paper %}
+      <a href="{{ next_paper.url | relative_url }}" class="next-link">{{ next_paper.title | split: ' (' | first }} →</a>
+    {% endif %}
   </div>
 </article>
 

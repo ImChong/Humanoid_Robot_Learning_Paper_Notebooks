@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 13
 title: "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation"
 category: "Loco-Manipulation and WBC"
 ---

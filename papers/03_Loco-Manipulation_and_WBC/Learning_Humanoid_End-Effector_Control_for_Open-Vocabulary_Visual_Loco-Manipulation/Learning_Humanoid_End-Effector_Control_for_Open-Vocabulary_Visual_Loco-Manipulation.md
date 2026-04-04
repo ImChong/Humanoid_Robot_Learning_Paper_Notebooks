@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 10
 title: "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation (HERO)"
 category: "Loco-Manipulation and WBC"
 ---
