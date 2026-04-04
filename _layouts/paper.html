@@ -26,40 +26,66 @@ layout: default
     <aside class="right-sidebar" id="right-sidebar">
       <div class="right-sidebar-wrapper">
         <a href="#" class="right-sidebar-link" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" data-en="↑ Back to top" data-zh="↑ 回到顶部">↑ Back to top</a>
-        <a href="{{ '/' | relative_url }}" class="right-sidebar-link" data-en="← Back to list" data-zh="← 返回论文列表">← Back to list</a>
+        <a href="{{ '/' | relative_url }}" class="right-sidebar-link" data-en="← Back to list" data-zh="← 返回论文列表">← 返回论文列表</a>
       </div>
     </aside>
   </div>
 
-  {% comment %}Build prev/next papers using where and sort{% endcomment %}
-  {% assign all_ordered = site.pages | where: "paper_order" | sort: "paper_order" %}
-  {% assign prev_paper = nil %}
-  {% assign next_paper = nil %}
-  {% assign found = false %}
-  {% for p in all_ordered %}
-    {% if p.url == page.url %}
-      {% assign found = true %}
-      {% continue %}
-    {% endif %}
-    {% if found == false %}
-      {% assign prev_paper = p %}
-    {% endif %}
-    {% if found == true and next_paper == nil %}
-      {% assign next_paper = p %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-
-  <div class="paper-nav">
-    {% if prev_paper %}
-      <a href="{{ prev_paper.url | relative_url }}" class="prev-link">← {{ prev_paper.title | split: ' (' | first }}</a>
-    {% endif %}
+  <div class="paper-nav" id="paper-nav">
     <a href="{{ '/' | relative_url }}" class="back-link" data-en="← Back to list" data-zh="← 返回论文列表">← 返回论文列表</a>
-    {% if next_paper %}
-      <a href="{{ next_paper.url | relative_url }}" class="next-link">{{ next_paper.title | split: ' (' | first }} →</a>
-    {% endif %}
   </div>
 </article>
+
+<script>
+// Paper navigation — built from page order metadata, injected client-side
+(function() {
+  // paperOrderMap: url -> { title, shortTitle, url }
+  // These are the 13 papers in reading order
+  var paperOrder = [
+    { title: "Proximal Policy Optimization (PPO)", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/01_Foundational_RL/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.html", short: "PPO" },
+    { title: "Advantage Weighted Regression (AWR)", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/01_Foundational_RL/AWR_Advantage_Weighted_Regression/AWR_Advantage_Weighted_Regression.html", short: "AWR" },
+    { title: "DeepMimic", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.html", short: "DeepMimic" },
+    { title: "Adversarial Motion Priors (AMP)", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.html", short: "AMP" },
+    { title: "Perpetual Humanoid Control (PHC)", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/01_Foundational_RL/PHC_Perpetual_Humanoid_Control/PHC_Perpetual_Humanoid_Control.html", short: "PHC" },
+    { title: "Adversarial Skill Embeddings (ASE)", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/01_Foundational_RL/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.html", short: "ASE" },
+    { title: "Adversarial Disentanglement and Distillation (ADD)", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/01_Foundational_RL/ADD_Adversarial_Differential_Discriminators/ADD_Adversarial_Differential_Discriminators.html", short: "ADD" },
+    { title: "Expressive Whole-Body Control", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/02_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.html", short: "Expressive" },
+    { title: "VIGOR", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/03_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.html", short: "VIGOR" },
+    { title: "HERO (Learning Humanoid End-Effector Control)", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/03_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.html", short: "HERO/LEEC" },
+    { title: "LessMimic", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/03_Loco-Manipulation_and_WBC/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.html", short: "LessMimic" },
+    { title: "OmniXtreme", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/03_Loco-Manipulation_and_WBC/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.html", short: "OmniXtreme" },
+    { title: "ULTRA", url: "/Humanoid_Robot_Learning_Paper_Notebooks/papers/03_Loco-Manipulation_and_WBC/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.html", short: "ULTRA" },
+  ];
+
+  var currentPath = window.location.pathname;
+  var currentIdx = -1;
+  for (var i = 0; i < paperOrder.length; i++) {
+    if (currentPath.indexOf(paperOrder[i].url) !== -1 || paperOrder[i].url.indexOf(currentPath) !== -1) {
+      currentIdx = i;
+      break;
+    }
+  }
+
+  if (currentIdx === -1) return; // Not a paper in the list
+
+  var nav = document.getElementById('paper-nav');
+  if (!nav) return;
+
+  var prev = currentIdx > 0 ? paperOrder[currentIdx - 1] : null;
+  var next = currentIdx < paperOrder.length - 1 ? paperOrder[currentIdx + 1] : null;
+  var listLink = '{{ "/" | relative_url }}';
+
+  var html = '';
+  if (prev) {
+    html += '<a href="' + prev.url + '" class="prev-link">← ' + prev.short + '</a>';
+  }
+  html += '<a href="' + listLink + '" class="back-link">← 返回论文列表</a>';
+  if (next) {
+    html += '<a href="' + next.url + '" class="next-link">' + next.short + ' →</a>';
+  }
+  nav.innerHTML = html;
+})();
+</script>
 
 <script>
 (function() {
