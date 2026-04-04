@@ -635,4 +635,3 @@ $$\mathcal{L}_{total}(\theta, \phi) = \underbrace{-\mathbb{E}\left[ L^{CLIP}(\th
 | **SAC** | 2018 | 软 Actor-Critic，off-policy 方法 |
 | **TD3** | 2018 | 双延迟 DDPG，off-policy 方法 |
 
-*(已移至上方「📌 英文缩写速查」)*
