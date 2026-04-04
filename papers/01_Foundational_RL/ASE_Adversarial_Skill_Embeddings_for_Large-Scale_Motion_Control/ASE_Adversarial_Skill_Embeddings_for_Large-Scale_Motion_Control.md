@@ -31,6 +31,17 @@ category: "Foundational RL"
 ASE 在 AMP 的基础上引入**潜在技能空间（latent skill space）**，将大量动捕数据编码为一个连续的、可复用的技能嵌入——预训练一次，就能通过高层策略选择不同的潜变量 $z$ 来完成多种下游任务，而不需要为每个任务重新训练底层运动控制器。
 
 ---
+## 📌 英文缩写速查
+
+| 缩写 | 全称 | 简单解释 |
+|------|------|----------|
+| **ASE** | Adversarial Skill Embeddings | 对抗技能嵌入：将对抗学习扩展到大规模多技能控制 |
+| **AMP** | Adversarial Motion Priors | 对抗运动先验：用判别器正则化动作自然性 |
+| **RL** | Reinforcement Learning | 强化学习：通过奖惩反馈训练策略 |
+| **VAE** | Variational AutoEncoder | 变分自编码器：将技能编码到紧凑隐空间 |
+| **GAN** | Generative Adversarial Network | 生成对抗网络 |
+| **CALM** | Conditional Adversarial Latent Models | 条件对抗隐模型：在 ASE 基础上加入可控技能生成 |
+
 
 ## ❓ 这篇论文要解决什么问题？
 

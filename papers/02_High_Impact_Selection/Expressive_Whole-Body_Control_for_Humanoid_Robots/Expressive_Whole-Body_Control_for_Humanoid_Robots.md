@@ -32,6 +32,16 @@ subcategory: "Whole-Body Control Core"
 让人形机器人在**保持行走稳定性**的同时，用上半身做出**丰富的表达性动作**（挥手、舞蹈等）——全身控制的开山之作，开源，工程参考价值极高。
 
 ---
+## 📌 英文缩写速查
+
+| 缩写 | 全称 | 简单解释 |
+|------|------|----------|
+| **DoF** | Degrees of Freedom | 自由度：机器人可独立运动的轴数 |
+| **RL** | Reinforcement Learning | 强化学习：通过奖惩反馈训练策略 |
+| **MoCap** | Motion Capture | 动作捕捉：记录人体运动数据的技术 |
+| **Sim-to-Real** | Simulation to Reality | 仿真到真实迁移：仿真训练迁移到真实机器人 |
+| **RSS** | Robotics Science and Systems | 机器人学顶级会议，本论文发表场所 |
+
 
 ## 🔍 核心问题与动机
 

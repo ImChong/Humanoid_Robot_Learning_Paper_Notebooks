@@ -31,6 +31,16 @@ category: "Foundational RL"
 ADD 提出**对抗差分鉴别器**——一种新型多目标优化技术，让物理仿真角色能精确复制参考运动（包括杂技和敏捷动作），达到与手工调参的 motion tracking 方法相当的质量，但**不需要手工设计奖励函数**。它将 AMP 的"分布匹配"目标改为"精确跟踪"，鉴别器只需要单个正样本即可工作。
 
 ---
+## 📌 英文缩写速查
+
+| 缩写 | 全称 | 简单解释 |
+|------|------|----------|
+| **ADD** | Adversarial Disentanglement and Distillation | 对抗解耦与蒸馏：将对抗学习用于精确运动跟踪 |
+| **AMP** | Adversarial Motion Priors | 对抗运动先验：用判别器正则化动作自然性 |
+| **RL** | Reinforcement Learning | 强化学习：通过奖惩反馈训练策略 |
+| **GAN** | Generative Adversarial Network | 生成对抗网络：生成器与判别器对抗训练 |
+| **PHC** | Perpetual Humanoid Control | 永续人形控制：大规模动作模仿的 RL 框架 |
+
 
 ## ❓ 这篇论文要解决什么问题？
 

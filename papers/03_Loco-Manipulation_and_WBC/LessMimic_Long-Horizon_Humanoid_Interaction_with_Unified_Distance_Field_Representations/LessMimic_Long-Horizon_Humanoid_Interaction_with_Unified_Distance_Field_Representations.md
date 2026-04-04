@@ -32,6 +32,30 @@ LessMimic 用**距离场（Distance Field, DF）**作为统一的交互表征—
 
 ---
 
+
+
+## 📖 英文缩写速查
+
+| 缩写 | 全称 | 简单解释 | 生活类比 |
+|------|------|----------|----------|
+| **DF** | Distance Field | 距离场：空间中每个点到最近物体表面的距离 | 给空间涂了一层"等高线地图"，越靠近物体颜色越深 |
+| **AIP** | Adversarial Interaction Priors | 对抗交互先验：用判别器正则化交互几何合理性 | "接触动作评委"：评判的是手和物体的几何关系是否合理 |
+| **AMP** | Adversarial Motion Priors | 对抗运动先验：用判别器正则化动作自然性 | "动作评委"：评判的是整个姿态是否自然（像人） |
+| **VAE** | Variational AutoEncoder | 变分自编码器：把高维数据压到低维隐空间 | 把厚书压成摘要卡，又能从摘要还原书的大意 |
+| **RL** | Reinforcement Learning | 强化学习 | 训狗：做对了给零食，做错了没有 |
+| **PPO** | Proximal Policy Optimization | 近端策略优化 | 每次只微调一点习惯，防止矫枉过正 |
+| **DAgger** | Dataset Aggregation | 数据集聚合：学生上场，教师实时批注纠正 | 学徒边干边问师傅"这样对吗" |
+| **MoCap** | Motion Capture | 动作捕捉：记录人类运动的设备 | 穿着反光球背心在摄像机前表演，电脑记录你每个关节的位置 |
+| **GAN** | Generative Adversarial Network | 生成对抗网络：生成器和判别器互相博弈 | 造假画的艺术家（生成器）vs 鉴别赝品的专家（判别器） |
+| **OOD** | Out-of-Distribution | 分布外：测试时遇到训练没见过的情况 | 在中国学驾驶，突然到英国靠左行驶 |
+| **Transformer** | — | 注意力机制为核心的神经网络，擅长处理序列 | 读一句话时，每个词都能"关注"其他词的语义 |
+| **PickUp** | — | 抓取任务：把物体从地上拿起来 | — |
+| **SitStand** | — | 坐立任务：坐到椅子上/从椅子上站起来 | — |
+| **BIGAI** | Beijing Institute for General Artificial Intelligence | 北京通用人工智能研究院 | — |
+
+
+---
+
 ## ❓ 解决什么问题？
 
 ### 核心场景
@@ -281,27 +305,6 @@ $$r_t = r_{\text{task}} + \lambda_i r_{\text{interact}} + \lambda_s r_{\text{sty
 - **HDMI**: 参考类，人-物交互模仿学习
 - **PhysHSI**: 无参考类，但任务特定，无法组合
 - **AMP** (2021): 对抗运动先验，LessMimic 的 AIP 直接受此启发
-
----
-
-## 📖 英文缩写速查
-
-| 缩写 | 全称 | 简单解释 | 生活类比 |
-|------|------|----------|----------|
-| **DF** | Distance Field | 距离场：空间中每个点到最近物体表面的距离 | 给空间涂了一层"等高线地图"，越靠近物体颜色越深 |
-| **AIP** | Adversarial Interaction Priors | 对抗交互先验：用判别器正则化交互几何合理性 | "接触动作评委"：评判的是手和物体的几何关系是否合理 |
-| **AMP** | Adversarial Motion Priors | 对抗运动先验：用判别器正则化动作自然性 | "动作评委"：评判的是整个姿态是否自然（像人） |
-| **VAE** | Variational AutoEncoder | 变分自编码器：把高维数据压到低维隐空间 | 把厚书压成摘要卡，又能从摘要还原书的大意 |
-| **RL** | Reinforcement Learning | 强化学习 | 训狗：做对了给零食，做错了没有 |
-| **PPO** | Proximal Policy Optimization | 近端策略优化 | 每次只微调一点习惯，防止矫枉过正 |
-| **DAgger** | Dataset Aggregation | 数据集聚合：学生上场，教师实时批注纠正 | 学徒边干边问师傅"这样对吗" |
-| **MoCap** | Motion Capture | 动作捕捉：记录人类运动的设备 | 穿着反光球背心在摄像机前表演，电脑记录你每个关节的位置 |
-| **GAN** | Generative Adversarial Network | 生成对抗网络：生成器和判别器互相博弈 | 造假画的艺术家（生成器）vs 鉴别赝品的专家（判别器） |
-| **OOD** | Out-of-Distribution | 分布外：测试时遇到训练没见过的情况 | 在中国学驾驶，突然到英国靠左行驶 |
-| **Transformer** | — | 注意力机制为核心的神经网络，擅长处理序列 | 读一句话时，每个词都能"关注"其他词的语义 |
-| **PickUp** | — | 抓取任务：把物体从地上拿起来 | — |
-| **SitStand** | — | 坐立任务：坐到椅子上/从椅子上站起来 | — |
-| **BIGAI** | Beijing Institute for General Artificial Intelligence | 北京通用人工智能研究院 | — |
 
 ---
 
