@@ -31,29 +31,22 @@ layout: default
     </aside>
   </div>
 
-  {% comment %}Build ordered paper list{% endcomment %}
-  {% assign ordered_papers = '' | split: '' %}
-  {% for p in site.pages %}
-    {% if p.paper_order %}
-      {% assign ordered_papers = ordered_papers | concat: p %}
-    {% endif %}
-  {% endfor %}
-  {% assign ordered_papers = ordered_papers | sort: "paper_order" %}
-
-  {% comment %}Find prev and next papers{% endcomment %}
+  {% comment %}Build prev/next papers using where and sort{% endcomment %}
+  {% assign all_ordered = site.pages | where: "paper_order" | sort: "paper_order" %}
   {% assign prev_paper = nil %}
   {% assign next_paper = nil %}
   {% assign found = false %}
-  {% for p in ordered_papers %}
-    {% if found and next_paper == nil %}
-      {% assign next_paper = p %}
-    {% endif %}
+  {% for p in all_ordered %}
     {% if p.url == page.url %}
       {% assign found = true %}
       {% continue %}
     {% endif %}
     {% if found == false %}
       {% assign prev_paper = p %}
+    {% endif %}
+    {% if found == true and next_paper == nil %}
+      {% assign next_paper = p %}
+      {% break %}
     {% endif %}
   {% endfor %}
 
@@ -84,7 +77,6 @@ layout: default
   ul.className = 'toc-list';
 
   headings.forEach(function(h, i) {
-    // Ensure heading has an id for anchor
     if (!h.id) {
       h.id = 'heading-' + i;
     }
@@ -100,7 +92,6 @@ layout: default
 
   nav.appendChild(ul);
 
-  // Highlight active section on scroll
   var links = nav.querySelectorAll('.toc-link');
   var headingArr = Array.from(headings);
 
@@ -123,8 +114,6 @@ layout: default
 </script>
 
 <script>
-// Rouge provides syntax-colored spans. We rebuild each block into per-line divs for line numbers.
-// Structure: div.highlighter-rouge > div.highlight > pre.highlight > code
 (function() {
   function rebuildWithLineNumbers() {
     document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
@@ -173,7 +162,6 @@ layout: default
     return lines;
   }
 
-  // Rouge has already colored the code server-side, no need to wait for Prism
   document.addEventListener('DOMContentLoaded', rebuildWithLineNumbers);
 })();
 </script>
