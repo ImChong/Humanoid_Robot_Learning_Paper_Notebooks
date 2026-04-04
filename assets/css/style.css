@@ -633,14 +633,9 @@ body {
   font-size: 0.9rem;
   color: var(--link);
   text-decoration: none;
-  padding: 4px 10px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  transition: background 0.15s;
 }
 .prev-link:hover, .next-link:hover {
-  background: var(--hover-bg);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* ===== Footer ===== */

@@ -77,11 +77,11 @@ layout: default
 
   var html = '';
   if (prev) {
-    html += '<a href="' + prev.url + '" class="prev-link">← ' + prev.short + '</a>';
+    html += '<a href="' + prev.url + '" class="prev-link">' + prev.short + '</a>';
   }
   html += '<a href="' + listLink + '" class="back-link">← 返回论文列表</a>';
   if (next) {
-    html += '<a href="' + next.url + '" class="next-link">' + next.short + ' →</a>';
+    html += '<a href="' + next.url + '" class="next-link">' + next.short + '</a>';
   }
   nav.innerHTML = html;
 })();
