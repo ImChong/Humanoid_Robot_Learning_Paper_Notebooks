@@ -161,9 +161,9 @@
     },
     {
       "title": "LCP: Sim-to-Real Action Smoothing",
-      "arxiv": "",
-      "folder": "papers/01_基础路线图/LCP__Sim-to-Real_Action_Smoothing",
-      "note_file": "LCP__Sim-to-Real_Action_Smoothing.md",
+      "arxiv": "https://arxiv.org/abs/2410.11825",
+      "folder": "papers/09_Sim-to-Real/LCP_Sim-to-Real_Action_Smoothing",
+      "note_file": "LCP_Sim-to-Real_Action_Smoothing.md",
       "pdf_file": "LCP.pdf",
       "status": "pending",
       "start_date": null,
