@@ -60,9 +60,9 @@
       },
       {
         "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
-        "path": "papers/01_Foundational_RL/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies.md",
-        "url": "/papers/01_Foundational_RL/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies.html",
-        "dir": "LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies",
+        "path": "papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.md",
+        "url": "/papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.html",
+        "dir": "LCP_Sim-to-Real_Action_Smoothing",
         "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
       }
     ],

@@ -16,7 +16,7 @@
 | 10  | Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | ⏳ 待读 | - | 扩散+控制 |
 | 11  | BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion | ⏳ 待读 | - | 扩散+控制 |
 | 12  | Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World | ⏳ 待读 | - | Sim-to-Real |
-| 13  | LCP: Sim-to-Real Action Smoothing | ⏳ 待读 | - | Sim-to-Real |
+| 13  | LCP: Sim-to-Real Action Smoothing | ⏳ 待读 | - | 基础RL |
 
 ### ⭐ 高影响力精选（基础路线图之后优先读）
 
