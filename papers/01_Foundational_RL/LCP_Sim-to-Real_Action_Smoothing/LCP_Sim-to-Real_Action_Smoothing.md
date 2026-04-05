@@ -26,6 +26,20 @@ category: "Sim-to-Real"
 
 ---
 
+## 🔤 英文缩写速查
+
+| 缩写 | 全称 | 简单解释 |
+|------|------|----------|
+| **LCP** | Lipschitz-Constrained Policies | Lipschitz 约束策略 |
+| **GP** | Gradient Penalty | 梯度惩罚 |
+| **PPO** | Proximal Policy Optimization | 近端策略优化 |
+| **ROA** | Regularized Online Adaptation | 正则化在线适应 |
+| **PD** | Proportional-Derivative | 比例-微分控制 |
+| **DoF** | Degree of Freedom | 自由度 |
+| **Sim-to-Real** | Simulation to Real | 从仿真迁移到真实机器人 |
+
+---
+
 ## 🎯 一句话总结
 
 LCP 的核心主张很硬：**与其在 reward 里拧各种“平滑惩罚”旋钮，或者在输出后面再塞低通滤波器，不如直接约束策略本身对输入的敏感度**——用一个可微的梯度惩罚，把策略训练成“天生不抖”。
@@ -456,20 +470,6 @@ $$
 | **ROA / adaptation-based sim-to-real** | 论文使用的迁移框架组成部分 |
 | **Smoothness rewards / low-pass filters** | LCP 直接对标替代的传统方法 |
 | **AMP / ASE / CALM** | 文中提到梯度惩罚此前常用于 discriminator regularization |
-
----
-
-### G. 英文缩写速查
-
-| 缩写 | 全称 | 简单解释 |
-|------|------|----------|
-| **LCP** | Lipschitz-Constrained Policies | Lipschitz 约束策略 |
-| **GP** | Gradient Penalty | 梯度惩罚 |
-| **PPO** | Proximal Policy Optimization | 近端策略优化 |
-| **ROA** | Regularized Online Adaptation | 正则化在线适应 |
-| **PD** | Proportional-Derivative | 比例-微分控制 |
-| **DoF** | Degree of Freedom | 自由度 |
-| **Sim-to-Real** | Simulation to Real | 从仿真迁移到真实机器人 |
 
 ---
 
