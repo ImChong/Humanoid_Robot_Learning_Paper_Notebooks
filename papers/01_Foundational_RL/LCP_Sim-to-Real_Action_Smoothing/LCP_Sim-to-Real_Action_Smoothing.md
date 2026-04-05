@@ -12,20 +12,6 @@ category: "Sim-to-Real"
 
 ---
 
-## 📋 基本信息
-
-| 项目 | 链接 |
-|------|------|
-| **arXiv** | [2410.11825](https://arxiv.org/abs/2410.11825) |
-| **PDF** | [下载](https://arxiv.org/pdf/2410.11825) |
-| **项目页** | [LCP Project Page](https://lipschitz-constrained-policy.github.io/) |
-| **作者** | Zixuan Chen, Xialin He, Yen-Jen Wang, Qiayuan Liao, Yanjie Ze, Zhongyu Li, S. Shankar Sastry, Jiajun Wu, Koushil Sreenath, Saurabh Gupta, Xue Bin Peng |
-| **机构** | Simon Fraser University, UIUC, UC Berkeley, Stanford University, NVIDIA |
-| **会议/版本** | IROS 2025 / arXiv preprint |
-| **发布时间** | 2024年10月15日 |
-
----
-
 ## 🔤 英文缩写速查
 
 | 缩写 | 全称 | 简单解释 |
@@ -37,6 +23,20 @@ category: "Sim-to-Real"
 | **PD** | Proportional-Derivative | 比例-微分控制 |
 | **DoF** | Degree of Freedom | 自由度 |
 | **Sim-to-Real** | Simulation to Real | 从仿真迁移到真实机器人 |
+
+---
+
+## 📋 基本信息
+
+| 项目 | 链接 |
+|------|------|
+| **arXiv** | [2410.11825](https://arxiv.org/abs/2410.11825) |
+| **PDF** | [下载](https://arxiv.org/pdf/2410.11825) |
+| **项目页** | [LCP Project Page](https://lipschitz-constrained-policy.github.io/) |
+| **作者** | Zixuan Chen, Xialin He, Yen-Jen Wang, Qiayuan Liao, Yanjie Ze, Zhongyu Li, S. Shankar Sastry, Jiajun Wu, Koushil Sreenath, Saurabh Gupta, Xue Bin Peng |
+| **机构** | Simon Fraser University, UIUC, UC Berkeley, Stanford University, NVIDIA |
+| **会议/版本** | IROS 2025 / arXiv preprint |
+| **发布时间** | 2024年10月15日 |
 
 ---
 
