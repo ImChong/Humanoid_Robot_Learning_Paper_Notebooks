@@ -50,6 +50,20 @@
         "url": "/papers/01_Foundational_RL/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.html",
         "dir": "ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control",
         "zhname": "ASE：大规模运动控制的对抗技能嵌入"
+      },
+      {
+        "title": "Understanding Domain Randomization for Sim-to-real Transfer",
+        "path": "papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.md",
+        "url": "/papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.html",
+        "dir": "Domain_Randomization_Understanding_Sim-to-Real_Transfer",
+        "zhname": "理解域随机化在仿真到现实迁移中的作用"
+      },
+      {
+        "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
+        "path": "papers/01_Foundational_RL/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies.md",
+        "url": "/papers/01_Foundational_RL/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies.html",
+        "dir": "LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies",
+        "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
       }
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research",
@@ -142,13 +156,6 @@
   "04_Locomotion": {
     "display_name": "Locomotion",
     "papers": [
-      {
-        "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
-        "path": "papers/04_Locomotion/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies.md",
-        "url": "/papers/04_Locomotion/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies/LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies.html",
-        "dir": "LCP_Learning_Smooth_Humanoid_Locomotion_through_Lipschitz-Constrained_Policies",
-        "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
-      }
     ],
     "zhname": "行走运动"
   },
@@ -175,13 +182,6 @@
   "09_Sim-to-Real": {
     "display_name": "Sim-to-Real",
     "papers": [
-      {
-        "title": "Understanding Domain Randomization for Sim-to-real Transfer",
-        "path": "papers/09_Sim-to-Real/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.md",
-        "url": "/papers/09_Sim-to-Real/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.html",
-        "dir": "Domain_Randomization_Understanding_Sim-to-Real_Transfer",
-        "zhname": "理解域随机化在仿真到现实迁移中的作用"
-      }
     ],
     "zhname": "仿真到现实"
   },
