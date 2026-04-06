@@ -5,7 +5,6 @@
 [![Papers](https://img.shields.io/badge/Papers-489-orange.svg)](papers/PROGRESS.md)
 [![Notes](https://img.shields.io/badge/Notes-15-green.svg)](papers/)
 
-
 **来源**: [awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning)
 
 ## 规则
@@ -30,17 +29,17 @@
 │   ├── 08_State_Estimation/           # 状态估计
 │   ├── 09_Sim-to-Real/                # 仿真到真实迁移
 │   ├── 10_Simulation_Benchmark/       # 仿真平台与基准测试
-│   ├── 11_Hardware_Design/            # 硬件设计
-│   ├── 12_Physics-Based_Animation/    # 基于物理的角色动画
+│   ├── 11_Hardware_Design/           # 硬件设计
+│   ├── 12_Physics-Based_Animation/   # 基于物理的角色动画
 │   ├── 13_Human_Motion/              # 人体运动分析与合成
-│   └── PROGRESS.md                    # 全部论文阅读进度表
+│   └── PROGRESS.md                   # 全部论文阅读进度表
 ├── progress.json                      # 当前阅读进度追踪（JSON）
 ├── scripts/                           # 辅助脚本
-│   └── prepare_pages.py               # GitHub Pages 部署预处理
+│   └── prepare_pages.py              # GitHub Pages 部署预处理
 ├── _data/                             # Jekyll 数据文件
-│   └── papers.json                    # 论文索引数据
+│   └── papers.json                   # 论文索引数据
 ├── .github/workflows/                 # CI/CD
-│   └── deploy.yml                     # GitHub Pages 自动部署
+│   └── deploy.yml                   # GitHub Pages 自动部署
 ├── _layouts/ _includes/ assets/       # Jekyll 网页模板和样式
 ├── _config.yml                        # Jekyll 配置
 └── README.md                          # 本文件
@@ -48,6 +47,15 @@
 
 每篇论文的笔记通过 [GitHub Pages](https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/) 自动部署为在线网页。
 
+## 源码对照
+
+笔记中涉及的论文，**如果**在 [MimicKit](https://github.com/xbpeng/MimicKit)（xbpeng 大神的运动模仿框架）中有官方实现，笔记会附上「📁 MimicKit 源码对照」章节，包含：
+
+- **关键代码块**：与笔记讲解一一对应的源码（网络结构、loss 计算、训练循环等）
+- **配置示例**：YAML 超参数文件的关键参数说明
+- **训练 / 测试命令**：可一键运行的命令行
+
+> MimicKit 是一个轻量级的运动模仿框架，支持 Isaac Gym / Isaac Lab / Newton 等仿真后端。目前已覆盖：DeepMimic、AMP、AWR、ASE、LCP 等主流算法。源码地址：[https://github.com/xbpeng/MimicKit](https://github.com/xbpeng/MimicKit)
 
 ## 笔记说明
 
@@ -59,10 +67,12 @@
 |------|------|------|
 | 📋 基本信息 | arXiv、PDF、作者、机构、发表时间 | `arXiv: 1707.06347` |
 | 🎯 一句话总结 | 用一句大白话概括论文核心贡献 | "PPO 通过裁剪机制让策略更新既大胆又安全" |
+| 📌 英文缩写速查 | 论文中出现的术语缩写表 | 放在一句话总结之后、正文之前 |
 | ❓ 要解决什么问题 | 问题背景 + 生活化类比，零基础能看懂 | 用"走台阶 vs 瞎子爬山"类比 PPO vs TRPO |
 | 🔧 方法详解 | 逐步拆解核心方法，配公式、表格、流程图 | 概率比 → 优势函数 → 裁剪机制 → 训练流程 |
 | 🚶 具体实例 | **完整数值走通**：用人形机器人场景演示算法全过程 | 状态设定 → 采样 → GAE 计算 → 裁剪更新 → 训练进展 |
 | 🤖 工程价值 | 为什么这个方法对人形机器人控制重要 | PPO 成为 sim-to-real 首选的原因 |
+| 📁 MimicKit 源码对照 | *(可选，有源码时出现)* 对应的 MimicKit 官方实现代码与配置 | PPO/AWR/LCP 等主流算法均有覆盖 |
 | 🎤 面试高频 Q&A | 5-8 个高频问题 + 参考回答，直接可用 | "PPO 和 TRPO 的区别？""裁剪具体怎么起作用？" |
 | 💬 讨论记录 | 阅读过程中的疑问、讨论和澄清 | surrogate loss 的直觉理解 |
 
@@ -77,7 +87,6 @@
 | 训练过程可视化 | 各指标随训练的变化趋势 |
 | 实验结果 | 关键实验数据与对比 |
 | 相关工作 | 上下游论文关系 |
-| 英文缩写速查 | 论文中出现的术语缩写表 |
 
 > 💡 附录内容因论文而异，不是每篇都有全部附录。核心原则：**有用就写，没必要就省**。
 
@@ -103,3 +112,16 @@
   ↑ sim环境随机化迁移        ↑ 动作平滑，替代低通滤波器
 ```
 
+## 源码层面一览（MimicKit 覆盖情况）
+
+| 论文 | MimicKit 源码 | 核心实现文件 |
+|------|:---:|------|
+| PPO | ✅ | `mimickit/learning/ppo_agent.py` |
+| AWR | ✅ | `mimickit/learning/awr_agent.py` |
+| AMP | ✅ | `mimickit/learning/amp_agent.py` |
+| DeepMimic | ✅ | `mimickit/learning/deepmimic_agent.py` |
+| ASE | ✅ | `mimickit/learning/ase_agent.py` |
+| **LCP** | ✅ | `mimickit/learning/lcp_agent.py` |
+| ADD | ✅ | `mimickit/learning/add_agent.py` |
+
+> 注：打 ✅ 表示笔记中已附「MimicKit 源码对照」章节，可直接对照论文公式与代码实现。
