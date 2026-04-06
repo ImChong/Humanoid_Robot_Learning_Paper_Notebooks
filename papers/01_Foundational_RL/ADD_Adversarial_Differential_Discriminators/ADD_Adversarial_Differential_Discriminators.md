@@ -8,7 +8,7 @@ category: "Foundational RL"
 # ADD: Adversarial Disentanglement and Distillation
 **对抗差分鉴别器：基于物理的运动模仿**
 
-> 📅 阅读日期: -  
+> 📅 阅读日期: 2026-04-07  
 > 🏷️ 板块: Reinforcement Learning / Motion Imitation / Adversarial Learning
 
 ---
@@ -21,61 +21,509 @@ category: "Foundational RL"
 | **PDF** | [下载](https://arxiv.org/pdf/2505.04961) |
 | **作者** | Ziyu Zhang, Sergey Bashkirov, Dun Yang, Yi Shi, Michael Taylor, Xue Bin Peng |
 | **机构** | Simon Fraser University, NVIDIA |
-| **发布时间** | 2025年 |
-| **项目主页** | [ziyuz.github.io/ADD](https://ziyuz.github.io/ADD/) |
+| **发布时间** | 2025年（SIGGRAPH Asia 2025） |
+| **项目主页** | [ADD Project Page](https://add-moo.github.io/) |
 | **GitHub** | [xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) |
 
 ---
 
 ## 🎯 一句话总结
 
-ADD 提出**对抗差分鉴别器**——一种新型多目标优化技术，让物理仿真角色能精确复制参考运动（包括杂技和敏捷动作），达到与手工调参的 motion tracking 方法相当的质量，但**不需要手工设计奖励函数**。它将 AMP 的"分布匹配"目标改为"精确跟踪"，鉴别器只需要单个正样本即可工作。
+ADD 的核心很狠：**把“精确运动跟踪”从手工 reward 工程问题，变成一个对抗判别问题。** 它不再像 DeepMimic / PHC 那样手调 pose、velocity、end-effector、CoM 各种权重，而是训练一个**只看“参考和当前的差值”**的判别器，直接告诉策略“你离目标还有多远、方向对不对”。
 
 ---
+
 ## 📌 英文缩写速查
 
 | 缩写 | 全称 | 简单解释 |
 |------|------|----------|
-| **ADD** | Adversarial Disentanglement and Distillation | 对抗解耦与蒸馏：将对抗学习用于精确运动跟踪 |
-| **AMP** | Adversarial Motion Priors | 对抗运动先验：用判别器正则化动作自然性 |
-| **RL** | Reinforcement Learning | 强化学习：通过奖惩反馈训练策略 |
-| **GAN** | Generative Adversarial Network | 生成对抗网络：生成器与判别器对抗训练 |
-| **PHC** | Perpetual Humanoid Control | 永续人形控制：大规模动作模仿的 RL 框架 |
+| **ADD** | Adversarial Differential Discriminator | 对抗差分鉴别器：用“状态差值”做判别来替代手工 tracking reward |
+| **AMP** | Adversarial Motion Priors | 对抗运动先验：判别器判断动作像不像真人 |
+| **RL** | Reinforcement Learning | 强化学习 |
+| **MOO** | Multi-Objective Optimization | 多目标优化 |
+| **PPO** | Proximal Policy Optimization | 近端策略优化，ADD 的底层优化器 |
+| **GAN** | Generative Adversarial Network | 生成对抗网络 |
+| **MoCap** | Motion Capture | 动作捕捉 |
+| **Sim-to-Real** | Simulation to Real | 仿真到真实迁移 |
 
+---
 
 ## ❓ 这篇论文要解决什么问题？
 
-> 待补充
+ADD 瞄准的是一个很老、但一直很烦的问题：
+
+**当任务目标不止一个时，你怎么把多个目标揉成一个“好用的 reward”？**
+
+在 motion tracking 里尤其典型。
+
+如果你想让一个物理角色精确模仿参考动作，通常要同时考虑：
+- 关节姿态对不对
+- 关节速度对不对
+- 手脚末端位置对不对
+- 质心对不对
+- 动作要不要更平滑
+- 是否还得保留自然感
+
+传统做法就是写一个大 reward：
+
+$$
+r = w_1 r_{pose} + w_2 r_{vel} + w_3 r_{ee} + w_4 r_{com} + \cdots
+$$
+
+问题是：
+
+1. **权重很难调**  
+   你把姿态权重开大，动作会更像，但可能节奏乱；你把末端位置权重开大，手脚可能到位了，但整体动作僵硬。
+
+2. **不同技能要重新调**  
+   走路、跑步、后空翻、旋风踢，这些动作的最佳 reward 权重根本不一样。
+
+3. **reward 工程很耗人**  
+   不是不能做，而是很费。你最后经常不是在研究方法，而是在当 reward 调参工。
+
+> 💡 **类比**：
+> 传统 tracking reward 像你在给学生打总分：姿态 30 分、速度 20 分、末端 25 分、质心 25 分。问题是每门课比例都要人工定，而且不同学生、不同考试还得重调。ADD 的想法则是：**别自己定科目权重了，直接训练一个“总教练”判断你现在和标准答案差在哪里。**
+
+论文的关键洞察是：
+
+> **精确 tracking 本质上也是一个多目标优化问题，而对抗学习可以替代手工加权。**
+
+AMP 已经证明了判别器可以用来学“自然动作分布”；
+ADD 则更进一步：
+
+- AMP 判别的是：**你像不像真人动作分布**
+- ADD 判别的是：**你和目标动作的差值，像不像“完美匹配时的差值”**
+
+而“完美匹配时的差值”其实就是 **0**。
+
+这就是 ADD 最巧的地方：
+
+- 正样本不再是整段专家动作
+- 正样本变成一个**零差向量**
+- 负样本则是“参考动作 - 当前动作”的差分
+
+所以 ADD 其实是在学一个判别边界：
+
+> **当前你和目标之间的误差，看起来像不像“误差为 0”这个理想状态。**
+
+这直接把 reward 设计从“人工凑加权和”变成了“让判别器自动学多目标之间的 trade-off”。
 
 ---
 
 ## 🔧 ADD 是怎么做的？
 
-> 待补充
+先说一句人话版：
+
+> **ADD = AMP 的形式 + DeepMimic/PHC 的目标。**
+
+AMP 擅长学“像不像真人”；
+DeepMimic / PHC 擅长学“跟得准不准”；
+ADD 把对抗学习从“分布匹配”改造成“差分匹配”，于是你既保留了 adversarial 的自动权衡能力，又把目标收紧到了精确 tracking。
+
+### 第一个概念：别直接判状态，判“误差”
+
+假设当前模拟角色的判别输入是 $o$，参考动作对应的输入是 $o^{demo}$。
+
+ADD 不直接把两者分别喂给判别器，而是先做差：
+
+$$
+\Delta o = o^{demo} - o
+$$
+
+这一步非常关键。
+
+因为在 tracking 任务里，你真正关心的不是“当前姿态本身好不好”，而是：
+
+> **它离目标姿态还有多远。**
+
+如果完全匹配，那么：
+
+$$
+\Delta o = 0
+$$
+
+于是 ADD 的正样本就自然变成了零向量，而负样本是实际出现的差分误差。
+
+### 第二个概念：正样本只有一个也够用
+
+传统 GAN / AMP 通常需要大量正样本分布；但 ADD 这里的正样本不是一堆复杂数据，而是一个固定理想点：
+
+$$
+\Delta o^{+} = 0
+$$
+
+也就是说，ADD 的判别器学的是：
+- **正类**：零差值（理想 tracking）
+- **负类**：非零差值（当前 tracking 误差）
+
+这就是论文标题里 “Differential Discriminator” 的含义。
+
+> 💡 **直觉**：
+> 不是问“这个动作像不像专家”，而是问“你现在这个误差，看起来像不像‘没有误差’”。
+
+### 第三个概念：奖励来自判别器，而不是手工加权
+
+ADD 的训练流程可以概括成：
+
+1. 环境给出当前状态和参考状态
+2. 构造差分特征 $\Delta o = o^{demo} - o$
+3. 判别器判断这个差分更像正样本（0）还是负样本（真实误差）
+4. 将判别器输出转成 reward，喂给 PPO 更新策略
+
+所以总 reward 本质上变成：
+
+$$
+r \approx r_{disc}
+$$
+
+在 MimicKit 的默认配置里，甚至直接把 task reward 权重设成 0：
+
+```yaml
+task_reward_weight: 0.0
+disc_reward_weight: 1.0
+```
+
+这意味着：
+
+> **默认 ADD 几乎完全靠判别器 reward 驱动。**
+
+这点很猛，因为它说明作者不是把对抗项当辅助正则，而是真拿它替代手工 tracking reward。
+
+### 第四个概念：为什么它能自动平衡多个目标？
+
+因为差分向量里本身就同时包含了多个维度的信息：
+- 姿态差
+- 速度差
+- 末端差
+- 其他观测差
+
+判别器会自己学习哪些维度在当前任务更关键。
+
+这和手工 reward 最大的不同是：
+- 手工 reward：你先假设 pose 比 vel 更重要，再写权重
+- ADD：让判别器自己从数据里学“什么时候 pose 更重要，什么时候 vel 更重要”
+
+这就是它对多目标优化更自然的地方。
+
+### 第五个概念：它和 AMP 到底差在哪？
+
+这是面试必问。
+
+| 方法 | 判别器输入 | 正样本 | 学到什么 |
+|------|------------|--------|----------|
+| **AMP** | 动作/状态片段本身 | 专家运动片段 | 像不像真实动作分布 |
+| **ADD** | 参考与当前的差分 $\Delta o$ | 零差向量 | 跟目标跟得准不准 |
+
+所以：
+
+- **AMP 更像 style prior / naturalness prior**
+- **ADD 更像 tracking objective learner**
+
+如果说 AMP 是在回答：
+> “你像不像人？”
+
+那 ADD 回答的是：
+> “你离标准答案还有多远？”
 
 ---
 
-## 🚶 具体实例
+## 🚶 具体实例：ADD 怎么学会旋风踢？
 
-> 待补充
+假设参考动作是一段 **spinkick（旋风踢）**，包含如下阶段：
+
+```text
+阶段1：站稳蓄力
+阶段2：身体旋转启动
+阶段3：抬腿踢出
+阶段4：收腿落地
+阶段5：重新站稳
+```
+
+### 第 1 步：当前状态与参考状态做差
+
+在某个时刻，环境会同时拿到：
+- 当前模拟角色观测 $o$
+- 参考动作当前帧观测 $o^{demo}$
+
+然后做差：
+
+$$
+\Delta o = o^{demo} - o
+$$
+
+如果角色已经很接近参考动作，比如：
+- 髋关节只差一点点
+- 身体旋转角速度只慢一点点
+- 踢腿末端位置也只差几厘米
+
+那么 $\Delta o$ 会很小。
+
+如果角色完全乱了，比如旋转节奏错了、踢腿时机也不对，那 $\Delta o$ 就会很大。
+
+### 第 2 步：判别器判断“这个误差像不像 0”
+
+ADD 的判别器看到的是差分向量，而正样本就是全 0：
+
+```text
+正样本:  [0, 0, 0, ..., 0]
+负样本:  [0.12, -0.37, 0.08, ..., 1.45]
+```
+
+如果当前误差很小，判别器会给更高分；
+如果当前误差很大，判别器会给更低分。
+
+### 第 3 步：策略得到 reward 并更新
+
+于是 PPO 会倾向于选择那些能让误差变小的动作：
+
+- 旋转慢了 → 加大躯干与髋部协同
+- 踢腿位置偏了 → 调整支撑腿和摆腿轨迹
+- 落地不稳 → 更快把质心收回来
+
+你会发现，这其实和手工 tracking reward 达到的是同一目标；
+但不同的是：
+
+> **ADD 不需要你手工提前规定“姿态 0.5、速度 0.2、末端 0.3”这种比例。**
+
+### 第 4 步：为什么它对敏捷动作尤其有意义？
+
+像旋风踢、空翻、杂技这种动作，手工 reward 往往很难调：
+- 有些阶段姿态最重要
+- 有些阶段角速度最重要
+- 有些阶段末端轨迹最重要
+
+这些权重不是全程恒定的。
+
+而 ADD 的判别器会在不同状态区间自动学到不同维度的重要性，所以对这种**阶段性强、动态变化快**的动作尤其有优势。
 
 ---
 
 ## 🤖 ADD 对人形机器人领域的意义
 
-> 待补充
+### 1. 它在挑战一个老习惯：reward 工程不一定非做不可
+
+过去大家默认：
+- 精确 tracking 就得手工 reward
+- 对抗学习只能做“风格像不像”“自然不自然”
+
+ADD 直接反过来说：
+
+> **对抗学习也可以做精确 tracking，而且还能替代手工 reward。**
+
+这事不只是 motion imitation 有用，对更广泛的多目标 RL 也有启发意义。
+
+### 2. 它把“tracking”重新表述成“误差判别”
+
+这其实是个很漂亮的建模视角。
+
+因为很多控制任务本质上都不是绝对状态判断，而是**目标差值最小化**：
+- 轨迹跟踪
+- 姿态跟踪
+- 力控制误差
+- 视觉伺服误差
+
+ADD 给了一个通用思路：
+
+> **如果你的任务核心是“让误差趋近于 0”，那就可以考虑直接判误差，而不是手写误差聚合公式。**
+
+### 3. 它比 AMP 更接近“可部署 tracking 系统”
+
+AMP 更偏“动作自然性正则器”；
+ADD 更偏“目标跟踪驱动器”。
+
+如果你的目标是：
+- 精准复制参考运动
+- 尽量少做手工 reward 调参
+- 技能跨度很大（从走路到杂技）
+
+那么 ADD 的味道会更对。
+
+### 4. 它对 robotics 的启发不止在动画
+
+虽然论文场景是 physics-based character control，但这个思路很容易迁到机器人：
+- 末端轨迹 tracking
+- 全身动作跟踪
+- 多目标 imitation + smoothness + energy 的自动平衡
+
+尤其在 humanoid 上，reward 工程一直是巨坑。ADD 这种“让判别器学 trade-off”的思路，值得认真看。
+
+---
+
+## 📁 MimicKit 源码对照
+
+ADD 在 MimicKit 里已经有官方实现，而且实现很清楚：**它就是在 AMPAgent 基础上，把判别器输入从“动作片段本身”改成了“参考与当前的差值”。**
+
+### 1. ADDAgent 继承自 AMPAgent
+
+```python
+# mimickit/learning/add_agent.py
+class ADDAgent(amp_agent.AMPAgent):
+    def __init__(self, config, env, device):
+        super().__init__(config, env, device)
+        self._pos_diff = self._build_pos_diff()
+```
+
+这说明 ADD 不是推翻 AMP 重写，而是在 AMP 的框架上改判别器目标。
+
+### 2. 正样本就是零差值
+
+```python
+# mimickit/learning/add_agent.py
+pos_diff = self._pos_diff.clone()
+pos_diff = pos_diff.unsqueeze(dim=0)
+pos_diff.requires_grad_(True)
+disc_pos_logit = self._model.eval_disc(pos_diff)
+```
+
+这里的 `self._pos_diff` 在初始化时被构造成全 0 张量。
+
+也就是说：
+- **正样本** = `0`
+- 意义 = “当前状态和参考状态完全一致”
+
+这就是 ADD 最关键的实现细节。
+
+### 3. 负样本是 demo 和当前观测的差分
+
+```python
+# mimickit/learning/add_agent.py
+diff_obs = tar_disc_obs - disc_obs
+...
+replay_diff = replay_tar_disc_obs - replay_disc_obs
+diff_obs = torch.cat([diff_obs, replay_diff], dim=0)
+```
+
+这一段就是 ADD 的核心：
+
+$$
+\Delta o = o^{demo} - o
+$$
+
+判别器不再看“动作本身”，而是看“误差本身”。
+
+### 4. 判别器 reward 完全主导训练
+
+```python
+# mimickit/learning/add_agent.py
+obs_diff = disc_obs_demo - disc_obs
+norm_obs_diff = self._disc_obs_norm.normalize(obs_diff)
+disc_r = self._calc_disc_rewards(norm_obs_diff)
+
+r = self._task_reward_weight * task_r + self._disc_reward_weight * disc_r
+```
+
+对应默认配置：
+
+```yaml
+task_reward_weight: 0.0
+disc_reward_weight: 1.0
+```
+
+也就是说默认训练几乎完全靠 discriminator reward。
+
+### 5. 差分归一化器（DiffNormalizer）
+
+```python
+# mimickit/learning/add_agent.py
+self._disc_obs_norm = diff_normalizer.DiffNormalizer(...)
+```
+
+这一步很重要。因为不同误差维度量纲不同：
+- 位置误差可能是米
+- 角度误差可能是弧度
+- 速度误差可能是 m/s 或 rad/s
+
+如果不归一化，判别器会被某些大尺度维度带偏。
+
+### 6. ADDModel 本身并不复杂
+
+```python
+# mimickit/learning/add_model.py
+class ADDModel(amp_model.AMPModel):
+    def __init__(self, config, env):
+        super().__init__(config, env)
+```
+
+说明 ADD 的创新不在网络结构花活，而在：
+- 判别器输入设计
+- 正负样本构造方式
+- 用差分替代手工 tracking reward
+
+### 7. 默认超参数
+
+```yaml
+# data/agents/add_g1_agent.yaml
+agent_name: "ADD"
+
+disc_buffer_size: 200000
+disc_replay_samples: 1000
+disc_logit_reg: 0.01
+disc_grad_penalty: 2
+disc_reward_scale: 2
+
+task_reward_weight: 0.0
+disc_reward_weight: 1.0
+
+ppo_clip_ratio: 0.2
+td_lambda: 0.95
+discount: 0.99
+```
+
+### 8. 训练 / 测试命令
+
+```bash
+# 训练
+python mimickit/run.py --mode train \
+  --num_envs 4096 \
+  --engine_config data/engines/isaac_gym_engine.yaml \
+  --env_config data/envs/add_humanoid_env.yaml \
+  --agent_config data/agents/add_humanoid_agent.yaml \
+  --visualize false \
+  --out_dir output/
+
+# 测试
+python mimickit/run.py --mode test \
+  --num_envs 4 \
+  --engine_config data/engines/isaac_gym_engine.yaml \
+  --env_config data/envs/add_humanoid_env.yaml \
+  --agent_config data/agents/add_humanoid_agent.yaml \
+  --visualize true \
+  --model_file data/models/add_humanoid_spinkick_model.pt
+```
 
 ---
 
 ## 🎤 面试高频问题 & 参考回答
 
-> 待补充
+### Q1: ADD 和 AMP 的核心区别是什么？
+**A**：AMP 的判别器输入是动作/状态片段本身，目标是学习“像不像真实运动分布”；ADD 的判别器输入是参考与当前之间的差分，目标是学习“离目标是否接近零误差”。所以 AMP 更偏自然性先验，ADD 更偏精确 tracking。
+
+### Q2: 为什么 ADD 只需要一个正样本？
+**A**：因为它判别的不是专家分布，而是误差分布。理想 tracking 时误差恒为 0，所以正样本天然就是零差向量，不需要像 GAN/AMP 那样准备大量正样本片段。
+
+### Q3: ADD 为什么能替代手工 reward？
+**A**：因为多目标 tracking 本质上就是多个误差项的联合优化。传统方法靠手工加权和，ADD 则让判别器直接在差分空间里学习“哪些误差组合更接近理想匹配”。这相当于把 reward 聚合器从手工规则换成了可学习模型。
+
+### Q4: ADD 的优点是什么？
+**A**：核心优点有三个：① 少手工调参；② 更容易跨不同技能复用；③ 对复杂敏捷动作更自然，因为不同阶段可以自动学习不同维度的重要性。
+
+### Q5: ADD 的潜在代价是什么？
+**A**：训练会更依赖判别器稳定性，需要处理 replay buffer、gradient penalty、logit regularization、输入归一化等工程细节。如果判别器训崩，reward 信号也会一起崩。
+
+### Q6: ADD 适合什么任务？
+**A**：适合那种“本质是误差趋近于 0”的多目标 tracking 任务，比如动作模仿、全身姿态跟踪、末端轨迹跟踪。对于纯开放式风格生成，AMP 那类方法通常更自然。
 
 ---
 
 ## 💬 讨论记录
 
-> 待补充
+### 2026-04-07：ADD 的一句话本质
+
+ADD 不是“又一个 adversarial imitation trick”，它真正有价值的地方是：
+
+> **把 tracking reward 从“人工写公式”变成“学习一个误差判别器”。**
+
+这比“它能模仿旋风踢”更值得记。
 
 ---
 
@@ -85,6 +533,37 @@ ADD 提出**对抗差分鉴别器**——一种新型多目标优化技术，让
 
 | 关系 | 说明 |
 |------|------|
-| **AMP → ADD** | ADD 将 AMP 的分布匹配改为精确轨迹跟踪 |
-| **DeepMimic → ADD** | DeepMimic 用手工奖励精确跟踪，ADD 用对抗学习自动实现精确跟踪 |
-| **ADD vs PHC** | 都做精确运动跟踪，但 ADD 不需要手工设计模仿奖励 |
+| **AMP → ADD** | ADD 将 AMP 的分布匹配改成误差匹配 |
+| **DeepMimic → ADD** | DeepMimic 用手工 tracking reward，ADD 用差分判别器自动学 tracking reward |
+| **PHC → ADD** | PHC 仍依赖手工 imitation reward，ADD 试图把这一步自动化 |
+| **ADD → 后续工作** | 为“学习型 reward 聚合器”提供了一个很强的范式 |
+
+### B. ADD 和相关方法对比
+
+| 特性 | DeepMimic | AMP | PHC | ADD |
+|------|-----------|-----|-----|-----|
+| 目标 | 精确 tracking | 学自然动作分布 | 大规模 tracking + recovery | 精确 tracking |
+| reward 来源 | 手工设计 | 判别器 + task reward | 手工 imitation + AMP | 差分判别器 |
+| 是否需要手工加权 tracking 项 | ✅ | 部分需要 | ✅ | ❌ |
+| 判别器输入 | 无 | 动作片段本身 | AMP 片段 | 参考-当前差分 |
+| 正样本 | 无 | 专家运动片段 | 专家运动片段 | 零差向量 |
+
+### C. 你该怎么理解 ADD？
+
+如果只记一句：
+
+> **AMP 学“像不像人”，ADD 学“离目标差多少”。**
+
+如果再加一句：
+
+> **ADD 最值钱的，不是换了个判别器名字，而是它把多目标 reward 聚合从手工工程，推进到了可学习范式。**
+
+---
+
+## 参考来源
+
+- arXiv: https://arxiv.org/abs/2505.04961  
+- MimicKit: https://github.com/xbpeng/MimicKit  
+- ADD README: https://github.com/xbpeng/MimicKit/blob/main/docs/README_ADD.md  
+
+> 注：本文内容基于论文摘要、MimicKit 官方实现与项目说明整理；其中部分直觉解释、类比和工程解读属于我的归纳，不是论文原文直述。
