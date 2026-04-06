@@ -471,6 +471,164 @@ $$
 | **Smoothness rewards / low-pass filters** | LCP 直接对标替代的传统方法 |
 | **AMP / ASE / CALM** | 文中提到梯度惩罚此前常用于 discriminator regularization |
 
+## 📁 MimicKit 源码对照
+
+以下代码块对应 [MimicKit](https://github.com/xbpeng/MimicKit) 中 LCP 的实现，与上述讲解的各模块一一对应。
+
+### 1. LCP Agent（LCP 作为 PPO 的 wrapper）
+
+```python
+# mimickit/learning/lcp_agent.py
+class LCPAgent(ppo_agent.PPOAgent):
+    def __init__(self, config, env, device):
+        super().__init__(config, env, device)
+        return
+
+    def _load_params(self, config):
+        super()._load_params(config)
+        self._lcp_weight = config["lcp_weight"]  # GP 权重，由用户调参
+        return
+
+    def _build_model(self, config):
+        model_config = config["model"]
+        self._model = lcp_model.LCPModel(model_config, self._env)
+        return
+```
+
+> 🔑 **关键理解**：LCP 继承自 PPOAgent，不改动 PPO 的训练循环，只在 `_compute_actor_loss` 里额外加一项 loss。
+
+### 2. LCPModel（几乎等价于 PPOModel）
+
+```python
+# mimickit/learning/lcp_model.py
+class LCPModel(ppo_model.PPOModel):
+    def __init__(self, config, env):
+        super().__init__(config, env)  # 完全复用 PPOModel 的网络结构
+        return
+```
+
+> 网络架构和 PPO 完全一样（FC 两层 1024 units），LCP 的平滑约束不依赖新的网络结构。
+
+### 3. LCP 梯度惩罚损失（核心！）
+
+```python
+# mimickit/learning/lcp_agent.py - _compute_lcp_loss()
+def _compute_lcp_loss(self, norm_obs, norm_a):
+    norm_obs.requires_grad_(True)  # 需要梯度以计算二阶导
+    a_dist = self._model.eval_actor(norm_obs)
+    a_logp = a_dist.log_prob(norm_a)
+
+    # 关键：对 log_prob 关于 observation 求梯度
+    a_logp_grad = torch.autograd.grad(
+        outputs=a_logp,
+        inputs=norm_obs,
+        grad_outputs=torch.ones_like(a_logp),
+        create_graph=True,        # 需要对梯度再求导（链式法则）
+        retain_graph=True,        # 保留计算图供后续使用
+        only_inputs=True
+    )[0]
+
+    # 计算梯度范数：||∇_o log π(a|o)||²
+    a_logp_grad_norm = torch.sum(torch.square(a_logp_grad), dim=-1)
+    lcp_loss = torch.mean(a_logp_grad_norm)
+    return lcp_loss
+```
+
+> 💡 **为什么用 `log_prob` 而不是 `mean`？**
+> log prob 的梯度恰好等价于 policy 对 observation 的敏感度度量——观测微扰 → 动作概率变化有多大。而且 log prob 本身参与 PPO 的 policy gradient 计算，复用已有计算图，几乎没有额外开销。
+
+### 4. 在 Actor Loss 里加入 LCP 项
+
+```python
+# mimickit/learning/lcp_agent.py - _compute_actor_loss()
+def _compute_actor_loss(self, batch):
+    info = super()._compute_actor_loss(batch)  # 先拿标准 PPO actor loss
+
+    norm_obs = self._obs_norm.normalize(batch["obs"])
+    norm_a = self._a_norm.normalize(batch["action"])
+    lcp_loss = self._compute_lcp_loss(norm_obs, norm_a)
+
+    # L_total = L_RL + λ_gp * L_LCP
+    info["actor_loss"] += self._lcp_weight * lcp_loss
+    info["lcp_loss"] = lcp_loss  # 记录下来用于监控
+    return info
+```
+
+对应配置：
+```yaml
+lcp_weight: 0.002   # λ_gp = 0.002，核心超参——太大动作太钝，太小没效果
+```
+
+### 5. 完整训练目标
+
+LCP 并不修改 PPO 的优化框架，只是在 actor loss 后面追加一项：
+
+$$\mathcal{L}_{total} = \underbrace{-L^{CLIP}(\theta)}_{\text{标准 PPO 策略损失}} + \underbrace{\lambda_{gp} \cdot \mathbb{E}\left[\|\nabla_o \log \pi_\theta(a \mid o)\|^2\right]}_{\text{LCP 平滑正则项}}$$
+
+代码里对应：
+```python
+info["actor_loss"] += self._lcp_weight * lcp_loss
+# actor_loss = L_RL + lcp_weight * L_LCP
+```
+
+### 6. LCP 超参数一览
+
+```yaml
+# data/agents/lcp_g1_agent.yaml
+agent_name: "LCP"
+
+model:
+  actor_net: "fc_2layers_1024units"   # 与 PPO 相同网络结构
+  actor_init_output_scale: 0.01        # 输出层初始化尺度（小初始输出）
+  actor_std_type: "FIXED"              # 固定动作 std
+  action_std: 0.05
+  critic_net: "fc_2layers_1024units"
+
+actor_optimizer:
+  type: "SGD"                          # LCP 论文使用 SGD（不同于 PPO 默认 Adam）
+  learning_rate: 1e-4                  
+critic_optimizer:
+  type: "SGD"
+  learning_rate: 1e-4
+
+# PPO 标准参数
+discount: 0.99
+td_lambda: 0.95
+ppo_clip_ratio: 0.2
+norm_adv_clip: 4.0
+action_bound_weight: 10.0
+action_entropy_weight: 0.0
+
+# LCP 专属参数
+lcp_weight: 0.002   # ← 关键超参，需根据任务/机器人调
+```
+
+> ⚠️ **注意**：LCP 论文使用 SGD（lr=1e-4）而非 Adam，这是为了让 GP 正则项和 PPO 策略项的优化节奏更匹配——SGD 比 Adam 更"线性"，对加在 loss 上的正则项响应更稳定。
+
+### 7. 训练 / 测试命令
+
+```bash
+# 训练
+python mimickit/run.py --mode train \
+  --num_envs 4096 \
+  --engine_config data/engines/isaac_gym_engine.yaml \
+  --env_config data/envs/deepmimic_g1_env.yaml \
+  --agent_config data/agents/lcp_g1_agent.yaml \
+  --visualize false \
+  --out_dir output/
+
+# 测试
+python mimickit/run.py --mode test \
+  --num_envs 4 \
+  --engine_config data/engines/isaac_gym_engine.yaml \
+  --env_config data/envs/deepmimic_g1_env.yaml \
+  --agent_config data/agents/lcp_g1_agent.yaml \
+  --visualize true \
+  --model_file data/models/lcp_g1_walk_model.pt
+```
+
+---
+
 ## 参考来源
 
 - arXiv: https://arxiv.org/abs/2410.11825  
