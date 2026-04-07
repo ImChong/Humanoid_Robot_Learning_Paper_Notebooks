@@ -497,6 +497,182 @@ AMP 是从"精确模仿"到"风格学习"的关键转折点：
 
 ---
 
+## 📁 MimicKit 源码对照
+
+下面按 **PPO 笔记同样的模式**，把 AMP 在 MimicKit 中对应的实现模块对上。说明一下：你当前 workspace 里没有直接放 MimicKit 源码仓，但 `Robotics_Notebooks/Train/MimicKit` 里已经整理过对应代码结构和关键片段，所以这里按那套整理结果做源码映射。
+
+### 1. AMP 总 loss = PPO loss + Discriminator loss
+
+```python
+# mimickit/learning/amp_agent.py
+def _compute_loss(self, batch):
+    info = super()._compute_loss(batch)   # PPO 部分：actor_loss + critic_loss
+
+    disc_info = self._compute_disc_loss(batch)
+    disc_loss = disc_info["disc_loss"]
+
+    loss = info["loss"]
+    loss = loss + self._disc_loss_weight * disc_loss
+    info["loss"] = loss
+    info = {**info, **disc_info}
+    return info
+```
+
+这里最关键的一点是：**AMP 不是替换 PPO，而是在 PPO 上额外加了一个判别器分支**。
+
+也就是：
+
+```python
+total_loss = actor_loss + critic_w * critic_loss + disc_w * disc_loss
+```
+
+这正对应前面讲的“策略和鉴别器交替训练、互相对抗”。
+
+### 2. 判别器 loss：真样本 vs 假样本
+
+```python
+# mimickit/learning/amp_agent.py
+def _compute_disc_loss(self, batch):
+    disc_obs = batch["disc_obs"]
+    disc_demo_obs = batch["disc_obs_demo"]
+
+    disc_agent_logit = self._model.eval_disc(norm_disc_obs)
+    disc_demo_logit = self._model.eval_disc(norm_disc_obs_demo)
+
+    disc_loss_agent = self._disc_loss_neg(disc_agent_logit)
+    disc_loss_demo = self._disc_loss_pos(disc_demo_logit)
+    disc_loss = 0.5 * (disc_loss_agent + disc_loss_demo)
+```
+
+和论文里的直觉完全一致：
+- `disc_obs_demo`：来自动捕/参考数据的 **真样本**
+- `disc_obs`：来自当前策略 rollout 的 **假样本**
+- 判别器同时看两者，然后学习“什么像参考动作，什么不像”
+
+> 💡 代码层面看，AMP 的核心不是“再加一个奖励函数”，而是**再加一个二分类器训练问题**。
+
+### 3. Discriminator 网络入口（eval_disc）
+
+```python
+# mimickit/learning/amp_model.py
+disc_logit = self._model.eval_disc(norm_disc_obs)
+```
+
+结构上它和 PPO 的 `eval_actor()` / `eval_critic()` 是并列的第三条支路：
+
+```text
+obs ──► Actor ──► action dist
+obs ──► Critic ──► value
+amp_obs ──► Discriminator ──► real / fake logit
+```
+
+也就是说，AMP 的模型本质上是：
+- **Actor**：负责出动作
+- **Critic**：负责估值
+- **Discriminator**：负责判断“这段运动像不像参考数据”
+
+### 4. 计算图解耦：Actor / Critic / Disc 各自管各自
+
+根据 `Robotics_Notebooks/Train/MimicKit/MimicKIt 04 Actor_Critic_Disc 网络结构详解.md` 的整理，MimicKit 里三部分 loss 的计算图是分开的：
+
+- `actor_loss` 只回传到 **Actor**
+- `critic_loss` 只回传到 **Critic**
+- `disc_loss` 只回传到 **Discriminator**
+
+可以把它理解成：
+
+```python
+total_loss = actor_loss + critic_loss + disc_loss
+total_loss.backward()
+```
+
+但反向传播时：
+- Actor 参数不会收到 `disc_loss` 的梯度
+- Critic 参数不会收到 `actor_loss` / `disc_loss` 的梯度
+- Discriminator 参数也不会收到 PPO 那两项的梯度
+
+这和前面 AMP 的理论描述是对齐的：**三套网络一起训练，但职责分工明确**。
+
+### 5. AMP 仍然复用 PPO 的 Actor 更新
+
+AMP 的策略更新底座并没有变，依然是 PPO：
+
+```python
+# mimickit/learning/ppo_agent.py
+critic_info = self._compute_critic_loss(batch)
+actor_info = self._compute_actor_loss(batch)
+
+critic_loss = critic_info["critic_loss"]
+actor_loss = actor_info["actor_loss"]
+
+loss = actor_loss + self._critic_loss_weight * critic_loss
+```
+
+也就是说，AMP 的训练逻辑不是：
+- “用判别器取代 PPO”
+
+而是：
+- **PPO 负责 policy optimization**
+- **Discriminator 负责 style signal / imitation prior**
+
+这就是为什么 AMP 在工程上特别重要：它不是另起炉灶，而是在 PPO 这个成熟底盘上叠了一层风格学习模块。
+
+### 6. AMP 对应的任务配置：steering / location
+
+在 `Robotics_Notebooks/Train/MimicKit/MimicKit 06 给定目标速度执行复合动作.md` 里，已经把 MimicKit 中 AMP 的任务导向配置理了一遍。对应到源码/配置层，常见是这几类：
+
+```text
+amp_steering_humanoid_args.txt
+amp_steering_humanoid_sword_shield_args.txt
+amp_location_humanoid_args.txt
+amp_location_humanoid_sword_shield_args.txt
+```
+
+它们的共同点是：
+- 使用 **AMP agent**
+- 参考数据来自 locomotion dataset
+- 同时带有 **任务目标**（目标方向 / 目标速度 / 目标位置）
+- 最终奖励 = **风格奖励 + 任务奖励**
+
+这和论文中 Target Heading / 目标导航那部分实验是直接对应的。
+
+### 7. 从 PPO 到 AMP，代码层真正多出来了什么？
+
+如果拿 PPO 笔记那套结构来对照，AMP 相比 PPO 主要新增了三样东西：
+
+| 模块 | PPO | AMP |
+|------|-----|-----|
+| **Actor** | ✅ | ✅ |
+| **Critic** | ✅ | ✅ |
+| **Discriminator** | ❌ | ✅ |
+| **PPO clip 更新** | ✅ | ✅ |
+| **任务奖励** | ✅ | ✅ |
+| **风格/模仿奖励** | ❌ | ✅ |
+
+一句话总结：
+
+> **PPO 解决“怎么稳定更新策略”，AMP 解决“什么样的运动算自然、算像参考数据”。**
+
+### 8. 你看 AMP 源码时最该盯住的文件
+
+如果之后你要继续往下啃 MimicKit，建议按这个顺序看：
+
+1. `mimickit/learning/ppo_agent.py`  
+   先确认 PPO 主干怎么更新 Actor / Critic
+
+2. `mimickit/learning/amp_agent.py`  
+   看 AMP 如何在 PPO 上额外挂 Discriminator loss
+
+3. `mimickit/learning/amp_model.py`（或对应 model 文件）  
+   看 Actor / Critic / Disc 三分支结构
+
+4. 对应 `amp_*.txt` / dataset 配置  
+   看任务奖励、参考动作集、目标速度/方向是怎么接进来的
+
+这样读最顺，不会一上来就被 AMP 的“对抗训练”表象绕晕。
+
+---
+
 ## 🎤 面试高频问题 & 参考回答
 
 ### Q1: AMP 和 DeepMimic 的核心区别？
