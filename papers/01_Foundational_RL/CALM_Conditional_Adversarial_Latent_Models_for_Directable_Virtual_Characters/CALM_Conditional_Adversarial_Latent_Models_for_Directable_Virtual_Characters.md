@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 8
 title: "CALM: Conditional Adversarial Latent Models for Directable Virtual Characters"
-zhname: "CALM：条件对抗潜变量模型与可控虚拟角色"
+zhname: "CALM：面向可控虚拟角色的条件对抗潜变量模型"
 category: "Foundational RL"
 ---
 
