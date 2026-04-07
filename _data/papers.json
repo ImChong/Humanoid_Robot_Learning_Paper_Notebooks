@@ -52,11 +52,10 @@
         "zhname": "ASE：大规模运动控制的对抗技能嵌入"
       },
       {
-        "title": "Understanding Domain Randomization for Sim-to-real Transfer",
-        "path": "papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.md",
-        "url": "/papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.html",
-        "dir": "Domain_Randomization_Understanding_Sim-to-Real_Transfer",
-        "zhname": "理解域随机化在仿真到现实迁移中的作用"
+        "title": "CALM: Conditional Adversarial Latent Models for Directable Virtual Characters",
+        "path": "papers/01_Foundational_RL/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters.md",
+        "url": "/papers/01_Foundational_RL/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters.html",
+        "dir": "CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters"
       },
       {
         "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
@@ -64,16 +63,25 @@
         "url": "/papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.html",
         "dir": "LCP_Sim-to-Real_Action_Smoothing",
         "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
+      },
+      {
+        "title": "Understanding Domain Randomization for Sim-to-real Transfer",
+        "path": "papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.md",
+        "url": "/papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.html",
+        "dir": "Domain_Randomization_Understanding_Sim-to-Real_Transfer",
+        "zhname": "理解域随机化在仿真到现实迁移中的作用"
       }
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research",
-    "zhname": "基础强化学习",
-    "subtitle_zh": "基础强化学习理论与经典算法 — 理解后续研究的必要前置知识"
+    "subtitle_zh": "基础强化学习理论与经典算法 — 理解后续研究的必要前置知识",
+    "zhname": "基础强化学习"
   },
   "02_High_Impact_Selection": {
     "display_name": "High Impact Selection",
     "papers": [],
     "subtitle": "Curated high-impact and milestone papers in humanoid robot learning",
+    "subtitle_zh": "人形机器人学习领域的高影响力里程碑论文精选",
+    "zhname": "高影响力精选",
     "subcategories": [
       {
         "name": "Whole-Body Control Core",
@@ -108,9 +116,7 @@
         "papers": [],
         "zhname": "仿真平台与工具"
       }
-    ],
-    "zhname": "高影响力精选",
-    "subtitle_zh": "人形机器人学习领域的高影响力里程碑论文精选"
+    ]
   },
   "03_Loco-Manipulation_and_WBC": {
     "display_name": "Loco-Manipulation and WBC",
@@ -155,8 +161,7 @@
   },
   "04_Locomotion": {
     "display_name": "Locomotion",
-    "papers": [
-    ],
+    "papers": [],
     "zhname": "行走运动"
   },
   "05_Manipulation": {
@@ -181,8 +186,7 @@
   },
   "09_Sim-to-Real": {
     "display_name": "Sim-to-Real",
-    "papers": [
-    ],
+    "papers": [],
     "zhname": "仿真到现实"
   },
   "10_Simulation_Benchmark": {
