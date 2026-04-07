@@ -55,7 +55,8 @@
         "title": "CALM: Conditional Adversarial Latent Models for Directable Virtual Characters",
         "path": "papers/01_Foundational_RL/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters.md",
         "url": "/papers/01_Foundational_RL/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters.html",
-        "dir": "CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters"
+        "dir": "CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters",
+        "zhname": "CALM：条件对抗潜变量模型与可控虚拟角色"
       },
       {
         "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",

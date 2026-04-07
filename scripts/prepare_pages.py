@@ -187,9 +187,15 @@ def process_papers():
                     'dir': paper_dir,
                     '_order': order_idx
                 }
-                # Restore zhname from existing data if available
-                if title in existing_paper_zhnames:
+
+                # Prefer zhname from front matter when present
+                zhname_match = re.search(r'^zhname:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
+                if zhname_match:
+                    paper_entry['zhname'] = zhname_match.group(1).strip()
+                # Otherwise restore zhname from existing data if available
+                elif title in existing_paper_zhnames:
                     paper_entry['zhname'] = existing_paper_zhnames[title]
+
                 papers.append(paper_entry)
 
         # Sort by README order
