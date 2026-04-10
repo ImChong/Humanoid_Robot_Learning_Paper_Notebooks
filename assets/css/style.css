@@ -655,6 +655,22 @@ body {
   color: var(--text-secondary);
 }
 
+.footer-text {
+  margin: 0;
+}
+
+.footer-text-zh {
+  display: none;
+}
+
+html[lang="zh-CN"] .footer-text-en {
+  display: none;
+}
+
+html[lang="zh-CN"] .footer-text-zh {
+  display: block;
+}
+
 /* ===== Language Toggle ===== */
 .lang-toggle {
   flex-shrink: 0;
