@@ -663,11 +663,11 @@ body {
   display: none;
 }
 
-html[lang="zh-CN"] .footer-text-en {
+html[data-lang-mode="zh"] .footer-text-en {
   display: none;
 }
 
-html[lang="zh-CN"] .footer-text-zh {
+html[data-lang-mode="zh"] .footer-text-zh {
   display: block;
 }
 
