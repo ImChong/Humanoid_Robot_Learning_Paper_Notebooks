@@ -2,84 +2,151 @@
 
 ## Context（背景）
 
-本项目是一个基于 Jekyll 的双语（中/英）人形机器人强化学习论文笔记站点，通过 GitHub Pages 部署到 <https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/>。README 已列出明确的学习路线图（基础 RL → 精确模仿 → 风格学习 → 技能组合 → 扩散终点 → Sim-to-Real），但当前笔记完成情况与路线图仍有差距：部分路线图论文缺失文件夹，部分现有笔记体量远小于完整笔记（疑似 stub），且 10 个分类目录（04–13）完全为空。本计划基于 git 日志、`papers/` 目录与 README 路线图对比生成，目标是把学习路线图主干补齐到"能发布"的状态，并沉淀下一步的长期扩展方向。
+本项目是一个基于 Jekyll 的双语（中/英）人形机器人强化学习论文笔记站点，通过 GitHub Pages 部署到 <https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/>。README 已列出明确的学习路线图（基础 RL → 精确模仿 → 风格学习 → 技能组合 → 扩散终点 → Sim-to-Real），但当前笔记完成情况与路线图仍有差距：部分路线图论文仅有骨架（🚧 标记待核对），部分旧 stub 已扩写完毕，10 个分类目录中仅 `04_Locomotion` 起步了 1 篇骨架，其余仍为空。本计划基于 git 日志、`papers/` 目录与 README 路线图对比生成，目标是把学习路线图主干补齐到"能发布"的状态，并沉淀下一步的长期扩展方向。
 
-## 当前快照（2026-04-18）
+## 当前快照（2026-04-18，复核后）
 
-- 笔记徽章：`Notes-16`，`Papers-489`（`progress.json` 追踪 489 篇，但笔记仅 16 篇）。
-- 已完善（>500 行、含 MimicKit 源码对照）：`PPO`、`AWR`、`DeepMimic`、`AMP`、`ASE`、`ADD`、`LCP`、`PHC`、`CALM`。
-- 体量偏小疑似 stub（<200 行）：
-  - `papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/` (106 行)
-  - `papers/02_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/` (137 行)
-- 中等体量需复核：`papers/03_Loco-Manipulation_and_WBC/` 下 5 篇（ULTRA / VIGOR / LessMimic / OmniXtreme / Learning_Humanoid_End-Effector_Control）。
-- 路线图中尚未建目录：`PULSE (2024)`、`Diffusion Policy`、`BeyondMimic (2025)`。
-- 完全为空的分类目录：`04_Locomotion` ~ `13_Human_Motion`（共 10 个）。
-- 最近提交集中在 footer / 徽章样式修复，笔记内容改动本周已暂停。
+- PR #1 `claude/generate-project-tasks-i9Kyn` 已合并进 `main`（commit `3c7bd71`），上一轮 P0–P2 的骨架/扩写/脚手架均已落地。
+- 笔记总数：`papers/` 下 19 篇 `.md`（分布：01=12，02=1，03=5，04=1）。
+- 完稿（≥300 行、含 MimicKit 源码对照或完整方法/工程章节）共 13 篇：
+  - `01_Foundational_RL/`: PPO(638)、AWR(519)、DeepMimic(890)、AMP(735)、ASE(650)、ADD(569)、LCP(637)、PHC(636)、CALM(416)。
+  - `02_High_Impact_Selection/`: Expressive_WBC(248 — 上一轮从 137 扩到 248，按新模板已算完稿)。
+  - `03_Loco-Manipulation_and_WBC/`: LessMimic(314)、OmniXtreme(307)、ULTRA(405)。
+- 已扩写但仍可继续打磨：`Domain_Randomization(235)`（上一轮从 106 扩到 235，够用）。
+- 含 `🚧` 待核对骨架（本轮 **必须** 消除 `🚧`）：
+  - `01_Foundational_RL/PULSE_...`（111 行 / 21 处 🚧）
+  - `01_Foundational_RL/Diffusion_Policy`（119 行 / 19 处 🚧）
+  - `01_Foundational_RL/BeyondMimic`（103 行 / 19 处 🚧）
+  - `04_Locomotion/Learning_to_Walk_in_Minutes`（92 行 / 14 处 🚧）
+- 仍是短 stub（<80 行、缺"方法/工程"章节）：
+  - `03_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_...`（HERO，56 行）
+  - `03_Loco-Manipulation_and_WBC/VIGOR_...`（57 行）
+- 完全为空的分类目录：`05_Manipulation` ~ `13_Human_Motion`（共 9 个，`04_Locomotion` 已起步 1 篇骨架）。
+- `progress.json`：total=175，done=9，pending=166（与 `papers/` 实际 19 篇完稿/骨架 **不一致**，需同步）。
 
-## TODO 计划（按优先级）
+---
+
+## 🧾 上一轮 TODO 核对（✅ 完成 / [ ] 未完成）
 
 ### P0 · 补齐路线图主干（最高优先，1–2 周内）
 
-1. **新建 `PULSE_Physics-based_Universal_Latent_Space`（01_Foundational_RL）**
-   - arXiv：2407.10174（Luo et al., 2024）
-   - 路线位置：技能组合主线 ASE → CALM → **PULSE**。
-   - 参考模板：`papers/01_Foundational_RL/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters/`（最近刚完成、结构最新）。
-2. **新建 `Diffusion_Policy`（新建 `01_Foundational_RL` 或并入 `02_High_Impact_Selection`，读完后定）**
-   - arXiv：2303.04137。扩散控制终点主线起点，需与 BeyondMimic 配套。
-3. **新建 `BeyondMimic`（02_High_Impact_Selection 或单列）**
-   - 路线图中 2025 年扩散 + 控制的终点论文。
-4. **补完两个 stub：**
-   - `Domain_Randomization_Understanding_Sim-to-Real_Transfer.md`：按模板扩充"方法详解/具体实例/工程价值/Q&A"四大块。
-   - `Expressive_Whole-Body_Control_for_Humanoid_Robots.md`：补足方法详解与工程价值（目前只有 137 行）。
+- [x] **P0#1** 新建 `PULSE_Physics-based_Universal_Latent_Space`（01_Foundational_RL） — ✅ 骨架已建，但仍含 21 处 🚧，深度内容留到下一轮
+- [x] **P0#2** 新建 `Diffusion_Policy`（arXiv 2303.04137） — ✅ 骨架已建，仍含 19 处 🚧
+- [x] **P0#3** 新建 `BeyondMimic`（2025 扩散 + 控制终点） — ✅ 骨架已建，仍含 19 处 🚧
+- [x] **P0#4a** `Domain_Randomization_Understanding_Sim-to-Real_Transfer.md` 106 → 235 行，四大块补齐
+- [x] **P0#4b** `Expressive_Whole-Body_Control_for_Humanoid_Robots.md` 137 → 248 行，四大块补齐
 
-### P1 · 站点质量与可维护性（并行推进）
+### P1 · 站点质量与可维护性
 
-5. **复核 `03_Loco-Manipulation_and_WBC/` 5 篇状态**
-   - 逐一对照 `CALM` 笔记的完整结构（基本信息/一句话/缩写/问题/方法/实例/工程价值/Q&A/讨论），确定是完稿还是需要扩写；把结论写入 `progress.json` 的 `status` 字段。
-6. **同步 `progress.json` 与实际笔记**
-   - 当前 `progress.json` 记录 489 条、有 `status: done/reading/pending` 字段；以 `papers/` 目录为准校对并更新，消除"徽章 16 vs 表单 489"带来的歧义。
-7. **`README.md` 路线图小修**
-   - PULSE / Diffusion Policy / BeyondMimic 建目录后在 README "源码层面一览"表和学习路线图里补齐勾选与链接。
+- [x] **P1#5** 复核 `03_Loco-Manipulation_and_WBC/` 5 篇：LessMimic / OmniXtreme / ULTRA 完稿；HERO / VIGOR 确认为 stub
+- [x] **P1#6** `progress.json` 中 PHC / ADD 等旧中文路径（`papers/01_基础路线图/...`）已统一为 `papers/01_Foundational_RL/...`
+- [x] **P1#7** `README.md` MimicKit 源码一览表补充 PULSE / Diffusion Policy / BeyondMimic（均 ❌ 或 N/A）；`_data/papers.json` 由 `prepare_pages.py` 自动生成新骨架条目
 
-### P2 · 长期拓展（按主题批量推进，可做可不做）
+### P2 · 长期拓展
 
-8. **挑选 `04_Locomotion` 首篇样例笔记**（建议 `Learning-to-Walk-in-Minutes`/`HumanoidBench` 任一）作为模板，验证"新分类如何起步"。
-9. **`09_Sim-to-Real` 建立专题入口**：把 `Domain_Randomization` + `LCP` 从 `01_Foundational_RL` 交叉引用到 `09_Sim-to-Real`（不复制文件，用 `_data/papers.json` 做别名即可）。
-10. **脚本增强（可选）**：在 `scripts/prepare_pages.py` 中加一段校验——检测 stub（如行数 < 200 或缺少 `## 方法详解`）并在构建日志里标出，防止再出现"目录建了但内容空"。
+- [x] **P2#8** `04_Locomotion` 新增样例骨架 `Learning_to_Walk_in_Minutes`（**深度内容留到下一轮**）
+- [x] **P2#9** `09_Sim-to-Real` 在 `_data/papers.json` 中加 `subtitle_zh` 备注，指向 `Domain_Randomization` / `LCP`
+- [x] **P2#10** `scripts/prepare_pages.py` 加入 stub 检测（行数<150 且缺 `## 方法详解`/`## 🔧` 时输出 `[STUB]`）
 
 ### P3 · 工程杂项
 
-11. **`update-badges.yml` 已自动更新 `Notes-N`**；完成 P0 后确认徽章从 16 自动升到 19+。
-12. **检查 MimicKit 覆盖表**：README 中仅列到 ADD，PULSE / Diffusion Policy 若 MimicKit 暂无实现，在表中标 ❌ 或 "N/A"，避免误导。
+- [x] **P3#11** `update-badges.yml` 自动更新 `Notes-N`；配套在 `update_badges.py` 里增加过滤规则，`TODO.md` 不计入 Notes 徽章
+- [x] **P3#12** MimicKit 覆盖表：PULSE / Diffusion Policy / BeyondMimic 已在 README 标 ❌ 或 N/A
 
-## 涉及的关键文件
+> 结论：上一轮 12 条 TODO **全部交付**（含"建骨架 + 留 🚧"这种阶段性交付）。骨架深度填充、HERO/VIGOR 扩写、空分类起步等后续工作整理到下一轮。
 
-- `README.md`（路线图/徽章/源码一览表）
-- `progress.json`（阅读进度 JSON，101KB）
-- `_data/papers.json`（站点索引，新增论文必须同步）
-- `scripts/prepare_pages.py`（front matter / 索引生成，新增论文会被它扫到）
-- `scripts/update_badges.py`（`Notes-N` 徽章自动化）
+---
+
+## 🆕 下一轮 TODO（2026-04-18 新生成）
+
+遵循 karpathy 编程护栏：每一条都带 **可验证成功标准（verify）**，便于独立跑完 → 自检。
+
+### R1 · 消灭骨架里的 🚧（本轮最重要）
+
+- [ ] **R1#1** 填充 `PULSE_Physics-based_Universal_Latent_Space.md`
+  - 核对 arXiv 2407.10174（Luo et al., 2024），补齐"方法详解（VAE + prior）/ 公式 / 具体实例 / 工程价值 / Q&A / 附录"。
+  - **verify**：`grep -c 🚧 papers/01_Foundational_RL/PULSE_.../PULSE_...md` 返回 `0`，且 `wc -l` ≥ 400。
+- [ ] **R1#2** 填充 `Diffusion_Policy.md`
+  - 核对 arXiv 2303.04137，DDPM/DDIM 基础 + receding-horizon + 机器人实验。
+  - **verify**：🚧 = 0 且 行数 ≥ 400。
+- [ ] **R1#3** 填充 `BeyondMimic.md`
+  - 路线图中 2025 年扩散 + 控制终点，补齐方法 / 训练 pipeline / 与 AMP·ASE·CALM 对比。
+  - **verify**：🚧 = 0 且 行数 ≥ 400。
+- [ ] **R1#4** 扩写 `04_Locomotion/Learning_to_Walk_in_Minutes.md`
+  - 核对 Rudin et al. 2021，massively parallel PPO、地形课程、奖励设计。
+  - **verify**：🚧 = 0 且 行数 ≥ 300（该分类首篇样例，不必追求 600+）。
+
+### R2 · 旧 stub 收尾
+
+- [ ] **R2#5** 扩写 `HERO (Learning_Humanoid_End-Effector_Control_...)` 从 56 行到 ≥300 行
+  - 按 CALM 模板补齐：方法详解 / 具体实例 / 工程价值 / Q&A / 附录。
+  - **verify**：文件行数 ≥ 300 且包含 `## 方法详解` 与 `## 🔧 工程价值`。
+- [ ] **R2#6** 扩写 `VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.md` 从 57 行到 ≥300 行
+  - **verify**：同上。
+
+### R3 · 空分类起步（按主题批量，每个分类至少 1 篇骨架）
+
+> 只建骨架、不求完稿，目的是打通"新分类如何起步"的路径，避免目录空壳。
+
+- [ ] **R3#7** `05_Manipulation`：新增首篇骨架（建议 `Diffusion Policy for Manipulation` 或 `RT-2`）。
+- [ ] **R3#8** `06_Teleoperation`：新增首篇骨架（建议 `OpenTeleVision` 或 `HumanPlus Teleoperation`）。
+- [ ] **R3#9** `07_Navigation`：新增首篇骨架（建议 `ViNT` / `GNM`）。
+- [ ] **R3#10** `08_State_Estimation`：新增首篇骨架（建议 `TRAM` / `TRACE`）。
+- [ ] **R3#11** `10_Simulation_Benchmark`：新增首篇骨架（建议 `HumanoidBench` 或 `Isaac Lab`）。
+- **verify（R3 整体）**：`find papers/{05..10}_* -name "*.md" | wc -l` ≥ 5；每个骨架至少含"基本信息 / 一句话 / 缩写 / 讨论"四节。
+- （`11_Hardware_Design` / `12_Physics-Based_Animation` / `13_Human_Motion` 暂缓到 R+1 轮。）
+
+### R4 · 站点数据一致性
+
+- [ ] **R4#12** 同步 `progress.json` 与 `papers/` 实际笔记
+  - 当前 total=175 / done=9 / pending=166，而 `papers/` 实际完稿 13 篇 + 骨架 6 篇。
+  - **verify**：`progress.json` 中 `status=done` 的条目数 = `papers/**/*.md` 行数 ≥ 300 的文件数（13）；新建的 6 个骨架 `status=reading`。
+- [ ] **R4#13** 跑一次 `python scripts/prepare_pages.py` 并盯 `[STUB]` 日志，确认 R1/R2 完成后日志里不再出现 PULSE / Diffusion Policy / BeyondMimic / Learning_to_Walk / HERO / VIGOR。
+  - **verify**：`python scripts/prepare_pages.py 2>&1 | grep '\[STUB\]'` 输出 0 行（HERO/VIGOR 已扩写、其余 🚧 已清）。
+- [ ] **R4#14** 本地 `bundle exec jekyll serve` 打开首页，R3 新建的 5 个分类各自的索引页能渲染出骨架卡片（不 404）。
+
+### R5 · 徽章 & 发布
+
+- [ ] **R5#15** 验证 `Notes-N` 徽章：完成 R1–R3 后应从 `Notes-16`（原旧值）自动跳到 ≥24（13 完稿 + 6 骨架 + 5 新骨架）。
+  - **verify**：`python scripts/update_badges.py` 预览，README 徽章数字对上。
+- [ ] **R5#16** 推送到 `claude/generate-project-tasks-*` 新分支 → 等 `deploy.yml` 绿灯 → 访问线上站点抽查 3 个新页面。
+
+### R6 · 长期（可选，按兴趣）
+
+- [ ] **R6#17** MimicKit 源码对照补全：给 PULSE / Diffusion Policy 加一章"官方代码/复现仓库"链接（没有就写明 N/A，不要臆造）。
+- [ ] **R6#18** 脚本增强：`prepare_pages.py` 的 `[STUB]` 检测升级成"行数 + 章节关键词 + 🚧 计数"三合一报告，输出到 `papers/PROGRESS.md` 底部。
+- [ ] **R6#19** `09_Sim-to-Real` 从"只是 alias"升级成"独立分类页"：新增 1 篇 sim-to-real 专题总结笔记（可引用 DR + LCP 的结论，不必重复）。
+
+---
+
+## 涉及的关键文件（不变）
+
+- `README.md`（路线图 / 徽章 / 源码一览表）
+- `progress.json`（阅读进度 JSON）
+- `_data/papers.json`（站点索引，新增论文必须同步；由 `prepare_pages.py` 生成）
+- `scripts/prepare_pages.py`（front matter / 索引生成；已带 `[STUB]` 检测）
+- `scripts/update_badges.py`（`Notes-N` 徽章自动化，已过滤 `TODO.md`）
 - `papers/01_Foundational_RL/CALM_.../CALM_...md`（最新完整模板，写新笔记首选参照）
 - `papers/01_Foundational_RL/PHC_.../PHC_...md`（含 MimicKit 源码对照的样板）
 - `.github/workflows/deploy.yml`（部署流水线）
 
-## 验证方式
+## 验证方式（每轮通用）
 
 1. 本地 Jekyll 构建：`bundle exec jekyll serve`，打开 <http://localhost:4000/> 确认新论文卡片出现在首页与对应分类页。
-2. 新增笔记后运行 `python scripts/prepare_pages.py`，检查是否自动写入 front matter、并且 `_data/papers.json` 生成成功。
-3. `git push` 到 `claude/generate-project-tasks-i9Kyn` → 等待 `deploy.yml` 绿灯 → 访问线上站点核对新页面。
-4. 运行 `python scripts/update_badges.py` 预览 README 徽章是否从 `Notes-16` 升到预期数字。
-5. P1 完成后抽查 `progress.json` 里 `status: done` 的条目数量与 `papers/` 实际 `.md` 文件数量一致。
+2. 新增笔记后运行 `python scripts/prepare_pages.py`，检查 `_data/papers.json` 是否生成成功且 `[STUB]` 警告收敛。
+3. `git push` 到分支 → 等待 `deploy.yml` 绿灯 → 访问线上站点核对新页面。
+4. 运行 `python scripts/update_badges.py` 预览 README 徽章数字是否符合预期。
+5. 抽查 `progress.json` 里 `status: done` 的条目数量与 `papers/` 实际完稿 `.md` 数量一致。
 
 ## 执行顺序建议
 
-先做 **P0 第 4 项（补 stub）**——工作量最小且能提高现有页面质量；再按 PULSE → Diffusion Policy → BeyondMimic 顺序新增路线图论文（这也与 README 学习路线图阅读顺序一致）；P1 与 P0 可穿插；P2/P3 留作长期目标，不必压在这一轮完成。
+先 **R2（HERO/VIGOR 扩写，手头信息最全）** → **R1（3 篇 01 骨架 + 04 骨架深度内容，按 PULSE → Diffusion Policy → BeyondMimic → Learning_to_Walk 顺序，与 README 路线图一致）** → **R4（数据一致性，收尾）** → **R3（空分类起步，可拆成多轮）** → **R5（徽章 + 发布）**。R6 留作长期。
 
 ---
 
-## 🔎 2026-04-18 执行进度快照
+## 🔎 上一轮执行进度快照（归档，保留作为历史）
 
-本轮执行（分支 `claude/generate-project-tasks-i9Kyn`）已完成：
+> 以下内容来自上一轮 PR `claude/generate-project-tasks-i9Kyn`，已全部合入 main（commit `3c7bd71`）。保留以便追溯。
 
 ### 已完成（P0–P2）
 - ✅ **P0#4a** `Domain_Randomization` 从 106 行扩展到 235 行，补齐"具体实例/工程价值/Q&A/讨论/附录"。
@@ -95,8 +162,8 @@
   | LessMimic | 314 | ✅ 完稿（有方法/实验/工程/3阶段训练） |
   | OmniXtreme | 307 | ✅ 完稿（有方法/工程/ADR/执行器细节） |
   | ULTRA | 405 | ✅ 完稿（有3模块方法/工程/创新点） |
-  | HERO (Learning_Humanoid_End-Effector_Control_...) | 56 | 🚧 **Stub**——仅基本信息/一句话/缩写/讨论。后续扩写。 |
-  | VIGOR | 57 | 🚧 **Stub**——同上。后续扩写。 |
+  | HERO (Learning_Humanoid_End-Effector_Control_...) | 56 | 🚧 **Stub**——仅基本信息/一句话/缩写/讨论。后续扩写（→ R2#5）。 |
+  | VIGOR | 57 | 🚧 **Stub**——同上。后续扩写（→ R2#6）。 |
 
 - ✅ **P1#6** `progress.json` 中 PHC / ADD 等条目的旧中文路径 (`papers/01_基础路线图/...`) 已统一为 `papers/01_Foundational_RL/...`，status 按实际 papers/ 目录同步。
 - ✅ **P1#7** `README.md` MimicKit 源码一览表补充 PULSE / Diffusion Policy / BeyondMimic 三行（均标记 ❌ 或 N/A）。`_data/papers.json` 由 `prepare_pages.py` 自动生成，本次运行后已包含三个新骨架。
@@ -104,8 +171,3 @@
 - ✅ **P2#9** `09_Sim-to-Real` 在 `_data/papers.json` 中添加 `subtitle_zh` 备注，指向 `01_Foundational_RL` 的 `Domain_Randomization` 与 `LCP`。
 - ✅ **P2#10** `scripts/prepare_pages.py` 加入 stub 检测：在生成 `papers.json` 时对行数 < 150 且缺 `## 方法详解` / `## 🔧` 任一章节的 .md 打印 `[STUB]` 警告。
 - ✅ **配套**：`scripts/update_badges.py` 增加过滤规则，`TODO.md` 不计入 Notes 徽章。
-
-### 本轮后续仍待处理（由你决定是否继续让 AI 跟进）
-1. **P0 深度内容**：3 个新骨架的具体公式、源码对照、完整 Q&A 需要读原论文后填写（不建议让 AI 独立完成，易臆造）。
-2. **P1 扩写**：`HERO`、`VIGOR` 两个新发现的 stub 等待后续扩写。
-3. **P3**：部署成功后用 `update_badges.py` 检查徽章是否从 `Notes-16` 自动跳到新值。
