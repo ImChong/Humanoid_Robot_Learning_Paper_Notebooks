@@ -3,7 +3,7 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen.svg)](https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/)
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/Papers-489-orange.svg)](papers/PROGRESS.md)
-[![Notes](https://img.shields.io/badge/Notes-16-green.svg)](papers/)
+[![Notes](https://img.shields.io/badge/Notes-20-green.svg)](papers/)
 
 **来源**: [awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning)
 
@@ -123,5 +123,8 @@
 | ASE | ✅ | `mimickit/learning/ase_agent.py` |
 | **LCP** | ✅ | `mimickit/learning/lcp_agent.py` |
 | ADD | ✅ | `mimickit/learning/add_agent.py` |
+| PULSE | ❌ | 笔记骨架已建，MimicKit 暂无覆盖 |
+| Diffusion Policy | ❌ | 非 MimicKit 覆盖范围（模仿学习框架不同） |
+| BeyondMimic | ❌ | 2025 年新工作，MimicKit 暂无覆盖 |
 
 > 注：打 ✅ 表示笔记中已附「MimicKit 源码对照」章节，可直接对照论文公式与代码实现。
