@@ -59,11 +59,32 @@
         "zhname": "CALM：面向可控虚拟角色的条件对抗潜变量模型"
       },
       {
+        "title": "PULSE: Physically Plausible Universal Latent Skill Extraction",
+        "path": "papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.md",
+        "url": "/papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.html",
+        "dir": "PULSE_Physics-based_Universal_Latent_Space",
+        "zhname": "PULSE：物理可行的通用潜在技能提取"
+      },
+      {
+        "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "path": "papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.md",
+        "url": "/papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.html",
+        "dir": "Diffusion_Policy",
+        "zhname": "Diffusion Policy：基于动作扩散的视觉运动策略学习"
+      },
+      {
         "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
         "path": "papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.md",
         "url": "/papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.html",
         "dir": "LCP_Sim-to-Real_Action_Smoothing",
         "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
+      },
+      {
+        "title": "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion",
+        "path": "papers/01_Foundational_RL/BeyondMimic/BeyondMimic.md",
+        "url": "/papers/01_Foundational_RL/BeyondMimic/BeyondMimic.html",
+        "dir": "BeyondMimic",
+        "zhname": "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
       },
       {
         "title": "Understanding Domain Randomization for Sim-to-real Transfer",
@@ -162,7 +183,15 @@
   },
   "04_Locomotion": {
     "display_name": "Locomotion",
-    "papers": [],
+    "papers": [
+      {
+        "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
+        "path": "papers/04_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.md",
+        "url": "/papers/04_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.html",
+        "dir": "Learning_to_Walk_in_Minutes",
+        "zhname": "几分钟学会走路：大规模并行深度强化学习"
+      }
+    ],
     "zhname": "行走运动"
   },
   "05_Manipulation": {
@@ -188,6 +217,8 @@
   "09_Sim-to-Real": {
     "display_name": "Sim-to-Real",
     "papers": [],
+    "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
+    "subtitle_zh": "核心理论与算法见 01 基础 RL：Domain Randomization、LCP。本分类暂留给后续专项论文（Real-to-Sim、ADR、Privileged Learning 等）。",
     "zhname": "仿真到现实"
   },
   "10_Simulation_Benchmark": {

@@ -17,11 +17,12 @@ def count_papers() -> int:
 
 
 def count_notes() -> int:
-    """统计 papers/ 下的 .md 笔记数（排除 PROGRESS.md）."""
+    """统计 papers/ 下的 .md 笔记数（排除 PROGRESS.md 与 TODO.md 等元文件）."""
+    excluded = {"PROGRESS.md", "TODO.md"}
     return sum(
         1
         for f in PAPERS_DIR.rglob("*.md")
-        if f.name != "PROGRESS.md"
+        if f.name not in excluded
     )
 
 

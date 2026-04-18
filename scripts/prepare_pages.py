@@ -113,6 +113,18 @@ def match_paper_order(paper_title, paper_dir, progress_order):
     return 99999
 
 
+def check_stub(fpath, content):
+    """Print [STUB] warning if note is too short or missing method section.
+
+    Criteria: fewer than 150 lines AND missing any '## 方法详解' / '## 🔧' heading.
+    """
+    line_count = content.count('\n') + 1
+    has_method = bool(re.search(r'^##\s*(?:🔧|🛠️)?\s*.*方法', content, re.MULTILINE))
+    if line_count < 150 and not has_method:
+        rel = os.path.relpath(fpath, BASE_DIR)
+        print(f"  [STUB] {rel} ({line_count} lines, missing 方法详解)")
+
+
 def process_papers():
     """Walk through papers directory and add front matter."""
     progress_order = parse_progress_order()
@@ -163,6 +175,8 @@ def process_papers():
 
                 with open(fpath, 'r', encoding='utf-8') as f:
                     content = f.read()
+
+                check_stub(fpath, content)
 
                 title = extract_title(content) or paper_dir.replace('_', ' ')
 
