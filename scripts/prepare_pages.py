@@ -13,6 +13,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAPERS_DIR = os.path.join(BASE_DIR, 'papers')
 PROGRESS_PATH = os.path.join(PAPERS_DIR, 'PROGRESS.md')
 
+SKIP_DIRS = {'todos'}
+
 
 def has_frontmatter(content):
     """Check if file already has Jekyll front matter."""
@@ -158,6 +160,8 @@ def process_papers():
         category_path = os.path.join(PAPERS_DIR, category_dir)
         if not os.path.isdir(category_path):
             continue
+        if category_dir in SKIP_DIRS:
+            continue
 
         category_display = get_category_name(category_dir)
         papers = []
@@ -277,6 +281,8 @@ def process_papers():
     # Ensure ALL category directories appear (even if empty)
     for category_dir in sorted(os.listdir(PAPERS_DIR)):
         category_path = os.path.join(PAPERS_DIR, category_dir)
+        if category_dir in SKIP_DIRS:
+            continue
         if os.path.isdir(category_path) and category_dir not in index_data:
             existing_meta = existing_papers_json.get(category_dir, {})
             entry = {
