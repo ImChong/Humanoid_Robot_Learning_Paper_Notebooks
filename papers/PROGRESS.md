@@ -8,7 +8,7 @@
 | 1   | PPO: Proximal Policy Optimization                                                            | ✅ 完成   | 2026-03-22 | 基础RL        |
 | 2   | AWR: Advantage Weighted Regression                                                           | ✅ 完成   | 2026-03-22 | 基础RL        |
 | 3   | DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills                          | ✅ 完成   | 2026-03-26 | 精确模仿        |
-| 4   | AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control                  | 🔄 进行中 | -          | 风格学习        |
+| 4   | AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control                  | ✅ 完成   | 2026-04-19 | 风格学习        |
 | 5   | PHC: Perpetual Humanoid Control for Real-time Simulated Avatars                              | ⏳ 待读   | -          | 精确模仿        |
 | 6   | ADD: Adversarial Disentanglement and Distillation                                            | ⏳ 待读   | -          | 风格学习        |
 | 7   | ASE: Adversarial Skill Embeddings for Large-Scale Motion Control                             | ⏳ 待读   | -          | 技能组合        |

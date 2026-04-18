@@ -7,6 +7,8 @@
 
 **来源**: [awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning)
 
+**TODO 清单**: [papers/PROGRESS.md](papers/PROGRESS.md)
+
 ## 规则
 
 1. 每天早上 7:00 推送当日论文阅读提醒
