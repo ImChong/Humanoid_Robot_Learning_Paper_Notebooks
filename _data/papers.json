@@ -196,22 +196,54 @@
   },
   "05_Manipulation": {
     "display_name": "Manipulation",
-    "papers": [],
+    "papers": [
+      {
+        "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
+        "path": "papers/05_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
+        "url": "/papers/05_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",
+        "dir": "EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video",
+        "zhname": "EgoMimic：用第一人称视频规模化模仿学习"
+      }
+    ],
     "zhname": "灵巧操作"
   },
   "06_Teleoperation": {
     "display_name": "Teleoperation",
-    "papers": [],
+    "papers": [
+      {
+        "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
+        "path": "papers/06_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.md",
+        "url": "/papers/06_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.html",
+        "dir": "HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans",
+        "zhname": "HumanPlus：人形机器人影子跟随与人类模仿"
+      }
+    ],
     "zhname": "遥操作"
   },
   "07_Navigation": {
     "display_name": "Navigation",
-    "papers": [],
+    "papers": [
+      {
+        "title": "NaVILA: Legged Robot Vision-Language-Action Model for Navigation",
+        "path": "papers/07_Navigation/NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation/NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation.md",
+        "url": "/papers/07_Navigation/NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation/NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation.html",
+        "dir": "NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation",
+        "zhname": "NaVILA：面向腿式机器人导航的视觉 - 语言 - 动作模型"
+      }
+    ],
     "zhname": "导航"
   },
   "08_State_Estimation": {
     "display_name": "State Estimation",
-    "papers": [],
+    "papers": [
+      {
+        "title": "Contact-Aided Invariant EKF for Legged Robot State Estimation",
+        "path": "papers/08_State_Estimation/Contact-Aided_Invariant_EKF_for_Legged_Robots/Contact-Aided_Invariant_EKF_for_Legged_Robots.md",
+        "url": "/papers/08_State_Estimation/Contact-Aided_Invariant_EKF_for_Legged_Robots/Contact-Aided_Invariant_EKF_for_Legged_Robots.html",
+        "dir": "Contact-Aided_Invariant_EKF_for_Legged_Robots",
+        "zhname": "接触辅助不变 EKF：腿式机器人状态估计"
+      }
+    ],
     "zhname": "状态估计"
   },
   "09_Sim-to-Real": {
@@ -223,7 +255,15 @@
   },
   "10_Simulation_Benchmark": {
     "display_name": "Simulation Benchmark",
-    "papers": [],
+    "papers": [
+      {
+        "title": "HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation",
+        "path": "papers/10_Simulation_Benchmark/HumanoidBench/HumanoidBench.md",
+        "url": "/papers/10_Simulation_Benchmark/HumanoidBench/HumanoidBench.html",
+        "dir": "HumanoidBench",
+        "zhname": "HumanoidBench：全身 locomotion 与 manipulation 的人形仿真基准"
+      }
+    ],
     "zhname": "仿真基准"
   },
   "11_Hardware_Design": {
