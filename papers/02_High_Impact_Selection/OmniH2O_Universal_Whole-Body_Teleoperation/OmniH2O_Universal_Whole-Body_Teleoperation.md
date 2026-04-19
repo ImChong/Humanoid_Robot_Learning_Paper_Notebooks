@@ -2,6 +2,7 @@
 layout: paper
 title: "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning"
 category: "高影响力精选 High Impact Selection"
+subcategory: "Teleoperation & Imitation Learning"
 zhname: "OmniH2O：通用灵巧的人 - 人形整体遥操与学习"
 ---
 

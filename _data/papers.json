@@ -100,22 +100,7 @@
   },
   "02_High_Impact_Selection": {
     "display_name": "High Impact Selection",
-    "papers": [
-      {
-        "title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
-        "path": "papers/02_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.md",
-        "url": "/papers/02_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.html",
-        "dir": "OmniH2O_Universal_Whole-Body_Teleoperation",
-        "zhname": "OmniH2O：通用灵巧的人 - 人形整体遥操与学习"
-      },
-      {
-        "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
-        "path": "papers/02_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.md",
-        "url": "/papers/02_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.html",
-        "dir": "ExBody2_Advanced_Expressive_Whole-Body_Control",
-        "zhname": "ExBody2：进阶的表达性人形全身控制"
-      }
-    ],
+    "papers": [],
     "subtitle": "Curated high-impact and milestone papers in humanoid robot learning",
     "subtitle_zh": "人形机器人学习领域的高影响力里程碑论文精选",
     "zhname": "高影响力精选",
@@ -123,6 +108,13 @@
       {
         "name": "Whole-Body Control Core",
         "papers": [
+          {
+            "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
+            "path": "papers/02_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.md",
+            "url": "/papers/02_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.html",
+            "dir": "ExBody2_Advanced_Expressive_Whole-Body_Control",
+            "zhname": "ExBody2：进阶的表达性人形全身控制"
+          },
           {
             "title": "Expressive Whole-Body Control for Humanoid Robots",
             "path": "papers/02_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.md",
@@ -135,22 +127,54 @@
       },
       {
         "name": "Teleoperation & Imitation Learning",
-        "papers": [],
+        "papers": [
+          {
+            "title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
+            "path": "papers/02_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.md",
+            "url": "/papers/02_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.html",
+            "dir": "OmniH2O_Universal_Whole-Body_Teleoperation",
+            "zhname": "OmniH2O：通用灵巧的人 - 人形整体遥操与学习"
+          }
+        ],
         "zhname": "遥操作与模仿学习"
       },
       {
         "name": "Locomotion Classics",
-        "papers": [],
+        "papers": [
+          {
+            "title": "Learning Quadrupedal Locomotion over Challenging Terrain",
+            "path": "papers/02_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.md",
+            "url": "/papers/02_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.html",
+            "dir": "Learning_Quadrupedal_Locomotion_over_Challenging_Terrain",
+            "zhname": "挑战地形下的四足运动学习（ANYmal 里程碑）"
+          }
+        ],
         "zhname": "行走经典"
       },
       {
         "name": "Sim-to-Real & Foundation Model",
-        "papers": [],
+        "papers": [
+          {
+            "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+            "path": "papers/02_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.md",
+            "url": "/papers/02_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.html",
+            "dir": "GR00T_N1_Humanoid_Foundation_Model",
+            "zhname": "GR00T N1：通用人形机器人开源基座模型"
+          }
+        ],
         "zhname": "仿真到现实与基座模型"
       },
       {
         "name": "Simulation Platform & Tools",
-        "papers": [],
+        "papers": [
+          {
+            "title": "Isaac Lab: Unified GPU Simulation Platform for Robot Learning",
+            "path": "papers/02_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.md",
+            "url": "/papers/02_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.html",
+            "dir": "Isaac_Lab_GPU_Simulation",
+            "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
+          }
+        ],
         "zhname": "仿真平台与工具"
       }
     ]
