@@ -248,7 +248,15 @@
   },
   "09_Sim-to-Real": {
     "display_name": "Sim-to-Real",
-    "papers": [],
+    "papers": [
+      {
+        "title": "RMA: Rapid Motor Adaptation for Legged Robots",
+        "path": "papers/09_Sim-to-Real/RMA_Rapid_Motor_Adaptation/RMA_Rapid_Motor_Adaptation.md",
+        "url": "/papers/09_Sim-to-Real/RMA_Rapid_Motor_Adaptation/RMA_Rapid_Motor_Adaptation.html",
+        "dir": "RMA_Rapid_Motor_Adaptation",
+        "zhname": "RMA：腿式机器人的快速运动自适应"
+      }
+    ],
     "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
     "subtitle_zh": "核心理论与算法见 01 基础 RL：Domain Randomization、LCP。本分类暂留给后续专项论文（Real-to-Sim、ADR、Privileged Learning 等）。",
     "zhname": "仿真到现实"
@@ -268,17 +276,41 @@
   },
   "11_Hardware_Design": {
     "display_name": "Hardware Design",
-    "papers": [],
+    "papers": [
+      {
+        "title": "Unitree H1 Humanoid Whitepaper",
+        "path": "papers/11_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.md",
+        "url": "/papers/11_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.html",
+        "dir": "Unitree_H1_Whitepaper",
+        "zhname": "宇树 H1 人形机器人白皮书"
+      }
+    ],
     "zhname": "硬件设计"
   },
   "12_Physics-Based_Animation": {
     "display_name": "Physics-Based Animation",
-    "papers": [],
+    "papers": [
+      {
+        "title": "Character Controllers Using Motion VAEs",
+        "path": "papers/12_Physics-Based_Animation/MotionVAE/MotionVAE.md",
+        "url": "/papers/12_Physics-Based_Animation/MotionVAE/MotionVAE.html",
+        "dir": "MotionVAE",
+        "zhname": "用 Motion VAE 做角色控制器"
+      }
+    ],
     "zhname": "物理动画"
   },
   "13_Human_Motion": {
     "display_name": "Human Motion",
-    "papers": [],
+    "papers": [
+      {
+        "title": "HumanML3D: 3D Human Motion-Language Dataset",
+        "path": "papers/13_Human_Motion/HumanML3D/HumanML3D.md",
+        "url": "/papers/13_Human_Motion/HumanML3D/HumanML3D.html",
+        "dir": "HumanML3D",
+        "zhname": "HumanML3D：3D 人体运动 - 语言数据集"
+      }
+    ],
     "zhname": "人体运动"
   }
 }
