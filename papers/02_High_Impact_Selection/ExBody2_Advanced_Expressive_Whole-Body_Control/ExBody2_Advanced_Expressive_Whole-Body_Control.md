@@ -2,6 +2,7 @@
 layout: paper
 title: "ExBody2: Advanced Expressive Humanoid Whole-Body Control"
 category: "高影响力精选 High Impact Selection"
+subcategory: "Whole-Body Control Core"
 zhname: "ExBody2：进阶的表达性人形全身控制"
 ---
 
