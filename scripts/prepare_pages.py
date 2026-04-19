@@ -116,15 +116,20 @@ def match_paper_order(paper_title, paper_dir, progress_order):
 
 
 def check_stub(fpath, content):
-    """Print [STUB] warning if note is too short or missing method section.
+    """Print [STUB] warning if note looks like an unfilled skeleton.
 
-    Criteria: fewer than 150 lines AND missing any '## 方法详解' / '## 🔧' heading.
+    Triggers when ANY of:
+      1. < 150 lines AND missing '## 方法详解' heading.
+      2. 🚧 marker count >= 5 (skeleton placeholder density).
     """
     line_count = content.count('\n') + 1
     has_method = bool(re.search(r'^##\s*(?:🔧|🛠️)?\s*.*方法', content, re.MULTILINE))
+    construction_count = content.count('🚧')
+    rel = os.path.relpath(fpath, BASE_DIR)
     if line_count < 150 and not has_method:
-        rel = os.path.relpath(fpath, BASE_DIR)
         print(f"  [STUB] {rel} ({line_count} lines, missing 方法详解)")
+    elif construction_count >= 5:
+        print(f"  [STUB] {rel} ({construction_count} 🚧 markers, skeleton)")
 
 
 def process_papers():

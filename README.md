@@ -3,11 +3,13 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen.svg)](https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/)
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/Papers-530-orange.svg)](papers/PROGRESS.md)
-[![Notes](https://img.shields.io/badge/Notes-25-green.svg)](papers/)
+[![Notes](https://img.shields.io/badge/Notes-29-green.svg)](papers/)
 
 **来源**: [awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning)
 
-**TODO 清单**: [papers/PROGRESS.md](papers/PROGRESS.md)
+**📖 待读论文清单**: [papers/PROGRESS.md](papers/PROGRESS.md) — 全量 530 篇论文的阅读进度表（来自上游 awesome 列表）。
+
+**🛠️ 仓库开发待办**: [papers/todos/TODO_v3.md](papers/todos/TODO_v3.md) — 笔记 / 站点 / 工具链的开发任务（最新 v3，历史版本见 [`papers/todos/`](papers/todos/)）。
 
 ## 规则
 
@@ -34,7 +36,8 @@
 │   ├── 11_Hardware_Design/           # 硬件设计
 │   ├── 12_Physics-Based_Animation/   # 基于物理的角色动画
 │   ├── 13_Human_Motion/              # 人体运动分析与合成
-│   └── PROGRESS.md                   # 全部论文阅读进度表
+│   ├── todos/                        # 仓库开发待办归档（TODO_v1/v2/v3.md）
+│   └── PROGRESS.md                   # 全部论文阅读进度表（待读清单）
 ├── progress.json                      # 当前阅读进度追踪（JSON）
 ├── scripts/                           # 辅助脚本
 │   └── prepare_pages.py              # GitHub Pages 部署预处理
