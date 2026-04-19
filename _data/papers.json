@@ -190,6 +190,13 @@
         "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
       },
       {
+        "title": "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking",
+        "path": "papers/03_Loco-Manipulation_and_WBC/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking.md",
+        "url": "/papers/03_Loco-Manipulation_and_WBC/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking.html",
+        "dir": "Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking",
+        "zhname": "重定向 matters：面向人形运动跟踪的通用运动重定向"
+      },
+      {
         "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
         "path": "papers/03_Loco-Manipulation_and_WBC/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.md",
         "url": "/papers/03_Loco-Manipulation_and_WBC/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.html",
