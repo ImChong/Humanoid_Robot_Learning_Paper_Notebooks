@@ -8,7 +8,7 @@
 | 1   | PPO: Proximal Policy Optimization                                                            | ✅ 完成   | 2026-03-22 | 基础RL        |
 | 2   | AWR: Advantage Weighted Regression                                                           | ✅ 完成   | 2026-03-22 | 基础RL        |
 | 3   | DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills                          | ✅ 完成   | 2026-03-26 | 精确模仿        |
-| 4   | AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control                  | 🔄 进行中 | -          | 风格学习        |
+| 4   | AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control                  | ✅ 完成   | 2026-04-19 | 风格学习        |
 | 5   | PHC: Perpetual Humanoid Control for Real-time Simulated Avatars                              | ⏳ 待读   | -          | 精确模仿        |
 | 6   | ADD: Adversarial Disentanglement and Distillation                                            | ⏳ 待读   | -          | 风格学习        |
 | 7   | ASE: Adversarial Skill Embeddings for Large-Scale Motion Control                             | ⏳ 待读   | -          | 技能组合        |
@@ -351,6 +351,8 @@
 | 268  | [Learning to Walk and Fly with Adversarial Motion Priors](https://arxiv.org/abs/2309.12784)                                                                     | 2023.09 |     | ⏳ 待读 |
 | 269  | [Real-World Humanoid Locomotion with Reinforcement Learning](https://arxiv.org/abs/2303.03381)                                                                  | 2023.03 |     | ⏳ 待读 |
 | 270  | [Robust and Versatile Bipedal Jumping Control through Reinforcement Learning](https://arxiv.org/abs/2302.09450)                                                 | 2023.02 |     | ⏳ 待读 |
+| 524  | [A Hierarchical, Model-Based System for High-Performance Humanoid Soccer](https://arxiv.org/abs/2512.09431)                                                    | 2025.12 |     | ⏳ 待读 |
+| 525  | [Benchmarking Potential Based Rewards for Learning Humanoid Locomotion](https://arxiv.org/abs/2307.10142)                                                      | 2023.07 |     | ⏳ 待读 |
 
 
 ### Manipulation（58篇）
@@ -416,6 +418,7 @@
 | 326  | Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation | 2025.10 |  | ⏳ 待读 |
 | 327  | [Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation](https://arxiv.org/abs/2503.24361) | 2025.03 |  | ⏳ 待读 |
 | 328  | Is imitation learning the route to humanoid robots? | - |  | ⏳ 待读 |
+| 526  | [Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids](https://toruowo.github.io/recipe/) | 2025.02 |  | ⏳ 待读 |
 
 
 ### Teleoperation（21篇）
@@ -532,6 +535,7 @@
 | 407  | RoboCasa365: A Large-Scale Simulation Framework for Training and Benchmarking Generalist Robots                                            | -       |     | ⏳ 待读 |
 | 408  | [ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control](https://arxiv.org/abs/2603.12185) | 2026.03 |  | ⏳ 待读 |
 | 409  | [Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation](https://arxiv.org/abs/2510.08807) | 2025.10 |  | ⏳ 待读 |
+| 527  | [MuJoCo Playground](https://playground.mujoco.org/)                                                                                       | 2025.01 |     | ⏳ 待读 |
 
 
 ### Hardware Design（37篇）
@@ -612,6 +616,9 @@
 | 473  | [InterMimic: Towards Universal Whole-Body Control for Physics-Based Human-Object Interactions](https://arxiv.org/abs/2502.20390) | 2025.02 | 🌟 | ⏳ 待读 |
 | 474  | [MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting](https://arxiv.org/abs/2409.14393) | 2024.09 | 🌟 | ⏳ 待读 |
 | 475  | AdaptNet: Policy Adaptation for Physics-Based Character Control | - |  | ⏳ 待读 |
+| 528  | [ADD: Physics-Based Motion Imitation with Adversarial Differential Discriminators](https://arxiv.org/abs/2505.04961) | 2025.05 |  | ⏳ 待读 |
+| 529  | [TokenHSI: Unified Synthesis of Physical Human-Scene Interactions through Task Tokenization](https://arxiv.org/abs/2503.19901) | 2025.03 | 🌟 | ⏳ 待读 |
+| 530  | [PARC: Physics-based Augmentation with Reinforcement Learning for Character Controllers](https://michaelx.io/parc/index.html) | 2025 SIGGRAPH |  | ⏳ 待读 |
 
 
 ### Human Motion Analysis and Synthesis（48篇）
