@@ -100,7 +100,22 @@
   },
   "02_High_Impact_Selection": {
     "display_name": "High Impact Selection",
-    "papers": [],
+    "papers": [
+      {
+        "title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
+        "path": "papers/02_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.md",
+        "url": "/papers/02_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.html",
+        "dir": "OmniH2O_Universal_Whole-Body_Teleoperation",
+        "zhname": "OmniH2O：通用灵巧的人 - 人形整体遥操与学习"
+      },
+      {
+        "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
+        "path": "papers/02_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.md",
+        "url": "/papers/02_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.html",
+        "dir": "ExBody2_Advanced_Expressive_Whole-Body_Control",
+        "zhname": "ExBody2：进阶的表达性人形全身控制"
+      }
+    ],
     "subtitle": "Curated high-impact and milestone papers in humanoid robot learning",
     "subtitle_zh": "人形机器人学习领域的高影响力里程碑论文精选",
     "zhname": "高影响力精选",
@@ -184,6 +199,20 @@
   "04_Locomotion": {
     "display_name": "Locomotion",
     "papers": [
+      {
+        "title": "ANYmal Parkour: Robust Perceptive Locomotion",
+        "path": "papers/04_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.md",
+        "url": "/papers/04_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.html",
+        "dir": "ANYmal_Parkour_Robust_Perceptive_Locomotion",
+        "zhname": "ANYmal 跑酷：鲁棒的感知型移动"
+      },
+      {
+        "title": "Extreme Parkour with Legged Robots",
+        "path": "papers/04_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.md",
+        "url": "/papers/04_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.html",
+        "dir": "Extreme_Parkour_with_Legged_Robots",
+        "zhname": "腿式机器人的极限跑酷"
+      },
       {
         "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
         "path": "papers/04_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.md",
