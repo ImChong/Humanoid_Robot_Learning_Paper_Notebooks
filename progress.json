@@ -869,15 +869,15 @@
     },
     {
       "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
-      "arxiv": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
+      "arxiv": "https://arxiv.org/abs/2511.04679",
       "folder": "papers/03_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object",
       "note_file": "GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
       "pdf_file": "GentleHumanoid.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-04-19",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
     },
     {
       "title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",

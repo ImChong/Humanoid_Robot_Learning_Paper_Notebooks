@@ -155,7 +155,7 @@
 | 79   | [SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control](https://arxiv.org/abs/2511.07820)                                                   | 2025.11    |     | ⏳ 待读 |
 | 80   | [Unified Humanoid Fall-Safety Policy from a Few Demonstrations](https://arxiv.org/abs/2511.07407)                                                                | 2025.11    |     | ⏳ 待读 |
 | 81   | [Towards Adaptive Humanoid Control via Multi-Behavior Distillation and Reinforced Fine-Tuning](https://arxiv.org/abs/2511.06371)                                 | 2025.11    |     | ⏳ 待读 |
-| 82   | [GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction](https://arxiv.org/abs/2511.04679)                                 | 2025.11    |     | ⏳ 待读 |
+| 82   | [GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction](https://arxiv.org/abs/2511.04679)                                 | 2026-04-19 |     | ✅ 完成 |
 | 83   | [BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning](https://arxiv.org/abs/2511.04131)            | 2025.11    |     | ⏳ 待读 |
 | 84   | [Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots](https://arxiv.org/abs/2511.03996)                                                            | 2025.11    |     | ⏳ 待读 |
 | 85   | [TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System](https://arxiv.org/abs/2511.02832)                                                     | 2025.11    |     | ⏳ 待读 |
