@@ -319,7 +319,10 @@ def process_papers():
     with open(os.path.join(data_dir, 'papers.json'), 'w', encoding='utf-8') as f:
         json.dump(sorted_data, f, ensure_ascii=False, indent=2)
 
-    total = sum(len(v['papers']) for v in sorted_data.values())
+    total = sum(
+        len(v['papers']) + sum(len(s.get('papers', [])) for s in v.get('subcategories', []))
+        for v in sorted_data.values()
+    )
     print(f"\nGenerated _data/papers.json with {total} papers in {len(sorted_data)} categories")
 
 
