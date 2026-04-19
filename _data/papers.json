@@ -186,7 +186,8 @@
         "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
         "path": "papers/03_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
         "url": "/papers/03_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.html",
-        "dir": "GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object"
+        "dir": "GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object",
+        "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
       },
       {
         "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",

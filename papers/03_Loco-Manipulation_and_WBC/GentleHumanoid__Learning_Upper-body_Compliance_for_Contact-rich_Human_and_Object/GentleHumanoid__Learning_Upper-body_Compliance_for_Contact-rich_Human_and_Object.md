@@ -2,6 +2,7 @@
 layout: paper
 paper_order: 14
 title: "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction"
+zhname: "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
 category: "Loco-Manipulation and WBC"
 ---
 
@@ -18,6 +19,7 @@ category: "Loco-Manipulation and WBC"
 | 项目 | 链接 |
 |------|------|
 | **arXiv** | [2511.04679](https://arxiv.org/abs/2511.04679) |
+| **HTML** | [在线阅读](https://arxiv.org/html/2511.04679) |
 | **PDF** | [下载](https://arxiv.org/pdf/2511.04679) |
 | **项目主页** | [gentle-humanoid.axell.top](https://gentle-humanoid.axell.top) |
 | **GitHub** | 论文首页未见公开仓库（以论文发布时信息为准） |
@@ -49,7 +51,8 @@ GentleHumanoid 把**阻抗控制 + 全身 motion tracking RL**结合起来，让
 | **AMASS** | Archive of Motion Capture as Surface Shapes | 大规模人体动捕数据集 | 人类运动的大图书馆 |
 | **InterX** | Human-Human Interaction Dataset | 人-人交互数据集 | 专门收录接触互动动作的录像库 |
 | **LAFAN** | Lafayette Animation Dataset | 动作捕捉数据集 | 常见的全身动作素材库 |
-| **BEDLAM** | Body shape estimation method / dataset family used in paper | 单张图人体形状估计方法 | 看一张照片，估一个人的身材外形 |
+| **BEDLAM** | Benchmark / dataset for detailed human body shape & motion | 论文在自动拥抱管线里引用的人体形状数据/基准，用于支撑 body mesh 估计 | 像一个“真人体型与动作素材库”，帮助视觉模型学会从图像还原人体外形 |
+| **PromptHMR** | Promptable Human Mesh Recovery | 从单目 RGB 视频估计人体 SMPL-X 运动序列的方法 | 用手机视频恢复人的 3D 动作和身体网格的“视觉重建器” |
 | **RGB** | Red-Green-Blue | 普通彩色相机图像 | 手机拍照那种彩色画面 |
 | **Sim-to-Real** | Simulation to Reality | 仿真训练迁移到真机 | 游戏里练熟，再上真实赛场 |
 
@@ -327,16 +330,13 @@ $$x^{ref}_{t+1} = x^{ref}_t + \Delta t \cdot \dot{x}^{ref}_{t+1}$$
 - 用 motorized stage + PDMS applicator 做标定
 
 ### Autonomous hugging pipeline
-论文还额外做了一个自动拥抱管线：
-1. 用 motion capture 标记点获得人的位置和绝对身高
-2. 用头部 RGB 相机拍单张图
-3. 用 **BEDLAM** 估计人体 shape
-4. 从人体 mesh 提取 waist target points
-5. 优化 G1 的 upper-body joint angles 和平面 base pose，使双手/手肘对准这些 target
-6. 再训练 locomotion policy，让机器人先走到人前方 **10 cm standoff** 的合适位置
-7. 最后切换到 GentleHumanoid 执行 hug
+论文里把“自动拥抱”和“视频到机器人”分成两条链路：
+1. **Autonomous, shape-aware hugging**：先用 motion capture 标记点获得人的位置和绝对身高，再用 G1 头部的 RGB 相机获取单张图；随后结合 **BEDLAM** 支撑的人体形状估计流程恢复 body mesh，提取腰部 target points，优化 G1 的 upper-body joint angles 与平面 base pose，使双手/手肘对准目标区域。
+2. **站位控制**：再训练 locomotion policy，让机器人先走到人前方 **10 cm standoff** 的合适位置，并保持 frontal alignment。
+3. **执行切换**：站位满足后，再切换到 GentleHumanoid 执行 hug。
+4. **Video to Humanoid**：论文还额外展示了另一条从手机 **monocular RGB video** 出发的链路，使用 **PromptHMR** 把视频估计为 SMPL-X motion sequence，再通过 **GMR** 重定向到 G1，最后交给训练好的 GentleHumanoid policy 执行。
 
-这一步很有工程价值，因为它把“柔顺控制”接上了“自动感知 + 自动站位 + 自动接触”的完整闭环。
+这一步很有工程价值，因为它把“柔顺控制”接上了“自动感知 + 自动站位 + 自动接触”，并进一步延伸到“视频动作 → humanoid 执行”的完整闭环。
 
 ---
 
