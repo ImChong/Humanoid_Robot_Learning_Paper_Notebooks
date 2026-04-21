@@ -1,15 +1,17 @@
 ---
 layout: paper
-paper_order: 9
+paper_order: 2
 title: "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety"
-category: "Loco-Manipulation and WBC"
+category: "全身控制"
+zhname: "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理"
 ---
 
 # VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety
-**基于视觉目标上下文推理的统一人形摔倒安全控制**
+**VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理**
 
-> 📅 阅读日期: 待定
-> 🏷️ 板块: Loco-Manipulation and Whole-Body-Control
+> 📅 阅读日期: 2026-04-21
+> 🏷️ 板块: 03 Loco-Manipulation · 跌落安全
+> 🚧 本笔记已填充基本信息，深度技术细节待细化。
 
 ---
 
@@ -18,40 +20,79 @@ category: "Loco-Manipulation and WBC"
 | 项目 | 链接 |
 |------|------|
 | **arXiv** | [2602.16511](https://arxiv.org/abs/2602.16511) |
-| **PDF** | [下载](https://arxiv.org/pdf/2602.16511) |
-| **项目主页** | [vigor2026.github.io](https://vigor2026.github.io/) |
-| **发布时间** | 2026年2月18日 |
-| **实验平台** | Unitree G1 人形机器人 |
+| **PDF** | [Download](https://arxiv.org/pdf/2602.16511.pdf) |
+| **作者** | Osher Azulay, Zhengjie Xu, Andrew Scheffer, Stella X. Yu |
+| **机构** | University of Michigan |
+| **发布时间** | 2026-02 |
+| **项目主页** | [VIGOR Project Page](https://vigor-humanoid.github.io/) |
+| **代码** | 🚧 暂未完全公开 |
 
 ---
 
 ## 🎯 一句话总结
 
-VIGOR 把人形机器人的跌倒安全（避免跌倒 + 缓冲冲击 + 站起恢复）统一成一个策略：用稀疏人类示范在平地和仿真复杂地形上训练特权 Teacher，再蒸馏为只用第一人称深度和本体感知的 Student，实现零样本跨地形泛化。
+> VIGOR 提出了一个统一的人形机器人跌落安全框架，将跌落避障、撞击缓解和起身恢复集成在单一视觉条件策略中，实现了在复杂非结构化地形下的零样本跌落安全保护。
 
 ---
 
-## 💬 讨论记录
+## 📌 英文缩写速查
 
-> 此部分在阅读讨论后更新
+| 缩写 | 全称 | 简单解释 |
+|------|------|----------|
+| GIC | Goal-In-Context | 视觉上下文目标，指基于环境深度图实时推理出的安全目标 |
+| TSD | Teacher-Student Distillation | 教师 - 学生蒸馏，用于将复杂知识传递给轻量化模型 |
+| Sim-to-Real | Simulation to Real-world | 从仿真到真实世界的迁移 |
+
+---
+
+## ❓ 论文要解决什么问题？
+
+- **碎片化方案**：之前的研究通常将跌落避免（Fall Avoidance）和起身恢复（Standing Up）作为两个独立的模块，难以处理中间的衔接过程。
+- **环境复杂性**：在楼梯、石堆等不规则地形上，固定的起身动作往往会因碰撞而失败。
+- **视觉感知缺失**：传统的起身控制多依赖本体感受，缺乏对周围障碍物的感知，导致二次跌落。
 
 ---
 
-## 📖 英文缩写速查
+## 🔧 方法详解
 
-| 缩写 | 全称 | 简单解释 | 生活类比 |
-|------|------|----------|----------|
-| **VIGOR** | Visual Goal-In-Context Inference for Unified Humanoid Fall Safety | 本文系统名称缩写 | — |
-| **RL** | Reinforcement Learning | 强化学习：通过奖惩反馈训练策略 | 训狗：做对了给零食，做错了没有 |
-| **IL** | Imitation Learning | 模仿学习：从人类示范中直接学习行为 | 跟着老师临摹字帖，而不是自己试错摸索 |
-| **Teacher-Student** | Teacher-Student Distillation | 知识蒸馏：用信息丰富的 Teacher 指导简化版 Student | 老师知道所有答案（用特权信息），学生只能靠考卷（真实传感器）学——Teacher 教会 Student 如何用有限信息做对题 |
-| **Proprioception** | Proprioception | 本体感知：机器人自身的关节角度、速度、力矩等内部状态 | 闭上眼睛，你仍然知道自己的手臂在哪里——那就是本体感知 |
-| **Egocentric** | Egocentric (Depth/Perception) | 以机器人自身视角为中心的感知（第一人称视角） | 戴着 VR 头盔看世界，视角随头转动 |
-| **Zero-shot** | Zero-shot Generalization | 零样本泛化：在完全没见过的场景中直接工作，不需要微调 | 没在雪地开过车，但驾驶技术扎实，上去就能开 |
-| **Sim-to-Real** | Simulation to Reality | 仿真训练迁移到真实机器人 | 游戏里练了一千小时，然后上真实赛场 |
-| **DoF / DOF** | Degrees of Freedom | 自由度：可独立运动的轴数 | 人手腕有 3 个自由度：弯曲、侧偏、旋转 |
-| **G1** | Unitree G1 | 宇树科技人形机器人平台 | — |
-| **MoCap** | Motion Capture | 动作捕捉：用传感器记录人体运动 | 演员身上贴满反光球，摄像机记录轨迹，合成精确运动数据 |
-
+1. **统一的安全生命周期 (Unified Safety Lifecycle)**：
+   - VIGOR 不再区分"正常行走"和"跌落后处理"，而是学习一个连续的策略空间，复盖了从失去平衡到重新站立的全过程。
+2. **视觉条件目标推理 (Visual-Conditioned Goal Inference)**：
+   - 核心在于 **Goal-In-Context Latent**。策略通过头部的深度相机实时感知地形。
+   - 推理出最适合减缓撞击的方向，以及最稳妥的起身支撑点。
+3. **分层蒸馏训练 (TSD)**：
+   - **教师策略**：在仿真中使用强化学习训练，能够访问全局地形参数。
+   - **学生策略**：仅使用车载深度图和本体感受数据。
+   - 通过蒸馏，学生策略学会在信息受限的现实环境中"脑补"出关键的地形特征。
 
 ---
+
+## 🚶 具体实例
+
+- **复杂地形起身**：在 Unitree G1 机器人的实验中，研究者将其推倒在杂乱的楼梯上。
+- **VIGOR 表现**：机器人并没有盲目尝试站立，而是先通过视觉感知确定了台阶的边缘，调整肢体支撑位置，避开了易滑区域，一气呵成地完成了从"面朝下"到"稳步站立"的转换。
+
+---
+
+## 🤖 工程价值
+
+- **安全性标杆**：极大地提高了人形机器人在野外等高风险环境中的生存能力。
+- **具身智能融合**：展示了视觉感知与底层动力学控制深度融合的巨大潜力。
+- **泛化性极强**：证明了统一策略在处理多种未见过的跌落姿态（Face-up, Side-fall 等）时的鲁棒性。
+
+---
+
+## 🎤 面试高频问题 & 参考回答
+
+1. **VIGOR 相比之前的"起身策略"有何创新？**
+   - 核心在于"统一性"和"视觉闭环"。它打破了跌落保护各阶段的藩篱，并利用环境上下文（Context）来指导动作，而不仅仅是靠关节力矩死磕。
+2. **如何保证学生策略在现实中预测准确？**
+   - 依赖于大规模、多样化的地形仿真训练以及高效的 Teacher-Student 蒸馏机制。
+
+---
+
+## 📎 附录
+
+### A. 参考来源
+- [arXiv:2602.16511](https://arxiv.org/abs/2602.16511)
+- [Project Website](https://vigor-humanoid.github.io/)
