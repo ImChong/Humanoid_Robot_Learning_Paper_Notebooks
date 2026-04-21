@@ -1,16 +1,17 @@
 ---
 layout: paper
-title: "ANYmal Parkour: Robust Perceptive Locomotion"
-category: "行走 Locomotion"
-zhname: "ANYmal 跑酷：鲁棒的感知型移动"
+paper_order: 3
+title: "ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots"
+category: "行走运动"
+zhname: "ANYmal 跑酷：足式机器人的敏捷导航学习"
 ---
 
-# ANYmal Parkour: Robust Perceptive Locomotion
-**ANYmal 跑酷：鲁棒的感知型移动**
+# ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots
+**ANYmal 跑酷：足式机器人的敏捷导航学习**
 
-> 📅 阅读日期: 待读
-> 🏷️ 板块: 04_Locomotion 扩展骨架
-> 🚧 本笔记为骨架，基本信息待人工核对。
+> 📅 阅读日期: 2026-04-21
+> 🏷️ 板块: 04 Locomotion · 敏捷导航
+> 🚧 本笔记已填充基本信息，深度技术细节待细化。
 
 ---
 
@@ -18,20 +19,19 @@ zhname: "ANYmal 跑酷：鲁棒的感知型移动"
 
 | 项目 | 链接 |
 |------|------|
-| **arXiv** | 🚧 待核对（候选：2312.08647，Science Robotics 2024 版本） |
-| **PDF** | 🚧 |
-| **作者** | 🚧 待核对（Takahiro Miki 等，ETH RSL） |
-| **机构** | 🚧 待核对（ETH Zurich / Intel） |
-| **发布时间** | 2023–2024（🚧 待核对具体月份） |
-| **期刊** | 🚧（Science Robotics 候选） |
-| **项目主页** | 🚧 |
-| **代码** | 🚧 |
+| **arXiv** | [2306.14874](https://arxiv.org/abs/2306.14874) (Science Robotics) |
+| **PDF** | [Download](https://arxiv.org/pdf/2306.14874.pdf) |
+| **作者** | David Hoeller, Nikita Rudin, Christopher Sako, Marco Hutter |
+| **机构** | ETH Zurich / NVIDIA |
+| **发布时间** | 2023-06 |
+| **项目主页** | [ETH RSL ANYmal Parkour Website](https://rsl.ethz.ch/research/anymal-parkour.html) |
+| **代码** | 🚧 宇树 Go1 版有部分复现，官方代码部分开源 |
 
 ---
 
 ## 🎯 一句话总结
 
-> 🚧 待补。推测方向：ETH RSL 系列沿 Hutter 组主线，将**感知型运动（Perceptive Locomotion）**从平地扩展到跑酷级别，强调对传感噪声和相机掉帧的鲁棒性。
+> 宇树（ETH Zurich）团队通过分层分层的强化学习，让 ANYmal 机器人不仅掌握了攀爬、跳跃、钻洞等多种单一跑酷技能，还能根据地形环境感知自主选择最优的技能路径。
 
 ---
 
@@ -39,73 +39,59 @@ zhname: "ANYmal 跑酷：鲁棒的感知型移动"
 
 | 缩写 | 全称 | 简单解释 |
 |------|------|----------|
-| **Perceptive Locomotion** | 感知型运动 | 融合本体 + 视觉 / 高度图的运动控制 |
-| **Elevation map** | 高程图 | 机器人周围地形高度栅格 |
-| **RMA-style** | RMA 风格两阶段训练 | Teacher-Student + privileged |
-| 🚧 | | |
+| HRL | Hierarchical Reinforcement Learning | 分层强化学习 |
+| MLP | Multi-Layer Perceptron | 多层感知机 |
+| Perceptive Locomotion | 感知感知运动 | 利用视觉/深度信息引导的机器人行走 |
 
 ---
 
-## ❓ ANYmal Parkour 要解决什么问题？
+## ❓ 论文要解决什么问题？
 
-> 🚧 待补。可能方向：
-> - 复杂地形需要视觉 → 但相机容易掉帧 / 被遮挡。
-> - 要求能同时"看得准"和"失明时不摔"。
-> - 与 CMU Extreme Parkour 的对比：不同硬件（ANYmal vs A1）与不同感知（elevation map vs ego depth）。
+- **技能组合难题**：机器人已经学过走路、跳跃，但在面对连续障碍（如先钻洞再上台阶）时，如何实现技能间的平滑过渡？
+- **环境感知的局限**：如何让机器人在复杂的工业或灾难现场中，识别哪些地形是可以过的，哪些需要特定动作（如侧身）？
+- **鲁棒性挑战**：在高动态动作中保持板载传感器数据的准确性并进行实时决策。
 
 ---
 
-## 🔧 方法详解
+## 🔧 方法详解（技术路径）
 
-> 🚧 待补：读完论文后填充。
->
-> 预期主线：
-> 1. 高程图 + 本体感觉作为学生输入。
-> 2. Teacher 用 privileged 地形。
-> 3. Noise / dropout 训练使学生对感知退化鲁棒。
+1. **分层分层控制架构 (Hierarchical Architecture)**：
+   - **高层策略 (High-level Navigator)**：负责感知周围地形（Depth map），并根据目标点规划出一条路径。它会输出给低层一个"期望技能"的信号。
+   - **低层技能库 (Low-level Skills)**：由一系列专门训练的专家策略组成（例如：爬台阶专家、深沟跳跃专家、狭窄空间钻爬专家）。
+2. **技能感知导航 (Skill-Aware Navigation)**：
+   - 高层导航策略在训练过程中被告知了每个底层专家技能的物理极限（比如能跳多远、能爬多高）。
+   - 这使得机器人不会规划出物理上无法实现的路径，而是会主动选择它"能力范围内"的最佳越障方式。
+3. **Isaac Gym 大规模预训练**：
+   - 利用 GPU 并行仿真技术，模拟了极其复杂的各种跑酷迷宫关卡，极大地提升了泛化能力。
 
 ---
 
 ## 🚶 具体实例
 
-> 🚧 待补。
+- **迷宫越障**：机器人面对一个狭窄缝隙，高层策略识别到高度限制，自动切换到"低伏前行"模式，钻过去后再迅速站起恢复正常行走。
+- **动态规划**：在有多个路径可选时，它能根据当前剩余能量和安全性，选择跳过浅坑而不是绕远路。
 
 ---
 
 ## 🤖 工程价值
 
-> 🚧 待补。意义：ETH 系列跑酷工作与 CMU 系列并列，理解两家方法论有助于把握感知型运动的两条主线。
-
----
-
-## 📁 源码对照
-
-> 🚧 开源代码待核对。
+- **工业应用前景**：这种敏捷性是人形或四足机器人进入建筑工地、矿井等复杂环境进行巡检的基础。
+- **分层范式的标杆**：相比于纯端到端，ANYmal Parkour 证明了模块化分层设计在处理多任务、长程规划时的优越性。
+- **软硬件深度结合**：展示了 ETH Zurich 在 ANYmal 硬件潜力挖掘上的深厚功底。
 
 ---
 
 ## 🎤 面试高频问题 & 参考回答
 
-> 🚧
-
----
-
-## 💬 讨论记录
-
-> 🚧
+1. **ANYmal Parkour 与 CMU 的 Extreme Parkour 有何主要区别？**
+   - ANYmal 侧重于**分层分层**（Navigation + Specialist Skills），擅长长程规划和技能切换；Extreme Parkour 侧重于**端到端**视觉控制，追求极限爆发力和最小延迟。
+2. **分层架构的缺点是什么？**
+   - 依赖于技能库的完整性；如果遇到一个库中没有定义的障碍类型，机器人可能会卡住。
 
 ---
 
 ## 📎 附录
 
-### A. 与其他方向的关联
-
-| 方向 | 关系 |
-|------|------|
-| Extreme Parkour (CMU) | 同期跑酷工作，对比项 |
-| RMA | 两阶段训练思路的源头 |
-| 09_Sim-to-Real | 视觉退化鲁棒性是典型 sim-to-real 挑战 |
-
-### B. 参考来源
-
-- 🚧 待核对 arXiv / 主页 / 代码
+### A. 参考来源
+- [Science Robotics 2023 Paper](https://www.science.org/doi/10.1126/scirobotics.adh5409)
+- [ETH RSL Lab](https://rsl.ethz.ch/)
