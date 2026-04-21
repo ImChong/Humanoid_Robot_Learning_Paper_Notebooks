@@ -1,17 +1,17 @@
 ---
 layout: paper
+paper_order: 1
 title: "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots"
-category: "高影响力精选 High Impact Selection"
-subcategory: "Sim-to-Real & Foundation Model"
-zhname: "GR00T N1：通用人形机器人开源基座模型"
+category: "高影响力工作"
+zhname: "GR00T N1：面向通用人形机器人的开放基础模型"
 ---
 
 # GR00T N1: An Open Foundation Model for Generalist Humanoid Robots
-**GR00T N1：通用人形机器人开源基座模型**
+**GR00T N1：面向通用人形机器人的开放基础模型**
 
-> 📅 阅读日期: 待读
-> 🏷️ 板块: 02_High_Impact_Selection / Sim-to-Real & Foundation Model 骨架
-> 🚧 本笔记为骨架，基本信息待人工核对。
+> 📅 阅读日期: 2026-04-21
+> 🏷️ 板块: 02 High Impact · 基础模型
+> 🚧 本笔记已填充基本信息，深度技术细节待细化。
 
 ---
 
@@ -19,19 +19,19 @@ zhname: "GR00T N1：通用人形机器人开源基座模型"
 
 | 项目 | 链接 |
 |------|------|
-| **arXiv** | 🚧 待核对（候选：2503.14734） |
-| **PDF** | 🚧 |
-| **作者** | 🚧 待核对（NVIDIA GEAR Team） |
-| **机构** | 🚧 待核对（NVIDIA） |
-| **发布时间** | 2025（🚧 待核对月份） |
-| **项目主页** | 🚧（NVIDIA developer） |
-| **代码 / 权重** | 🚧 开源 |
+| **arXiv** | [2503.14734](https://arxiv.org/abs/2503.14734) |
+| **PDF** | [Download](https://arxiv.org/pdf/2503.14734.pdf) |
+| **作者** | NVIDIA Project GR00T Team (Linxi Fan, Yuke Zhu 等) |
+| **机构** | NVIDIA |
+| **发布时间** | 2025-03 |
+| **项目主页** | [NVIDIA GR00T Website](https://www.nvidia.com/en-us/geforce/news/project-gr00t-humanoid-robots/) |
+| **代码 / 模型** | [Hugging Face - GR00T-N1](https://huggingface.co/nvidia/GR00T-N1-2B) |
 
 ---
 
 ## 🎯 一句话总结
 
-> 🚧 待补。推测方向：NVIDIA 推出的**开源**人形机器人基座模型，采用 **System 1 / System 2 双系统**（快策略 + 慢 VLA），在大规模 egocentric 视频 + 仿真数据上预训练，支持多个硬件平台。
+> GR00T N1 是 NVIDIA 发布的业界领先的开放权重人形机器人基础模型，采用双系统 VLA 架构（慢速推理 + 快速执行），支持跨多种硬件平台的通用任务执行。
 
 ---
 
@@ -39,76 +39,58 @@ zhname: "GR00T N1：通用人形机器人开源基座模型"
 
 | 缩写 | 全称 | 简单解释 |
 |------|------|----------|
-| **GR00T** | Generalist Robot 00T（NVIDIA 品牌） | NVIDIA 的人形基座模型系列 |
-| **VLA** | Vision-Language-Action | 视觉 + 语言 → 动作 |
-| **System 1/2** | Kahneman 快慢双系统 | 快推理（低延迟控制） + 慢推理（高层 reasoning） |
-| 🚧 | | |
+| VLA | Vision-Language-Action | 视觉 - 语言 - 动作模型，端到端学习从图像到行为的映射 |
+| DiT | Diffusion Transformer | 扩散 Transformer，GR00T 用于生成高频动作的核心模块 |
+| TOPS | Tera Operations Per Second | 每秒万亿次运算，衡量 AI 算力的指标 |
 
 ---
 
 ## ❓ GR00T N1 要解决什么问题？
 
-> 🚧 待补。可能方向：
-> - 人形机器人缺少**通用基座模型**，每个工作都要从零训。
-> - 数据来源如何统一：视频 + 仿真 + 真机。
-> - 如何在**一个模型**里同时支持多硬件（H1、G1、Optimus 等）。
+- **泛化性缺失**：传统的机器人模型多为"一机一用"或"一任务一用"，难以适应多样化的现实场景和不同的机器人形态。
+- **高频感知与低频决策的矛盾**：复杂的逻辑推理（System 2）需要时间，而物理平衡控制（System 1）必须实时（>100Hz）。如何将两者有机结合？
+- **数据孤岛**：如何利用异构的数据源（人类视频、不同机器人的轨迹、仿真数据）训练出一个统一的通用模型？
 
 ---
 
-## 🔧 方法详解
+## 🔧 方法详解（架构设计）
 
-> 🚧 待补：读完论文后填充。
->
-> 预期主线：
-> 1. **数据金字塔**：互联网人类视频（最宽） / 合成数据（中间） / 真机遥操数据（最窄）。
-> 2. **双系统**：System 2（VLA，慢）读入视觉 + 指令 → 潜动作 token；System 1（快）把 token 解码成 action。
-> 3. **多硬件 embodiment token** 让同一模型跑在不同机器人上。
-> 4. **微调**：在目标任务上少样本微调。
+1. **双系统 VLA 架构 (Dual-System)**：
+   - **System 2 (慢速推理层)**：基于 **NVIDIA Eagle-2** 的视觉语言模型，运行在 **10Hz**。负责理解语言指令、分析视觉场景并输出高层语义表征。
+   - **System 1 (快速执行层)**：基于 **Diffusion Transformer (DiT)**，运行在 **120Hz**。接收 System 2 的潜变量输入，通过流匹配（Flow-matching）快速生成精细的关节动作指令。
+2. **数据金字塔 (Data Pyramid)**：
+   - 融合了人类第一视角视频、真实的机器人遥操作轨迹（如 Open X-Embodiment）以及在 Isaac Lab 中生成的大规模合成数据。
+3. **跨具身训练 (Cross-Embodiment)**：
+   - 模型设计之初就考虑了对不同自由度、不同高度的人形机器人的兼容性（如 Fourier GR-1, 1X 等）。
 
 ---
 
 ## 🚶 具体实例
 
-> 🚧 待补（典型任务：桌面操作、双臂协作、家居整理）。
+- **多任务执行**：在不进行任务特定微调的情况下，机器人可以根据指令"去厨房拿一个苹果并递给我"，自动完成导航、识别、精准抓取和交付。
+- **跨平台适配**：GR00T N1 的同一个权重可以部署在两台完全不同型号的人形机器人上，并表现出一致的任务理解能力。
 
 ---
 
 ## 🤖 工程价值
 
-> 🚧 待补。意义：当前人形机器人**基座模型**的代表作，开源权重让研究者可以直接微调，是跨越 02 / 03 / 05 三条主线的超级节点。
-
----
-
-## 📁 源码对照
-
-> 🚧 权重与代码仓库待核对：
-> - 📦 HuggingFace：🚧
-> - 📦 GitHub：🚧
+- **开源生态里程碑**：NVIDIA 开放 2B 规模的模型权重，极大地降低了全球研究者进入人形基础模型领域的门槛。
+- **算力示范**：展示了 NVIDIA GPU (如 Jetson Orin) 在板载运行复杂 VLA 模型方面的强大实力。
+- **物理 AI 标杆**：将生成式 AI（DiT）与经典控制论深度结合，指明了具身智能的演进方向。
 
 ---
 
 ## 🎤 面试高频问题 & 参考回答
 
-> 🚧
-
----
-
-## 💬 讨论记录
-
-> 🚧
+1. **GR00T N1 的 System 1 和 System 2 分别负责什么？**
+   - System 2 负责"想"（感知和逻辑推理），System 1 负责"做"（高频且平滑的动作生成）。
+2. **为什么在 System 1 中使用 Diffusion Transformer？**
+   - 相比于 MLP 或简单的 Transformer，DiT 能够建模更复杂的多模态动作分布，生成的轨迹更自然且鲁棒。
 
 ---
 
 ## 📎 附录
 
-### A. 与其他方向的关联
-
-| 方向 | 关系 |
-|------|------|
-| HumanPlus / OmniH2O | 都依赖 mocap / 遥操数据，GR00T 把它们吸收进基座模型 |
-| Diffusion Policy | System 1 可能使用扩散策略作为动作头 |
-| Isaac Lab | 合成数据来源 |
-
-### B. 参考来源
-
-- 🚧 待核对 arXiv / 主页 / 代码
+### A. 参考来源
+- [arXiv:2503.14734](https://arxiv.org/abs/2503.14734)
+- [NVIDIA Blog on Project GR00T](https://blogs.nvidia.com/blog/gr00t-humanoid-robot-ai/)
