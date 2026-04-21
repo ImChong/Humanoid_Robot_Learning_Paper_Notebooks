@@ -538,7 +538,7 @@
 | 527  | [MuJoCo Playground](https://playground.mujoco.org/)                                                                                       | 2025.01 |     | ⏳ 待读 |
 
 
-### Hardware Design（37篇）
+### Hardware Design（38篇）
 
 
 | #   | 论文                                                                                                                                                                     | 日期      | 🌟  | 状态   |
@@ -580,6 +580,7 @@
 | 444  | Integrated linkage-driven dexterous anthropomorphic robotic hand                                                                                                       | -       |     | ⏳ 待读 |
 | 445  | Proprioceptive actuator design in the MIT Cheetah: Impact mitigation and high‑bandwidth physical interaction for dynamic legged robots                                 | -       |     | ⏳ 待读 |
 | 446  | [Berkeley Humanoid: A Research Platform for Learning-based Control](https://arxiv.org/abs/2407.21781) | 2024.07 | 🌟 | ⏳ 待读 |
+| 531  | [Zeroth Bot](https://github.com/zeroth-robotics/zeroth-bot)                                                                                                            | -       |     | ⏳ 待读 |
 
 
 ### Physics-Based Character Animation（29篇）
