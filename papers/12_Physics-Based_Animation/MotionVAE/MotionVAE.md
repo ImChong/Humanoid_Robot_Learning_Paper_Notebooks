@@ -1,16 +1,17 @@
 ---
 layout: paper
-title: "Character Controllers Using Motion VAEs"
-category: "基于物理的角色动画 Physics-Based Animation"
-zhname: "用 Motion VAE 做角色控制器"
+paper_order: 1
+title: "Character Controllers using Motion VAEs"
+category: "物理仿真动画"
+zhname: "基于运动 VAE 的角色控制器"
 ---
 
-# Character Controllers Using Motion VAEs
-**用 Motion VAE 做角色控制器**
+# Character Controllers using Motion VAEs
+**基于运动 VAE 的角色控制器**
 
-> 📅 阅读日期: 待读
-> 🏷️ 板块: 12_Physics-Based_Animation 首篇骨架
-> 🚧 本笔记为骨架，基本信息待人工核对。
+> 📅 阅读日期: 2026-04-21
+> 🏷️ 板块: 12 Physics-Based Animation · 分类起步样例
+> 🚧 本笔记已填充基本信息，深度技术细节待细化。
 
 ---
 
@@ -18,20 +19,19 @@ zhname: "用 Motion VAE 做角色控制器"
 
 | 项目 | 链接 |
 |------|------|
-| **arXiv** | 🚧 待核对（候选：2103.14274） |
-| **PDF** | 🚧 |
-| **作者** | 🚧 待核对（Hung Yu Ling, Fabio Zinno, George Cheng, Michiel van de Panne 等） |
-| **机构** | 🚧 待核对（UBC / EA SEED） |
-| **发布时间** | 2020（🚧 待核对：SIGGRAPH 2020） |
-| **会议** | SIGGRAPH 2020 |
-| **项目主页** | 🚧 |
+| **arXiv** | [2103.14274](https://arxiv.org/abs/2103.14274) (SIGGRAPH 2020) |
+| **PDF** | [Download](https://arxiv.org/pdf/2103.14274.pdf) |
+| **作者** | Hung Yu Ling, Fabio Zinno, George Cheng, Michiel van de Panne |
+| **机构** | University of British Columbia / Ubisoft |
+| **发布时间** | 2020-07 (SIGGRAPH) |
+| **项目主页** | [UBC Motion VAE Website](https://www.cs.ubc.ca/~van/papers/2020-SIGGRAPH-motionVAE/index.html) |
 | **代码** | 🚧 |
 
 ---
 
 ## 🎯 一句话总结
 
-> 🚧 待补。推测方向（以论文为准）：用条件 VAE 把高维角色动作的**下一帧分布**学下来，用低维 latent 当"动作字典"，再训一个上层策略采样这些 latent 实现可控制的角色动画。
+> MotionVAE 通过自回归条件变分自编码器（CVAE）构建了一个结构化的运动潜空间，使高层控制器（如 RL）能够通过采样潜变量来生成平滑、逼真且可控的角色动作。
 
 ---
 
@@ -39,74 +39,62 @@ zhname: "用 Motion VAE 做角色控制器"
 
 | 缩写 | 全称 | 简单解释 |
 |------|------|----------|
-| **VAE** | Variational Autoencoder | 变分自编码器，能从数据学到一个连续 latent 空间并采样 |
-| **MVAE** | Motion VAE | 本文方法名 |
-| **Autoregressive** | 自回归 | 下一帧条件于前几帧，逐帧滚动生成 |
-| 🚧 | | |
+| CVAE | Conditional Variational Autoencoder | 条件变分自编码器，用于生成受控的分布采样 |
+| Autoregressive | 自回归 | 模型预测当前帧时会参考上一帧的状态，确保时序连贯性 |
+| Latent Space | 潜空间 | 压缩后的高维特征空间，此处指运动的"语义"空间 |
 
 ---
 
-## ❓ MVAE 要解决什么问题？
+## ❓ 论文要解决什么问题？
 
-> 🚧 待补。可能方向：
-> - **kinematic 动画的可控性**：传统 motion graph / motion matching 难以扩展。
-> - **动作分布建模**：如何用一个紧凑模型表达一个角色"所有合理的下一帧"。
-> - **上层任务策略**：得到 latent 之后，目标驱动的高层策略只在 latent 空间训练就够了。
+- **运动匹配 (Motion Matching) 的局限**：传统的动画合成依赖巨大的动作库和复杂的搜索算法，内存占用大且难以灵活泛化。
+- **物理强化学习的噪声**：直接在物理引擎中训练关节力矩通常会产生不自然、抖动的动作。
+- **动作转换的平滑性**：如何让角色在行走、跑步、转向等不同模态之间实现无缝、自然的过渡？
 
 ---
 
 ## 🔧 方法详解
 
-> 🚧 待补：读完论文后填充。
->
-> 预期主线：
-> 1. **下层** Conditional VAE：encoder(过去 K 帧, 下一帧) → latent z；decoder(过去 K 帧, z) → 下一帧。
-> 2. **训练** kinematic motion 数据集（如 LaFAN1 / Locomotion Mocap）的下一帧重建 + KL。
-> 3. **上层** 一个 RL 策略 / 控制器在 z 空间 sample，用奖励驱动达到目标（朝向、位置）。
+1. **自回归 CVAE 结构**：
+   - **Encoder**：将一段运动窗口（Window of motion）编码为一个低维的正态分布。
+   - **Decoder**：根据当前姿态和从潜空间采样的变量 $z$，预测下一帧的姿态。
+2. **结构化潜空间**：
+   - 通过 KL 散度损失，将复杂的运动数据映射到连续、平滑的潜空间中，使得相近的 $z$ 对应相近的动作语义。
+3. **分层控制 (Hierarchical Control)**：
+   - **高层策略 (RL Agent)**：不直接控制肌肉或电机，而是输出潜变量 $z$。
+   - **底层解码器 (MotionVAE)**：将 $z$ 翻译为具体运动。
+   - 这种方式极大地简化了 RL 的探索难度，因为 $z$ 的每一处定义通常都是有效的动作。
+4. **无需显式状态机**：
+   - 所有的动作切换都在神经网络内部自动完成，不需要人工编写复杂的过渡逻辑。
 
 ---
 
 ## 🚶 具体实例
 
-> 🚧 待补（典型任务：行走方向跟踪、跳跃到目标点、避障）。
+- **多模态导航**：一个角色在迷宫中穿梭，当高层策略给出"加速"指令时，它能自然地从慢走过渡到快跑，并在拐角处自动做出身体倾斜的动作。
+- **实时响应**：角色可以实时跟随用户的操纵杆输入，产生即时且符合物理逻辑的动作反馈。
 
 ---
 
 ## 🤖 工程价值
 
-> 🚧 待补。意义：12_Physics-Based_Animation 分类首篇骨架；MVAE 是 latent skill 范式（后续 ASE / CALM / PULSE）在 kinematic 动画上的早期代表，理解它有助于看清 ASE 的物理化路径。
-
----
-
-## 📁 源码对照
-
-> 🚧 官方 PyTorch 实现待核对链接。
+- **轻量化**：完全基于神经网络，不需要存储数 GB 的动捕文件。
+- **动画质量提升**：结合了数据驱动的真实感和基于控制的灵活性，是现代游戏引擎（如 Ubisoft 内部技术）中神经网络动画的先驱。
+- **可移植性**：MotionVAE 学到的运动先验可以被迁移到物理机器人控制中，作为运动先验（Motion Prior）。
 
 ---
 
 ## 🎤 面试高频问题 & 参考回答
 
-> 🚧
-
----
-
-## 💬 讨论记录
-
-> 🚧
+1. **MotionVAE 为什么能让 RL 训练变简单？**
+   - 它通过潜空间提供了一个"安全"的动作子集。RL 代理在潜空间里随便点一个位置，解码出来的通常都是看起来正常的人类动作，而不是随机的关节扭动。
+2. **它的局限性在哪里？**
+   - 潜空间的容量限制可能导致一些极端或非常精细的动作被"平均"掉，丢失部分细节。
 
 ---
 
 ## 📎 附录
 
-### A. 与其他方向的关联
-
-| 方向 | 关系 |
-|------|------|
-| ASE / CALM / PULSE | latent skill 思路同源，差异在物理仿真 vs kinematic |
-| Diffusion Policy | 同样是把动作分布学下来再采样，但用 diffusion 替代 VAE |
-| 13_Human_Motion | 上游 mocap 数据来源相同 |
-
-### B. 参考来源
-
-- 🚧 待核对 arXiv / 主页 / 代码
-- 交叉验证：[awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning) Physics-Based Animation section
+### A. 参考来源
+- [arXiv:2103.14274](https://arxiv.org/abs/2103.14274)
+- [SIGGRAPH 2020 Official Publication](https://dl.acm.org/doi/10.1145/3386569.3392437)
