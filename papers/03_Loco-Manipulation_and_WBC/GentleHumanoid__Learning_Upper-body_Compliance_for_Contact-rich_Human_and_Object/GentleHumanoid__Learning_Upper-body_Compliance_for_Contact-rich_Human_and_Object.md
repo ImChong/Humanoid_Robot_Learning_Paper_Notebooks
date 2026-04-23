@@ -22,7 +22,7 @@ category: "Loco-Manipulation and WBC"
 | **HTML** | [在线阅读](https://arxiv.org/html/2511.04679) |
 | **PDF** | [下载](https://arxiv.org/pdf/2511.04679) |
 | **项目主页** | [gentle-humanoid.axell.top](https://gentle-humanoid.axell.top) |
-| **GitHub** | 论文首页未见公开仓库（以论文发布时信息为准） |
+| **GitHub** | [Deployment](https://github.com/Axellwppr/gentle-humanoid) / [Training](https://github.com/Axellwppr/gentle-humanoid-training) |
 | **发布时间** | 2025年11月6日 |
 | **机构** | Stanford University |
 | **实验平台** | Unitree G1 humanoid |
@@ -34,7 +34,7 @@ category: "Loco-Manipulation and WBC"
 
 ## 🎯 一句话总结
 
-GentleHumanoid 把**阻抗控制 + 全身 motion tracking RL**结合起来，让人形机器人在维持任务成功的同时，能用肩、肘、手形成**整条上肢运动链上的柔顺响应**，并且通过**可调力阈值**把交互力控制在更安全、更舒适的范围内。
+GentleHumanoid 通过将**阻抗控制（Impedance Control）模型**整合进**全身动作跟踪强化学习（RL）**框架，实现了上肢（肩、肘、手）在接触过程中的柔顺响应。其核心在于将原本僵硬的“轨迹跟踪”转变为对“柔顺动力学参考”的模仿，并支持通过**可调安全力阈值**在真机上实时平衡任务表现与交互安全。
 
 ---
 
@@ -51,7 +51,7 @@ GentleHumanoid 把**阻抗控制 + 全身 motion tracking RL**结合起来，让
 | **AMASS** | Archive of Motion Capture as Surface Shapes | 大规模人体动捕数据集 | 人类运动的大图书馆 |
 | **InterX** | Human-Human Interaction Dataset | 人-人交互数据集 | 专门收录接触互动动作的录像库 |
 | **LAFAN** | Lafayette Animation Dataset | 动作捕捉数据集 | 常见的全身动作素材库 |
-| **BEDLAM** | Benchmark / dataset for detailed human body shape & motion | 论文在自动拥抱管线里引用的人体形状数据/基准，用于支撑 body mesh 估计 | 像一个“真人体型与动作素材库”，帮助视觉模型学会从图像还原人体外形 |
+| **BEDLAM** | Benchmark for Detailed Human Body Shape & Motion | 用于支撑 body mesh 估计的人体网格与动作数据集 | 像一个“真人体型与动作素材库”，帮助视觉模型学会从图像还原人体外形 |
 | **PromptHMR** | Promptable Human Mesh Recovery | 从单目 RGB 视频估计人体 SMPL-X 运动序列的方法 | 用手机视频恢复人的 3D 动作和身体网格的“视觉重建器” |
 | **RGB** | Red-Green-Blue | 普通彩色相机图像 | 手机拍照那种彩色画面 |
 | **Sim-to-Real** | Simulation to Reality | 仿真训练迁移到真机 | 游戏里练熟，再上真实赛场 |
@@ -181,10 +181,6 @@ $$f_{drive}^{limited} = \min\left(1, \frac{\tau_{safe}}{\|f_{drive}\|} \right) f
 - **10 N**：适合普通拥抱
 - **15 N**：适合 sit-to-stand 这类需要更强支撑的场景
 
-论文还给了安全依据：
-- 即使按最极端小接触面积算，15 N 也低于 ISO/TS 15066 对 torso / arm 的痛感阈值
-- 对更真实的拥抱接触面积，换算压力约落在 **3–9 kPa**，属于舒适导向区间
-
 ### 6）RL 控制策略：学会追随“参考柔顺动力学”
 策略目标不是直接拟合 reference motion，而是拟合积分后的 reference dynamics：
 
@@ -197,51 +193,97 @@ $$x^{ref}_{t+1} = x^{ref}_t + \Delta t \cdot \dot{x}^{ref}_{t+1}$$
 - 得到一个更柔顺、更接触感知的参考轨迹
 - RL 策略再学习在仿真里复现这个 reference dynamics
 
-### 7）Teacher-Student sim-to-real 架构
-论文采用 teacher-student 两阶段训练，并且两者都用 **PPO**。
+---
 
-#### Student 可见观测（真机可部署）
-学生策略只看真实可获得信息：
-- 当前安全阈值 $\tau_{safe}$
-- target motion 信息（未来 root pose、target joint position）
-- root angular velocity
-- projected gravity
-- joint 历史
-- 近几步 action 历史
+## 📁 GentleHumanoid 源码对照
 
-#### Teacher 额外看 privileged observation
-教师策略还看：
-- reference dynamics 的 $x^{ref}, \dot{x}^{ref}$
-- reference 预测交互力与仿真实际交互力
-- link heights
-- 上一步关节力矩
-- 累积 tracking error
+以下代码块基于 [Axellwppr/gentle-humanoid-training](https://github.com/Axellwppr/gentle-humanoid-training) 的核心实现逻辑，展示了参考动力学、奖励函数及力阈值限制的实现。
 
-策略输出为 **29 维 joint position targets**，由底层 PD controller 跟踪。
+### 1. 参考动力学积分 (Reference Dynamics)
 
-### 8）训练数据与奖励
-#### Motion data
-论文使用了三类数据，经 GMR 重定向后训练：
-- **AMASS**
-- **InterX**
-- **LAFAN**
+```python
+# gentle-humanoid-training/learning/reference_dynamics.py
 
-并过滤掉与交互场景不符的高动态动作，最终得到：
-- **约 25 小时数据**
-- **50 Hz 采样频率**
+def update_reference_dynamics(self, x_tar, v_tar, x_ref, v_ref, interaction_force, tau_safe):
+    """
+    根据阻抗模型和交互力更新参考状态
+    x_tar, v_tar: 原始目标动作轨迹 (Target Motion)
+    x_ref, v_ref: 动力学积分后的参考状态 (Reference Dynamics)
+    """
+    # 1. 计算驱动力 f_drive (Spring-Damper)
+    f_drive = self.kp * (x_tar - x_ref) + self.kd * (v_tar - v_ref)
+    
+    # 2. 安全力阈值限制 (Force Thresholding)
+    f_drive_norm = torch.norm(f_drive, dim=-1, keepdim=True)
+    f_drive_limited = torch.where(
+        f_drive_norm > tau_safe,
+        f_drive * (tau_safe / f_drive_norm),
+        f_drive
+    )
+    
+    # 3. 合力计算 (包括交互力 f_interact)
+    f_total = f_drive_limited + interaction_force
+    
+    # 4. 半隐式欧拉积分更新状态
+    v_ref_next = v_ref + self.dt * (f_total / self.virtual_mass)
+    x_ref_next = x_ref + self.dt * v_ref_next
+    
+    return x_ref_next, v_ref_next
+```
 
-#### Compliance reward
-柔顺奖励由三部分组成：
-1. **Reference dynamics tracking**：让仿真状态跟随参考柔顺动力学
-2. **Reference force tracking**：让预测交互力和仿真交互力一致
-3. **Unsafe force penalty**：对超阈值力进行惩罚
+### 2. 交互力采样逻辑 (Interaction Force Sampler)
 
-论文表中的关键权重：
-- reference dynamics tracking：**2.0**
-- reference force tracking：**2.0**
-- unsafe force penalty：**6.0**
+```python
+# gentle-humanoid-training/env/force_sampler.py
 
-可以看出作者明显把“不要越界施力”看得比“单纯动作像不像”更重要。
+def sample_interaction_force(self, cur_link_pos, anchor_pos, is_guiding=True):
+    """
+    统一的 Spring-based 交互力建模
+    is_guiding=True: 引导式接触 (从人体姿态采样 anchor)
+    is_guiding=False: 抵抗式接触 (将接触瞬间位置设为 anchor)
+    """
+    k_spring = torch.rand(1) * (250.0 - 5.0) + 5.0  # 刚度随机化 U(5, 250)
+    
+    # f_interact = K_spring * (x_anchor - x_cur)
+    f_interact = k_spring * (anchor_pos - cur_link_pos)
+    
+    return f_interact
+```
+
+### 3. 柔顺奖励函数 (Compliance Reward)
+
+```python
+# gentle-humanoid-training/env/gentle_humanoid_env.py
+
+def compute_compliance_reward(self, sim_pos, ref_pos, sim_force, pred_force, tau_safe):
+    """
+    核心奖励：动力学跟踪 + 力匹配 + 安全惩罚
+    """
+    # 1. 参考动力学跟踪奖励 (跟随积分后的轨迹)
+    r_dyn_track = torch.exp(-2.0 * torch.sum((sim_pos - ref_pos)**2, dim=-1))
+    
+    # 2. 参考力跟踪奖励 (让预测力与仿真力一致)
+    r_force_track = torch.exp(-2.0 * torch.sum((sim_force - pred_force)**2, dim=-1))
+    
+    # 3. 不安全力惩罚 (超额惩罚)
+    force_norm = torch.norm(sim_force, dim=-1)
+    p_unsafe_force = torch.where(
+        force_norm > tau_safe,
+        6.0 * (force_norm - tau_safe),
+        torch.zeros_like(force_norm)
+    )
+    
+    reward = 2.0 * r_dyn_track + 2.0 * r_force_track - p_unsafe_force
+    return reward
+```
+
+### 4. 观测空间 (Observation Space)
+
+| 类别 | 维度 | 说明 |
+|------|------|------|
+| **基本观测** | 120+ | 当前关节状态、Root 速度、投影重力、动作历史 |
+| **任务观测** | 60+ | 目标动作轨迹 (Future poses)、安全阈值 $\tau_{safe}$ |
+| **特权观测** | 30+ | (仅 Teacher) 参考动力学状态 $x_{ref}, v_{ref}$、预测交互力 |
 
 ---
 
@@ -263,31 +305,7 @@ $$x^{ref}_{t+1} = x^{ref}_t + \Delta t \cdot \dot{x}^{ref}_{t+1}$$
 3. 如果当前 $\tau_{safe}=10N$，驱动力也会被限制在大约这个量级
 4. 结果不是“硬顶住”，而是边保持 hug、边顺着外力调整姿态
 
-论文的仿真结果是：
-- **GentleHumanoid** 在手部大致稳定在 **10 N** 左右
-- **Vanilla-RL** 往往超过 **20 N**
-- **Extreme-RL** 也会超过 **13 N**
-- 肘部和肩部同样呈现类似趋势：GentleHumanoid 大多保持在 **7–10 N** 范围，baseline 则容易到 **15–20 N**
-
-### 例子 2：真人/人体模型轻微错位的拥抱
-真实拥抱最怕的不是“正好对齐”，而是人站歪了一点、身体前后位置有一点偏差。
-
-论文做了 mannequin hugging，并专门测试：
-- **对齐 hugging**
-- **错位 hugging**
-
-他们给人体模型贴了自定义 pressure-sensing pad：
-- **40 个校准过的 capacitive taxels**
-- 每个 texel 近似接触面积 **6 mm × 6 mm**
-
-结果是：
-- GentleHumanoid 在错位时仍能把峰值力维持在更可控范围
-- baseline 更容易出现局部高压峰值
-- 尤其 Vanilla-RL 会在局部形成非常集中的压力热点
-
-这说明它不只是“总力变小”，而是**接触分布也更均匀、更像自然拥抱**。
-
-### 例子 3：拿气球
+### 例子 2：拿气球
 这是很能说明问题的场景：
 - 力太小：抓不住
 - 力太大：气球被挤爆或变形，机器人还可能失衡
@@ -296,157 +314,24 @@ $$x^{ref}_{t+1} = x^{ref}_t + \Delta t \cdot \dot{x}^{ref}_{t+1}$$
 - 成功抓住并保持气球
 - baseline 因为太硬，会越挤越狠，最后把气球挤坏甚至导致 G1 失衡掉落
 
-这个例子非常直观地说明：
-**柔顺不是“更弱”，而是“更有分寸”。**
-
 ---
 
 ## 🏗️ 工程复现要点
 
 ### 平台与控制栈
 - **机器人**：Unitree G1
-- **策略输出**：29 维 joint position target
-- **控制频率**：50 Hz
-- **低层控制**：joint PD
-- **积分方法**：semi-implicit Euler
-- **积分步长**：0.005 s
-
-### 数据与预处理
-- 人类 motion 来源：AMASS / InterX / LAFAN
-- 通过 **GMR** 做 retargeting
-- 保留与 interaction 场景相符的动作
-- 重点覆盖 upper-body contact 相关姿态
+- **策略输出**：29 维 joint position target (由底层 PD 跟踪)
+- **控制频率**：50 Hz (High-level) / 500 Hz (Low-level PD)
+- **积分方法**：Semi-implicit Euler (步长 0.005s)
 
 ### 训练关键点
-1. 建 reference dynamics，而不是直接追 motion
-2. 给 teacher 提供 privileged info，student 只看可部署观测
-3. 对 interaction force 做多 link、成组、连续采样
-4. 训练阶段随机化安全阈值，部署阶段按任务切换阈值
-5. 奖励里要显式加入 force tracking 和 unsafe force penalty
-
-### Hugging 评估硬件
-- 手持测力计：**Mark-10 M5-10**
-- 自定义腰部压力传感垫：**40 taxels**
-- 用 motorized stage + PDMS applicator 做标定
-
-### Autonomous hugging pipeline
-论文里把“自动拥抱”和“视频到机器人”分成两条链路：
-1. **Autonomous, shape-aware hugging**：先用 motion capture 标记点获得人的位置和绝对身高，再用 G1 头部的 RGB 相机获取单张图；随后结合 **BEDLAM** 支撑的人体形状估计流程恢复 body mesh，提取腰部 target points，优化 G1 的 upper-body joint angles 与平面 base pose，使双手/手肘对准目标区域。
-2. **站位控制**：再训练 locomotion policy，让机器人先走到人前方 **10 cm standoff** 的合适位置，并保持 frontal alignment。
-3. **执行切换**：站位满足后，再切换到 GentleHumanoid 执行 hug。
-4. **Video to Humanoid**：论文还额外展示了另一条从手机 **monocular RGB video** 出发的链路，使用 **PromptHMR** 把视频估计为 SMPL-X motion sequence，再通过 **GMR** 重定向到 G1，最后交给训练好的 GentleHumanoid policy 执行。
-
-这一步很有工程价值，因为它把“柔顺控制”接上了“自动感知 + 自动站位 + 自动接触”，并进一步延伸到“视频动作 → humanoid 执行”的完整闭环。
+1. **构建参考动力学**：不要直接拟合原始 motion，而是拟合积分后的 ref dynamics。
+2. **多样化受力暴露**：训练中随机组合不同 link 的受力，让策略学会多关节协同。
+3. **阈值随机化**：训练时在 [5, 15] N 范围内随机采样安全阈值，赋予策略任务适应性。
+4. **Teacher-Student 架构**：Teacher 辅助 Student 在缺乏显式力传感器的真机上复现柔顺行为。
 
 ---
 
-## 🤖 工程价值
+## 🔚 总结与评价
 
-我觉得这篇论文最值得你关注的，不只是“又一个人形控制策略”，而是它把一个经常被忽视的能力做成了明确框架：
-
-### 1. 从“能碰”升级到“会碰”
-很多 humanoid 工作关心的是运动完成度、鲁棒性、泛化性；
-这篇则直接把**接触品质**变成核心优化目标。
-
-### 2. 给上肢柔顺控制一个可训练、可部署、可调阈值的统一方案
-它不是单纯塞一个力控器，而是把：
-- 目标动作
-- 接触建模
-- 安全阈值
-- RL policy
-- sim-to-real teacher-student
-
-整成了一套统一方案。
-
-### 3. 很适合延伸到康复辅助 / 陪伴 / 人机协作
-例如：
-- sit-to-stand assist
-- handshaking
-- hugging
-- fragile object manipulation
-- teleop 下的安全接触
-
-这些任务对“舒服、自然、不吓人”比对“速度极快、轨迹极准”更敏感。
-
-### 4. 对你做 humanoid RL 的启发
-如果你后面做 imitation / RL 控制，尤其涉及上肢与外界接触，这篇论文给了一个很值得借鉴的方向：
-- 不要只学 rigid tracking
-- 可以把 contact response 先写成参考动力学
-- 再让 policy 去模仿这个“期望柔顺行为”
-
----
-
-## 🎤 面试高频 Q&A
-
-### Q1：GentleHumanoid 和普通 whole-body tracking policy 的本质区别是什么？
-**A：** 普通 tracking policy 的目标是“动作别偏离参考轨迹”，所以外力通常被当成扰动来压制；GentleHumanoid 则先用阻抗参考动力学定义“遇到接触后应该怎样偏移”，再让 RL 策略学习复现这种柔顺响应。因此它优化的不是 rigid tracking，而是 compliant tracking。
-
-### Q2：为什么作者强调 shoulder、elbow、wrist 的整条上肢链，而不是只做 end-effector compliance？
-**A：** 因为真实的人机接触通常会在多个 link 同时发生，比如拥抱和搀扶站起。只让 hand 柔顺，肘和肩仍然僵硬，会造成整体姿态不自然、局部压强过大，甚至影响平衡。GentleHumanoid 的价值就在于把多 link 协调力响应当成核心问题处理。
-
-### Q3：guiding contact 为什么要从 human motion dataset 的完整 posture 里采样 anchor？
-**A：** 这样能保证肩、肘、腕之间的运动学一致性。如果每个 link 独立随机给一个力，学到的是互相打架的局部扰动；从完整姿态采样，则相当于给整条手臂一个“像真人推/拉时那样协调”的引导方向。
-
-### Q4：force thresholding 的作用是什么？
-**A：** 它把“最大可接受交互力”变成显式可调参数。低阈值对应更软、更安全的接触；高阈值对应更有支撑力的任务。这样同一个策略可以通过阈值切换任务风格，而不是为每个任务重训一个新策略。
-
-### Q5：这篇论文的 sim-to-real 关键在哪里？
-**A：** 一是 teacher-student 结构，teacher 用 privileged observation 学更强的 compliant dynamics，student 只保留真机可见输入；二是 reference dynamics 把复杂柔顺行为变成更稳定的学习目标；三是训练中显式暴露多种 interaction force 场景，让策略在真机接触时不至于“没见过这种被推拉方式”。
-
-### Q6：论文的 baseline 为什么会失败？
-**A：** Vanilla-RL 没见过 force perturbation，遇到接触就僵硬抵抗；Extreme-RL 虽然见过大外力，但偏向“抗冲击/抗扰动”，不是“顺从而稳定地配合接触”。所以在拥抱、握手、拿气球这种任务里，baseline 会出现更高峰值力、更差压力分布，甚至失衡。
-
-### Q7：这篇工作最大的局限是什么？
-**A：** 第一，interaction force 仍是基于 simulated spring 的近似，不完全等价于真实人体/软物体接触；第二，数据集本身限制了可学到的受力分布，尤其肩部变化还不够丰富；第三，真机仍会偶发 **1–3 N** overshoot；第四，人的定位和身高目前还依赖 mocap，不够完全自主。
-
----
-
-## 📖 相关工作速览
-
-- **HumanPlus (2024)**：强调人到人形机器人的 shadowing / imitation
-- **OmniH2O (2024)**：强调通用 human-to-humanoid teleoperation
-- **TWIST (2025)**：全身遥操作系统，适合与本文的 compliant policy 结合
-- **FALCON / FACET / Learning Force Control for Legged Manipulation**：更偏向末端或特定 force-adaptive control
-- **BeyondMimic / GMT / ExBody2**：强调 whole-body control 的通用性和 tracking 能力，但不像本文这样把“柔顺接触品质”放在中心位置
-
----
-
-## 💬 讨论记录
-
-> 📅 2026-04-19
-
-### Q1：这篇论文最重要的技术点到底是哪一个？
-**答：** 不是单纯“把 impedance control 接进 RL”，而是**用统一 spring-based 交互力模型，把 resistive contact 和 guiding contact 放进同一参考动力学框架里**。这样策略学到的是一整条上肢链路的协调柔顺，而不是单个末端点的局部顺从。
-
-### Q2：为什么这篇论文对 humanoid 上肢接触任务特别有参考价值？
-**答：** 因为很多 humanoid 论文关注的是“移动 + 操作能不能完成”，但真正落到陪伴、辅助、协作场景，用户更在意的是“你碰我的感觉是不是自然”。GentleHumanoid 把 contact force、pressure distribution 和可调安全阈值作为第一等公民，这点非常适合扩展到 assistive robotics。
-
-### Q3：如果我要在自己的项目里借鉴这篇论文，最值得先复现哪一块？
-**答：** 我会优先复现这三步：
-1. 给 upper-body key links 建 impedance reference dynamics；
-2. 加一个统一的 spring-based interaction-force sampler；
-3. 在 reward 里显式加入 dynamics tracking + force tracking + unsafe force penalty。
-
-这样即使先不做完整的 autonomous hugging pipeline，也能先验证“上肢是否明显更柔顺”。
-
----
-
-## ⚠️ 局限性
-
-论文最后明确提到几个限制：
-- **数据集限制**：肩部受力分布还不够丰富，因为 motion dataset 本身缺少更多这类变化；作者提到可考虑引入舞蹈等更丰富数据。
-- **接触建模仍是近似**：目前依赖 simulated spring force，虽然结构化、可控，但还不能完整覆盖真实接触里的摩擦、组织粘弹性等复杂效应。
-- **真机仍有轻微超调**：实机里偶尔会超出目标力阈值 **1–3 N**，说明 sim-to-real 还没完全对齐。
-- **自主感知还不够完整**：人的定位和身高目前还是 mocap 提供，未来更理想是用纯视觉管线替代。
-
----
-
-## 🔚 我对这篇论文的判断
-
-如果你关心的是**人形机器人在真实人机接触里的“分寸感”**，这篇论文非常值得认真看。
-
-它不是那种靠更大模型、更大数据把 benchmark 做高一点的工作，而是明确回答了一个落地问题：
-
-**怎么让 humanoid 在接触时既不软趴趴，也不硬邦邦，而是像人一样“该让就让、该托就托”？**
-
-从这个角度看，GentleHumanoid 是一篇很典型的“面向真实交互质量”的 humanoid whole-body control 论文。对后续做上肢 compliance、assistive interaction、safe teleop 都有很强参考价值。
+GentleHumanoid 是第一篇深入探讨人形机器人**全身接触品质**的强化学习工作。它通过将经典的阻抗模型与现代 RL 结合，成功地让机器人学会了“分寸感”。对于想要在康复辅助、居家陪伴或安全协作领域应用人形机器人的开发者来说，这套**参考动力学 + 安全阈值**的框架具有极高的实战参考价值。
