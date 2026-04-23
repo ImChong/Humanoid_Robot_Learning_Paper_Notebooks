@@ -195,97 +195,66 @@ $$x^{ref}_{t+1} = x^{ref}_t + \Delta t \cdot \dot{x}^{ref}_{t+1}$$
 
 ---
 
-## 📁 GentleHumanoid 源码对照
+## 📁 GentleHumanoid 源码对照（基于公开仓库可核对内容）
 
-以下代码块基于 [Axellwppr/gentle-humanoid-training](https://github.com/Axellwppr/gentle-humanoid-training) 的核心实现逻辑，展示了参考动力学、奖励函数及力阈值限制的实现。
+> ✅ 本节已改为“可核对的真实仓库内容”。
+> 
+> 之前版本里 `learning/reference_dynamics.py`、`env/force_sampler.py`、`compute_compliance_reward(...)` 等路径/函数并不在公开仓库中（至少在 `main` 分支当前可见文件里没有对应同名文件），因此这里改为引用**真实存在**的训练入口与配置文件。
 
-### 1. 参考动力学积分 (Reference Dynamics)
+### 1. 训练流水线入口（对应论文的三类策略对比）
 
-```python
-# gentle-humanoid-training/learning/reference_dynamics.py
-
-def update_reference_dynamics(self, x_tar, v_tar, x_ref, v_ref, interaction_force, tau_safe):
-    """
-    根据阻抗模型和交互力更新参考状态
-    x_tar, v_tar: 原始目标动作轨迹 (Target Motion)
-    x_ref, v_ref: 动力学积分后的参考状态 (Reference Dynamics)
-    """
-    # 1. 计算驱动力 f_drive (Spring-Damper)
-    f_drive = self.kp * (x_tar - x_ref) + self.kd * (v_tar - v_ref)
-    
-    # 2. 安全力阈值限制 (Force Thresholding)
-    f_drive_norm = torch.norm(f_drive, dim=-1, keepdim=True)
-    f_drive_limited = torch.where(
-        f_drive_norm > tau_safe,
-        f_drive * (tau_safe / f_drive_norm),
-        f_drive
-    )
-    
-    # 3. 合力计算 (包括交互力 f_interact)
-    f_total = f_drive_limited + interaction_force
-    
-    # 4. 半隐式欧拉积分更新状态
-    v_ref_next = v_ref + self.dt * (f_total / self.virtual_mass)
-    x_ref_next = x_ref + self.dt * v_ref_next
-    
-    return x_ref_next, v_ref_next
+```bash
+# gentle-humanoid-training/train.sh
+run_pipeline "G1/G1_gentle" "gentle" "1215"
+# run_pipeline "G1/G1_no_force" "noforce" "1215"
+# run_pipeline "G1/G1_extreme_force" "extremeforce" "1215"
 ```
 
-### 2. 交互力采样逻辑 (Interaction Force Sampler)
+对应关系：
+- `G1_gentle`：论文方法（含柔顺/阻抗建模）
+- `G1_no_force`：vanilla tracking baseline
+- `G1_extreme_force`：大扰动/强力 baseline
 
-```python
-# gentle-humanoid-training/env/force_sampler.py
+这与论文实验里对比 GentleHumanoid vs Vanilla-RL vs Extreme-RL 的设定是一致的。
 
-def sample_interaction_force(self, cur_link_pos, anchor_pos, is_guiding=True):
-    """
-    统一的 Spring-based 交互力建模
-    is_guiding=True: 引导式接触 (从人体姿态采样 anchor)
-    is_guiding=False: 抵抗式接触 (将接触瞬间位置设为 anchor)
-    """
-    k_spring = torch.rand(1) * (250.0 - 5.0) + 5.0  # 刚度随机化 U(5, 250)
-    
-    # f_interact = K_spring * (x_anchor - x_cur)
-    f_interact = k_spring * (anchor_pos - cur_link_pos)
-    
-    return f_interact
+### 2. Gentle 配置中的力相关参数（对应论文 Table II）
+
+```yaml
+# gentle-humanoid-training/cfg/task/G1/G1_gentle.yaml
+command:
+  _target_: active_adaptation.envs.mdp.commands.motion_tracking.MotionTrackingCommand_impedance
+  max_force: 30.0
+  net_force_limit: 30.0
+  net_torque_limit: 20.0
 ```
 
-### 3. 柔顺奖励函数 (Compliance Reward)
+以及同文件中的奖励权重：
 
-```python
-# gentle-humanoid-training/env/gentle_humanoid_env.py
-
-def compute_compliance_reward(self, sim_pos, ref_pos, sim_force, pred_force, tau_safe):
-    """
-    核心奖励：动力学跟踪 + 力匹配 + 安全惩罚
-    """
-    # 1. 参考动力学跟踪奖励 (跟随积分后的轨迹)
-    r_dyn_track = torch.exp(-2.0 * torch.sum((sim_pos - ref_pos)**2, dim=-1))
-    
-    # 2. 参考力跟踪奖励 (让预测力与仿真力一致)
-    r_force_track = torch.exp(-2.0 * torch.sum((sim_force - pred_force)**2, dim=-1))
-    
-    # 3. 不安全力惩罚 (超额惩罚)
-    force_norm = torch.norm(sim_force, dim=-1)
-    p_unsafe_force = torch.where(
-        force_norm > tau_safe,
-        6.0 * (force_norm - tau_safe),
-        torch.zeros_like(force_norm)
-    )
-    
-    reward = 2.0 * r_dyn_track + 2.0 * r_force_track - p_unsafe_force
-    return reward
+```yaml
+reward:
+  impedance:
+    force_reward: {weight: 2.0}
+    force_exd_penalty: {weight: 6.0}
+    force_target_tracking: {weight: 2.0}
 ```
 
-### 4. 观测空间 (Observation Space)
+这与论文正文/附录给出的参数范围一致（`Fmax=30N`, `τF=30N`, `τM=20N·m`，以及力相关奖励权重 2/2/6）。
 
-| 类别 | 维度 | 说明 |
-|------|------|------|
-| **基本观测** | 120+ | 当前关节状态、Root 速度、投影重力、动作历史 |
-| **任务观测** | 60+ | 目标动作轨迹 (Future poses)、安全阈值 $\tau_{safe}$ |
-| **特权观测** | 30+ | (仅 Teacher) 参考动力学状态 $x_{ref}, v_{ref}$、预测交互力 |
+### 3. 评估与部署入口（对应“可调力阈值部署”）
 
----
+```bash
+# gentle-humanoid-training/README.md
+python scripts/eval.py --run_path ${wandb_run_path} -p
+python scripts/eval.py --run_path ${wandb_run_path} -p --export
+```
+
+`eval.py` 支持按 run checkpoint 加载策略并进行 `play/export`，对应论文里“同一策略在不同交互场景部署并调参验证”的实验流程。
+
+### 4. 与论文描述对齐后的勘误说明
+
+- ✅ **正确**：多链路（肩/肘/手）阻抗建模、`K_spring~U(5,250)`、接触组合概率（40/15/30/15）、参考动力学半隐式积分、50 Hz 位置目标下发。
+- ⚠️ **需修正**：先前笔记中的“源码对照”给出了若干**无法在公开仓库定位**的 Python 文件与函数，容易让读者误以为这些是官方实现路径。
+- ✅ **现已修正**：改为仓库中可直接定位的入口文件（`train.sh` / `G1_gentle.yaml` / `eval.py`）与参数对照，避免虚构路径。
 
 ## 🚶 具体实例：这篇论文到底怎么让机器人“抱得更柔和”？
 
@@ -329,6 +298,59 @@ def compute_compliance_reward(self, sim_pos, ref_pos, sim_force, pred_force, tau
 2. **多样化受力暴露**：训练中随机组合不同 link 的受力，让策略学会多关节协同。
 3. **阈值随机化**：训练时在 [5, 15] N 范围内随机采样安全阈值，赋予策略任务适应性。
 4. **Teacher-Student 架构**：Teacher 辅助 Student 在缺乏显式力传感器的真机上复现柔顺行为。
+
+---
+
+## 🧪 实验与结果（按 arXiv HTML v1 补全）
+
+### A. 仿真对比（Hugging + 外力拉拽）
+
+论文在 hugging reference 上施加“把机器人往外拉”的交互扰动，比较 `GentleHumanoid`、`Vanilla-RL`、`Extreme-RL`：
+
+- **手部力**：GentleHumanoid 稳定在约 **10N**；Vanilla-RL 高于 **20N**；Extreme-RL 超过 **13N**
+- **肘/肩力**：GentleHumanoid 约 **7–10N**；两类 baseline 常见 **15–20N** 饱和与僵硬响应
+
+核心结论：GentleHumanoid 在上肢多 link 上都能降低峰值力并减小波动。
+
+### B. 真机实验（三个场景）
+
+#### 1) 静态姿态 + 手腕受外力（Mark-10 M5-10）
+- Extreme-RL 需要峰值约 **51.14N**
+- Vanilla-RL 需要峰值约 **24.59N**
+- GentleHumanoid 在指定阈值附近表现出**姿态无关的一致柔顺性**（示例阈值 10N，对应有效范围约 5–15N）
+
+#### 2) Hugging mannequin（含对齐 / 错位）
+- 使用定制腰部压力传感垫评估接触分布（论文介绍了标定流程与压力到力的映射）
+- GentleHumanoid 在错位接触下仍保持更稳定、可控的接触力；baseline 易出现局部高压峰值与不稳定增长
+
+#### 3) 脆弱物体（气球）
+- 阈值设为 **5N** 时，GentleHumanoid 可稳定持球且不挤爆
+- 两类 baseline 更易施加过大压力并导致失衡/掉落
+
+### C. 额外应用（IV-C）
+
+1. **遥操作联动**：与 G1 locomotion teleoperation 结合，可触发 hugging / sit-to-stand / object handling 等动作。  
+2. **自主 shape-aware hugging**：通过头部 RGB + 人体 mesh 估计得到个体体型，提取腰部目标点优化抱姿，实现“按人定制”的拥抱轨迹。
+
+---
+
+## ⚠️ 论文明确给出的局限（V）
+
+1. **数据覆盖限制**：力分布依赖人类动作数据，肩部等方向样本不足会限制外力分布多样性。  
+2. **接触物理简化**：训练用弹簧力建模不完全等价真实接触（摩擦、组织黏弹性等）。  
+3. **sim-to-real 残差**：真机偶有 **1–3N** overshoot，若要更精细力控需额外触觉传感。  
+4. **感知依赖 mocap**：当前定位/身高仍依赖 mocap，未来需更完整视觉自治 pipeline。
+
+---
+
+## ✅ 对“要点是否都提取”的结论
+
+不是完全提取。相较 `https://arxiv.org/html/2511.04679v1`，此前笔记缺少了：
+- 真实实验中的**关键定量数字**（51.14N、24.59N、多 link 力区间）
+- **IV-C 应用管线**（遥操作 + 形体感知自主拥抱）
+- **V 局限性**（数据覆盖、接触物理、1–3N overshoot、mocap 依赖）
+
+以上已在本次笔记中补齐。
 
 ---
 
