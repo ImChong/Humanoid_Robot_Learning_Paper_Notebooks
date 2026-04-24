@@ -2,6 +2,21 @@
   "current_paper_index": 6,
   "confirmed": false,
   "section": "基础路线图",
+  "daily_summary": {
+    "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
+    "last_summary_index": 14,
+    "last_summary_date": "2026-04-24",
+    "last_summary_title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
+    "next_summary_index": 15,
+    "log": [
+      {
+        "date": "2026-04-24",
+        "index": 14,
+        "title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
+        "folder": "papers/03_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat"
+      }
+    ]
+  },
   "papers": [
     {
       "title": "PPO: Proximal Policy Optimization",
@@ -173,15 +188,15 @@
     },
     {
       "title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
-      "arxiv": "",
+      "arxiv": "https://arxiv.org/abs/2603.12686",
       "folder": "papers/03_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat",
       "note_file": "LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.md",
       "pdf_file": "LATENT.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-04-24",
+      "done_date": "2026-04-24",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "LATENT：从不完美的人类动作数据中学习人形机器人网球运动技能"
     },
     {
       "title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
