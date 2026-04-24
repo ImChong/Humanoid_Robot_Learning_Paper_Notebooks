@@ -81,9 +81,9 @@
       "folder": "papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control",
       "note_file": "MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.md",
       "pdf_file": "MimicKit.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-04-24",
+      "done_date": "2026-04-24",
       "route": "工程框架",
       "title_cn": "MimicKit：运动模仿与控制的强化学习框架"
     },
@@ -2252,6 +2252,18 @@
       "pdf_file": "",
       "route": "人类运动数据",
       "title_cn": ""
+    },
+    {
+      "title": "ProtoMotions3: An Open-source Framework for Humanoid Simulation and Control",
+      "folder": "papers/02_High_Impact_Selection/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control",
+      "note_file": "ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control.md",
+      "status": "done",
+      "arxiv": "https://nvlabs.github.io/ProtoMotions/",
+      "pdf_file": "",
+      "route": "仿真平台与工具",
+      "title_cn": "ProtoMotions3：面向人形仿真与控制的开源框架",
+      "start_date": "2026-04-24",
+      "done_date": "2026-04-24"
     }
   ]
 }

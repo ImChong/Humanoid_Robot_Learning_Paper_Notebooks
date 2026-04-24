@@ -92,6 +92,13 @@
         "url": "/papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.html",
         "dir": "Domain_Randomization_Understanding_Sim-to-Real_Transfer",
         "zhname": "理解域随机化在仿真到现实迁移中的作用"
+      },
+      {
+        "title": "MimicKit: A Reinforcement Learning Framework for Motion Imitation and Control",
+        "path": "papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.md",
+        "url": "/papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.html",
+        "dir": "MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control",
+        "zhname": "MimicKit：运动模仿与控制的强化学习框架"
       }
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research",
@@ -173,6 +180,13 @@
             "url": "/papers/02_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.html",
             "dir": "Isaac_Lab_GPU_Simulation",
             "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
+          },
+          {
+            "title": "ProtoMotions3: An Open-source Framework for Humanoid Simulation and Control",
+            "path": "papers/02_High_Impact_Selection/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control.md",
+            "url": "/papers/02_High_Impact_Selection/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control.html",
+            "dir": "ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control",
+            "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架"
           }
         ],
         "zhname": "仿真平台与工具"
