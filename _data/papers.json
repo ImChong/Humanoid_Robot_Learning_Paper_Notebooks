@@ -59,13 +59,6 @@
         "zhname": "CALM：面向可控虚拟角色的条件对抗潜变量模型"
       },
       {
-        "title": "PULSE: Physically Plausible Universal Latent Skill Extraction",
-        "path": "papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.md",
-        "url": "/papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.html",
-        "dir": "PULSE_Physics-based_Universal_Latent_Space",
-        "zhname": "PULSE：物理可行的通用潜在技能提取"
-      },
-      {
         "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
         "path": "papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.md",
         "url": "/papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.html",
@@ -99,6 +92,13 @@
         "url": "/papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.html",
         "dir": "MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control",
         "zhname": "MimicKit：运动模仿与控制的强化学习框架"
+      },
+      {
+        "title": "PULSE: Universal Humanoid Motion Representations for Physics-Based Control",
+        "path": "papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.md",
+        "url": "/papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.html",
+        "dir": "PULSE_Physics-based_Universal_Latent_Space",
+        "zhname": "PULSE：物理可行的通用潜在技能提取"
       }
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research",
@@ -107,7 +107,15 @@
   },
   "02_High_Impact_Selection": {
     "display_name": "High Impact Selection",
-    "papers": [],
+    "papers": [
+      {
+        "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+        "path": "papers/02_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.md",
+        "url": "/papers/02_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.html",
+        "dir": "GR00T_N1_Humanoid_Foundation_Model",
+        "zhname": "GR00T N1：面向通用人形机器人的开放基础模型"
+      }
+    ],
     "subtitle": "Curated high-impact and milestone papers in humanoid robot learning",
     "subtitle_zh": "人形机器人学习领域的高影响力里程碑论文精选",
     "zhname": "高影响力精选",
@@ -140,7 +148,7 @@
             "path": "papers/02_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.md",
             "url": "/papers/02_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.html",
             "dir": "OmniH2O_Universal_Whole-Body_Teleoperation",
-            "zhname": "OmniH2O：通用灵巧的人 - 人形整体遥操与学习"
+            "zhname": "OmniH2O：通用灵巧的人到人形整体遥操与学习"
           }
         ],
         "zhname": "遥操作与模仿学习"
@@ -160,15 +168,7 @@
       },
       {
         "name": "Sim-to-Real & Foundation Model",
-        "papers": [
-          {
-            "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
-            "path": "papers/02_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.md",
-            "url": "/papers/02_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.html",
-            "dir": "GR00T_N1_Humanoid_Foundation_Model",
-            "zhname": "GR00T N1：通用人形机器人开源基座模型"
-          }
-        ],
+        "papers": [],
         "zhname": "仿真到现实与基座模型"
       },
       {
@@ -232,18 +232,18 @@
         "zhname": "LessMimic：基于统一距离场表示的长时域人形交互"
       },
       {
-        "title": "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation (HERO)",
+        "title": "HERO: Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
         "path": "papers/03_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.md",
         "url": "/papers/03_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.html",
         "dir": "Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation",
-        "zhname": "HERO：面向开放词汇视觉运动操作的人形末端执行器控制"
+        "zhname": "HERO：基于开放词汇视觉引导的人形机器人末端执行器控制"
       },
       {
         "title": "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety",
         "path": "papers/03_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.md",
         "url": "/papers/03_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.html",
         "dir": "VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety",
-        "zhname": "VIGOR：基于视觉目标上下文推理的统一人形跌倒安全"
+        "zhname": "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理"
       }
     ],
     "zhname": "运动操作与全身控制"
@@ -252,18 +252,18 @@
     "display_name": "Locomotion",
     "papers": [
       {
-        "title": "ANYmal Parkour: Robust Perceptive Locomotion",
+        "title": "ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots",
         "path": "papers/04_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.md",
         "url": "/papers/04_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.html",
         "dir": "ANYmal_Parkour_Robust_Perceptive_Locomotion",
-        "zhname": "ANYmal 跑酷：鲁棒的感知型移动"
+        "zhname": "ANYmal 跑酷：足式机器人的敏捷导航学习"
       },
       {
         "title": "Extreme Parkour with Legged Robots",
         "path": "papers/04_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.md",
         "url": "/papers/04_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.html",
         "dir": "Extreme_Parkour_with_Legged_Robots",
-        "zhname": "腿式机器人的极限跑酷"
+        "zhname": "足式机器人的极限跑酷"
       },
       {
         "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
@@ -283,7 +283,7 @@
         "path": "papers/05_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
         "url": "/papers/05_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",
         "dir": "EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video",
-        "zhname": "EgoMimic：用第一人称视频规模化模仿学习"
+        "zhname": "EgoMimic：通过第一视角视频扩展模仿学习"
       }
     ],
     "zhname": "灵巧操作"
@@ -296,7 +296,7 @@
         "path": "papers/06_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.md",
         "url": "/papers/06_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.html",
         "dir": "HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans",
-        "zhname": "HumanPlus：人形机器人影子跟随与人类模仿"
+        "zhname": "HumanPlus：人形机器人对人类的影子跟随与模仿"
       }
     ],
     "zhname": "遥操作"
@@ -309,7 +309,7 @@
         "path": "papers/07_Navigation/NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation/NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation.md",
         "url": "/papers/07_Navigation/NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation/NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation.html",
         "dir": "NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation",
-        "zhname": "NaVILA：面向腿式机器人导航的视觉 - 语言 - 动作模型"
+        "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
       }
     ],
     "zhname": "导航"
@@ -318,11 +318,11 @@
     "display_name": "State Estimation",
     "papers": [
       {
-        "title": "Contact-Aided Invariant EKF for Legged Robot State Estimation",
+        "title": "Contact-Aided Invariant Extended Kalman Filtering for Legged Robot State Estimation",
         "path": "papers/08_State_Estimation/Contact-Aided_Invariant_EKF_for_Legged_Robots/Contact-Aided_Invariant_EKF_for_Legged_Robots.md",
         "url": "/papers/08_State_Estimation/Contact-Aided_Invariant_EKF_for_Legged_Robots/Contact-Aided_Invariant_EKF_for_Legged_Robots.html",
         "dir": "Contact-Aided_Invariant_EKF_for_Legged_Robots",
-        "zhname": "接触辅助不变 EKF：腿式机器人状态估计"
+        "zhname": "基于接触辅助的不变扩展卡尔曼滤波的足式机器人状态估计"
       }
     ],
     "zhname": "状态估计"
@@ -335,7 +335,7 @@
         "path": "papers/09_Sim-to-Real/RMA_Rapid_Motor_Adaptation/RMA_Rapid_Motor_Adaptation.md",
         "url": "/papers/09_Sim-to-Real/RMA_Rapid_Motor_Adaptation/RMA_Rapid_Motor_Adaptation.html",
         "dir": "RMA_Rapid_Motor_Adaptation",
-        "zhname": "RMA：腿式机器人的快速运动自适应"
+        "zhname": "RMA：足式机器人的快速电机自适应"
       }
     ],
     "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
@@ -350,7 +350,7 @@
         "path": "papers/10_Simulation_Benchmark/HumanoidBench/HumanoidBench.md",
         "url": "/papers/10_Simulation_Benchmark/HumanoidBench/HumanoidBench.html",
         "dir": "HumanoidBench",
-        "zhname": "HumanoidBench：全身 locomotion 与 manipulation 的人形仿真基准"
+        "zhname": "HumanoidBench：全身运动与操作的人形机器人仿真基准"
       }
     ],
     "zhname": "仿真基准"
@@ -359,11 +359,11 @@
     "display_name": "Hardware Design",
     "papers": [
       {
-        "title": "Unitree H1 Humanoid Whitepaper",
+        "title": "Unitree H1 Humanoid Robot Whitepaper & Specifications",
         "path": "papers/11_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.md",
         "url": "/papers/11_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.html",
         "dir": "Unitree_H1_Whitepaper",
-        "zhname": "宇树 H1 人形机器人白皮书"
+        "zhname": "Unitree H1 人形机器人白皮书与技术规格"
       }
     ],
     "zhname": "硬件设计"
@@ -372,11 +372,11 @@
     "display_name": "Physics-Based Animation",
     "papers": [
       {
-        "title": "Character Controllers Using Motion VAEs",
+        "title": "Character Controllers using Motion VAEs",
         "path": "papers/12_Physics-Based_Animation/MotionVAE/MotionVAE.md",
         "url": "/papers/12_Physics-Based_Animation/MotionVAE/MotionVAE.html",
         "dir": "MotionVAE",
-        "zhname": "用 Motion VAE 做角色控制器"
+        "zhname": "基于运动 VAE 的角色控制器"
       }
     ],
     "zhname": "物理动画"
@@ -385,11 +385,11 @@
     "display_name": "Human Motion",
     "papers": [
       {
-        "title": "HumanML3D: 3D Human Motion-Language Dataset",
+        "title": "Generating Diverse and Natural 3D Human Motions from Textual Descriptions",
         "path": "papers/13_Human_Motion/HumanML3D/HumanML3D.md",
         "url": "/papers/13_Human_Motion/HumanML3D/HumanML3D.html",
         "dir": "HumanML3D",
-        "zhname": "HumanML3D：3D 人体运动 - 语言数据集"
+        "zhname": "从文本描述生成多样化且自然的 3D 人体运动"
       }
     ],
     "zhname": "人体运动"
