@@ -204,6 +204,13 @@
         "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
       },
       {
+        "title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
+        "path": "papers/03_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.md",
+        "url": "/papers/03_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.html",
+        "dir": "LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat",
+        "zhname": "LATENT：从不完美的人类动作数据中学习人形机器人网球运动技能"
+      },
+      {
         "title": "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking",
         "path": "papers/03_Loco-Manipulation_and_WBC/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking.md",
         "url": "/papers/03_Loco-Manipulation_and_WBC/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking.html",

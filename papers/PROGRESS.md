@@ -97,7 +97,7 @@
 
 | #   | 论文                                                                                                                                                               | 日期         | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --- | ---- |
-| 24   | LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data                                                                                | 2026.03    |     | ⏳ 待读 |
+| 24   | [LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data](https://arxiv.org/abs/2603.12686)                                            | 2026-04-24 |     | ✅ 完成 |
 | 25   | Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation                                                                                        | -          |     | ⏳ 待读 |
 | 26   | SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL                                                                           | -          |     | ⏳ 待读 |
 | 27   | ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video                                                                                      | -          |     | ⏳ 待读 |
