@@ -7,9 +7,11 @@
 
 **来源**: [awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning)
 
-**📖 待读论文清单**: [papers/PROGRESS.md](papers/PROGRESS.md) — 全量 530 篇论文的阅读进度表（来自上游 awesome 列表）。
+**📖 待读论文清单**: [papers/PROGRESS.md](papers/PROGRESS.md) — 全量 531 篇论文的阅读进度表（来自上游 awesome 列表）。
 
-**🛠️ 仓库开发待办**: [papers/todos/TODO_v3.md](papers/todos/TODO_v3.md) — 笔记 / 站点 / 工具链的开发任务（最新 v3，历史版本见 [`papers/todos/`](papers/todos/)）。
+**🛠️ 仓库开发待办**: [papers/todos/TODO_v4.md](papers/todos/TODO_v4.md) — 笔记 / 站点 / 工具链的开发任务（最新 v4，历史版本见 [`papers/todos/`](papers/todos/)）。
+
+**📌 当前快照**: 已覆盖 13 个分类、40 篇笔记；`prepare_pages.py` 当前无 `[STUB]` 告警，下一阶段重点是 Jekyll 构建验证、统计口径治理与源码对照增强。
 
 ## 规则
 
@@ -36,7 +38,7 @@
 │   ├── 11_Hardware_Design/           # 硬件设计
 │   ├── 12_Physics-Based_Animation/   # 基于物理的角色动画
 │   ├── 13_Human_Motion/              # 人体运动分析与合成
-│   ├── todos/                        # 仓库开发待办归档（TODO_v1/v2/v3.md）
+│   ├── todos/                        # 仓库开发待办归档（TODO_v1/v2/v3/v4.md）
 │   └── PROGRESS.md                   # 全部论文阅读进度表（待读清单）
 ├── progress.json                      # 当前阅读进度追踪（JSON）
 ├── scripts/                           # 辅助脚本
