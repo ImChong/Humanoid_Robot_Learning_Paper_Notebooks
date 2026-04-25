@@ -1,15 +1,15 @@
 ---
 layout: paper
 title: "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking"
-zhname: "重定向 matters：面向人形运动跟踪的通用运动重定向"
-category: "Loco-Manipulation and WBC"
+zhname: "Retargeting Matters：面向人形运动跟踪的通用动作重定向"
+category: "Motion Retargeting"
 ---
 
 # Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking
 **把"人类动作 → 机器人动作"这一步做到好，是 RL tracking 能不能跟上的关键**
 
 > 📅 阅读日期: 2026-04-19
-> 🏷️ 板块: Loco-Manipulation and Whole-Body-Control
+> 🏷️ 板块: Motion Retargeting
 > ℹ️ 笔记已核对 arXiv HTML 全文（2510.02252）+ `YanjieZe/GMR` GitHub 仓库（README、`DOC.md`、`TEST_MOTIONS.md`、核心代码）。论文独有的 ablation 数字、用户研究结论见下文「实验结果」。
 
 ---
@@ -286,8 +286,8 @@ python scripts/vis_robot_motion.py \
 
 | 笔记 | 如何引用 GMR |
 |------|--------------|
-| `03_Loco-Manipulation_and_WBC/GentleHumanoid` | 全部训练 / 视频 → 机器人链路使用 GMR 做 retargeting |
-| `03_Loco-Manipulation_and_WBC/OmniXtreme` | 在"重定向工具"表中显式列 GMR |
+| `04_Loco-Manipulation_and_WBC/GentleHumanoid` | 全部训练 / 视频 → 机器人链路使用 GMR 做 retargeting |
+| `04_Loco-Manipulation_and_WBC/OmniXtreme` | 在"重定向工具"表中显式列 GMR |
 
 ---
 

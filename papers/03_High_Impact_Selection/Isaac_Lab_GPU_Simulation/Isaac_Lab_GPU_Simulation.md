@@ -10,7 +10,7 @@ zhname: "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
 **Isaac Lab：面向机器人学习的 GPU 仿真统一平台**
 
 > 📅 阅读日期: 2026-04-24
-> 🏷️ 板块: 02_High_Impact_Selection / Simulation Platform & Tools
+> 🏷️ 板块: 03_High_Impact_Selection / Simulation Platform & Tools
 > 🧭 状态: 快速扩充版；按 NVIDIA 2025 research page 和公开仓库文档整理。
 
 ---

@@ -16,7 +16,7 @@
 此外，`python3 scripts/prepare_pages.py` 的当前输出显示：
 
 - `_data/papers.json` 生成 **40** 篇笔记 / **13** 个分类。
-- 原 TODO_v3 中 4 篇 `02_High_Impact_Selection/` 骨架已扩充，不再触发 `[STUB]`。
+- 原 TODO_v3 中 4 篇 `03_High_Impact_Selection/` 骨架已扩充，不再触发 `[STUB]`。
 - 本轮继续补齐 `Unitree_H1_Whitepaper` 与 `HumanML3D` 后，`prepare_pages.py` 已不再输出 `[STUB]`。
 
 ---

@@ -10,7 +10,7 @@ zhname: "OmniH2O：通用灵巧的人到人形整体遥操与学习"
 **OmniH2O：通用灵巧的人到人形整体遥操与学习**
 
 > 📅 阅读日期: 2026-04-24
-> 🏷️ 板块: 02_High_Impact_Selection / Teleoperation & Imitation Learning
+> 🏷️ 板块: 03_High_Impact_Selection / Teleoperation & Imitation Learning
 > 🧭 状态: 快速扩充版，已替换原骨架；后续建议结合论文实验表格二读。
 
 ---

@@ -2,7 +2,7 @@
 
 ## Context（背景）
 
-本项目是一个基于 Jekyll 的双语（中/英）人形机器人强化学习论文笔记站点，通过 GitHub Pages 部署到 <https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/>。README 已列出明确的学习路线图（基础 RL → 精确模仿 → 风格学习 → 技能组合 → 扩散终点 → Sim-to-Real），但当前笔记完成情况与路线图仍有差距：部分路线图论文仅有骨架（🚧 标记待核对），部分旧 stub 已扩写完毕，10 个分类目录中仅 `04_Locomotion` 起步了 1 篇骨架，其余仍为空。本计划基于 git 日志、`papers/` 目录与 README 路线图对比生成，目标是把学习路线图主干补齐到"能发布"的状态，并沉淀下一步的长期扩展方向。
+本项目是一个基于 Jekyll 的双语（中/英）人形机器人强化学习论文笔记站点，通过 GitHub Pages 部署到 <https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/>。README 已列出明确的学习路线图（基础 RL → 精确模仿 → 风格学习 → 技能组合 → 扩散终点 → Sim-to-Real），但当前笔记完成情况与路线图仍有差距：部分路线图论文仅有骨架（🚧 标记待核对），部分旧 stub 已扩写完毕，10 个分类目录中仅 `05_Locomotion` 起步了 1 篇骨架，其余仍为空。本计划基于 git 日志、`papers/` 目录与 README 路线图对比生成，目标是把学习路线图主干补齐到"能发布"的状态，并沉淀下一步的长期扩展方向。
 
 ## 当前快照（2026-04-18，复核后）
 
@@ -10,18 +10,18 @@
 - 笔记总数：`papers/` 下 19 篇 `.md`（分布：01=12，02=1，03=5，04=1）。
 - 完稿（≥300 行、含 MimicKit 源码对照或完整方法/工程章节）共 13 篇：
   - `01_Foundational_RL/`: PPO(638)、AWR(519)、DeepMimic(890)、AMP(735)、ASE(650)、ADD(569)、LCP(637)、PHC(636)、CALM(416)。
-  - `02_High_Impact_Selection/`: Expressive_WBC(248 — 上一轮从 137 扩到 248，按新模板已算完稿)。
-  - `03_Loco-Manipulation_and_WBC/`: LessMimic(314)、OmniXtreme(307)、ULTRA(405)。
+  - `03_High_Impact_Selection/`: Expressive_WBC(248 — 上一轮从 137 扩到 248，按新模板已算完稿)。
+  - `04_Loco-Manipulation_and_WBC/`: LessMimic(314)、OmniXtreme(307)、ULTRA(405)。
 - 已扩写但仍可继续打磨：`Domain_Randomization(235)`（上一轮从 106 扩到 235，够用）。
 - 含 `🚧` 待核对骨架（本轮 **必须** 消除 `🚧`）：
   - `01_Foundational_RL/PULSE_...`（111 行 / 21 处 🚧）
   - `01_Foundational_RL/Diffusion_Policy`（119 行 / 19 处 🚧）
   - `01_Foundational_RL/BeyondMimic`（103 行 / 19 处 🚧）
-  - `04_Locomotion/Learning_to_Walk_in_Minutes`（92 行 / 14 处 🚧）
+  - `05_Locomotion/Learning_to_Walk_in_Minutes`（92 行 / 14 处 🚧）
 - 仍是短 stub（<80 行、缺"方法/工程"章节）：
-  - `03_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_...`（HERO，56 行）
-  - `03_Loco-Manipulation_and_WBC/VIGOR_...`（57 行）
-- 完全为空的分类目录：`05_Manipulation` ~ `13_Human_Motion`（共 9 个，`04_Locomotion` 已起步 1 篇骨架）。
+  - `04_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_...`（HERO，56 行）
+  - `04_Loco-Manipulation_and_WBC/VIGOR_...`（57 行）
+- 完全为空的分类目录：`06_Manipulation` ~ `14_Human_Motion`（共 9 个，`05_Locomotion` 已起步 1 篇骨架）。
 - `progress.json`：total=175，done=9，pending=166（与 `papers/` 实际 19 篇完稿/骨架 **不一致**，需同步）。
 
 ---
@@ -38,14 +38,14 @@
 
 ### P1 · 站点质量与可维护性
 
-- [x] **P1#5** 复核 `03_Loco-Manipulation_and_WBC/` 5 篇：LessMimic / OmniXtreme / ULTRA 完稿；HERO / VIGOR 确认为 stub
+- [x] **P1#5** 复核 `04_Loco-Manipulation_and_WBC/` 5 篇：LessMimic / OmniXtreme / ULTRA 完稿；HERO / VIGOR 确认为 stub
 - [x] **P1#6** `progress.json` 中 PHC / ADD 等旧中文路径（`papers/01_基础路线图/...`）已统一为 `papers/01_Foundational_RL/...`
 - [x] **P1#7** `README.md` MimicKit 源码一览表补充 PULSE / Diffusion Policy / BeyondMimic（均 ❌ 或 N/A）；`_data/papers.json` 由 `prepare_pages.py` 自动生成新骨架条目
 
 ### P2 · 长期拓展
 
-- [x] **P2#8** `04_Locomotion` 新增样例骨架 `Learning_to_Walk_in_Minutes`（**深度内容留到下一轮**）
-- [x] **P2#9** `09_Sim-to-Real` 在 `_data/papers.json` 中加 `subtitle_zh` 备注，指向 `Domain_Randomization` / `LCP`
+- [x] **P2#8** `05_Locomotion` 新增样例骨架 `Learning_to_Walk_in_Minutes`（**深度内容留到下一轮**）
+- [x] **P2#9** `10_Sim-to-Real` 在 `_data/papers.json` 中加 `subtitle_zh` 备注，指向 `Domain_Randomization` / `LCP`
 - [x] **P2#10** `scripts/prepare_pages.py` 加入 stub 检测（行数<150 且缺 `## 方法详解`/`## 🔧` 时输出 `[STUB]`）
 
 ### P3 · 工程杂项
@@ -72,7 +72,7 @@
 - [ ] **R1#3** 填充 `BeyondMimic.md`
   - 路线图中 2025 年扩散 + 控制终点，补齐方法 / 训练 pipeline / 与 AMP·ASE·CALM 对比。
   - **verify**：🚧 = 0 且 行数 ≥ 400。
-- [ ] **R1#4** 扩写 `04_Locomotion/Learning_to_Walk_in_Minutes.md`
+- [ ] **R1#4** 扩写 `05_Locomotion/Learning_to_Walk_in_Minutes.md`
   - 核对 Rudin et al. 2021，massively parallel PPO、地形课程、奖励设计。
   - **verify**：🚧 = 0 且 行数 ≥ 300（该分类首篇样例，不必追求 600+）。
 
@@ -88,13 +88,13 @@
 
 > 只建骨架、不求完稿，目的是打通"新分类如何起步"的路径，避免目录空壳。
 
-- [ ] **R3#7** `05_Manipulation`：新增首篇骨架（建议 `Diffusion Policy for Manipulation` 或 `RT-2`）。
-- [ ] **R3#8** `06_Teleoperation`：新增首篇骨架（建议 `OpenTeleVision` 或 `HumanPlus Teleoperation`）。
-- [ ] **R3#9** `07_Navigation`：新增首篇骨架（建议 `ViNT` / `GNM`）。
-- [ ] **R3#10** `08_State_Estimation`：新增首篇骨架（建议 `TRAM` / `TRACE`）。
-- [ ] **R3#11** `10_Simulation_Benchmark`：新增首篇骨架（建议 `HumanoidBench` 或 `Isaac Lab`）。
+- [ ] **R3#7** `06_Manipulation`：新增首篇骨架（建议 `Diffusion Policy for Manipulation` 或 `RT-2`）。
+- [ ] **R3#8** `07_Teleoperation`：新增首篇骨架（建议 `OpenTeleVision` 或 `HumanPlus Teleoperation`）。
+- [ ] **R3#9** `08_Navigation`：新增首篇骨架（建议 `ViNT` / `GNM`）。
+- [ ] **R3#10** `09_State_Estimation`：新增首篇骨架（建议 `TRAM` / `TRACE`）。
+- [ ] **R3#11** `11_Simulation_Benchmark`：新增首篇骨架（建议 `HumanoidBench` 或 `Isaac Lab`）。
 - **verify（R3 整体）**：`find papers/{05..10}_* -name "*.md" | wc -l` ≥ 5；每个骨架至少含"基本信息 / 一句话 / 缩写 / 讨论"四节。
-- （`11_Hardware_Design` / `12_Physics-Based_Animation` / `13_Human_Motion` 暂缓到 R+1 轮。）
+- （`12_Hardware_Design` / `13_Physics-Based_Animation` / `14_Human_Motion` 暂缓到 R+1 轮。）
 
 ### R4 · 站点数据一致性
 
@@ -115,7 +115,7 @@
 
 - [ ] **R6#17** MimicKit 源码对照补全：给 PULSE / Diffusion Policy 加一章"官方代码/复现仓库"链接（没有就写明 N/A，不要臆造）。
 - [ ] **R6#18** 脚本增强：`prepare_pages.py` 的 `[STUB]` 检测升级成"行数 + 章节关键词 + 🚧 计数"三合一报告，输出到 `papers/PROGRESS.md` 底部。
-- [ ] **R6#19** `09_Sim-to-Real` 从"只是 alias"升级成"独立分类页"：新增 1 篇 sim-to-real 专题总结笔记（可引用 DR + LCP 的结论，不必重复）。
+- [ ] **R6#19** `10_Sim-to-Real` 从"只是 alias"升级成"独立分类页"：新增 1 篇 sim-to-real 专题总结笔记（可引用 DR + LCP 的结论，不必重复）。
 
 ---
 
@@ -155,7 +155,7 @@
   - `papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/`
   - `papers/01_Foundational_RL/Diffusion_Policy/`
   - `papers/01_Foundational_RL/BeyondMimic/`
-- ✅ **P1#5** `03_Loco-Manipulation_and_WBC/` 审阅结果：
+- ✅ **P1#5** `04_Loco-Manipulation_and_WBC/` 审阅结果：
 
   | 论文 | 行数 | 结论 |
   |------|-----:|------|
@@ -167,7 +167,7 @@
 
 - ✅ **P1#6** `progress.json` 中 PHC / ADD 等条目的旧中文路径 (`papers/01_基础路线图/...`) 已统一为 `papers/01_Foundational_RL/...`，status 按实际 papers/ 目录同步。
 - ✅ **P1#7** `README.md` MimicKit 源码一览表补充 PULSE / Diffusion Policy / BeyondMimic 三行（均标记 ❌ 或 N/A）。`_data/papers.json` 由 `prepare_pages.py` 自动生成，本次运行后已包含三个新骨架。
-- ✅ **P2#8** `04_Locomotion` 新增一篇骨架 `Learning_to_Walk_in_Minutes` 作为分类起步样例。
-- ✅ **P2#9** `09_Sim-to-Real` 在 `_data/papers.json` 中添加 `subtitle_zh` 备注，指向 `01_Foundational_RL` 的 `Domain_Randomization` 与 `LCP`。
+- ✅ **P2#8** `05_Locomotion` 新增一篇骨架 `Learning_to_Walk_in_Minutes` 作为分类起步样例。
+- ✅ **P2#9** `10_Sim-to-Real` 在 `_data/papers.json` 中添加 `subtitle_zh` 备注，指向 `01_Foundational_RL` 的 `Domain_Randomization` 与 `LCP`。
 - ✅ **P2#10** `scripts/prepare_pages.py` 加入 stub 检测：在生成 `papers.json` 时对行数 < 150 且缺 `## 方法详解` / `## 🔧` 任一章节的 .md 打印 `[STUB]` 警告。
 - ✅ **配套**：`scripts/update_badges.py` 增加过滤规则，`TODO.md` 不计入 Notes 徽章。

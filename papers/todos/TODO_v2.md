@@ -19,28 +19,28 @@
 - PR #1 已合并；v1 TODO 归档到 `papers/todos/TODO_v1.md`。
 - 笔记总数：`papers/` 下 **25** 篇 `.md`（`update_badges.py` 口径）。
   - `01_Foundational_RL/`：13 篇（其中 PULSE、Diffusion_Policy、BeyondMimic 仍是骨架）
-  - `02_High_Impact_Selection/`：1 篇
-  - `03_Loco-Manipulation_and_WBC/`：5 篇
-  - `04_Locomotion/`：1 篇（仍是骨架）
-  - `05_Manipulation/`：**1 篇（v2 新建骨架：EgoMimic，🚧 待核对）**
-  - `06_Teleoperation/`：**1 篇（v2 新建骨架：HumanPlus，🚧 待核对）**
-  - `07_Navigation/`：**1 篇（v2 新建骨架：NaVILA，🚧 待核对）**
-  - `08_State_Estimation/`：**1 篇（v2 新建骨架：Contact-Aided InEKF，🚧 待核对）**
-  - `10_Simulation_Benchmark/`：**1 篇（v2 新建骨架：HumanoidBench，🚧 待核对）**
-- 仍完全为空的分类：`09_Sim-to-Real`、`11_Hardware_Design`、`12_Physics-Based_Animation`、`13_Human_Motion`（共 4 个）。
+  - `03_High_Impact_Selection/`：1 篇
+  - `04_Loco-Manipulation_and_WBC/`：5 篇
+  - `05_Locomotion/`：1 篇（仍是骨架）
+  - `06_Manipulation/`：**1 篇（v2 新建骨架：EgoMimic，🚧 待核对）**
+  - `07_Teleoperation/`：**1 篇（v2 新建骨架：HumanPlus，🚧 待核对）**
+  - `08_Navigation/`：**1 篇（v2 新建骨架：NaVILA，🚧 待核对）**
+  - `09_State_Estimation/`：**1 篇（v2 新建骨架：Contact-Aided InEKF，🚧 待核对）**
+  - `11_Simulation_Benchmark/`：**1 篇（v2 新建骨架：HumanoidBench，🚧 待核对）**
+- 仍完全为空的分类：`10_Sim-to-Real`、`12_Hardware_Design`、`13_Physics-Based_Animation`、`14_Human_Motion`（共 4 个）。
 - `🚧` 骨架清单（本轮 **必须由人工补**）：
   - `01_Foundational_RL/PULSE_...`（111 行，v1 遗留）
   - `01_Foundational_RL/Diffusion_Policy`（119 行，v1 遗留）
   - `01_Foundational_RL/BeyondMimic`（103 行，v1 遗留）
-  - `04_Locomotion/Learning_to_Walk_in_Minutes`（92 行，v1 遗留）
-  - `05_Manipulation/EgoMimic_...`（v2 新建）
-  - `06_Teleoperation/HumanPlus_...`（v2 新建）
-  - `07_Navigation/NaVILA_...`（v2 新建）
-  - `08_State_Estimation/Contact-Aided_Invariant_EKF_...`（v2 新建）
-  - `10_Simulation_Benchmark/HumanoidBench`（v2 新建）
+  - `05_Locomotion/Learning_to_Walk_in_Minutes`（92 行，v1 遗留）
+  - `06_Manipulation/EgoMimic_...`（v2 新建）
+  - `07_Teleoperation/HumanPlus_...`（v2 新建）
+  - `08_Navigation/NaVILA_...`（v2 新建）
+  - `09_State_Estimation/Contact-Aided_Invariant_EKF_...`（v2 新建）
+  - `11_Simulation_Benchmark/HumanoidBench`（v2 新建）
 - 仍是短 stub（<80 行、缺"方法详解"章节）：
-  - `03_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_...`（HERO，57 行）
-  - `03_Loco-Manipulation_and_WBC/VIGOR_...`（58 行）
+  - `04_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_...`（HERO，57 行）
+  - `04_Loco-Manipulation_and_WBC/VIGOR_...`（58 行）
 - `progress.json`：total=175，done=9，pending=166，`current_paper_index=6`（已修正）。
 - `PROGRESS.md`：523 篇（v1 期间从 490 扩到 523，覆盖 awesome-humanoid-robot-learning 新增条目）。
 
@@ -103,10 +103,10 @@
 
 | # | 任务 | 验收标准 | 负责人 |
 |---|------|---------|--------|
-| 12 | `09_Sim-to-Real/` 首篇骨架（建议 RMA / Learning Agile and Dynamic Motor Skills） | 1 篇 🚧 骨架 | AI + 人工校对 |
-| 13 | `11_Hardware_Design/` 首篇骨架（建议 Atlas / Unitree H1 白皮书） | 同上 | AI + 人工校对 |
-| 14 | `12_Physics-Based_Animation/` 首篇骨架（建议 NeuralNet / MotionVAE） | 同上 | AI + 人工校对 |
-| 15 | `13_Human_Motion/` 首篇骨架（建议 HumanML3D / TRAM / WHAM） | 同上 | AI + 人工校对 |
+| 12 | `10_Sim-to-Real/` 首篇骨架（建议 RMA / Learning Agile and Dynamic Motor Skills） | 1 篇 🚧 骨架 | AI + 人工校对 |
+| 13 | `12_Hardware_Design/` 首篇骨架（建议 Atlas / Unitree H1 白皮书） | 同上 | AI + 人工校对 |
+| 14 | `13_Physics-Based_Animation/` 首篇骨架（建议 NeuralNet / MotionVAE） | 同上 | AI + 人工校对 |
+| 15 | `14_Human_Motion/` 首篇骨架（建议 HumanML3D / TRAM / WHAM） | 同上 | AI + 人工校对 |
 
 ### R5 · progress.json 设计决策（R4a 延期项）
 

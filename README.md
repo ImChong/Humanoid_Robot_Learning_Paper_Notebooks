@@ -11,7 +11,7 @@
 
 **🛠️ 仓库开发待办**: [papers/todos/TODO_v4.md](papers/todos/TODO_v4.md) — 笔记 / 站点 / 工具链的开发任务（最新 v4，历史版本见 [`papers/todos/`](papers/todos/)）。
 
-**📌 当前快照**: 已覆盖 13 个分类、40 篇笔记；`prepare_pages.py` 当前无 `[STUB]` 告警，下一阶段重点是 Jekyll 构建验证、统计口径治理与源码对照增强。
+**📌 当前快照**: 已覆盖 14 个分类、40 篇笔记；`prepare_pages.py` 当前无 `[STUB]` 告警，下一阶段重点是 Jekyll 构建验证、统计口径治理与源码对照增强。
 
 ## 规则
 
@@ -26,18 +26,19 @@
 ```
 ├── papers/                            # 论文笔记（按类别分目录）
 │   ├── 01_Foundational_RL/            # 基础 RL 算法（PPO、AWR、DeepMimic、AMP 等）
-│   ├── 02_High_Impact_Selection/      # 高影响力精选论文
-│   ├── 03_Loco-Manipulation_and_WBC/  # 全身控制与移动操作
-│   ├── 04_Locomotion/                 # 行走/跑酷等运动控制
-│   ├── 05_Manipulation/               # 操作与灵巧手
-│   ├── 06_Teleoperation/              # 遥操作
-│   ├── 07_Navigation/                 # 导航
-│   ├── 08_State_Estimation/           # 状态估计
-│   ├── 09_Sim-to-Real/                # 仿真到真实迁移
-│   ├── 10_Simulation_Benchmark/       # 仿真平台与基准测试
-│   ├── 11_Hardware_Design/           # 硬件设计
-│   ├── 12_Physics-Based_Animation/   # 基于物理的角色动画
-│   ├── 13_Human_Motion/              # 人体运动分析与合成
+│   ├── 02_Motion_Retargeting/         # 动作重定向（人体骨架 → 机器人骨架）
+│   ├── 03_High_Impact_Selection/      # 高影响力精选论文
+│   ├── 04_Loco-Manipulation_and_WBC/  # 全身控制与移动操作
+│   ├── 05_Locomotion/                 # 行走/跑酷等运动控制
+│   ├── 06_Manipulation/               # 操作与灵巧手
+│   ├── 07_Teleoperation/              # 遥操作
+│   ├── 08_Navigation/                 # 导航
+│   ├── 09_State_Estimation/           # 状态估计
+│   ├── 10_Sim-to-Real/                # 仿真到真实迁移
+│   ├── 11_Simulation_Benchmark/       # 仿真平台与基准测试
+│   ├── 12_Hardware_Design/           # 硬件设计
+│   ├── 13_Physics-Based_Animation/   # 基于物理的角色动画
+│   ├── 14_Human_Motion/              # 人体运动分析与合成
 │   ├── todos/                        # 仓库开发待办归档（TODO_v1/v2/v3/v4.md）
 │   └── PROGRESS.md                   # 全部论文阅读进度表（待读清单）
 ├── progress.json                      # 当前阅读进度追踪（JSON）

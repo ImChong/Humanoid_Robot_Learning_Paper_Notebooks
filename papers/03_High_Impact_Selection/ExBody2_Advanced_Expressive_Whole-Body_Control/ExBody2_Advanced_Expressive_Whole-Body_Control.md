@@ -10,7 +10,7 @@ zhname: "ExBody2：进阶的表达性人形全身控制"
 **ExBody2：进阶的表达性人形全身控制**
 
 > 📅 阅读日期: 2026-04-24
-> 🏷️ 板块: 02_High_Impact_Selection / Whole-Body Control Core
+> 🏷️ 板块: 03_High_Impact_Selection / Whole-Body Control Core
 > 🧭 状态: 快速扩充版，已替换原骨架；动作细节与实验数值后续可继续二读补表。
 
 ---

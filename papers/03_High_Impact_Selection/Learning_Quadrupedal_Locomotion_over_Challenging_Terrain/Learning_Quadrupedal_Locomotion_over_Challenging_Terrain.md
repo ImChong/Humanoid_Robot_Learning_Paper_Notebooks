@@ -10,7 +10,7 @@ zhname: "挑战地形下的四足运动学习（ANYmal 里程碑）"
 **挑战地形下的四足运动学习（ANYmal 里程碑）**
 
 > 📅 阅读日期: 2026-04-24
-> 🏷️ 板块: 02_High_Impact_Selection / Locomotion Classics
+> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics
 > 🧭 状态: 快速扩充版，已替换原骨架；后续可继续补实验图表和 reward 细节。
 
 ---
