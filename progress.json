@@ -4,16 +4,22 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 14,
-    "last_summary_date": "2026-04-24",
-    "last_summary_title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
-    "next_summary_index": 15,
+    "last_summary_index": 15,
+    "last_summary_date": "2026-04-25",
+    "last_summary_title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
+    "next_summary_index": 16,
     "log": [
       {
         "date": "2026-04-24",
         "index": 14,
         "title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
         "folder": "papers/03_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat"
+      },
+      {
+        "date": "2026-04-25",
+        "index": 15,
+        "title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
+        "folder": "papers/03_Loco-Manipulation_and_WBC/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation"
       }
     ]
   },
@@ -204,11 +210,11 @@
       "folder": "papers/03_Loco-Manipulation_and_WBC/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation",
       "note_file": "Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation.md",
       "pdf_file": "Ψ₀.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-04-25",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "Ψ₀：迈向通用人形机器人 Loco-Manipulation 的开源基础模型"
     },
     {
       "title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL",
