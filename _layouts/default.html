@@ -47,7 +47,11 @@
         if (sidebar) {
           toggle.addEventListener('click', function(e) {
             e.stopPropagation();
-            openSidebar();
+            if (sidebar.classList.contains('open')) {
+              closeSidebar();
+            } else {
+              openSidebar();
+            }
           });
         } else {
           toggle.style.display = 'none';
