@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 15,
+    "last_summary_index": 16,
     "last_summary_date": "2026-04-25",
-    "last_summary_title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
-    "next_summary_index": 16,
+    "last_summary_title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL",
+    "next_summary_index": 17,
     "log": [
       {
         "date": "2026-04-24",
@@ -20,6 +20,12 @@
         "index": 15,
         "title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
         "folder": "papers/04_Loco-Manipulation_and_WBC/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation"
+      },
+      {
+        "date": "2026-04-25",
+        "index": 16,
+        "title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid"
       }
     ]
   },
@@ -218,15 +224,15 @@
     },
     {
       "title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL",
-      "arxiv": "",
+      "arxiv": "2603.10306",
       "folder": "papers/04_Loco-Manipulation_and_WBC/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid",
       "note_file": "SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid.md",
       "pdf_file": "SteadyTray.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-04-25",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "SteadyTray：用残差强化学习教人形机器人端着托盘稳稳走路"
     },
     {
       "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",

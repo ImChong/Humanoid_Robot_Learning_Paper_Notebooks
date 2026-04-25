@@ -14,6 +14,10 @@
 | 日期 | 论文索引 | 笔记 | 分类 | 源码 |
 |------|:---:|------|------|------|
 | 2026-04-24 | 14 | [LATENT: Learning Athletic Humanoid Tennis Skills](04_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.md) | Loco-Manipulation / WBC | [GalaxyGeneralRobotics/LATENT](https://github.com/GalaxyGeneralRobotics/LATENT) |
+| 2026-04-25 | 15 | [Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation](04_Loco-Manipulation_and_WBC/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation.md) | Loco-Manipulation / WBC | [physical-superintelligence-lab/Psi0](https://github.com/physical-superintelligence-lab/Psi0) |
+| 2026-04-25 | 16 | [SteadyTray: Learning Object Balancing Tasks via Residual RL](04_Loco-Manipulation_and_WBC/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid.md) | Loco-Manipulation / WBC | [AllenHuangGit/steadytray](https://github.com/AllenHuangGit/steadytray) |
+
+> 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 
 ---
 
@@ -23,9 +27,9 @@
 
 | 索引 | 论文 | 状态 |
 |:---:|------|------|
-| 15 | Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation | ⏳ 待写 |
-| 16 | SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL | ⏳ 待写 |
 | 17 | ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video | ⏳ 待写 |
 | 18 | Embedding Classical Balance Control Principles in RL for Humanoid Recovery | ⏳ 待写 |
+| 19 | ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation | ✅ 已有内容（应跳过） |
+| 20 | OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control | ✅ 已有内容（应跳过） |
 
 > 实际推进时会再次检查对应 folder 是否已存在内容，避免重复劳动。
