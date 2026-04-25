@@ -19,6 +19,55 @@
   </main>
   {% include footer.html %}
 
+  <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle Sidebar">
+    <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+  </button>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <script>
+    /* ─── Sidebar Logic ────────────────────────────────────── */
+    (function() {
+      var toggle = document.getElementById('sidebar-toggle');
+      var overlay = document.getElementById('sidebar-overlay');
+      var sidebar = document.getElementById('toc-sidebar');
+      
+      function openSidebar() {
+        if (sidebar) sidebar.classList.add('open');
+        overlay.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeSidebar() {
+        if (sidebar) sidebar.classList.remove('open');
+        overlay.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+      
+      if (toggle) {
+        if (sidebar) {
+          toggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            openSidebar();
+          });
+        } else {
+          toggle.style.display = 'none';
+        }
+      }
+      
+      if (overlay) overlay.addEventListener('click', closeSidebar);
+      
+      // Close sidebar when clicking a link inside it
+      if (sidebar) {
+        sidebar.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A' || e.target.closest('a')) {
+            // Delay slightly to allow the click to register before closing
+            setTimeout(closeSidebar, 100);
+          }
+        });
+      }
+    })();
+  </script>
+
   <script>
     /* ─── Language Toggle ──────────────────────────────────── */
     (function() {
