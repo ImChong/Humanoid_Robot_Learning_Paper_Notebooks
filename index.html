@@ -21,13 +21,13 @@ title: "Home"
               {% assign total_count = total_count | plus: subcat.papers.size %}
             {% endfor %}
           {% endif %}
-          <li class="toc-item toc-h2">
-            <a href="#cat-{{ forloop.index }}" class="toc-link"><span data-en="{{ cat[1].display_name }}" data-zh="{{ cat[1].zhname }}">{{ cat[1].display_name }}</span> ({{ total_count }})</a>
+          <li class="toc-item toc-h2" data-toc-for="cat-{{ forloop.index }}">
+            <a href="#cat-{{ forloop.index }}" class="toc-link"><span data-en="{{ cat[1].display_name }}" data-zh="{{ cat[1].zhname }}">{{ cat[1].display_name }}</span> <span class="toc-count">({{ total_count }})</span></a>
             {% if cat[1].subcategories %}
             <ul class="toc-sublist">
               {% for subcat in cat[1].subcategories %}
-              <li class="toc-item toc-h3">
-                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub"><span data-en="{{ subcat.name }}" data-zh="{{ subcat.zhname }}">{{ subcat.name }}</span> ({{ subcat.papers | size }})</a>
+              <li class="toc-item toc-h3" data-toc-for="subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}">
+                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub"><span data-en="{{ subcat.name }}" data-zh="{{ subcat.zhname }}">{{ subcat.name }}</span> <span class="toc-count">({{ subcat.papers | size }})</span></a>
               </li>
               {% endfor %}
             </ul>
@@ -151,18 +151,25 @@ title: "Home"
 
     categories.forEach(function(cat) {
       var catHasMatch = false;
+      var catTotalMatch = 0;
       var subcategories = cat.querySelectorAll('.subcategory-section');
+      var catId = cat.querySelector('.category-title').id;
+      var catTocItem = document.querySelector('.toc-item[data-toc-for="' + catId + '"]');
       
       if (subcategories.length > 0) {
         subcategories.forEach(function(subcat) {
           var subcatHasMatch = false;
+          var subcatMatchCount = 0;
           var subcatItems = subcat.querySelectorAll('li[data-search]');
+          var subcatId = subcat.querySelector('.subcategory-title').id;
+          var subcatTocItem = document.querySelector('.toc-item[data-toc-for="' + subcatId + '"]');
           
           subcatItems.forEach(function(item) {
             var searchText = item.getAttribute('data-search').toLowerCase();
             if (searchText.indexOf(query) !== -1) {
               item.style.display = '';
               subcatHasMatch = true;
+              subcatMatchCount++;
               catHasMatch = true;
               hasAnyMatch = true;
             } else {
@@ -171,22 +178,34 @@ title: "Home"
           });
           
           subcat.style.display = subcatHasMatch || query === '' ? '' : 'none';
+          if (subcatTocItem) {
+            subcatTocItem.style.display = subcatHasMatch || query === '' ? '' : 'none';
+            subcatTocItem.querySelector('.toc-count').textContent = '(' + subcatMatchCount + ')';
+          }
+          catTotalMatch += subcatMatchCount;
         });
       }
 
       var directItems = cat.querySelectorAll(':scope > .paper-list > li[data-search]');
+      var directMatchCount = 0;
       directItems.forEach(function(item) {
         var searchText = item.getAttribute('data-search').toLowerCase();
         if (searchText.indexOf(query) !== -1) {
           item.style.display = '';
           catHasMatch = true;
           hasAnyMatch = true;
+          directMatchCount++;
         } else {
           item.style.display = 'none';
         }
       });
+      catTotalMatch += directMatchCount;
 
       cat.style.display = catHasMatch || query === '' ? '' : 'none';
+      if (catTocItem) {
+        catTocItem.style.display = catHasMatch || query === '' ? '' : 'none';
+        catTocItem.querySelector('.toc-count').textContent = '(' + catTotalMatch + ')';
+      }
     });
 
     noResults.style.display = hasAnyMatch || query === '' ? 'none' : 'block';
