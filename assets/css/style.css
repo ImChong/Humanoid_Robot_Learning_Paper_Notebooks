@@ -542,13 +542,13 @@ body {
 
 /* ===== Mermaid ===== */
 .mermaid-container {
-  background: var(--bg-secondary);
+  background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.2rem;
-  margin-bottom: 2rem;
-  overflow-x: auto;
-  text-align: left; /* Title to the left */
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.4rem;
+  overflow: hidden;
+  text-align: left;
 }
 
 .mermaid-title {
@@ -556,17 +556,21 @@ body {
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--text-secondary);
-  margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
-  display: list-item; /* Keep the triangle if using <details> */
-  list-style: inside;
+  display: list-item;
+  list-style: none; /* Remove bullet/triangle to match paper cards */
+  outline: none;
+}
+
+.mermaid-title::-webkit-details-marker {
+  display: none; /* Hide arrow in Safari */
 }
 
 .mermaid {
-  text-align: center; /* Center the actual diagram */
-  margin-top: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
 /* ===== Breadcrumb ===== */
