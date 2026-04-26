@@ -14,6 +14,11 @@ title: "Home"
       <h3 class="toc-title" data-en="📑 Categories" data-zh="📑 分类导航">📑 分类导航</h3>
       <nav class="toc-nav">
         <ul class="toc-list">
+          <li class="toc-item toc-h2" data-toc-for="roadmap-title">
+            <a href="#roadmap-title" class="toc-link">
+              <span data-en="📍 Learning Roadmap" data-zh="📍 学习路线图">📍 Learning Roadmap</span>
+            </a>
+          </li>
           {% for cat in site.data.papers %}
           {% assign total_count = cat[1].papers | size %}
           {% if cat[1].subcategories %}
@@ -48,7 +53,7 @@ title: "Home"
 
     <div class="mermaid-container" id="roadmap-container">
       <details>
-        <summary class="mermaid-title" data-en="📍 Recommended Learning Roadmap" data-zh="📍 推荐学习路线图">📍 推荐学习路线图</summary>
+        <summary class="mermaid-title" id="roadmap-title" data-en="📍 Recommended Learning Roadmap" data-zh="📍 推荐学习路线图">📍 推荐学习路线图</summary>
         <div class="mermaid" id="roadmap-mermaid">graph TD</div>
       </details>
     </div>
@@ -157,6 +162,12 @@ title: "Home"
     var query = searchInput.value.toLowerCase().trim();
     var hasAnyMatch = false;
 
+    // Handle roadmap TOC item
+    var roadmapTocItem = document.querySelector('.toc-item[data-toc-for="roadmap-title"]');
+    if (roadmapTocItem) {
+      roadmapTocItem.style.display = query === '' ? '' : 'none';
+    }
+
     categories.forEach(function(cat) {
       var catHasMatch = false;
       var catTotalMatch = 0;
@@ -188,7 +199,8 @@ title: "Home"
           subcat.style.display = subcatHasMatch || query === '' ? '' : 'none';
           if (subcatTocItem) {
             subcatTocItem.style.display = subcatHasMatch || query === '' ? '' : 'none';
-            subcatTocItem.querySelector('.toc-count').textContent = '(' + subcatMatchCount + ')';
+            var countEl = subcatTocItem.querySelector('.toc-count');
+            if (countEl) countEl.textContent = '(' + subcatMatchCount + ')';
           }
           catTotalMatch += subcatMatchCount;
         });
@@ -212,7 +224,8 @@ title: "Home"
       cat.style.display = catHasMatch || query === '' ? '' : 'none';
       if (catTocItem) {
         catTocItem.style.display = catHasMatch || query === '' ? '' : 'none';
-        catTocItem.querySelector('.toc-count').textContent = '(' + catTotalMatch + ')';
+        var countEl = catTocItem.querySelector('.toc-count');
+        if (countEl) countEl.textContent = '(' + catTotalMatch + ')';
       }
     });
 
