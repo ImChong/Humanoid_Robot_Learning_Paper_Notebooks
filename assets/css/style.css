@@ -191,7 +191,7 @@ body {
   margin-bottom: 0.8rem;
   padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border);
-  scroll-margin-top: 80px;
+  scroll-margin-top: 110px;
 }
 
 .category-title .cat-icon {
@@ -217,7 +217,7 @@ body {
   margin-bottom: 0.5rem;
   padding-left: 0.8rem;
   border-left: 3px solid var(--accent, #4a9eff);
-  scroll-margin-top: 80px;
+  scroll-margin-top: 110px;
 }
 
 .toc-sublist {
@@ -862,6 +862,13 @@ html[data-lang-mode="zh"] .footer-text-zh {
     white-space: normal;
     word-break: break-word;
     line-height: 1.3;
+  }
+  .category-title,
+  .subcategory-title {
+    scroll-margin-top: 130px;
+  }
+  .mermaid-container {
+    margin-bottom: 2.8rem;
   }
 }
 
