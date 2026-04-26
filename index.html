@@ -49,37 +49,7 @@ title: "Home"
     <div class="mermaid-container" id="roadmap-container">
       <details open>
         <summary class="mermaid-title" data-en="📍 Recommended Learning Roadmap" data-zh="📍 推荐学习路线图">📍 推荐学习路线图</summary>
-        <div class="mermaid" id="roadmap-mermaid">
-graph TD
-    subgraph Basic["基础 RL (Basic RL)"]
-        PPO(PPO) --> AWR(AWR)
-        AWR --> DM(DeepMimic)
-    end
-    
-    subgraph Data["数据与重定向 (Data & Retargeting)"]
-        Data(AMASS / HumanML3D) --> Target(动作重定向 Motion Retargeting)
-    end
-    
-    subgraph Style["模仿与风格 (Imitation & Style)"]
-        DM --> AMP(AMP)
-        DM --> PHC(PHC)
-        AMP --> ADD(ADD)
-    end
-    
-    subgraph Skills["技能与扩散 (Skills & Diffusion)"]
-        ASE(ASE) --> CALM(CALM) --> PULSE(PULSE)
-        DP(扩散策略 Diffusion Policy) --> BM(BeyondMimic)
-    end
-    
-    subgraph Engineering["工程实践 (Engineering)"]
-        DR(域随机化 Domain Randomization) --> LCP(LCP)
-    end
-
-    Target -.-> DM
-    Target -.-> AMP
-    PHC --> ASE
-    PULSE --> DP
-        </div>
+        <div class="mermaid" id="roadmap-mermaid">graph TD</div>
       </details>
     </div>
 

@@ -545,20 +545,28 @@ body {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1.2rem;
   margin-bottom: 2rem;
   overflow-x: auto;
-  text-align: center;
+  text-align: left; /* Title to the left */
 }
 
 .mermaid-title {
   font-family: 'Arial', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--text-secondary);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  cursor: pointer;
+  display: list-item; /* Keep the triangle if using <details> */
+  list-style: inside;
+}
+
+.mermaid {
+  text-align: center; /* Center the actual diagram */
+  margin-top: 1rem;
 }
 
 /* ===== Breadcrumb ===== */

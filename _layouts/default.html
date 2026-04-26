@@ -138,23 +138,23 @@
         if (mermaidRoadmap) {
           var useZh = mode === 'zh';
           var enGraph = `graph TD
-    subgraph Basic["Basic RL"]
+    subgraph Basic ["Basic RL"]
         PPO(PPO) --> AWR(AWR)
         AWR --> DM(DeepMimic)
     end
-    subgraph Data["Data & Retargeting"]
+    subgraph Data ["Data & Retargeting"]
         Data(AMASS / HumanML3D) --> Target(Motion Retargeting)
     end
-    subgraph Style["Imitation & Style"]
+    subgraph Style ["Imitation & Style"]
         DM --> AMP(AMP)
         DM --> PHC(PHC)
         AMP --> ADD(ADD)
     end
-    subgraph Skills["Skills & Diffusion"]
+    subgraph Skills ["Skills & Diffusion"]
         ASE(ASE) --> CALM(CALM) --> PULSE(PULSE)
         DP(Diffusion Policy) --> BM(BeyondMimic)
     end
-    subgraph Engineering["Engineering"]
+    subgraph Engineering ["Engineering"]
         DR(Domain Randomization) --> LCP(LCP)
     end
     Target -.-> DM
@@ -162,23 +162,23 @@
     PHC --> ASE
     PULSE --> DP`;
           var zhGraph = `graph TD
-    subgraph Basic["基础 RL"]
+    subgraph Basic ["基础 RL"]
         PPO(PPO) --> AWR(AWR)
         AWR --> DM(DeepMimic)
     end
-    subgraph Data["数据与重定向"]
+    subgraph Data ["数据与重定向"]
         Data(AMASS / HumanML3D) --> Target(动作重定向)
     end
-    subgraph Style["模仿与风格"]
+    subgraph Style ["模仿与风格"]
         DM --> AMP(AMP)
         DM --> PHC(PHC)
         AMP --> ADD(ADD)
     end
-    subgraph Skills["技能与扩散"]
+    subgraph Skills ["技能与扩散"]
         ASE(ASE) --> CALM(CALM) --> PULSE(PULSE)
         DP(扩散策略) --> BM(BeyondMimic)
     end
-    subgraph Engineering["工程实践"]
+    subgraph Engineering ["工程实践"]
         DR(域随机化) --> LCP(LCP)
     end
     Target -.-> DM
@@ -186,9 +186,10 @@
     PHC --> ASE
     PULSE --> DP`;
           
-          // Re-render mermaid
-          mermaidRoadmap.innerHTML = useZh ? zhGraph : enGraph;
+          mermaidRoadmap.innerHTML = (useZh ? zhGraph : enGraph).trim();
           mermaidRoadmap.removeAttribute('data-processed');
+          // Important: remove the SVG if it was already rendered
+          mermaidRoadmap.innerHTML = (useZh ? zhGraph : enGraph).trim();
           if (typeof mermaid !== 'undefined') {
             mermaid.run({ nodes: [mermaidRoadmap] });
           }
