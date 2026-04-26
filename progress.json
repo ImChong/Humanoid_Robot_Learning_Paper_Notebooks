@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 16,
-    "last_summary_date": "2026-04-25",
-    "last_summary_title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL",
-    "next_summary_index": 17,
+    "last_summary_index": 17,
+    "last_summary_date": "2026-04-26",
+    "last_summary_title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",
+    "next_summary_index": 18,
     "log": [
       {
         "date": "2026-04-24",
@@ -26,6 +26,12 @@
         "index": 16,
         "title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL",
         "folder": "papers/04_Loco-Manipulation_and_WBC/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid"
+      },
+      {
+        "date": "2026-04-26",
+        "index": 17,
+        "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video"
       }
     ]
   },
@@ -236,15 +242,15 @@
     },
     {
       "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",
-      "arxiv": "",
+      "arxiv": "2603.09170",
       "folder": "papers/04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video",
       "note_file": "ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video.md",
       "pdf_file": "ZeroWBC.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-04-26",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "ZeroWBC：直接从人类第一人称视频中学出零遥操作的人形视触运动控制"
     },
     {
       "title": "Embedding Classical Balance Control Principles in RL for Humanoid Recovery",
