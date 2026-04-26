@@ -97,6 +97,16 @@
             el.textContent = text;
           }
         }
+        // Update placeholders
+        var placeholders = document.querySelectorAll('[data-en-placeholder]');
+        for (var i = 0; i < placeholders.length; i++) {
+          var el = placeholders[i];
+          var useZh = mode === 'zh';
+          var text = useZh ? el.getAttribute('data-zh-placeholder') : el.getAttribute('data-en-placeholder');
+          if (text !== null) {
+            el.placeholder = text;
+          }
+        }
       }
 
       function toggleLang() {

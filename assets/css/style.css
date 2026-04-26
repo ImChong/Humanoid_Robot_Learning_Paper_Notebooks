@@ -505,6 +505,41 @@ body {
   }
 }
 
+/* ===== Search Box ===== */
+.search-container {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#paper-search {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#paper-search:focus {
+  border-color: var(--link);
+  box-shadow: 0 0 0 3px rgba(179, 27, 27, 0.1);
+}
+
+[data-theme="dark"] #paper-search:focus {
+  box-shadow: 0 0 0 3px rgba(86, 156, 214, 0.2);
+}
+
+.search-no-results {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
 /* ===== Breadcrumb ===== */
 .breadcrumb {
   font-family: 'Arial', sans-serif;

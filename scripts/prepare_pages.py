@@ -211,6 +211,11 @@ def process_papers():
                     '_order': order_idx
                 }
 
+                # Extract arXiv ID
+                arxiv_match = re.search(r'\*\*arXiv\*\*\s*\|\s*\[?(\d{4}\.\d{4,5}(?:v\d+)?)\]?', content)
+                if arxiv_match:
+                    paper_entry['arxiv'] = arxiv_match.group(1)
+
                 # Prefer zhname from front matter when present
                 zhname_match = re.search(r'^zhname:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
                 if zhname_match:
