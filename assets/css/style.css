@@ -540,6 +540,27 @@ body {
   font-style: italic;
 }
 
+/* ===== Mermaid ===== */
+.mermaid-container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.mermaid-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* ===== Breadcrumb ===== */
 .breadcrumb {
   font-family: 'Arial', sans-serif;

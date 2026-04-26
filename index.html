@@ -71,6 +71,44 @@ title: "Home"
       {% endif %}
       <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> <span class="cat-name" data-en="{{ cat_data.display_name }}" data-zh="{{ cat_data.zhname }}">{{ cat_data.display_name }}</span> <span class="paper-count">({{ main_total }})</span></h2>
       {% if cat_data.subtitle %}<p class="category-subtitle" data-en="{{ cat_data.subtitle }}" data-zh="{{ cat_data.subtitle_zh }}">{{ cat_data.subtitle }}</p>{% endif %}
+
+      {% if cat_key == "01_Foundational_RL" %}
+      <div class="mermaid-container" id="roadmap-container">
+        <div class="mermaid-title" data-en="📍 Recommended Learning Roadmap" data-zh="📍 推荐学习路线图">📍 Recommended Learning Roadmap</div>
+        <div class="mermaid">
+graph TD
+    subgraph "Basic RL"
+        PPO(PPO) --> AWR(AWR)
+        AWR --> DM(DeepMimic)
+    end
+    
+    subgraph "Data & Retargeting"
+        Data(AMASS / HumanML3D) --> Target(Motion Retargeting)
+    end
+    
+    subgraph "Imitation & Style"
+        DM --> AMP(AMP)
+        DM --> PHC(PHC)
+        AMP --> ADD(ADD)
+    end
+    
+    subgraph "Skills & Diffusion"
+        ASE(ASE) --> CALM(CALM) --> PULSE(PULSE)
+        DP(Diffusion Policy) --> BM(BeyondMimic)
+    end
+    
+    subgraph "Engineering"
+        DR(Domain Randomization) --> LCP(LCP)
+    end
+
+    Target -.-> DM
+    Target -.-> AMP
+    PHC --> ASE
+    PULSE --> DP
+        </div>
+      </div>
+      {% endif %}
+
       {% if cat_data.subcategories %}
         {% for subcat in cat_data.subcategories %}
         <div class="subcategory-section" data-subcategory="{{ subcat.name }}">
@@ -148,6 +186,12 @@ title: "Home"
   searchInput.addEventListener('input', function() {
     var query = searchInput.value.toLowerCase().trim();
     var hasAnyMatch = false;
+    
+    // Hide roadmap during search
+    var roadmap = document.getElementById('roadmap-container');
+    if (roadmap) {
+      roadmap.style.display = query === '' ? '' : 'none';
+    }
 
     categories.forEach(function(cat) {
       var catHasMatch = false;

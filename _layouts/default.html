@@ -10,6 +10,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    function initMermaid(theme) {
+      if (typeof mermaid === 'undefined') return;
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: theme === 'dark' ? 'dark' : 'default',
+        flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' },
+        securityLevel: 'loose',
+      });
+      mermaid.run();
+    }
+  </script>
 
 </head>
 <body>
@@ -189,7 +203,8 @@
         html.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
         toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-
+        
+        initMermaid(theme);
       }
 
       setTheme(getPreferred());
