@@ -239,6 +239,14 @@
         "zhname": "LATENT：从不完美的人类动作数据中学习人形机器人网球运动技能"
       },
       {
+        "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control Directly from Human Egocentric Video",
+        "path": "papers/04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video.html",
+        "dir": "ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video",
+        "arxiv": "2603.09170",
+        "zhname": "ZeroWBC：直接从人类第一人称视频中学出\"零遥操作\"的人形视触运动控制"
+      },
+      {
         "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
         "path": "papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.html",
@@ -261,13 +269,6 @@
         "dir": "SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid",
         "arxiv": "2603.10306",
         "zhname": "SteadyTray：用残差强化学习教人形机器人端着托盘稳稳走路"
-      },
-      {
-        "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control Directly from Human Egocentric Video",
-        "path": "papers/04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video.html",
-        "dir": "ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video",
-        "zhname": "ZeroWBC：直接从人类第一人称视频中学出零遥操作的人形视触运动控制"
       },
       {
         "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
