@@ -106,6 +106,8 @@ MimicKit 官方仓库明确提供多个常用方法的实现入口：
 
 ## 🚶 具体实例
 
+### 通用流程
+
 假设要训练一个 humanoid 学会 mocap 里的跑步动作：
 
 1. Motion loader 从动作库采样一个参考时间点，得到参考 root、joint rotation、velocity。
@@ -116,6 +118,128 @@ MimicKit 官方仓库明确提供多个常用方法的实现入口：
 6. 如果换成 ASE，则额外输入技能 latent，并用判别器约束 latent 对应的动作分布。
 
 这个流程在论文层面横跨好几篇工作；MimicKit 的意义是把它们放进一套统一工程语义里。
+
+<h3 id="g1-walk-pipeline">端到端流程图（以 G1 walk 为例）</h3>
+
+<div class="mermaid">
+flowchart TB
+    A["g1_walk.pkl<br/>(参考动作)"] --> B["Motion Sampler<br/>相位 t"]
+    B --> C["参考帧 ref_t<br/>root + 29-DOF"]
+    C --> D["前瞻 ref_(t+1, t+2, t+3)"]
+    E["Isaac Gym<br/>4096 并行 env"] --> F["当前状态 s_t"]
+    F --> G["obs = s_t || ref_(t+1..t+3)"]
+    D --> G
+    G --> H["Actor MLP<br/>fc 2x1024, sigma=0.05"]
+    H --> I["action a_t<br/>关节目标 (29-D)"]
+    I --> E
+    E --> J["Reward 5 项加权<br/>(pose / vel / root / key_pos)"]
+    J --> K["PPO Buffer<br/>4096 x 32 steps"]
+    K --> L["PPO Update<br/>clip=0.2, GAE lambda=0.95"]
+    L --> H
+    F -. "||body - ref|| &gt; 1.0m" .-> M["Early Termination"]
+</div>
+
+### G1 walk 实例：用真实 config 走一遍
+
+来源：MimicKit 仓库 `args/deepmimic_g1_ppo_args.txt` 链入的两个 yaml：
+- env：[`data/envs/deepmimic_g1_env.yaml`](https://github.com/xbpeng/MimicKit/blob/main/data/envs/deepmimic_g1_env.yaml)
+- agent：[`data/agents/deepmimic_g1_ppo_agent.yaml`](https://github.com/xbpeng/MimicKit/blob/main/data/agents/deepmimic_g1_ppo_agent.yaml)
+- 角色：`data/assets/g1/g1.xml`（Unitree G1，29 DOF）
+- 参考动作：`data/motions/g1/g1_walk.pkl`
+
+**1. 初始位姿（env yaml 里的 `init_pose`，长度 35）**
+
+```
+root_pos = (0, 0, 0.8) m       # G1 站位高度 0.8m
+root_rot = (0, 0, 0)            # exp-map 零旋转
+joint_q  = [0]*22, 1.57, 0,0,0,0,0,0, 1.57, 0,0,0
+                                # 两个 1.57 ≈ 90°：双肩 pitch（T-pose 类）
+```
+
+**2. 观测怎么拼**
+
+| 部分 | 内容 |
+|------|------|
+| 当前 sim 状态 | root height + 29 DOF + 各 body 线/角速度 |
+| 参考前瞻 | `tar_obs_steps: [1, 2, 3]` → 把 t+1 / t+2 / t+3 帧的 reference 一起喂入 |
+
+这就是 DeepMimic 式 obs：**"现在 + 未来 3 帧目标"**，让 policy 知道下一步该长什么样。
+
+**3. Reward = 5 项乘 5 个不同 scale 的指数核**
+
+env yaml 里直接写明 5 项权重和 scale：
+
+| 项 | 权重 w | scale α | 含义 |
+|----|-------|--------|------|
+| `pose` | 0.50 | 0.25 | 关节角与参考的差 |
+| `vel` | 0.10 | 0.01 | 关节角速度差 |
+| `root_pose` | 0.15 | 5.0 | root 位姿差 |
+| `root_vel` | 0.10 | 1.0 | root 速度差 |
+| `key_pos` | 0.15 | 10.0 | 5 个 key body 位置差 |
+
+```
+r_t = Σ_i  w_i · exp( -α_i · ‖x_t^i - x_t^(*,i)‖² )
+```
+
+`key_bodies = [左脚 ankle_roll, 右脚 ankle_roll, head, 左手 wrist_yaw, 右手 wrist_yaw]`——只关心末端位置对齐，不强求中间链路。
+
+**4. 终止条件**
+
+```yaml
+pose_termination: True
+pose_termination_dist: 1.0  # m，任意 body 偏离参考 > 1m 立刻终止
+episode_length: 10.0        # 硬上限 10s
+```
+
+DeepMimic 风格 early termination：失败片段不浪费 rollout 配额。
+
+**5. PPO 超参（agent yaml）**
+
+| 项 | 取值 |
+|----|------|
+| 并行环境 | **4096** |
+| `steps_per_iter` | 32 → 单次迭代 batch ≈ 4096 × 32 = **131 072** transitions |
+| Actor / Critic | `fc_2layers_1024units`（2 层 × 1024 单元 MLP） |
+| `action_std` | 0.05（固定，不学习） |
+| 优化器 | SGD，lr = 1e-4 |
+| `discount` γ | 0.99 |
+| `td_lambda` | 0.95（GAE） |
+| `ppo_clip_ratio` | 0.2 |
+| `norm_adv_clip` | 4.0（标准化后的 advantage 截断） |
+| `action_bound_weight` | 10.0（关节超限的额外惩罚） |
+| `actor_epochs / batch` | 5 / 4 |
+| `critic_epochs / batch` | 2 / 2 |
+
+**6. 一帧 reward 的真实代入**
+
+假设某 rollout 中第 t 帧的误差量级：
+
+| 误差量 | 数值 |
+|--------|------|
+| ‖q − q*‖² | 0.40 rad² |
+| ‖q̇ − q̇*‖² | 30 (rad/s)² |
+| ‖root_pos − ref‖² | 0.02 m² |
+| ‖root_vel − ref‖² | 0.05 (m/s)² |
+| 5 key bodies 平均位置² | 0.01 m² |
+
+代入 reward：
+
+```
+r_pose      = 0.50 · exp(-0.25 · 0.40) = 0.50 · 0.905 ≈ 0.452
+r_vel       = 0.10 · exp(-0.01 · 30  ) = 0.10 · 0.741 ≈ 0.074
+r_root_pose = 0.15 · exp(-5.00 · 0.02) = 0.15 · 0.905 ≈ 0.136
+r_root_vel  = 0.10 · exp(-1.00 · 0.05) = 0.10 · 0.951 ≈ 0.095
+r_key_pos   = 0.15 · exp(-10.0 · 0.01) = 0.15 · 0.905 ≈ 0.136
+─────────────────────────────────────────────
+r_t ≈ 0.893
+```
+
+→ 这个数能直接读出 reward 表的设计偏好：
+- `pose` 权重最大（0.5），关节配对是 imitation 的"主轴"；
+- `key_pos / root_pose` scale 最陡（10.0 / 5.0），小误差也快速拉低 reward，逼策略把脚和头放对；
+- `vel` 类 scale 最小（0.01 / 1.0），允许速度上的相对容错，避免高频抖动主导奖励。
+
+把这一帧的 0.89 乘以 G1 walk 一段约 50 步（≈1.7s）的稳定跟踪，单 episode return 约在 **40+** 量级——这就是 PPO 优化的目标值。
 
 ---
 
