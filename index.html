@@ -47,7 +47,7 @@ title: "Home"
     <div id="search-no-results" class="search-no-results" data-en="No matching papers found." data-zh="未找到匹配的论文。">No matching papers found.</div>
 
     <div class="mermaid-container" id="roadmap-container">
-      <details open>
+      <details>
         <summary class="mermaid-title" data-en="📍 Recommended Learning Roadmap" data-zh="📍 推荐学习路线图">📍 推荐学习路线图</summary>
         <div class="mermaid" id="roadmap-mermaid">graph TD</div>
       </details>
@@ -156,12 +156,6 @@ title: "Home"
   searchInput.addEventListener('input', function() {
     var query = searchInput.value.toLowerCase().trim();
     var hasAnyMatch = false;
-    
-    // Hide roadmap during search
-    var roadmap = document.getElementById('roadmap-container');
-    if (roadmap) {
-      roadmap.style.display = query === '' ? '' : 'none';
-    }
 
     categories.forEach(function(cat) {
       var catHasMatch = false;
