@@ -138,60 +138,63 @@
         if (mermaidRoadmap) {
           var useZh = mode === 'zh';
           var enGraph = `graph TD
-    subgraph Basic ["Basic RL"]
-        PPO(PPO) --> AWR(AWR)
-        AWR --> DM(DeepMimic)
+    subgraph SG_Basic ["Basic RL"]
+        PPO(["PPO"]) --> AWR(["AWR"])
+        AWR --> DM(["DeepMimic"])
     end
-    subgraph Data ["Data & Retargeting"]
-        Data(AMASS / HumanML3D) --> Target(Motion Retargeting)
+    subgraph SG_Data ["Data and Retargeting"]
+        DataNode(["AMASS / HumanML3D"]) --> Target(["Motion Retargeting"])
     end
-    subgraph Style ["Imitation & Style"]
-        DM --> AMP(AMP)
-        DM --> PHC(PHC)
-        AMP --> ADD(ADD)
+    subgraph SG_Style ["Imitation and Style"]
+        DM --> AMP(["AMP"])
+        DM --> PHC(["PHC"])
+        AMP --> ADD(["ADD"])
     end
-    subgraph Skills ["Skills & Diffusion"]
-        ASE(ASE) --> CALM(CALM) --> PULSE(PULSE)
-        DP(Diffusion Policy) --> BM(BeyondMimic)
+    subgraph SG_Skills ["Skills and Diffusion"]
+        ASE(["ASE"]) --> CALM(["CALM"]) --> PULSE(["PULSE"])
+        DP(["Diffusion Policy"]) --> BM(["BeyondMimic"])
     end
-    subgraph Engineering ["Engineering"]
-        DR(Domain Randomization) --> LCP(LCP)
+    subgraph SG_Eng ["Engineering"]
+        DR(["Domain Randomization"]) --> LCP(["LCP"])
     end
     Target -.-> DM
     Target -.-> AMP
     PHC --> ASE
     PULSE --> DP`;
           var zhGraph = `graph TD
-    subgraph Basic ["基础 RL"]
-        PPO(PPO) --> AWR(AWR)
-        AWR --> DM(DeepMimic)
+    subgraph SG_Basic ["基础 RL"]
+        PPO(["PPO"]) --> AWR(["AWR"])
+        AWR --> DM(["DeepMimic"])
     end
-    subgraph Data ["数据与重定向"]
-        Data(AMASS / HumanML3D) --> Target(动作重定向)
+    subgraph SG_Data ["数据与重定向"]
+        DataNode(["AMASS / HumanML3D"]) --> Target(["动作重定向"])
     end
-    subgraph Style ["模仿与风格"]
-        DM --> AMP(AMP)
-        DM --> PHC(PHC)
-        AMP --> ADD(ADD)
+    subgraph SG_Style ["模仿与风格"]
+        DM --> AMP(["AMP"])
+        DM --> PHC(["PHC"])
+        AMP --> ADD(["ADD"])
     end
-    subgraph Skills ["技能与扩散"]
-        ASE(ASE) --> CALM(CALM) --> PULSE(PULSE)
-        DP(扩散策略) --> BM(BeyondMimic)
+    subgraph SG_Skills ["技能与扩散"]
+        ASE(["ASE"]) --> CALM(["CALM"]) --> PULSE(["PULSE"])
+        DP(["扩散策略"]) --> BM(["BeyondMimic"])
     end
-    subgraph Engineering ["工程实践"]
-        DR(域随机化) --> LCP(LCP)
+    subgraph SG_Eng ["工程实践"]
+        DR(["域随机化"]) --> LCP(["LCP"])
     end
     Target -.-> DM
     Target -.-> AMP
     PHC --> ASE
     PULSE --> DP`;
           
-          mermaidRoadmap.innerHTML = (useZh ? zhGraph : enGraph).trim();
+          var graphText = (useZh ? zhGraph : enGraph).trim();
+          mermaidRoadmap.innerHTML = graphText;
           mermaidRoadmap.removeAttribute('data-processed');
-          // Important: remove the SVG if it was already rendered
-          mermaidRoadmap.innerHTML = (useZh ? zhGraph : enGraph).trim();
+          
           if (typeof mermaid !== 'undefined') {
-            mermaid.run({ nodes: [mermaidRoadmap] });
+            // Use a small timeout to ensure DOM is ready and previous renders are cleared
+            setTimeout(function() {
+              mermaid.run({ nodes: [mermaidRoadmap] });
+            }, 50);
           }
         }
       }
