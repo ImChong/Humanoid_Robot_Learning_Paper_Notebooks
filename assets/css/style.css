@@ -546,7 +546,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 0.7rem 1rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 2rem;
   overflow: hidden;
   text-align: left;
 }
