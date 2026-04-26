@@ -562,6 +562,7 @@ body {
   display: list-item;
   list-style: none; /* Remove bullet/triangle to match paper cards */
   outline: none;
+  scroll-margin-top: 110px;
 }
 
 .mermaid-title::-webkit-details-marker {
@@ -864,7 +865,8 @@ html[data-lang-mode="zh"] .footer-text-zh {
     line-height: 1.3;
   }
   .category-title,
-  .subcategory-title {
+  .subcategory-title,
+  .mermaid-title {
     scroll-margin-top: 130px;
   }
   .mermaid-container {

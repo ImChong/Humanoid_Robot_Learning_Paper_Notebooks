@@ -244,10 +244,12 @@ title: "Home"
   if (targets.length === 0) return;
 
   function updateActive() {
-    var scrollPos = window.scrollY + 100;
+    // Probe just below the sticky header so the link reflects whatever
+    // section is currently anchored at the top of the viewport.
+    var probeY = 140;
     var current = -1;
     for (var i = 0; i < targets.length; i++) {
-      if (targets[i].el.offsetTop <= scrollPos) current = i;
+      if (targets[i].el.getBoundingClientRect().top <= probeY) current = i;
     }
     targets.forEach(function(t, idx) {
       t.link.classList.toggle('active', idx === current);
