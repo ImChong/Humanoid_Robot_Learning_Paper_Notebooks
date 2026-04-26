@@ -82,6 +82,7 @@
 
       function applyLang(mode) {
         root.setAttribute('data-lang-mode', mode);
+        root.setAttribute('lang', mode === 'zh' ? 'zh-CN' : 'en');
         localStorage.setItem(LANG_KEY, mode);
         if (langLabel) {
           langLabel.textContent = mode === 'zh' ? 'English' : '中文';
@@ -105,6 +106,16 @@
           var text = useZh ? el.getAttribute('data-zh-placeholder') : el.getAttribute('data-en-placeholder');
           if (text !== null) {
             el.placeholder = text;
+          }
+        }
+        // Update aria-labels
+        var arias = document.querySelectorAll('[data-en-aria-label]');
+        for (var i = 0; i < arias.length; i++) {
+          var el = arias[i];
+          var useZh = mode === 'zh';
+          var text = useZh ? el.getAttribute('data-zh-aria-label') : el.getAttribute('data-en-aria-label');
+          if (text !== null) {
+            el.setAttribute('aria-label', text);
           }
         }
       }
