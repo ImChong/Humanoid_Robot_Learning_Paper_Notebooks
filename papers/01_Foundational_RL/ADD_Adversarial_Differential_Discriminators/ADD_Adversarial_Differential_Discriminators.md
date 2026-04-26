@@ -229,6 +229,50 @@ disc_reward_weight: 1.0
 
 ## 🚶 具体实例：ADD 怎么学会旋风踢？
 
+<h3 id="add-pipeline">端到端流程图（MimicKit 默认 ADD humanoid）</h3>
+
+<div class="mermaid">
+flowchart TB
+    A["参考动作 humanoid_spinkick.pkl"] --> B["参考帧 r_t<br/>+ 前瞻 r_(t+1, t+2, t+3)"]
+    C["Isaac Gym<br/>4096 并行 env"] --> D["当前 sim 状态 s_t"]
+    B --> E["obs = s_t || r_(t+1..t+3)"]
+    D --> E
+    E --> F["Actor pi<br/>fc_2x1024, sigma=0.05"]
+    F --> G["action a_t (28-D)"]
+    G --> C
+    D --> H["差异对 (s_t, r_t)"]
+    B --> H
+    H --> I["Differential Discriminator D<br/>fc_2x1024 (单步差, num_disc_obs_steps=1)"]
+    I --> J["disc reward r_t<br/>(grad penalty=2, scale=2)"]
+    J --> K["PPO Update<br/>clip=0.2, GAE lambda=0.95"]
+    K --> F
+    D -. "||body - ref|| > 1.0m" .-> L["Early Termination"]
+</div>
+
+> 关键反差：DeepMimic 用**手写的 5 项 reward** 衡量"像不像参考"；AMP 用判别器看**两个独立的 state-pair**；ADD 用判别器看**(当前帧, 参考帧) 的差**——既保留了 DeepMimic 的 phase-aligned 跟踪结构（`tar_obs_steps`、`pose_termination`），又把 reward 设计交给判别器学。
+
+### MimicKit 默认 yaml 关键超参
+
+来源：[`add_humanoid_env.yaml`](https://github.com/xbpeng/MimicKit/blob/main/data/envs/add_humanoid_env.yaml) + [`add_humanoid_agent.yaml`](https://github.com/xbpeng/MimicKit/blob/main/data/agents/add_humanoid_agent.yaml)。
+
+| 项 | 取值 | 与 AMP 对比 |
+|----|------|-----|
+| `num_envs` | 4096 | 同 |
+| `motion_file` | `humanoid_spinkick.pkl` | 同（默认配置都用 spinkick） |
+| `pose_termination` | **True** (dist 1.0m) | AMP 是 False |
+| `tar_obs_steps` | **[1, 2, 3]** | AMP 没有（不喂未来参考） |
+| `num_phase_encoding` | 4 | AMP 没有 |
+| `num_disc_obs_steps` | **1** | AMP 是 10（ADD 看单步差，AMP 看 10 步窗口） |
+| `disc_grad_penalty` | **2** | AMP 是 5（ADD 判别器更"软"） |
+| `disc_reward_scale` | 2 | 同 |
+| `task_reward_weight` / `disc_reward_weight` | 0.0 / 1.0 | 同（纯 disc reward） |
+| Actor / Critic / Disc | fc_2x1024 | 同（不像 ASE 的 3 层） |
+| 优化器 | SGD lr=1e-4 / disc 2.5e-4 | 同 AMP |
+
+→ 把 ADD 看成 **DeepMimic 骨架 + AMP 判别器、且判别器吃"差"而不是"对"**：保留 phase 对齐与 early termination 让训练有跟踪 anchor，但不再手写 5 项指数核 reward——让判别器自己从数据里学出"像参考"的标准。
+
+---
+
 假设参考动作是一段 **spinkick（旋风踢）**，包含如下阶段：
 
 ```text

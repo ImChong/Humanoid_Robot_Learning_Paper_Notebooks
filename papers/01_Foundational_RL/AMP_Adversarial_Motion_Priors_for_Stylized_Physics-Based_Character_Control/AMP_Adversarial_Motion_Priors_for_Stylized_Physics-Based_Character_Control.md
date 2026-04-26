@@ -257,6 +257,52 @@ $$r_t^S = -\log(1 - D_\psi(s_t, s_{t+1}))$$
 
 ## 🚶 具体实例：用 AMP 训练人形角色用不同风格走路
 
+<h3 id="amp-pipeline">端到端流程图（MimicKit 默认 AMP humanoid）</h3>
+
+<div class="mermaid">
+flowchart TB
+    A["参考数据集<br/>(humanoid_spinkick.pkl<br/>或多段风格 mocap)"] --> B["expert state-pairs<br/>(s_t, s_t+1) ~ data"]
+    C["Isaac Gym<br/>4096 并行 env"] --> D["policy state-pairs<br/>(s_t, s_t+1) ~ pi"]
+    B --> E["Discriminator D<br/>fc_2x1024"]
+    D --> E
+    E --> F["disc reward<br/>r_disc = -log(1 - D)"]
+    G["Task reward (可选)<br/>e.g. target heading / 速度"] --> H["合成 reward<br/>w_task·r_task + w_disc·r_disc"]
+    F --> H
+    H --> I["PPO Buffer<br/>4096 x 32 steps"]
+    I --> J["PPO + Disc 联合更新<br/>(disc grad penalty = 5)"]
+    J --> K["Actor pi<br/>fc_2x1024, sigma=0.05"]
+    K --> C
+    C -. "倒地 / 出界" .-> L["Early Termination"]
+</div>
+
+> 关键反差：DeepMimic 强制要求 policy 复现参考帧的关节角；AMP **不**做这件事——参考动作只用来训判别器，policy 只要"动得像数据集里的某一帧"即可，因此**没有 pose_termination**（[`amp_humanoid_env.yaml`](https://github.com/xbpeng/MimicKit/blob/main/data/envs/amp_humanoid_env.yaml) 设 `pose_termination: False`）。
+
+### MimicKit 默认 yaml 关键超参
+
+来源：[`amp_humanoid_env.yaml`](https://github.com/xbpeng/MimicKit/blob/main/data/envs/amp_humanoid_env.yaml) + [`amp_humanoid_agent.yaml`](https://github.com/xbpeng/MimicKit/blob/main/data/agents/amp_humanoid_agent.yaml)。
+
+| 项 | 取值 | 说明 |
+|----|------|------|
+| `num_envs` | 4096 | Isaac Gym 并行 |
+| `motion_file` | `humanoid_spinkick.pkl` | 默认参考动作（可换数据集） |
+| `num_disc_obs_steps` | **10** | 判别器看 10 步 state window（不是单帧） |
+| `disc_net` / `actor_net` / `critic_net` | `fc_2layers_1024units` | 三网都是 2×1024 MLP |
+| `disc_optimizer` | SGD lr=2.5e-4, wd=1e-4 | 比 actor (1e-4) 学得更快 |
+| `disc_grad_penalty` | **5** | 判别器输入梯度平方惩罚（防过拟合） |
+| `disc_logit_reg` | 0.01 | logit L2 正则 |
+| `disc_buffer_size` | 200 000 | 经验回放池容量 |
+| `disc_replay_samples` | 1000 | 每次 disc 训练采样数 |
+| `disc_reward_scale` | 2 | 判别器奖励放大倍数 |
+| `task_reward_weight` | 0.0 | 默认纯风格学习（spinkick 不带任务） |
+| `disc_reward_weight` | 1.0 | reward 全部由判别器给 |
+| `ppo_clip_ratio` / `td_lambda` | 0.2 / 0.95 | 与 DeepMimic 对齐 |
+
+→ 即在 MimicKit 默认 spinkick 实验里，AMP 是**纯 disc reward** 模式：r_t 完全由判别器给，没有 DeepMimic 的 5 项 tracking 项。当切到 target-heading 任务时，把 `task_reward_weight` 拨上去即可加入任务奖励。
+
+---
+
+### 论文原始实验：Target Heading 任务
+
 论文的核心实验之一是 **Target Heading 任务**：给定一个目标方向和目标速度，让角色以特定运动风格沿该方向行走。下面以此为例走一遍完整流程。
 
 ### 环境设定（论文原文参数）
