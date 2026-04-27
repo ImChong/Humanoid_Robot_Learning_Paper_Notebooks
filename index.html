@@ -7,12 +7,10 @@ title: "Home"
   <p data-en="Paper reading notes on humanoid robot reinforcement learning" data-zh="人形机器人强化学习论文阅读笔记">Paper reading notes on humanoid robot reinforcement learning</p>
   {% assign paper_count = 0 %}
   {% for cat in site.data.papers %}
-    {% assign cat_main_count = cat[1].papers | size %}
-    {% assign paper_count = paper_count | plus: cat_main_count %}
+    {% assign paper_count = paper_count | plus: cat[1].papers | size %}
     {% if cat[1].subcategories %}
       {% for subcat in cat[1].subcategories %}
-        {% assign subcat_count = subcat.papers | size %}
-        {% assign paper_count = paper_count | plus: subcat_count %}
+        {% assign paper_count = paper_count | plus: subcat.papers | size %}
       {% endfor %}
     {% endif %}
   {% endfor %}
