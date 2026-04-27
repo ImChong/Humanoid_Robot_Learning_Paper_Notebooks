@@ -872,6 +872,25 @@ html[data-lang-mode="zh"] .footer-text-zh {
   .mermaid-container {
     margin-bottom: 2.8rem;
   }
+  /* Wide tables overflow main column on phones — switch to block
+     so the table itself scrolls horizontally; cell content unchanged. */
+  .paper-body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Tablet column is also narrow — same horizontal-scroll fallback so
+   wide reference tables don't get squashed. */
+@media (max-width: 1200px) and (min-width: 601px) {
+  .paper-body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /* ===========================
