@@ -319,6 +319,17 @@ def compute_done(done_buf, time, ep_len, root_rot, body_pos, tar_root_rot, tar_b
 
 下面以训练一个仿真人形角色做**后空翻（Backflip）**为例，走一遍完整流程。
 
+#### 🚀 MimicKit 训练指令
+
+```bash
+# 使用 MimicKit 训练 Humanoid 学习后空翻
+python mimickit/run.py --mode train \
+    --task DeepMimic \
+    --cfg data/tasks/deepmimic_humanoid_backflip.yaml \
+    --num_envs 4096 \
+    --headless
+```
+
 ### 环境设定（论文原文参数）
 
 | 项目 | 具体值 |
@@ -547,6 +558,24 @@ class KinCharModel():
 ```
 
 > 🔑 **作用**：纯运动学计算（无物理仿真），用于获取参考动作中角色各部位的精确位置，供模仿奖励的末端位置项（$r^{ee}$）和参考角色渲染使用
+
+### 📊 训练流程图
+
+```mermaid
+graph TD
+    A[加载参考动作 Backflip.amc] --> B[RSI: 随机采样时间点 t]
+    B --> C[初始化仿真角色状态 pose, vel]
+    C --> D[策略 π 执行动作 a]
+    D --> E[物理引擎 Bullet 步进]
+    E --> F{提前终止 ET?}
+    F -- 摔倒/偏离严重 --> G[终止 Episode]
+    G --> B
+    F -- 正常运行 --> H[计算模仿奖励 r_I]
+    H --> I[PPO 更新策略参数 θ]
+    I --> J{任务完成/收敛?}
+    J -- No --> D
+    J -- Yes --> K[训练完成]
+```
 
 ---
 
