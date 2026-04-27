@@ -17,7 +17,7 @@ def count_papers() -> int:
 
 
 def count_notes() -> int:
-    """统计 papers/ 下的 .md 笔记数（排除 PROGRESS.md / TODO* / todos/ 目录等元文件）."""
+    """统计 papers/ 下的论文笔记数（仅计入 papers/<分类>/<论文目录>/*.md）。"""
     excluded_names = {"PROGRESS.md"}
     excluded_dirs = {"todos"}
     return sum(
@@ -26,6 +26,7 @@ def count_notes() -> int:
         if f.name not in excluded_names
         and not f.name.startswith("TODO")
         and not any(part in excluded_dirs for part in f.relative_to(PAPERS_DIR).parts)
+        and len(f.relative_to(PAPERS_DIR).parts) >= 3
     )
 
 
