@@ -573,6 +573,14 @@ body {
 .mermaid {
   text-align: center;
   margin-top: 0.5rem;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+[data-theme="dark"] .mermaid {
+  background: #1e1e1e;
 }
 
 /* ===== Breadcrumb ===== */
