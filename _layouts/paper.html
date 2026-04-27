@@ -155,6 +155,19 @@ layout: default
 (function() {
   function rebuildWithLineNumbers() {
     document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
+      // Skip mermaid blocks
+      if (outer.classList.contains('language-mermaid')) {
+        var codeEl = outer.querySelector('pre code');
+        if (codeEl) {
+          var mermaidDiv = document.createElement('div');
+          mermaidDiv.className = 'mermaid';
+          mermaidDiv.textContent = codeEl.textContent;
+          outer.parentNode.insertBefore(mermaidDiv, outer);
+          outer.style.display = 'none';
+        }
+        return;
+      }
+
       var code = outer.querySelector('pre code');
       if (!code) return;
 
@@ -185,6 +198,10 @@ layout: default
       outer.innerHTML = '';
       outer.appendChild(wrapper);
     });
+
+    if (typeof mermaid !== 'undefined') {
+      mermaid.run();
+    }
   }
 
   function splitByNewline(html) {
