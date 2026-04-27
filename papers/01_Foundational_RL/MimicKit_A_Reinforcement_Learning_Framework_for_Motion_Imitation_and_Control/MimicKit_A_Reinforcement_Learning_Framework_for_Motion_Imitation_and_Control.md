@@ -223,17 +223,20 @@ flowchart TB
 
 <h4>四算法关键差异速查</h4>
 
+<div class="table-wrapper">
+
 | 维度 | DeepMimic | AMP | ASE | ADD |
-|------|-----------|-----|-----|-----|
-| 参考数据 | 单 clip `g1_walk.pkl` | 单 clip 或风格集合 | **多段**步态数据集 | 单 clip `g1_walk.pkl` |
-| 相位对齐 (`tar_obs_steps`) | ✅ [1,2,3] | ❌ | ❌ | ✅ [1,2,3] |
-| Latent z 输入 | ❌ | ❌ | ✅ 64-D | ❌ |
-| Reward 来源 | 5 项手写指数核 | 判别器 (state-pair) | 判别器 + Encoder | 判别器 (差异对) |
-| 判别器输入步长 | — | 10 步窗口 | 状态对 (s,s') | **1 步差异** (s, ref) |
-| `pose_termination` | ✅ 1.0m | ❌ | ❌ | ✅ 1.0m |
-| 网络深度 | 2x1024 | 2x1024 | **3x1024** | 2x1024 |
-| 优化器 | SGD | SGD + disc SGD | **4 个 Adam** | SGD + disc SGD |
-| MimicKit args 入口 | `deepmimic_g1_ppo_args.txt` | `amp_*_args.txt` | `ase_*_args.txt` | `add_*_args.txt` |
+|:---|:---|:---|:---|:---|
+| **参考数据** | 单 clip | 单 clip / 集合 | **多段步态数据集** | 单 clip |
+| **相位对齐** | ✅ [1,2,3] | ❌ | ❌ | ✅ [1,2,3] |
+| **Latent z** | ❌ | ❌ | ✅ 64-D | ❌ |
+| **Reward** | 5 项手写指数核 | 判别器 (state-pair) | 判别器 + Encoder | 判别器 (差异对) |
+| **判别器步长** | — | 10 步窗口 | 状态对 (s,s') | **1 步差异** (s, ref) |
+| **Termination** | ✅ 1.0m | ❌ | ❌ | ✅ 1.0m |
+| **网络深度** | 2x1024 | 2x1024 | **3x1024** | 2x1024 |
+| **优化器** | SGD | SGD + disc SGD | **4 个 Adam** | SGD + disc SGD |
+
+</div>
 
 ### G1 walk 实例：用真实 config 走一遍
 
