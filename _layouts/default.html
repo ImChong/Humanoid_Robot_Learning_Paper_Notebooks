@@ -15,17 +15,37 @@
   <script>
     function initMermaid(theme) {
       if (typeof mermaid === 'undefined') return;
-      mermaid.initialize({
+      var config = {
         startOnLoad: false,
         theme: theme === 'dark' ? 'dark' : 'default',
         flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' },
         securityLevel: 'loose',
-      });
+      };
+      mermaid.initialize(config);
       
-      // Re-render paper notebook diagrams if they have original code
+      // 1. Re-render paper notebook diagrams if they have original code
       document.querySelectorAll('.mermaid[data-original-code]').forEach(function(el) {
         el.removeAttribute('data-processed');
         el.innerHTML = el.getAttribute('data-original-code');
+      });
+
+      // 2. Special handling for index page roadmap if it exists
+      var roadmap = document.getElementById('roadmap-mermaid');
+      if (roadmap && !roadmap.hasAttribute('data-original-code')) {
+        // Only set this once to preserve the source
+        roadmap.setAttribute('data-original-code', roadmap.innerHTML);
+      }
+      
+      if (roadmap) {
+        roadmap.removeAttribute('data-processed');
+        roadmap.innerHTML = roadmap.getAttribute('data-original-code');
+      }
+
+      // 3. For any other mermaid blocks that might not have original code yet
+      document.querySelectorAll('.mermaid:not([data-original-code])').forEach(function(el) {
+        if (el.textContent.trim().length > 0) {
+          el.setAttribute('data-original-code', el.innerHTML);
+        }
       });
 
       mermaid.run();
