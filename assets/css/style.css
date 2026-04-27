@@ -549,6 +549,7 @@ body {
   margin-bottom: 2rem;
   overflow: hidden;
   text-align: left;
+  scroll-margin-top: 110px;
 }
 
 .mermaid-title {
