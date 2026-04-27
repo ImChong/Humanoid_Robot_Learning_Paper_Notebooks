@@ -154,6 +154,16 @@ layout: default
 <script>
 (function() {
   function transformMermaid() {
+    document.querySelectorAll('pre > code.language-mermaid').forEach(function(codeEl) {
+      var pre = codeEl.parentElement;
+      if (!pre || pre.classList.contains('mermaid-processed')) return;
+
+      var mermaidDiv = buildMermaidDiv(codeEl.textContent);
+      pre.parentNode.insertBefore(mermaidDiv, pre);
+      pre.style.display = 'none';
+      pre.classList.add('mermaid-processed');
+    });
+
     document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
       var codeEl = outer.querySelector('code');
       if (!codeEl) return;
@@ -168,16 +178,21 @@ layout: default
                       codeEl.textContent.trim().startsWith('classDiagram');
 
       if (isMermaid && !outer.classList.contains('mermaid-processed')) {
-        var mermaidDiv = document.createElement('div');
-        mermaidDiv.className = 'mermaid';
-        var code = codeEl.textContent.trim();
-        mermaidDiv.setAttribute('data-original-code', code);
-        mermaidDiv.textContent = code;
+        var mermaidDiv = buildMermaidDiv(codeEl.textContent);
         outer.parentNode.insertBefore(mermaidDiv, outer);
         outer.style.display = 'none';
         outer.classList.add('mermaid-processed');
       }
     });
+  }
+
+  function buildMermaidDiv(source) {
+    var code = source.trim();
+    var mermaidDiv = document.createElement('div');
+    mermaidDiv.className = 'mermaid';
+    mermaidDiv.setAttribute('data-original-code', code);
+    mermaidDiv.textContent = code;
+    return mermaidDiv;
   }
 
   function rebuildWithLineNumbers() {
