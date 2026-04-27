@@ -161,6 +161,7 @@ layout: default
         if (codeEl) {
           var mermaidDiv = document.createElement('div');
           mermaidDiv.className = 'mermaid';
+          mermaidDiv.setAttribute('data-original-code', codeEl.textContent);
           mermaidDiv.textContent = codeEl.textContent;
           outer.parentNode.insertBefore(mermaidDiv, outer);
           outer.style.display = 'none';
