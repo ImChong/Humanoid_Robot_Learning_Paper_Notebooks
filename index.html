@@ -5,7 +5,16 @@ title: "Home"
 <div class="index-header">
   <h1 data-en="📚 Humanoid Robot Learning Paper Notebooks" data-zh="📚 人形机器人学习论文笔记">📚 Humanoid Robot Learning Paper Notebooks</h1>
   <p data-en="Paper reading notes on humanoid robot reinforcement learning" data-zh="人形机器人强化学习论文阅读笔记">Paper reading notes on humanoid robot reinforcement learning</p>
-  {% assign paper_count = 0 %}{% for p in site.pages %}{% if p.url contains '/papers/' and p.layout == 'paper' %}{% assign paper_count = paper_count | plus: 1 %}{% endif %}{% endfor %}<p class="subtitle" id="paper-count-label" data-en="Total: {{ paper_count }} papers" data-zh="共 {{ paper_count }} 篇笔记">Total: {{ paper_count }} papers</p>
+  {% assign paper_count = 0 %}
+  {% for cat in site.data.papers %}
+    {% assign paper_count = paper_count | plus: cat[1].papers | size %}
+    {% if cat[1].subcategories %}
+      {% for subcat in cat[1].subcategories %}
+        {% assign paper_count = paper_count | plus: subcat.papers | size %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  <p class="subtitle" id="paper-count-label" data-en="Total: {{ paper_count }} papers" data-zh="共 {{ paper_count }} 篇笔记">Total: {{ paper_count }} papers</p>
 </div>
 
 <div class="index-layout">

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """自动更新 README.md 中的 Papers 和 Notes badge 数字."""
 
+import json
 import re
 from pathlib import Path
 
@@ -8,6 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
 PROGRESS = ROOT / "papers" / "PROGRESS.md"
 PAPERS_DIR = ROOT / "papers"
+PAPERS_JSON = ROOT / "_data" / "papers.json"
 
 
 def count_papers() -> int:
@@ -17,7 +19,17 @@ def count_papers() -> int:
 
 
 def count_notes() -> int:
-    """统计 papers/ 下的论文笔记数（仅计入 papers/<分类>/<论文目录>/*.md）。"""
+    """统计 notes 数，优先使用 _data/papers.json（与主页列表同口径）。"""
+    if PAPERS_JSON.exists():
+        data = json.loads(PAPERS_JSON.read_text(encoding="utf-8"))
+        total = 0
+        for cat_data in data.values():
+            total += len(cat_data.get("papers", []))
+            for subcat in cat_data.get("subcategories", []):
+                total += len(subcat.get("papers", []))
+        return total
+
+    # 回退：按目录结构统计论文笔记
     excluded_names = {"PROGRESS.md"}
     excluded_dirs = {"todos"}
     return sum(
