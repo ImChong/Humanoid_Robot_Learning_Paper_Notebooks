@@ -119,25 +119,121 @@ MimicKit 官方仓库明确提供多个常用方法的实现入口：
 
 这个流程在论文层面横跨好几篇工作；MimicKit 的意义是把它们放进一套统一工程语义里。
 
-<h3 id="g1-walk-pipeline">端到端流程图（以 G1 walk 为例）</h3>
+<h3 id="g1-walk-pipeline">四种算法在 G1 walk 上的流程对比</h3>
+
+为了把 DeepMimic / AMP / ASE / ADD 的差异看清楚，下面把 4 套算法都套到**同一个场景**上：Unitree G1（29 DOF）+ 参考动作 `g1_walk.pkl`，参数取自 MimicKit 仓库的默认 yaml，按算法做了最小适配。读图建议横向对比同一颜色的节点：
+
+- **参考帧 / 数据集**入口 → 看输入是单 clip 还是多 clip、是否带相位
+- **Actor 输入**节点 → 看 obs 是否包含未来参考帧、是否包含 latent z
+- **Reward 来源**节点 → 看奖励是手写 5 项、判别器、还是混合
+- **终止条件** → 看是否有 pose_termination
+
+<h4 id="g1-walk-deepmimic">① DeepMimic on G1 walk（精确跟踪基线）</h4>
 
 <div class="mermaid">
 flowchart TB
-    A["g1_walk.pkl<br/>(参考动作)"] --> B["Motion Sampler<br/>相位 t"]
+    A["g1_walk.pkl<br/>(单段参考)"] --> B["Motion Sampler<br/>相位 t (RSI)"]
     B --> C["参考帧 ref_t<br/>root + 29-DOF"]
     C --> D["前瞻 ref_(t+1, t+2, t+3)"]
     E["Isaac Gym<br/>4096 并行 env"] --> F["当前状态 s_t"]
     F --> G["obs = s_t || ref_(t+1..t+3)"]
     D --> G
     G --> H["Actor MLP<br/>fc 2x1024, sigma=0.05"]
-    H --> I["action a_t<br/>关节目标 (29-D)"]
+    H --> I["action a_t (29-D)"]
     I --> E
-    E --> J["Reward 5 项加权<br/>(pose / vel / root / key_pos)"]
+    E --> J["Reward = 5 项手写指数核<br/>pose 0.5 / vel 0.1 / root_pose 0.15<br/>root_vel 0.1 / key_pos 0.15"]
+    C --> J
     J --> K["PPO Buffer<br/>4096 x 32 steps"]
-    K --> L["PPO Update<br/>clip=0.2, GAE lambda=0.95"]
+    K --> L["PPO Update<br/>clip=0.2, GAE λ=0.95"]
     L --> H
     F -. "||body - ref|| &gt; 1.0m" .-> M["Early Termination"]
 </div>
+
+> 标志：**单 clip + 相位对齐 + 5 项手写 reward + pose_termination**。reward 完全由参考帧解析式给出，不需要判别器。
+
+<h4 id="g1-walk-amp">② AMP on G1 walk（判别器给风格奖励）</h4>
+
+<div class="mermaid">
+flowchart TB
+    A["g1_walk.pkl<br/>(单段或风格集合)"] --> B["expert state-pairs<br/>(s_t, s_t+1) ~ data"]
+    C["Isaac Gym<br/>4096 并行 env"] --> D["policy state-pairs<br/>(s_t, s_t+1) ~ pi"]
+    B --> E["Discriminator D<br/>fc 2x1024, num_disc_obs_steps=10"]
+    D --> E
+    E --> F["disc reward<br/>r_disc = -log(1 - D)"]
+    G["可选 Task reward<br/>(target heading / 速度)"] --> H["合成 reward<br/>w_task·r_task + w_disc·r_disc"]
+    F --> H
+    D --> I["Actor pi(a | s_t)<br/>fc 2x1024, sigma=0.05<br/>obs 不含未来参考帧"]
+    I --> C
+    H --> J["PPO Buffer<br/>4096 x 32 steps"]
+    J --> K["PPO + Disc 联合更新<br/>disc grad penalty=5"]
+    K --> I
+    K --> E
+    C -. "倒地 / 出界" .-> L["Early Termination<br/>(无 pose_termination)"]
+</div>
+
+> 与 DeepMimic 的差异：**去掉相位对齐**（policy 不看 ref_(t+1..t+3)）、**reward 由判别器给**、**没有 pose_termination**。policy 只要"看起来像数据集里的某一帧"，不要求复刻具体相位。
+
+<h4 id="g1-walk-ase">③ ASE on G1 walk（用 latent 编码技能）</h4>
+
+<div class="mermaid">
+flowchart TB
+    A["dataset_g1_locomotion.yaml<br/>(多段 G1 步态)"] --> B["expert (s_t, s_t+1)"]
+    Z["latent z ~ Uniform(S^63)<br/>每 0~5s 重采样"] --> P["Actor pi(a | s_t, z)<br/>fc 3x1024"]
+    P --> C["Isaac Gym 4096 env"]
+    C --> D["policy (s_t, s_t+1)"]
+    B --> F["Discriminator D(s, s')<br/>fc 3x1024"]
+    D --> F
+    D --> E["Encoder E(s, s')<br/>fc 2x1024 → ẑ ∈ S^63"]
+    Z -. "监督目标" .-> E
+    F --> R1["disc reward<br/>r_disc = -log(1-D)"]
+    E --> R2["enc reward<br/>r_enc = z · ẑ"]
+    R1 --> S["合成 reward<br/>0.5·r_disc + 0.5·r_enc + 0.01·diversity"]
+    R2 --> S
+    S --> J["PPO Buffer 4096 x 32"]
+    J --> K["4 个 Adam 更新<br/>(Actor / Critic / Disc / Enc)"]
+    K --> P
+    K --> F
+    K --> E
+    C -. "倒地 / 出界" .-> L["Early Termination<br/>(无 pose_termination)"]
+</div>
+
+> 与 AMP 的差异：**多了 latent z 与 Encoder**——policy 是 z 的函数（一族 walk 风格），encoder 让 z 可被反向还原，这样 latent 空间就成了**可控技能 embedding**。下游高层 policy 只需在 64 维 latent 上发指令。
+
+<h4 id="g1-walk-add">④ ADD on G1 walk（判别器吃"差异"）</h4>
+
+<div class="mermaid">
+flowchart TB
+    A["g1_walk.pkl<br/>(单段参考)"] --> B["参考帧 ref_t<br/>+ 前瞻 ref_(t+1, t+2, t+3)"]
+    C["Isaac Gym 4096 env"] --> D["当前状态 s_t"]
+    B --> O["obs = s_t || ref_(t+1..t+3)"]
+    D --> O
+    O --> P["Actor pi<br/>fc 2x1024, sigma=0.05"]
+    P --> Q["action a_t (29-D)"]
+    Q --> C
+    D --> H["差异对 (s_t, ref_t)"]
+    B --> H
+    H --> I["Differential Discriminator<br/>fc 2x1024, num_disc_obs_steps=1"]
+    I --> J["disc reward r_t<br/>(grad penalty=2, scale=2)"]
+    J --> K["PPO Update<br/>clip=0.2, GAE λ=0.95"]
+    K --> P
+    D -. "||body - ref|| &gt; 1.0m" .-> M["Early Termination"]
+</div>
+
+> 与 AMP 的差异：保留 DeepMimic 的**相位对齐 + pose_termination**（policy 仍看未来参考帧），但 reward **不再手写 5 项**，而是由判别器吃"(当前帧, 参考帧) 的差"自动学出来。可看作 **DeepMimic 骨架 + AMP 判别器、判别器吃差不吃对**。
+
+<h4>四算法关键差异速查</h4>
+
+| 维度 | DeepMimic | AMP | ASE | ADD |
+|------|-----------|-----|-----|-----|
+| 参考数据 | 单 clip `g1_walk.pkl` | 单 clip 或风格集合 | **多段**步态数据集 | 单 clip `g1_walk.pkl` |
+| 相位对齐 (`tar_obs_steps`) | ✅ [1,2,3] | ❌ | ❌ | ✅ [1,2,3] |
+| Latent z 输入 | ❌ | ❌ | ✅ 64-D | ❌ |
+| Reward 来源 | 5 项手写指数核 | 判别器 (state-pair) | 判别器 + Encoder | 判别器 (差异对) |
+| 判别器输入步长 | — | 10 步窗口 | 状态对 (s,s') | **1 步差异** (s, ref) |
+| `pose_termination` | ✅ 1.0m | ❌ | ❌ | ✅ 1.0m |
+| 网络深度 | 2x1024 | 2x1024 | **3x1024** | 2x1024 |
+| 优化器 | SGD | SGD + disc SGD | **4 个 Adam** | SGD + disc SGD |
+| MimicKit args 入口 | `deepmimic_g1_ppo_args.txt` | `amp_*_args.txt` | `ase_*_args.txt` | `add_*_args.txt` |
 
 ### G1 walk 实例：用真实 config 走一遍
 
