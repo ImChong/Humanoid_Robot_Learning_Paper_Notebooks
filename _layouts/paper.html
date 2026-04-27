@@ -153,22 +153,37 @@ layout: default
 
 <script>
 (function() {
-  function rebuildWithLineNumbers() {
+  function transformMermaid() {
     document.querySelectorAll('div.highlighter-rouge').forEach(function(outer) {
-      // Skip mermaid blocks
-      if (outer.classList.contains('language-mermaid')) {
-        var codeEl = outer.querySelector('pre code');
-        if (codeEl) {
-          var mermaidDiv = document.createElement('div');
-          mermaidDiv.className = 'mermaid';
-          mermaidDiv.setAttribute('data-original-code', codeEl.textContent);
-          mermaidDiv.textContent = codeEl.textContent;
-          outer.parentNode.insertBefore(mermaidDiv, outer);
-          outer.style.display = 'none';
-        }
-        return;
-      }
+      var codeEl = outer.querySelector('code');
+      if (!codeEl) return;
+      
+      // 识别 mermaid 代码块：通过类名或内容特征
+      var isMermaid = outer.classList.contains('language-mermaid') || 
+                      codeEl.classList.contains('language-mermaid') ||
+                      codeEl.classList.contains('mermaid') ||
+                      codeEl.textContent.trim().startsWith('graph ') ||
+                      codeEl.textContent.trim().startsWith('sequenceDiagram') ||
+                      codeEl.textContent.trim().startsWith('gantt') ||
+                      codeEl.textContent.trim().startsWith('classDiagram');
 
+      if (isMermaid && !outer.classList.contains('mermaid-processed')) {
+        var mermaidDiv = document.createElement('div');
+        mermaidDiv.className = 'mermaid';
+        var code = codeEl.textContent.trim();
+        mermaidDiv.setAttribute('data-original-code', code);
+        mermaidDiv.textContent = code;
+        outer.parentNode.insertBefore(mermaidDiv, outer);
+        outer.style.display = 'none';
+        outer.classList.add('mermaid-processed');
+      }
+    });
+  }
+
+  function rebuildWithLineNumbers() {
+    transformMermaid();
+
+    document.querySelectorAll('div.highlighter-rouge:not(.mermaid-processed)').forEach(function(outer) {
       var code = outer.querySelector('pre code');
       if (!code) return;
 
@@ -201,7 +216,12 @@ layout: default
     });
 
     if (typeof mermaid !== 'undefined') {
-      mermaid.run();
+      var theme = document.documentElement.getAttribute('data-theme') || 'light';
+      if (typeof initMermaid === 'function') {
+        initMermaid(theme);
+      } else {
+        mermaid.run();
+      }
     }
   }
 
@@ -218,6 +238,10 @@ layout: default
     return lines;
   }
 
-  document.addEventListener('DOMContentLoaded', rebuildWithLineNumbers);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', rebuildWithLineNumbers);
+  } else {
+    rebuildWithLineNumbers();
+  }
 })();
 </script>
