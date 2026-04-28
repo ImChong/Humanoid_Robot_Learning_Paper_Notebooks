@@ -22,33 +22,29 @@
         securityLevel: 'loose',
       };
       mermaid.initialize(config);
+      window.roadmapMermaidConfigured = true;
       
       // 1. Re-render paper notebook diagrams if they have original code
-      document.querySelectorAll('.mermaid[data-original-code]').forEach(function(el) {
+      document.querySelectorAll('.mermaid[data-original-code]:not(#roadmap-mermaid)').forEach(function(el) {
         el.removeAttribute('data-processed');
         el.innerHTML = el.getAttribute('data-original-code');
       });
 
-      // 2. Special handling for index page roadmap if it exists
-      var roadmap = document.getElementById('roadmap-mermaid');
-      if (roadmap && !roadmap.hasAttribute('data-original-code')) {
-        // Only set this once to preserve the source
-        roadmap.setAttribute('data-original-code', roadmap.innerHTML);
-      }
-      
-      if (roadmap) {
-        roadmap.removeAttribute('data-processed');
-        roadmap.innerHTML = roadmap.getAttribute('data-original-code');
-      }
-
-      // 3. For any other mermaid blocks that might not have original code yet
-      document.querySelectorAll('.mermaid:not([data-original-code])').forEach(function(el) {
+      // 2. For any other mermaid blocks that might not have original code yet
+      document.querySelectorAll('.mermaid:not([data-original-code]):not(#roadmap-mermaid)').forEach(function(el) {
         if (el.textContent.trim().length > 0) {
           el.setAttribute('data-original-code', el.innerHTML);
         }
       });
 
-      mermaid.run();
+      var nodes = Array.prototype.slice.call(document.querySelectorAll('.mermaid:not(#roadmap-mermaid)'));
+      if (nodes.length > 0) {
+        mermaid.run({ nodes: nodes });
+      }
+
+      if (window.renderRoadmapMermaid) {
+        window.renderRoadmapMermaid(document.documentElement.getAttribute('data-lang-mode') || 'en');
+      }
     }
   </script>
 
@@ -120,6 +116,95 @@
       var root = document.documentElement;
       var langToggle = document.getElementById('lang-toggle');
       var langLabel = langToggle ? langToggle.querySelector('.lang-label') : null;
+      var roadmapSvgCache = {};
+      var roadmapRenderSeq = 0;
+
+      var roadmapGraphs = {
+        en: `graph TD
+    subgraph SG_Basic ["Basic RL"]
+        PPO(["PPO"]) --> AWR(["AWR"])
+        AWR --> DM(["DeepMimic"])
+    end
+    subgraph SG_Data ["Data and Retargeting"]
+        DataNode(["AMASS / HumanML3D"]) --> Target(["Motion Retargeting"])
+    end
+    subgraph SG_Style ["Imitation and Style"]
+        DM --> AMP(["AMP"])
+        DM --> PHC(["PHC"])
+        AMP --> ADD(["ADD"])
+    end
+    subgraph SG_Skills ["Skills and Diffusion"]
+        ASE(["ASE"]) --> CALM(["CALM"]) --> PULSE(["PULSE"])
+        DP(["Diffusion Policy"]) --> BM(["BeyondMimic"])
+    end
+    subgraph SG_Eng ["Engineering"]
+        DR(["Domain Randomization"]) --> LCP(["LCP"])
+    end
+    Target -.-> DM
+    Target -.-> AMP
+    PHC --> ASE
+    PULSE --> DP`,
+        zh: `graph TD
+    subgraph SG_Basic ["基础 RL"]
+        PPO(["PPO"]) --> AWR(["AWR"])
+        AWR --> DM(["DeepMimic"])
+    end
+    subgraph SG_Data ["数据与重定向"]
+        DataNode(["AMASS / HumanML3D"]) --> Target(["动作重定向"])
+    end
+    subgraph SG_Style ["模仿与风格"]
+        DM --> AMP(["AMP"])
+        DM --> PHC(["PHC"])
+        AMP --> ADD(["ADD"])
+    end
+    subgraph SG_Skills ["技能与扩散"]
+        ASE(["ASE"]) --> CALM(["CALM"]) --> PULSE(["PULSE"])
+        DP(["扩散策略"]) --> BM(["BeyondMimic"])
+    end
+    subgraph SG_Eng ["工程实践"]
+        DR(["域随机化"]) --> LCP(["LCP"])
+    end
+    Target -.-> DM
+    Target -.-> AMP
+    PHC --> ASE
+    PULSE --> DP`
+      };
+
+      function getRoadmapCacheKey(mode) {
+        var theme = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        return theme + ':' + mode;
+      }
+
+      window.renderRoadmapMermaid = function(mode) {
+        var mermaidRoadmap = document.getElementById('roadmap-mermaid');
+        if (!mermaidRoadmap) return Promise.resolve();
+
+        var normalizedMode = mode === 'zh' ? 'zh' : 'en';
+        var graphText = roadmapGraphs[normalizedMode].trim();
+        var cacheKey = getRoadmapCacheKey(normalizedMode);
+        var cachedSvg = roadmapSvgCache[cacheKey];
+        var renderSeq = ++roadmapRenderSeq;
+
+        if (cachedSvg) {
+          mermaidRoadmap.innerHTML = cachedSvg;
+          mermaidRoadmap.removeAttribute('data-processed');
+          return Promise.resolve();
+        }
+
+        if (!window.roadmapMermaidConfigured || typeof mermaid === 'undefined' || !mermaid.render) {
+          return Promise.resolve();
+        }
+
+        var renderId = 'roadmap-mermaid-' + cacheKey.replace(':', '-') + '-' + renderSeq;
+        return Promise.resolve(mermaid.render(renderId, graphText)).then(function(result) {
+          if (renderSeq !== roadmapRenderSeq || getRoadmapCacheKey(normalizedMode) !== cacheKey) return;
+          roadmapSvgCache[cacheKey] = result.svg;
+          mermaidRoadmap.innerHTML = result.svg;
+          mermaidRoadmap.removeAttribute('data-processed');
+        }).catch(function() {
+          // Keep the previous SVG visible if rendering fails.
+        });
+      };
 
       function applyLang(mode) {
         root.setAttribute('data-lang-mode', mode);
@@ -159,71 +244,7 @@
             el.setAttribute('aria-label', text);
           }
         }
-        
-        // Update Mermaid i18n
-        var mermaidRoadmap = document.getElementById('roadmap-mermaid');
-        if (mermaidRoadmap) {
-          var useZh = mode === 'zh';
-          var enGraph = `graph TD
-    subgraph SG_Basic ["Basic RL"]
-        PPO(["PPO"]) --> AWR(["AWR"])
-        AWR --> DM(["DeepMimic"])
-    end
-    subgraph SG_Data ["Data and Retargeting"]
-        DataNode(["AMASS / HumanML3D"]) --> Target(["Motion Retargeting"])
-    end
-    subgraph SG_Style ["Imitation and Style"]
-        DM --> AMP(["AMP"])
-        DM --> PHC(["PHC"])
-        AMP --> ADD(["ADD"])
-    end
-    subgraph SG_Skills ["Skills and Diffusion"]
-        ASE(["ASE"]) --> CALM(["CALM"]) --> PULSE(["PULSE"])
-        DP(["Diffusion Policy"]) --> BM(["BeyondMimic"])
-    end
-    subgraph SG_Eng ["Engineering"]
-        DR(["Domain Randomization"]) --> LCP(["LCP"])
-    end
-    Target -.-> DM
-    Target -.-> AMP
-    PHC --> ASE
-    PULSE --> DP`;
-          var zhGraph = `graph TD
-    subgraph SG_Basic ["基础 RL"]
-        PPO(["PPO"]) --> AWR(["AWR"])
-        AWR --> DM(["DeepMimic"])
-    end
-    subgraph SG_Data ["数据与重定向"]
-        DataNode(["AMASS / HumanML3D"]) --> Target(["动作重定向"])
-    end
-    subgraph SG_Style ["模仿与风格"]
-        DM --> AMP(["AMP"])
-        DM --> PHC(["PHC"])
-        AMP --> ADD(["ADD"])
-    end
-    subgraph SG_Skills ["技能与扩散"]
-        ASE(["ASE"]) --> CALM(["CALM"]) --> PULSE(["PULSE"])
-        DP(["扩散策略"]) --> BM(["BeyondMimic"])
-    end
-    subgraph SG_Eng ["工程实践"]
-        DR(["域随机化"]) --> LCP(["LCP"])
-    end
-    Target -.-> DM
-    Target -.-> AMP
-    PHC --> ASE
-    PULSE --> DP`;
-          
-          var graphText = (useZh ? zhGraph : enGraph).trim();
-          mermaidRoadmap.innerHTML = graphText;
-          mermaidRoadmap.removeAttribute('data-processed');
-          
-          if (typeof mermaid !== 'undefined') {
-            // Use a small timeout to ensure DOM is ready and previous renders are cleared
-            setTimeout(function() {
-              mermaid.run({ nodes: [mermaidRoadmap] });
-            }, 50);
-          }
-        }
+        window.renderRoadmapMermaid(mode);
       }
 
       function toggleLang() {
