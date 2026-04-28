@@ -266,7 +266,7 @@
     },
     {
       "title": "Embedding Classical Balance Control Principles in RL for Humanoid Recovery",
-      "arxiv": "https://arxiv.org/abs/2603.08619",
+      "arxiv": "2603.08619",
       "folder": "papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery",
       "note_file": "Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.md",
       "pdf_file": "Embedding.pdf",
@@ -338,7 +338,7 @@
     },
     {
       "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
-      "arxiv": "https://arxiv.org/abs/2602.15827",
+      "arxiv": "2602.15827",
       "folder": "papers/04_Loco-Manipulation_and_WBC/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching",
       "note_file": "Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching.md",
       "pdf_file": "Perceptive.pdf",
