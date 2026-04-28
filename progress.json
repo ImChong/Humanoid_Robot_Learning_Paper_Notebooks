@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 24,
-    "last_summary_date": "2026-04-28",
-    "last_summary_title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
-    "next_summary_index": 25,
+    "last_summary_index": 17,
+    "last_summary_date": "2026-04-26",
+    "last_summary_title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",
+    "next_summary_index": 18,
     "log": [
       {
         "date": "2026-04-24",
@@ -32,18 +32,6 @@
         "index": 17,
         "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",
         "folder": "papers/04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video"
-      },
-      {
-        "date": "2026-04-28",
-        "index": 18,
-        "title": "Embedding Classical Balance Control Principles in RL for Humanoid Recovery",
-        "folder": "papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery"
-      },
-      {
-        "date": "2026-04-28",
-        "index": 24,
-        "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
-        "folder": "papers/04_Loco-Manipulation_and_WBC/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching"
       }
     ]
   },
@@ -266,15 +254,15 @@
     },
     {
       "title": "Embedding Classical Balance Control Principles in RL for Humanoid Recovery",
-      "arxiv": "2603.08619",
+      "arxiv": "",
       "folder": "papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery",
       "note_file": "Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.md",
       "pdf_file": "Embedding.pdf",
-      "status": "done",
-      "start_date": "2026-04-28",
-      "done_date": "2026-04-28",
+      "status": "pending",
+      "start_date": null,
+      "done_date": null,
       "route": "Loco-Manipulation",
-      "title_cn": "将经典平衡控制原理嵌入强化学习：用于人形机器人跌倒恢复"
+      "title_cn": ""
     },
     {
       "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
@@ -338,15 +326,15 @@
     },
     {
       "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
-      "arxiv": "2602.15827",
+      "arxiv": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
       "folder": "papers/04_Loco-Manipulation_and_WBC/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching",
       "note_file": "Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching.md",
       "pdf_file": "Perceptive.pdf",
-      "status": "done",
-      "start_date": "2026-04-28",
-      "done_date": "2026-04-28",
+      "status": "pending",
+      "start_date": null,
+      "done_date": null,
       "route": "Loco-Manipulation",
-      "title_cn": "Perceptive Humanoid Parkour：通过动作匹配串联动态人类技能"
+      "title_cn": ""
     },
     {
       "title": "MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction",
