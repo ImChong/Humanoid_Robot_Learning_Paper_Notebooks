@@ -442,7 +442,8 @@ body {
   body {
     width: 100%;
     max-width: 100vw;
-    overflow-x: hidden;
+    overflow-x: hidden; /* fallback for browsers without overflow: clip */
+    overflow-x: clip;
   }
 
   /* Container and paper wrappers must not exceed viewport on mobile,
@@ -614,6 +615,7 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  contain: inline-size;
 }
 
 /* Mermaid sometimes injects fixed-width SVGs that can stretch the document
@@ -752,6 +754,7 @@ body {
   overflow-x: auto;
   margin: 1rem 0;
   line-height: 1.5;
+  contain: inline-size;
 }
 
 .paper-body pre code {
@@ -771,6 +774,7 @@ body {
   border: 1px solid var(--border);
   background: var(--card-bg);
   -webkit-overflow-scrolling: touch;
+  contain: inline-size;
 }
 
 .paper-body table {
@@ -818,6 +822,7 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0.5rem 0;
+  contain: inline-size;
 }
 
 /* ===== Paper Nav ===== */
@@ -978,6 +983,7 @@ html[data-lang-mode="zh"] .footer-text-zh {
   font-size: 0.875rem;
   line-height: 1.5;
   white-space: pre;
+  contain: inline-size;
 }
 
 [data-theme="dark"] .paper-body .code-block {
