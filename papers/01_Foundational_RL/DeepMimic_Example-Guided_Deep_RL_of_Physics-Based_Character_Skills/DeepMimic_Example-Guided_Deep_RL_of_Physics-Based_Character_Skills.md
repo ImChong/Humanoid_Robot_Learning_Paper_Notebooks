@@ -561,21 +561,21 @@ class KinCharModel():
 
 ### 📊 训练流程图
 
-```mermaid
+<div class="mermaid">
 graph TD
     A[加载参考动作 Backflip.amc] --> B[RSI: 随机采样时间点 t]
     B --> C[初始化仿真角色状态 pose, vel]
-    C --> D[策略 π 执行动作 a]
+    C --> D["策略 pi 执行动作 a"]
     D --> E[物理引擎 Bullet 步进]
     E --> F{提前终止 ET?}
     F -- 摔倒/偏离严重 --> G[终止 Episode]
     G --> B
-    F -- 正常运行 --> H[计算模仿奖励 r_I]
-    H --> I[PPO 更新策略参数 θ]
+    F -- 正常运行 --> H["计算模仿奖励 r_I"]
+    H --> I["PPO 更新策略参数 theta"]
     I --> J{任务完成/收敛?}
     J -- No --> D
     J -- Yes --> K[训练完成]
-```
+</div>
 
 ---
 
