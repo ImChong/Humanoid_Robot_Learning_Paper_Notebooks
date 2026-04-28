@@ -102,6 +102,21 @@ layout: default
 <script>
 (function() {
   var body = document.getElementById('paper-body');
+  if (!body) return;
+
+  body.querySelectorAll('table').forEach(function(table) {
+    if (table.parentElement && table.parentElement.classList.contains('table-wrapper')) return;
+    var wrapper = document.createElement('div');
+    wrapper.className = 'table-wrapper';
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  });
+})();
+</script>
+
+<script>
+(function() {
+  var body = document.getElementById('paper-body');
   var nav = document.getElementById('toc-nav');
   if (!body || !nav) return;
 
@@ -132,6 +147,34 @@ layout: default
 
   var links = nav.querySelectorAll('.toc-link');
   var headingArr = Array.from(headings);
+  var sidebar = document.getElementById('toc-sidebar');
+  var overlay = document.getElementById('sidebar-overlay');
+  var mobileQuery = window.matchMedia('(max-width: 1200px)');
+
+  function closeMobileSidebar() {
+    if (sidebar) sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var hash = link.getAttribute('href');
+      if (!hash || hash.charAt(0) !== '#') return;
+      var target = document.querySelector(hash);
+      if (!target) return;
+      e.preventDefault();
+
+      if (mobileQuery.matches) {
+        closeMobileSidebar();
+      }
+
+      window.history.replaceState(null, '', hash);
+      var headerOffset = 90;
+      var targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+      window.scrollTo({ top: targetTop, behavior: 'smooth' });
+    });
+  });
 
   function updateActive() {
     var scrollPos = window.scrollY + 100;

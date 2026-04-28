@@ -721,15 +721,18 @@ body {
   overflow-x: auto;
   margin: 1rem 0;
   border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
   -webkit-overflow-scrolling: touch;
 }
 
 .paper-body table {
-  width: 100%;
+  width: max-content;
+  min-width: 100%;
+  max-width: none;
   border-collapse: collapse;
   margin: 0;
   font-size: 0.92em;
-  min-width: 600px; /* Ensure table doesn't squash too much */
 }
 
 .paper-body th, .paper-body td {
@@ -890,24 +893,16 @@ html[data-lang-mode="zh"] .footer-text-zh {
   .mermaid-container {
     margin-bottom: 2.8rem;
   }
-  /* Wide tables overflow main column on phones — switch to block
-     so the table itself scrolls horizontally; cell content unchanged. */
-  .paper-body table {
-    display: block;
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  .paper-body th, .paper-body td {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.9em;
   }
 }
 
-/* Tablet column is also narrow — same horizontal-scroll fallback so
-   wide reference tables don't get squashed. */
+/* Tablet column gets denser spacing to keep readability. */
 @media (max-width: 1200px) and (min-width: 601px) {
-  .paper-body table {
-    display: block;
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  .paper-body th, .paper-body td {
+    padding: 0.48rem 0.68rem;
   }
 }
 
