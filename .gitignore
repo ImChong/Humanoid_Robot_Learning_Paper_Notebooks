@@ -6,3 +6,5 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 .sass-cache/
+vendor/bundle/
+.bundle/config
