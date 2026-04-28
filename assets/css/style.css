@@ -438,6 +438,13 @@ body {
 
 /* Show TOC only on wide screens */
 @media (max-width: 1200px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .toc-sidebar {
     position: fixed;
     top: 0;
@@ -461,6 +468,11 @@ body {
   }
   .paper-layout {
     display: block;
+  }
+
+  .paper-body {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
