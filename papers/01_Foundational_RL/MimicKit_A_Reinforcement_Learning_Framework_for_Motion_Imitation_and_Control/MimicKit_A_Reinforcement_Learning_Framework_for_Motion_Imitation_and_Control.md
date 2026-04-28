@@ -223,8 +223,6 @@ flowchart TB
 
 <h4>四算法关键差异速查</h4>
 
-<div class="table-wrapper">
-
 | 维度 | DeepMimic | AMP | ASE | ADD |
 |:---|:---|:---|:---|:---|
 | **参考数据** | 单 clip | 单 clip / 集合 | **多段步态数据集** | 单 clip |
@@ -235,8 +233,6 @@ flowchart TB
 | **Termination** | ✅ 1.0m | ❌ | ❌ | ✅ 1.0m |
 | **网络深度** | 2x1024 | 2x1024 | **3x1024** | 2x1024 |
 | **优化器** | SGD | SGD + disc SGD | **4 个 Adam** | SGD + disc SGD |
-
-</div>
 
 ### G1 walk 实例：用真实 config 走一遍
 
