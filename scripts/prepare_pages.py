@@ -34,6 +34,19 @@ def extract_title(content):
     return None
 
 
+def extract_arxiv(content):
+    """Extract arXiv ID from common note metadata table formats."""
+    patterns = [
+        r'\|\s*(?:\*\*)?arXiv(?:\*\*)?\s*\|\s*\[?(\d{4}\.\d{4,5}(?:v\d+)?)',
+        r'(?:arXiv:|arxiv\.org/(?:abs|html|pdf)/)(\d{4}\.\d{4,5}(?:v\d+)?)',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, content, re.IGNORECASE)
+        if match:
+            return match.group(1)
+    return None
+
+
 def get_category_name(category_dir):
     """Clean category directory name for display."""
     name = re.sub(r'^\d+_', '', category_dir)
@@ -140,20 +153,20 @@ def process_papers():
     # Load existing papers.json to preserve metadata (subtitle, subcategories, zhname)
     existing_papers_json_path = os.path.join(BASE_DIR, '_data', 'papers.json')
     existing_papers_json = {}
-    existing_paper_zhnames = {}  # title -> zhname mapping from existing data
+    existing_paper_meta = {}  # title/path -> metadata from existing data
     if os.path.exists(existing_papers_json_path):
         try:
             with open(existing_papers_json_path, 'r', encoding='utf-8') as f:
                 existing_papers_json = json.load(f)
-            # Build zhname lookup from all papers (top-level and subcategory)
+            # Build metadata lookup from all papers (top-level and subcategory)
             for cat_data in existing_papers_json.values():
                 for p in cat_data.get('papers', []):
-                    if 'zhname' in p:
-                        existing_paper_zhnames[p['title']] = p['zhname']
+                    existing_paper_meta[p.get('title')] = p
+                    existing_paper_meta[p.get('path')] = p
                 for sc in cat_data.get('subcategories', []):
                     for p in sc.get('papers', []):
-                        if 'zhname' in p:
-                            existing_paper_zhnames[p['title']] = p['zhname']
+                        existing_paper_meta[p.get('title')] = p
+                        existing_paper_meta[p.get('path')] = p
         except Exception:
             pass
 
@@ -211,18 +224,21 @@ def process_papers():
                     '_order': order_idx
                 }
 
-                # Extract arXiv ID
-                arxiv_match = re.search(r'\*\*arXiv\*\*\s*\|\s*\[?(\d{4}\.\d{4,5}(?:v\d+)?)\]?', content)
-                if arxiv_match:
-                    paper_entry['arxiv'] = arxiv_match.group(1)
+                existing_meta_for_paper = existing_paper_meta.get(title) or existing_paper_meta.get(rel_path) or {}
+
+                # Extract arXiv ID, preserving existing metadata when the note
+                # uses a format the parser does not recognize.
+                arxiv = extract_arxiv(content) or existing_meta_for_paper.get('arxiv')
+                if arxiv:
+                    paper_entry['arxiv'] = arxiv
 
                 # Prefer zhname from front matter when present
                 zhname_match = re.search(r'^zhname:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
                 if zhname_match:
                     paper_entry['zhname'] = zhname_match.group(1).strip()
                 # Otherwise restore zhname from existing data if available
-                elif title in existing_paper_zhnames:
-                    paper_entry['zhname'] = existing_paper_zhnames[title]
+                elif existing_meta_for_paper.get('zhname'):
+                    paper_entry['zhname'] = existing_meta_for_paper['zhname']
 
                 papers.append(paper_entry)
 
@@ -323,6 +339,7 @@ def process_papers():
 
     with open(os.path.join(data_dir, 'papers.json'), 'w', encoding='utf-8') as f:
         json.dump(sorted_data, f, ensure_ascii=False, indent=2)
+        f.write('\n')
 
     total = sum(
         len(v['papers']) + sum(len(s.get('papers', [])) for s in v.get('subcategories', []))

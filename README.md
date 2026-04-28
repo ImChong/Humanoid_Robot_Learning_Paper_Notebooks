@@ -3,7 +3,7 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen.svg)](https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/)
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/Papers-531-orange.svg)](papers/PROGRESS.md)
-[![Notes](https://img.shields.io/badge/Notes-45-green.svg)](papers/)
+[![Notes](https://img.shields.io/badge/Notes-46-green.svg)](papers/)
 
 **来源**: [awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning)
 
@@ -11,7 +11,7 @@
 
 **🛠️ 仓库开发待办**: [papers/todos/TODO_v4.md](papers/todos/TODO_v4.md) — 笔记 / 站点 / 工具链的开发任务（最新 v4，历史版本见 [`papers/todos/`](papers/todos/)）。
 
-**📌 当前快照**: 已覆盖 14 个分类、40 篇笔记；`prepare_pages.py` 当前无 `[STUB]` 告警，下一阶段重点是 Jekyll 构建验证、统计口径治理与源码对照增强。
+**📌 当前快照**: 已覆盖 14 个分类、46 篇笔记；`prepare_pages.py` 当前无 `[STUB]` 告警，下一阶段重点是 Jekyll 构建验证、统计口径治理与源码对照增强。
 
 ## 规则
 
