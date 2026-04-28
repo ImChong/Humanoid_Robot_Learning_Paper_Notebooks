@@ -1128,4 +1128,17 @@ html[data-lang-mode="zh"] .footer-text-zh {
     width: 100%;
     max-width: 100%;
   }
+
+  .paper-body table {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    table-layout: auto;
+  }
+
+  .paper-body th,
+  .paper-body td {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
 }
