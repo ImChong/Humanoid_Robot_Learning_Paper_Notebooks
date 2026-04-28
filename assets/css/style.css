@@ -927,13 +927,6 @@ html[data-lang-mode="zh"] .footer-text-zh {
 
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
-  .site-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1200;
-  }
   .container {
     padding: calc(57px + env(safe-area-inset-top, 0px) + 1rem) 1rem 1rem;
   }
