@@ -610,7 +610,19 @@ body {
   background: var(--card-bg);
   padding: 1rem;
   border-radius: 8px;
+  max-width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mermaid sometimes injects fixed-width SVGs that can stretch the document
+   on mobile Safari. Keep the diagram inside its own horizontal scroller. */
+.mermaid svg {
+  display: block;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto;
 }
 
 [data-theme="dark"] .mermaid {
@@ -1104,5 +1116,10 @@ html[data-lang-mode="zh"] .footer-text-zh {
     max-width: 100%;
     overflow-x: hidden; /* fallback for older Safari */
     overflow-x: clip;   /* preferred: no scroll container */
+  }
+
+  .paper-body .mermaid {
+    width: 100%;
+    max-width: 100%;
   }
 }
