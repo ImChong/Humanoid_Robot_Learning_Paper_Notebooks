@@ -101,7 +101,7 @@
 | 25   | [Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation](https://arxiv.org/abs/2603.12263)                                                    | 2026-04-25 |     | ✅ 完成 |
 | 26   | [SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual RL](https://arxiv.org/abs/2603.10306)                                       | 2026-04-25 |     | ✅ 完成 |
 | 27   | [ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video](https://arxiv.org/abs/2603.09170)                                                  | 2026-04-26 |     | ✅ 完成 |
-| 28   | Embedding Classical Balance Control Principles in RL for Humanoid Recovery                                                                                       | -          |     | ⏳ 待读 |
+| 28   | [Embedding Classical Balance Control Principles in RL for Humanoid Recovery](https://arxiv.org/abs/2603.08619)                                                 | 2026-04-28 |     | ✅ 完成 |
 | 29   | ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation                                                                           | 2026-03-07 |     | ✅ 完成 |
 | 30   | OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control                                                                                     | 2026-03-08 |     | ✅ 完成 |
 | 31   | LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations                                                                         | -          |     | ⏳ 待读 |

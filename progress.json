@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 17,
-    "last_summary_date": "2026-04-26",
-    "last_summary_title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",
-    "next_summary_index": 18,
+    "last_summary_index": 18,
+    "last_summary_date": "2026-04-28",
+    "last_summary_title": "Embedding Classical Balance Control Principles in RL for Humanoid Recovery",
+    "next_summary_index": 19,
     "log": [
       {
         "date": "2026-04-24",
@@ -32,6 +32,12 @@
         "index": 17,
         "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video",
         "folder": "papers/04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video"
+      },
+      {
+        "date": "2026-04-28",
+        "index": 18,
+        "title": "Embedding Classical Balance Control Principles in RL for Humanoid Recovery",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery"
       }
     ]
   },
@@ -254,15 +260,15 @@
     },
     {
       "title": "Embedding Classical Balance Control Principles in RL for Humanoid Recovery",
-      "arxiv": "",
+      "arxiv": "https://arxiv.org/abs/2603.08619",
       "folder": "papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery",
       "note_file": "Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.md",
       "pdf_file": "Embedding.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-04-28",
+      "done_date": "2026-04-28",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "将经典平衡控制原理嵌入强化学习：用于人形机器人跌倒恢复"
     },
     {
       "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
