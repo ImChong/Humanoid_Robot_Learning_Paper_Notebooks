@@ -137,16 +137,7 @@
   },
   "03_High_Impact_Selection": {
     "display_name": "High Impact Selection",
-    "papers": [
-      {
-        "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
-        "path": "papers/03_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.md",
-        "url": "/papers/03_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.html",
-        "dir": "GR00T_N1_Humanoid_Foundation_Model",
-        "arxiv": "2503.14734",
-        "zhname": "GR00T N1：面向通用人形机器人的开放基础模型"
-      }
-    ],
+    "papers": [],
     "subtitle": "Curated high-impact and milestone papers in humanoid robot learning",
     "subtitle_zh": "人形机器人学习领域的高影响力里程碑论文精选",
     "zhname": "高影响力精选",
@@ -202,7 +193,16 @@
       },
       {
         "name": "Sim-to-Real & Foundation Model",
-        "papers": [],
+        "papers": [
+          {
+            "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+            "path": "papers/03_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.md",
+            "url": "/papers/03_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.html",
+            "dir": "GR00T_N1_Humanoid_Foundation_Model",
+            "arxiv": "2503.14734",
+            "zhname": "GR00T N1：面向通用人形机器人的开放基础模型"
+          }
+        ],
         "zhname": "仿真到现实与基座模型"
       },
       {

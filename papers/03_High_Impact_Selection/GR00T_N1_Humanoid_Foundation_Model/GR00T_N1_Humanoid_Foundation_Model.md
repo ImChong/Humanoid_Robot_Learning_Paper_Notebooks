@@ -3,6 +3,7 @@ layout: paper
 paper_order: 1
 title: "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots"
 category: "高影响力工作"
+subcategory: "Sim-to-Real & Foundation Model"
 zhname: "GR00T N1：面向通用人形机器人的开放基础模型"
 ---
 
