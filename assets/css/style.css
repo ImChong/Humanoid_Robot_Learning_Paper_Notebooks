@@ -875,8 +875,15 @@ html[data-lang-mode="zh"] .footer-text-zh {
 
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
+  .site-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+  }
   .container {
-    padding: 1rem;
+    padding: calc(57px + 1rem) 1rem 1rem;
   }
   .paper-body h1 {
     font-size: 1.4rem;
@@ -889,13 +896,19 @@ html[data-lang-mode="zh"] .footer-text-zh {
   }
   .header-inner {
     padding: 0.6rem 1rem;
+    gap: 0.75rem;
   }
   .site-title {
     flex: 1;
     min-width: 0;
-    white-space: normal;
-    word-break: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     line-height: 1.3;
+  }
+  .header-right {
+    flex-shrink: 0;
+    gap: 0.5rem;
   }
   .category-title,
   .subcategory-title,
