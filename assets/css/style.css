@@ -454,7 +454,9 @@ body {
   }
 
   .container {
-    padding-top: calc(57px + env(safe-area-inset-top, 0px));
+    /* Two-line site-title can grow header to ~68px; reserve 72px so
+       fixed header never overlaps content. */
+    padding-top: calc(72px + env(safe-area-inset-top, 0px));
   }
 
   .toc-sidebar {
@@ -886,7 +888,7 @@ html[data-lang-mode="zh"] .footer-text-zh {
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .container {
-    padding: calc(57px + env(safe-area-inset-top, 0px) + 1rem) 1rem 1rem;
+    padding: calc(72px + env(safe-area-inset-top, 0px) + 1rem) 1rem 1rem;
   }
   .paper-body h1 {
     font-size: 1.4rem;
@@ -1043,19 +1045,26 @@ html[data-lang-mode="zh"] .footer-text-zh {
 /* ===== Mobile overrides (isolated to reduce future merge conflicts) ===== */
 @media (max-width: 1200px) {
   .header-inner {
-    flex-wrap: wrap;
-    align-items: flex-start;
+    /* Title and right group share the same row; the title flexes
+       and wraps internally instead of pushing the buttons to a
+       second row. */
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.75rem;
   }
 
   .site-title {
-    flex: 1 1 100%;
+    flex: 1 1 0;
+    min-width: 0;
     white-space: normal;
     overflow: visible;
+    overflow-wrap: anywhere;
     text-overflow: unset;
+    line-height: 1.3;
   }
 
   .header-right {
-    width: 100%;
+    flex: 0 0 auto;
     justify-content: flex-end;
   }
 
