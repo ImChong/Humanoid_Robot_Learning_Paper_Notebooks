@@ -247,6 +247,14 @@
         "zhname": "ZeroWBC：直接从人类第一人称视频中学出\"零遥操作\"的人形视触运动控制"
       },
       {
+        "title": "Embedding Classical Balance Control Principles in Reinforcement Learning for Humanoid Recovery",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.html",
+        "dir": "Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery",
+        "arxiv": "2603.08619",
+        "zhname": "将经典平衡控制原理嵌入强化学习：用于人形机器人跌倒恢复"
+      },
+      {
         "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
         "path": "papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.html",
@@ -309,6 +317,14 @@
         "dir": "VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety",
         "arxiv": "2602.16511",
         "zhname": "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理"
+      },
+      {
+        "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching.html",
+        "dir": "Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching",
+        "arxiv": "2602.15827",
+        "zhname": "Perceptive Humanoid Parkour：通过动作匹配串联动态人类技能"
       }
     ],
     "zhname": "运动操作与全身控制"
