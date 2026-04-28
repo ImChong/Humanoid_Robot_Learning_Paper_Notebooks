@@ -457,23 +457,6 @@ body {
     padding-top: calc(57px + env(safe-area-inset-top, 0px));
   }
 
-  .header-inner {
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  .site-title {
-    flex: 1 1 100%;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
-  }
-
-  .header-right {
-    width: 100%;
-    justify-content: flex-end;
-  }
-
   .toc-sidebar {
     position: fixed;
     top: 0;
@@ -499,31 +482,6 @@ body {
   }
   .sidebar-overlay {
     z-index: 1250;
-  }
-  .paper-layout {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .paper-body {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .paper-body h1,
-  .paper-body h2,
-  .paper-body h3,
-  .paper-body p,
-  .paper-body li {
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-
-  .paper-content {
-    max-width: 100%;
-    overflow-x: clip;
   }
 }
 
@@ -1081,3 +1039,49 @@ html[data-lang-mode="zh"] .footer-text-zh {
 :root:not([data-theme="dark"]) .highlight .sr, :root:not([data-theme="dark"]) .highlight .ss, :root:not([data-theme="dark"]) .highlight .se, :root:not([data-theme="dark"]) .highlight .sc { color: #0a3069; }
 :root:not([data-theme="dark"]) .highlight .err { color: #cf222e; }
 :root:not([data-theme="dark"]) .highlight .p,  :root:not([data-theme="dark"]) .highlight .n  { color: #24292f; }
+
+/* ===== Mobile overrides (isolated to reduce future merge conflicts) ===== */
+@media (max-width: 1200px) {
+  .header-inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .site-title {
+    flex: 1 1 100%;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .paper-layout {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .paper-body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .paper-body h1,
+  .paper-body h2,
+  .paper-body h3,
+  .paper-body p,
+  .paper-body li {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .paper-content {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+}
