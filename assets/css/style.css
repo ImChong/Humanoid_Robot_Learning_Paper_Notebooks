@@ -445,6 +445,18 @@ body {
     overflow-x: hidden;
   }
 
+  .site-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1200;
+  }
+
+  .container {
+    padding-top: calc(57px + env(safe-area-inset-top, 0px));
+  }
+
   .toc-sidebar {
     position: fixed;
     top: 0;
@@ -880,10 +892,10 @@ html[data-lang-mode="zh"] .footer-text-zh {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1200;
   }
   .container {
-    padding: calc(57px + 1rem) 1rem 1rem;
+    padding: calc(57px + env(safe-area-inset-top, 0px) + 1rem) 1rem 1rem;
   }
   .paper-body h1 {
     font-size: 1.4rem;
