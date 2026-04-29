@@ -350,6 +350,14 @@
         "dir": "VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety",
         "arxiv": "2602.16511",
         "zhname": "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理"
+      },
+      {
+        "title": "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
+        "path": "papers/04_Loco-Manipulation_and_WBC/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_.html",
+        "dir": "EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_",
+        "arxiv": "2602.10106",
+        "zhname": "EgoHumanoid：利用免机器人第一视角示范解锁野外环境全身操作"
       }
     ],
     "zhname": "运动操作与全身控制"
