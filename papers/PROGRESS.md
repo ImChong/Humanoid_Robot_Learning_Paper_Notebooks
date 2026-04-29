@@ -108,7 +108,7 @@
 | 32   | Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation                                                                              | -          |     | ⏳ 待读 |
 | 33   | VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety                                                                                         | -          |     | ⏳ 待读 |
 | 34   | [Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching](https://arxiv.org/abs/2602.15827)                                               | 2026.02    |     | ⏳ 待读 |
-| 35   | [MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction](https://arxiv.org/abs/2602.15733)                                           | 2026.02    |     | ⏳ 待读 |
+| 35   | [MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction](https://arxiv.org/abs/2602.15733)                                           | 2026-04-29 |     | ✅ 完成 |
 | 36   | [General Humanoid Whole-Body Control via Pretraining and Fast Adaptation](https://arxiv.org/abs/2602.11929)                                                      | 2026.02    |     | ⏳ 待读 |
 | 37   | [HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model](https://arxiv.org/abs/2602.11758)                                               | 2026.02    |     | ⏳ 待读 |
 | 38   | [EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration](https://arxiv.org/abs/2602.10106)                                | 2026.02    |     | ⏳ 待读 |
