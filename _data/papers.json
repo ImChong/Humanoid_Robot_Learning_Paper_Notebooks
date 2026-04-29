@@ -272,6 +272,14 @@
         "zhname": "FAST：通过预训练与快速适应实现通用人形机器人全身控制"
       },
       {
+        "title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
+        "path": "papers/04_Loco-Manipulation_and_WBC/HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model/HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model/HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model.html",
+        "dir": "HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model",
+        "arxiv": "2602.11758",
+        "zhname": "HAIC：通过动力学感知世界模型实现人形机器人敏捷物体交互控制"
+      },
+      {
         "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
         "path": "papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.html",

@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 26,
+    "last_summary_index": 27,
     "last_summary_date": "2026-04-29",
-    "last_summary_title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
-    "next_summary_index": 27,
+    "last_summary_title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
+    "next_summary_index": 28,
     "log": [
       {
         "date": "2026-04-24",
@@ -50,6 +50,12 @@
         "index": 26,
         "title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
         "folder": "papers/04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation"
+      },
+      {
+        "date": "2026-04-29",
+        "index": 27,
+        "title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model"
       }
     ]
   },
@@ -380,15 +386,15 @@
     },
     {
       "title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
-      "arxiv": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
+      "arxiv": "https://arxiv.org/abs/2602.11758",
       "folder": "papers/04_Loco-Manipulation_and_WBC/HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model",
       "note_file": "HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model.md",
       "pdf_file": "HAIC.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-04-29",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "HAIC：通过动力学感知世界模型实现人形机器人敏捷物体交互控制"
     },
     {
       "title": "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
