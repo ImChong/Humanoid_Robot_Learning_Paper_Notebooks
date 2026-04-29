@@ -264,6 +264,14 @@
         "zhname": "MeshMimic：通过三维场景重建实现几何感知的人形机器人运动学习"
       },
       {
+        "title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation.html",
+        "dir": "General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation",
+        "arxiv": "2602.11929",
+        "zhname": "FAST：通过预训练与快速适应实现通用人形机器人全身控制"
+      },
+      {
         "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
         "path": "papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.html",

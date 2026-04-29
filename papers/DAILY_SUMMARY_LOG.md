@@ -19,6 +19,7 @@
 | 2026-04-26 | 17 | [ZeroWBC: Learning Natural Visuomotor Humanoid Control from Egocentric Video](04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video.md) | Loco-Manipulation / WBC | 待官方释出（[zerowbc.github.io](https://zerowbc.github.io/)） |
 | 2026-04-28 | 18 | [Embedding Classical Balance Control Principles in RL for Humanoid Recovery](04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.md) | Loco-Manipulation / WBC | 待官方释出 |
 | 2026-04-29 | 25 | [MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction](04_Loco-Manipulation_and_WBC/MeshMimic__Geometry-Aware_Humanoid_Motion_Learning_through_3D_Scene_Reconstructi/MeshMimic__Geometry-Aware_Humanoid_Motion_Learning_through_3D_Scene_Reconstructi.md) | Loco-Manipulation / WBC | 待官方释出（[meshmimic.github.io](https://meshmimic.github.io/)） |
+| 2026-04-29 | 26 | [General Humanoid Whole-Body Control via Pretraining and Fast Adaptation](04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation.md) | Loco-Manipulation / WBC | [BeingBeyond/FAST](https://github.com/BeingBeyond/FAST) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -37,6 +38,7 @@
 | 22 | Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation | ✅ 已有内容（应跳过） |
 | 23 | VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety | ✅ 已有内容（应跳过） |
 | 24 | Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching | ✅ 已有内容（应跳过） |
-| 26 | General Humanoid Whole-Body Control via Pretraining and Fast Adaptation | ⏭️ 下一篇候选 |
+| 26 | General Humanoid Whole-Body Control via Pretraining and Fast Adaptation | ✅ 已完成 |
+| 27 | HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model | ⏭️ 下一篇候选 |
 
 > 实际推进时会再次检查对应 folder 是否已存在内容，避免重复劳动。

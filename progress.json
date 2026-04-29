@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 25,
+    "last_summary_index": 26,
     "last_summary_date": "2026-04-29",
-    "last_summary_title": "MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction",
-    "next_summary_index": 26,
+    "last_summary_title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
+    "next_summary_index": 27,
     "log": [
       {
         "date": "2026-04-24",
@@ -44,6 +44,12 @@
         "index": 25,
         "title": "MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction",
         "folder": "papers/04_Loco-Manipulation_and_WBC/MeshMimic__Geometry-Aware_Humanoid_Motion_Learning_through_3D_Scene_Reconstructi"
+      },
+      {
+        "date": "2026-04-29",
+        "index": 26,
+        "title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation"
       }
     ]
   },
@@ -362,15 +368,15 @@
     },
     {
       "title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
-      "arxiv": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
+      "arxiv": "https://arxiv.org/abs/2602.11929",
       "folder": "papers/04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation",
       "note_file": "General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation.md",
       "pdf_file": "General.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-04-29",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "FAST：通过预训练与快速适应实现通用人形机器人全身控制"
     },
     {
       "title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
