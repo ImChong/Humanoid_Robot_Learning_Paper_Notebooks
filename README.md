@@ -9,9 +9,23 @@
 
 **📖 待读论文清单**: [papers/PROGRESS.md](papers/PROGRESS.md) — 全量 531 篇论文的阅读进度表（来自上游 awesome 列表）。
 
-**🛠️ 仓库开发待办**: [papers/todos/TODO_v4.md](papers/todos/TODO_v4.md) — 笔记 / 站点 / 工具链的开发任务（最新 v4，历史版本见 [`papers/todos/`](papers/todos/)）。
+**🛠️ 仓库开发待办**: [papers/todos/TODO_v5.md](papers/todos/TODO_v5.md) — 笔记 / 站点 / 工具链的开发任务（最新 v5，侧重脚本健壮性与代码质量，历史版本见 [`papers/todos/`](papers/todos/)）。
 
-**📌 当前快照**: 已覆盖 14 个分类、46 篇笔记；`prepare_pages.py` 当前无 `[STUB]` 告警，下一阶段重点是 Jekyll 构建验证、统计口径治理与源码对照增强。
+**📌 当前快照**: 已覆盖 14 个分类、48 篇笔记；`prepare_pages.py` 当前无 `[STUB]` 告警。下一阶段重点已从"扩充骨架"转向"工程质量校准"，包括统一统计口径、增强元数据安全、以及脚本重构。
+
+## Agent Skills & 工程质量
+
+项目已集成 [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) 生产级工程规范，在后续维护中强制执行以下质量门禁：
+
+- **Spec-driven & TDD**: 关键功能更新必须先有设计规格（Spec）和测试用例。
+- **Code Review**: 所有脚本更新需经过 5 轴审查（正确性、可读性、架构、安全、性能）。
+- **Source-driven**: 实现逻辑必须基于官方文档和最新源码，拒绝"AI 幻想"。
+
+当前正在执行的 **[TODO_v5](papers/todos/TODO_v5.md)** 计划涵盖了：
+1. **安全性**: 修复 YAML 前言生成中的引号转义隐患。
+2. **一致性**: 统一多脚本间的 `is_stub`（草稿判定）阈值。
+3. **健壮性**: 增加全局 UTF-8 编码支持与脚本模块化重构。
+
 
 ## 规则
 
