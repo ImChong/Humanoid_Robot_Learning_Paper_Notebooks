@@ -3,15 +3,13 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen.svg)](https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/)
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/Papers-531-orange.svg)](papers/PROGRESS.md)
-[![Notes](https://img.shields.io/badge/Notes-49-green.svg)](papers/)
+[![Notes](https://img.shields.io/badge/Notes-50-green.svg)](papers/)
 
 **来源**: [awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning)
 
 **📖 待读论文清单**: [papers/PROGRESS.md](papers/PROGRESS.md) — 全量 531 篇论文的阅读进度表（来自上游 awesome 列表）。
 
 **🛠️ 仓库开发待办**: [papers/todos/TODO_v5.md](papers/todos/TODO_v5.md) — 笔记 / 站点 / 工具链的开发任务（最新 v5，侧重脚本健壮性与代码质量，历史版本见 [`papers/todos/`](papers/todos/)）。
-
-**📌 当前快照**: 已覆盖 14 个分类、48 篇笔记；`prepare_pages.py` 当前无 `[STUB]` 告警。下一阶段重点已从"扩充骨架"转向"工程质量校准"，包括统一统计口径、增强元数据安全、以及脚本重构。
 
 ## Agent Skills & 工程质量
 
