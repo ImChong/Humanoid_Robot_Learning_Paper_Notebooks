@@ -34,14 +34,6 @@
 
 | 索引 | 论文 | 状态 |
 |:---:|------|------|
-| 19 | ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation | ✅ 已有内容（应跳过） |
-| 20 | OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control | ✅ 已有内容（应跳过） |
-| 21 | LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations | ✅ 已有内容（应跳过） |
-| 22 | Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation | ✅ 已有内容（应跳过） |
-| 23 | VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety | ✅ 已有内容（应跳过） |
-| 24 | Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching | ✅ 已有内容（应跳过） |
-| 26 | General Humanoid Whole-Body Control via Pretraining and Fast Adaptation | ✅ 已完成 |
-| 27 | HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model | ✅ 已完成 |
 | 28 | EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration | ✅ 已完成 |
 | 29 | MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation | ⏭️ 下一篇候选 |
 
