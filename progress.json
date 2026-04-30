@@ -57,7 +57,9 @@
         "title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
         "folder": "papers/04_Loco-Manipulation_and_WBC/HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model"
       }
-    ]
+    ],
+    "last_completed_index": 28,
+    "next_index": 29
   },
   "papers": [
     {
@@ -402,9 +404,9 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_",
       "note_file": "EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_.md",
       "pdf_file": "EgoHumanoid.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-04-29",
       "route": "Loco-Manipulation",
       "title_cn": ""
     },
