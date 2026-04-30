@@ -308,7 +308,7 @@
 | 225  | [Optimizing Bipedal Locomotion for The 100m Dash With Comparison to Human Running](https://arxiv.org/abs/2508.03070)                                            | 2025.08 |     | ⏳ 待读 |
 | 226  | [Coordinated Humanoid Robot Locomotion with Symmetry Equivariant Reinforcement Learning Policy](https://arxiv.org/abs/2508.01247)                               | 2025.08 |     | ⏳ 待读 |
 | 227  | [Success in Humanoid Reinforcement Learning under Partial Observation](https://arxiv.org/abs/2507.18883)                                                        | 2025.07 |     | ⏳ 待读 |
-| 228  | Learning Humanoid Arm Motion via Centroidal Momentum Regularized Multi-Agent Reinforcement Learning                                                             | 2025.07 |     | ⏳ 待读 |
+| 228  | [Learning Humanoid Arm Motion via Centroidal Momentum Regularized Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2507.04140)                          | 2025.07 |     | ⏳ 待读 |
 | 229  | [Mechanical Intelligence-Aware Curriculum RL for Humanoids with Parallel Actuation](https://arxiv.org/abs/2507.00273)                                           | 2025.07 |     | ⏳ 待读 |
 | 230  | [Booster Gym: An End-to-End RL Framework for Humanoid Robot Locomotion](https://arxiv.org/abs/2506.15132)                                                       | 2025.06 |     | ⏳ 待读 |
 | 231  | [DoublyAware: Dual Planning and Policy Awareness for Temporal Difference Learning in Humanoid Locomotion](https://arxiv.org/abs/2506.12095)                     | 2025.06 |     | ⏳ 待读 |
@@ -462,7 +462,7 @@
 | 355  | [LookOut: Real-World Humanoid Egocentric Navigation](https://arxiv.org/abs/2508.14466)                                                                     | 2025.08 |     | ⏳ 待读 |
 | 356  | [INTENTION: Inferring Tendencies of Humanoid Robot Motion Through Interactive Intuition and Grounded VLM](https://arxiv.org/abs/2508.04931)                | 2025.08 |     | ⏳ 待读 |
 | 357  | [Hand-Eye Autonomous Delivery: Learning Humanoid Navigation, Locomotion and Reaching](https://arxiv.org/abs/2508.03068)                                    | 2025.08 |     | ⏳ 待读 |
-| 358  | Humanoid Occupancy: Enabling A Generalized Multimodal Occupancy Perception System on Humanoid Robots                                                       | 2025.07 |     | ⏳ 待读 |
+| 358  | [Humanoid Occupancy: Enabling A Generalized Multimodal Occupancy Perception System on Humanoid Robots](https://arxiv.org/abs/2507.20217)                    | 2025.07 |     | ⏳ 待读 |
 | 359  | LOVON: Legged Open-Vocabulary Object Navigator                                                                                                             | 2025.07 |     | ⏳ 待读 |
 | 360  | [RL with Data Bootstrapping for Dynamic Subgoal Pursuit in Humanoid Robot Navigation](https://arxiv.org/abs/2506.02206)                                    | 2025.06 |     | ⏳ 待读 |
 | 361  | [HumanoidPano: Hybrid Spherical Panoramic-LiDAR Cross-Modal Perception for Humanoid Robots](https://arxiv.org/abs/2503.09010)                              | 2025.03 |     | ⏳ 待读 |
