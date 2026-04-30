@@ -3,6 +3,11 @@
 ## Overview
 Based on the code review findings from `code-review-and-quality`, this plan aims to improve the robustness, consistency, and security of the project's maintenance scripts. It focuses on unifying the logic between `prepare_pages.py` and `sync_progress.py`, securing metadata handling, and improving architectural clarity.
 
+## 当前快照（从 README 迁移）
+- 已覆盖 14 个分类、48 篇笔记。
+- `prepare_pages.py` 当前无 `[STUB]` 告警。
+- 下一阶段重点已从“扩充骨架”转向“工程质量校准”，包括统一统计口径、增强元数据安全、以及脚本重构。
+
 ## Architecture Decisions
 - **Source of Truth Consistency**: Align `is_stub` logic across all scripts to ensure consistent status reporting.
 - **Defensive Metadata Handling**: Implement proper escaping for YAML frontmatter to prevent parsing errors.
