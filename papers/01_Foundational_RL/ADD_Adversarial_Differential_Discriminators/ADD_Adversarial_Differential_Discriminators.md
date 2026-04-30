@@ -1,6 +1,6 @@
 ---
 layout: paper
-paper_order: 7
+paper_order: 6
 title: "ADD: Adversarial Disentanglement and Distillation"
 category: "Foundational RL"
 ---

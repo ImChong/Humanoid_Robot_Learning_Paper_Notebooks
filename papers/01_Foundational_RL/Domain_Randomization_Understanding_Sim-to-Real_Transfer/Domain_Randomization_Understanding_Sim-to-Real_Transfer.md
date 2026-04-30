@@ -1,6 +1,6 @@
 ---
 layout: paper
-paper_order: 1
+paper_order: 12
 title: "Understanding Domain Randomization for Sim-to-real Transfer"
 category: "仿真到现实"
 ---

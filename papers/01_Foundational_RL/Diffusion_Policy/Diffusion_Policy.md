@@ -1,6 +1,6 @@
 ---
 layout: paper
-paper_order: 12
+paper_order: 10
 title: "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion"
 category: "基础强化学习"
 zhname: "Diffusion Policy：基于动作扩散的视觉运动策略学习"

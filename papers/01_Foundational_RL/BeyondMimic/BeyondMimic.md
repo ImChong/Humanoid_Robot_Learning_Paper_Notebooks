@@ -1,6 +1,6 @@
 ---
 layout: paper
-paper_order: 13
+paper_order: 11
 title: "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion"
 category: "基础强化学习"
 zhname: "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
