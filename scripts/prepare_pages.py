@@ -216,6 +216,15 @@ def process_papers():
 
                 order_idx = match_paper_order(title, paper_dir, progress_order)
 
+                # Front-matter `paper_order: <n>` overrides PROGRESS.md matching.
+                # Used to put papers in README's recommended learning-path order
+                # even when their titles don't match the awesome-list table rows.
+                explicit_order = re.search(
+                    r'^paper_order:\s*(\d+)\s*$', content, re.MULTILINE
+                )
+                if explicit_order:
+                    order_idx = int(explicit_order.group(1))
+
                 paper_entry = {
                     'title': title,
                     'path': rel_path,

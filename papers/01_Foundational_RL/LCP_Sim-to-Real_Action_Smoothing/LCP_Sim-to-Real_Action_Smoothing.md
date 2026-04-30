@@ -1,5 +1,6 @@
 ---
 layout: paper
+paper_order: 13
 title: "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)"
 category: "Sim-to-Real"
 ---

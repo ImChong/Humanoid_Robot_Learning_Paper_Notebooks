@@ -67,20 +67,20 @@
         "zhname": "CALM：面向可控虚拟角色的条件对抗潜变量模型"
       },
       {
+        "title": "PULSE: Universal Humanoid Motion Representations for Physics-Based Control",
+        "path": "papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.md",
+        "url": "/papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.html",
+        "dir": "PULSE_Physics-based_Universal_Latent_Space",
+        "arxiv": "2310.04582",
+        "zhname": "PULSE：物理可行的通用潜在技能提取"
+      },
+      {
         "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
         "path": "papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.md",
         "url": "/papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.html",
         "dir": "Diffusion_Policy",
         "arxiv": "2303.04137",
         "zhname": "Diffusion Policy：基于动作扩散的视觉运动策略学习"
-      },
-      {
-        "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
-        "path": "papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.md",
-        "url": "/papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.html",
-        "dir": "LCP_Sim-to-Real_Action_Smoothing",
-        "arxiv": "2410.11825",
-        "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
       },
       {
         "title": "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion",
@@ -99,20 +99,20 @@
         "zhname": "理解域随机化在仿真到现实迁移中的作用"
       },
       {
+        "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
+        "path": "papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.md",
+        "url": "/papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.html",
+        "dir": "LCP_Sim-to-Real_Action_Smoothing",
+        "arxiv": "2410.11825",
+        "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
+      },
+      {
         "title": "MimicKit: A Reinforcement Learning Framework for Motion Imitation and Control",
         "path": "papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.md",
         "url": "/papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.html",
         "dir": "MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control",
         "arxiv": "2510.13794",
         "zhname": "MimicKit：运动模仿与控制的强化学习框架"
-      },
-      {
-        "title": "PULSE: Universal Humanoid Motion Representations for Physics-Based Control",
-        "path": "papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.md",
-        "url": "/papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.html",
-        "dir": "PULSE_Physics-based_Universal_Latent_Space",
-        "arxiv": "2310.04582",
-        "zhname": "PULSE：物理可行的通用潜在技能提取"
       }
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research",
@@ -146,20 +146,20 @@
         "name": "Whole-Body Control Core",
         "papers": [
           {
-            "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
-            "path": "papers/03_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.md",
-            "url": "/papers/03_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.html",
-            "dir": "ExBody2_Advanced_Expressive_Whole-Body_Control",
-            "arxiv": "2412.13196",
-            "zhname": "ExBody2：进阶的表达性人形全身控制"
-          },
-          {
             "title": "Expressive Whole-Body Control for Humanoid Robots",
             "path": "papers/03_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.md",
             "url": "/papers/03_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.html",
             "dir": "Expressive_Whole-Body_Control_for_Humanoid_Robots",
             "arxiv": "2402.16796",
             "zhname": "人形机器人表现力全身控制"
+          },
+          {
+            "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
+            "path": "papers/03_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.md",
+            "url": "/papers/03_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.html",
+            "dir": "ExBody2_Advanced_Expressive_Whole-Body_Control",
+            "arxiv": "2412.13196",
+            "zhname": "ExBody2：进阶的表达性人形全身控制"
           }
         ],
         "zhname": "全身控制核心"
@@ -209,19 +209,19 @@
         "name": "Simulation Platform & Tools",
         "papers": [
           {
-            "title": "Isaac Lab: Unified GPU Simulation Platform for Robot Learning",
-            "path": "papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.md",
-            "url": "/papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.html",
-            "dir": "Isaac_Lab_GPU_Simulation",
-            "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
-          },
-          {
             "title": "ProtoMotions3: An Open-source Framework for Humanoid Simulation and Control",
             "path": "papers/03_High_Impact_Selection/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control.md",
             "url": "/papers/03_High_Impact_Selection/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control.html",
             "dir": "ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control",
             "arxiv": "2409.14393",
             "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架"
+          },
+          {
+            "title": "Isaac Lab: Unified GPU Simulation Platform for Robot Learning",
+            "path": "papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.md",
+            "url": "/papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.html",
+            "dir": "Isaac_Lab_GPU_Simulation",
+            "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
           }
         ],
         "zhname": "仿真平台与工具"
@@ -232,6 +232,54 @@
     "display_name": "Loco-Manipulation and WBC",
     "papers": [
       {
+        "title": "HERO: Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.html",
+        "dir": "Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation",
+        "arxiv": "2501.17173",
+        "zhname": "HERO：基于开放词汇视觉引导的人形机器人末端执行器控制"
+      },
+      {
+        "title": "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety",
+        "path": "papers/04_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.html",
+        "dir": "VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety",
+        "arxiv": "2602.16511",
+        "zhname": "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理"
+      },
+      {
+        "title": "LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations",
+        "path": "papers/04_Loco-Manipulation_and_WBC/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.html",
+        "dir": "LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations",
+        "arxiv": "2602.21723",
+        "zhname": "LessMimic：基于统一距离场表示的长时域人形交互"
+      },
+      {
+        "title": "OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.html",
+        "dir": "OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control",
+        "arxiv": "2602.23843",
+        "zhname": "OmniXtreme：突破高动态人形控制的通用性壁垒"
+      },
+      {
+        "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.html",
+        "dir": "ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation",
+        "arxiv": "2603.03279",
+        "zhname": "ULTRA：自主人形全身运动操作的统一多模态控制"
+      },
+      {
+        "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
+        "path": "papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.html",
+        "dir": "GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object",
+        "arxiv": "2511.04679",
+        "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
+      },
+      {
         "title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
         "path": "papers/04_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.html",
@@ -240,12 +288,36 @@
         "zhname": "LATENT：从不完美的人类动作数据中学习人形机器人网球运动技能"
       },
       {
+        "title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation.html",
+        "dir": "Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation",
+        "arxiv": "2603.12263",
+        "zhname": "Ψ₀：迈向通用人形机器人 Loco-Manipulation 的开源基础模型"
+      },
+      {
+        "title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual Reinforcement Learning",
+        "path": "papers/04_Loco-Manipulation_and_WBC/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid.html",
+        "dir": "SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid",
+        "arxiv": "2603.10306",
+        "zhname": "SteadyTray：用残差强化学习教人形机器人端着托盘稳稳走路"
+      },
+      {
         "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control Directly from Human Egocentric Video",
         "path": "papers/04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video/ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video.html",
         "dir": "ZeroWBC__Learning_Natural_Visuomotor_Humanoid_Control_from_Egocentric_Video",
         "arxiv": "2603.09170",
         "zhname": "ZeroWBC：直接从人类第一人称视频中学出\"零遥操作\"的人形视触运动控制"
+      },
+      {
+        "title": "Embedding Classical Balance Control Principles in Reinforcement Learning for Humanoid Recovery",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.html",
+        "dir": "Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery",
+        "arxiv": "2603.08619",
+        "zhname": "将经典平衡控制原理嵌入强化学习：用于人形机器人跌倒恢复"
       },
       {
         "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
@@ -280,78 +352,6 @@
         "zhname": "HAIC：通过动力学感知世界模型实现人形机器人敏捷物体交互控制"
       },
       {
-        "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
-        "path": "papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.html",
-        "dir": "GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object",
-        "arxiv": "2511.04679",
-        "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
-      },
-      {
-        "title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
-        "path": "papers/04_Loco-Manipulation_and_WBC/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation.html",
-        "dir": "Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation",
-        "arxiv": "2603.12263",
-        "zhname": "Ψ₀：迈向通用人形机器人 Loco-Manipulation 的开源基础模型"
-      },
-      {
-        "title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual Reinforcement Learning",
-        "path": "papers/04_Loco-Manipulation_and_WBC/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid.html",
-        "dir": "SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid",
-        "arxiv": "2603.10306",
-        "zhname": "SteadyTray：用残差强化学习教人形机器人端着托盘稳稳走路"
-      },
-      {
-        "title": "Embedding Classical Balance Control Principles in Reinforcement Learning for Humanoid Recovery",
-        "path": "papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery/Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery.html",
-        "dir": "Embedding_Classical_Balance_Control_Principles_in_RL_for_Humanoid_Recovery",
-        "arxiv": "2603.08619",
-        "zhname": "将经典平衡控制原理嵌入强化学习：用于人形机器人跌倒恢复"
-      },
-      {
-        "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
-        "path": "papers/04_Loco-Manipulation_and_WBC/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.html",
-        "dir": "ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation",
-        "arxiv": "2603.03279",
-        "zhname": "ULTRA：自主人形全身运动操作的统一多模态控制"
-      },
-      {
-        "title": "OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control",
-        "path": "papers/04_Loco-Manipulation_and_WBC/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.html",
-        "dir": "OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control",
-        "arxiv": "2602.23843",
-        "zhname": "OmniXtreme：突破高动态人形控制的通用性壁垒"
-      },
-      {
-        "title": "LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations",
-        "path": "papers/04_Loco-Manipulation_and_WBC/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.html",
-        "dir": "LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations",
-        "arxiv": "2602.21723",
-        "zhname": "LessMimic：基于统一距离场表示的长时域人形交互"
-      },
-      {
-        "title": "HERO: Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
-        "path": "papers/04_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.html",
-        "dir": "Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation",
-        "arxiv": "2501.17173",
-        "zhname": "HERO：基于开放词汇视觉引导的人形机器人末端执行器控制"
-      },
-      {
-        "title": "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety",
-        "path": "papers/04_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.html",
-        "dir": "VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety",
-        "arxiv": "2602.16511",
-        "zhname": "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理"
-      },
-      {
         "title": "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
         "path": "papers/04_Loco-Manipulation_and_WBC/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_.html",
@@ -366,12 +366,12 @@
     "display_name": "Locomotion",
     "papers": [
       {
-        "title": "ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots",
-        "path": "papers/05_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.md",
-        "url": "/papers/05_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.html",
-        "dir": "ANYmal_Parkour_Robust_Perceptive_Locomotion",
-        "arxiv": "2306.14874",
-        "zhname": "ANYmal 跑酷：足式机器人的敏捷导航学习"
+        "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
+        "path": "papers/05_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.md",
+        "url": "/papers/05_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.html",
+        "dir": "Learning_to_Walk_in_Minutes",
+        "arxiv": "2109.11978",
+        "zhname": "几分钟学会走路：大规模并行深度强化学习"
       },
       {
         "title": "Extreme Parkour with Legged Robots",
@@ -382,12 +382,12 @@
         "zhname": "足式机器人的极限跑酷"
       },
       {
-        "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
-        "path": "papers/05_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.md",
-        "url": "/papers/05_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.html",
-        "dir": "Learning_to_Walk_in_Minutes",
-        "arxiv": "2109.11978",
-        "zhname": "几分钟学会走路：大规模并行深度强化学习"
+        "title": "ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots",
+        "path": "papers/05_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.md",
+        "url": "/papers/05_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.html",
+        "dir": "ANYmal_Parkour_Robust_Perceptive_Locomotion",
+        "arxiv": "2306.14874",
+        "zhname": "ANYmal 跑酷：足式机器人的敏捷导航学习"
       }
     ],
     "zhname": "行走运动"

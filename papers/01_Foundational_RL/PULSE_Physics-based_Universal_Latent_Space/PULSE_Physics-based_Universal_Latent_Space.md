@@ -1,6 +1,6 @@
 ---
 layout: paper
-paper_order: 11
+paper_order: 9
 title: "Universal Humanoid Motion Representations for Physics-Based Control (PULSE)"
 category: "基础强化学习"
 zhname: "PULSE：物理可行的通用潜在技能提取"
