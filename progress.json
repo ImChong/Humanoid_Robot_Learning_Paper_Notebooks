@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 27,
-    "last_summary_date": "2026-04-29",
-    "last_summary_title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
-    "next_summary_index": 28,
+    "last_summary_index": 29,
+    "last_summary_date": "2026-05-01",
+    "last_summary_title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
+    "next_summary_index": 30,
     "log": [
       {
         "date": "2026-04-24",
@@ -56,10 +56,16 @@
         "index": 27,
         "title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
         "folder": "papers/04_Loco-Manipulation_and_WBC/HAIC__Humanoid_Agile_Object_Interaction_Control_via_Dynamics-Aware_World_Model"
+      },
+      {
+        "date": "2026-05-01",
+        "index": 29,
+        "title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_"
       }
     ],
-    "last_completed_index": 28,
-    "next_index": 29
+    "last_completed_index": 29,
+    "next_index": 30
   },
   "papers": [
     {
@@ -416,9 +422,9 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_",
       "note_file": "MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_.md",
       "pdf_file": "MOSAIC.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-05-01",
       "route": "Loco-Manipulation",
       "title_cn": ""
     },
