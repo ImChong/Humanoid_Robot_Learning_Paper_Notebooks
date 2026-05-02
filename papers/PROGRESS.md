@@ -113,7 +113,7 @@
 | 37   | [HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model](https://arxiv.org/abs/2602.11758)                                               | 2026-04-29 |     | ✅ 完成 |
 | 38   | [EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration](https://arxiv.org/abs/2602.10106)                                | 2026-04-29 |     | ✅ 完成 |
 | 39   | [MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation](https://arxiv.org/abs/2602.08594) | 2026-05-01 |     | ✅ 完成 |
-| 40   | [Learning Human-Like Badminton Skills for Humanoid Robots](https://arxiv.org/abs/2602.08370)                                                                     | 2026.02    |     | ⏳ 待读 |
+| 40   | [Learning Human-Like Badminton Skills for Humanoid Robots](https://arxiv.org/abs/2602.08370)                                                                     | 2026-05-02 |     | ✅ 完成 |
 | 41   | [TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control](https://arxiv.org/abs/2602.07439)                                       | 2026.02    |     | ⏳ 待读 |
 | 42   | [Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations](https://arxiv.org/abs/2602.06643)                             | 2026.02    |     | ⏳ 待读 |
 | 43   | [HiWET: Hierarchical World-Frame End-Effector Tracking for Long-Horizon Humanoid Loco-Manipulation](https://arxiv.org/abs/2602.06341)                            | 2026.02    |     | ⏳ 待读 |

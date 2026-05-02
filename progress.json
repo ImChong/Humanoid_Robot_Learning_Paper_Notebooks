@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 29,
-    "last_summary_date": "2026-05-01",
-    "last_summary_title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
-    "next_summary_index": 30,
+    "last_summary_index": 30,
+    "last_summary_date": "2026-05-02",
+    "last_summary_title": "Learning Human-Like Badminton Skills for Humanoid Robots",
+    "next_summary_index": 31,
     "log": [
       {
         "date": "2026-04-24",
@@ -62,6 +62,12 @@
         "index": 29,
         "title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
         "folder": "papers/04_Loco-Manipulation_and_WBC/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_"
+      },
+      {
+        "date": "2026-05-02",
+        "index": 30,
+        "title": "Learning Human-Like Badminton Skills for Humanoid Robots",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots"
       }
     ],
     "last_completed_index": 29,
@@ -434,9 +440,9 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots",
       "note_file": "Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots.md",
       "pdf_file": "Learning.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-05-02",
       "route": "Loco-Manipulation",
       "title_cn": ""
     },
