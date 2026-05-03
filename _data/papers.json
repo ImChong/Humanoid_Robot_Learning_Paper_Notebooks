@@ -99,6 +99,14 @@
         "zhname": "理解域随机化在仿真到现实迁移中的作用"
       },
       {
+        "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
+        "path": "papers/01_Foundational_RL/Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_the_Real_World/Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_the_Real_World.md",
+        "url": "/papers/01_Foundational_RL/Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_the_Real_World/Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_the_Real_World.html",
+        "dir": "Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_the_Real_World",
+        "arxiv": "1703.06907",
+        "zhname": "域随机化：从仿真到真实世界的深度神经网络迁移"
+      },
+      {
         "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
         "path": "papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.md",
         "url": "/papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.html",
@@ -320,6 +328,14 @@
         "zhname": "将经典平衡控制原理嵌入强化学习：用于人形机器人跌倒恢复"
       },
       {
+        "title": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Humanoid_Manipulation_Interface__Humanoid_Whole-Body_Manipulation_from_Robot-Fre/Humanoid_Manipulation_Interface__Humanoid_Whole-Body_Manipulation_from_Robot-Fre.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Humanoid_Manipulation_Interface__Humanoid_Whole-Body_Manipulation_from_Robot-Fre/Humanoid_Manipulation_Interface__Humanoid_Whole-Body_Manipulation_from_Robot-Fre.html",
+        "dir": "Humanoid_Manipulation_Interface__Humanoid_Whole-Body_Manipulation_from_Robot-Fre",
+        "arxiv": "2602.06643",
+        "zhname": "Humanoid Manipulation Interface: 基于无机器人演示的人形机器人全身操作"
+      },
+      {
         "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
         "path": "papers/04_Loco-Manipulation_and_WBC/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching/Perceptive_Humanoid_Parkour__Chaining_Dynamic_Human_Skills_via_Motion_Matching.html",
@@ -358,6 +374,30 @@
         "dir": "EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_",
         "arxiv": "2602.10106",
         "zhname": "EgoHumanoid：利用免机器人第一视角示范解锁野外环境全身操作"
+      },
+      {
+        "title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_.html",
+        "dir": "MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_",
+        "arxiv": "2602.08594",
+        "zhname": "MOSAIC：通过快速残差自适应弥合通用人形运动跟踪与遥操作的仿真到真实差距"
+      },
+      {
+        "title": "Learning Human-Like Badminton Skills for Humanoid Robots",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots.html",
+        "dir": "Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots",
+        "arxiv": "2602.08370",
+        "zhname": "面向仿人机器人的类人羽毛球技能学习"
+      },
+      {
+        "title": "TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C.html",
+        "dir": "TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C",
+        "arxiv": "2602.07439",
+        "zhname": "TextOp：实时交互式文本驱动人形机器人动作生成与控制"
       }
     ],
     "zhname": "运动操作与全身控制"
