@@ -204,7 +204,10 @@ def process_papers():
 
                 # Add front matter if not present
                 if not has_frontmatter(content):
-                    frontmatter = f'---\nlayout: paper\ntitle: "{title}"\ncategory: "{category_display}"\n---\n\n'
+                    # Use json.dumps to safely escape title and category for YAML
+                    safe_title = json.dumps(title, ensure_ascii=False)
+                    safe_category = json.dumps(category_display, ensure_ascii=False)
+                    frontmatter = f'---\nlayout: paper\ntitle: {safe_title}\ncategory: {safe_category}\n---\n\n'
                     with open(fpath, 'w', encoding='utf-8') as f:
                         f.write(frontmatter + content)
                     print(f"  Added front matter: {fpath}")
