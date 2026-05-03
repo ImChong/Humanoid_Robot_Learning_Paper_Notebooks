@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 31,
-    "last_summary_date": "2026-05-03",
-    "last_summary_title": "TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control",
-    "next_summary_index": 32,
+    "last_summary_index": 32,
+    "last_summary_date": "2026-05-04",
+    "last_summary_title": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
+    "next_summary_index": 33,
     "log": [
       {
         "date": "2026-04-24",
@@ -74,6 +74,12 @@
         "index": 31,
         "title": "TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control",
         "folder": "papers/04_Loco-Manipulation_and_WBC/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C"
+      },
+      {
+        "date": "2026-05-04",
+        "index": 32,
+        "title": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/Humanoid_Manipulation_Interface__Humanoid_Whole-Body_Manipulation_from_Robot-Fre"
       }
     ],
     "last_completed_index": 29,
@@ -434,7 +440,7 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_",
       "note_file": "MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_.md",
       "pdf_file": "MOSAIC.pdf",
-      "status": "done",
+      "status": "pending",
       "start_date": null,
       "done_date": "2026-05-01",
       "route": "Loco-Manipulation",
@@ -446,7 +452,7 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots",
       "note_file": "Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots.md",
       "pdf_file": "Learning.pdf",
-      "status": "done",
+      "status": "pending",
       "start_date": null,
       "done_date": "2026-05-02",
       "route": "Loco-Manipulation",
@@ -458,7 +464,7 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C",
       "note_file": "TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C.md",
       "pdf_file": "TextOp.pdf",
-      "status": "done",
+      "status": "pending",
       "start_date": null,
       "done_date": "2026-05-03",
       "route": "Loco-Manipulation",
@@ -472,7 +478,7 @@
       "pdf_file": "Humanoid.pdf",
       "status": "pending",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-05-04",
       "route": "Loco-Manipulation",
       "title_cn": ""
     },
