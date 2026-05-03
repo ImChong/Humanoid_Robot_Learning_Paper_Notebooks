@@ -167,7 +167,7 @@ def process_papers():
                     for p in sc.get('papers', []):
                         existing_paper_meta[p.get('title')] = p
                         existing_paper_meta[p.get('path')] = p
-        except Exception:
+        except (OSError, json.JSONDecodeError, UnicodeDecodeError):
             pass
 
     if not os.path.exists(PAPERS_DIR):
