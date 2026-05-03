@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 30,
-    "last_summary_date": "2026-05-02",
-    "last_summary_title": "Learning Human-Like Badminton Skills for Humanoid Robots",
-    "next_summary_index": 31,
+    "last_summary_index": 31,
+    "last_summary_date": "2026-05-03",
+    "last_summary_title": "TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control",
+    "next_summary_index": 32,
     "log": [
       {
         "date": "2026-04-24",
@@ -68,6 +68,12 @@
         "index": 30,
         "title": "Learning Human-Like Badminton Skills for Humanoid Robots",
         "folder": "papers/04_Loco-Manipulation_and_WBC/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots"
+      },
+      {
+        "date": "2026-05-03",
+        "index": 31,
+        "title": "TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C"
       }
     ],
     "last_completed_index": 29,
@@ -452,9 +458,9 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C",
       "note_file": "TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C.md",
       "pdf_file": "TextOp.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
-      "done_date": null,
+      "done_date": "2026-05-03",
       "route": "Loco-Manipulation",
       "title_cn": ""
     },
