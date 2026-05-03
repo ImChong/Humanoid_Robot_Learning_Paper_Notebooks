@@ -8,3 +8,5 @@ Gemfile.lock
 .sass-cache/
 vendor/bundle/
 .bundle/config
+__pycache__/
+*.pyc
