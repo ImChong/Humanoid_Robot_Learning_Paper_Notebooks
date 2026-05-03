@@ -225,12 +225,19 @@ def process_papers():
                 if explicit_order:
                     order_idx = int(explicit_order.group(1))
 
+                # Extract subcategory from front matter if present
+                paper_subcat = None
+                sm_match = re.search(r'^subcategory:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
+                if sm_match:
+                    paper_subcat = sm_match.group(1).strip()
+
                 paper_entry = {
                     'title': title,
                     'path': rel_path,
                     'url': url_path,
                     'dir': paper_dir,
-                    '_order': order_idx
+                    '_order': order_idx,
+                    '_subcategory': paper_subcat
                 }
 
                 existing_meta_for_paper = existing_paper_meta.get(title) or existing_paper_meta.get(rel_path) or {}
@@ -253,10 +260,6 @@ def process_papers():
 
         # Sort by README order
         papers.sort(key=lambda p: p['_order'])
-        # Remove internal _order field
-        for p in papers:
-            del p['_order']
-
         # Load existing category meta (subtitle, subcategories) from current papers.json
         existing_meta = existing_papers_json.get(category_dir, {})
 
@@ -293,16 +296,7 @@ def process_papers():
             subcat_map = {s['name']: s for s in subcats}
             ungrouped = []
             for paper in papers:
-                # Read paper front matter to get subcategory
-                paper_subcat = None
-                try:
-                    with open(os.path.join(BASE_DIR, paper['path']), 'r', encoding='utf-8') as pf:
-                        pcontent = pf.read()
-                    fm_match = re.search(r'^subcategory:\s*["\']?(.+?)["\']?\s*$', pcontent, re.MULTILINE)
-                    if fm_match:
-                        paper_subcat = fm_match.group(1).strip()
-                except Exception:
-                    pass
+                paper_subcat = paper.get('_subcategory')
                 if paper_subcat and paper_subcat in subcat_map:
                     subcat_map[paper_subcat]['papers'].append(paper)
                 else:
@@ -310,6 +304,13 @@ def process_papers():
             entry['subcategories'] = subcats
             # ungrouped papers stay in top-level papers list
             entry['papers'] = ungrouped
+
+        # Remove internal fields
+        for p in papers:
+            if '_order' in p:
+                del p['_order']
+            if '_subcategory' in p:
+                del p['_subcategory']
 
         index_data[category_dir] = entry
 
