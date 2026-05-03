@@ -167,7 +167,7 @@ def process_papers():
                     for p in sc.get('papers', []):
                         existing_paper_meta[p.get('title')] = p
                         existing_paper_meta[p.get('path')] = p
-        except Exception:
+        except (OSError, json.JSONDecodeError, UnicodeDecodeError):
             pass
 
     if not os.path.exists(PAPERS_DIR):
@@ -301,7 +301,7 @@ def process_papers():
                     fm_match = re.search(r'^subcategory:\s*["\']?(.+?)["\']?\s*$', pcontent, re.MULTILINE)
                     if fm_match:
                         paper_subcat = fm_match.group(1).strip()
-                except Exception:
+                except (OSError, UnicodeDecodeError):
                     pass
                 if paper_subcat and paper_subcat in subcat_map:
                     subcat_map[paper_subcat]['papers'].append(paper)
