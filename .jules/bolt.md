@@ -1,0 +1,3 @@
+## 2024-05-18 - Throttling Scroll and Debouncing Search in Jekyll index.html
+**Learning:** In a static site architecture like Jekyll where all content is rendered into a single HTML file and filtered via client-side JavaScript, synchronous DOM manipulations tied to high-frequency events (`scroll` and `input`) create severe main-thread bottlenecks, especially on long pages with many elements (like a large paper index).
+**Action:** Always wrap `scroll` event listeners in `requestAnimationFrame` with a ticking flag, and implement caching (e.g., `lastActive`) to only write to the DOM when state actually changes. Always wrap `input` event listeners for text filtering in a `setTimeout` debounce to delay expensive DOM updates until the user pauses typing.

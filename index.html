@@ -186,17 +186,21 @@ title: "Home"
   var categories = document.querySelectorAll('.category-section');
   var paperItems = document.querySelectorAll('.paper-list li[data-search]');
 
+  var searchTimeout;
+  // ⚡ Bolt Optimization: Debounce search input to prevent rapid, expensive DOM updates on every keystroke
   searchInput.addEventListener('input', function() {
-    var query = searchInput.value.toLowerCase().trim();
-    var hasAnyMatch = false;
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(function() {
+      var query = searchInput.value.toLowerCase().trim();
+      var hasAnyMatch = false;
 
-    // Handle roadmap TOC item
-    var roadmapTocItem = document.querySelector('.toc-item[data-toc-for="roadmap-title"]');
-    if (roadmapTocItem) {
-      roadmapTocItem.style.display = query === '' ? '' : 'none';
-    }
+      // Handle roadmap TOC item
+      var roadmapTocItem = document.querySelector('.toc-item[data-toc-for="roadmap-title"]');
+      if (roadmapTocItem) {
+        roadmapTocItem.style.display = query === '' ? '' : 'none';
+      }
 
-    categories.forEach(function(cat) {
+      categories.forEach(function(cat) {
       var catHasMatch = false;
       var catTotalMatch = 0;
       var subcategories = cat.querySelectorAll('.subcategory-section');
@@ -255,9 +259,10 @@ title: "Home"
         var countEl = catTocItem.querySelector('.toc-count');
         if (countEl) countEl.textContent = '(' + catTotalMatch + ')';
       }
-    });
+      });
 
-    noResults.style.display = hasAnyMatch || query === '' ? 'none' : 'block';
+      noResults.style.display = hasAnyMatch || query === '' ? 'none' : 'block';
+    }, 150);
   });
 
   var sidebar = document.getElementById('toc-sidebar');
@@ -271,6 +276,7 @@ title: "Home"
   });
   if (targets.length === 0) return;
 
+  var lastActive = -1;
   function updateActive() {
     // Probe just below the sticky header so the link reflects whatever
     // section is currently anchored at the top of the viewport.
@@ -279,11 +285,27 @@ title: "Home"
     for (var i = 0; i < targets.length; i++) {
       if (targets[i].el.getBoundingClientRect().top <= probeY) current = i;
     }
-    targets.forEach(function(t, idx) {
-      t.link.classList.toggle('active', idx === current);
-    });
+
+    // Only update DOM if the active section actually changed
+    if (current !== lastActive) {
+      targets.forEach(function(t, idx) {
+        t.link.classList.toggle('active', idx === current);
+      });
+      lastActive = current;
+    }
   }
-  window.addEventListener('scroll', updateActive);
+
+  var ticking = false;
+  // ⚡ Bolt Optimization: Throttle scroll event listener using requestAnimationFrame to prevent multiple calls per frame
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
   updateActive();
 })();
 </script>
