@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 32,
-    "last_summary_date": "2026-05-04",
-    "last_summary_title": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
-    "next_summary_index": 33,
+    "last_summary_index": 34,
+    "last_summary_date": "2026-05-05",
+    "last_summary_title": "Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework",
+    "next_summary_index": 35,
     "log": [
       {
         "date": "2026-04-24",
@@ -80,6 +80,12 @@
         "index": 32,
         "title": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
         "folder": "papers/04_Loco-Manipulation_and_WBC/Humanoid_Manipulation_Interface__Humanoid_Whole-Body_Manipulation_from_Robot-Fre"
+      },
+      {
+        "date": "2026-05-05",
+        "index": 34,
+        "title": "Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr"
       }
     ],
     "last_completed_index": 29,
@@ -496,11 +502,11 @@
     },
     {
       "title": "Learning Soccer Skills for Humanoid Robots:   A Progressive Perception-Action Framework",
-      "arxiv": "Learning Soccer Skills for Humanoid Robots:   A Progressive Perception-Action Framework",
+      "arxiv": "https://arxiv.org/abs/2602.05310",
       "folder": "papers/04_Loco-Manipulation_and_WBC/Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr",
       "note_file": "Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr.md",
       "pdf_file": "Learning.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
