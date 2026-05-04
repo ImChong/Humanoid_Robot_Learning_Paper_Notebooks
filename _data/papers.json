@@ -398,6 +398,22 @@
         "dir": "TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C",
         "arxiv": "2602.07439",
         "zhname": "TextOp：实时交互式文本驱动人形机器人动作生成与控制"
+      },
+      {
+        "title": "HiWET: Hierarchical World-Frame End-Effector Tracking for Long-Horizon Humanoid Loco-Manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/HiWET__Hierarchical_World-Frame_End-Effector_Tracking_for_Long-Horizon_Humanoid_Loco-Manipulation/HiWET__Hierarchical_World-Frame_End-Effector_Tracking_for_Long-Horizon_Humanoid_Loco-Manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/HiWET__Hierarchical_World-Frame_End-Effector_Tracking_for_Long-Horizon_Humanoid_Loco-Manipulation/HiWET__Hierarchical_World-Frame_End-Effector_Tracking_for_Long-Horizon_Humanoid_Loco-Manipulation.html",
+        "dir": "HiWET__Hierarchical_World-Frame_End-Effector_Tracking_for_Long-Horizon_Humanoid_Loco-Manipulation",
+        "arxiv": "2602.06341",
+        "zhname": "HiWET：面向长时域人形机器人运动-操作的层级式世界坐标末端执行器跟踪"
+      },
+      {
+        "title": "Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr/Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr/Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr.html",
+        "dir": "Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr",
+        "arxiv": "2602.05310",
+        "zhname": "面向仿人机器人足球技能的渐进式感知-动作学习框架"
       }
     ],
     "zhname": "运动操作与全身控制"
