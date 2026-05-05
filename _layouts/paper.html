@@ -176,6 +176,7 @@ layout: default
     });
   });
 
+  var lastActive = -1;
   function updateActive() {
     var scrollPos = window.scrollY + 100;
     var current = -1;
@@ -184,12 +185,27 @@ layout: default
         current = i;
       }
     }
-    links.forEach(function(link, idx) {
-      link.classList.toggle('active', idx === current);
-    });
+
+    // ⚡ Bolt Optimization: Only update DOM if the active section actually changed
+    if (current !== lastActive) {
+      links.forEach(function(link, idx) {
+        link.classList.toggle('active', idx === current);
+      });
+      lastActive = current;
+    }
   }
 
-  window.addEventListener('scroll', updateActive);
+  var ticking = false;
+  // ⚡ Bolt Optimization: Throttle scroll event listener using requestAnimationFrame to prevent multiple calls per frame
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
   updateActive();
 })();
 </script>
