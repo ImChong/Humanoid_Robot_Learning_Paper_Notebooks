@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 34,
-    "last_summary_date": "2026-05-05",
-    "last_summary_title": "Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework",
-    "next_summary_index": 35,
+    "last_summary_index": 35,
+    "last_summary_date": "2026-05-06",
+    "last_summary_title": "PDF-HR: Pose Distance Fields for Humanoid Robots",
+    "next_summary_index": 36,
     "log": [
       {
         "date": "2026-04-24",
@@ -86,6 +86,12 @@
         "index": 34,
         "title": "Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework",
         "folder": "papers/04_Loco-Manipulation_and_WBC/Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr"
+      },
+      {
+        "date": "2026-05-06",
+        "index": 35,
+        "title": "PDF-HR: Pose Distance Fields for Humanoid Robots",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots"
       }
     ],
     "last_completed_index": 29,
@@ -514,15 +520,15 @@
     },
     {
       "title": "PDF-HR: Pose Distance Fields for Humanoid Robots",
-      "arxiv": "PDF-HR: Pose Distance Fields for Humanoid Robots",
+      "arxiv": "https://arxiv.org/abs/2602.04851",
       "folder": "papers/04_Loco-Manipulation_and_WBC/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots",
       "note_file": "PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots.md",
       "pdf_file": "PDF-HR.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-05-06",
+      "done_date": "2026-05-06",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "PDF-HR：面向人形机器人的姿态距离场先验"
     },
     {
       "title": "HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control",

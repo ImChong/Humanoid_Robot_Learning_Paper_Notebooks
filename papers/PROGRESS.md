@@ -118,7 +118,7 @@
 | 42   | [Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations](https://arxiv.org/abs/2602.06643)                             | 2026-05-04 |     | ✅ 完成 |
 | 43   | [HiWET: Hierarchical World-Frame End-Effector Tracking for Long-Horizon Humanoid Loco-Manipulation](https://arxiv.org/abs/2602.06341)                            | 2026-05-04 |     | ✅ 完成 |
 | 44   | [Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework](https://arxiv.org/abs/2602.05310)                                        | 2026.02    |     | ⏳ 待读 |
-| 45   | [PDF-HR: Pose Distance Fields for Humanoid Robots](https://arxiv.org/abs/2602.04851)                                                                             | 2026.02    |     | ⏳ 待读 |
+| 45   | [PDF-HR: Pose Distance Fields for Humanoid Robots](https://arxiv.org/abs/2602.04851)                                                                             | 2026-05-06 |     | ✅ 完成 |
 | 46   | [HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control](https://arxiv.org/abs/2602.03205)                                                    | 2026.02    |     | ⏳ 待读 |
 | 47   | [Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control](https://arxiv.org/abs/2602.02960)                                  | 2026.02    |     | ⏳ 待读 |
 | 48   | [HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos](https://arxiv.org/abs/2602.02473)                                         | 2026.02    |     | ⏳ 待读 |
