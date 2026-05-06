@@ -285,12 +285,20 @@
         var html = el.innerHTML;
         // Only process if there's a math delimiter that suggests math content
         if (html.indexOf('$') === -1 && html.indexOf('\\(') === -1 && html.indexOf('\\[') === -1) return;
+
+        // ⚡ Bolt Optimization: Early return if there are no HTML entities to replace, preventing expensive regex execution.
+        if (html.indexOf('&gt;') === -1 && html.indexOf('&lt;') === -1 && html.indexOf('&amp;') === -1) return;
+
         // Replace HTML entities back inside math delimiters (only if they are inside math blocks)
         var mathRegex = /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\$[\s\S]*?\$|\\\([\s\S]*?\\\))/g;
-        html = html.replace(mathRegex, function(match) {
+        var newHtml = html.replace(mathRegex, function(match) {
           return match.replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
         });
-        el.innerHTML = html;
+
+        // ⚡ Bolt Optimization: Only mutate DOM if string actually changed to prevent layout thrashing
+        if (newHtml !== html) {
+          el.innerHTML = newHtml;
+        }
       });
 
       renderMathInElement(document.body, {
