@@ -1,0 +1,49 @@
+# Recommended reading order for the on-page prev/next paper navigation.
+#
+# Each entry is rendered into the <script type="application/json"
+# id="paper-nav-data"> block in _layouts/paper.html and consumed by
+# assets/js/paper.js.
+#
+# `path` is relative to the site root (no baseurl); the layout prepends the
+# site baseurl via Jekyll's `relative_url` filter so this file is portable
+# across deploys.
+
+- short: PPO
+  title: "Proximal Policy Optimization (PPO)"
+  path: /papers/01_Foundational_RL/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.html
+- short: AWR
+  title: "Advantage Weighted Regression (AWR)"
+  path: /papers/01_Foundational_RL/AWR_Advantage_Weighted_Regression/AWR_Advantage_Weighted_Regression.html
+- short: DeepMimic
+  title: "DeepMimic"
+  path: /papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.html
+- short: AMP
+  title: "Adversarial Motion Priors (AMP)"
+  path: /papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.html
+- short: PHC
+  title: "Perpetual Humanoid Control (PHC)"
+  path: /papers/01_Foundational_RL/PHC_Perpetual_Humanoid_Control/PHC_Perpetual_Humanoid_Control.html
+- short: ASE
+  title: "Adversarial Skill Embeddings (ASE)"
+  path: /papers/01_Foundational_RL/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.html
+- short: ADD
+  title: "Adversarial Disentanglement and Distillation (ADD)"
+  path: /papers/01_Foundational_RL/ADD_Adversarial_Differential_Discriminators/ADD_Adversarial_Differential_Discriminators.html
+- short: Expressive
+  title: "Expressive Whole-Body Control"
+  path: /papers/03_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.html
+- short: VIGOR
+  title: "VIGOR"
+  path: /papers/04_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.html
+- short: HERO/LEEC
+  title: "HERO (Learning Humanoid End-Effector Control)"
+  path: /papers/04_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.html
+- short: LessMimic
+  title: "LessMimic"
+  path: /papers/04_Loco-Manipulation_and_WBC/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.html
+- short: OmniXtreme
+  title: "OmniXtreme"
+  path: /papers/04_Loco-Manipulation_and_WBC/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.html
+- short: ULTRA
+  title: "ULTRA"
+  path: /papers/04_Loco-Manipulation_and_WBC/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation/ULTRA_Unified_Multimodal_Control_for_Autonomous_Humanoid_Whole-Body_Loco-Manipulation.html
