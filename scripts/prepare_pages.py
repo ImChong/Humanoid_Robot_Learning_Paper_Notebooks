@@ -5,20 +5,25 @@ Prepare paper markdown files for Jekyll:
 2. Generate index data (category -> papers mapping) ordered by README appearance
 """
 
+import json
 import os
 import re
-import json
+import sys
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PAPERS_DIR = os.path.join(BASE_DIR, 'papers')
+# Allow running both as a script (``python scripts/prepare_pages.py``) and as a
+# module (``from scripts.prepare_pages import normalize_name`` in tests).
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _common import (  # noqa: E402
+    BASE_DIR,
+    PAPERS_DIR,
+    SKIP_DIRS,
+    has_frontmatter,
+    is_stub,
+    normalize_name,
+    stub_reason,
+)
+
 PROGRESS_PATH = os.path.join(PAPERS_DIR, 'PROGRESS.md')
-
-SKIP_DIRS = {'todos'}
-
-
-def has_frontmatter(content):
-    """Check if file already has Jekyll front matter."""
-    return content.startswith('---\n') or content.startswith('---\r\n')
 
 
 def extract_title(content):
@@ -32,6 +37,12 @@ def extract_title(content):
     if match:
         return match.group(1).strip()
     return None
+
+
+# ``is_stub`` and ``normalize_name`` are now provided by ``_common``; we keep
+# this module-level binding so ``from scripts.prepare_pages import normalize_name``
+# (used by tests) still works.
+_ = (is_stub, normalize_name)  # re-exported for backwards compatibility
 
 
 def extract_arxiv(content):
@@ -102,14 +113,6 @@ def parse_progress_order():
     return order
 
 
-def normalize_name(name):
-    """Normalize a name for fuzzy matching."""
-    name = name.lower()
-    name = re.sub(r'[^a-z0-9\s]', '', name)
-    name = re.sub(r'\s+', ' ', name).strip()
-    return name
-
-
 def match_paper_order(paper_title, paper_dir, progress_order):
     """Find the README order index for a paper. Lower = earlier in README."""
     # Try matching by title
@@ -129,20 +132,15 @@ def match_paper_order(paper_title, paper_dir, progress_order):
 
 
 def check_stub(fpath, content):
-    """Print [STUB] warning if note looks like an unfilled skeleton.
+    """Print ``[STUB]`` warning if a note looks like an unfilled skeleton.
 
-    Triggers when ANY of:
-      1. < 150 lines AND missing '## 方法详解' heading.
-      2. 🚧 marker count >= 5 (skeleton placeholder density).
+    Delegates the actual rule to :func:`_common.stub_reason` so all maintenance
+    scripts share a single source of truth.
     """
-    line_count = content.count('\n') + 1
-    has_method = bool(re.search(r'^##\s*(?:🔧|🛠️)?\s*.*方法', content, re.MULTILINE))
-    construction_count = content.count('🚧')
-    rel = os.path.relpath(fpath, BASE_DIR)
-    if line_count < 150 and not has_method:
-        print(f"  [STUB] {rel} ({line_count} lines, missing 方法详解)")
-    elif construction_count >= 5:
-        print(f"  [STUB] {rel} ({construction_count} 🚧 markers, skeleton)")
+    reason = stub_reason(content)
+    if reason:
+        rel = os.path.relpath(fpath, BASE_DIR)
+        print(f"  [STUB] {rel} ({reason})")
 
 
 def process_papers():
