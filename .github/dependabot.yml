@@ -1,0 +1,57 @@
+version: 2
+updates:
+  # Track third-party GitHub Actions for CVE patches and major-version bumps.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Shanghai"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(actions)"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    groups:
+      actions-minor:
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Track Jekyll / jekyll-seo-tag and other RubyGems used by GitHub Pages.
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Shanghai"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(gems)"
+    labels:
+      - "dependencies"
+      - "ruby"
+    groups:
+      bundler-minor:
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Track Python dev dependencies (pytest / ruff) once requirements-dev.txt
+  # exists. Dependabot tolerates a missing manifest gracefully.
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Shanghai"
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "chore(pip)"
+    labels:
+      - "dependencies"
+      - "python"
