@@ -1,6 +1,6 @@
+import glob
 import json
 import os
-import glob
 
 PROGRESS_FILE = 'progress.json'
 PAPERS_DIR = 'papers'
@@ -16,7 +16,7 @@ def is_stub(content):
     return False
 
 def sync():
-    with open(PROGRESS_FILE, 'r') as f:
+    with open(PROGRESS_FILE) as f:
         progress = json.load(f)
 
     # Index existing papers by folder or title
@@ -26,14 +26,14 @@ def sync():
 
     # Walk papers dir
     md_files = glob.glob(os.path.join(PAPERS_DIR, '**/*.md'), recursive=True)
-    
+
     # Filter out PROGRESS.md if any
     md_files = [f for f in md_files if 'PROGRESS.md' not in f and 'todos' not in f]
 
     for md_path in md_files:
-        with open(md_path, 'r') as f:
+        with open(md_path) as f:
             content = f.read()
-        
+
         # Simple front matter parser
         title = ""
         category = ""
@@ -42,10 +42,10 @@ def sync():
                 title = line.split(':', 1)[1].strip().strip('"')
             if line.startswith('category:'):
                 category = line.split(':', 1)[1].strip().strip('"')
-        
+
         folder = os.path.dirname(md_path)
         note_file = os.path.basename(md_path)
-        
+
         idx = folder_map.get(folder)
         if idx is None:
             # Try matching by title (vague match)
@@ -53,9 +53,9 @@ def sync():
                 if t in title or title in t:
                     idx = title_map[t]
                     break
-        
+
         status = 'done' if not is_stub(content) else 'pending'
-        
+
         if idx is not None:
             # Update existing
             papers_in_json[idx]['status'] = status
