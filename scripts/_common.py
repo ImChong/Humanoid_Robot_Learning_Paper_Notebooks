@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import os
 import re
-from typing import Iterator
+from collections.abc import Iterator
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAPERS_DIR = os.path.join(BASE_DIR, 'papers')

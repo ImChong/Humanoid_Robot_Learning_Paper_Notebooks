@@ -74,7 +74,7 @@ def parse_progress_order():
     if not os.path.exists(PROGRESS_PATH):
         return {}
 
-    with open(PROGRESS_PATH, 'r', encoding='utf-8') as f:
+    with open(PROGRESS_PATH, encoding='utf-8') as f:
         content = f.read()
 
     # Extract all paper names mentioned in table rows (| # | paper_name | ... |)
@@ -154,7 +154,7 @@ def process_papers():
     existing_paper_meta = {}  # title/path -> metadata from existing data
     if os.path.exists(existing_papers_json_path):
         try:
-            with open(existing_papers_json_path, 'r', encoding='utf-8') as f:
+            with open(existing_papers_json_path, encoding='utf-8') as f:
                 existing_papers_json = json.load(f)
             # Build metadata lookup from all papers (top-level and subcategory)
             for cat_data in existing_papers_json.values():
@@ -193,7 +193,7 @@ def process_papers():
 
                 fpath = os.path.join(paper_path, fname)
 
-                with open(fpath, 'r', encoding='utf-8') as f:
+                with open(fpath, encoding='utf-8') as f:
                     content = f.read()
 
                 check_stub(fpath, content)

@@ -22,7 +22,7 @@ PROGRESS_FILE = os.path.join(BASE_DIR, 'progress.json')
 
 
 def sync():
-    with open(PROGRESS_FILE, 'r', encoding='utf-8') as f:
+    with open(PROGRESS_FILE, encoding='utf-8') as f:
         progress = json.load(f)
 
     papers_in_json = progress['papers']
@@ -30,7 +30,7 @@ def sync():
     title_map = {p['title']: i for i, p in enumerate(papers_in_json)}
 
     for md_path in iter_paper_md_files(PAPERS_DIR):
-        with open(md_path, 'r', encoding='utf-8') as f:
+        with open(md_path, encoding='utf-8') as f:
             content = f.read()
 
         front = parse_frontmatter(content)
