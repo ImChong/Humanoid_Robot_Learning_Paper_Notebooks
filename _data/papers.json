@@ -414,6 +414,14 @@
         "dir": "Learning_Soccer_Skills_for_Humanoid_Robots____A_Progressive_Perception-Action_Fr",
         "arxiv": "2602.05310",
         "zhname": "面向仿人机器人足球技能的渐进式感知-动作学习框架"
+      },
+      {
+        "title": "PDF-HR: Pose Distance Fields for Humanoid Robots",
+        "path": "papers/04_Loco-Manipulation_and_WBC/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots.html",
+        "dir": "PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots",
+        "arxiv": "2602.04851",
+        "zhname": "PDF-HR：面向人形机器人的姿态距离场先验"
       }
     ],
     "zhname": "运动操作与全身控制"
