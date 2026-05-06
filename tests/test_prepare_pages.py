@@ -1,10 +1,6 @@
-import os
-import sys
+"""Tests for the pure helpers in ``scripts.prepare_pages``."""
 
-# Add the project root to sys.path to import from scripts
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from scripts.prepare_pages import normalize_name  # noqa: E402
+from scripts.prepare_pages import normalize_name
 
 
 def test_normalize_name_basic():

@@ -1,0 +1,43 @@
+[project]
+name = "humanoid-robot-learning-paper-notebooks"
+version = "0.0.0"
+description = "Maintenance scripts for the Jekyll-based humanoid robot learning paper notebook site."
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = [
+    "_site",
+    ".jekyll-cache",
+    "vendor",
+    "papers",
+    "skills",
+    ".agents",
+    ".claude",
+    ".jules",
+    ".windsurf",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "W",   # pycodestyle warnings
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+]
+ignore = [
+    "E501",  # line-length handled by formatter / line-length cap; long URLs in tests etc.
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E402"]  # tests append sys.path before imports
+
+[tool.ruff.lint.isort]
+known-first-party = ["scripts"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
