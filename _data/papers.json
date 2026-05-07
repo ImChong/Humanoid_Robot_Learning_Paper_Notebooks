@@ -422,6 +422,14 @@
         "dir": "PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots",
         "arxiv": "2602.04851",
         "zhname": "PDF-HR：面向人形机器人的姿态距离场先验"
+      },
+      {
+        "title": "HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control.html",
+        "dir": "HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control",
+        "arxiv": "2602.03205",
+        "zhname": "HUSKY：基于物理感知全身控制的人形滑板系统"
       }
     ],
     "zhname": "运动操作与全身控制"

@@ -26,6 +26,7 @@
 | 2026-05-02 | 30 | [Learning Human-Like Badminton Skills for Humanoid Robots](04_Loco-Manipulation_and_WBC/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots/Learning_Human-Like_Badminton_Skills_for_Humanoid_Robots.md) | Loco-Manipulation / WBC | 待官方释出（[astrorix.github.io/LHBS](https://astrorix.github.io/LHBS/)） |
 | 2026-05-03 | 31 | [TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control](04_Loco-Manipulation_and_WBC/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C.md) | Loco-Manipulation / WBC | [TeleHuman/TextOp](https://github.com/TeleHuman/TextOp) |
 | 2026-05-06 | 35 | [PDF-HR: Pose Distance Fields for Humanoid Robots](04_Loco-Manipulation_and_WBC/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots.md) | Loco-Manipulation / WBC | 待官方释出（论文声明 "code and models will be released"） |
+| 2026-05-07 | 36 | [HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control](04_Loco-Manipulation_and_WBC/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control.md) | Loco-Manipulation / WBC | [TeleHuman/humanoid_skateboarding](https://github.com/TeleHuman/humanoid_skateboarding) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -38,8 +39,8 @@
 
 | 索引 | 论文 | 状态 |
 |:---:|------|------|
-| 34 | Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework | ✅ 已完成 |
 | 35 | PDF-HR: Pose Distance Fields for Humanoid Robots | ✅ 已完成 |
-| 36 | HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control | ⏭️ 下一篇候选 |
+| 36 | HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control | ✅ 已完成 |
+| 37 | Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control | ⏭️ 下一篇候选 |
 
 > 实际推进时会再次检查对应 folder 是否已存在内容，避免重复劳动。
