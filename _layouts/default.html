@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    CSP (defence-in-depth). Static site, no fetch/XHR — only KaTeX & mermaid
+    are loaded from jsdelivr. ``'unsafe-inline'`` is unfortunately required by
+    the inline <script>/<style> blocks below and by mermaid's generated SVG
+    style attrs; tighten further by externalising scripts in the future.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net data:; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -30,7 +38,10 @@
         startOnLoad: false,
         theme: theme === 'dark' ? 'dark' : 'default',
         flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' },
-        securityLevel: 'loose',
+        // 'strict' runs labels through DOMPurify (blocks <script>, on*= handlers, javascript: URLs)
+        // while still permitting <br/> and basic formatting our diagrams need.
+        // Do NOT use 'loose' — it lets a malicious notebook plant XSS via labels or click directives.
+        securityLevel: 'strict',
       };
       mermaid.initialize(config);
       window.roadmapMermaidConfigured = true;
@@ -279,27 +290,30 @@
     function initKaTeX() {
       if (typeof renderMathInElement === 'undefined') return false;
 
-      // Fix HTML entities inside math before rendering
-      // Kramdown converts > to &gt; and < to &lt; inside table cells etc.
-      document.querySelectorAll('td, th, li, p, span, strong, em, b, i, h1, h2, h3, h4, h5, h6').forEach(function(el) {
-        var html = el.innerHTML;
-        // Only process if there's a math delimiter that suggests math content
-        if (html.indexOf('$') === -1 && html.indexOf('\\(') === -1 && html.indexOf('\\[') === -1) return;
-
-        // ⚡ Bolt Optimization: Early return if there are no HTML entities to replace, preventing expensive regex execution.
-        if (html.indexOf('&gt;') === -1 && html.indexOf('&lt;') === -1 && html.indexOf('&amp;') === -1) return;
-
-        // Replace HTML entities back inside math delimiters (only if they are inside math blocks)
-        var mathRegex = /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\$[\s\S]*?\$|\\\([\s\S]*?\\\))/g;
-        var newHtml = html.replace(mathRegex, function(match) {
+      // Fix HTML entities inside math delimiters before KaTeX scans the DOM.
+      //
+      // SECURITY: the previous version did `el.innerHTML = ...` after
+      // unescaping &lt;/&gt;/&amp;, which turned `$<img onerror=...>$` in a
+      // notebook into a real <img> element when the page rendered (stored
+      // XSS, exploitable by anyone whose markdown reaches main).
+      //
+      // Walk text nodes only and mutate ``nodeValue`` in place. ``nodeValue``
+      // is plain string data — assigning to it never re-parses HTML, so even
+      // if the unescape introduces ``<`` characters they remain literal text.
+      var mathRegex = /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\$[\s\S]*?\$|\\\([\s\S]*?\\\))/g;
+      var walker = document.createTreeWalker(
+        document.body, NodeFilter.SHOW_TEXT, null
+      );
+      var textNode;
+      while ((textNode = walker.nextNode())) {
+        var v = textNode.nodeValue;
+        if (!v || (v.indexOf('$') === -1 && v.indexOf('\\(') === -1 && v.indexOf('\\[') === -1)) continue;
+        if (v.indexOf('&gt;') === -1 && v.indexOf('&lt;') === -1 && v.indexOf('&amp;') === -1) continue;
+        var fixed = v.replace(mathRegex, function (match) {
           return match.replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
         });
-
-        // ⚡ Bolt Optimization: Only mutate DOM if string actually changed to prevent layout thrashing
-        if (newHtml !== html) {
-          el.innerHTML = newHtml;
-        }
-      });
+        if (fixed !== v) textNode.nodeValue = fixed;
+      }
 
       renderMathInElement(document.body, {
         delimiters: [
