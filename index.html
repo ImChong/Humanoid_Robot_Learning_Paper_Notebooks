@@ -186,79 +186,104 @@ title: "Home"
   var categories = document.querySelectorAll('.category-section');
   var paperItems = document.querySelectorAll('.paper-list li[data-search]');
 
+  // ⚡ Bolt Optimization: Cache DOM structure and search text once on page load to prevent expensive `querySelectorAll` and `getAttribute` during typing
+  var cachedCategories = Array.from(categories).map(function(cat) {
+    var catTitle = cat.querySelector('.category-title');
+    var catTocItem = catTitle ? document.querySelector('.toc-item[data-toc-for="' + catTitle.id + '"]') : null;
+
+    var subcategories = Array.from(cat.querySelectorAll('.subcategory-section')).map(function(subcat) {
+      var subcatTitle = subcat.querySelector('.subcategory-title');
+      var subcatTocItem = subcatTitle ? document.querySelector('.toc-item[data-toc-for="' + subcatTitle.id + '"]') : null;
+      var items = Array.from(subcat.querySelectorAll('li[data-search]')).map(function(item) {
+        return { el: item, text: item.getAttribute('data-search').toLowerCase() };
+      });
+      return { el: subcat, tocItem: subcatTocItem, items: items };
+    });
+
+    // Handle polyfill for :scope if needed, but for our case, children match is safer.
+    // Instead of using :scope > .paper-list > li[data-search], we select .paper-list > li[data-search]
+    // that are direct children of the category-section (not inside subcategories)
+    var directItems = [];
+    var directLists = cat.children;
+    for (var i = 0; i < directLists.length; i++) {
+      if (directLists[i].classList.contains('paper-list')) {
+        var items = directLists[i].querySelectorAll('li[data-search]');
+        for (var j = 0; j < items.length; j++) {
+          directItems.push({ el: items[j], text: items[j].getAttribute('data-search').toLowerCase() });
+        }
+      }
+    }
+
+    return {
+      el: cat,
+      tocItem: catTocItem,
+      subcategories: subcategories,
+      directItems: directItems
+    };
+  });
+
+  var roadmapTocItem = document.querySelector('.toc-item[data-toc-for="roadmap-title"]');
+
   var searchTimeout;
-  // ⚡ Bolt Optimization: Debounce search input to prevent rapid, expensive DOM updates on every keystroke
+  // ⚡ Bolt Optimization: Debounce search input to prevent rapid DOM updates on every keystroke
   searchInput.addEventListener('input', function() {
     clearTimeout(searchTimeout);
     searchTimeout = setTimeout(function() {
       var query = searchInput.value.toLowerCase().trim();
       var hasAnyMatch = false;
 
-      // Handle roadmap TOC item
-      var roadmapTocItem = document.querySelector('.toc-item[data-toc-for="roadmap-title"]');
       if (roadmapTocItem) {
         roadmapTocItem.style.display = query === '' ? '' : 'none';
       }
 
-      categories.forEach(function(cat) {
-      var catHasMatch = false;
-      var catTotalMatch = 0;
-      var subcategories = cat.querySelectorAll('.subcategory-section');
-      var catId = cat.querySelector('.category-title').id;
-      var catTocItem = document.querySelector('.toc-item[data-toc-for="' + catId + '"]');
-      
-      if (subcategories.length > 0) {
-        subcategories.forEach(function(subcat) {
+      cachedCategories.forEach(function(catCache) {
+        var catHasMatch = false;
+        var catTotalMatch = 0;
+
+        catCache.subcategories.forEach(function(subcatCache) {
           var subcatHasMatch = false;
           var subcatMatchCount = 0;
-          var subcatItems = subcat.querySelectorAll('li[data-search]');
-          var subcatId = subcat.querySelector('.subcategory-title').id;
-          var subcatTocItem = document.querySelector('.toc-item[data-toc-for="' + subcatId + '"]');
           
-          subcatItems.forEach(function(item) {
-            var searchText = item.getAttribute('data-search').toLowerCase();
-            if (searchText.indexOf(query) !== -1) {
-              item.style.display = '';
+          subcatCache.items.forEach(function(itemCache) {
+            if (itemCache.text.indexOf(query) !== -1) {
+              itemCache.el.style.display = '';
               subcatHasMatch = true;
               subcatMatchCount++;
               catHasMatch = true;
               hasAnyMatch = true;
             } else {
-              item.style.display = 'none';
+              itemCache.el.style.display = 'none';
             }
           });
           
-          subcat.style.display = subcatHasMatch || query === '' ? '' : 'none';
-          if (subcatTocItem) {
-            subcatTocItem.style.display = subcatHasMatch || query === '' ? '' : 'none';
-            var countEl = subcatTocItem.querySelector('.toc-count');
+          subcatCache.el.style.display = subcatHasMatch || query === '' ? '' : 'none';
+          if (subcatCache.tocItem) {
+            subcatCache.tocItem.style.display = subcatHasMatch || query === '' ? '' : 'none';
+            var countEl = subcatCache.tocItem.querySelector('.toc-count');
             if (countEl) countEl.textContent = '(' + subcatMatchCount + ')';
           }
           catTotalMatch += subcatMatchCount;
         });
-      }
 
-      var directItems = cat.querySelectorAll(':scope > .paper-list > li[data-search]');
-      var directMatchCount = 0;
-      directItems.forEach(function(item) {
-        var searchText = item.getAttribute('data-search').toLowerCase();
-        if (searchText.indexOf(query) !== -1) {
-          item.style.display = '';
-          catHasMatch = true;
-          hasAnyMatch = true;
-          directMatchCount++;
-        } else {
-          item.style.display = 'none';
+        var directMatchCount = 0;
+        catCache.directItems.forEach(function(itemCache) {
+          if (itemCache.text.indexOf(query) !== -1) {
+            itemCache.el.style.display = '';
+            catHasMatch = true;
+            hasAnyMatch = true;
+            directMatchCount++;
+          } else {
+            itemCache.el.style.display = 'none';
+          }
+        });
+        catTotalMatch += directMatchCount;
+
+        catCache.el.style.display = catHasMatch || query === '' ? '' : 'none';
+        if (catCache.tocItem) {
+          catCache.tocItem.style.display = catHasMatch || query === '' ? '' : 'none';
+          var countEl = catCache.tocItem.querySelector('.toc-count');
+          if (countEl) countEl.textContent = '(' + catTotalMatch + ')';
         }
-      });
-      catTotalMatch += directMatchCount;
-
-      cat.style.display = catHasMatch || query === '' ? '' : 'none';
-      if (catTocItem) {
-        catTocItem.style.display = catHasMatch || query === '' ? '' : 'none';
-        var countEl = catTocItem.querySelector('.toc-count');
-        if (countEl) countEl.textContent = '(' + catTotalMatch + ')';
-      }
       });
 
       noResults.style.display = hasAnyMatch || query === '' ? 'none' : 'block';
