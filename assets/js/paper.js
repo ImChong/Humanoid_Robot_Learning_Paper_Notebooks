@@ -44,18 +44,46 @@
     var isFirst = currentIdx === 0;
     var backText = isFirst ? '← 返回论文列表' : '返回论文列表';
 
-    var html = '';
-    if (prev) html += '<a href="' + prev.url + '" class="prev-link">← ' + prev.short + '</a>';
-    html += '<a href="' + listLink + '" class="back-link">' + backText + '</a>';
-    if (next) html += '<a href="' + next.url + '" class="next-link">' + next.short + ' →</a>';
-    nav.innerHTML = html;
+    nav.innerHTML = '';
+    if (prev) {
+      var prevLink = document.createElement('a');
+      prevLink.href = prev.url;
+      prevLink.className = 'prev-link';
+      prevLink.textContent = '← ' + prev.short;
+      nav.appendChild(prevLink);
+    }
+
+    var backLinkEl = document.createElement('a');
+    backLinkEl.href = listLink;
+    backLinkEl.className = 'back-link';
+    backLinkEl.textContent = backText;
+    nav.appendChild(backLinkEl);
+
+    if (next) {
+      var nextLink = document.createElement('a');
+      nextLink.href = next.url;
+      nextLink.className = 'next-link';
+      nextLink.textContent = next.short + ' →';
+      nav.appendChild(nextLink);
+    }
 
     var sidebarNav = document.getElementById('sidebar-paper-nav');
     if (sidebarNav) {
-      var sidebarHtml = '';
-      if (prev) sidebarHtml += '<a href="' + prev.url + '" class="right-sidebar-link">← ' + prev.short + '</a>';
-      if (next) sidebarHtml += '<a href="' + next.url + '" class="right-sidebar-link">' + next.short + ' →</a>';
-      sidebarNav.innerHTML = sidebarHtml;
+      sidebarNav.innerHTML = '';
+      if (prev) {
+        var sidebarPrevLink = document.createElement('a');
+        sidebarPrevLink.href = prev.url;
+        sidebarPrevLink.className = 'right-sidebar-link';
+        sidebarPrevLink.textContent = '← ' + prev.short;
+        sidebarNav.appendChild(sidebarPrevLink);
+      }
+      if (next) {
+        var sidebarNextLink = document.createElement('a');
+        sidebarNextLink.href = next.url;
+        sidebarNextLink.className = 'right-sidebar-link';
+        sidebarNextLink.textContent = next.short + ' →';
+        sidebarNav.appendChild(sidebarNextLink);
+      }
     }
   }
 
