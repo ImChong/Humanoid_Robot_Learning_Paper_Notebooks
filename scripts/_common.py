@@ -39,25 +39,31 @@ def is_stub(content: str) -> bool:
     front matter, which is acceptable since real notes are far longer than the
     threshold either way.
     """
-    line_count = content.count('\n') + 1
-    has_method = bool(_METHOD_HEADING_RE.search(content))
     construction_count = content.count('🚧')
-    if line_count < STUB_MIN_LINES and not has_method:
-        return True
     if construction_count >= STUB_CONSTRUCTION_THRESHOLD:
         return True
+
+    line_count = content.count('\n') + 1
+    if line_count < STUB_MIN_LINES:
+        has_method = '方法' in content and bool(_METHOD_HEADING_RE.search(content))
+        if not has_method:
+            return True
+
     return False
 
 
 def stub_reason(content: str) -> str | None:
     """Human-readable reason this note is a stub, or None if it is not."""
     line_count = content.count('\n') + 1
-    has_method = bool(_METHOD_HEADING_RE.search(content))
+    if line_count < STUB_MIN_LINES:
+        has_method = '方法' in content and bool(_METHOD_HEADING_RE.search(content))
+        if not has_method:
+            return f"{line_count} lines, missing 方法详解"
+
     construction_count = content.count('🚧')
-    if line_count < STUB_MIN_LINES and not has_method:
-        return f"{line_count} lines, missing 方法详解"
     if construction_count >= STUB_CONSTRUCTION_THRESHOLD:
         return f"{construction_count} 🚧 markers, skeleton"
+
     return None
 
 
