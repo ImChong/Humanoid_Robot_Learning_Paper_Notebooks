@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 36,
-    "last_summary_date": "2026-05-07",
-    "last_summary_title": "HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control",
-    "next_summary_index": 37,
+    "last_summary_index": 37,
+    "last_summary_date": "2026-05-08",
+    "last_summary_title": "Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control",
+    "next_summary_index": 38,
     "log": [
       {
         "date": "2026-04-24",
@@ -98,6 +98,12 @@
         "index": 36,
         "title": "HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control",
         "folder": "papers/04_Loco-Manipulation_and_WBC/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control"
+      },
+      {
+        "date": "2026-05-08",
+        "index": 37,
+        "title": "Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B"
       }
     ],
     "last_completed_index": 29,
@@ -554,11 +560,11 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B",
       "note_file": "Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B.md",
       "pdf_file": "Embodiment-Aware.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-05-08",
+      "done_date": "2026-05-08",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "EAGLE：面向跨本体人形全身控制的泛化-专家迭代蒸馏"
     },
     {
       "title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
