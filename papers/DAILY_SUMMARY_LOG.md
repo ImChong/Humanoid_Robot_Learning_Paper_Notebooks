@@ -27,9 +27,12 @@
 | 2026-05-03 | 31 | [TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control](04_Loco-Manipulation_and_WBC/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C.md) | Loco-Manipulation / WBC | [TeleHuman/TextOp](https://github.com/TeleHuman/TextOp) |
 | 2026-05-06 | 35 | [PDF-HR: Pose Distance Fields for Humanoid Robots](04_Loco-Manipulation_and_WBC/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots/PDF-HR__Pose_Distance_Fields_for_Humanoid_Robots.md) | Loco-Manipulation / WBC | 待官方释出（论文声明 "code and models will be released"） |
 | 2026-05-07 | 36 | [HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control](04_Loco-Manipulation_and_WBC/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control.md) | Loco-Manipulation / WBC | [TeleHuman/humanoid_skateboarding](https://github.com/TeleHuman/humanoid_skateboarding) |
+| 2026-05-08 | 37 | [Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control](04_Loco-Manipulation_and_WBC/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B.md) | Loco-Manipulation / WBC | 截至论文发布暂未公开 |
+| 2026-05-09 | 38 | [HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos](04_Loco-Manipulation_and_WBC/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi.md) | Loco-Manipulation / WBC | 待官方释出（[wyhuai.github.io/human-x](https://wyhuai.github.io/human-x/)） |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
+> 备注：2026-05-09 推进索引 38 (HumanX)，arXiv / HuggingFace / 项目主页临时不可访问，笔记基于公开搜索结果与作者前作 (PhysHOI / SkillMimic) 整理；后续待 PDF / 官方仓库释出后补充实验细节与消融数值。
 
 ---
 
@@ -39,8 +42,8 @@
 
 | 索引 | 论文 | 状态 |
 |:---:|------|------|
-| 35 | PDF-HR: Pose Distance Fields for Humanoid Robots | ✅ 已完成 |
-| 36 | HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control | ✅ 已完成 |
-| 37 | Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control | ⏭️ 下一篇候选 |
+| 37 | Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control | ✅ 已完成 |
+| 38 | HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos | ✅ 已完成 |
+| 39 | TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour | ⏭️ 下一篇候选 |
 
 > 实际推进时会再次检查对应 folder 是否已存在内容，避免重复劳动。

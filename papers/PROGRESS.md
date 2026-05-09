@@ -121,7 +121,7 @@
 | 45   | [PDF-HR: Pose Distance Fields for Humanoid Robots](https://arxiv.org/abs/2602.04851)                                                                             | 2026-05-06 |     | ✅ 完成 |
 | 46   | [HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control](https://arxiv.org/abs/2602.03205)                                                    | 2026-05-07 |     | ✅ 完成 |
 | 47   | [Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control](https://arxiv.org/abs/2602.02960)                                  | 2026.02    |     | ⏳ 待读 |
-| 48   | [HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos](https://arxiv.org/abs/2602.02473)                                         | 2026.02    |     | ⏳ 待读 |
+| 48   | [HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos](https://arxiv.org/abs/2602.02473)                                         | 2026-05-09 |     | ✅ 完成 |
 | 49   | [TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour](https://arxiv.org/abs/2602.02331)                                                           | 2026.02    |     | ⏳ 待读 |
 | 50   | [ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control](https://arxiv.org/abs/2602.00401)                                                           | 2026.02    |     | ⏳ 待读 |
 | 51   | [Robust and Generalized Humanoid Motion Tracking](https://arxiv.org/abs/2601.23080)                                                                              | 2026.01    |     | ⏳ 待读 |
