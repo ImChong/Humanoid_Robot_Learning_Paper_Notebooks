@@ -13,3 +13,6 @@
 ## 2025-05-08 - Short-circuiting Expensive Operations in String Processing
 **Learning:** In text-processing utility functions (`scripts/_common.py` `is_stub`), unconditionally executing expensive multi-line regular expressions (`re.search(..., re.MULTILINE)`) over large strings is a major performance bottleneck, especially when iterated over hundreds of files during site builds (`prepare_pages.py`).
 **Action:** Always optimize heavy string operations by restructuring checks sequentially from least-to-most expensive: First, check conditions that allow early returns (e.g., character counts). Second, use fast, native substring checks (`'substring' in string`) as a strict prerequisite before falling back to complex regular expressions.
+## 2025-05-18 - Avoid creating copies of large strings
+**Learning:** In Python performance optimizations, using `.lower()` on a large text body (e.g., markdown content) just for a case-insensitive substring check creates a full memory copy, which can outweigh the performance benefit of avoiding a regular expression.
+**Action:** Always check explicitly for common exact case variations (e.g., `if 'arxiv' not in content and 'arXiv' not in content:`) instead of calling `.lower()` on the entire string when implementing short-circuit checks.

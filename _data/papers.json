@@ -430,6 +430,22 @@
         "dir": "HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control",
         "arxiv": "2602.03205",
         "zhname": "HUSKY：基于物理感知全身控制的人形滑板系统"
+      },
+      {
+        "title": "Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B.html",
+        "dir": "Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B",
+        "arxiv": "2602.02960",
+        "zhname": "EAGLE：面向跨本体人形全身控制的泛化-专家迭代蒸馏"
+      },
+      {
+        "title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
+        "path": "papers/04_Loco-Manipulation_and_WBC/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi.html",
+        "dir": "HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi",
+        "arxiv": "2602.02473",
+        "zhname": "HumanX：从人类视频学习敏捷且可泛化的人形交互技能"
       }
     ],
     "zhname": "运动操作与全身控制"
