@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 37,
-    "last_summary_date": "2026-05-08",
-    "last_summary_title": "Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control",
-    "next_summary_index": 38,
+    "last_summary_index": 38,
+    "last_summary_date": "2026-05-09",
+    "last_summary_title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
+    "next_summary_index": 39,
     "log": [
       {
         "date": "2026-04-24",
@@ -104,6 +104,12 @@
         "index": 37,
         "title": "Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control",
         "folder": "papers/04_Loco-Manipulation_and_WBC/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B"
+      },
+      {
+        "date": "2026-05-09",
+        "index": 38,
+        "title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi"
       }
     ],
     "last_completed_index": 29,
@@ -568,15 +574,15 @@
     },
     {
       "title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
-      "arxiv": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
+      "arxiv": "2602.02473",
       "folder": "papers/04_Loco-Manipulation_and_WBC/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi",
       "note_file": "HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi.md",
       "pdf_file": "HumanX.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-05-09",
+      "done_date": "2026-05-09",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "从人类视频学习敏捷且可泛化的人形交互技能"
     },
     {
       "title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
