@@ -33,9 +33,11 @@ def extract_title(content):
         parts = text.split('---', 2)
         if len(parts) >= 3:
             text = parts[2]
-    match = re.search(r'^#\s+(.+)$', text, re.MULTILINE)
-    if match:
-        return match.group(1).strip()
+
+    if '#' in text:
+        match = re.search(r'^#\s+(.+)$', text, re.MULTILINE)
+        if match:
+            return match.group(1).strip()
     return None
 
 
@@ -47,6 +49,9 @@ _ = (is_stub, normalize_name)  # re-exported for backwards compatibility
 
 def extract_arxiv(content):
     """Extract arXiv ID from common note metadata table formats."""
+    if 'arxiv' not in content and 'arXiv' not in content:
+        return None
+
     patterns = [
         r'\|\s*(?:\*\*)?arXiv(?:\*\*)?\s*\|\s*\[?(\d{4}\.\d{4,5}(?:v\d+)?)',
         r'(?:arXiv:|arxiv\.org/(?:abs|html|pdf)/)(\d{4}\.\d{4,5}(?:v\d+)?)',
@@ -220,17 +225,19 @@ def process_papers():
                 # Front-matter `paper_order: <n>` overrides PROGRESS.md matching.
                 # Used to put papers in README's recommended learning-path order
                 # even when their titles don't match the awesome-list table rows.
-                explicit_order = re.search(
-                    r'^paper_order:\s*(\d+)\s*$', content, re.MULTILINE
-                )
-                if explicit_order:
-                    order_idx = int(explicit_order.group(1))
+                if 'paper_order' in content:
+                    explicit_order = re.search(
+                        r'^paper_order:\s*(\d+)\s*$', content, re.MULTILINE
+                    )
+                    if explicit_order:
+                        order_idx = int(explicit_order.group(1))
 
                 # Extract subcategory from front matter if present
                 paper_subcat = None
-                sm_match = re.search(r'^subcategory:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
-                if sm_match:
-                    paper_subcat = sm_match.group(1).strip()
+                if 'subcategory' in content:
+                    sm_match = re.search(r'^subcategory:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
+                    if sm_match:
+                        paper_subcat = sm_match.group(1).strip()
 
                 paper_entry = {
                     'title': title,
@@ -250,7 +257,10 @@ def process_papers():
                     paper_entry['arxiv'] = arxiv
 
                 # Prefer zhname from front matter when present
-                zhname_match = re.search(r'^zhname:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
+                zhname_match = None
+                if 'zhname' in content:
+                    zhname_match = re.search(r'^zhname:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
+
                 if zhname_match:
                     paper_entry['zhname'] = zhname_match.group(1).strip()
                 # Otherwise restore zhname from existing data if available
