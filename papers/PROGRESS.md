@@ -260,6 +260,7 @@
 | 184  | [website],Embodied Chain of Action Reasoning with Multi-Modal Foundation Model for Humanoid Loco-manipulation                                                    | 2025.04    |     | ⏳ 待读 |
 | 185  | [Heracles: Bridging Precise Tracking and Generative Synthesis for General Humanoid Control](https://arxiv.org/abs/2603.27756) | 2026.03 |  | ⏳ 待读 |
 | 186  | [SafeFlow: Real-Time Text-Driven Humanoid Whole-Body Control via Physics-Guided Rectified Flow and Selective Safety Gating](https://arxiv.org/abs/2603.23983) | 2026.03 |  | ⏳ 待读 |
+| 532  | [ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting](https://arxiv.org/abs/2605.06593) | 2026.05 |  | ⏳ 待读 |
 
 
 ### Locomotion（84篇）
