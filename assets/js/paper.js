@@ -157,11 +157,32 @@
     });
 
     var lastActive = -1;
+    // ⚡ Bolt Optimization: Cache layout positions to prevent layout thrashing on scroll
+    var cachedPositions = [];
+
+    function updatePositions() {
+      cachedPositions = headingArr.map(function(h) {
+        return h.offsetTop;
+      });
+    }
+
+    updatePositions();
+
+    if (window.ResizeObserver) {
+      var ro = new ResizeObserver(updatePositions);
+      ro.observe(document.body);
+    } else {
+      window.addEventListener('resize', function() {
+        clearTimeout(window.resizeTimeout);
+        window.resizeTimeout = setTimeout(updatePositions, 150);
+      });
+    }
+
     function updateActive() {
       var scrollPos = window.scrollY + 100;
       var current = -1;
-      for (var i = 0; i < headingArr.length; i++) {
-        if (headingArr[i].offsetTop <= scrollPos) current = i;
+      for (var i = 0; i < cachedPositions.length; i++) {
+        if (cachedPositions[i] <= scrollPos) current = i;
       }
       // Only update DOM if the active section actually changed.
       if (current !== lastActive) {
