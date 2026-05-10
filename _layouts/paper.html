@@ -7,7 +7,7 @@ layout: default
     {% assign path_parts = page.url | split: '/' %}
     {% if path_parts.size > 3 %}
       <span class="sep">›</span>
-      <span class="crumb-category">{{ path_parts[2] | replace: '_', ' ' }}</span>
+      <span class="crumb-category">{{ path_parts[2] | replace: '_', ' ' | escape }}</span>
     {% endif %}
   </nav>
 

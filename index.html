@@ -16,7 +16,7 @@ title: "Home"
       {% endfor %}
     {% endif %}
   {% endfor %}
-  <p class="subtitle" id="paper-count-label" data-en="Total: {{ paper_count }} papers" data-zh="共 {{ paper_count }} 篇笔记">Total: {{ paper_count }} papers</p>
+  <p class="subtitle" id="paper-count-label" data-en="Total: {{ paper_count | escape }} papers" data-zh="共 {{ paper_count | escape }} 篇笔记">Total: {{ paper_count | escape }} papers</p>
 </div>
 
 <div class="index-layout">
@@ -40,13 +40,13 @@ title: "Home"
             {% endfor %}
           {% endif %}
           <li class="toc-item toc-h2" data-toc-for="cat-{{ forloop.index }}">
-            <a href="#cat-{{ forloop.index }}" class="toc-link"><span data-en="{{ cat[1].display_name }}" data-zh="{{ cat[1].zhname }}">{{ cat[1].display_name }}</span> <span class="toc-count">({{ total_count }})</span></a>
+            <a href="#cat-{{ forloop.index }}" class="toc-link"><span data-en="{{ cat[1].display_name | escape }}" data-zh="{{ cat[1].zhname | escape }}">{{ cat[1].display_name | escape }}</span> <span class="toc-count">({{ total_count }})</span></a>
             {% if cat[1].subcategories %}
             <ul class="toc-sublist">
               {% for subcat in cat[1].subcategories %}
               {% assign subcat_size = subcat.papers | size %}
               <li class="toc-item toc-h3" data-toc-for="subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}">
-                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub"><span data-en="{{ subcat.name }}" data-zh="{{ subcat.zhname }}">{{ subcat.name }}</span> <span class="toc-count">({{ subcat_size }})</span></a>
+                <a href="#subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}" class="toc-link toc-link-sub"><span data-en="{{ subcat.name | escape }}" data-zh="{{ subcat.zhname | escape }}">{{ subcat.name | escape }}</span> <span class="toc-count">({{ subcat_size }})</span></a>
               </li>
               {% endfor %}
             </ul>
@@ -88,7 +88,7 @@ title: "Home"
       {% endif %}
     {% endfor %}
 
-    <div class="category-section" data-category="{{ cat_data.display_name }}">
+    <div class="category-section" data-category="{{ cat_data.display_name | escape }}">
       {% assign cat_papers_size = cat_data.papers | size %}
       {% assign main_total = cat_papers_size %}
       {% if cat_data.subcategories %}
@@ -97,16 +97,16 @@ title: "Home"
           {% assign main_total = main_total | plus: subcat_papers_size %}
         {% endfor %}
       {% endif %}
-      <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> <span class="cat-name" data-en="{{ cat_data.display_name }}" data-zh="{{ cat_data.zhname }}">{{ cat_data.display_name }}</span> <span class="paper-count">({{ main_total }})</span></h2>
-      {% if cat_data.subtitle %}<p class="category-subtitle" data-en="{{ cat_data.subtitle }}" data-zh="{{ cat_data.subtitle_zh }}">{{ cat_data.subtitle }}</p>{% endif %}
+        <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> <span class="cat-name" data-en="{{ cat_data.display_name | escape }}" data-zh="{{ cat_data.zhname | escape }}">{{ cat_data.display_name | escape }}</span> <span class="paper-count">({{ main_total }})</span></h2>
+      {% if cat_data.subtitle %}<p class="category-subtitle" data-en="{{ cat_data.subtitle | escape }}" data-zh="{{ cat_data.subtitle_zh | escape }}">{{ cat_data.subtitle | escape }}</p>{% endif %}
 
       {% if cat_data.subcategories %}
         {% if cat_data.papers.size > 0 %}
         <ul class="paper-list">
           {% for paper in cat_data.papers %}
-          <li data-search="{{ paper.title }} {{ paper.zhname }} {{ paper.arxiv }}">
+          <li data-search="{{ paper.title | escape }} {{ paper.zhname | escape }} {{ paper.arxiv | escape }}">
             <a href="{{ site.baseurl }}{{ paper.url }}" class="paper-card">
-              <span class="paper-title" data-en="{{ paper.title }}" data-zh="{{ paper.zhname }}">{{ paper.title }}</span>
+              <span class="paper-title" data-en="{{ paper.title | escape }}" data-zh="{{ paper.zhname | escape }}">{{ paper.title | escape }}</span>
             </a>
           </li>
           {% endfor %}
@@ -114,17 +114,17 @@ title: "Home"
         {% endif %}
 
         {% for subcat in cat_data.subcategories %}
-        <div class="subcategory-section" data-subcategory="{{ subcat.name }}">
+        <div class="subcategory-section" data-subcategory="{{ subcat.name | escape }}">
           <h3 class="subcategory-title" id="subcat-{{ forloop.parentloop.index }}-{{ forloop.index }}">
-            <span class="subcat-name" data-en="{{ subcat.name }}" data-zh="{{ subcat.zhname }}">{{ subcat.name }}</span>
+            <span class="subcat-name" data-en="{{ subcat.name | escape }}" data-zh="{{ subcat.zhname | escape }}">{{ subcat.name | escape }}</span>
             <span class="paper-count">({{ subcat.papers | size }})</span>
           </h3>
           {% if subcat.papers.size > 0 %}
           <ul class="paper-list">
             {% for paper in subcat.papers %}
-            <li data-search="{{ paper.title }} {{ paper.zhname }} {{ paper.arxiv }}">
+            <li data-search="{{ paper.title | escape }} {{ paper.zhname | escape }} {{ paper.arxiv | escape }}">
               <a href="{{ site.baseurl }}{{ paper.url }}" class="paper-card">
-                <span class="paper-title" data-en="{{ paper.title }}" data-zh="{{ paper.zhname }}">{{ paper.title }}</span>
+                <span class="paper-title" data-en="{{ paper.title | escape }}" data-zh="{{ paper.zhname | escape }}">{{ paper.title | escape }}</span>
               </a>
             </li>
             {% endfor %}
@@ -137,9 +137,9 @@ title: "Home"
       {% elsif cat_data.papers.size > 0 %}
       <ul class="paper-list">
         {% for paper in cat_data.papers %}
-        <li data-search="{{ paper.title }} {{ paper.zhname }} {{ paper.arxiv }}">
+        <li data-search="{{ paper.title | escape }} {{ paper.zhname | escape }} {{ paper.arxiv | escape }}">
           <a href="{{ site.baseurl }}{{ paper.url }}" class="paper-card">
-            <span class="paper-title" data-en="{{ paper.title }}" data-zh="{{ paper.zhname }}">{{ paper.title }}</span>
+            <span class="paper-title" data-en="{{ paper.title | escape }}" data-zh="{{ paper.zhname | escape }}">{{ paper.title | escape }}</span>
           </a>
         </li>
         {% endfor %}
@@ -162,13 +162,13 @@ title: "Home"
       {% if cat != current_cat %}
         {% unless current_cat == "" %}</ul></div>{% endunless %}
         <div class="category-section">
-          <h2 class="category-title">📄 {{ cat }}</h2>
+          <h2 class="category-title">📄 {{ cat | escape }}</h2>
           <ul class="paper-list">
         {% assign current_cat = cat %}
       {% endif %}
-      <li data-search="{{ page.title }}">
+      <li data-search="{{ page.title | escape }}">
         <a href="{{ page.url | relative_url }}" class="paper-card">
-          <span class="paper-title">{% if page.title %}{{ page.title }}{% else %}{{ parts[3] | replace: "_", " " }}{% endif %}</span>
+          <span class="paper-title">{% if page.title %}{{ page.title | escape }}{% else %}{{ parts[3] | replace: "_", " " | escape }}{% endif %}</span>
         </a>
       </li>
     {% endif %}
