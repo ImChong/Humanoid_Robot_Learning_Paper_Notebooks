@@ -16,3 +16,6 @@
 ## 2025-05-18 - Avoid creating copies of large strings
 **Learning:** In Python performance optimizations, using `.lower()` on a large text body (e.g., markdown content) just for a case-insensitive substring check creates a full memory copy, which can outweigh the performance benefit of avoiding a regular expression.
 **Action:** Always check explicitly for common exact case variations (e.g., `if 'arxiv' not in content and 'arXiv' not in content:`) instead of calling `.lower()` on the entire string when implementing short-circuit checks.
+## 2025-05-18 - Eliminating Layout Thrashing in Scroll Spies
+**Learning:** While `requestAnimationFrame` and state caching prevent unnecessary DOM *writes* during scroll events, performing DOM *reads* for layout metrics like `offsetTop` or `getBoundingClientRect()` inside a scroll handler still causes severe performance penalties. The browser is forced to synchronously recalculate layout on every scroll tick to return these values, defeating much of the benefit of throttling.
+**Action:** Always pre-compute and cache DOM layout metrics into an array or object. In the scroll handler, only perform mathematical comparisons against `window.scrollY` and the cached array. Update the cached layout positions asynchronously using `ResizeObserver` (or debounced `resize` events) to ensure accuracy when the page layout changes.

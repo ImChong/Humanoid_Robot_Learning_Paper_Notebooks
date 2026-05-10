@@ -302,13 +302,36 @@ title: "Home"
   if (targets.length === 0) return;
 
   var lastActive = -1;
+  // ⚡ Bolt Optimization: Cache layout positions to prevent layout thrashing on scroll
+  var cachedPositions = [];
+
+  function updatePositions() {
+    cachedPositions = targets.map(function(t) {
+      return t.el.getBoundingClientRect().top + window.scrollY;
+    });
+  }
+
+  updatePositions();
+
+  if (window.ResizeObserver) {
+    var ro = new ResizeObserver(updatePositions);
+    ro.observe(document.body);
+  } else {
+    window.addEventListener('resize', function() {
+      clearTimeout(window.resizeTimeout);
+      window.resizeTimeout = setTimeout(updatePositions, 150);
+    });
+  }
+
   function updateActive() {
     // Probe just below the sticky header so the link reflects whatever
     // section is currently anchored at the top of the viewport.
     var probeY = 140;
     var current = -1;
-    for (var i = 0; i < targets.length; i++) {
-      if (targets[i].el.getBoundingClientRect().top <= probeY) current = i;
+    var scrollThreshold = window.scrollY + probeY;
+
+    for (var i = 0; i < cachedPositions.length; i++) {
+      if (cachedPositions[i] <= scrollThreshold) current = i;
     }
 
     // Only update DOM if the active section actually changed
