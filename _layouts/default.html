@@ -306,8 +306,22 @@
       // is plain string data — assigning to it never re-parses HTML, so even
       // if the unescape introduces ``<`` characters they remain literal text.
       var mathRegex = /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\$[\s\S]*?\$|\\\([\s\S]*?\\\))/g;
+
+      // ⚡ Bolt Optimization: Include SHOW_ELEMENT to proactively prune irrelevant subtrees
+      // (like code blocks) by returning FILTER_REJECT, avoiding deep DOM traversal.
       var walker = document.createTreeWalker(
-        document.body, NodeFilter.SHOW_TEXT, null
+        document.body, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
+          acceptNode: function(node) {
+            if (node.nodeType === 1) { // Element node
+              var tag = node.tagName;
+              if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'PRE' || tag === 'CODE' || tag === 'ANNOTATION' || tag === 'TEXTAREA') {
+                return NodeFilter.FILTER_REJECT;
+              }
+              return NodeFilter.FILTER_SKIP;
+            }
+            return NodeFilter.FILTER_ACCEPT;
+          }
+        }
       );
       var textNode;
       while ((textNode = walker.nextNode())) {
