@@ -1,6 +1,6 @@
 """Tests for the pure helpers in ``scripts.prepare_pages``."""
 
-from scripts.prepare_pages import normalize_name
+from scripts.prepare_pages import extract_arxiv, normalize_name
 
 
 def test_normalize_name_basic():
@@ -41,3 +41,20 @@ def test_normalize_name_numbers():
 def test_normalize_name_mixed():
     """Test complex mixed input."""
     assert normalize_name(" [2024] Paper_Name (ArXiv) ") == "2024 papername arxiv"
+
+
+def test_extract_arxiv_table_all_caps_header():
+    """Table rows may spell ARXIV in all caps; extraction must not short-circuit."""
+    body = "| ARXIV | 1234.5678 |\n"
+    assert extract_arxiv(body) == "1234.5678"
+
+
+def test_extract_arxiv_abs_url_all_caps_host():
+    """Abs links may use an all-caps host; the pre-check must not skip them."""
+    body = "Paper: https://ARXIV.ORG/abs/9876.54321\n"
+    assert extract_arxiv(body) == "9876.54321"
+
+
+def test_extract_arxiv_no_mention_returns_none():
+    """No arxiv token anywhere → no ID (cheap path)."""
+    assert extract_arxiv("Only doi:10.1000/182 and no preprint link.") is None

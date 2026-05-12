@@ -49,7 +49,10 @@ _ = (is_stub, normalize_name)  # re-exported for backwards compatibility
 
 def extract_arxiv(content):
     """Extract arXiv ID from common note metadata table formats."""
-    if 'arxiv' not in content and 'arXiv' not in content:
+    # Case-insensitive pre-check: the patterns below use IGNORECASE, so the
+    # guard must not require the exact substrings ``arxiv`` / ``arXiv`` (e.g.
+    # ``| ARXIV |`` or ``Arxiv:`` would otherwise be skipped and drop metadata).
+    if re.search(r'arxiv', content, re.IGNORECASE) is None:
         return None
 
     patterns = [
