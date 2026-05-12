@@ -29,6 +29,9 @@ jobs:
       - name: Prepare pages (add front matter & generate index)
         run: python scripts/prepare_pages.py
 
+      - name: Install HTML sanitizer (post-build hardening)
+        run: pip install -r requirements-site.txt
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
@@ -38,6 +41,9 @@ jobs:
         with:
           source: ./
           destination: ./_site
+
+      - name: Sanitize paper page HTML (stored XSS mitigation)
+        run: python3 scripts/sanitize_paper_html.py _site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
