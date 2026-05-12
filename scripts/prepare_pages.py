@@ -49,11 +49,18 @@ _ = (is_stub, normalize_name)  # re-exported for backwards compatibility
 
 def extract_arxiv(content):
     """Extract arXiv ID from common note metadata table formats."""
+    # ⚡ Bolt Optimization: Avoid re.search and string lowercasing copies by
+    # checking for the most common casing variants with the fast `in` operator.
     # Case-insensitive pre-check: the patterns below use IGNORECASE, so the
     # guard must not require the exact substrings ``arxiv`` / ``arXiv`` (e.g.
     # ``| ARXIV |`` or ``Arxiv:`` would otherwise be skipped and drop metadata).
-    if re.search(r'arxiv', content, re.IGNORECASE) is None:
-        return None
+    if ('arxiv' not in content and 'arXiv' not in content and
+        'Arxiv' not in content and 'ARXIV' not in content and
+        'ArXiv' not in content):
+        # Fallback to a case-insensitive regex check for unusual casings
+        # to guarantee 100% correctness without regressions.
+        if re.search(r'arxiv', content, re.IGNORECASE) is None:
+            return None
 
     patterns = [
         r'\|\s*(?:\*\*)?arXiv(?:\*\*)?\s*\|\s*\[?(\d{4}\.\d{4,5}(?:v\d+)?)',
