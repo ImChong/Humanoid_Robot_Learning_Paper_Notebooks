@@ -42,6 +42,10 @@ jobs:
           source: ./
           destination: ./_site
 
+      # jekyll-build-pages runs in Docker as root; host steps cannot rewrite _site without this.
+      - name: Fix _site ownership for follow-up steps
+        run: sudo chown -R "$(id -un)":"$(id -gn)" _site
+
       - name: Sanitize paper page HTML (stored XSS mitigation)
         run: python3 scripts/sanitize_paper_html.py _site
 
