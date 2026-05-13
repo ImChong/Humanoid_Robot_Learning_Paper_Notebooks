@@ -631,6 +631,55 @@ body {
   background: #1e1e1e;
 }
 
+/*
+ * Paper Mermaid notes zone subgraphs with `style SUB fill:#pastel,stroke:#…`.
+ * Mermaid emits that fill as an inline `style="fill:#… !important"`, so normal
+ * CSS cannot recolor the cluster rect. Apply an SVG filter instead to darken the
+ * pastel panel; dark-theme cluster titles stay #F9FFFE and become legible.
+ */
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#e8f4fd"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#E8F4FD"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#e8f4fd"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#E8F4FD"] {
+  filter: brightness(0.42) saturate(1.08) contrast(1.06);
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#fdebd0"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#FDEBD0"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#fdebd0"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#FDEBD0"] {
+  filter: brightness(0.44) saturate(1.05) contrast(1.05);
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#e8f8e8"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#E8F8E8"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#e8f8e8"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#E8F8E8"] {
+  filter: brightness(0.42) saturate(1.06) contrast(1.06);
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#fceae8"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#FCEAE8"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#fceae8"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#FCEAE8"] {
+  filter: brightness(0.46) saturate(1.05) contrast(1.05);
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#fce4ec"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#FCE4EC"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#fce4ec"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#FCE4EC"] {
+  filter: brightness(0.44) saturate(1.06) contrast(1.05);
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#f4ecf7"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#F4ECF7"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#f4ecf7"],
+[data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#F4ECF7"] {
+  filter: brightness(0.44) saturate(1.05) contrast(1.05);
+}
+
+
 /* ===== Breadcrumb ===== */
 .breadcrumb {
   font-family: 'Arial', sans-serif;
