@@ -4,10 +4,10 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 38,
-    "last_summary_date": "2026-05-09",
-    "last_summary_title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
-    "next_summary_index": 39,
+    "last_summary_index": 39,
+    "last_summary_date": "2026-05-13",
+    "last_summary_title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
+    "next_summary_index": 40,
     "log": [
       {
         "date": "2026-04-24",
@@ -110,6 +110,12 @@
         "index": 38,
         "title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
         "folder": "papers/04_Loco-Manipulation_and_WBC/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi"
+      },
+      {
+        "date": "2026-05-13",
+        "index": 39,
+        "title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour"
       }
     ],
     "last_completed_index": 29,
@@ -586,15 +592,15 @@
     },
     {
       "title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
-      "arxiv": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
+      "arxiv": "https://arxiv.org/abs/2602.02331",
       "folder": "papers/04_Loco-Manipulation_and_WBC/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour",
       "note_file": "TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour.md",
       "pdf_file": "TTT-Parkour.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-05-13",
+      "done_date": "2026-05-13",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "TTT-Parkour：用快速测试时训练让人形跑酷适应未见地形"
     },
     {
       "title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",

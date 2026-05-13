@@ -446,6 +446,14 @@
         "dir": "HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi",
         "arxiv": "2602.02473",
         "zhname": "HumanX：从人类视频学习敏捷且可泛化的人形交互技能"
+      },
+      {
+        "title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
+        "path": "papers/04_Loco-Manipulation_and_WBC/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour.html",
+        "dir": "TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour",
+        "arxiv": "2602.02331",
+        "zhname": "TTT-Parkour：用快速测试时训练让人形跑酷适应未见地形"
       }
     ],
     "zhname": "运动操作与全身控制"
