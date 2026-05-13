@@ -635,7 +635,12 @@ body {
  * Paper Mermaid notes zone subgraphs with `style SUB fill:#pastel,stroke:#…`.
  * Mermaid emits that fill as an inline `style="fill:#… !important"`, so normal
  * CSS cannot recolor the cluster rect. Apply an SVG filter instead to darken the
- * pastel panel; dark-theme cluster titles stay #F9FFFE and become legible.
+ * pastel panel.
+ *
+ * Subgraph titles render in foreignObject with a transparent wrapper; Mermaid’s
+ * dark theme still uses near-white title text (#F9FFFE), which can sit directly
+ * on the pastel fill (especially when the rect filter composites oddly on
+ * WebKit). Add a dark translucent pill behind the label text for readability.
  */
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#e8f4fd"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#E8F4FD"],
@@ -677,6 +682,36 @@ body {
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#f4ecf7"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#F4ECF7"] {
   filter: brightness(0.44) saturate(1.05) contrast(1.05);
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#e8f4fd"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#E8F4FD"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#e8f4fd"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#E8F4FD"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fdebd0"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FDEBD0"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fdebd0"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FDEBD0"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#e8f8e8"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#E8F8E8"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#e8f8e8"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#E8F8E8"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fceae8"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FCEAE8"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fceae8"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FCEAE8"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fce4ec"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FCE4EC"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fce4ec"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FCE4EC"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#f4ecf7"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#F4ECF7"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#f4ecf7"]) .cluster-label foreignObject > div,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#F4ECF7"]) .cluster-label foreignObject > div {
+  background-color: rgba(18, 22, 28, 0.92) !important;
+  border-radius: 6px;
+  padding: 2px 8px !important;
+  box-sizing: border-box;
 }
 
 
