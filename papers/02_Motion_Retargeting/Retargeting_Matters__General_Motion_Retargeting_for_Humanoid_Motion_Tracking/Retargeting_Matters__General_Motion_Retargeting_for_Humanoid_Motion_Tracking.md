@@ -3,6 +3,7 @@ layout: paper
 title: "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking"
 zhname: "Retargeting Matters：面向人形运动跟踪的通用动作重定向"
 category: "Motion Retargeting"
+paper_order: 1
 ---
 
 # Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking
