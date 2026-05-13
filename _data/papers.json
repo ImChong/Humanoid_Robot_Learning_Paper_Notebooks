@@ -137,6 +137,22 @@
         "dir": "Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking",
         "arxiv": "2510.02252",
         "zhname": "Retargeting Matters：面向人形运动跟踪的通用动作重定向"
+      },
+      {
+        "title": "Make Tracking Easy: Neural Motion Retargeting for Humanoid Whole-body Control",
+        "path": "papers/02_Motion_Retargeting/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control.md",
+        "url": "/papers/02_Motion_Retargeting/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control.html",
+        "dir": "Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control",
+        "arxiv": "2603.22201v3",
+        "zhname": "让跟踪变简单：面向人形全身控制的神经动作重定向（NMR）"
+      },
+      {
+        "title": "ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting",
+        "path": "papers/02_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting.md",
+        "url": "/papers/02_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting.html",
+        "dir": "ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting",
+        "arxiv": "2605.06593v1",
+        "zhname": "ReActor：面向物理可行动作重定向的强化学习"
       }
     ],
     "subtitle": "Bridging human motion data and humanoid policies — geometric IK, learned retargeting, and the engineering choices that determine downstream policy quality",
