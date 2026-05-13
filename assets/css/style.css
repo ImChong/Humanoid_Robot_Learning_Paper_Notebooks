@@ -75,7 +75,7 @@ body {
 }
 
 .header-inner {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 8px 24px;
   min-height: 56px;
@@ -128,9 +128,9 @@ body {
 
 /* ===== Container ===== */
 .container {
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2rem 24px;
 }
 
 /* Paper pages: shift right to make room for left TOC */
@@ -865,7 +865,7 @@ body {
 }
 
 .footer-inner {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 24px;
   text-align: center;
