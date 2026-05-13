@@ -634,49 +634,172 @@ body {
 /*
  * Paper Mermaid notes zone subgraphs with `style SUB fill:#pastel,stroke:#…`.
  * Mermaid emits that fill as an inline `style="fill:#… !important"`, so normal
- * CSS cannot recolor the cluster rect. Apply an SVG filter instead to darken the
- * pastel panel; dark-theme cluster titles stay #F9FFFE and become legible.
+ * CSS cannot recolor the cluster rect. Darken the pastel panel slightly with a
+ * filter, and override subgraph **title** colour (foreignObject / optional SVG
+ * text): Mermaid’s dark theme uses near-white #F9FFFE on those fills — switch to
+ * deep, hue-matched text colours instead of adding a background pill.
  */
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#e8f4fd"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#E8F4FD"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#e8f4fd"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#E8F4FD"] {
-  filter: brightness(0.42) saturate(1.08) contrast(1.06);
+  filter: brightness(0.66) saturate(1.06) contrast(1.04);
 }
 
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#fdebd0"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#FDEBD0"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#fdebd0"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#FDEBD0"] {
-  filter: brightness(0.44) saturate(1.05) contrast(1.05);
+  filter: brightness(0.68) saturate(1.04) contrast(1.04);
 }
 
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#e8f8e8"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#E8F8E8"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#e8f8e8"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#E8F8E8"] {
-  filter: brightness(0.42) saturate(1.06) contrast(1.06);
+  filter: brightness(0.66) saturate(1.05) contrast(1.04);
 }
 
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#fceae8"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#FCEAE8"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#fceae8"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#FCEAE8"] {
-  filter: brightness(0.46) saturate(1.05) contrast(1.05);
+  filter: brightness(0.7) saturate(1.04) contrast(1.04);
 }
 
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#fce4ec"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#FCE4EC"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#fce4ec"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#FCE4EC"] {
-  filter: brightness(0.44) saturate(1.06) contrast(1.05);
+  filter: brightness(0.68) saturate(1.05) contrast(1.04);
 }
 
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#f4ecf7"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[style*="#F4ECF7"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#f4ecf7"],
 [data-theme="dark"] .paper-body .mermaid svg g.cluster > rect[fill="#F4ECF7"] {
-  filter: brightness(0.44) saturate(1.05) contrast(1.05);
+  filter: brightness(0.68) saturate(1.04) contrast(1.04);
+}
+
+/* Subgraph titles only — deep text on tinted cluster header (no background chip). */
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#e8f4fd"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#E8F4FD"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#e8f4fd"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#E8F4FD"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#e8f4fd"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#E8F4FD"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#e8f4fd"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#E8F4FD"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#e8f4fd"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#E8F4FD"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#e8f4fd"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#E8F4FD"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#e8f4fd"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#E8F4FD"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#e8f4fd"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#E8F4FD"]) .cluster-label tspan {
+  color: #05293f !important;
+  fill: #05293f !important;
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fdebd0"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FDEBD0"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fdebd0"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FDEBD0"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fdebd0"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FDEBD0"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fdebd0"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FDEBD0"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fdebd0"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FDEBD0"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fdebd0"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FDEBD0"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fdebd0"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FDEBD0"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fdebd0"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FDEBD0"]) .cluster-label tspan {
+  color: #2f1c08 !important;
+  fill: #2f1c08 !important;
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#e8f8e8"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#E8F8E8"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#e8f8e8"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#E8F8E8"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#e8f8e8"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#E8F8E8"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#e8f8e8"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#E8F8E8"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#e8f8e8"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#E8F8E8"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#e8f8e8"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#E8F8E8"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#e8f8e8"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#E8F8E8"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#e8f8e8"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#E8F8E8"]) .cluster-label tspan {
+  color: #082814 !important;
+  fill: #082814 !important;
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fceae8"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FCEAE8"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fceae8"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FCEAE8"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fceae8"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FCEAE8"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fceae8"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FCEAE8"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fceae8"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FCEAE8"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fceae8"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FCEAE8"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fceae8"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FCEAE8"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fceae8"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FCEAE8"]) .cluster-label tspan {
+  color: #3c1410 !important;
+  fill: #3c1410 !important;
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fce4ec"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FCE4EC"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fce4ec"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FCE4EC"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fce4ec"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FCE4EC"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fce4ec"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FCE4EC"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fce4ec"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FCE4EC"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fce4ec"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FCE4EC"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#fce4ec"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#FCE4EC"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#fce4ec"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#FCE4EC"]) .cluster-label tspan {
+  color: #361426 !important;
+  fill: #361426 !important;
+}
+
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#f4ecf7"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#F4ECF7"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#f4ecf7"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#F4ECF7"]) .cluster-label span,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#f4ecf7"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#F4ECF7"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#f4ecf7"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#F4ECF7"]) .cluster-label p,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#f4ecf7"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#F4ECF7"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#f4ecf7"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#F4ECF7"]) .cluster-label text,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#f4ecf7"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[style*="#F4ECF7"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#f4ecf7"]) .cluster-label tspan,
+[data-theme="dark"] .paper-body .mermaid svg g.cluster:has(> rect[fill="#F4ECF7"]) .cluster-label tspan {
+  color: #221834 !important;
+  fill: #221834 !important;
 }
 
 
