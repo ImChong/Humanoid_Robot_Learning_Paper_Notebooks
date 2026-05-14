@@ -3,17 +3,25 @@
   "confirmed": false,
   "section": "基础路线图",
   "daily_summary": {
-    "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 40,
-    "last_summary_date": "2026-05-14",
-    "last_summary_title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
-    "next_summary_index": 41,
+    "description": "Claude 每日论文总结任务。当前并行两条推进轨：(A) 高影响力精选轮转（全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具）；(B) 模块轮转（04 → 05 → ... → 14 → 04）。两条轨各自独立挑选，已有完整笔记的论文自动跳过。",
+    "high_impact_cycle": {
+      "categories": ["全身控制核心", "遥操作与模仿学习", "仿真平台与工具"],
+      "last_category": "全身控制核心",
+      "next_category": "遥操作与模仿学习",
+      "next_candidate": "H9 HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit"
+    },
     "module_rotation": {
       "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
       "order": ["04_Loco-Manipulation_and_WBC", "05_Locomotion", "06_Manipulation", "07_Teleoperation", "08_Navigation", "09_State_Estimation", "10_Sim-to-Real", "11_Simulation_Benchmark", "12_Hardware_Design", "13_Physics-Based_Animation", "14_Human_Motion"],
       "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_index": 40,
+      "last_title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
       "next_module": "05_Locomotion"
     },
+    "last_summary_index": 40,
+    "last_summary_date": "2026-05-14",
+    "last_summary_title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
+    "next_summary_index": 41,
     "log": [
       {
         "date": "2026-04-24",
@@ -125,10 +133,19 @@
       },
       {
         "date": "2026-05-14",
+        "index": "H2",
+        "title": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
+        "folder": "papers/03_High_Impact_Selection/HOVER_Versatile_Neural_Whole-Body_Controller",
+        "category": "高影响力精选 / 全身控制核心",
+        "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-14",
         "index": 40,
         "title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
         "folder": "papers/04_Loco-Manipulation_and_WBC/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control",
-        "module": "04_Loco-Manipulation_and_WBC"
+        "module": "04_Loco-Manipulation_and_WBC",
+        "track": "module_rotation"
       }
     ],
     "last_completed_index": 29,

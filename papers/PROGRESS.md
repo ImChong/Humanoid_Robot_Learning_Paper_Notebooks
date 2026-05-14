@@ -30,7 +30,7 @@
 | #   | 论文                                                                                                             | 来源  | 理由                         |
 | --- | -------------------------------------------------------------------------------------------------------------- | --- | -------------------------- |
 | H1  | [Expressive Whole-Body Control for Humanoid Robots](https://arxiv.org/abs/2402.16796) 🌟                       | WBC | 开源，表达性全身控制的基础工作            |
-| H2  | [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](https://arxiv.org/abs/2410.21229)          | WBC | 通用神经 WBC，影响力极大             |
+| H2  | [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](https://arxiv.org/abs/2410.21229) ✅ [笔记](03_High_Impact_Selection/HOVER_Versatile_Neural_Whole-Body_Controller/HOVER_Versatile_Neural_Whole-Body_Controller.md) | WBC | 通用神经 WBC，影响力极大             |
 | H3  | [ExBody2: Advanced Expressive Humanoid Whole-Body Control](https://arxiv.org/abs/2412.13196)                   | WBC | ExBody 系列进化，实机验证           |
 | H4  | [HugWBC: A Unified and General Humanoid Whole-Body Controller](https://arxiv.org/abs/2502.03206)               | WBC | 统一框架，工程参考价值高               |
 | H5  | [SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control](https://arxiv.org/abs/2511.07820) | WBC | NVIDIA，大规模 motion tracking |
