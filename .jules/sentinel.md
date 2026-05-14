@@ -18,3 +18,8 @@
 **Vulnerability:** Found a DOM-based XSS vulnerability in `_layouts/default.html` where Mermaid dynamically generated SVG content was directly assigned to `mermaidRoadmap.innerHTML` and a cache object.
 **Learning:** Even though Mermaid has a `securityLevel: 'strict'` configuration which runs labels through DOMPurify, it is safer to run the *entire* generated SVG string through `DOMPurify.sanitize()` prior to setting `innerHTML`. This provides an additional layer of defense against XSS that could be introduced by bypasses in Mermaid's internal sanitization or maliciously crafted code that escapes label boundaries.
 **Prevention:** Always use `DOMPurify.sanitize()` on generated HTML or SVG strings from third-party libraries before assigning them to `innerHTML`, even if the library claims to perform its own sanitization.
+
+## 2025-05-18 - HTML Attribute Injection in Jekyll Templates
+**Vulnerability:** Found a vulnerability in `index.html` where dynamically generated file URLs (like `paper.url` and `page.url`) were injected into `href` attributes without HTML escaping (e.g., `href="{{ site.baseurl }}{{ paper.url }}"`).
+**Learning:** If a paper's file path contains quote characters (`"` or `'`), injecting it unescaped into an HTML attribute allows an attacker to break out of the attribute context and inject arbitrary HTML attributes or events, leading to Cross-Site Scripting (XSS).
+**Prevention:** Always append the `| escape` filter when injecting dynamic content, including URLs and paths generated from filenames, into HTML attributes in Jekyll templates.
