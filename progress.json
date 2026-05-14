@@ -6,9 +6,11 @@
     "description": "Claude 每日论文总结任务。当前并行两条推进轨：(A) 高影响力精选轮转（全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具）；(B) 模块轮转（04 → 05 → ... → 14 → 04）。两条轨各自独立挑选，已有完整笔记的论文自动跳过。",
     "high_impact_cycle": {
       "categories": ["全身控制核心", "遥操作与模仿学习", "仿真平台与工具"],
-      "last_category": "全身控制核心",
-      "next_category": "遥操作与模仿学习",
-      "next_candidate": "H9 HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit"
+      "last_category": "遥操作与模仿学习",
+      "last_completed": "H9 HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
+      "last_completed_date": "2026-05-15",
+      "next_category": "仿真平台与工具",
+      "next_candidate": "H21 Humanoid-Gym: RL for Humanoid Robot with Zero-Shot Sim2Real Transfer"
     },
     "module_rotation": {
       "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
@@ -146,6 +148,14 @@
         "folder": "papers/04_Loco-Manipulation_and_WBC/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control",
         "module": "04_Loco-Manipulation_and_WBC",
         "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-15",
+        "index": "H9",
+        "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
+        "folder": "papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
+        "category": "高影响力精选 / 遥操作与模仿学习",
+        "track": "high_impact_cycle"
       }
     ],
     "last_completed_index": 29,
