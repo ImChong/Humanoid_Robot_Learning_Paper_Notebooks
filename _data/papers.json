@@ -206,6 +206,14 @@
             "dir": "OmniH2O_Universal_Whole-Body_Teleoperation",
             "arxiv": "2406.08858",
             "zhname": "OmniH2O：通用灵巧的人到人形整体遥操与学习"
+          },
+          {
+            "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
+            "path": "papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md",
+            "url": "/papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.html",
+            "dir": "HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
+            "arxiv": "2502.13013",
+            "zhname": "HOMIE：同构外骨骼驾驶舱式人形遥操作系统"
           }
         ],
         "zhname": "遥操作与模仿学习"
