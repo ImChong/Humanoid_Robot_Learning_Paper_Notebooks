@@ -54,7 +54,7 @@
 
 | #   | 论文                                                                                                       | 来源   | 理由                      |
 | --- | -------------------------------------------------------------------------------------------------------- | ---- | ----------------------- |
-| H12 | [Real-World Humanoid Locomotion with Reinforcement Learning](https://arxiv.org/abs/2303.03381)           | Loco | Berkeley，首个真实世界人形 RL 行走 |
+| H12 | [Real-World Humanoid Locomotion with Reinforcement Learning](https://arxiv.org/abs/2303.03381) ✅ [笔记](03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.md) | Loco | Berkeley，首个真实世界人形 RL 行走 |
 | H13 | [Humanoid Locomotion as Next Token Prediction](https://arxiv.org/abs/2402.19469)                         | Loco | 把运动控制建模为 token 预测，新范式   |
 | H14 | [Humanoid Parkour Learning](https://arxiv.org/abs/2406.10759)                                            | Loco | 人形跑酷，高动态控制              |
 | H15 | [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](https://arxiv.org/abs/2512.01996)               | Loco | 极快 sim-to-real，工程价值高    |
