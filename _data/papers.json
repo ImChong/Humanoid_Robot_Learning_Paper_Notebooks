@@ -478,6 +478,14 @@
         "dir": "TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour",
         "arxiv": "2602.02331",
         "zhname": "TTT-Parkour：用快速测试时训练让人形跑酷适应未见地形"
+      },
+      {
+        "title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control.html",
+        "dir": "ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control",
+        "arxiv": "2602.00401",
+        "zhname": "ZEST：动捕 / 视频 / 动画一锅炖，跨形态零样本迁移到 Atlas、G1、Spot"
       }
     ],
     "zhname": "运动操作与全身控制"

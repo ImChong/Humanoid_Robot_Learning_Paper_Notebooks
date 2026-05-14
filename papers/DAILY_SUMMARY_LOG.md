@@ -31,21 +31,29 @@
 | 2026-05-09 | 38 | [HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos](04_Loco-Manipulation_and_WBC/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi.md) | Loco-Manipulation / WBC | 待官方释出（[wyhuai.github.io/human-x](https://wyhuai.github.io/human-x/)） |
 | 2026-05-13 | 39 | [TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour](04_Loco-Manipulation_and_WBC/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour.md) | Loco-Manipulation / WBC | 待官方释出（[ttt-parkour.github.io](https://ttt-parkour.github.io/)） |
 | 2026-05-14 | H2 | [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](03_High_Impact_Selection/HOVER_Versatile_Neural_Whole-Body_Controller/HOVER_Versatile_Neural_Whole-Body_Controller.md) | 高影响力精选 / 全身控制核心 | [NVlabs/HOVER](https://github.com/NVlabs/HOVER) |
+| 2026-05-14 | 40 | [ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control](04_Loco-Manipulation_and_WBC/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control.md) | Loco-Manipulation / WBC | 截至论文发布暂未公开 |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
 > 备注：2026-05-09 推进索引 38 (HumanX)，arXiv / HuggingFace / 项目主页临时不可访问，笔记基于公开搜索结果与作者前作 (PhysHOI / SkillMimic) 整理；后续待 PDF / 官方仓库释出后补充实验细节与消融数值。
-> 备注：2026-05-14 开始进入新模式——在「⭐ 高影响力精选」内按 *全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具* 顺序每天推进一篇；已存在足够内容的笔记自动跳过。首篇为 H2 HOVER（全身控制核心，原 `03_High_Impact_Selection` 目录仅有 H1/H3/H8/H19 四篇）。
+> 备注：2026-05-14 起并行两条推进轨：
+> - **轨 A · 高影响力精选轮转**：在「⭐ 高影响力精选」内按 *全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具* round-robin 推进；首篇为 H2 HOVER。
+> - **轨 B · 模块轮转**：按 04_WBC → 05_Locomotion → 06_Manipulation → ... → 14_Human_Motion → 回到 04 顺序推进；当日推进了索引 40 ZEST。
+> 两条轨各自维护状态，已有完整笔记的论文自动跳过；同一天可能各产出一篇。
 
 ---
 
-## ⏭️ 下一篇候选（高影响力精选循环）
+## ⏭️ 下一篇候选
+
+> 当前并行两条推进轨，各自独立挑选；同一天可能各产出一篇。
+
+### 🅰️ 轨 A · 高影响力精选轮转
 
 > 循环顺序：**全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具 → 全身控制核心 …**
 >
 > 跳过原则：对应类别内若整体已有内容（≥1 完整笔记体），自动 round-robin 到下一类。
 
-### 全身控制核心（H1–H6）
+#### 全身控制核心（H1–H6）
 | 编号 | 论文 | 状态 |
 |:---:|------|------|
 | H1 | Expressive Whole-Body Control for Humanoid Robots | ✅ 已完成 |
@@ -55,7 +63,7 @@
 | H5 | SONIC: Supersizing Motion Tracking | ⏳ 待写 |
 | H6 | UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control | ⏳ 待写 |
 
-### 遥操作与模仿学习（H7–H11）
+#### 遥操作与模仿学习（H7–H11）
 | 编号 | 论文 | 状态 |
 |:---:|------|------|
 | H7 | HumanPlus | ✅ 已存在（笔记位于 07_Teleoperation） |
@@ -64,13 +72,27 @@
 | H10 | EgoMimic | ✅ 已存在（笔记位于 06_Manipulation） |
 | H11 | Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies | ⏳ 待写 |
 
-### 仿真平台与工具（H21–H23）
+#### 仿真平台与工具（H21–H23）
 | 编号 | 论文 | 状态 |
 |:---:|------|------|
 | H21 | Humanoid-Gym | ⏳ 待写 |
 | H22 | HumanoidBench | ✅ 已存在（笔记位于 11_Simulation_Benchmark） |
 | H23 | BEHAVIOR Robot Suite | ⏳ 待写 |
 
-按循环，下次（2026-05-15）轮到 **遥操作与模仿学习** → 首个待写候选是 **H9 HOMIE**。
+按循环，下次（2026-05-15）轮 A 轨到 **遥操作与模仿学习** → 首个待写候选是 **H9 HOMIE**。
 
-> 实际推进时会再次检查对应 folder 是否已存在内容，避免重复劳动。
+---
+
+### 🅱️ 轨 B · 模块轮转
+
+> 循环顺序：04_WBC → 05_Locomotion → 06_Manipulation → 07_Teleoperation → 08_Navigation → 09_State_Estimation → 10_Sim-to-Real → 11_Simulation_Benchmark → 12_Hardware_Design → 13_Physics-Based_Animation → 14_Human_Motion → 回到 04
+>
+> 每天选当前轮转模块下索引最小的未完成论文；已有内容的笔记自动跳过。
+
+| 索引 | 论文 | 模块 | 状态 |
+|:---:|------|------|------|
+| 39 | TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour | 04_WBC | ✅ 已完成（2026-05-13） |
+| 40 | ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control | 04_WBC | ✅ 已完成（2026-05-14） |
+| ? | （明日：05_Locomotion 模块首个未完成论文） | 05_Locomotion | ⏭️ 下一篇候选 |
+
+> 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
