@@ -4,10 +4,16 @@
   "section": "基础路线图",
   "daily_summary": {
     "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
-    "last_summary_index": 39,
-    "last_summary_date": "2026-05-13",
-    "last_summary_title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
-    "next_summary_index": 40,
+    "last_summary_index": 40,
+    "last_summary_date": "2026-05-14",
+    "last_summary_title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
+    "next_summary_index": 41,
+    "module_rotation": {
+      "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
+      "order": ["04_Loco-Manipulation_and_WBC", "05_Locomotion", "06_Manipulation", "07_Teleoperation", "08_Navigation", "09_State_Estimation", "10_Sim-to-Real", "11_Simulation_Benchmark", "12_Hardware_Design", "13_Physics-Based_Animation", "14_Human_Motion"],
+      "last_module": "04_Loco-Manipulation_and_WBC",
+      "next_module": "05_Locomotion"
+    },
     "log": [
       {
         "date": "2026-04-24",
@@ -116,6 +122,13 @@
         "index": 39,
         "title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
         "folder": "papers/04_Loco-Manipulation_and_WBC/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour"
+      },
+      {
+        "date": "2026-05-14",
+        "index": 40,
+        "title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control",
+        "module": "04_Loco-Manipulation_and_WBC"
       }
     ],
     "last_completed_index": 29,
@@ -604,15 +617,15 @@
     },
     {
       "title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
-      "arxiv": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
+      "arxiv": "https://arxiv.org/abs/2602.00401",
       "folder": "papers/04_Loco-Manipulation_and_WBC/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control",
       "note_file": "ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control.md",
       "pdf_file": "ZEST.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-05-14",
+      "done_date": "2026-05-14",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "ZEST：动捕/视频/动画一锅炖，跨形态零样本迁移到 Atlas、G1、Spot"
     },
     {
       "title": "Robust and Generalized Humanoid Motion Tracking",

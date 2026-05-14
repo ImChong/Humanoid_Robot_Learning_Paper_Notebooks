@@ -123,7 +123,7 @@
 | 47   | [Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control](https://arxiv.org/abs/2602.02960)                                  | 2026.02    |     | ⏳ 待读 |
 | 48   | [HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos](https://arxiv.org/abs/2602.02473)                                         | 2026-05-09 |     | ✅ 完成 |
 | 49   | [TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour](https://arxiv.org/abs/2602.02331)                                                           | 2026-05-13 |     | ✅ 完成 |
-| 50   | [ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control](https://arxiv.org/abs/2602.00401)                                                           | 2026.02    |     | ⏳ 待读 |
+| 50   | [ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control](https://arxiv.org/abs/2602.00401)                                                           | 2026-05-14 |     | ✅ 完成 |
 | 51   | [Robust and Generalized Humanoid Motion Tracking](https://arxiv.org/abs/2601.23080)                                                                              | 2026.01    |     | ⏳ 待读 |
 | 52   | [RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing](https://arxiv.org/abs/2601.22517)                                                     | 2026.01    |     | ⏳ 待读 |
 | 53   | [PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes](https://arxiv.org/abs/2601.17440)                           | 2026.01    |     | ⏳ 待读 |
