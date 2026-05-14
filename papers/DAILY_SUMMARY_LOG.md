@@ -30,21 +30,47 @@
 | 2026-05-08 | 37 | [Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control](04_Loco-Manipulation_and_WBC/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B/Embodiment-Aware_Generalist_Specialist_Distillation_for_Unified_Humanoid_Whole-B.md) | Loco-Manipulation / WBC | 截至论文发布暂未公开 |
 | 2026-05-09 | 38 | [HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos](04_Loco-Manipulation_and_WBC/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi.md) | Loco-Manipulation / WBC | 待官方释出（[wyhuai.github.io/human-x](https://wyhuai.github.io/human-x/)） |
 | 2026-05-13 | 39 | [TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour](04_Loco-Manipulation_and_WBC/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour.md) | Loco-Manipulation / WBC | 待官方释出（[ttt-parkour.github.io](https://ttt-parkour.github.io/)） |
+| 2026-05-14 | H2 | [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](03_High_Impact_Selection/HOVER_Versatile_Neural_Whole-Body_Controller/HOVER_Versatile_Neural_Whole-Body_Controller.md) | 高影响力精选 / 全身控制核心 | [NVlabs/HOVER](https://github.com/NVlabs/HOVER) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
 > 备注：2026-05-09 推进索引 38 (HumanX)，arXiv / HuggingFace / 项目主页临时不可访问，笔记基于公开搜索结果与作者前作 (PhysHOI / SkillMimic) 整理；后续待 PDF / 官方仓库释出后补充实验细节与消融数值。
+> 备注：2026-05-14 开始进入新模式——在「⭐ 高影响力精选」内按 *全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具* 顺序每天推进一篇；已存在足够内容的笔记自动跳过。首篇为 H2 HOVER（全身控制核心，原 `03_High_Impact_Selection` 目录仅有 H1/H3/H8/H19 四篇）。
 
 ---
 
-## ⏭️ 下一篇候选（供参考）
+## ⏭️ 下一篇候选（高影响力精选循环）
 
-按 `progress.json` → `papers` 顺序：
+> 循环顺序：**全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具 → 全身控制核心 …**
+>
+> 跳过原则：对应类别内若整体已有内容（≥1 完整笔记体），自动 round-robin 到下一类。
 
-| 索引 | 论文 | 状态 |
+### 全身控制核心（H1–H6）
+| 编号 | 论文 | 状态 |
 |:---:|------|------|
-| 38 | HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos | ✅ 已完成 |
-| 39 | TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour | ✅ 已完成 |
-| 40 | ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control | ⏭️ 下一篇候选 |
+| H1 | Expressive Whole-Body Control for Humanoid Robots | ✅ 已完成 |
+| H2 | HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots | ✅ 已完成（2026-05-14） |
+| H3 | ExBody2: Advanced Expressive Humanoid Whole-Body Control | ✅ 已完成 |
+| H4 | HugWBC: A Unified and General Humanoid Whole-Body Controller | ⏳ 待写 |
+| H5 | SONIC: Supersizing Motion Tracking | ⏳ 待写 |
+| H6 | UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control | ⏳ 待写 |
+
+### 遥操作与模仿学习（H7–H11）
+| 编号 | 论文 | 状态 |
+|:---:|------|------|
+| H7 | HumanPlus | ✅ 已存在（笔记位于 07_Teleoperation） |
+| H8 | OmniH2O | ✅ 已完成 |
+| H9 | HOMIE | ⏳ 待写 |
+| H10 | EgoMimic | ✅ 已存在（笔记位于 06_Manipulation） |
+| H11 | Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies | ⏳ 待写 |
+
+### 仿真平台与工具（H21–H23）
+| 编号 | 论文 | 状态 |
+|:---:|------|------|
+| H21 | Humanoid-Gym | ⏳ 待写 |
+| H22 | HumanoidBench | ✅ 已存在（笔记位于 11_Simulation_Benchmark） |
+| H23 | BEHAVIOR Robot Suite | ⏳ 待写 |
+
+按循环，下次（2026-05-15）轮到 **遥操作与模仿学习** → 首个待写候选是 **H9 HOMIE**。
 
 > 实际推进时会再次检查对应 folder 是否已存在内容，避免重复劳动。
