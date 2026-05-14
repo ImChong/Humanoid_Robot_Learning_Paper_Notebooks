@@ -66,7 +66,7 @@
 
 | #   | 论文                                                                                                              | 来源    | 理由                          |
 | --- | --------------------------------------------------------------------------------------------------------------- | ----- | --------------------------- |
-| H17 | [Learning Agile and Dynamic Motor Skills for Legged Robots](https://arxiv.org/abs/1901.08652)                   | S2R   | ANYmal 经典，sim-to-real RL 奠基 |
+| H17 | [Learning Agile and Dynamic Motor Skills for Legged Robots](https://arxiv.org/abs/1901.08652) ✅ [笔记](03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.md) | S2R   | ANYmal 经典，sim-to-real RL 奠基 |
 | H18 | [ASAP: Aligning Simulation and Real-World Physics for Agile Humanoid Skills](https://agile.human2humanoid.com/) | S2R   | sim-real 物理对齐               |
 | H19 | [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](https://arxiv.org/abs/2503.14734)           | Manip | NVIDIA，人形机器人基础模型            |
 | H20 | [Behavior Foundation Model for Humanoid Robots](https://arxiv.org/abs/2509.13780)                               | WBC   | 行为基础模型                      |

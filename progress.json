@@ -3,12 +3,12 @@
   "confirmed": false,
   "section": "基础路线图",
   "daily_summary": {
-    "description": "Claude 每日论文总结任务。当前并行两条推进轨：(A) 高影响力精选轮转（全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具）；(B) 模块轮转（04 → 05 → ... → 14 → 04）。两条轨各自独立挑选，已有完整笔记的论文自动跳过。",
+    "description": "Claude / Cursor 每日论文总结任务。当前并行两条推进轨：(A) 高影响力精选轮转（全身控制核心 → 遥操作与模仿学习 → Locomotion 经典 → Sim-to-Real & Foundation Model → 仿真平台与工具 → 回到全身控制核心）；(B) 模块轮转（04 → 05 → ... → 14 → 04）。两条轨各自独立挑选，已有完整笔记的论文自动跳过。",
     "high_impact_cycle": {
-      "categories": ["全身控制核心", "遥操作与模仿学习", "仿真平台与工具"],
-      "last_category": "遥操作与模仿学习",
-      "last_completed": "H9 HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
-      "last_completed_date": "2026-05-15",
+      "categories": ["全身控制核心", "遥操作与模仿学习", "Locomotion 经典", "Sim-to-Real & Foundation Model", "仿真平台与工具"],
+      "last_category": "Sim-to-Real & Foundation Model",
+      "last_completed": "H17 Learning Agile and Dynamic Motor Skills for Legged Robots (ANYmal Hwangbo 2019)",
+      "last_completed_date": "2026-05-17",
       "next_category": "仿真平台与工具",
       "next_candidate": "H21 Humanoid-Gym: RL for Humanoid Robot with Zero-Shot Sim2Real Transfer"
     },
