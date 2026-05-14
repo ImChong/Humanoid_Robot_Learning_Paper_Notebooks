@@ -42,10 +42,13 @@ def sync():
 
         idx = folder_map.get(rel_folder)
         if idx is None:
-            for t in title_map:
-                if title and (t in title or title in t):
-                    idx = title_map[t]
-                    break
+            # ⚡ Bolt Optimization: O(1) exact title lookup before O(N) fuzzy matching
+            idx = title_map.get(title)
+            if idx is None:
+                for t in title_map:
+                    if title and (t in title or title in t):
+                        idx = title_map[t]
+                        break
 
         status = 'done' if not is_stub(content) else 'pending'
 

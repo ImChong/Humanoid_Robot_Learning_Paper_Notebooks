@@ -130,14 +130,21 @@ def parse_progress_order():
 
 def match_paper_order(paper_title, paper_dir, progress_order):
     """Find the README order index for a paper. Lower = earlier in README."""
-    # Try matching by title
+    # ⚡ Bolt Optimization: O(1) fast-path for exact matches before O(N) fuzzy search
     norm_title = normalize_name(paper_title)
+    if norm_title and norm_title in progress_order:
+        return progress_order[norm_title]
+
+    norm_dir = normalize_name(paper_dir.replace('_', ' '))
+    if norm_dir and norm_dir in progress_order:
+        return progress_order[norm_dir]
+
+    # Try matching by title
     for key, idx in progress_order.items():
         if norm_title and (norm_title in key or key in norm_title):
             return idx
 
     # Try matching by directory name
-    norm_dir = normalize_name(paper_dir.replace('_', ' '))
     for key, idx in progress_order.items():
         if norm_dir and (norm_dir in key or key in norm_dir):
             return idx
