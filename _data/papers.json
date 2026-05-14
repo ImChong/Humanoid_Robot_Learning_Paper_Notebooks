@@ -222,6 +222,14 @@
         "name": "Locomotion Classics",
         "papers": [
           {
+            "title": "Real-World Humanoid Locomotion with Reinforcement Learning",
+            "path": "papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.md",
+            "url": "/papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.html",
+            "dir": "Real-World_Humanoid_Locomotion_with_RL",
+            "arxiv": "2303.03381",
+            "zhname": "首个 RL 真实世界人形行走（Berkeley · Causal Transformer）"
+          },
+          {
             "title": "Learning Quadrupedal Locomotion over Challenging Terrain",
             "path": "papers/03_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.md",
             "url": "/papers/03_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.html",
