@@ -105,7 +105,7 @@ title: "Home"
         <ul class="paper-list">
           {% for paper in cat_data.papers %}
           <li data-search="{{ paper.title | escape }} {{ paper.zhname | escape }} {{ paper.arxiv | escape }}">
-            <a href="{{ site.baseurl }}{{ paper.url }}" class="paper-card">
+            <a href="{{ site.baseurl }}{{ paper.url | escape }}" class="paper-card">
               <span class="paper-title" data-en="{{ paper.title | escape }}" data-zh="{{ paper.zhname | escape }}">{{ paper.title | escape }}</span>
             </a>
           </li>
@@ -123,7 +123,7 @@ title: "Home"
           <ul class="paper-list">
             {% for paper in subcat.papers %}
             <li data-search="{{ paper.title | escape }} {{ paper.zhname | escape }} {{ paper.arxiv | escape }}">
-              <a href="{{ site.baseurl }}{{ paper.url }}" class="paper-card">
+              <a href="{{ site.baseurl }}{{ paper.url | escape }}" class="paper-card">
                 <span class="paper-title" data-en="{{ paper.title | escape }}" data-zh="{{ paper.zhname | escape }}">{{ paper.title | escape }}</span>
               </a>
             </li>
@@ -138,7 +138,7 @@ title: "Home"
       <ul class="paper-list">
         {% for paper in cat_data.papers %}
         <li data-search="{{ paper.title | escape }} {{ paper.zhname | escape }} {{ paper.arxiv | escape }}">
-          <a href="{{ site.baseurl }}{{ paper.url }}" class="paper-card">
+          <a href="{{ site.baseurl }}{{ paper.url | escape }}" class="paper-card">
             <span class="paper-title" data-en="{{ paper.title | escape }}" data-zh="{{ paper.zhname | escape }}">{{ paper.title | escape }}</span>
           </a>
         </li>
@@ -167,7 +167,7 @@ title: "Home"
         {% assign current_cat = cat %}
       {% endif %}
       <li data-search="{{ page.title | escape }}">
-        <a href="{{ page.url | relative_url }}" class="paper-card">
+        <a href="{{ page.url | relative_url | escape }}" class="paper-card">
           <span class="paper-title">{% if page.title %}{{ page.title | escape }}{% else %}{{ parts[3] | replace: "_", " " | escape }}{% endif %}</span>
         </a>
       </li>
