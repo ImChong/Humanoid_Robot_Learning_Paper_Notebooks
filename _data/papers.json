@@ -184,6 +184,14 @@
             "dir": "ExBody2_Advanced_Expressive_Whole-Body_Control",
             "arxiv": "2412.13196",
             "zhname": "ExBody2：进阶的表达性人形全身控制"
+          },
+          {
+            "title": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
+            "path": "papers/03_High_Impact_Selection/HOVER_Versatile_Neural_Whole-Body_Controller/HOVER_Versatile_Neural_Whole-Body_Controller.md",
+            "url": "/papers/03_High_Impact_Selection/HOVER_Versatile_Neural_Whole-Body_Controller/HOVER_Versatile_Neural_Whole-Body_Controller.html",
+            "dir": "HOVER_Versatile_Neural_Whole-Body_Controller",
+            "arxiv": "2410.21229",
+            "zhname": "HOVER：面向人形机器人的多模态通用神经全身控制器"
           }
         ],
         "zhname": "全身控制核心"

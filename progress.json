@@ -3,10 +3,16 @@
   "confirmed": false,
   "section": "基础路线图",
   "daily_summary": {
-    "description": "Claude 每日论文总结任务，按 papers 顺序推进，跳过已有内容的笔记",
+    "description": "Claude 每日论文总结任务。当前模式：在「⭐ 高影响力精选」内按 全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具 round-robin 推进；已有完整笔记的论文跳过。",
+    "high_impact_cycle": {
+      "categories": ["全身控制核心", "遥操作与模仿学习", "仿真平台与工具"],
+      "last_category": "全身控制核心",
+      "next_category": "遥操作与模仿学习",
+      "next_candidate": "H9 HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit"
+    },
     "last_summary_index": 39,
-    "last_summary_date": "2026-05-13",
-    "last_summary_title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
+    "last_summary_date": "2026-05-14",
+    "last_summary_title": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
     "next_summary_index": 40,
     "log": [
       {
@@ -116,6 +122,13 @@
         "index": 39,
         "title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
         "folder": "papers/04_Loco-Manipulation_and_WBC/TTT-Parkour__Rapid_Test-Time_Training_for_Perceptive_Robot_Parkour"
+      },
+      {
+        "date": "2026-05-14",
+        "index": "H2",
+        "title": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
+        "folder": "papers/03_High_Impact_Selection/HOVER_Versatile_Neural_Whole-Body_Controller",
+        "category": "高影响力精选 / 全身控制核心"
       }
     ],
     "last_completed_index": 29,
