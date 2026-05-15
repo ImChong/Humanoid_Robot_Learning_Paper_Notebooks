@@ -268,7 +268,7 @@
 
 | #   | 论文                                                                                                                                                              | 日期      | 🌟  | 状态   |
 | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
-| 187  | [Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits](https://arxiv.org/abs/2602.21666)                                                     | 2026.02 |     | ⏳ 待读 |
+| 187  | [Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits](https://arxiv.org/abs/2602.21666) ✅ [笔记](05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md) | 2026.02 |     | ✅ 已总结 |
 | 188  | [APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots](https://arxiv.org/abs/2602.11143)                                                         | 2026.02 |     | ⏳ 待读 |
 | 189  | [ECO: Energy-Constrained Optimization with Reinforcement Learning for Humanoid Walking](https://arxiv.org/abs/2602.06445)                                       | 2026.02 |     | ⏳ 待读 |
 | 190  | [Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels](https://arxiv.org/abs/2602.06382)                                                   | 2026.02 |     | ⏳ 待读 |

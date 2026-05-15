@@ -540,6 +540,14 @@
         "dir": "ANYmal_Parkour_Robust_Perceptive_Locomotion",
         "arxiv": "2306.14874",
         "zhname": "ANYmal 跑酷：足式机器人的敏捷导航学习"
+      },
+      {
+        "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
+        "path": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md",
+        "url": "/papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.html",
+        "dir": "Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits",
+        "arxiv": "2602.21666",
+        "zhname": "用生物力学定量度量人形步态：GDAF 框架与 28 速 G1 数据集"
       }
     ],
     "zhname": "行走运动"

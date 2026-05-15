@@ -5,7 +5,13 @@
   "daily_summary": {
     "description": "Claude / Cursor 每日论文总结任务。当前并行两条推进轨：(A) 高影响力精选轮转（全身控制核心 → 遥操作与模仿学习 → Locomotion 经典 → Sim-to-Real & Foundation Model → 仿真平台与工具 → 回到全身控制核心）；(B) 模块轮转（04 → 05 → ... → 14 → 04）。两条轨各自独立挑选，已有完整笔记的论文自动跳过。",
     "high_impact_cycle": {
-      "categories": ["全身控制核心", "遥操作与模仿学习", "Locomotion 经典", "Sim-to-Real & Foundation Model", "仿真平台与工具"],
+      "categories": [
+        "全身控制核心",
+        "遥操作与模仿学习",
+        "Locomotion 经典",
+        "Sim-to-Real & Foundation Model",
+        "仿真平台与工具"
+      ],
       "last_category": "Sim-to-Real & Foundation Model",
       "last_completed": "H17 Learning Agile and Dynamic Motor Skills for Legged Robots (ANYmal Hwangbo 2019)",
       "last_completed_date": "2026-05-17",
@@ -14,16 +20,28 @@
     },
     "module_rotation": {
       "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
-      "order": ["04_Loco-Manipulation_and_WBC", "05_Locomotion", "06_Manipulation", "07_Teleoperation", "08_Navigation", "09_State_Estimation", "10_Sim-to-Real", "11_Simulation_Benchmark", "12_Hardware_Design", "13_Physics-Based_Animation", "14_Human_Motion"],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 40,
-      "last_title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
-      "next_module": "05_Locomotion"
+      "order": [
+        "04_Loco-Manipulation_and_WBC",
+        "05_Locomotion",
+        "06_Manipulation",
+        "07_Teleoperation",
+        "08_Navigation",
+        "09_State_Estimation",
+        "10_Sim-to-Real",
+        "11_Simulation_Benchmark",
+        "12_Hardware_Design",
+        "13_Physics-Based_Animation",
+        "14_Human_Motion"
+      ],
+      "last_module": "05_Locomotion",
+      "last_index": 187,
+      "last_title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
+      "next_module": "06_Manipulation"
     },
-    "last_summary_index": 40,
-    "last_summary_date": "2026-05-14",
-    "last_summary_title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
-    "next_summary_index": 41,
+    "last_summary_index": 187,
+    "last_summary_date": "2026-05-15",
+    "last_summary_title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
+    "next_summary_index": 188,
     "log": [
       {
         "date": "2026-04-24",
@@ -156,6 +174,13 @@
         "folder": "papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
         "category": "高影响力精选 / 遥操作与模仿学习",
         "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-15",
+        "index": 187,
+        "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
+        "folder": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits",
+        "module": "05_Locomotion"
       }
     ],
     "last_completed_index": 29,
