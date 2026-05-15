@@ -20,6 +20,7 @@ from _common import (  # noqa: E402
     has_frontmatter,
     is_stub,
     normalize_name,
+    parse_frontmatter,
     stub_reason,
 )
 
@@ -239,22 +240,21 @@ def process_papers():
 
                 order_idx = match_paper_order(title, paper_dir, progress_order)
 
+                # ⚡ Bolt Optimization: Extract front matter explicitly with O(1) parsing
+                # instead of running multiple multi-line regexes over the whole file
+                frontmatter_meta = parse_frontmatter(content)
+
                 # Front-matter `paper_order: <n>` overrides PROGRESS.md matching.
                 # Used to put papers in README's recommended learning-path order
                 # even when their titles don't match the awesome-list table rows.
-                if 'paper_order' in content:
-                    explicit_order = re.search(
-                        r'^paper_order:\s*(\d+)\s*$', content, re.MULTILINE
-                    )
-                    if explicit_order:
-                        order_idx = int(explicit_order.group(1))
+                if 'paper_order' in frontmatter_meta:
+                    try:
+                        order_idx = int(frontmatter_meta['paper_order'])
+                    except ValueError:
+                        pass
 
                 # Extract subcategory from front matter if present
-                paper_subcat = None
-                if 'subcategory' in content:
-                    sm_match = re.search(r'^subcategory:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
-                    if sm_match:
-                        paper_subcat = sm_match.group(1).strip()
+                paper_subcat = frontmatter_meta.get('subcategory')
 
                 paper_entry = {
                     'title': title,
@@ -274,12 +274,8 @@ def process_papers():
                     paper_entry['arxiv'] = arxiv
 
                 # Prefer zhname from front matter when present
-                zhname_match = None
-                if 'zhname' in content:
-                    zhname_match = re.search(r'^zhname:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
-
-                if zhname_match:
-                    paper_entry['zhname'] = zhname_match.group(1).strip()
+                if 'zhname' in frontmatter_meta:
+                    paper_entry['zhname'] = frontmatter_meta['zhname']
                 # Otherwise restore zhname from existing data if available
                 elif existing_meta_for_paper.get('zhname'):
                     paper_entry['zhname'] = existing_meta_for_paper['zhname']
