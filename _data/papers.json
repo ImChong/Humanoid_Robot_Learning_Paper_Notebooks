@@ -200,20 +200,20 @@
         "name": "Teleoperation & Imitation Learning",
         "papers": [
           {
-            "title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
-            "path": "papers/03_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.md",
-            "url": "/papers/03_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.html",
-            "dir": "OmniH2O_Universal_Whole-Body_Teleoperation",
-            "arxiv": "2406.08858",
-            "zhname": "OmniH2O：通用灵巧的人到人形整体遥操与学习"
-          },
-          {
             "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
             "path": "papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md",
             "url": "/papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.html",
             "dir": "HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
             "arxiv": "2502.13013",
             "zhname": "HOMIE：同构外骨骼驾驶舱式人形遥操作系统"
+          },
+          {
+            "title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
+            "path": "papers/03_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.md",
+            "url": "/papers/03_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.html",
+            "dir": "OmniH2O_Universal_Whole-Body_Teleoperation",
+            "arxiv": "2406.08858",
+            "zhname": "OmniH2O：通用灵巧的人到人形整体遥操与学习"
           }
         ],
         "zhname": "遥操作与模仿学习"
@@ -249,6 +249,14 @@
             "dir": "GR00T_N1_Humanoid_Foundation_Model",
             "arxiv": "2503.14734",
             "zhname": "GR00T N1：面向通用人形机器人的开放基础模型"
+          },
+          {
+            "title": "Learning Agile and Dynamic Motor Skills for Legged Robots",
+            "path": "papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.md",
+            "url": "/papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.html",
+            "dir": "Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots",
+            "arxiv": "1901.08652",
+            "zhname": "ANYmal 敏捷运动技能学习（sim-to-real RL 奠基作）"
           }
         ],
         "zhname": "仿真到现实与基座模型"
