@@ -12,11 +12,11 @@
         "Sim-to-Real & Foundation Model",
         "仿真平台与工具"
       ],
-      "last_category": "Sim-to-Real & Foundation Model",
-      "last_completed": "H17 Learning Agile and Dynamic Motor Skills for Legged Robots (ANYmal Hwangbo 2019)",
-      "last_completed_date": "2026-05-17",
-      "next_category": "仿真平台与工具",
-      "next_candidate": "H21 Humanoid-Gym: RL for Humanoid Robot with Zero-Shot Sim2Real Transfer"
+      "last_category": "仿真平台与工具",
+      "last_completed": "H21 Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer (Gu/Wang/Chen, 2024)",
+      "last_completed_date": "2026-05-18",
+      "next_category": "全身控制核心",
+      "next_candidate": "H4 HugWBC: A Unified and General Humanoid Whole-Body Controller"
     },
     "module_rotation": {
       "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
@@ -181,6 +181,30 @@
         "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
         "folder": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits",
         "module": "05_Locomotion"
+      },
+      {
+        "date": "2026-05-16",
+        "index": "H12",
+        "title": "Real-World Humanoid Locomotion with Reinforcement Learning",
+        "folder": "papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL",
+        "category": "高影响力精选 / Locomotion 经典",
+        "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-17",
+        "index": "H17",
+        "title": "Learning Agile and Dynamic Motor Skills for Legged Robots (ANYmal, Hwangbo et al. 2019)",
+        "folder": "papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots",
+        "category": "高影响力精选 / Sim-to-Real & Foundation Model",
+        "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-18",
+        "index": "H21",
+        "title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
+        "folder": "papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer",
+        "category": "高影响力精选 / 仿真平台与工具",
+        "track": "high_impact_cycle"
       }
     ],
     "last_completed_index": 29,

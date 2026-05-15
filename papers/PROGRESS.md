@@ -77,7 +77,7 @@
 
 | #   | 论文                                                                                                                         | 来源  | 理由                 |
 | --- | -------------------------------------------------------------------------------------------------------------------------- | --- | ------------------ |
-| H21 | [Humanoid-Gym: RL for Humanoid Robot with Zero-Shot Sim2Real Transfer](https://arxiv.org/abs/2404.05695)                   | Sim | 人形机器人 RL 训练平台      |
+| H21 | [Humanoid-Gym: RL for Humanoid Robot with Zero-Shot Sim2Real Transfer](https://arxiv.org/abs/2404.05695) ✅ [笔记](03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.md) | Sim | 人形机器人 RL 训练平台      |
 | H22 | [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](https://arxiv.org/abs/2403.10506) | Sim | 标准 benchmark       |
 | H23 | [BEHAVIOR Robot Suite: Real-World Whole-Body Manipulation for Everyday Tasks](https://arxiv.org/abs/2503.05652) 🌟         | Sim | 真实世界全身操作 benchmark |
 | 14   | [Toward Reliable Sim-to-Real Predictability for MoE-based Robust Quadrupedal Locomotion](https://arxiv.org/abs/2602.00678) | 2026.02 |  | ⏳ 待读 |

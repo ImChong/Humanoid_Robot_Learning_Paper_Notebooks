@@ -273,6 +273,14 @@
             "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架"
           },
           {
+            "title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
+            "path": "papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.md",
+            "url": "/papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.html",
+            "dir": "Humanoid-Gym_Zero-Shot_Sim2Real_Transfer",
+            "arxiv": "2404.05695",
+            "zhname": "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架"
+          },
+          {
             "title": "Isaac Lab: Unified GPU Simulation Platform for Robot Learning",
             "path": "papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.md",
             "url": "/papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.html",
