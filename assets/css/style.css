@@ -1313,4 +1313,14 @@ html[data-lang-mode="zh"] .footer-text-zh {
     overflow-wrap: anywhere;
     word-break: break-word;
   }
+
+  /* Key–value style tables (e.g. 基本信息): do not let column 1 shrink to
+     per-glyph breaks; the blanket overflow-wrap:anywhere above makes short
+     labels min-content to ~1ch wide on narrow viewports. */
+  .paper-body th:first-child,
+  .paper-body td:first-child {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
 }
