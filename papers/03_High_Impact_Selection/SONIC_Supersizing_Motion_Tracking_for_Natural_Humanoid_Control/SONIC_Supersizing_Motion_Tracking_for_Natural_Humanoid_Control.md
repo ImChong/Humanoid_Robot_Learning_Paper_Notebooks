@@ -101,7 +101,7 @@ SONIC 的论点是：**只要把 motion tracking 当作 foundational task 放大
 
 ## 🧭 整体框架（mermaid）
 
-<div class="mermaid" style="max-width:520px;margin:0 auto;">
+<div class="mermaid" style="max-width:640px;margin:0 auto;">
 flowchart TB
     subgraph DATA["📚 规模化 MoCap 监督"]
         direction TB
@@ -122,7 +122,7 @@ flowchart TB
         direction TB
         T1["VR 全身 (PICO)"]
         T2["VR 三点 (头/双手)"]
-        T3["视频 / 文本 / 音乐 (GENMO)"]
+        T3["视频 / 文本 / 音乐<br/>(GENMO)"]
         T4["VLA: GR00T N1.5"]
         ENC["Hybrid Encoder"]
         T1 ~~~ T2 ~~~ T3 ~~~ T4 ~~~ ENC
@@ -155,7 +155,8 @@ flowchart TB
 
     DATA --> SCALE
     SCALE --> TOKEN
-    TOKEN --> PLAN
+    SCALE --> PLAN
+    TOKEN --> POLICY
     PLAN --> POLICY
     POLICY --> DEPLOY
 
