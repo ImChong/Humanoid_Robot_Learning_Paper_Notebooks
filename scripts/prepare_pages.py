@@ -27,16 +27,20 @@ from _common import (  # noqa: E402
 PROGRESS_PATH = os.path.join(PAPERS_DIR, 'PROGRESS.md')
 
 
+_TITLE_RE = re.compile(r'^#\s+(.+)$', re.MULTILINE)
+
 def extract_title(content):
     """Extract title from first H1 heading."""
-    text = content
-    if has_frontmatter(text):
-        parts = text.split('---', 2)
-        if len(parts) >= 3:
-            text = parts[2]
+    start_idx = 0
+    # ⚡ Bolt Optimization: Use `find` to skip frontmatter without string copies,
+    # and use `find('#')` as a fast pre-check before running the regex.
+    if has_frontmatter(content):
+        end_idx = content.find('---', 3)
+        if end_idx != -1:
+            start_idx = end_idx + 3
 
-    if '#' in text:
-        match = re.search(r'^#\s+(.+)$', text, re.MULTILINE)
+    if content.find('#', start_idx) != -1:
+        match = _TITLE_RE.search(content, start_idx)
         if match:
             return match.group(1).strip()
     return None

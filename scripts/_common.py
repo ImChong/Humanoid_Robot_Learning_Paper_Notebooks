@@ -93,12 +93,14 @@ def parse_frontmatter(content: str) -> dict:
     """
     if not has_frontmatter(content):
         return {}
-    parts = content.split('---', 2)
-    if len(parts) < 3:
+    # ⚡ Bolt Optimization: Use `find` to avoid allocating a large string
+    # copy for the body when we only need the frontmatter section.
+    end_idx = content.find('---', 3)
+    if end_idx == -1:
         return {}
-    body = parts[1]
+    front_matter_str = content[3:end_idx]
     result: dict[str, str] = {}
-    for line in body.splitlines():
+    for line in front_matter_str.splitlines():
         line = line.strip()
         if not line or line.startswith('#'):
             continue
