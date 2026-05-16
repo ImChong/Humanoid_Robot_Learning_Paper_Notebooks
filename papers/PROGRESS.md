@@ -46,7 +46,7 @@
 | H8  | [OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation](https://arxiv.org/abs/2406.08858) 🌟 | Teleop | LeCAR-Lab，通用 H2H 遥操作 |
 | H9  | [HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit](https://arxiv.org/abs/2502.13013) ✅ [笔记](03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md) | Teleop | OpenRobotLab，外骨骼遥操作  |
 | H10 | [EgoMimic: Scaling Imitation Learning via Egocentric Video](https://arxiv.org/abs/2410.24221) 🌟                   | Manip  | 自我中心视角模仿学习           |
-| H11 | [Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies](https://arxiv.org/abs/2410.10803) 🌟     | Manip  | 泽洋杰，3D 扩散策略          |
+| H11 | [Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies](https://arxiv.org/abs/2410.10803) 🌟 ✅ [笔记](03_High_Impact_Selection/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies.md) | Manip  | 泽洋杰，3D 扩散策略          |
 
 
 #### Locomotion 经典

@@ -40,6 +40,7 @@
 | 2026-05-18 | 350 | [EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models](08_Navigation/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum.md) | Navigation / VLM / 任务规划 / 第一视角 | 待官方释出（[baai-agents.github.io/EgoActor](https://baai-agents.github.io/EgoActor/)） |
 | 2026-05-19 | 368 | [AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion](09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md) | State Estimation / 本体感知里程计 / Sim-to-Real | 截至当前未见公开发布 |
 | 2026-05-17 | H4 | [HugWBC: A Unified and General Humanoid Whole-Body Controller for Versatile Locomotion](03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.md) | 高影响力精选 / 全身控制核心 | [apexrl/HugWBC](https://github.com/apexrl/HugWBC) · [InternRobotics/HugWBC](https://github.com/InternRobotics/HugWBC) |
+| 2026-05-18 | H11 | [iDP3: Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies](03_High_Impact_Selection/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies.md) | 高影响力精选 / 遥操作与模仿学习 | [YanjieZe/Improved-3D-Diffusion-Policy](https://github.com/YanjieZe/Improved-3D-Diffusion-Policy) · [humanoid_teleoperation](https://github.com/YanjieZe/humanoid_teleoperation) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -79,7 +80,7 @@
 | H8 | OmniH2O | ✅ 已完成 |
 | H9 | HOMIE | ✅ 已完成（2026-05-15） |
 | H10 | EgoMimic | ✅ 已存在（笔记位于 06_Manipulation） |
-| H11 | Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies | ⏳ 待写 |
+| H11 | Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies | ✅ 已完成（2026-05-18） |
 
 #### 仿真平台与工具（H21–H23）
 | 编号 | 论文 | 状态 |
@@ -88,7 +89,12 @@
 | H22 | HumanoidBench | ✅ 已存在（笔记位于 11_Simulation_Benchmark） |
 | H23 | BEHAVIOR Robot Suite | ✅ 已完成（2026-05-16） |
 
-2026-05-17 已完成全身控制核心 → **H4 HugWBC**。按循环，下次（2026-05-18）轮 A 轨到 **遥操作与模仿学习** → 首个待写候选是 **H11 Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies (iDP3)**（H7 HumanPlus / H10 EgoMimic 已存在于其它分类目录，按规则跳过）。
+2026-05-18 已完成遥操作与模仿学习 → **H11 iDP3**。截至此条记录：
+- **全身控制核心**：H1–H4 全部完成；待写 H5 SONIC / H6 UH-1。
+- **遥操作与模仿学习**：H7（HumanPlus，位于 07_Teleoperation）/ H8（OmniH2O）/ H9（HOMIE）/ H10（EgoMimic，位于 06_Manipulation）/ H11（iDP3，本次） **全部完成**。
+- **仿真平台与工具**：H21（Humanoid-Gym）/ H22（HumanoidBench，位于 11_Simulation_Benchmark）/ H23（BEHAVIOR Robot Suite） **全部完成**。
+
+按三类循环，下次（2026-05-19）轨 A 轨回到 **全身控制核心** → 首个待写候选是 **H5 SONIC: Supersizing Motion Tracking**；H5 / H6 写完后「高影响力精选」三类的初版笔记将全部覆盖，届时需提示用户补充新的待读论文。
 
 ---
 
