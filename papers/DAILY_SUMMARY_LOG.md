@@ -48,10 +48,10 @@
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
 > 备注：2026-05-09 推进索引 38 (HumanX)，arXiv / HuggingFace / 项目主页临时不可访问，笔记基于公开搜索结果与作者前作 (PhysHOI / SkillMimic) 整理；后续待 PDF / 官方仓库释出后补充实验细节与消融数值。
 > 备注：2026-05-14 起并行两条推进轨：
-> - **轨 A · 高影响力精选轮转**：在「⭐ 高影响力精选」内按 *全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具* round-robin 推进；首篇为 H2 HOVER。
+> - **轨 A · 高影响力精选轮转**：在「⭐ 高影响力精选」内按子类 round-robin 推进；2026-05-14 起首篇 H2 HOVER。
 > - **轨 B · 模块轮转**：按 04_WBC → 05_Locomotion → 06_Manipulation → ... → 14_Human_Motion → 回到 04 顺序推进；当日推进了索引 40 ZEST。
 > 两条轨各自维护状态，已有完整笔记的论文自动跳过；同一天可能各产出一篇。
-> 备注：`progress.json` 中若曾出现「Locomotion 经典 / Sim-to-Real」等 **五类** 高影响力索引日期行，属与轨 A **三分类** 错开的另一自动化占位或历史试填；**轨 A 以本表与 `daily_summary.high_impact_cycle.categories`（三分类）为准**。
+> 备注（2026-05-22 更正）：轨 A 早期被误缩小为「**三分类**」（全身控制核心 / 遥操作与模仿学习 / 仿真平台与工具），把「Locomotion 经典 / Sim-to-Real & Foundation Model」当作另一路自动化的责任。用户原始任务要求「在高影响力精选模块内循环」，**应覆盖 03_High_Impact_Selection 全部 5 个子类**。自 2026-05-22 起，轨 A 循环为**五类**：全身控制核心 → 遥操作与模仿学习 → Locomotion 经典 → Sim-to-Real & Foundation Model → 仿真平台与工具 → 回到全身控制核心。`progress.json → daily_summary.high_impact_cycle.categories` 同步改为五类。
 
 ---
 
@@ -59,13 +59,15 @@
 
 > 当前并行两条推进轨，各自独立挑选；同一天可能各产出一篇。
 
-### 🅰️ 轨 A · 高影响力精选轮转
+### 🅰️ 轨 A · 高影响力精选轮转（五类，2026-05-22 起）
 
-> 循环顺序：**全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具 → 全身控制核心 …**
+> **循环顺序**：全身控制核心 → 遥操作与模仿学习 → **Locomotion 经典** → **Sim-to-Real & Foundation Model** → 仿真平台与工具 → 全身控制核心 …
 >
-> 跳过原则：对应类别内若整体已有内容（≥1 完整笔记体），自动 round-robin 到下一类。
+> **跳过原则**：当轮到的子类已全部覆盖时，按循环自动 round-robin 到下一类。
+>
+> ⚠️ 早期（2026-05-14 至 2026-05-21）该循环被误缩小为三类，将「Locomotion 经典 / Sim-to-Real & Foundation Model」当作另一路自动化的责任；现已更正为五类，与 `progress.json → daily_summary.high_impact_cycle.categories` 同步。
 
-#### 全身控制核心（H1–H6）
+#### 1. 全身控制核心（H1–H6）
 | 编号 | 论文 | 状态 |
 |:---:|------|------|
 | H1 | Expressive Whole-Body Control for Humanoid Robots | ✅ 已完成 |
@@ -75,7 +77,9 @@
 | H5 | SONIC: Supersizing Motion Tracking | ✅ 已完成（2026-05-20） |
 | H6 | UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control | ✅ 已完成（2026-05-21） |
 
-#### 遥操作与模仿学习（H7–H11）
+> 子类小计：**6 / 6 ✅ 已全部完成**
+
+#### 2. 遥操作与模仿学习（H7–H11）
 | 编号 | 论文 | 状态 |
 |:---:|------|------|
 | H7 | HumanPlus | ✅ 已存在（笔记位于 07_Teleoperation） |
@@ -84,23 +88,54 @@
 | H10 | EgoMimic | ✅ 已存在（笔记位于 06_Manipulation） |
 | H11 | Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies | ✅ 已完成（2026-05-18） |
 
-#### 仿真平台与工具（H21–H23）
+> 子类小计：**5 / 5 ✅ 已全部完成**
+
+#### 3. Locomotion 经典（H12–H16）
+| 编号 | 论文 | arXiv | 状态 |
+|:---:|------|:---:|------|
+| H12 | Real-World Humanoid Locomotion with Reinforcement Learning | [2303.03381](https://arxiv.org/abs/2303.03381) | ✅ 已完成（见 03 高影响力精选目录内笔记） |
+| H13 | Humanoid Locomotion as Next Token Prediction | [2402.19469](https://arxiv.org/abs/2402.19469) | ⏳ 待写（**下一篇候选**） |
+| H14 | Humanoid Parkour Learning | [2406.10759](https://arxiv.org/abs/2406.10759) | ⏳ 待写 |
+| H15 | Learning Sim-to-Real Humanoid Locomotion in 15 Minutes | [2512.01996](https://arxiv.org/abs/2512.01996) | ⏳ 待写 |
+| H16 | ECO: Energy-Constrained Optimization with RL for Humanoid Walking | [2602.06445](https://arxiv.org/abs/2602.06445) | ⏳ 待写 |
+
+> 子类小计：**1 / 5**（缺 H13 / H14 / H15 / H16）
+
+#### 4. Sim-to-Real & Foundation Model（H17–H20）
+| 编号 | 论文 | arXiv / 链接 | 状态 |
+|:---:|------|:---:|------|
+| H17 | Learning Agile and Dynamic Motor Skills for Legged Robots（ANYmal） | [1901.08652](https://arxiv.org/abs/1901.08652) | ✅ 已完成 |
+| H18 | ASAP: Aligning Simulation and Real-World Physics for Agile Humanoid Skills | [agile.human2humanoid.com](https://agile.human2humanoid.com/) | ⏳ 待写 |
+| H19 | GR00T N1: An Open Foundation Model for Generalist Humanoid Robots | [2503.14734](https://arxiv.org/abs/2503.14734) | ✅ 已存在（97 行基础笔记，深度细节可后续补充） |
+| H20 | Behavior Foundation Model for Humanoid Robots | [2509.13780](https://arxiv.org/abs/2509.13780) | ⏳ 待写 |
+
+> 子类小计：**2 / 4**（缺 H18 / H20）
+
+#### 5. 仿真平台与工具（H21–H23）
 | 编号 | 论文 | 状态 |
 |:---:|------|------|
 | H21 | Humanoid-Gym | ✅ 已完成（见 03 高影响力精选目录内笔记） |
 | H22 | HumanoidBench | ✅ 已存在（笔记位于 11_Simulation_Benchmark） |
 | H23 | BEHAVIOR Robot Suite | ✅ 已完成（2026-05-16） |
 
-2026-05-18 已完成遥操作与模仿学习 → **H11 iDP3**。  
-2026-05-20 已完成全身控制核心 → **H5 SONIC**（首版基础摘要 + mermaid 流程图）。  
-2026-05-21 已完成全身控制核心 → **H6 UH-1**（按循环跳过已全覆盖的「遥操作与模仿学习」「仿真平台与工具」，落回「全身控制核心」补 UH-1）。
+> 子类小计：**3 / 3 ✅ 已全部完成**
 
-截至此条记录：
-- **全身控制核心**：H1 / H2 HOVER / H3 ExBody2 / H4 HugWBC / H5 SONIC / **H6 UH-1（本次）** **全部完成**。
-- **遥操作与模仿学习**：H7（HumanPlus，位于 07_Teleoperation）/ H8（OmniH2O）/ H9（HOMIE）/ H10（EgoMimic，位于 06_Manipulation）/ H11（iDP3） **全部完成**。
-- **仿真平台与工具**：H21（Humanoid-Gym）/ H22（HumanoidBench，位于 11_Simulation_Benchmark）/ H23（BEHAVIOR Robot Suite） **全部完成**。
+---
 
-> ⛳ **轨 A 高影响力精选 H1–H23 已全部完成**。下一次推进将没有待写论文，需要请用户在 `papers/03_High_Impact_Selection/` 与 `daily_summary.high_impact_cycle` 中**补充新待读论文**（例如新一批 NVIDIA Isaac Lab / DeepMind / OpenAI 人形相关工作，或 HumanoidBench v2、ASAP、HumanUP 等近期高引用论文），否则轨 A 将进入空转状态。
+#### 五类总览与下次推进
+
+整体进度：**17 / 23**（剩 6 篇，全部集中在「Locomotion 经典」与「Sim-to-Real & Foundation Model」两类）。
+
+剩余写作顺序（按五类循环、跳过已全覆盖子类得到）：
+
+1. 2026-05-22 → **H13 Humanoid Locomotion as Next Token Prediction**（Locomotion 经典）
+2. 2026-05-23 → H18 ASAP（Sim-to-Real & FM）
+3. 2026-05-24 → 仿真平台与工具（已全覆盖，跳过）→ H14 Humanoid Parkour Learning（Locomotion 经典）
+4. 2026-05-25 → H20 Behavior Foundation Model（Sim-to-Real & FM）
+5. 2026-05-26 → H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes（Locomotion 经典）
+6. 2026-05-27 → H16 ECO（Locomotion 经典）
+
+写完 H16 后，「⭐ 高影响力精选」H1–H23 才真正全部完成，届时再提示用户补充新待读论文。
 
 ---
 
