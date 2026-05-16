@@ -24,7 +24,7 @@
       "last_completed": "H6 UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control (Mao*, Zhao*, Song* et al., USC/Berkeley/TRI, Humanoids 2025 Oral)",
       "last_completed_date": "2026-05-21",
       "next_category": "Locomotion 经典",
-      "next_candidate": "高影响力精选 · 五类循环：当前 next_category 名义为「遥操作与模仿学习」（H7–H11 已全覆盖，跳过），落到「Locomotion 经典」首个未写 → H13 Humanoid Locomotion as Next Token Prediction（arXiv 2402.19469）。后续顺序：H14 Humanoid Parkour Learning → H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes → H16 ECO → 接「Sim-to-Real & Foundation Model」剩余 H18 ASAP → H20 Behavior Foundation Model；共 6 篇写完后整组 H1–H23 才真正全部完成"
+      "next_candidate": "高影响力精选 · 五类循环：`next_category` 为「Locomotion 经典」：上一轮「全身控制核心」完成 H6 后，循环下一步「遥操作与模仿学习」（H7–H11）已全覆盖故跳过。下一篇 → H13 Humanoid Locomotion as Next Token Prediction（arXiv 2402.19469）。按五类轮转的后续写作顺序：H18 ASAP → H14 Humanoid Parkour Learning → H20 Behavior Foundation Model → H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes → H16 ECO（与 papers/DAILY_SUMMARY_LOG.md「五类总览与下次推进」一致）；共 6 篇写完后整组 H1–H23 才真正全部完成"
     },
     "module_rotation": {
       "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
