@@ -1438,6 +1438,11 @@ html[data-lang-mode="zh"] .footer-text-zh {
     width: 100%;
     max-width: 100%;
     min-width: 0;
+    /* Wide Markdown tables: let columns size to content and scroll horizontally
+       instead of forcing width:100% + overflow-wrap:anywhere (which squeezes
+       later columns to one character per line on narrow viewports). */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .paper-body h1,
@@ -1461,21 +1466,27 @@ html[data-lang-mode="zh"] .footer-text-zh {
   }
 
   .paper-body table {
-    width: 100%;
+    width: max-content;
     min-width: 100%;
-    max-width: 100%;
+    max-width: none;
     table-layout: auto;
   }
 
   .paper-body th,
   .paper-body td {
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  /* Inline code in tables (e.g. hidden_dims arrays): keep on one line so
+     columns stay readable; horizontal scroll on .paper-body handles overflow. */
+  .paper-body th code,
+  .paper-body td code {
+    white-space: nowrap;
   }
 
   /* Key–value style tables (e.g. 基本信息): do not let column 1 shrink to
-     per-glyph breaks; the blanket overflow-wrap:anywhere above makes short
-     labels min-content to ~1ch wide on narrow viewports. */
+     awkward wraps; short labels stay on one line when there is room. */
   .paper-body th:first-child,
   .paper-body td:first-child {
     white-space: nowrap;
