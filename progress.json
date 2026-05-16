@@ -31,15 +31,15 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 187,
-      "last_title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": 271,
+      "last_title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
+      "next_module": "07_Teleoperation"
     },
-    "last_summary_index": 187,
-    "last_summary_date": "2026-05-15",
-    "last_summary_title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
-    "next_summary_index": 188,
+    "last_summary_index": 271,
+    "last_summary_date": "2026-05-16",
+    "last_summary_title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
+    "next_summary_index": 272,
     "log": [
       {
         "date": "2026-04-24",
@@ -182,10 +182,34 @@
       },
       {
         "date": "2026-05-16",
+        "index": "H12",
+        "title": "Real-World Humanoid Locomotion with Reinforcement Learning",
+        "folder": "papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL",
+        "category": "高影响力精选 / Locomotion 经典",
+        "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-16",
         "index": "H23",
         "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
         "folder": "papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation",
         "category": "高影响力精选 / 仿真平台与工具",
+        "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-16",
+        "index": 271,
+        "title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
+        "folder": "papers/06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy",
+        "module": "06_Manipulation",
+        "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-17",
+        "index": "H17",
+        "title": "Learning Agile and Dynamic Motor Skills for Legged Robots (ANYmal, Hwangbo et al. 2019)",
+        "folder": "papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots",
+        "category": "高影响力精选 / Sim-to-Real & Foundation Model",
         "track": "high_impact_cycle"
       },
       {

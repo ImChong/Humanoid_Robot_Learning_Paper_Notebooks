@@ -578,6 +578,14 @@
         "dir": "EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video",
         "arxiv": "2410.24221",
         "zhname": "EgoMimic：通过第一视角视频扩展模仿学习"
+      },
+      {
+        "title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
+        "path": "papers/06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy.md",
+        "url": "/papers/06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy.html",
+        "dir": "HumDex_Humanoid_Dexterous_Manipulation_Made_Easy",
+        "arxiv": "2603.12260",
+        "zhname": "HumDex：让人形灵巧操作变简单（IMU 全身遥操作 + 学习式手部重定向）"
       }
     ],
     "zhname": "灵巧操作"
