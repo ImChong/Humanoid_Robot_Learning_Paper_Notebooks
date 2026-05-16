@@ -34,6 +34,7 @@
 | 2026-05-14 | 40 | [ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control](04_Loco-Manipulation_and_WBC/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control.md) | Loco-Manipulation / WBC | 截至论文发布暂未公开 |
 | 2026-05-15 | H9 | [HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit](03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md) | 高影响力精选 / 遥操作与模仿学习 | [InternRobotics/OpenHomie](https://github.com/InternRobotics/OpenHomie) |
 | 2026-05-15 | 187 | [Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits](05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md) | Locomotion / 生物力学评估 | 含 MuJoCo 可视化与 GDAF Notebook，随论文释出 |
+| 2026-05-16 | 271 | [HumDex: Humanoid Dexterous Manipulation Made Easy](06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy.md) | Manipulation / 遥操作 / 灵巧手 | [physical-superintelligence-lab/HumDex](https://github.com/physical-superintelligence-lab/HumDex) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -96,6 +97,7 @@
 | 39 | TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour | 04_WBC | ✅ 已完成（2026-05-13） |
 | 40 | ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control | 04_WBC | ✅ 已完成（2026-05-14） |
 | 187 | Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits | 05_Locomotion | ✅ 已完成（2026-05-15） |
-| ? | （明日：06_Manipulation 模块首个未完成论文） | 06_Manipulation | ⏭️ 下一篇候选 |
+| 271 | HumDex: Humanoid Dexterous Manipulation Made Easy | 06_Manipulation | ✅ 已完成（2026-05-16） |
+| ? | （明日：07_Teleoperation 模块首个未完成论文） | 07_Teleoperation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
