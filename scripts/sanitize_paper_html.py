@@ -114,6 +114,7 @@ def sanitize_paper_body_fragment(html_fragment: str) -> str:
         clean_content_tags=_CLEAN_CONTENT_TAGS,
         strip_comments=True,
         generic_attribute_prefixes=frozenset({"aria-", "data-"}),
+        link_rel="noopener noreferrer",
     )
 
 
