@@ -427,7 +427,7 @@
 
 | #   | 论文                                                                                                                                                             | 日期      | 🌟  | 状态   |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
-| 329  | [CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation](https://arxiv.org/abs/2602.15060)                                             | 2026.02 |     | ⏳ 待读 |
+| 329  | [CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation](https://arxiv.org/abs/2602.15060)                                             | 2026-05-17 |     | ✅ 完成 |
 | 330  | [ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control](https://arxiv.org/abs/2602.11321)                                            | 2026.02 |     | ⏳ 待读 |
 | 331  | [TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior](https://arxiv.org/abs/2602.09628)                                   | 2026.02 |     | ⏳ 待读 |
 | 332  | [A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation](https://arxiv.org/abs/2602.01632)                                     | 2026.02 |     | ⏳ 待读 |

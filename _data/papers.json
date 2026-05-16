@@ -600,6 +600,14 @@
         "dir": "HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans",
         "arxiv": "2406.10454",
         "zhname": "HumanPlus：人形机器人对人类的影子跟随与模仿"
+      },
+      {
+        "title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
+        "path": "papers/07_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation.md",
+        "url": "/papers/07_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation.html",
+        "dir": "CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation",
+        "arxiv": "2602.15060",
+        "zhname": "CLOT：用闭环全局动作跟踪做长时序人形遥操作"
       }
     ],
     "zhname": "遥操作"
