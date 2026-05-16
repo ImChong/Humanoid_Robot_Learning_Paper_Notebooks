@@ -170,6 +170,137 @@ flowchart TB
 
 ---
 
+## 🧠 模型架构详解（每层神经元数 / 参数规模）
+
+> 这一节专门解释 SONIC 的"网络长什么样"。所有数字都来自论文 §3 与官方 `gear_sonic/config/actor_critic/` 中 `sonic_release` 实验所用的 `all_mlp_v1` 配置（即论文报告的 42M 参数版本），不是泛泛的"差不多大概"。
+
+### 1. 高层结构：3 路 encoder × FSQ × 2 个 decoder
+
+整个 actor 是一个 **Action Transform Module (ATM)**：3 路异构输入各走一条 encoder，统一压成离散 token，再由一个 G1 解码器解出 29 维关节动作；训练时额外挂一个 kinematic decoder 把 token 还原回参考动作做自监督。
+
+| 子模块 | 角色 | 隐层结构 (`hidden_dims`) | 激活 | 训练用 / 部署用 |
+|---|---|---|---|---|
+| **G1 Encoder** | 机器人本体未来 N=10 帧目标 → token | `[2048, 1024, 512, 512]` | SiLU | 训练 + 部署 |
+| **Teleop Encoder** | VR 三点 (头/双手 SE(3)) + 下身命令 → token | `[2048, 1024, 512, 512]` | SiLU | 训练 + 部署 (VR) |
+| **SMPL Encoder** | SMPL 全身 N=10 帧关节 + 根朝向 → token | `[2048, 1024, 512, 512]` | SiLU | 训练 + 部署 (视频/VR 全身) |
+| **FSQ Quantizer** | 把 64 维潜空间离散成 token | 32 levels × 32 dim × 2 token/帧 = **64-d / 帧, ~320 bit/帧** | — | 训练 + 部署 |
+| **G1 Dynamic Decoder** (`g1_dyn`) | token + 本体感觉 → 29 DOF 关节动作 | `[2048, 2048, 1024, 1024, 512, 512]` | SiLU | 训练 + **部署** |
+| **G1 Kinematic Decoder** (`g1_kin`) | token → 还原 N 帧参考动作 | `[2048, 1024, 512, 512]` | SiLU | **仅训练**（aux loss）|
+| **Critic** (单独网络) | 全部 critic obs → 标量 value | `[2048, 2048, 1024, 1024, 512, 512]` | SiLU | 仅训练 |
+
+> 注意：SONIC **没有用 Transformer**——所有 backbone 都是密集 MLP + SiLU 激活。论文里之所以能"放大就涨"，靠的是把 MLP 宽度 + 数据 + GPU 数量同步放大，而不是换更复杂的算子。
+
+### 2. 详细网络拓扑（mermaid）
+
+下图把 `sonic_release` 实际在跑的网络逐层画出来；每个矩形里的数字就是该层的 **神经元数 (=隐层宽度)**。
+
+<div class="mermaid" style="max-width:760px;margin:0 auto;">
+flowchart TB
+    subgraph IN["📥 多模态输入 (per-frame)"]
+        direction TB
+        I1["G1 obs<br/>未来 10 帧 + anchor 朝向"]
+        I2["Teleop obs<br/>头/左手/右手 SE(3) +<br/>腰高 + nav 命令"]
+        I3["SMPL obs<br/>未来 10 帧 SMPL 关节 +<br/>root 朝向"]
+    end
+
+    subgraph ENC["🧬 三路 Encoder (MLP, SiLU)"]
+        direction TB
+        E1["G1 Encoder<br/>2048 → 1024 → 512 → 512"]
+        E2["Teleop Encoder<br/>2048 → 1024 → 512 → 512"]
+        E3["SMPL Encoder<br/>2048 → 1024 → 512 → 512"]
+    end
+
+    subgraph FSQ["🎛 FSQ 量化器 (共享潜空间)"]
+        direction TB
+        Q1["latent dim = 32<br/>num_tokens / 帧 = 2<br/>每维 32 levels (≈5 bit)"]
+        Q2["输出: 离散 token<br/>flatten = 64-d 实数向量"]
+        Q1 --> Q2
+    end
+
+    subgraph PROP["🦿 本体感觉 (proprioception)"]
+        direction TB
+        P1["关节位姿 / 关节速度<br/>角速度 / 重力方向<br/>last_actions"]
+    end
+
+    subgraph DEC["🤖 G1 Dynamic Decoder (部署用)"]
+        direction TB
+        D0["token (64) ⊕ proprio"]
+        D1["FC 2048"]
+        D2["FC 2048"]
+        D3["FC 1024"]
+        D4["FC 1024"]
+        D5["FC 512"]
+        D6["FC 512"]
+        D7["action_mean<br/>= 29 DOF 关节目标"]
+        D0 --> D1 --> D2 --> D3 --> D4 --> D5 --> D6 --> D7
+    end
+
+    subgraph KIN["🪞 G1 Kinematic Decoder (仅训练 / aux loss)"]
+        direction TB
+        K1["FC 2048 → 1024 → 512 → 512"]
+        K2["还原未来 10 帧 G1 命令<br/>+ anchor 朝向"]
+        K1 --> K2
+    end
+
+    subgraph CRI["📏 Critic (独立 MLP, 仅训练)"]
+        direction TB
+        C1["critic_obs (含特权信息)"]
+        C2["FC 2048 → 2048 → 1024<br/>→ 1024 → 512 → 512"]
+        C3["scalar V(s)"]
+        C1 --> C2 --> C3
+    end
+
+    I1 --> E1
+    I2 --> E2
+    I3 --> E3
+    E1 --> Q1
+    E2 --> Q1
+    E3 --> Q1
+    Q2 --> D0
+    Q2 --> K1
+    PROP --> D0
+
+    style IN fill:#e8f4fd,stroke:#1f78b4,color:#0b3d5c
+    style ENC fill:#e8f8e8,stroke:#27ae60,color:#0b3d1a
+    style FSQ fill:#fdebd0,stroke:#e67e22,color:#7a3e00
+    style PROP fill:#f4ecf7,stroke:#7d3c98,color:#3d1f5c
+    style DEC fill:#fef9e7,stroke:#b7950b,color:#5c4a00
+    style KIN fill:#fce4ec,stroke:#c2185b,color:#5c0b2b
+    style CRI fill:#eaf2f8,stroke:#2e86c1,color:#1b4f72
+</div>
+
+### 3. 参数规模解读（论文报告 1.2M → 42M）
+
+论文里 scaling 实验扫描了 4 档容量，核心做法是 **同比缩放每个 MLP 的隐层宽度**（`hidden_dims` 整体打折），而层数、激活、模块拓扑保持不变：
+
+| 容量档 | 大致 actor 参数 | 典型 `hidden_dims` 比例 | 用途 |
+|---|---|---|---|
+| **Tiny** | ~1.2 M | `[256, 128, 64, 64]` 量级 | 论文 Fig.2(b) scaling 起点 |
+| **Small** | ~5 M | `[1024, 512, 256, 256]` 量级 | 中间档 |
+| **Base** | ~15 M | `[1536, 768, 384, 384]` 量级 | 中间档 |
+| **Large（`sonic_release`）** | **~42 M** | `[2048, 1024, 512, 512]` (encoder) <br/> `[2048, 2048, 1024, 1024, 512, 512]` (g1_dyn) | 论文主实验 + 开源 checkpoint |
+
+> 粗略估算（`sonic_release`，仅 actor 侧、不含 critic）：3×encoder ≈ 9.5 M、g1_dyn decoder ≈ 8.5 M、g1_kin decoder ≈ 4 M、加上 FSQ / running stats / token embedding 等共 **≈ 30 M**；再加上独立的 critic（≈ 8.5 M）就接近论文报告的 **~42 M actor + critic 总规模**。具体数字会随 `tokenizer / policy / critic obs` 维度浮动，权威值请以 W&B `n_parameters` 为准。
+
+### 4. 实时性数据（部署）
+
+| 指标 | 数值 | 来源 |
+|---|---|---|
+| **决策频率** | 50 Hz（与 Isaac Lab `dt=0.02s` 对齐） | 论文 §3.2 |
+| **Kinematic Planner 推理** | 笔记本 < 5 ms / Jetson Orin GPU 12 ms | 论文 §2.2 |
+| **跟踪策略推理** | Jetson Orin 上单帧 sub-ms 量级（仅 MLP，无 Transformer） | 推断 |
+| **VR teleop 端到端延迟** | 平均 121.9 ms（含 PICO → 网络 → 执行器整链） | 论文 §2.4.2 |
+| **Replan 周期** | ≤ 100 ms 或用户改命令立即触发 | 论文 §2.2 |
+
+### 5. 为什么是这样的"扁宽 MLP"而不是 Transformer？
+
+- **延迟硬约束**：人形 sim-to-real 需要 ≥ 50 Hz 的决策频率和 sub-10 ms 的 onboard 推理；同等参数下 MLP 比 Transformer 在 Jetson Orin 上更省时。
+- **离散 token 已经做了"序列瓶颈"**：FSQ 把每帧潜空间压成 2 个 token，相当于把"长上下文压缩"的活外包给了量化器，decoder 只需做单帧 control。
+- **Scaling law 仍然成立**：论文 Fig.2 显示 MPJPE 随宽度 + 数据 + GPU 时长单调下降——证明在 motion tracking 这种 dense 监督任务上，MLP 也有"放大就涨"的红利，没必要立刻上 Transformer。
+- **训练稳定**：PPO + 5 项 aux loss（见 §源码对照③）已经够"挑战"，再加 attention 容易引入额外的稳定性问题。
+
+---
+
 ## 📊 实验亮点（节选）
 
 - **Scaling 曲线**：MPJPE 在数据量、模型容量、GPU 时长三个维度上都是单调下降；**数据维度收益最大**。
