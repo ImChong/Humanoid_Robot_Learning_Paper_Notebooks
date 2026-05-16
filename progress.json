@@ -31,15 +31,15 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 350,
-      "last_title": "EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models",
-      "next_module": "09_State_Estimation"
+      "last_module": "09_State_Estimation",
+      "last_index": 368,
+      "last_title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
+      "next_module": "10_Sim-to-Real"
     },
-    "last_summary_index": 350,
-    "last_summary_date": "2026-05-18",
-    "last_summary_title": "EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models",
-    "next_summary_index": 368,
+    "last_summary_index": 368,
+    "last_summary_date": "2026-05-19",
+    "last_summary_title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
+    "next_summary_index": null,
     "log": [
       {
         "date": "2026-04-24",
@@ -235,6 +235,14 @@
         "title": "EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models",
         "folder": "papers/08_Navigation/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum",
         "module": "08_Navigation",
+        "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-19",
+        "index": 368,
+        "title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
+        "folder": "papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio",
+        "module": "09_State_Estimation",
         "track": "module_rotation"
       }
     ],

@@ -644,6 +644,14 @@
         "dir": "Contact-Aided_Invariant_EKF_for_Legged_Robots",
         "arxiv": "1904.09251",
         "zhname": "基于接触辅助的不变扩展卡尔曼滤波的足式机器人状态估计"
+      },
+      {
+        "title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
+        "path": "papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md",
+        "url": "/papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.html",
+        "dir": "AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio",
+        "arxiv": "2511.18857",
+        "zhname": "AutoOdom：用自回归式纯本体感知里程计撑住足式机器人的长程定位"
       }
     ],
     "zhname": "状态估计"
