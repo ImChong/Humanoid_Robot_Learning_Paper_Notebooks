@@ -43,6 +43,7 @@
 | 2026-05-18 | H11 | [iDP3: Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies](03_High_Impact_Selection/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies.md) | 高影响力精选 / 遥操作与模仿学习 | [YanjieZe/Improved-3D-Diffusion-Policy](https://github.com/YanjieZe/Improved-3D-Diffusion-Policy) · [humanoid_teleoperation](https://github.com/YanjieZe/humanoid_teleoperation) |
 | 2026-05-20 | H5 | [SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control](03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.md) | 高影响力精选 / 全身控制核心 | 截至当前未公开训练代码，主要参考 [项目主页](https://nvlabs.github.io/SONIC/) 与 [GR00T-WholeBodyControl 文档](https://nvlabs.github.io/GR00T-WholeBodyControl/) |
 | 2026-05-21 | H6 | [UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control](03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md) | 高影响力精选 / 全身控制核心 | [sihengz02/UH-1](https://github.com/sihengz02/UH-1) · [HuggingFace USC-PSI-Lab/UH-1](https://huggingface.co/USC-PSI-Lab/UH-1) |
+| 2026-05-20 | 379 | [RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots](10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.md) | Sim-to-Real / OOD 检测 / 失败诊断 | 截至当前未见公开发布（作者 [humphreymunn](https://github.com/humphreymunn) 仓库列表暂无 RAPT） |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -154,6 +155,7 @@
 | 329 | CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation | 07_Teleoperation | ✅ 已完成（2026-05-17） |
 | 350 | EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models | 08_Navigation | ✅ 已完成（2026-05-18） |
 | 368 | AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion | 09_State_Estimation | ✅ 已完成（2026-05-19） |
-| ? | （明日：10_Sim-to-Real 模块首个未完成论文） | 10_Sim-to-Real | ⏭️ 下一篇候选 |
+| 379 | RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots | 10_Sim-to-Real | ✅ 已完成（2026-05-20） |
+| ? | （明日：11_Simulation_Benchmark 模块首个未完成论文） | 11_Simulation_Benchmark | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

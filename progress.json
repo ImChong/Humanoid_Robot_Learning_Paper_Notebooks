@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "09_State_Estimation",
-      "last_index": 368,
-      "last_title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
-      "next_module": "10_Sim-to-Real"
+      "last_module": "10_Sim-to-Real",
+      "last_index": 379,
+      "last_title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
+      "next_module": "11_Simulation_Benchmark"
     },
-    "last_summary_index": 368,
-    "last_summary_date": "2026-05-19",
-    "last_summary_title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
+    "last_summary_index": 379,
+    "last_summary_date": "2026-05-20",
+    "last_summary_title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
     "next_summary_index": null,
     "log": [
       {
@@ -286,6 +286,14 @@
         "folder": "papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
         "category": "高影响力精选 / 全身控制核心",
         "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-20",
+        "index": 379,
+        "title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
+        "folder": "papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_",
+        "module": "10_Sim-to-Real",
+        "track": "module_rotation"
       }
     ],
     "last_completed_index": 29,
