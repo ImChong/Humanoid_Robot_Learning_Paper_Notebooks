@@ -38,6 +38,7 @@
 | 2026-05-16 | 271 | [HumDex: Humanoid Dexterous Manipulation Made Easy](06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy.md) | Manipulation / 遥操作 / 灵巧手 | [physical-superintelligence-lab/HumDex](https://github.com/physical-superintelligence-lab/HumDex) |
 | 2026-05-17 | 329 | [CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation](07_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation.md) | Teleoperation / 全身控制 / 动作跟踪 | [zhutengjie/CLOT](https://github.com/zhutengjie/CLOT) |
 | 2026-05-18 | 350 | [EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models](08_Navigation/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum.md) | Navigation / VLM / 任务规划 / 第一视角 | 待官方释出（[baai-agents.github.io/EgoActor](https://baai-agents.github.io/EgoActor/)） |
+| 2026-05-19 | 368 | [AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion](09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md) | State Estimation / 本体感知里程计 / Sim-to-Real | 截至当前未见公开发布 |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -104,6 +105,7 @@
 | 271 | HumDex: Humanoid Dexterous Manipulation Made Easy | 06_Manipulation | ✅ 已完成（2026-05-16） |
 | 329 | CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation | 07_Teleoperation | ✅ 已完成（2026-05-17） |
 | 350 | EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models | 08_Navigation | ✅ 已完成（2026-05-18） |
-| ? | （明日：09_State_Estimation 模块首个未完成论文） | 09_State_Estimation | ⏭️ 下一篇候选 |
+| 368 | AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion | 09_State_Estimation | ✅ 已完成（2026-05-19） |
+| ? | （明日：10_Sim-to-Real 模块首个未完成论文） | 10_Sim-to-Real | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

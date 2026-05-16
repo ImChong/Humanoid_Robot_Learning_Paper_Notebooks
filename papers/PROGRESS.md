@@ -480,7 +480,7 @@
 
 | #   | 论文                                                                                                                                       | 日期      | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
-| 368  | [AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion](https://arxiv.org/abs/2511.18857)                     | 2025.11 |     | ⏳ 待读 |
+| 368  | [AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion](https://arxiv.org/abs/2511.18857) ✅ [笔记](09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md)                     | 2025.11 |     | ✅ 完成 |
 | 369  | [InEKFormer: A Hybrid State Estimator for Humanoid Robots](https://arxiv.org/abs/2511.16306)                                             | 2025.11 |     | ⏳ 待读 |
 | 370  | [Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation](https://arxiv.org/abs/2507.10105) | 2025.07 |     | ⏳ 待读 |
 | 371  | [An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems](https://arxiv.org/abs/2207.06780)           | 2022.07 |     | ⏳ 待读 |
