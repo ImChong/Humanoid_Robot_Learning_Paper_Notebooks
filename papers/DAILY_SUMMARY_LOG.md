@@ -36,6 +36,7 @@
 | 2026-05-15 | 187 | [Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits](05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md) | Locomotion / 生物力学评估 | 含 MuJoCo 可视化与 GDAF Notebook，随论文释出 |
 | 2026-05-16 | H23 | [BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities](03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.md) | 高影响力精选 / 仿真平台与工具 | [behavior-robot-suite/brs-algo](https://github.com/behavior-robot-suite/brs-algo) · [brs-ctrl](https://github.com/behavior-robot-suite/brs-ctrl) |
 | 2026-05-16 | 271 | [HumDex: Humanoid Dexterous Manipulation Made Easy](06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy.md) | Manipulation / 遥操作 / 灵巧手 | [physical-superintelligence-lab/HumDex](https://github.com/physical-superintelligence-lab/HumDex) |
+| 2026-05-17 | 329 | [CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation](07_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation.md) | Teleoperation / 全身控制 / 动作跟踪 | [zhutengjie/CLOT](https://github.com/zhutengjie/CLOT) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -100,6 +101,7 @@
 | 40 | ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control | 04_WBC | ✅ 已完成（2026-05-14） |
 | 187 | Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits | 05_Locomotion | ✅ 已完成（2026-05-15） |
 | 271 | HumDex: Humanoid Dexterous Manipulation Made Easy | 06_Manipulation | ✅ 已完成（2026-05-16） |
-| ? | （明日：07_Teleoperation 模块首个未完成论文） | 07_Teleoperation | ⏭️ 下一篇候选 |
+| 329 | CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation | 07_Teleoperation | ✅ 已完成（2026-05-17） |
+| ? | （明日：08_Navigation 模块首个未完成论文） | 08_Navigation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

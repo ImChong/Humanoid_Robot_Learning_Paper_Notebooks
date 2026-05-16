@@ -31,15 +31,15 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 271,
-      "last_title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
-      "next_module": "07_Teleoperation"
+      "last_module": "07_Teleoperation",
+      "last_index": 329,
+      "last_title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
+      "next_module": "08_Navigation"
     },
-    "last_summary_index": 271,
-    "last_summary_date": "2026-05-16",
-    "last_summary_title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
-    "next_summary_index": 272,
+    "last_summary_index": 329,
+    "last_summary_date": "2026-05-17",
+    "last_summary_title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
+    "next_summary_index": 330,
     "log": [
       {
         "date": "2026-04-24",
@@ -202,6 +202,14 @@
         "title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
         "folder": "papers/06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy",
         "module": "06_Manipulation",
+        "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-17",
+        "index": 329,
+        "title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
+        "folder": "papers/07_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation",
+        "module": "07_Teleoperation",
         "track": "module_rotation"
       },
       {
@@ -2546,6 +2554,26 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "Locomotion",
+      "title_cn": ""
+    },
+    {
+      "title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
+      "folder": "papers/06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy",
+      "note_file": "HumDex_Humanoid_Dexterous_Manipulation_Made_Easy.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
+      "folder": "papers/07_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation",
+      "note_file": "CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Teleoperation",
       "title_cn": ""
     }
   ]
