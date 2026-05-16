@@ -178,6 +178,14 @@
             "zhname": "人形机器人表现力全身控制"
           },
           {
+            "title": "HugWBC: A Unified and General Humanoid Whole-Body Controller for Versatile Locomotion",
+            "path": "papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.md",
+            "url": "/papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.html",
+            "dir": "HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller",
+            "arxiv": "2502.03206",
+            "zhname": "HugWBC：面向多步态人形的统一通用全身控制器"
+          },
+          {
             "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
             "path": "papers/03_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.md",
             "url": "/papers/03_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.html",
