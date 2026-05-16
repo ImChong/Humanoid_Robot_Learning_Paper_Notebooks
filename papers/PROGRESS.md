@@ -455,7 +455,7 @@
 
 | #   | 论文                                                                                                                                                         | 日期      | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
-| 350  | [EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models](https://arxiv.org/abs/2602.04515) | 2026.02 |     | ⏳ 待读 |
+| 350  | [EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models](https://arxiv.org/abs/2602.04515) ✅ [笔记](08_Navigation/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum.md) | 2026.02 |     | ✅ 完成 |
 | 351  | [FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation](https://arxiv.org/abs/2601.12790)                             | 2026.01 |     | ⏳ 待读 |
 | 352  | [STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain / code](https://arxiv.org/abs/2506.01046)                    | 2025.12 |     | ⏳ 待读 |
 | 353  | [Thinking in 360: Humanoid Visual Search in the Wild](https://arxiv.org/abs/2511.20351)                                                                    | 2025.11 |     | ⏳ 待读 |
