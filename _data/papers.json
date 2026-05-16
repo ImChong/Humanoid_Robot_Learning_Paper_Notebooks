@@ -622,6 +622,14 @@
         "dir": "NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation",
         "arxiv": "2412.04453",
         "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
+      },
+      {
+        "title": "EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models",
+        "path": "papers/08_Navigation/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum.md",
+        "url": "/papers/08_Navigation/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum.html",
+        "dir": "EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum",
+        "arxiv": "2602.04515",
+        "zhname": "EgoActor：用 VLM 把任务规划落到人形机器人的空间感知第一视角动作上"
       }
     ],
     "zhname": "导航"

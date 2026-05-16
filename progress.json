@@ -31,15 +31,15 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 329,
-      "last_title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": 350,
+      "last_title": "EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models",
+      "next_module": "09_State_Estimation"
     },
-    "last_summary_index": 329,
-    "last_summary_date": "2026-05-17",
-    "last_summary_title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
-    "next_summary_index": 330,
+    "last_summary_index": 350,
+    "last_summary_date": "2026-05-18",
+    "last_summary_title": "EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models",
+    "next_summary_index": 351,
     "log": [
       {
         "date": "2026-04-24",
@@ -228,6 +228,14 @@
         "category": "高影响力精选 / 仿真平台与工具",
         "track": "high_impact_cycle",
         "note": "Humanoid-Gym 笔记定稿日期；与轨 A 三分类同日多轨并存时在日志中保留。"
+      },
+      {
+        "date": "2026-05-18",
+        "index": 350,
+        "title": "EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models",
+        "folder": "papers/08_Navigation/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum",
+        "module": "08_Navigation",
+        "track": "module_rotation"
       }
     ],
     "last_completed_index": 29,
