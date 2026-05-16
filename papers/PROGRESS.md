@@ -79,7 +79,7 @@
 | --- | -------------------------------------------------------------------------------------------------------------------------- | --- | ------------------ |
 | H21 | [Humanoid-Gym: RL for Humanoid Robot with Zero-Shot Sim2Real Transfer](https://arxiv.org/abs/2404.05695) ✅ [笔记](03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.md) | Sim | 人形机器人 RL 训练平台      |
 | H22 | [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](https://arxiv.org/abs/2403.10506) | Sim | 标准 benchmark       |
-| H23 | [BEHAVIOR Robot Suite: Real-World Whole-Body Manipulation for Everyday Tasks](https://arxiv.org/abs/2503.05652) 🌟         | Sim | 真实世界全身操作 benchmark |
+| H23 | [BEHAVIOR Robot Suite: Real-World Whole-Body Manipulation for Everyday Tasks](https://arxiv.org/abs/2503.05652) 🌟 ✅ [笔记](03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.md) | Sim | 真实世界全身操作 benchmark |
 | 14   | [Toward Reliable Sim-to-Real Predictability for MoE-based Robust Quadrupedal Locomotion](https://arxiv.org/abs/2602.00678) | 2026.02 |  | ⏳ 待读 |
 | 15   | [AME-2: Agile and Generalized Legged Locomotion via Attention-Based Neural Map Encoding](https://arxiv.org/abs/2601.08485) | 2026.01 |  | ⏳ 待读 |
 | 16   | [Gait-Adaptive Perceptive Humanoid Locomotion with Real-Time Under-Base Terrain Reconstruction](https://arxiv.org/abs/2512.07464) | 2025.12 |  | ⏳ 待读 |
