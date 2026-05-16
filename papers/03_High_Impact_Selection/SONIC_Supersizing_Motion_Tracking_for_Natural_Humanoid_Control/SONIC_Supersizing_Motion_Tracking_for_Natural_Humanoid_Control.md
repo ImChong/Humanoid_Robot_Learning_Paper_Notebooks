@@ -101,55 +101,63 @@ SONIC 的论点是：**只要把 motion tracking 当作 foundational task 放大
 
 ## 🧭 整体框架（mermaid）
 
-<div class="mermaid">
-flowchart LR
+<div class="mermaid" style="max-width:520px;margin:0 auto;">
+flowchart TB
     subgraph DATA["📚 规模化 MoCap 监督"]
+        direction TB
         D1["100M+ 帧 / 700h<br/>多源 motion 数据"]
         D2["不需手写 reward<br/>逐帧密集监督"]
+        D1 ~~~ D2
     end
 
     subgraph SCALE["📈 三轴一起放大"]
+        direction TB
         S1["参数: 1.2M → 42M"]
         S2["数据: 0.4M → 7.4M → 100M"]
         S3["GPU 时长: 9k–32k h"]
+        S1 ~~~ S2 ~~~ S3
     end
 
     subgraph TOKEN["🧩 Universal Token Space"]
+        direction TB
         T1["VR 全身 (PICO)"]
         T2["VR 三点 (头/双手)"]
-        T3["视频 / 文本 / 音乐<br/>(GENMO)"]
+        T3["视频 / 文本 / 音乐 (GENMO)"]
         T4["VLA: GR00T N1.5"]
-        T1 --> ENC["Hybrid Encoder"]
-        T2 --> ENC
-        T3 --> ENC
-        T4 --> ENC
+        ENC["Hybrid Encoder"]
+        T1 ~~~ T2 ~~~ T3 ~~~ T4 ~~~ ENC
     end
 
     subgraph PLAN["🧠 实时运动规划器"]
+        direction TB
         P1["自回归生成<br/>0.8 – 2.4 s 片段"]
         P2["笔记本 < 5 ms<br/>Jetson 12 ms"]
         P3["100 ms 内 replan"]
+        P1 ~~~ P2 ~~~ P3
     end
 
     subgraph POLICY["🤖 SONIC 跟踪策略"]
+        direction TB
         R1["Robot Control Decoder"]
         R2["Unitree G1<br/>实机部署"]
+        R1 --> R2
     end
 
     subgraph DEPLOY["🌍 下游能力"]
+        direction TB
         E1["未见 motion 零样本跟踪"]
         E2["导航 0–6 m/s + 风格化"]
         E3["蹲/跪/爬 全身技能"]
         E4["拳击等交互娱乐"]
         E5["VLA 取放 95% 成功"]
+        E1 ~~~ E2 ~~~ E3 ~~~ E4 ~~~ E5
     end
 
     DATA --> SCALE
-    SCALE --> POLICY
-    ENC --> R1
-    PLAN --> R1
-    R1 --> R2
-    R2 --> DEPLOY
+    SCALE --> TOKEN
+    TOKEN --> PLAN
+    PLAN --> POLICY
+    POLICY --> DEPLOY
 
     style DATA fill:#e8f4fd,stroke:#1f78b4,color:#0b3d5c
     style SCALE fill:#fdebd0,stroke:#e67e22,color:#7a3e00
