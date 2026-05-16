@@ -99,7 +99,7 @@ HumDex 的解法：**便携 IMU 全身动捕 + 学习式手部 retarget + 端到
 ## 🧭 整体流程（mermaid）
 
 <div class="mermaid">
-flowchart LR
+flowchart TB
     subgraph CAP["🧥 便携动捕（任意场地）"]
         IMU["📡 IMU 全身套装<br/>SlimeVR / Xsens"]
         GLV["🧤 数据手套<br/>Manus 等"]
@@ -132,7 +132,7 @@ flowchart LR
     EXEC --> H5
     H5 --> ACT
     ACT --> POL
-    POL -.部署.-> ROBOT
+    POL -.->|部署| WBC
 
     style CAP fill:#fff7e0,stroke:#d4a017
     style RET fill:#e8f4fd,stroke:#1f78b4
