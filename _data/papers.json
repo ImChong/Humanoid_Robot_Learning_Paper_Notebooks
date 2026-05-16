@@ -698,6 +698,14 @@
         "dir": "RMA_Rapid_Motor_Adaptation",
         "arxiv": "2107.04034",
         "zhname": "RMA：足式机器人的快速电机自适应"
+      },
+      {
+        "title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
+        "path": "papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.md",
+        "url": "/papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.html",
+        "dir": "RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_",
+        "arxiv": "2602.01515",
+        "zhname": "RAPT：给人形 sim-to-real 部署装一个 50 Hz 的「异常监控 + 自动归因」"
       }
     ],
     "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
