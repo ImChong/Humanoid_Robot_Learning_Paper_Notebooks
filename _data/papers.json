@@ -273,6 +273,14 @@
             "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架"
           },
           {
+            "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
+            "path": "papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.md",
+            "url": "/papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.html",
+            "dir": "BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation",
+            "arxiv": "2503.05652",
+            "zhname": "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
+          },
+          {
             "title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
             "path": "papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.md",
             "url": "/papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.html",

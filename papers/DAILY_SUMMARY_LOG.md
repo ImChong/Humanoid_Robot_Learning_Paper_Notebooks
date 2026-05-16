@@ -34,6 +34,7 @@
 | 2026-05-14 | 40 | [ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control](04_Loco-Manipulation_and_WBC/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control/ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control.md) | Loco-Manipulation / WBC | 截至论文发布暂未公开 |
 | 2026-05-15 | H9 | [HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit](03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md) | 高影响力精选 / 遥操作与模仿学习 | [InternRobotics/OpenHomie](https://github.com/InternRobotics/OpenHomie) |
 | 2026-05-15 | 187 | [Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits](05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md) | Locomotion / 生物力学评估 | 含 MuJoCo 可视化与 GDAF Notebook，随论文释出 |
+| 2026-05-16 | H23 | [BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities](03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.md) | 高影响力精选 / 仿真平台与工具 | [behavior-robot-suite/brs-algo](https://github.com/behavior-robot-suite/brs-algo) · [brs-ctrl](https://github.com/behavior-robot-suite/brs-ctrl) |
 | 2026-05-16 | 271 | [HumDex: Humanoid Dexterous Manipulation Made Easy](06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy.md) | Manipulation / 遥操作 / 灵巧手 | [physical-superintelligence-lab/HumDex](https://github.com/physical-superintelligence-lab/HumDex) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
@@ -43,6 +44,7 @@
 > - **轨 A · 高影响力精选轮转**：在「⭐ 高影响力精选」内按 *全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具* round-robin 推进；首篇为 H2 HOVER。
 > - **轨 B · 模块轮转**：按 04_WBC → 05_Locomotion → 06_Manipulation → ... → 14_Human_Motion → 回到 04 顺序推进；当日推进了索引 40 ZEST。
 > 两条轨各自维护状态，已有完整笔记的论文自动跳过；同一天可能各产出一篇。
+> 备注：`progress.json` 中若曾出现「Locomotion 经典 / Sim-to-Real」等 **五类** 高影响力索引日期行，属与轨 A **三分类** 错开的另一自动化占位或历史试填；**轨 A 以本表与 `daily_summary.high_impact_cycle.categories`（三分类）为准**。
 
 ---
 
@@ -78,11 +80,11 @@
 #### 仿真平台与工具（H21–H23）
 | 编号 | 论文 | 状态 |
 |:---:|------|------|
-| H21 | Humanoid-Gym | ⏳ 待写 |
+| H21 | Humanoid-Gym | ✅ 已完成（见 03 高影响力精选目录内笔记） |
 | H22 | HumanoidBench | ✅ 已存在（笔记位于 11_Simulation_Benchmark） |
-| H23 | BEHAVIOR Robot Suite | ⏳ 待写 |
+| H23 | BEHAVIOR Robot Suite | ✅ 已完成（2026-05-16） |
 
-按循环，下次（2026-05-16）轮 A 轨到 **仿真平台与工具** → 首个待写候选是 **H21 Humanoid-Gym**（H22 HumanoidBench 已有笔记位于 11_Simulation_Benchmark）。
+按循环，下次（2026-05-17）轮 A 轨到 **全身控制核心** → 首个待写候选是 **H4 HugWBC**（H21 Humanoid-Gym、H22 HumanoidBench 等已有笔记或位于其它分类目录，已跳过）。
 
 ---
 

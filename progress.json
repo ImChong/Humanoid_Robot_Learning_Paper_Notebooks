@@ -3,18 +3,16 @@
   "confirmed": false,
   "section": "基础路线图",
   "daily_summary": {
-    "description": "Claude / Cursor 每日论文总结任务。当前并行两条推进轨：(A) 高影响力精选轮转（全身控制核心 → 遥操作与模仿学习 → Locomotion 经典 → Sim-to-Real & Foundation Model → 仿真平台与工具 → 回到全身控制核心）；(B) 模块轮转（04 → 05 → ... → 14 → 04）。两条轨各自独立挑选，已有完整笔记的论文自动跳过。",
+    "description": "Claude / Cursor 每日论文总结任务。当前并行两条推进轨：(A) 高影响力精选「三轨」轮转（全身控制核心 → 遥操作与模仿学习 → 仿真平台与工具 → 回到全身控制核心），与另一路自动化错开；(B) 模块轮转（04 → 05 → ... → 14 → 04）。两条轨各自独立挑选，已有完整笔记的论文自动跳过。",
     "high_impact_cycle": {
       "categories": [
         "全身控制核心",
         "遥操作与模仿学习",
-        "Locomotion 经典",
-        "Sim-to-Real & Foundation Model",
         "仿真平台与工具"
       ],
       "last_category": "仿真平台与工具",
-      "last_completed": "H21 Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer (Gu/Wang/Chen, 2024)",
-      "last_completed_date": "2026-05-18",
+      "last_completed": "H23 BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities (Jiang et al., CoRL 2025)",
+      "last_completed_date": "2026-05-16",
       "next_category": "全身控制核心",
       "next_candidate": "H4 HugWBC: A Unified and General Humanoid Whole-Body Controller"
     },
@@ -192,6 +190,14 @@
       },
       {
         "date": "2026-05-16",
+        "index": "H23",
+        "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
+        "folder": "papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation",
+        "category": "高影响力精选 / 仿真平台与工具",
+        "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-16",
         "index": 271,
         "title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
         "folder": "papers/06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy",
@@ -212,7 +218,8 @@
         "title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
         "folder": "papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer",
         "category": "高影响力精选 / 仿真平台与工具",
-        "track": "high_impact_cycle"
+        "track": "high_impact_cycle",
+        "note": "Humanoid-Gym 笔记定稿日期；与轨 A 三分类同日多轨并存时在日志中保留。"
       }
     ],
     "last_completed_index": 29,
@@ -1902,10 +1909,10 @@
     {
       "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
       "arxiv": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/BEHAVIOR_Robot_Suite__Streamlining_Real-World_Whole-Body_Manipulation_for_Everyd",
-      "note_file": "BEHAVIOR_Robot_Suite__Streamlining_Real-World_Whole-Body_Manipulation_for_Everyd.md",
+      "folder": "papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation",
+      "note_file": "BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.md",
       "pdf_file": "BEHAVIOR.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -1938,10 +1945,10 @@
     {
       "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
       "arxiv": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/HOMIE__Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
-      "note_file": "HOMIE__Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md",
+      "folder": "papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
+      "note_file": "HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md",
       "pdf_file": "HOMIE.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -2082,10 +2089,10 @@
     {
       "title": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
       "arxiv": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/HOVER__Versatile_Neural_Whole-Body_Controller_for_Humanoid_Robots",
-      "note_file": "HOVER__Versatile_Neural_Whole-Body_Controller_for_Humanoid_Robots.md",
+      "folder": "papers/03_High_Impact_Selection/HOVER_Versatile_Neural_Whole-Body_Controller",
+      "note_file": "HOVER_Versatile_Neural_Whole-Body_Controller.md",
       "pdf_file": "HOVER.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -2480,6 +2487,66 @@
       "title_cn": "ProtoMotions3：面向人形仿真与控制的开源框架",
       "start_date": "2026-04-24",
       "done_date": "2026-04-24"
+    },
+    {
+      "title": "Make Tracking Easy: Neural Motion Retargeting for Humanoid Whole-body Control",
+      "folder": "papers/02_Motion_Retargeting/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control",
+      "note_file": "Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Motion Retargeting",
+      "title_cn": ""
+    },
+    {
+      "title": "ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting",
+      "folder": "papers/02_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting",
+      "note_file": "ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Motion Retargeting",
+      "title_cn": ""
+    },
+    {
+      "title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
+      "folder": "papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer",
+      "note_file": "Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "高影响力精选 High Impact Selection",
+      "title_cn": ""
+    },
+    {
+      "title": "Learning Agile and Dynamic Motor Skills for Legged Robots",
+      "folder": "papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots",
+      "note_file": "Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "高影响力精选 High Impact Selection",
+      "title_cn": ""
+    },
+    {
+      "title": "Real-World Humanoid Locomotion with Reinforcement Learning",
+      "folder": "papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL",
+      "note_file": "Real-World_Humanoid_Locomotion_with_RL.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "高影响力精选 High Impact Selection",
+      "title_cn": ""
+    },
+    {
+      "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
+      "folder": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits",
+      "note_file": "Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Locomotion",
+      "title_cn": ""
     }
   ]
 }
