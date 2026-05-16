@@ -10,11 +10,11 @@
         "遥操作与模仿学习",
         "仿真平台与工具"
       ],
-      "last_category": "遥操作与模仿学习",
-      "last_completed": "H11 iDP3: Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies (Ze et al., IROS 2025)",
-      "last_completed_date": "2026-05-18",
-      "next_category": "仿真平台与工具",
-      "next_candidate": "高影响力精选 · 仿真平台与工具（H21–H23）已全部完成；按循环下一轮回到「全身控制核心」候选 H5 SONIC / H6 UH-1"
+      "last_category": "全身控制核心",
+      "last_completed": "H5 SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control (Luo et al., NVIDIA 2025)",
+      "last_completed_date": "2026-05-20",
+      "next_category": "遥操作与模仿学习",
+      "next_candidate": "高影响力精选 · 遥操作与模仿学习（H7–H11）已全部完成；按循环跳到「仿真平台与工具」也已全部完成；下一轮再回到「全身控制核心」补 H6 UH-1（Learning from Massive Human Videos for Universal Humanoid Pose Control），写完后整组 H1–H23 即告完结，需提示用户补充新待读论文"
     },
     "module_rotation": {
       "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
@@ -259,6 +259,14 @@
         "title": "iDP3: Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies",
         "folder": "papers/03_High_Impact_Selection/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies",
         "category": "高影响力精选 / 遥操作与模仿学习",
+        "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-20",
+        "index": "H5",
+        "title": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
+        "folder": "papers/03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control",
+        "category": "高影响力精选 / 全身控制核心",
         "track": "high_impact_cycle"
       }
     ],

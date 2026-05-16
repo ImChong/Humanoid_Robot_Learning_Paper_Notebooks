@@ -178,6 +178,14 @@
             "zhname": "人形机器人表现力全身控制"
           },
           {
+            "title": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
+            "path": "papers/03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.md",
+            "url": "/papers/03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.html",
+            "dir": "SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control",
+            "arxiv": "2511.07820",
+            "zhname": "SONIC：用规模化运动跟踪打造自然的人形全身控制器"
+          },
+          {
             "title": "HugWBC: A Unified and General Humanoid Whole-Body Controller for Versatile Locomotion",
             "path": "papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.md",
             "url": "/papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.html",
