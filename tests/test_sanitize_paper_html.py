@@ -43,6 +43,12 @@ def test_sanitize_paper_body_fragment_blocks_vectors(snippet: str, forbidden: st
     assert forbidden.lower() not in clean.lower()
 
 
+def test_sanitize_paper_body_fragment_adds_noopener_noreferrer() -> None:
+    dirty = '<a href="https://example.com" target="_blank">external</a>'
+    clean = sanitize_paper_body_fragment(dirty)
+    assert 'rel="noopener noreferrer"' in clean
+
+
 def test_main_rewrites_built_paper_file(tmp_path: Path) -> None:
     site_root = tmp_path / "_site"
     paper = site_root / "papers" / "01_Cat" / "Note" / "Note.html"
