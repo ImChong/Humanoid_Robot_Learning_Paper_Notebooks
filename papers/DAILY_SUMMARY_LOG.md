@@ -42,6 +42,7 @@
 | 2026-05-17 | H4 | [HugWBC: A Unified and General Humanoid Whole-Body Controller for Versatile Locomotion](03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.md) | 高影响力精选 / 全身控制核心 | [apexrl/HugWBC](https://github.com/apexrl/HugWBC) · [InternRobotics/HugWBC](https://github.com/InternRobotics/HugWBC) |
 | 2026-05-18 | H11 | [iDP3: Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies](03_High_Impact_Selection/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies.md) | 高影响力精选 / 遥操作与模仿学习 | [YanjieZe/Improved-3D-Diffusion-Policy](https://github.com/YanjieZe/Improved-3D-Diffusion-Policy) · [humanoid_teleoperation](https://github.com/YanjieZe/humanoid_teleoperation) |
 | 2026-05-20 | H5 | [SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control](03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.md) | 高影响力精选 / 全身控制核心 | 截至当前未公开训练代码，主要参考 [项目主页](https://nvlabs.github.io/SONIC/) 与 [GR00T-WholeBodyControl 文档](https://nvlabs.github.io/GR00T-WholeBodyControl/) |
+| 2026-05-21 | H6 | [UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control](03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md) | 高影响力精选 / 全身控制核心 | [sihengz02/UH-1](https://github.com/sihengz02/UH-1) · [HuggingFace USC-PSI-Lab/UH-1](https://huggingface.co/USC-PSI-Lab/UH-1) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -72,7 +73,7 @@
 | H3 | ExBody2: Advanced Expressive Humanoid Whole-Body Control | ✅ 已完成 |
 | H4 | HugWBC: A Unified and General Humanoid Whole-Body Controller | ✅ 已完成（2026-05-17） |
 | H5 | SONIC: Supersizing Motion Tracking | ✅ 已完成（2026-05-20） |
-| H6 | UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control | ⏳ 待写 |
+| H6 | UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control | ✅ 已完成（2026-05-21） |
 
 #### 遥操作与模仿学习（H7–H11）
 | 编号 | 论文 | 状态 |
@@ -91,12 +92,15 @@
 | H23 | BEHAVIOR Robot Suite | ✅ 已完成（2026-05-16） |
 
 2026-05-18 已完成遥操作与模仿学习 → **H11 iDP3**。  
-2026-05-20 已完成全身控制核心 → **H5 SONIC**（首版基础摘要 + mermaid 流程图）。截至此条记录：
-- **全身控制核心**：H1 / H2 HOVER / H3 ExBody2 / H4 HugWBC / **H5 SONIC（本次）** 完成；仅剩 **H6 UH-1**。
+2026-05-20 已完成全身控制核心 → **H5 SONIC**（首版基础摘要 + mermaid 流程图）。  
+2026-05-21 已完成全身控制核心 → **H6 UH-1**（按循环跳过已全覆盖的「遥操作与模仿学习」「仿真平台与工具」，落回「全身控制核心」补 UH-1）。
+
+截至此条记录：
+- **全身控制核心**：H1 / H2 HOVER / H3 ExBody2 / H4 HugWBC / H5 SONIC / **H6 UH-1（本次）** **全部完成**。
 - **遥操作与模仿学习**：H7（HumanPlus，位于 07_Teleoperation）/ H8（OmniH2O）/ H9（HOMIE）/ H10（EgoMimic，位于 06_Manipulation）/ H11（iDP3） **全部完成**。
 - **仿真平台与工具**：H21（Humanoid-Gym）/ H22（HumanoidBench，位于 11_Simulation_Benchmark）/ H23（BEHAVIOR Robot Suite） **全部完成**。
 
-按三类循环，下次（2026-05-21）轨 A 名义上轮到 **遥操作与模仿学习**，但该类已全覆盖；继续向下轮到 **仿真平台与工具** 也已全覆盖；最终会落回 **全身控制核心** 补 **H6 UH-1（Learning from Massive Human Videos for Universal Humanoid Pose Control）**。H6 写完后整组 H1–H23 即告完结，届时需提示用户补充新的待读论文。
+> ⛳ **轨 A 高影响力精选 H1–H23 已全部完成**。下一次推进将没有待写论文，需要请用户在 `papers/03_High_Impact_Selection/` 与 `daily_summary.high_impact_cycle` 中**补充新待读论文**（例如新一批 NVIDIA Isaac Lab / DeepMind / OpenAI 人形相关工作，或 HumanoidBench v2、ASAP、HumanUP 等近期高引用论文），否则轨 A 将进入空转状态。
 
 ---
 
