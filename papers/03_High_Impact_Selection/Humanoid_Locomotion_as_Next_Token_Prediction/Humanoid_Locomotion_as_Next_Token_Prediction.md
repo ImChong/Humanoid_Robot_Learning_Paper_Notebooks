@@ -141,5 +141,5 @@ flowchart TB
 | [Real-World Humanoid Locomotion with RL](../Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.md) | 在线 PPO + 因果 Transformer（Digit） |
 | **本文** | 离线自回归 next-token（Digit） |
 | [Humanoid Parkour Learning](../Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.md) | 视觉跑酷全身控制（Unitree H1） |
-| [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes (arXiv:2512.01996)](https://arxiv.org/abs/2512.01996) | 快速 sim-to-real 人形行走 |
-| [ECO (arXiv:2602.06445)](https://arxiv.org/abs/2602.06445) | 能耗约束 RL 人形行走 |
+| [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](../Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.md) | 快速 sim-to-real 人形行走（H15） |
+| [ECO](../ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.md) | 能耗显式约束 RL 人形行走（H16） |
