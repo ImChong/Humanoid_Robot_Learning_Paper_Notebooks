@@ -31,21 +31,39 @@ This is a Jekyll 4.3 static site with Python preprocessing scripts. Two runtimes
 | Component | Purpose | Commands |
 |-----------|---------|----------|
 | Python scripts | Preprocess Markdown → add YAML front matter, generate `_data/papers.json` | `python3 scripts/prepare_pages.py` |
-| Python (post-build) | Sanitize `#paper-body` in built HTML (mitigates stored XSS from raw HTML in notes) | `pip install -r requirements-site.txt` then `python3 scripts/sanitize_paper_html.py _site` (runs in Deploy workflow after Jekyll) |
+| Python (post-build) | Sanitize `#paper-body` in built HTML (mitigates stored XSS from raw HTML in notes) | `pip3 install -r requirements-site.txt` then `python3 scripts/sanitize_paper_html.py _site` (runs in Deploy workflow after Jekyll) |
 | Jekyll | Build & serve the static site | `bundle exec jekyll serve --host 0.0.0.0 --port 4000` |
 
 ### Running locally
 
+0. **若命令不存在则先安装（勿跳过）**  
+   - **Ruby / Bundler / Jekyll**（Debian / Ubuntu 示例，装好后仍需在仓库根目录执行 `sudo bundle install`）：
+
+```bash
+sudo apt-get update
+sudo apt-get install -y ruby-full ruby-bundler build-essential zlib1g-dev
+cd /path/to/repo && sudo bundle install
+```
+
+   - **Python 质检（ruff、pytest）**：若 `ruff` / `pytest` 不在 `PATH` 中：
+
+```bash
+pip3 install -r requirements-dev.txt
+# 可选：export PATH="$HOME/.local/bin:$PATH"
+```
+
+   - **站点 HTML 消毒脚本依赖**：`pip3 install -r requirements-site.txt`（与 Deploy 流程一致）。
+
 1. **Preprocess**: `python3 scripts/prepare_pages.py` (must run before Jekyll build whenever paper `.md` files change).
 2. **Serve**: `bundle exec jekyll serve --host 0.0.0.0 --port 4000` — site is at `http://localhost:4000/Humanoid_Robot_Learning_Paper_Notebooks/`.
 3. Jekyll auto-rebuilds on file changes (LiveReload not configured; refresh browser manually).
-4. **Optional (match production HTML)**: After `bundle exec jekyll build`, run `python3 scripts/sanitize_paper_html.py _site` (install deps once with `pip install -r requirements-site.txt`). GitHub Pages deploy runs this automatically; `jekyll serve` alone does not.
+4. **Optional (match production HTML)**: After `bundle exec jekyll build`, run `python3 scripts/sanitize_paper_html.py _site` (install deps once with `pip3 install -r requirements-site.txt`). GitHub Pages deploy runs this automatically; `jekyll serve` alone does not.
 
 ### Lint & Test
 
 - Lint: `ruff check scripts/ tests/`
 - Test: `pytest -v`
-- Both are in `PATH` at `~/.local/bin` (user-installed via pip).
+- 若未找到命令，先执行 `pip3 install -r requirements-dev.txt`；可执行文件通常在 `~/.local/bin`，必要时加入 `PATH`。
 
 ### Gotchas
 
