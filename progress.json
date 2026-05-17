@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
-      "last_index": 379,
-      "last_title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
-      "next_module": "11_Simulation_Benchmark"
+      "last_module": "12_Hardware_Design",
+      "last_index": 410,
+      "last_title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids: Empirical Study on Kengoro and Musashi",
+      "next_module": "13_Physics-Based_Animation"
     },
-    "last_summary_index": 379,
-    "last_summary_date": "2026-05-20",
-    "last_summary_title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
+    "last_summary_index": 410,
+    "last_summary_date": "2026-05-23",
+    "last_summary_title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids: Empirical Study on Kengoro and Musashi",
     "next_summary_index": null,
     "log": [
       {
@@ -301,6 +301,22 @@
         "title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
         "folder": "papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_",
         "module": "10_Sim-to-Real",
+        "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-22",
+        "index": 389,
+        "title": "GRUtopia: Dream General Robots in a City at Scale",
+        "folder": "papers/11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale",
+        "module": "11_Simulation_Benchmark",
+        "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-23",
+        "index": 410,
+        "title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids: Empirical Study on Kengoro and Musashi",
+        "folder": "papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids",
+        "module": "12_Hardware_Design",
         "track": "module_rotation"
       }
     ],
@@ -2698,6 +2714,26 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "Sim-to-Real",
+      "title_cn": ""
+    },
+    {
+      "title": "GRUtopia: Dream General Robots in a City at Scale",
+      "folder": "papers/11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale",
+      "note_file": "GRUtopia__Dream_General_Robots_in_a_City_at_Scale.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Simulation Benchmark",
+      "title_cn": ""
+    },
+    {
+      "title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids: Empirical Study on Kengoro and Musashi",
+      "folder": "papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids",
+      "note_file": "Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "硬件设计",
       "title_cn": ""
     }
   ]

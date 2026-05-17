@@ -515,7 +515,7 @@
 
 | #   | 论文                                                                                                                                         | 日期      | 🌟  | 状态   |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------- | --- | ---- |
-| 389  | [GRUtopia: Dream General Robots in a City at Scale](https://arxiv.org/abs/2407.10943)                                                      | 2407.10 |     | ⏳ 待读 |
+| 389  | [GRUtopia: Dream General Robots in a City at Scale](https://arxiv.org/abs/2407.10943)                                                      | 2407.10 |     | ✅ 完成 |
 | 390  | [Towards Motion Turing Test: Evaluating Human-Likeness in Humanoid Robots](https://arxiv.org/abs/2603.06181)                               | 2026.03 |     | ⏳ 待读 |
 | 391  | [MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation](https://arxiv.org/abs/2602.11337)                        | 2026.02 |     | ⏳ 待读 |
 | 392  | [Benchmarking Humanoid Imitation Learning with Motion Difficulty](https://arxiv.org/abs/2512.07248)                                        | 2025.12 |     | ⏳ 待读 |
@@ -544,7 +544,7 @@
 
 | #   | 论文                                                                                                                                                                     | 日期      | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
-| 410  | [Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids](https://arxiv.org/abs/2602.08518)                                               | 2026.02 |     | ⏳ 待读 |
+| 410  | [Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids](https://arxiv.org/abs/2602.08518) ✅ [笔记](12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md) | 2026-05-23 |     | ✅ 已总结 |
 | 411  | [Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot](https://arxiv.org/abs/2601.18963)                                                          | 2026.01 |     | ⏳ 待读 |
 | 412  | [Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand: Toward Dexterous Manipulation for Payload Constrained Humanoids](https://arxiv.org/abs/2512.24657) | 2025.12 |     | ⏳ 待读 |
 | 413  | [Olaf: Bringing an Animated Character to Life in the Physical World](https://arxiv.org/abs/2512.16705)                                                                 | 2025.12 |     | ⏳ 待读 |
