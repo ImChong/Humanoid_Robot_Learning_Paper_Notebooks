@@ -20,11 +20,11 @@
         ],
         "reason_for_change": "用户原始任务要求「在高影响力精选模块内循环」，应覆盖该模块全部 5 个子类；早期把「Locomotion 经典 / Sim-to-Real & Foundation Model」误标为另一路自动化责任、缩小到三类轮转，2026-05-22 更正为五类"
       },
-      "last_category": "Locomotion 经典",
-      "last_completed": "H14 Humanoid Parkour Learning (Zhuang et al., CoRL 2024)",
-      "last_completed_date": "2026-05-25",
-      "next_category": "Sim-to-Real & Foundation Model",
-      "next_candidate": "高影响力精选 · 五类循环：H14 Humanoid Parkour Learning 已完成。下一类为「Sim-to-Real & Foundation Model」：下一篇待写 **H20 Behavior Foundation Model for Humanoid Robots**（arXiv:2509.13780）。Locomotion 经典尚余 H15 / H16；总览见 papers/DAILY_SUMMARY_LOG.md"
+      "last_category": "Sim-to-Real & Foundation Model",
+      "last_completed": "H20 Behavior Foundation Model for Humanoid Robots (arXiv:2509.13780)",
+      "last_completed_date": "2026-05-17",
+      "next_category": "Locomotion 经典",
+      "next_candidate": "高影响力精选 · 五类循环：H20 BFM 已完成。仿真平台与工具子类已全覆盖，按 round-robin 下一类为「Locomotion 经典」：下一篇待写 **H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes**（arXiv:2512.01996）。尚余 H16；总览见 papers/DAILY_SUMMARY_LOG.md"
     },
     "module_rotation": {
       "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
@@ -325,6 +325,14 @@
         "title": "Humanoid Parkour Learning",
         "folder": "papers/03_High_Impact_Selection/Humanoid_Parkour_Learning",
         "category": "高影响力精选 / Locomotion 经典",
+        "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-17",
+        "index": "H20",
+        "title": "Behavior Foundation Model for Humanoid Robots",
+        "folder": "papers/03_High_Impact_Selection/Behavior_Foundation_Model_for_Humanoid_Robots",
+        "category": "高影响力精选 / Sim-to-Real & Foundation Model",
         "track": "high_impact_cycle"
       }
     ],
@@ -1510,14 +1518,14 @@
     },
     {
       "title": "Behavior Foundation Model for Humanoid Robots",
-      "arxiv": "Behavior Foundation Model for Humanoid Robots",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/Behavior_Foundation_Model_for_Humanoid_Robots",
+      "arxiv": "2509.13780",
+      "folder": "papers/03_High_Impact_Selection/Behavior_Foundation_Model_for_Humanoid_Robots",
       "note_file": "Behavior_Foundation_Model_for_Humanoid_Robots.md",
       "pdf_file": "Behavior.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation",
+      "route": "高影响力精选 High Impact Selection",
       "title_cn": ""
     },
     {
@@ -2387,10 +2395,10 @@
     {
       "title": "ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills",
       "arxiv": "",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/ASAP__Aligning_Simulation_and_Real-World_Physics_for_Learning_Agile_Humanoid_Who",
-      "note_file": "ASAP__Aligning_Simulation_and_Real-World_Physics_for_Learning_Agile_Humanoid_Who.md",
+      "folder": "papers/03_High_Impact_Selection/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills",
+      "note_file": "ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills.md",
       "pdf_file": "ASAP.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -2742,6 +2750,16 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "硬件设计",
+      "title_cn": ""
+    },
+    {
+      "title": "Humanoid Parkour Learning",
+      "folder": "papers/03_High_Impact_Selection/Humanoid_Parkour_Learning",
+      "note_file": "Humanoid_Parkour_Learning.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "高影响力精选 High Impact Selection",
       "title_cn": ""
     }
   ]
