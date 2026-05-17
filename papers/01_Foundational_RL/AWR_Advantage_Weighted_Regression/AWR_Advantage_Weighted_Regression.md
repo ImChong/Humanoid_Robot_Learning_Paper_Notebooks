@@ -135,6 +135,17 @@ $\beta$ 是温度参数，控制权重的"尖锐程度"：
 | **需要概率比？** | 需要 $\frac{\pi_{new}}{\pi_{old}}$ | 不需要 |
 | **实现复杂度** | 中等 | 极简（加权 MSE） |
 
+### 📊 AWR 交替迭代流程图
+
+<div class="mermaid">
+flowchart TB
+    R["Replay Buffer<br/>存储 (s,a,r) 轨迹"] --> E["评估：V_φ 与回报 R_t<br/>算优势 A(s,a)"]
+    E --> W["权重 w ∝ exp(A/β)<br/>归一化 Z"]
+    W --> U["加权监督更新<br/>max E[w·log π_θ(a|s)]"]
+    U --> C["环境 rollout<br/>写入 Buffer"]
+    C --> R
+</div>
+
 ---
 
 ## 🚶 具体实例：用 AWR 训练 HalfCheetah 奔跑

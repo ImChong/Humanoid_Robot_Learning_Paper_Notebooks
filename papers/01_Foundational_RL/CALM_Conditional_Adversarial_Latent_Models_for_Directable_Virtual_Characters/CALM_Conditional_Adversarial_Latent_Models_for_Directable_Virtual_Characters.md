@@ -147,6 +147,21 @@ $$
 - 按键 A → 攻击技能
 - 按键 B → 防御技能
 
+### 📊 CALM 三层架构与推理调度
+
+<div class="mermaid">
+flowchart TB
+    MoCap["动捕片段"] --> LLC["LLC：编码器 E + 低层 π_LLC<br/>对抗模仿得到 latent 技能"]
+    Task["任务目标 + 状态 s_t"] --> HLC["HLC：输出 z_t<br/>方向奖励 cos(z_target,z)"]
+    HLC --> z["latent z_t"]
+    z --> LLC
+    FSM["推理：有限状态机"] -->|固定技能| zfix["固定 z"]
+    FSM -->|需定向| HLCrun["HLC 输出 z_t"]
+    zfix --> pi["π_LLC(s,z)"]
+    HLCrun --> pi
+    pi --> act["动作 a_t"]
+</div>
+
 ---
 
 ## 🚶 具体实例：CALM 如何让角色"追着目标踢剑"

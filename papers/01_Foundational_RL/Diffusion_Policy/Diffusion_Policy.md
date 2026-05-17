@@ -65,6 +65,20 @@ zhname: "Diffusion Policy：基于动作扩散的视觉运动策略学习"
    - **Transformer-based**：擅长处理长序列，能建模更复杂的交互。
 4. **推理优化**：通过 DDIM 采样，将训练时的数百步扩散压缩至推理时的 10-20 步。
 
+### 📊 条件扩散策略与 RHC 执行流程
+
+<div class="mermaid">
+flowchart TB
+    O["视觉观测 O"] --> Enc["视觉编码器"]
+    Enc --> Cond["条件特征"]
+    Cond --> S0["从高斯噪声初始化<br/>动作序列 A_K"]
+    S0 --> Denoise["多步去噪 f_θ<br/>预测 ε 或 x0"]
+    Denoise --> Ak["干净动作序列 A_0<br/>长度 H chunk"]
+    Ak --> RHC["RHC：执行前段<br/>滑动窗口重规划"]
+    RHC --> Exec["发送到机器人"]
+    Exec --> O
+</div>
+
 ---
 
 ## 🚶 具体实例
