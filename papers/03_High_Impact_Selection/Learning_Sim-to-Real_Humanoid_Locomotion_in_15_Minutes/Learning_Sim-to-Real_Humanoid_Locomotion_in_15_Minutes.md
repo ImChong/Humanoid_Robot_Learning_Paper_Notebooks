@@ -24,7 +24,7 @@ paper_order: 205
 | **HTML** | [arxiv.org/html/2512.01996v1](https://arxiv.org/html/2512.01996v1) |
 | **PDF** | [arxiv.org/pdf/2512.01996.pdf](https://arxiv.org/pdf/2512.01996.pdf) |
 | **项目主页 / 视频** | [younggyo.me/fastsac-humanoid](https://younggyo.me/fastsac-humanoid) |
-| **作者** | Younggyo Seo\*, Carmelo Sferrazza\*, Juyue Chen, Guanya Shi, Rocky Duan, Pieter Abbeel |
+| **作者** | Younggyo Seo*, Carmelo Sferrazza*, Juyue Chen, Guanya Shi, Rocky Duan, Pieter Abbeel |
 | **机构** | Amazon FAR（Frontier AI & Robotics） |
 | **硬件** | **Unitree G1**、**Booster T1**（速度跟踪与全身动作跟踪的 sim-to-real） |
 | **源码** | 官方实现收录于 **Holosoma** 仓库：[amazon-far/holosoma](https://github.com/amazon-far/holosoma)（论文正文亦指向该仓库） |
