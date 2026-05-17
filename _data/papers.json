@@ -743,6 +743,14 @@
         "url": "/papers/12_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.html",
         "dir": "Unitree_H1_Whitepaper",
         "zhname": "Unitree H1 人形机器人白皮书与技术规格"
+      },
+      {
+        "title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids: Empirical Study on Kengoro and Musashi",
+        "path": "papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md",
+        "url": "/papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.html",
+        "dir": "Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids",
+        "arxiv": "2602.08518",
+        "zhname": "肌骨型人形机器人「肌肉」的特性、管理与利用：Kengoro 与 Musashi 上的实证研究"
       }
     ],
     "zhname": "硬件设计"
