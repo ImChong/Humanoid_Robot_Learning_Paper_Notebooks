@@ -57,7 +57,7 @@
 | H12 | [Real-World Humanoid Locomotion with Reinforcement Learning](https://arxiv.org/abs/2303.03381) ✅ [笔记](03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.md) | Loco | Berkeley，首个真实世界人形 RL 行走 |
 | H13 | [Humanoid Locomotion as Next Token Prediction](https://arxiv.org/abs/2402.19469) ✅ [笔记](03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction/Humanoid_Locomotion_as_Next_Token_Prediction.md) | Loco | 把运动控制建模为 token 预测，新范式   |
 | H14 | [Humanoid Parkour Learning](https://arxiv.org/abs/2406.10759) ✅ [笔记](03_High_Impact_Selection/Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.md) | Loco | 人形跑酷，高动态控制              |
-| H15 | [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](https://arxiv.org/abs/2512.01996)               | Loco | 极快 sim-to-real，工程价值高    |
+| H15 | [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](https://arxiv.org/abs/2512.01996) ✅ [笔记](03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.md) | Loco | 极快 sim-to-real，工程价值高    |
 | H16 | [ECO: Energy-Constrained Optimization with RL for Humanoid Walking](https://arxiv.org/abs/2602.06445) 🌟 | Loco | 能量优化行走，开源               |
 
 
@@ -286,7 +286,7 @@
 | 202  | [E-SDS: Environment-aware See it, Do it, Sorted - Automated Environment-Aware Reinforcement Learning for Humanoid Locomotion](https://arxiv.org/abs/2512.16446) | 2025.12 |     | ⏳ 待读 |
 | 203  | [Learning to Get Up Across Morphologies: Zero-Shot Recovery with a Unified Humanoid Policy](https://arxiv.org/abs/2512.12230)                                   | 2025.12 |     | ⏳ 待读 |
 | 204  | [Symphony: A Heuristic Normalized Calibrated Advantage Actor and Critic Algorithm in application for Humanoid Robots](https://arxiv.org/abs/2512.10477)         | 2025.12 |     | ⏳ 待读 |
-| 205  | [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](https://arxiv.org/abs/2512.01996)                                                                      | 2025.12 |     | ⏳ 待读 |
+| 205  | [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](https://arxiv.org/abs/2512.01996)                                                                      | 2025.12 |     | ✅ 完成 |
 | 206  | [H-Zero: Cross-Humanoid Locomotion Pretraining Enables Few-shot Novel Embodiment Transfer](https://arxiv.org/abs/2512.00971)                                    | 2025.12 |     | ⏳ 待读 |
 | 207  | [A Hierarchical Framework for Humanoid Locomotion with Supernumerary Limbs](https://arxiv.org/abs/2512.00077)                                                   | 2025.12 |     | ⏳ 待读 |
 | 208  | [GaussGym: An open-source real-to-sim framework for learning locomotion from pixels](https://arxiv.org/abs/2510.15352)                                          | 2025.10 |     | ⏳ 待读 |
