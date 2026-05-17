@@ -58,7 +58,7 @@
 | H13 | [Humanoid Locomotion as Next Token Prediction](https://arxiv.org/abs/2402.19469) ✅ [笔记](03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction/Humanoid_Locomotion_as_Next_Token_Prediction.md) | Loco | 把运动控制建模为 token 预测，新范式   |
 | H14 | [Humanoid Parkour Learning](https://arxiv.org/abs/2406.10759) ✅ [笔记](03_High_Impact_Selection/Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.md) | Loco | 人形跑酷，高动态控制              |
 | H15 | [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](https://arxiv.org/abs/2512.01996) ✅ [笔记](03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.md) | Loco | 极快 sim-to-real，工程价值高    |
-| H16 | [ECO: Energy-Constrained Optimization with RL for Humanoid Walking](https://arxiv.org/abs/2602.06445) 🌟 | Loco | 能量优化行走，开源               |
+| H16 | [ECO: Energy-Constrained Optimization with RL for Humanoid Walking](https://arxiv.org/abs/2602.06445) 🌟 ✅ [笔记](03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.md) | Loco | 能量优化行走，开源               |
 
 
 #### Sim-to-Real & Foundation Model
@@ -270,7 +270,7 @@
 | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
 | 187  | [Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits](https://arxiv.org/abs/2602.21666) ✅ [笔记](05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md) | 2026.02 |     | ✅ 已总结 |
 | 188  | [APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots](https://arxiv.org/abs/2602.11143)                                                         | 2026.02 |     | ⏳ 待读 |
-| 189  | [ECO: Energy-Constrained Optimization with Reinforcement Learning for Humanoid Walking](https://arxiv.org/abs/2602.06445)                                       | 2026.02 |     | ⏳ 待读 |
+| 189  | [ECO: Energy-Constrained Optimization with Reinforcement Learning for Humanoid Walking](https://arxiv.org/abs/2602.06445)                                       | 2026.02 |     | ✅ 完成 |
 | 190  | [Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels](https://arxiv.org/abs/2602.06382)                                                   | 2026.02 |     | ⏳ 待读 |
 | 191  | [A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion](https://arxiv.org/abs/2602.05855)          | 2026.02 |     | ⏳ 待读 |
 | 192  | [Scalable and General Whole-Body Control for Cross-Humanoid Locomotion](https://arxiv.org/abs/2602.05791)                                                       | 2026.02 |     | ⏳ 待读 |

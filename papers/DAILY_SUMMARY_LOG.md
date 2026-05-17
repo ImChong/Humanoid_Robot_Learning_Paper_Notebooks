@@ -51,6 +51,7 @@
 | 2026-05-25 | H14 | [Humanoid Parkour Learning](03_High_Impact_Selection/Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.md) | 高影响力精选 / Locomotion 经典 | 与四足跑酷同系 [ZiwenZhuang/parkour](https://github.com/ZiwenZhuang/parkour)；人形细节以论文/项目页为准 |
 | 2026-05-17 | H20 | [Behavior Foundation Model for Humanoid Robots](03_High_Impact_Selection/Behavior_Foundation_Model_for_Humanoid_Robots/Behavior_Foundation_Model_for_Humanoid_Robots.md) | 高影响力精选 / Sim-to-Real & Foundation Model | 论文主页 [bfm4humanoid.github.io](https://bfm4humanoid.github.io/)；与本文一一对应的官方代码仓库截至当前未集中公开，相关范式可参考 [LeCAR-Lab/BFM-Zero](https://github.com/LeCAR-Lab/BFM-Zero)（不同方法线，仅作延伸阅读） |
 | 2026-05-17 | H15 | [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.md) | 高影响力精选 / Locomotion 经典 | [amazon-far/holosoma](https://github.com/amazon-far/holosoma) · [项目页 / 视频](https://younggyo.me/fastsac-humanoid) |
+| 2026-05-17 | H16 | [ECO: Energy-Constrained Optimization with RL for Humanoid Walking](03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.md) | 高影响力精选 / Locomotion 经典 | [bigai-ai/ECO-humanoid](https://github.com/bigai-ai/ECO-humanoid) · [项目页](https://sites.google.com/view/eco-humanoid) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -75,7 +76,7 @@
 >
 > ⚠️ 早期（2026-05-14 至 2026-05-21）该循环被误缩小为三类，将「Locomotion 经典 / Sim-to-Real & Foundation Model」当作另一路自动化的责任；现已更正为五类，与 `progress.json → daily_summary.high_impact_cycle.categories` 同步。
 >
-> **当前轨 A 下一篇待写**：**H16** *ECO: Energy-Constrained Optimization with RL for Humanoid Walking*（Locomotion 经典，arXiv:2602.06445）。H15「15 分钟人形 sim-to-real」已于 2026-05-17 完稿。
+> **当前轨 A 状态（2026-05-17）**：**H16 ECO** 已完稿。高影响力精选 **H1–H23 五类轮转已全部闭环**；下一批待读需用户在 `papers/PROGRESS.md` 中补充并同步目录后再继续轨 A。
 
 #### 1. 全身控制核心（H1–H6）
 | 编号 | 论文 | 状态 |
@@ -107,9 +108,9 @@
 | H13 | Humanoid Locomotion as Next Token Prediction | [2402.19469](https://arxiv.org/abs/2402.19469) | ✅ 已完成（2026-05-22） |
 | H14 | Humanoid Parkour Learning | [2406.10759](https://arxiv.org/abs/2406.10759) | ✅ 已完成（2026-05-25） |
 | H15 | Learning Sim-to-Real Humanoid Locomotion in 15 Minutes | [2512.01996](https://arxiv.org/abs/2512.01996) | ✅ 已完成（2026-05-17） |
-| H16 | ECO: Energy-Constrained Optimization with RL for Humanoid Walking | [2602.06445](https://arxiv.org/abs/2602.06445) | ⏳ 待写 |
+| H16 | ECO: Energy-Constrained Optimization with RL for Humanoid Walking | [2602.06445](https://arxiv.org/abs/2602.06445) | ✅ 已完成（2026-05-17） |
 
-> 子类小计：**4 / 5**（缺 H16）
+> 子类小计：**5 / 5 ✅ 已全部完成**
 
 #### 4. Sim-to-Real & Foundation Model（H17–H20）
 | 编号 | 论文 | arXiv / 链接 | 状态 |
@@ -134,13 +135,9 @@
 
 #### 五类总览与下次推进
 
-整体进度：**22 / 23**（剩 1 篇：H16）。
+整体进度：**23 / 23 ✅**（H16 ECO 已于 2026-05-17 完稿）。
 
-剩余写作顺序（按五类循环、跳过已全覆盖子类得到）：
-
-1. **H16 ECO**（Locomotion 经典）
-
-写完 H16 后，「⭐ 高影响力精选」H1–H23 才真正全部完成，届时再提示用户补充新待读论文。
+轨 A 暂无自动挑选的下一篇：**请在 `papers/PROGRESS.md`「⭐ 高影响力精选」区块补充新论文**（含 arXiv / 开源链接与 H 编号习惯），并同步 `papers/03_High_Impact_Selection/` 目录与 `progress.json` 后再跑每日任务。
 
 ---
 
