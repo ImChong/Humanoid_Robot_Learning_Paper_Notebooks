@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
-      "last_index": 379,
-      "last_title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
-      "next_module": "11_Simulation_Benchmark"
+      "last_module": "11_Simulation_Benchmark",
+      "last_index": 389,
+      "last_title": "GRUtopia: Dream General Robots in a City at Scale",
+      "next_module": "12_Hardware_Design"
     },
-    "last_summary_index": 379,
-    "last_summary_date": "2026-05-20",
-    "last_summary_title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
+    "last_summary_index": 389,
+    "last_summary_date": "2026-05-22",
+    "last_summary_title": "GRUtopia: Dream General Robots in a City at Scale",
     "next_summary_index": null,
     "log": [
       {
@@ -293,6 +293,14 @@
         "title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
         "folder": "papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_",
         "module": "10_Sim-to-Real",
+        "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-22",
+        "index": 389,
+        "title": "GRUtopia: Dream General Robots in a City at Scale",
+        "folder": "papers/11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale",
+        "module": "11_Simulation_Benchmark",
         "track": "module_rotation"
       }
     ],
@@ -1131,10 +1139,10 @@
     {
       "title": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
       "arxiv": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/SONIC__Supersizing_Motion_Tracking_for_Natural_Humanoid_Whole-Body_Control",
-      "note_file": "SONIC__Supersizing_Motion_Tracking_for_Natural_Humanoid_Whole-Body_Control.md",
+      "folder": "papers/03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control",
+      "note_file": "SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.md",
       "pdf_file": "SONIC.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -2055,10 +2063,10 @@
     {
       "title": "HugWBC: A Unified and General Humanoid Whole-Body Controller",
       "arxiv": "HugWBC: A Unified and General Humanoid Whole-Body Controller",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/HugWBC__A_Unified_and_General_Humanoid_Whole-Body_Controller",
-      "note_file": "HugWBC__A_Unified_and_General_Humanoid_Whole-Body_Controller.md",
+      "folder": "papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller",
+      "note_file": "HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.md",
       "pdf_file": "HugWBC.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -2103,10 +2111,10 @@
     {
       "title": "Learning from Massive Human Videos for Universal Humanoid Pose Control",
       "arxiv": "Learning from Massive Human Videos for Universal Humanoid Pose Control",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
-      "note_file": "Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md",
+      "folder": "papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
+      "note_file": "UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md",
       "pdf_file": "Learning.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -2640,6 +2648,56 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "iDP3: Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies",
+      "folder": "papers/03_High_Impact_Selection/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies",
+      "note_file": "iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "高影响力精选 High Impact Selection",
+      "title_cn": ""
+    },
+    {
+      "title": "EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models",
+      "folder": "papers/08_Navigation/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum",
+      "note_file": "EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
+      "folder": "papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio",
+      "note_file": "AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "State Estimation",
+      "title_cn": ""
+    },
+    {
+      "title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
+      "folder": "papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_",
+      "note_file": "RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Sim-to-Real",
+      "title_cn": ""
+    },
+    {
+      "title": "GRUtopia: Dream General Robots in a City at Scale",
+      "folder": "papers/11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale",
+      "note_file": "GRUtopia__Dream_General_Robots_in_a_City_at_Scale.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Simulation Benchmark",
       "title_cn": ""
     }
   ]

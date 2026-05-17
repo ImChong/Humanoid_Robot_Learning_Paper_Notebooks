@@ -722,6 +722,14 @@
         "dir": "HumanoidBench",
         "arxiv": "2403.10506",
         "zhname": "HumanoidBench：全身运动与操作的人形机器人仿真基准"
+      },
+      {
+        "title": "GRUtopia: Dream General Robots in a City at Scale",
+        "path": "papers/11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale/GRUtopia__Dream_General_Robots_in_a_City_at_Scale.md",
+        "url": "/papers/11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale/GRUtopia__Dream_General_Robots_in_a_City_at_Scale.html",
+        "dir": "GRUtopia__Dream_General_Robots_in_a_City_at_Scale",
+        "arxiv": "2407.10943",
+        "zhname": "GRUtopia：城市级交互式 3D 社会，给通用机器人造一座可训练的「乌托邦」"
       }
     ],
     "zhname": "仿真基准"
