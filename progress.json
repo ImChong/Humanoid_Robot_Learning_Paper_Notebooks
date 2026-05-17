@@ -20,11 +20,11 @@
         ],
         "reason_for_change": "用户原始任务要求「在高影响力精选模块内循环」，应覆盖该模块全部 5 个子类；早期把「Locomotion 经典 / Sim-to-Real & Foundation Model」误标为另一路自动化责任、缩小到三类轮转，2026-05-22 更正为五类"
       },
-      "last_category": "Locomotion 经典",
-      "last_completed": "H13 Humanoid Locomotion as Next Token Prediction (Radosavovic et al., UC Berkeley, NeurIPS 2024 Spotlight)",
-      "last_completed_date": "2026-05-22",
-      "next_category": "Sim-to-Real & Foundation Model",
-      "next_candidate": "高影响力精选 · 五类循环：本轮「Locomotion 经典」刚完成 H13。下一类为「Sim-to-Real & Foundation Model」，下一篇待写 → H18 ASAP: Aligning Simulation and Real-World Physics for Agile Humanoid Skills（项目页 agile.human2humanoid.com）。后续顺序仍见 papers/DAILY_SUMMARY_LOG.md「五类总览与下次推进」；Locomotion 经典尚余 H14/H15/H16 共 3 篇"
+      "last_category": "Sim-to-Real & Foundation Model",
+      "last_completed": "H18 ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills (He et al., RSS 2025)",
+      "last_completed_date": "2026-05-24",
+      "next_category": "Locomotion 经典",
+      "next_candidate": "高影响力精选 · 五类循环：H18 ASAP 已完成。下一类按序为「仿真平台与工具」（H21–H23 已全部有笔记）→ 自动跳过 →「全身控制核心」「遥操作与模仿学习」亦已全覆盖 → 进入「Locomotion 经典」：下一篇待写 H14 Humanoid Parkour Learning（arXiv:2406.10759）。Sim-to-Real 子类尚余 H20 Behavior Foundation Model；总览见 papers/DAILY_SUMMARY_LOG.md"
     },
     "module_rotation": {
       "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
