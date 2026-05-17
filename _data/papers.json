@@ -805,6 +805,14 @@
         "dir": "MotionVAE",
         "arxiv": "2103.14274",
         "zhname": "基于运动 VAE 的角色控制器"
+      },
+      {
+        "title": "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control",
+        "path": "papers/13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis/Iterative_Closed-Loop_Motion_Synthesis.md",
+        "url": "/papers/13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis/Iterative_Closed-Loop_Motion_Synthesis.html",
+        "dir": "Iterative_Closed-Loop_Motion_Synthesis",
+        "arxiv": "2602.21599",
+        "zhname": "迭代闭环动作合成：扩展人形机器人控制能力的数据-策略协同进化框架"
       }
     ],
     "zhname": "物理动画"

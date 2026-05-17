@@ -590,7 +590,7 @@
 | #   | 论文                                                                                                                                               | 日期      | 🌟  | 状态   |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------- | --- | ---- |
 | 447  | Spatial relationship preserving character motion adaptation                                                                                      | 3349.17 |     | ⏳ 待读 |
-| 448  | [Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control](https://arxiv.org/abs/2602.21599)                      | 2026.02 |     | ⏳ 待读 |
+| 448  | [Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control](https://arxiv.org/abs/2602.21599) [笔记](13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis/Iterative_Closed-Loop_Motion_Synthesis.md) | 2026-05-17 |     | ✅ 完成 |
 | 449  | [CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives](https://arxiv.org/abs/2512.14696)                             | 2025.12 |     | ⏳ 待读 |
 | 450  | [Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions](https://arxiv.org/abs/2512.08500)               | 2025.12 |     | ⏳ 待读 |
 | 451  | [PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction](https://arxiv.org/abs/2510.02566) | 2025.10 |     | ⏳ 待读 |
