@@ -60,6 +60,27 @@ zhname: "挑战地形下的四足运动学习（ANYmal 里程碑）"
 
 ---
 
+## 🧭 训练与零样本迁移（mermaid）
+
+<div class="mermaid">
+flowchart TD
+  subgraph sim["仿真侧"]
+    E["随机地形 + 动力学扰动"]
+    P["PPO 训练本体感知策略"]
+    H["历史观测编码 TCN<br/>从 proprio 推断隐含地形线索"]
+    V["训练期特权信息监督"]
+    E --> P
+    H --> P
+    V --> P
+  end
+  subgraph real["真实 ANYmal"]
+    Z["零样本部署<br/>泥地 / 雪 / 碎石 / 植被 / 流水等"]
+  end
+  P --> Z
+</div>
+
+---
+
 ## 🔧 方法详解
 
 ### 1. 问题设定
