@@ -131,8 +131,7 @@ flowchart TD
 ## 🔗 与仓库内其它笔记的关系
 
 - **H17 Learning Agile and Dynamic Motor Skills for Legged Robots（ANYmal）**：经典「致动器网络 + 快速仿真」路线，侧重**执行器黑盒化**；ASAP 侧重**跨仿真/真机的残差对齐与二阶段微调**，二者可对照理解 sim-to-real 工具箱。  
-- **H13 Humanoid Locomotion as Next Token Prediction**：自回归轨迹范式；ASAP 仍是**强化学习 + 物理仿真**主线的 sim-to-real 工程补强。  
-- **高影响力精选轨 A** 下一轮：按五类循环，在「仿真平台与工具」子类已全覆盖时自动跳过，进入 **H14 Humanoid Parkour Learning**（Locomotion 经典）；Sim-to-Real 子类尚余 **H20 Behavior Foundation Model**。
+- **H13 Humanoid Locomotion as Next Token Prediction**：自回归轨迹范式；ASAP 仍是**强化学习 + 物理仿真**主线的 sim-to-real 工程补强。
 
 ---
 

@@ -48,6 +48,7 @@
 | 2026-05-22 | 389 | [GRUtopia: Dream General Robots in a City at Scale](11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale/GRUtopia__Dream_General_Robots_in_a_City_at_Scale.md) | Simulation Benchmark / 城市级仿真 / 服务场景 / 具身 AI | [OpenRobotLab/GRUtopia](https://github.com/OpenRobotLab/GRUtopia)（现 InternUtopia 2.2.x） |
 | 2026-05-23 | 410 | [Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids](12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md) | Hardware Design / 肌骨型人形 / 仿生驱动 | 综述/实证类文章，作者团队 [haraduka/GitHub](https://github.com/haraduka) 未公布配套代码 |
 | 2026-05-24 | H18 | [ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills](03_High_Impact_Selection/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills.md) | 高影响力精选 / Sim-to-Real & Foundation Model | [LeCAR-Lab/ASAP](https://github.com/LeCAR-Lab/ASAP) |
+| 2026-05-25 | H14 | [Humanoid Parkour Learning](03_High_Impact_Selection/Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.md) | 高影响力精选 / Locomotion 经典 | 与四足跑酷同系 [ZiwenZhuang/parkour](https://github.com/ZiwenZhuang/parkour)；人形细节以论文/项目页为准 |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -100,11 +101,11 @@
 |:---:|------|:---:|------|
 | H12 | Real-World Humanoid Locomotion with Reinforcement Learning | [2303.03381](https://arxiv.org/abs/2303.03381) | ✅ 已完成（见 03 高影响力精选目录内笔记） |
 | H13 | Humanoid Locomotion as Next Token Prediction | [2402.19469](https://arxiv.org/abs/2402.19469) | ✅ 已完成（2026-05-22） |
-| H14 | Humanoid Parkour Learning | [2406.10759](https://arxiv.org/abs/2406.10759) | ⏳ 待写（**下一篇候选**） |
+| H14 | Humanoid Parkour Learning | [2406.10759](https://arxiv.org/abs/2406.10759) | ✅ 已完成（2026-05-25） |
 | H15 | Learning Sim-to-Real Humanoid Locomotion in 15 Minutes | [2512.01996](https://arxiv.org/abs/2512.01996) | ⏳ 待写 |
 | H16 | ECO: Energy-Constrained Optimization with RL for Humanoid Walking | [2602.06445](https://arxiv.org/abs/2602.06445) | ⏳ 待写 |
 
-> 子类小计：**2 / 5**（缺 H14 / H15 / H16）
+> 子类小计：**3 / 5**（缺 H15 / H16）
 
 #### 4. Sim-to-Real & Foundation Model（H17–H20）
 | 编号 | 论文 | arXiv / 链接 | 状态 |
@@ -112,7 +113,7 @@
 | H17 | Learning Agile and Dynamic Motor Skills for Legged Robots（ANYmal） | [1901.08652](https://arxiv.org/abs/1901.08652) | ✅ 已完成 |
 | H18 | ASAP: Aligning Simulation and Real-World Physics for Agile Humanoid Skills | [2502.01143](https://arxiv.org/abs/2502.01143) · [项目页](https://agile.human2humanoid.com/) | ✅ 已完成（2026-05-24） |
 | H19 | GR00T N1: An Open Foundation Model for Generalist Humanoid Robots | [2503.14734](https://arxiv.org/abs/2503.14734) | ✅ 已存在（97 行基础笔记，深度细节可后续补充） |
-| H20 | Behavior Foundation Model for Humanoid Robots | [2509.13780](https://arxiv.org/abs/2509.13780) | ⏳ 待写 |
+| H20 | Behavior Foundation Model for Humanoid Robots | [2509.13780](https://arxiv.org/abs/2509.13780) | ⏳ 待写（**下一篇候选**） |
 
 > 子类小计：**3 / 4**（缺 H20）
 
@@ -129,14 +130,13 @@
 
 #### 五类总览与下次推进
 
-整体进度：**19 / 23**（剩 4 篇，集中在「Locomotion 经典」与「Sim-to-Real & Foundation Model」两类）。
+整体进度：**20 / 23**（剩 3 篇：H15 / H16 / H20）。
 
 剩余写作顺序（按五类循环、跳过已全覆盖子类得到）：
 
-1. 2026-05-25 → 仿真平台与工具（已全覆盖，跳过）→ **H14 Humanoid Parkour Learning**（Locomotion 经典）
-2. 2026-05-26 → H20 Behavior Foundation Model（Sim-to-Real & FM）
-3. 2026-05-27 → H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes（Locomotion 经典）
-4. 2026-05-28 → H16 ECO（Locomotion 经典）
+1. 2026-05-26 → **H20 Behavior Foundation Model**（Sim-to-Real & Foundation Model）
+2. 2026-05-27 → **H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes**（Locomotion 经典）
+3. 2026-05-28 → **H16 ECO**（Locomotion 经典）
 
 写完 H16 后，「⭐ 高影响力精选」H1–H23 才真正全部完成，届时再提示用户补充新待读论文。
 
