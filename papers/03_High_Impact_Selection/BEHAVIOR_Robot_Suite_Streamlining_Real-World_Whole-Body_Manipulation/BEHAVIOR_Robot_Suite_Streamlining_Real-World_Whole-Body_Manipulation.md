@@ -85,4 +85,3 @@ flowchart TD
 ## 🔗 与仓库内其它笔记的关系
 
 - 与 **HumanoidBench**（仿真基准）、**Humanoid-Gym**（人形 RL 训练栈）互补：BRS 侧重**真机全身家务**的数据接口与学习管线开源。
-- 下一轮「高影响力精选 · 三轨」回到 **全身控制核心** 时，下一篇待补笔记候选为 **H4 HugWBC**（参见 `papers/DAILY_SUMMARY_LOG.md`）。

@@ -12,7 +12,7 @@ paper_order: 293
 
 > 📅 阅读日期: 2026-05-22  
 > 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics（H13）  
-> 🧭 状态: 每日轨 A 摘要稿；含 PDF / HTML / 项目页与流程图。与 H12「RL 因果 Transformer」对照：本文走 **离线自回归生成式建模** 而非在线 PPO。
+> 🧭 状态: 首版基础摘要稿；含 PDF / HTML / 项目页与流程图。与 H12「RL 因果 Transformer」对照：本文走 **离线自回归生成式建模** 而非在线 PPO。
 
 ---
 
@@ -134,14 +134,12 @@ flowchart TB
 
 ---
 
-## 📎 附录：轨 A 高影响力精选进度（摘录）
+## 📎 附录：高影响力精选 · Locomotion 相关笔记
 
-| 编号 | 论文 | 轨 A 子类 |
-|:---:|------|-----------|
-| H12 | Real-World Humanoid Locomotion with RL | Locomotion 经典 |
-| **H13** | **本文** | Locomotion 经典 |
-| H14 | [Humanoid Parkour Learning](../Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.md) | Locomotion 经典 ✅ |
-| H15 | Learning Sim-to-Real Humanoid Locomotion in 15 Minutes | Locomotion 经典（待写） |
-| H16 | ECO | Locomotion 经典（待写） |
-
-> 写完 H16 及 Sim-to-Real 子类剩余篇目后，H1–H23 高影响力精选即闭环；届时请向列表补充新的「待读」条目。
+| 论文 | 说明 |
+|------|------|
+| [Real-World Humanoid Locomotion with RL](../Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.md) | 在线 PPO + 因果 Transformer（Digit） |
+| **本文** | 离线自回归 next-token（Digit） |
+| [Humanoid Parkour Learning](../Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.md) | 视觉跑酷全身控制（Unitree H1） |
+| [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes (arXiv:2512.01996)](https://arxiv.org/abs/2512.01996) | 快速 sim-to-real 人形行走 |
+| [ECO (arXiv:2602.06445)](https://arxiv.org/abs/2602.06445) | 能耗约束 RL 人形行走 |

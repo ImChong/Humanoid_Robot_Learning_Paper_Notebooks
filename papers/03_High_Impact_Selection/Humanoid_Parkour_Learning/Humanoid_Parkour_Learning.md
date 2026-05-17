@@ -12,7 +12,7 @@ paper_order: 294
 
 > 📅 阅读日期: 2026-05-25  
 > 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics（H14）  
-> 🧭 状态: 每日轨 A 摘要稿；含 PDF / HTML / 项目页、相关代码与流程图。
+> 🧭 状态: 首版基础摘要稿；含 PDF / HTML / 项目页、相关代码与流程图。
 
 ---
 
@@ -91,15 +91,3 @@ flowchart LR
 
 - 对照附录中的 **障碍几何参数范围** 与消融（分形噪声 vs feet air time、纯盲策略等）。  
 - 若后续放出人形专用训练分支，将 **GitHub** 链从「parkour 同系仓库」升级为独立条目。
-
----
-
-## 📎 附录：轨 A 进度（摘录）
-
-| 编号 | 论文 | 状态 |
-|:---:|:---|:---|
-| H12 | Real-World Humanoid Locomotion with RL | ✅ |
-| H13 | Humanoid Locomotion as Next Token Prediction | ✅ |
-| **H14** | **本文** | ✅（本笔记） |
-| H15 | Learning Sim-to-Real Humanoid Locomotion in 15 Minutes | ⏳ |
-| H16 | ECO | ⏳ |
