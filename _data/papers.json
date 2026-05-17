@@ -254,6 +254,14 @@
         "name": "Locomotion Classics",
         "papers": [
           {
+            "title": "Learning Sim-to-Real Humanoid Locomotion in 15 Minutes",
+            "path": "papers/03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.md",
+            "url": "/papers/03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.html",
+            "dir": "Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes",
+            "arxiv": "2512.01996",
+            "zhname": "15 分钟人形 sim-to-real：FastSAC / FastTD3 大规模并行配方（Amazon FAR）"
+          },
+          {
             "title": "Real-World Humanoid Locomotion with Reinforcement Learning",
             "path": "papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.md",
             "url": "/papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.html",
