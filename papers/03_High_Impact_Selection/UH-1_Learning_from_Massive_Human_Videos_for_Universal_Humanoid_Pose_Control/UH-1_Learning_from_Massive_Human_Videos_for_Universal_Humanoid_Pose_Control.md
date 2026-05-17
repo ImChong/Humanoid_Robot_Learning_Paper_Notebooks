@@ -193,7 +193,7 @@ A：① caption 都是粗粒度动作描述，缺少细颗粒度（指令-参数
 | **全身控制核心**（H1–H6） | H1 Expressive WBC / H2 HOVER / H3 ExBody2 / H4 HugWBC / H5 SONIC / **H6 UH-1（本文）** —— 6 / 6 ✅ |
 | **遥操作与模仿学习**（H7–H11） | H7 HumanPlus / H8 OmniH2O / H9 HOMIE / H10 EgoMimic / H11 iDP3 —— 5 / 5 ✅ |
 | **Locomotion 经典**（H12–H16） | 仅 H12 Real-World Humanoid Locomotion w/ RL ✅；待写 H13 / H14 / H15 / H16 |
-| **Sim-to-Real & Foundation Model**（H17–H20） | H17 ANYmal ✅ / H19 GR00T N1 ✅（97 行基础笔记）；待写 H18 ASAP / H20 Behavior FM |
+| **Sim-to-Real & Foundation Model**（H17–H20） | H17 ANYmal ✅ / H18 ASAP ✅ / H19 GR00T N1 ✅（97 行基础笔记）；待写 H20 Behavior FM |
 | **仿真平台与工具**（H21–H23） | H21 Humanoid-Gym / H22 HumanoidBench / H23 BEHAVIOR Robot Suite —— 3 / 3 ✅ |
 
 > 📌 整体进度 **17 / 23**。本节早期版本曾基于「轨 A 三分类」误称 H1–H23 全部完成；自 2026-05-22 起轨 A 循环更正为**五类**（增补 Locomotion 经典与 Sim-to-Real & Foundation Model），下次推进将按循环跳过已全覆盖子类，落到 **H13 Humanoid Locomotion as Next Token Prediction（arXiv 2402.19469）**。剩余 6 篇（H13 / H14 / H15 / H16 / H18 / H20）依次写完后，整组 H1–H23 才真正全部完成。

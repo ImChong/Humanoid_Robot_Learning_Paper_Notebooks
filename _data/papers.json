@@ -291,6 +291,14 @@
             "zhname": "GR00T N1：面向通用人形机器人的开放基础模型"
           },
           {
+            "title": "ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills",
+            "path": "papers/03_High_Impact_Selection/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills.md",
+            "url": "/papers/03_High_Impact_Selection/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills.html",
+            "dir": "ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills",
+            "arxiv": "2502.01143",
+            "zhname": "ASAP：用残差动作模型对齐仿真与真机动力学的人形敏捷全身技能"
+          },
+          {
             "title": "Learning Agile and Dynamic Motor Skills for Legged Robots",
             "path": "papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.md",
             "url": "/papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.html",
@@ -753,7 +761,7 @@
         "zhname": "Unitree H1 人形机器人白皮书与技术规格"
       },
       {
-        "title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids: Empirical Study on Kengoro and Musashi",
+        "title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids",
         "path": "papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md",
         "url": "/papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.html",
         "dir": "Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids",
