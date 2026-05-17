@@ -54,6 +54,31 @@ zhname: "GR00T N1：面向通用人形机器人的开放基础模型"
 
 ---
 
+## 🧭 双系统 VLA 管线（mermaid）
+
+<div class="mermaid">
+flowchart LR
+  subgraph data["数据金字塔"]
+    D1["人类视频 / 遥操轨迹"]
+    D2["仿真合成数据"]
+  end
+  subgraph s2["System 2 · ~10 Hz"]
+    E2["Eagle-2 VLM<br/>视觉 + 语言理解"]
+  end
+  subgraph s1["System 1 · ~120 Hz"]
+    E1["DiT 动作头<br/>Flow-matching 高频关节指令"]
+  end
+  subgraph x_emb["跨具身部署"]
+    R["不同 morphology 人形<br/>统一接口执行"]
+  end
+  D1 --> E2
+  D2 --> E2
+  E2 -->|"潜变量 / 语义条件"| E1
+  E1 --> R
+</div>
+
+---
+
 ## 🔧 方法详解（架构设计）
 
 1. **双系统 VLA 架构 (Dual-System)**：

@@ -60,6 +60,37 @@ Isaac Lab 试图把这些碎片统一起来：
 
 ---
 
+## 🧭 平台工作流（mermaid）
+
+<div class="mermaid">
+flowchart TD
+  subgraph base["底座"]
+    A["Isaac Sim + PhysX + USD / Omniverse"]
+  end
+  subgraph env["环境与任务"]
+    B["机器人资产 / 场景 / 地形"]
+    C["Obs · Reward · Termination<br/>Manager 化配置"]
+    D["Domain Randomization / 事件"]
+  end
+  subgraph train["学习循环"]
+    E["GPU 并行环境 rollout"]
+    F["RL / IL / 数据采集器"]
+  end
+  subgraph out["产出"]
+    G["策略评估与失败分析"]
+    H["导出 → 实机部署栈"]
+  end
+  base --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  F --> G
+  G --> H
+</div>
+
+---
+
 ## 🔧 方法详解
 
 ### 1. 架构层级

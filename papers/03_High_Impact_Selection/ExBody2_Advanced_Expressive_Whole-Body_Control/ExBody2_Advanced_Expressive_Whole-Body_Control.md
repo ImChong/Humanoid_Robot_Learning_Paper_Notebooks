@@ -61,6 +61,31 @@ ExBody2 的贡献点就是围绕这些矛盾做工程化拆解。它不是只追
 
 ---
 
+## 🧭 整体流程（mermaid）
+
+<div class="mermaid">
+flowchart LR
+  subgraph data["数据"]
+    M["人体 MoCap / 仿真表达动作"]
+    R["重定向到机器人<br/>关键点 + 关节目标"]
+    M --> R
+  end
+  subgraph train["训练"]
+    DEC["速度 vs 关键点跟踪<br/>解耦奖励设计"]
+    TE["特权教师<br/>可行性筛选 / 强跟踪"]
+    ST["学生策略<br/>去特权蒸馏"]
+    R --> DEC
+    DEC --> TE
+    TE --> ST
+  end
+  subgraph sim2real["落地"]
+    X["Sim-to-Real<br/>可选目标动作 fine-tune"]
+    ST --> X
+  end
+</div>
+
+---
+
 ## 🔧 方法详解
 
 ### 1. 动作来源：人体 mocap 与仿真数据
