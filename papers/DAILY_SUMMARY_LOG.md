@@ -43,6 +43,7 @@
 | 2026-05-18 | H11 | [iDP3: Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies](03_High_Impact_Selection/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies.md) | 高影响力精选 / 遥操作与模仿学习 | [YanjieZe/Improved-3D-Diffusion-Policy](https://github.com/YanjieZe/Improved-3D-Diffusion-Policy) · [humanoid_teleoperation](https://github.com/YanjieZe/humanoid_teleoperation) |
 | 2026-05-20 | H5 | [SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control](03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.md) | 高影响力精选 / 全身控制核心 | 截至当前未公开训练代码，主要参考 [项目主页](https://nvlabs.github.io/SONIC/) 与 [GR00T-WholeBodyControl 文档](https://nvlabs.github.io/GR00T-WholeBodyControl/) |
 | 2026-05-21 | H6 | [UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control](03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md) | 高影响力精选 / 全身控制核心 | [sihengz02/UH-1](https://github.com/sihengz02/UH-1) · [HuggingFace USC-PSI-Lab/UH-1](https://huggingface.co/USC-PSI-Lab/UH-1) |
+| 2026-05-22 | H13 | [Humanoid Locomotion as Next Token Prediction](03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction/Humanoid_Locomotion_as_Next_Token_Prediction.md) | 高影响力精选 / Locomotion 经典 | 未集中公开独立仓库；[项目主页](https://humanoid-next-token-prediction.github.io/) · [OpenReview](https://openreview.net/forum?id=GrMczQGTlA) |
 | 2026-05-20 | 379 | [RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots](10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.md) | Sim-to-Real / OOD 检测 / 失败诊断 | 截至当前未见公开发布（作者 [humphreymunn](https://github.com/humphreymunn) 仓库列表暂无 RAPT） |
 | 2026-05-22 | 389 | [GRUtopia: Dream General Robots in a City at Scale](11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale/GRUtopia__Dream_General_Robots_in_a_City_at_Scale.md) | Simulation Benchmark / 城市级仿真 / 服务场景 / 具身 AI | [OpenRobotLab/GRUtopia](https://github.com/OpenRobotLab/GRUtopia)（现 InternUtopia 2.2.x） |
 | 2026-05-23 | 410 | [Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids](12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md) | Hardware Design / 肌骨型人形 / 仿生驱动 | 综述/实证类文章，作者团队 [haraduka/GitHub](https://github.com/haraduka) 未公布配套代码 |
@@ -97,12 +98,12 @@
 | 编号 | 论文 | arXiv | 状态 |
 |:---:|------|:---:|------|
 | H12 | Real-World Humanoid Locomotion with Reinforcement Learning | [2303.03381](https://arxiv.org/abs/2303.03381) | ✅ 已完成（见 03 高影响力精选目录内笔记） |
-| H13 | Humanoid Locomotion as Next Token Prediction | [2402.19469](https://arxiv.org/abs/2402.19469) | ⏳ 待写（**下一篇候选**） |
-| H14 | Humanoid Parkour Learning | [2406.10759](https://arxiv.org/abs/2406.10759) | ⏳ 待写 |
+| H13 | Humanoid Locomotion as Next Token Prediction | [2402.19469](https://arxiv.org/abs/2402.19469) | ✅ 已完成（2026-05-22） |
+| H14 | Humanoid Parkour Learning | [2406.10759](https://arxiv.org/abs/2406.10759) | ⏳ 待写（**下一篇候选**） |
 | H15 | Learning Sim-to-Real Humanoid Locomotion in 15 Minutes | [2512.01996](https://arxiv.org/abs/2512.01996) | ⏳ 待写 |
 | H16 | ECO: Energy-Constrained Optimization with RL for Humanoid Walking | [2602.06445](https://arxiv.org/abs/2602.06445) | ⏳ 待写 |
 
-> 子类小计：**1 / 5**（缺 H13 / H14 / H15 / H16）
+> 子类小计：**2 / 5**（缺 H14 / H15 / H16）
 
 #### 4. Sim-to-Real & Foundation Model（H17–H20）
 | 编号 | 论文 | arXiv / 链接 | 状态 |
@@ -127,16 +128,15 @@
 
 #### 五类总览与下次推进
 
-整体进度：**17 / 23**（剩 6 篇，全部集中在「Locomotion 经典」与「Sim-to-Real & Foundation Model」两类）。
+整体进度：**18 / 23**（剩 5 篇，全部集中在「Locomotion 经典」与「Sim-to-Real & Foundation Model」两类）。
 
 剩余写作顺序（按五类循环、跳过已全覆盖子类得到）：
 
-1. 2026-05-22 → **H13 Humanoid Locomotion as Next Token Prediction**（Locomotion 经典）
-2. 2026-05-23 → H18 ASAP（Sim-to-Real & FM）
-3. 2026-05-24 → 仿真平台与工具（已全覆盖，跳过）→ H14 Humanoid Parkour Learning（Locomotion 经典）
-4. 2026-05-25 → H20 Behavior Foundation Model（Sim-to-Real & FM）
-5. 2026-05-26 → H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes（Locomotion 经典）
-6. 2026-05-27 → H16 ECO（Locomotion 经典）
+1. 2026-05-23 → **H18 ASAP**（Sim-to-Real & FM）
+2. 2026-05-24 → 仿真平台与工具（已全覆盖，跳过）→ **H14 Humanoid Parkour Learning**（Locomotion 经典）
+3. 2026-05-25 → H20 Behavior Foundation Model（Sim-to-Real & FM）
+4. 2026-05-26 → H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes（Locomotion 经典）
+5. 2026-05-27 → H16 ECO（Locomotion 经典）
 
 写完 H16 后，「⭐ 高影响力精选」H1–H23 才真正全部完成，届时再提示用户补充新待读论文。
 

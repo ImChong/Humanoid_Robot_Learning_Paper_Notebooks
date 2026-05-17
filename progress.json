@@ -20,11 +20,11 @@
         ],
         "reason_for_change": "用户原始任务要求「在高影响力精选模块内循环」，应覆盖该模块全部 5 个子类；早期把「Locomotion 经典 / Sim-to-Real & Foundation Model」误标为另一路自动化责任、缩小到三类轮转，2026-05-22 更正为五类"
       },
-      "last_category": "全身控制核心",
-      "last_completed": "H6 UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control (Mao*, Zhao*, Song* et al., USC/Berkeley/TRI, Humanoids 2025 Oral)",
-      "last_completed_date": "2026-05-21",
-      "next_category": "Locomotion 经典",
-      "next_candidate": "高影响力精选 · 五类循环：`next_category` 为「Locomotion 经典」：上一轮「全身控制核心」完成 H6 后，循环下一步「遥操作与模仿学习」（H7–H11）已全覆盖故跳过。下一篇 → H13 Humanoid Locomotion as Next Token Prediction（arXiv 2402.19469）。按五类轮转的后续写作顺序：H18 ASAP → H14 Humanoid Parkour Learning → H20 Behavior Foundation Model → H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes → H16 ECO（与 papers/DAILY_SUMMARY_LOG.md「五类总览与下次推进」一致）；共 6 篇写完后整组 H1–H23 才真正全部完成"
+      "last_category": "Locomotion 经典",
+      "last_completed": "H13 Humanoid Locomotion as Next Token Prediction (Radosavovic et al., UC Berkeley, NeurIPS 2024 Spotlight)",
+      "last_completed_date": "2026-05-22",
+      "next_category": "Sim-to-Real & Foundation Model",
+      "next_candidate": "高影响力精选 · 五类循环：本轮「Locomotion 经典」刚完成 H13。下一类为「Sim-to-Real & Foundation Model」，下一篇待写 → H18 ASAP: Aligning Simulation and Real-World Physics for Agile Humanoid Skills（项目页 agile.human2humanoid.com）。后续顺序仍见 papers/DAILY_SUMMARY_LOG.md「五类总览与下次推进」；Locomotion 经典尚余 H14/H15/H16 共 3 篇"
     },
     "module_rotation": {
       "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
@@ -285,6 +285,14 @@
         "title": "UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control",
         "folder": "papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
         "category": "高影响力精选 / 全身控制核心",
+        "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-22",
+        "index": "H13",
+        "title": "Humanoid Locomotion as Next Token Prediction",
+        "folder": "papers/03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction",
+        "category": "高影响力精选 / Locomotion 经典",
         "track": "high_impact_cycle"
       },
       {
@@ -2656,6 +2664,16 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "Humanoid Locomotion as Next Token Prediction",
+      "folder": "papers/03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction",
+      "note_file": "Humanoid_Locomotion_as_Next_Token_Prediction.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "高影响力精选 High Impact Selection",
       "title_cn": ""
     },
     {
