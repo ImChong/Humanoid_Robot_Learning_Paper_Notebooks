@@ -270,6 +270,14 @@
             "zhname": "人形行走即下一 token 预测（自回归传感运动轨迹 · Digit 实机）"
           },
           {
+            "title": "Humanoid Parkour Learning",
+            "path": "papers/03_High_Impact_Selection/Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.md",
+            "url": "/papers/03_High_Impact_Selection/Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.html",
+            "dir": "Humanoid_Parkour_Learning",
+            "arxiv": "2406.10759",
+            "zhname": "人形跑酷：无动作先验的端到端视觉全身控制（Unitree H1）"
+          },
+          {
             "title": "Learning Quadrupedal Locomotion over Challenging Terrain",
             "path": "papers/03_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.md",
             "url": "/papers/03_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.html",

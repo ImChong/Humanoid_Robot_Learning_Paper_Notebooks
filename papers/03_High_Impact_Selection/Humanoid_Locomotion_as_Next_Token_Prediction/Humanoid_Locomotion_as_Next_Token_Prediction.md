@@ -140,7 +140,7 @@ flowchart TB
 |:---:|------|-----------|
 | H12 | Real-World Humanoid Locomotion with RL | Locomotion 经典 |
 | **H13** | **本文** | Locomotion 经典 |
-| H14 | Humanoid Parkour Learning | Locomotion 经典（待写） |
+| H14 | [Humanoid Parkour Learning](../Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.md) | Locomotion 经典 ✅ |
 | H15 | Learning Sim-to-Real Humanoid Locomotion in 15 Minutes | Locomotion 经典（待写） |
 | H16 | ECO | Locomotion 经典（待写） |
 
