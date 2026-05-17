@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "14_Human_Motion",
-      "last_index": 476,
-      "last_title": "Learned Motion Matching",
-      "next_module": "04_Loco-Manipulation_and_WBC"
+      "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_index": 51,
+      "last_title": "Robust and Generalized Humanoid Motion Tracking",
+      "next_module": "05_Locomotion"
     },
-    "last_summary_index": 476,
+    "last_summary_index": 51,
     "last_summary_date": "2026-05-17",
-    "last_summary_title": "Learned Motion Matching",
+    "last_summary_title": "Robust and Generalized Humanoid Motion Tracking",
     "next_summary_index": null,
     "log": [
       {
@@ -365,6 +365,14 @@
         "title": "Learned Motion Matching",
         "folder": "papers/14_Human_Motion/Learned_Motion_Matching",
         "module": "14_Human_Motion",
+        "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-17",
+        "index": 51,
+        "title": "Robust and Generalized Humanoid Motion Tracking",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/Robust_and_Generalized_Humanoid_Motion_Tracking",
+        "module": "04_Loco-Manipulation_and_WBC",
         "track": "module_rotation"
       }
     ],
@@ -870,7 +878,7 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/Robust_and_Generalized_Humanoid_Motion_Tracking",
       "note_file": "Robust_and_Generalized_Humanoid_Motion_Tracking.md",
       "pdf_file": "Robust.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",

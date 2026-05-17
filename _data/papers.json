@@ -392,6 +392,14 @@
         "zhname": "HERO：基于开放词汇视觉引导的人形机器人末端执行器控制"
       },
       {
+        "title": "Robust and Generalized Humanoid Motion Tracking",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Robust_and_Generalized_Humanoid_Motion_Tracking/Robust_and_Generalized_Humanoid_Motion_Tracking.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Robust_and_Generalized_Humanoid_Motion_Tracking/Robust_and_Generalized_Humanoid_Motion_Tracking.html",
+        "dir": "Robust_and_Generalized_Humanoid_Motion_Tracking",
+        "arxiv": "2601.23080",
+        "zhname": "鲁棒且通用的人形机器人动作跟踪：用动力学条件化的命令聚合抵御噪声参考"
+      },
+      {
         "title": "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety",
         "path": "papers/04_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety/VIGOR_Visual_Goal-In-Context_Inference_for_Unified_Humanoid_Fall_Safety.html",
@@ -841,7 +849,7 @@
         "path": "papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.md",
         "url": "/papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.html",
         "dir": "Learned_Motion_Matching",
-        "arxiv": "",
+        "arxiv": "2209.14916",
         "zhname": "学习式动作匹配：用三张小网络替代海量动作数据库"
       }
     ],
