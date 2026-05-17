@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 410,
-      "last_title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids: Empirical Study on Kengoro and Musashi",
-      "next_module": "13_Physics-Based_Animation"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 448,
+      "last_title": "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control",
+      "next_module": "14_Human_Motion"
     },
-    "last_summary_index": 410,
-    "last_summary_date": "2026-05-23",
-    "last_summary_title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids: Empirical Study on Kengoro and Musashi",
+    "last_summary_index": 448,
+    "last_summary_date": "2026-05-17",
+    "last_summary_title": "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control",
     "next_summary_index": null,
     "log": [
       {
@@ -350,6 +350,14 @@
         "folder": "papers/03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking",
         "category": "高影响力精选 / Locomotion 经典",
         "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-17",
+        "index": 448,
+        "title": "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control",
+        "folder": "papers/13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis",
+        "module": "13_Physics-Based_Animation",
+        "track": "module_rotation"
       }
     ],
     "last_completed_index": 29,
@@ -2772,6 +2780,36 @@
       "title": "Humanoid Parkour Learning",
       "folder": "papers/03_High_Impact_Selection/Humanoid_Parkour_Learning",
       "note_file": "Humanoid_Parkour_Learning.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "高影响力精选 High Impact Selection",
+      "title_cn": ""
+    },
+    {
+      "title": "Learning Sim-to-Real Humanoid Locomotion in 15 Minutes",
+      "folder": "papers/03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes",
+      "note_file": "Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "高影响力精选 High Impact Selection",
+      "title_cn": ""
+    },
+    {
+      "title": "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control",
+      "folder": "papers/13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis",
+      "note_file": "Iterative_Closed-Loop_Motion_Synthesis.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "物理仿真动画",
+      "title_cn": ""
+    },
+    {
+      "title": "ECO: Energy-Constrained Optimization with Reinforcement Learning for Humanoid Walking",
+      "folder": "papers/03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking",
+      "note_file": "ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.md",
       "status": "done",
       "arxiv": "",
       "pdf_file": "",

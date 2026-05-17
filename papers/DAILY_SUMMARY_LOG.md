@@ -52,6 +52,7 @@
 | 2026-05-17 | H20 | [Behavior Foundation Model for Humanoid Robots](03_High_Impact_Selection/Behavior_Foundation_Model_for_Humanoid_Robots/Behavior_Foundation_Model_for_Humanoid_Robots.md) | 高影响力精选 / Sim-to-Real & Foundation Model | 论文主页 [bfm4humanoid.github.io](https://bfm4humanoid.github.io/)；与本文一一对应的官方代码仓库截至当前未集中公开，相关范式可参考 [LeCAR-Lab/BFM-Zero](https://github.com/LeCAR-Lab/BFM-Zero)（不同方法线，仅作延伸阅读） |
 | 2026-05-17 | H15 | [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.md) | 高影响力精选 / Locomotion 经典 | [amazon-far/holosoma](https://github.com/amazon-far/holosoma) · [项目页 / 视频](https://younggyo.me/fastsac-humanoid) |
 | 2026-05-17 | H16 | [ECO: Energy-Constrained Optimization with RL for Humanoid Walking](03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.md) | 高影响力精选 / Locomotion 经典 | [bigai-ai/ECO-humanoid](https://github.com/bigai-ai/ECO-humanoid) · [项目页](https://sites.google.com/view/eco-humanoid) |
+| 2026-05-17 | 448 | [Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control](13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis/Iterative_Closed-Loop_Motion_Synthesis.md) | Physics-Based Animation / 数据自合成 / 课程学习 | 截至当前未见公开发布（无项目页 / GitHub） |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -159,6 +160,7 @@
 | 379 | RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots | 10_Sim-to-Real | ✅ 已完成（2026-05-20） |
 | 389 | GRUtopia: Dream General Robots in a City at Scale | 11_Simulation_Benchmark | ✅ 已完成（2026-05-22） |
 | 410 | Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids | 12_Hardware_Design | ✅ 已完成（2026-05-23） |
-| ? | （明日：13_Physics-Based_Animation 模块首个未完成论文） | 13_Physics-Based_Animation | ⏭️ 下一篇候选 |
+| 448 | Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control | 13_Physics-Based_Animation | ✅ 已完成（2026-05-17） |
+| ? | （明日：14_Human_Motion 模块首个未完成论文；若该模块全部已有笔记，则回到 04_WBC 取最新未读） | 14_Human_Motion | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
