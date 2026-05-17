@@ -49,6 +49,7 @@
 | 2026-05-23 | 410 | [Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids](12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md) | Hardware Design / 肌骨型人形 / 仿生驱动 | 综述/实证类文章，作者团队 [haraduka/GitHub](https://github.com/haraduka) 未公布配套代码 |
 | 2026-05-24 | H18 | [ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills](03_High_Impact_Selection/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills.md) | 高影响力精选 / Sim-to-Real & Foundation Model | [LeCAR-Lab/ASAP](https://github.com/LeCAR-Lab/ASAP) |
 | 2026-05-25 | H14 | [Humanoid Parkour Learning](03_High_Impact_Selection/Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.md) | 高影响力精选 / Locomotion 经典 | 与四足跑酷同系 [ZiwenZhuang/parkour](https://github.com/ZiwenZhuang/parkour)；人形细节以论文/项目页为准 |
+| 2026-05-17 | H20 | [Behavior Foundation Model for Humanoid Robots](03_High_Impact_Selection/Behavior_Foundation_Model_for_Humanoid_Robots/Behavior_Foundation_Model_for_Humanoid_Robots.md) | 高影响力精选 / Sim-to-Real & Foundation Model | 论文主页 [bfm4humanoid.github.io](https://bfm4humanoid.github.io/)；与本文一一对应的官方代码仓库截至当前未集中公开，相关范式可参考 [LeCAR-Lab/BFM-Zero](https://github.com/LeCAR-Lab/BFM-Zero)（不同方法线，仅作延伸阅读） |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -72,6 +73,8 @@
 > **跳过原则**：当轮到的子类已全部覆盖时，按循环自动 round-robin 到下一类。
 >
 > ⚠️ 早期（2026-05-14 至 2026-05-21）该循环被误缩小为三类，将「Locomotion 经典 / Sim-to-Real & Foundation Model」当作另一路自动化的责任；现已更正为五类，与 `progress.json → daily_summary.high_impact_cycle.categories` 同步。
+>
+> **当前轨 A 下一篇待写**：**H15** *Learning Sim-to-Real Humanoid Locomotion in 15 Minutes*（Locomotion 经典，arXiv:2512.01996）；随后 **H16** ECO。
 
 #### 1. 全身控制核心（H1–H6）
 | 编号 | 论文 | 状态 |
@@ -113,9 +116,9 @@
 | H17 | Learning Agile and Dynamic Motor Skills for Legged Robots（ANYmal） | [1901.08652](https://arxiv.org/abs/1901.08652) | ✅ 已完成 |
 | H18 | ASAP: Aligning Simulation and Real-World Physics for Agile Humanoid Skills | [2502.01143](https://arxiv.org/abs/2502.01143) · [项目页](https://agile.human2humanoid.com/) | ✅ 已完成（2026-05-24） |
 | H19 | GR00T N1: An Open Foundation Model for Generalist Humanoid Robots | [2503.14734](https://arxiv.org/abs/2503.14734) | ✅ 已存在（97 行基础笔记，深度细节可后续补充） |
-| H20 | Behavior Foundation Model for Humanoid Robots | [2509.13780](https://arxiv.org/abs/2509.13780) | ⏳ 待写（**下一篇候选**） |
+| H20 | Behavior Foundation Model for Humanoid Robots | [2509.13780](https://arxiv.org/abs/2509.13780) | ✅ 已完成（2026-05-17） |
 
-> 子类小计：**3 / 4**（缺 H20）
+> 子类小计：**4 / 4 ✅ 已全部完成**
 
 #### 5. 仿真平台与工具（H21–H23）
 | 编号 | 论文 | 状态 |
@@ -130,13 +133,12 @@
 
 #### 五类总览与下次推进
 
-整体进度：**20 / 23**（剩 3 篇：H15 / H16 / H20）。
+整体进度：**21 / 23**（剩 2 篇：H15 / H16）。
 
 剩余写作顺序（按五类循环、跳过已全覆盖子类得到）：
 
-1. 2026-05-26 → **H20 Behavior Foundation Model**（Sim-to-Real & Foundation Model）
-2. 2026-05-27 → **H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes**（Locomotion 经典）
-3. 2026-05-28 → **H16 ECO**（Locomotion 经典）
+1. **H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes**（Locomotion 经典）
+2. **H16 ECO**（Locomotion 经典）
 
 写完 H16 后，「⭐ 高影响力精选」H1–H23 才真正全部完成，届时再提示用户补充新待读论文。
 
