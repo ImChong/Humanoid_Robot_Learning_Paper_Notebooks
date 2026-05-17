@@ -172,6 +172,24 @@ LCP 的优势不是“数学更炫”，而是：
 
 这点很重要。因为真正有价值的方法，不只是 paper 里好看，而是你能不改天换地地接到现有工程里。
 
+### 📊 LCP 接入 PPO 的训练回路
+
+<div class="mermaid">
+flowchart TB
+    DR["Domain Randomization<br/>并行仿真"] --> Roll["Rollout 收集轨迹"]
+    Roll --> PPO["PPO 策略梯度<br/>L_RL"]
+    PPO --> GP["梯度惩罚项<br/>-λ_gp E||∇_o π(o)||²"]
+    GP --> Total["L_total = L_RL + L_GP"]
+    Total --> Upd["更新策略 π_θ"]
+    Upd --> Roll
+    subgraph opt["可选工程组件"]
+        TS["Teacher-Student"]
+        ROA["ROA 在线适应"]
+    end
+    DR -.-> TS
+    DR -.-> ROA
+</div>
+
 ---
 
 ## 🚶 具体实例：LCP 怎么让 humanoid 动作不抖？

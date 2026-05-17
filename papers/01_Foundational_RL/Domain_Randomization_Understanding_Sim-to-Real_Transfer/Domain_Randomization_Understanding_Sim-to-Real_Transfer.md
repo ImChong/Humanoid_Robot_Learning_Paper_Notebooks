@@ -150,6 +150,22 @@ $$V^\star(\mu^\star) - V^{\pi_{DR}}(\mu^\star) \leq \underbrace{\epsilon_{approx
 
 **实战推论**：随机化区间要**覆盖真实分布**，宁可偏大。
 
+### 📊 域随机化 + 历史依赖策略训练循环
+
+<div class="mermaid">
+flowchart TB
+    Start["训练步开始"] --> Sample["采样 θ ~ p(θ)<br/>构造 MDP M_θ"]
+    Sample --> Reset["env.reset(θ)"]
+    Reset --> Loop{"时步 t 是否未达 T"}
+    Loop -->|是| Act["a_t = π(·|s_t, h)<br/>历史依赖策略"]
+    Act --> Step["s_{t+1}, r_t = env.step"]
+    Step --> Hist["更新历史缓冲 h"]
+    Hist --> Loop
+    Loop -->|否| PPO["PPO 更新 π"]
+    PPO --> Start
+    Real["真实环境 θ*<br/>若在训练支撑集内"] -.->|迁移| Policy["π_DR 部署"]
+</div>
+
 ---
 
 ## 🤖 这篇理论分析对人形机器人的工程价值

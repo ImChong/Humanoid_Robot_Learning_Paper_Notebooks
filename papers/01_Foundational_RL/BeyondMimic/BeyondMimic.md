@@ -64,6 +64,19 @@ zhname: "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
    - 在推理阶段，利用简单的成本函数（Cost function）引导扩散过程。
    - 实现了 Waypoint Navigation（路点导航）、Joystick Teleoperation（摇杆遥操作）等下游应用。
 
+### 📊 BeyondMimic 推理管线（追踪 + 引导扩散）
+
+<div class="mermaid">
+flowchart TB
+    Data["SMPL-X 人类动作库"] --> Track["高保真追踪 / 原语蒸馏"]
+    Track --> LDM["统一潜扩散策略"]
+    Obs["当前观测 + 任务上下文"] --> LDM
+    LDM --> Sample["潜空间多步去噪采样"]
+    Cost["任务成本函数<br/>导航 / 避障 / 遥操作"] --> Guide["分类器引导梯度"]
+    Guide --> Sample
+    Sample --> Act["全身控制轨迹输出"]
+</div>
+
 ---
 
 ## 🚶 具体实例
