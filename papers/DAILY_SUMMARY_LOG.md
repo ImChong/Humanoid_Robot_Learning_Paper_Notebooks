@@ -45,6 +45,7 @@
 | 2026-05-21 | H6 | [UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control](03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md) | 高影响力精选 / 全身控制核心 | [sihengz02/UH-1](https://github.com/sihengz02/UH-1) · [HuggingFace USC-PSI-Lab/UH-1](https://huggingface.co/USC-PSI-Lab/UH-1) |
 | 2026-05-20 | 379 | [RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots](10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.md) | Sim-to-Real / OOD 检测 / 失败诊断 | 截至当前未见公开发布（作者 [humphreymunn](https://github.com/humphreymunn) 仓库列表暂无 RAPT） |
 | 2026-05-22 | 389 | [GRUtopia: Dream General Robots in a City at Scale](11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale/GRUtopia__Dream_General_Robots_in_a_City_at_Scale.md) | Simulation Benchmark / 城市级仿真 / 服务场景 / 具身 AI | [OpenRobotLab/GRUtopia](https://github.com/OpenRobotLab/GRUtopia)（现 InternUtopia 2.2.x） |
+| 2026-05-23 | 410 | [Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids](12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md) | Hardware Design / 肌骨型人形 / 仿生驱动 | 综述/实证类文章，作者团队 [haraduka/GitHub](https://github.com/haraduka) 未公布配套代码 |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -158,6 +159,7 @@
 | 368 | AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion | 09_State_Estimation | ✅ 已完成（2026-05-19） |
 | 379 | RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots | 10_Sim-to-Real | ✅ 已完成（2026-05-20） |
 | 389 | GRUtopia: Dream General Robots in a City at Scale | 11_Simulation_Benchmark | ✅ 已完成（2026-05-22） |
-| ? | （明日：12_Hardware_Design 模块首个未完成论文） | 12_Hardware_Design | ⏭️ 下一篇候选 |
+| 410 | Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids | 12_Hardware_Design | ✅ 已完成（2026-05-23） |
+| ? | （明日：13_Physics-Based_Animation 模块首个未完成论文） | 13_Physics-Based_Animation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
