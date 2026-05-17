@@ -835,6 +835,14 @@
         "dir": "HumanML3D",
         "arxiv": "2204.09419",
         "zhname": "从文本描述生成多样化且自然的 3D 人体运动"
+      },
+      {
+        "title": "Learned Motion Matching",
+        "path": "papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.md",
+        "url": "/papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.html",
+        "dir": "Learned_Motion_Matching",
+        "arxiv": "",
+        "zhname": "学习式动作匹配：用三张小网络替代海量动作数据库"
       }
     ],
     "zhname": "人体运动"
