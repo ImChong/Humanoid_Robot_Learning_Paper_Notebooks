@@ -262,6 +262,14 @@
             "zhname": "首个 RL 真实世界人形行走（Berkeley · Causal Transformer）"
           },
           {
+            "title": "Humanoid Locomotion as Next Token Prediction",
+            "path": "papers/03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction/Humanoid_Locomotion_as_Next_Token_Prediction.md",
+            "url": "/papers/03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction/Humanoid_Locomotion_as_Next_Token_Prediction.html",
+            "dir": "Humanoid_Locomotion_as_Next_Token_Prediction",
+            "arxiv": "2402.19469",
+            "zhname": "人形行走即下一 token 预测（自回归传感运动轨迹 · Digit 实机）"
+          },
+          {
             "title": "Learning Quadrupedal Locomotion over Challenging Terrain",
             "path": "papers/03_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.md",
             "url": "/papers/03_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.html",

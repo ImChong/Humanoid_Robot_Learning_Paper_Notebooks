@@ -55,7 +55,7 @@
 | #   | 论文                                                                                                       | 来源   | 理由                      |
 | --- | -------------------------------------------------------------------------------------------------------- | ---- | ----------------------- |
 | H12 | [Real-World Humanoid Locomotion with Reinforcement Learning](https://arxiv.org/abs/2303.03381) ✅ [笔记](03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.md) | Loco | Berkeley，首个真实世界人形 RL 行走 |
-| H13 | [Humanoid Locomotion as Next Token Prediction](https://arxiv.org/abs/2402.19469)                         | Loco | 把运动控制建模为 token 预测，新范式   |
+| H13 | [Humanoid Locomotion as Next Token Prediction](https://arxiv.org/abs/2402.19469) ✅ [笔记](03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction/Humanoid_Locomotion_as_Next_Token_Prediction.md) | Loco | 把运动控制建模为 token 预测，新范式   |
 | H14 | [Humanoid Parkour Learning](https://arxiv.org/abs/2406.10759)                                            | Loco | 人形跑酷，高动态控制              |
 | H15 | [Learning Sim-to-Real Humanoid Locomotion in 15 Minutes](https://arxiv.org/abs/2512.01996)               | Loco | 极快 sim-to-real，工程价值高    |
 | H16 | [ECO: Energy-Constrained Optimization with RL for Humanoid Walking](https://arxiv.org/abs/2602.06445) 🌟 | Loco | 能量优化行走，开源               |
@@ -346,7 +346,7 @@
 | 262  | [Advancing Humanoid Locomotion: Mastering Challenging Terrains with Denoising World Model Learning](https://arxiv.org/abs/2408.14472)                           | 2024.08 |     | ⏳ 待读 |
 | 263  | [Humanoid Parkour Learning](https://arxiv.org/abs/2406.10759)                                                                                                   | 2024.06 |     | ⏳ 待读 |
 | 264  | [Deep Reinforcement Learning for Bipedal Locomotion: A Brief Survey](https://arxiv.org/abs/2404.17070)                                                          | 2024.04 |     | ⏳ 待读 |
-| 265  | [Humanoid Locomotion as Next Token Prediction](https://arxiv.org/abs/2402.19469)                                                                                | 2024.02 |     | ⏳ 待读 |
+| 265  | [Humanoid Locomotion as Next Token Prediction](https://arxiv.org/abs/2402.19469)                                                                                | 2026-05-22 |     | ✅ 完成 |
 | 266  | [Whole-body Humanoid Robot Locomotion with Human Reference](https://arxiv.org/abs/2402.18294)                                                                   | 2024.02 |     | ⏳ 待读 |
 | 267  | [Reinforcement Learning for Versatile, Dynamic, and Robust Bipedal Locomotion Control](https://arxiv.org/abs/2401.16889)                                        | 2024.01 |     | ⏳ 待读 |
 | 268  | [Learning to Walk and Fly with Adversarial Motion Priors](https://arxiv.org/abs/2309.12784)                                                                     | 2023.09 |     | ⏳ 待读 |
