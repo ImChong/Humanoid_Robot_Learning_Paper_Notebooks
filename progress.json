@@ -21,10 +21,10 @@
         "reason_for_change": "用户原始任务要求「在高影响力精选模块内循环」，应覆盖该模块全部 5 个子类；早期把「Locomotion 经典 / Sim-to-Real & Foundation Model」误标为另一路自动化责任、缩小到三类轮转，2026-05-22 更正为五类"
       },
       "last_category": "Locomotion 经典",
-      "last_completed": "H15 Learning Sim-to-Real Humanoid Locomotion in 15 Minutes (arXiv:2512.01996)",
+      "last_completed": "H16 ECO: Energy-Constrained Optimization with RL for Humanoid Walking (arXiv:2602.06445)",
       "last_completed_date": "2026-05-17",
-      "next_category": "Locomotion 经典",
-      "next_candidate": "高影响力精选 · 五类循环：H15 已完成。Locomotion 经典子类尚余 **H16 ECO: Energy-Constrained Optimization with RL for Humanoid Walking**（arXiv:2602.06445）。写完 H16 后 H1–H23 全部闭环；总览见 papers/DAILY_SUMMARY_LOG.md"
+      "next_category": "全身控制核心",
+      "next_candidate": "高影响力精选 H1–H23（五类轮转）已于 2026-05-17 全部闭环。轨 A 暂无新的待写条目：请在 papers/PROGRESS.md「⭐ 高影响力精选」中补充新论文并同步目录，或明确下一批候选编号后再跑每日任务。总览见 papers/DAILY_SUMMARY_LOG.md"
     },
     "module_rotation": {
       "description": "每天按模块轮转：04(WBC) → 05(行走运动) → 06(灵巧操作) → 07(遥操作) → 08(导航) → 09(状态估计) → 10(Sim2Real) → 11(仿真/基准) → 12(硬件) → 13(物理动画) → 14(人体动作) → 回到 04",
@@ -340,6 +340,14 @@
         "index": "H15",
         "title": "Learning Sim-to-Real Humanoid Locomotion in 15 Minutes",
         "folder": "papers/03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes",
+        "category": "高影响力精选 / Locomotion 经典",
+        "track": "high_impact_cycle"
+      },
+      {
+        "date": "2026-05-17",
+        "index": "H16",
+        "title": "ECO: Energy-Constrained Optimization with Reinforcement Learning for Humanoid Walking",
+        "folder": "papers/03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking",
         "category": "高影响力精选 / Locomotion 经典",
         "track": "high_impact_cycle"
       },
@@ -2796,6 +2804,16 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "物理仿真动画",
+      "title_cn": ""
+    },
+    {
+      "title": "ECO: Energy-Constrained Optimization with Reinforcement Learning for Humanoid Walking",
+      "folder": "papers/03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking",
+      "note_file": "ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "高影响力精选 High Impact Selection",
       "title_cn": ""
     }
   ]

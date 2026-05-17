@@ -57,6 +57,31 @@ subcategory: "Whole-Body Control Core"
 
 ---
 
+## 🧭 整体流程（mermaid）
+
+<div class="mermaid">
+flowchart TD
+  subgraph data["参考动作"]
+    Mo["AMASS 等人体 MoCap"]
+    Rt["Motion Retargeting<br/>→ 机器人关节参考"]
+    Mo --> Rt
+  end
+  subgraph ctrl["分层全身控制"]
+    Up["上层：参考轨迹 / 目标姿态"]
+    Lo["下层 RL：跟踪 + 行走稳定性"]
+    Rt --> Up
+    Up --> Lo
+  end
+  subgraph sim2real["Sim-to-Real"]
+    DR["Isaac Gym 训练 + Domain Randomization"]
+    Real["Unitree H1 等真机部署"]
+    Lo --> DR
+    DR --> Real
+  end
+</div>
+
+---
+
 ## 🛠️ 方法详解
 
 ### 整体框架
