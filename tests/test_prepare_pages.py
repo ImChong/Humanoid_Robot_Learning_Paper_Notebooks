@@ -1,5 +1,6 @@
 """Tests for the pure helpers in ``scripts.prepare_pages``."""
 
+from scripts import prepare_pages
 from scripts.prepare_pages import extract_arxiv, normalize_name
 
 
@@ -58,3 +59,34 @@ def test_extract_arxiv_abs_url_all_caps_host():
 def test_extract_arxiv_no_mention_returns_none():
     """No arxiv token anywhere → no ID (cheap path)."""
     assert extract_arxiv("Only doi:10.1000/182 and no preprint link.") is None
+
+
+def test_parse_high_impact_h_order_reads_h_rows(tmp_path, monkeypatch):
+    """``Hn`` first-column rows map titles and arXiv IDs to integer order."""
+    progress = tmp_path / "PROGRESS.md"
+    progress.write_text(
+        "| # | 论文 | 来源 |\n"
+        "|---|------|------|\n"
+        "| H1 | [Short Paper Name](https://arxiv.org/abs/1111.11111) | x |\n"
+        "| H2 | [Other](https://arxiv.org/abs/2222.22222v2) | y |\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(prepare_pages, "PROGRESS_PATH", str(progress))
+    by_name, by_arxiv = prepare_pages.parse_high_impact_h_order()
+    assert by_arxiv["1111.11111"] == 1
+    assert by_arxiv["2222.22222"] == 2
+    assert by_name[normalize_name("Short Paper Name")] == 1
+
+
+def test_match_high_impact_h_order_prefers_arxiv():
+    """When title text drifts from PROGRESS, arXiv still pins the H index."""
+    by_name = {normalize_name("Progress Title Only"): 5}
+    by_arxiv = {"3333.33333": 7}
+    got = prepare_pages.match_high_impact_h_order(
+        "Different Title on Disk",
+        "Some_Dir",
+        "3333.33333",
+        by_name,
+        by_arxiv,
+    )
+    assert got == 7

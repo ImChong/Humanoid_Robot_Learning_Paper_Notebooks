@@ -133,6 +133,97 @@ def parse_progress_order():
     return order
 
 
+_H_INDEX_RE = re.compile(r'^H(\d+)$', re.IGNORECASE)
+_ARXIV_IN_MARKDOWN_CELL_RE = re.compile(
+    r'(?:arxiv\.org/(?:abs|html|pdf)/|arxiv:)(\d{4}\.\d{4,5}(?:v\d+)?)',
+    re.IGNORECASE,
+)
+
+
+def parse_high_impact_h_order():
+    """Parse PROGRESS.md rows whose first column is ``H1``…``H23``.
+
+    Returns two dicts used only for ``03_High_Impact_Selection``:
+
+    * ``by_name``: :func:`normalize_name` of the linked title → H index (int)
+    * ``by_arxiv``: arXiv id without version suffix → H index (int)
+
+    ArXiv keys are normalized to lowercase and stripped of a trailing ``vN``.
+    """
+    if not os.path.exists(PROGRESS_PATH):
+        return {}, {}
+
+    with open(PROGRESS_PATH, encoding='utf-8') as f:
+        content = f.read()
+
+    by_name = {}
+    by_arxiv = {}
+
+    for line in content.split('\n'):
+        line = line.strip()
+        if not line.startswith('|'):
+            continue
+        cols = [c.strip() for c in line.split('|')]
+        cols = [c for c in cols if c]
+        if len(cols) < 2:
+            continue
+        if cols[0] in ('#', '---', '----', '-----') or re.match(r'^-+$', cols[0]):
+            continue
+
+        tag_m = _H_INDEX_RE.match(cols[0])
+        if not tag_m:
+            continue
+
+        h_num = int(tag_m.group(1))
+        paper_col = cols[1]
+
+        for ax_m in _ARXIV_IN_MARKDOWN_CELL_RE.finditer(paper_col):
+            ax = re.sub(r'v\d+$', '', ax_m.group(1).lower())
+            by_arxiv[ax] = h_num
+
+        paper_text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', paper_col)
+        paper_text = re.sub(r'[*_`\[\]]', '', paper_text)
+        paper_text = paper_text.strip()
+        if not paper_text:
+            continue
+
+        normalized = normalize_name(paper_text)
+        if normalized and len(normalized) > 3:
+            by_name[normalized] = h_num
+
+    return by_name, by_arxiv
+
+
+def match_high_impact_h_order(paper_title, paper_dir, arxiv_id, by_name, by_arxiv):
+    """Resolve H# reading order for high-impact notes; ``None`` if unknown."""
+    if arxiv_id:
+        ax_key = arxiv_id.lower()
+        if ax_key in by_arxiv:
+            return by_arxiv[ax_key]
+        if re.search(r'v\d+$', ax_key):
+            ax_key = re.sub(r'v\d+$', '', ax_key)
+            if ax_key in by_arxiv:
+                return by_arxiv[ax_key]
+
+    norm_title = normalize_name(paper_title)
+    if norm_title and norm_title in by_name:
+        return by_name[norm_title]
+
+    norm_dir = normalize_name(paper_dir.replace('_', ' '))
+    if norm_dir and norm_dir in by_name:
+        return by_name[norm_dir]
+
+    for key, h_num in by_name.items():
+        if norm_title and (norm_title in key or key in norm_title):
+            return h_num
+
+    for key, h_num in by_name.items():
+        if norm_dir and (norm_dir in key or key in norm_dir):
+            return h_num
+
+    return None
+
+
 def match_paper_order(paper_title, paper_dir, progress_order):
     """Find the README order index for a paper. Lower = earlier in README."""
     # ⚡ Bolt Optimization: O(1) fast-path for exact matches before O(N) fuzzy search
@@ -173,6 +264,7 @@ def check_stub(fpath, content):
 def process_papers():
     """Walk through papers directory and add front matter."""
     progress_order = parse_progress_order()
+    hi_by_name, hi_by_arxiv = parse_high_impact_h_order()
     index_data = {}
 
     # Load existing papers.json to preserve metadata (subtitle, subcategories, zhname)
@@ -242,16 +334,29 @@ def process_papers():
                 rel_path = os.path.relpath(fpath, BASE_DIR)
                 url_path = '/' + rel_path.rsplit('.md', 1)[0] + '.html'
 
-                order_idx = match_paper_order(title, paper_dir, progress_order)
-
                 # ⚡ Bolt Optimization: Extract front matter explicitly with O(1) parsing
                 # instead of running multiple multi-line regexes over the whole file
                 frontmatter_meta = parse_frontmatter(content)
 
-                # Front-matter `paper_order: <n>` overrides PROGRESS.md matching.
-                # Used to put papers in README's recommended learning-path order
-                # even when their titles don't match the awesome-list table rows.
-                if 'paper_order' in frontmatter_meta:
+                arxiv_for_order = extract_arxiv(content)
+
+                order_idx = match_paper_order(title, paper_dir, progress_order)
+
+                if category_dir == '03_High_Impact_Selection':
+                    h_idx = match_high_impact_h_order(
+                        title, paper_dir, arxiv_for_order, hi_by_name, hi_by_arxiv
+                    )
+                    if h_idx is not None:
+                        order_idx = h_idx
+                    elif 'paper_order' in frontmatter_meta:
+                        try:
+                            order_idx = int(frontmatter_meta['paper_order'])
+                        except ValueError:
+                            pass
+                elif 'paper_order' in frontmatter_meta:
+                    # Front-matter `paper_order: <n>` overrides PROGRESS.md matching.
+                    # Used to put papers in README's recommended learning-path order
+                    # even when their titles don't match the awesome-list table rows.
                     try:
                         order_idx = int(frontmatter_meta['paper_order'])
                     except ValueError:
@@ -273,7 +378,7 @@ def process_papers():
 
                 # Extract arXiv ID, preserving existing metadata when the note
                 # uses a format the parser does not recognize.
-                arxiv = extract_arxiv(content) or existing_meta_for_paper.get('arxiv')
+                arxiv = arxiv_for_order or existing_meta_for_paper.get('arxiv')
                 if arxiv:
                     paper_entry['arxiv'] = arxiv
 
@@ -286,7 +391,7 @@ def process_papers():
 
                 papers.append(paper_entry)
 
-        # Sort by README order
+        # Sort: global categories by PROGRESS row order; High Impact uses H# from PROGRESS when matched
         papers.sort(key=lambda p: p['_order'])
         # Load existing category meta (subtitle, subcategories) from current papers.json
         existing_meta = existing_papers_json.get(category_dir, {})
