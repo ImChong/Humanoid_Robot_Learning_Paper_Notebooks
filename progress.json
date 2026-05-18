@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 188,
-      "last_title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": 272,
+      "last_title": "cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots",
+      "next_module": "07_Teleoperation"
     },
-    "last_summary_index": 188,
-    "last_summary_date": "2026-05-18",
-    "last_summary_title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
+    "last_summary_index": 272,
+    "last_summary_date": "2026-05-19",
+    "last_summary_title": "cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots",
     "next_summary_index": null,
     "log": [
       {
@@ -380,6 +380,12 @@
         "index": 188,
         "title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
         "folder": "papers/05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots"
+      },
+      {
+        "date": "2026-05-19",
+        "index": 272,
+        "title": "cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots",
+        "folder": "papers/06_Manipulation/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields"
       }
     ],
     "last_completed_index": 30,
