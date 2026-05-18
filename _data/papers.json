@@ -652,6 +652,14 @@
         "dir": "Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits",
         "arxiv": "2602.21666",
         "zhname": "用生物力学定量度量人形步态：GDAF 框架与 28 速 G1 数据集"
+      },
+      {
+        "title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
+        "path": "papers/05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots.md",
+        "url": "/papers/05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots.html",
+        "dir": "APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots",
+        "arxiv": "2602.11143",
+        "zhname": "APEX：用棘轮式进度奖励学习「攀越式」高平台穿越的人形机器人技能"
       }
     ],
     "zhname": "行走运动"
