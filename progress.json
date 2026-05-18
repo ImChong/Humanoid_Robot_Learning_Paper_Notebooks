@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 51,
-      "last_title": "Robust and Generalized Humanoid Motion Tracking",
-      "next_module": "05_Locomotion"
+      "last_module": "05_Locomotion",
+      "last_index": 188,
+      "last_title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
+      "next_module": "06_Manipulation"
     },
-    "last_summary_index": 51,
-    "last_summary_date": "2026-05-17",
-    "last_summary_title": "Robust and Generalized Humanoid Motion Tracking",
+    "last_summary_index": 188,
+    "last_summary_date": "2026-05-18",
+    "last_summary_title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
     "next_summary_index": null,
     "log": [
       {
@@ -374,6 +374,12 @@
         "folder": "papers/04_Loco-Manipulation_and_WBC/Robust_and_Generalized_Humanoid_Motion_Tracking",
         "module": "04_Loco-Manipulation_and_WBC",
         "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-18",
+        "index": 188,
+        "title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
+        "folder": "papers/05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots"
       }
     ],
     "last_completed_index": 30,
