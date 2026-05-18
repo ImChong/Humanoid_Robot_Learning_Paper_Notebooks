@@ -56,6 +56,7 @@
 | 2026-05-17 | 476 | [Learned Motion Matching](14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.md) | Human Motion / 角色动画 / Motion Matching | [orangeduck/Motion-Matching](https://github.com/orangeduck/Motion-Matching) · [pau1o-hs/Learned-Motion-Matching](https://github.com/pau1o-hs/Learned-Motion-Matching) · [LaFAN1 数据集](https://github.com/ubisoft/ubisoft-laforge-animation-dataset) |
 | 2026-05-17 | 51 | [Robust and Generalized Humanoid Motion Tracking](04_Loco-Manipulation_and_WBC/Robust_and_Generalized_Humanoid_Motion_Tracking/Robust_and_Generalized_Humanoid_Motion_Tracking.md) | Loco-Manipulation / WBC · 动作跟踪 / 单策略全身控制 | [zeonsunlightyu/RGMT.github.io](https://github.com/zeonsunlightyu/RGMT.github.io)（项目页仓库，训练代码截至论文发布暂未公开） |
 | 2026-05-18 | 188 | [APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots](05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots.md) | Locomotion / 攀爬 / 富接触 / 多技能编排 | 截至当前未见独立公开训练仓库（参考 [项目页](https://apex-humanoid.github.io/)） |
+| 2026-05-19 | 272 | [cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots](06_Manipulation/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields.md) | Manipulation / 运动规划 / 全身控制 / GPU 加速 | [NVlabs/curobo](https://github.com/NVlabs/curobo) · [项目页](https://nvlabs.github.io/curobo/) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -167,6 +168,7 @@
 | 476 | Learned Motion Matching | 14_Human_Motion | ✅ 已完成（2026-05-17） |
 | 51 | Robust and Generalized Humanoid Motion Tracking | 04_Loco-Manipulation_and_WBC | ✅ 已完成（2026-05-17） |
 | 188 | APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots | 05_Locomotion | ✅ 已完成（2026-05-18） |
-| ? | （明日：06_Manipulation 模块首个未完成论文；按 04 → 05 → 06 → ... → 14 → 04 顺序循环） | 06_Manipulation | ⏭️ 下一篇候选 |
+| 272 | cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots | 06_Manipulation | ✅ 已完成（2026-05-19） |
+| ? | （明日：07_Teleoperation 模块首个未完成论文；按 04 → 05 → 06 → 07 → ... → 14 → 04 顺序循环） | 07_Teleoperation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

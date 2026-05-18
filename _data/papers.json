@@ -682,6 +682,14 @@
         "dir": "HumDex_Humanoid_Dexterous_Manipulation_Made_Easy",
         "arxiv": "2603.12260",
         "zhname": "HumDex：让人形灵巧操作变简单（IMU 全身遥操作 + 学习式手部重定向）"
+      },
+      {
+        "title": "cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots",
+        "path": "papers/06_Manipulation/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields.md",
+        "url": "/papers/06_Manipulation/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields.html",
+        "dir": "cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields",
+        "arxiv": "2603.05493",
+        "zhname": "cuRoboV2：基于深度融合距离场的高自由度机器人动力学感知运动生成"
       }
     ],
     "zhname": "灵巧操作"
