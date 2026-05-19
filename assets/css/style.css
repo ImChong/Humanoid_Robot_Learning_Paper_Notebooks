@@ -1568,11 +1568,13 @@ html[data-lang-mode="zh"] .footer-text-zh {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    contain: strict;
+    /* inline-size only: ``contain: strict`` collapses block height (~1 line) on
+       mobile and clips Python/bash samples inside DeepMimic-style notes. */
+    contain: inline-size;
   }
 
   .paper-body .table-wrapper {
-    contain: strict;
+    contain: inline-size;
   }
 
   /* Rouge wrapper must clip wide .code-block scroll overflow so it cannot
