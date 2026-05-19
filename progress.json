@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 272,
-      "last_title": "cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots",
-      "next_module": "07_Teleoperation"
+      "last_module": "07_Teleoperation",
+      "last_index": 330,
+      "last_title": "ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control",
+      "next_module": "08_Navigation"
     },
-    "last_summary_index": 272,
+    "last_summary_index": 330,
     "last_summary_date": "2026-05-19",
-    "last_summary_title": "cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots",
+    "last_summary_title": "ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control",
     "next_summary_index": null,
     "log": [
       {
@@ -386,6 +386,14 @@
         "index": 272,
         "title": "cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots",
         "folder": "papers/06_Manipulation/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields"
+      },
+      {
+        "date": "2026-05-19",
+        "index": 330,
+        "title": "ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control",
+        "folder": "papers/07_Teleoperation/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control",
+        "module": "07_Teleoperation",
+        "track": "module_rotation"
       }
     ],
     "last_completed_index": 30,
