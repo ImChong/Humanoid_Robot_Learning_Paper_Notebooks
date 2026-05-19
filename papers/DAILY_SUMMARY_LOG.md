@@ -58,6 +58,7 @@
 | 2026-05-18 | 188 | [APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots](05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots.md) | Locomotion / 攀爬 / 富接触 / 多技能编排 | 截至当前未见独立公开训练仓库（参考 [项目页](https://apex-humanoid.github.io/)） |
 | 2026-05-19 | 272 | [cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots](06_Manipulation/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields.md) | Manipulation / 运动规划 / 全身控制 / GPU 加速 | [NVlabs/curobo](https://github.com/NVlabs/curobo) · [项目页](https://nvlabs.github.io/curobo/) |
 | 2026-05-19 | 330 | [ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control](07_Teleoperation/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control.md) | Teleoperation / 低延迟遥操作 / 末端 SE(3) 控制 | [Genesis-Humanoid `extremcontrol` 分支](https://github.com/UMass-Embodied-AGI/Genesis-Humanoid/tree/extremcontrol) · [项目页](https://extremcontrol.github.io) |
+| 2026-05-19 | 351 | [FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation](08_Navigation/FocusNav__Spatial_Selective_Attention_with_Waypoint_Guidance_for_Humanoid_Local/FocusNav__Spatial_Selective_Attention_with_Waypoint_Guidance_for_Humanoid_Local.md) | Navigation / 局部导航 / 路径点引导注意力 / 稳定性门控 | 截至当前未见公开发布（论文未给出开源链接） |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -171,6 +172,7 @@
 | 188 | APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots | 05_Locomotion | ✅ 已完成（2026-05-18） |
 | 272 | cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots | 06_Manipulation | ✅ 已完成（2026-05-19） |
 | 330 | ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control | 07_Teleoperation | ✅ 已完成（2026-05-19） |
-| ? | （明日：08_Navigation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → ... → 14 → 04 顺序循环） | 08_Navigation | ⏭️ 下一篇候选 |
+| 351 | FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation | 08_Navigation | ✅ 已完成（2026-05-19） |
+| ? | （明日：09_State_Estimation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → ... → 14 → 04 顺序循环） | 09_State_Estimation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
