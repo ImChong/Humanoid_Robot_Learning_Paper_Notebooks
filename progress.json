@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "14_Human_Motion",
-      "last_index": 477,
-      "last_title": "EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents",
-      "next_module": "04_Loco-Manipulation_and_WBC"
+      "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_index": 52,
+      "last_title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
+      "next_module": "05_Locomotion"
     },
-    "last_summary_index": 477,
+    "last_summary_index": 52,
     "last_summary_date": "2026-05-19",
-    "last_summary_title": "EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents",
+    "last_summary_title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
     "next_summary_index": null,
     "log": [
       {
@@ -474,10 +474,16 @@
         "project_page": "https://wenjiawang0312.github.io/projects/embodmocap/",
         "venue": "CVPR 2026",
         "track": "B"
+      },
+      {
+        "date": "2026-05-19",
+        "index": 52,
+        "title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots"
       }
     ],
-    "last_completed_index": 30,
-    "next_index": 31
+    "last_completed_index": 52,
+    "next_index": null
   },
   "papers": [
     {
@@ -1106,13 +1112,13 @@
     },
     {
       "title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
-      "arxiv": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
+      "arxiv": "https://arxiv.org/abs/2512.17183",
       "folder": "papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots",
       "note_file": "Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.md",
       "pdf_file": "Semantic.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-05-19",
+      "done_date": "2026-05-19",
       "route": "Loco-Manipulation",
       "title_cn": ""
     },

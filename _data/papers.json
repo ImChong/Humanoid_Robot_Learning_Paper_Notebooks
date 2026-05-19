@@ -408,6 +408,14 @@
         "zhname": "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理"
       },
       {
+        "title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.html",
+        "dir": "Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots",
+        "arxiv": "2512.17183",
+        "zhname": "面向人形机器人的语义化伴语手势合成与实时控制"
+      },
+      {
         "title": "LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations",
         "path": "papers/04_Loco-Manipulation_and_WBC/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations/LessMimic_Long-Horizon_Humanoid_Interaction_with_Unified_Distance_Field_Representations.html",

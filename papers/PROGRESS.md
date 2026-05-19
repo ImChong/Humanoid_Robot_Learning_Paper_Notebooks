@@ -135,7 +135,7 @@
 | 59   | [Coordinated Humanoid Manipulation with Choice Policies](https://arxiv.org/abs/2512.25072)                                                                       | 2025.12    |     | ⏳ 待读 |
 | 60   | [UniAct: Unified Motion Generation and Action Streaming for Humanoid Robots](https://arxiv.org/abs/2512.24321)                                                   | 2025.12    |     | ⏳ 待读 |
 | 61   | [EGM: Efficiently Learning General Motion Tracking Policy for High Dynamic Humanoid Whole-Body Control](https://arxiv.org/abs/2512.19043)                        | 2025.12    |     | ⏳ 待读 |
-| 62   | [Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots](https://arxiv.org/abs/2512.17183)                                               | 2025.12    |     | ⏳ 待读 |
+| 62   | [Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots](https://arxiv.org/abs/2512.17183)                                               | 2025.12    | 2026-05-19 | ✅ 已完成 |
 | 63   | [CHIP: Adaptive Compliance for Humanoid Control through Hindsight Perturbation](https://arxiv.org/abs/2512.14689)                                                | 2025.12    |     | ⏳ 待读 |
 | 64   | [PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations](https://arxiv.org/abs/2512.13093)                       | 2025.12    |     | ⏳ 待读 |
 | 65   | [Learning Agile Striker Skills for Humanoid Soccer Robots from Noisy Sensory Input](https://arxiv.org/abs/2512.06571)                                            | 2025.12    |     | ⏳ 待读 |
