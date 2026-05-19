@@ -108,6 +108,20 @@
     return { width: 800, height: 600 };
   }
 
+  /** Mermaid often sets width="100%" + max-width; that collapses to 0×0 outside .mermaid. */
+  function cloneSvgForLightbox(svg) {
+    var clone = svg.cloneNode(true);
+    var size = measureSvg(svg);
+    clone.removeAttribute('width');
+    clone.removeAttribute('height');
+    clone.style.cssText = '';
+    clone.style.width = size.width + 'px';
+    clone.style.height = size.height + 'px';
+    clone.style.maxWidth = 'none';
+    clone.classList.add('mermaid-lightbox__svg');
+    return clone;
+  }
+
   function fitToViewport(svg) {
     var size = measureSvg(svg);
     var pad = 48;
@@ -126,11 +140,7 @@
 
     ensureLightbox();
     stage.innerHTML = '';
-    var clone = svg.cloneNode(true);
-    clone.style.maxWidth = 'none';
-    clone.style.width = 'auto';
-    clone.style.height = 'auto';
-    clone.classList.add('mermaid-lightbox__svg');
+    var clone = cloneSvgForLightbox(svg);
     stage.appendChild(clone);
 
     state.dragging = false;
@@ -140,7 +150,9 @@
     document.body.classList.add('mermaid-lightbox-open');
 
     requestAnimationFrame(function () {
-      fitToViewport(clone);
+      requestAnimationFrame(function () {
+        fitToViewport(clone);
+      });
     });
   }
 

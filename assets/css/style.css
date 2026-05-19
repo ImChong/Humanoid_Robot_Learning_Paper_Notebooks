@@ -726,7 +726,6 @@ body.mermaid-lightbox-open {
 .mermaid-lightbox__stage .mermaid-lightbox__svg {
   display: block;
   max-width: none !important;
-  height: auto !important;
 }
 
 [data-theme="dark"] .mermaid {
