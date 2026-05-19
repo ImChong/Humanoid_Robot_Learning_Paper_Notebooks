@@ -34,3 +34,12 @@ def test_mobile_code_block_not_contain_strict():
     block = _mobile_paper_body_block()
     idx = block.index(".paper-body .code-block")
     _assert_uses_inline_size_only(block[idx : idx + 320])
+
+
+def test_mobile_code_scrolls_on_block_not_per_line():
+    """Wide code must scroll inside .code-block, not on each .code-cell row."""
+    block = _mobile_paper_body_block()
+    assert ".paper-body .code-cell" not in block
+    snippet = block[block.index(".paper-body .code-block") :]
+    snippet = snippet[: snippet.index(".paper-body .table-wrapper")]
+    assert "overflow-x: auto" in snippet
