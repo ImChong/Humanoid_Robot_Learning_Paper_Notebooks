@@ -236,6 +236,7 @@
         codeEl.classList.contains('language-mermaid') ||
         codeEl.classList.contains('mermaid') ||
         text.startsWith('graph ') ||
+        text.startsWith('flowchart ') ||
         text.startsWith('sequenceDiagram') ||
         text.startsWith('gantt') ||
         text.startsWith('classDiagram');
