@@ -1553,21 +1553,13 @@ html[data-lang-mode="zh"] .footer-text-zh {
     overflow-x: clip;
   }
 
-  .paper-body .code-row {
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .paper-body .code-cell {
-    min-width: 0;
-    overflow-x: auto;
-    max-width: calc(100% - 3rem);
-  }
-
+  /* Scroll the whole .code-block (all lines together), not each .code-cell. */
   .paper-body .code-block {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     /* inline-size only: ``contain: strict`` collapses block height (~1 line) on
        mobile and clips Python/bash samples inside DeepMimic-style notes. */
     contain: inline-size;
