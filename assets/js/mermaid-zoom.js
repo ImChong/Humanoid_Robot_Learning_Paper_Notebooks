@@ -1,22 +1,30 @@
 /**
  * Click any rendered Mermaid diagram to open a fullscreen lightbox.
- * Pan with left mouse button (or touch drag); close with Esc, backdrop, or ×.
+ * Pan with left mouse / one finger; pinch with two fingers on touch devices.
  */
 (function () {
   'use strict';
 
+  var MIN_SCALE = 0.2;
+  var MAX_SCALE = 6;
+
   var lightbox = null;
   var viewport = null;
   var stage = null;
+  var hintEl = null;
+  var pointers = new Map();
+  var pinchSnapshot = null;
+  var singlePanLast = null;
+
   var state = {
     scale: 1,
     x: 0,
     y: 0,
-    dragging: false,
-    pointerId: null,
-    lastClientX: 0,
-    lastClientY: 0,
   };
+
+  function clampScale(scale) {
+    return Math.min(MAX_SCALE, Math.max(MIN_SCALE, scale));
+  }
 
   function ensureLightbox() {
     if (lightbox) return lightbox;
@@ -42,9 +50,9 @@
     closeBtn.setAttribute('aria-label', '关闭');
     closeBtn.textContent = '×';
 
-    var hint = document.createElement('p');
-    hint.className = 'mermaid-lightbox__hint';
-    hint.textContent = '拖拽平移 · Esc 关闭';
+    hintEl = document.createElement('p');
+    hintEl.className = 'mermaid-lightbox__hint';
+    hintEl.textContent = '拖拽平移 · 双指缩放 · Esc 关闭';
 
     viewport = document.createElement('div');
     viewport.className = 'mermaid-lightbox__viewport';
@@ -54,7 +62,7 @@
     viewport.appendChild(stage);
 
     panel.appendChild(closeBtn);
-    panel.appendChild(hint);
+    panel.appendChild(hintEl);
     panel.appendChild(viewport);
     lightbox.appendChild(backdrop);
     lightbox.appendChild(panel);
@@ -128,9 +136,79 @@
     var vw = Math.max(viewport.clientWidth - pad, 200);
     var vh = Math.max(viewport.clientHeight - pad, 200);
     var fit = Math.min(vw / size.width, vh / size.height);
-    state.scale = Math.min(Math.max(fit, 0.25), 3);
+    state.scale = clampScale(fit);
     state.x = 0;
     state.y = 0;
+    applyTransform();
+  }
+
+  function resetPointerState() {
+    pointers.clear();
+    pinchSnapshot = null;
+    singlePanLast = null;
+    if (viewport) {
+      viewport.classList.remove('is-dragging', 'is-pinching');
+    }
+  }
+
+  function pointerPoint(e) {
+    return { x: e.clientX, y: e.clientY };
+  }
+
+  function viewportFocal(clientX, clientY) {
+    var vr = viewport.getBoundingClientRect();
+    return {
+      x: clientX - (vr.left + vr.width / 2),
+      y: clientY - (vr.top + vr.height / 2),
+    };
+  }
+
+  function getPointerPair() {
+    var pts = Array.from(pointers.values());
+    return [pts[0], pts[1]];
+  }
+
+  function pinchDistance(a, b) {
+    return Math.hypot(b.x - a.x, b.y - a.y);
+  }
+
+  function pinchMidpoint(a, b) {
+    return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+  }
+
+  function beginPinch() {
+    var pair = getPointerPair();
+    var mid = pinchMidpoint(pair[0], pair[1]);
+    var focal = viewportFocal(mid.x, mid.y);
+    pinchSnapshot = {
+      dist: pinchDistance(pair[0], pair[1]),
+      scale: state.scale,
+      x: state.x,
+      y: state.y,
+      focalX: focal.x,
+      focalY: focal.y,
+    };
+    singlePanLast = null;
+    viewport.classList.add('is-pinching');
+    viewport.classList.remove('is-dragging');
+  }
+
+  function updatePinch() {
+    if (!pinchSnapshot || pointers.size < 2) return;
+    var pair = getPointerPair();
+    var mid = pinchMidpoint(pair[0], pair[1]);
+    var dist = pinchDistance(pair[0], pair[1]);
+    if (pinchSnapshot.dist < 1) return;
+
+    var ratio = dist / pinchSnapshot.dist;
+    var newScale = clampScale(pinchSnapshot.scale * ratio);
+    var focal = viewportFocal(mid.x, mid.y);
+    var contentX = (pinchSnapshot.focalX - pinchSnapshot.x) / pinchSnapshot.scale;
+    var contentY = (pinchSnapshot.focalY - pinchSnapshot.y) / pinchSnapshot.scale;
+
+    state.scale = newScale;
+    state.x = focal.x - contentX * state.scale;
+    state.y = focal.y - contentY * state.scale;
     applyTransform();
   }
 
@@ -143,8 +221,7 @@
     var clone = cloneSvgForLightbox(svg);
     stage.appendChild(clone);
 
-    state.dragging = false;
-    state.pointerId = null;
+    resetPointerState();
     lightbox.hidden = false;
     lightbox.classList.add('is-open');
     document.body.classList.add('mermaid-lightbox-open');
@@ -161,9 +238,7 @@
     lightbox.hidden = true;
     lightbox.classList.remove('is-open');
     document.body.classList.remove('mermaid-lightbox-open');
-    state.dragging = false;
-    state.pointerId = null;
-    if (viewport) viewport.classList.remove('is-dragging');
+    resetPointerState();
     if (stage) stage.innerHTML = '';
   }
 
@@ -177,36 +252,63 @@
   function onPointerDown(e) {
     if (!lightbox || lightbox.hidden) return;
     if (e.button !== 0 && e.pointerType === 'mouse') return;
-    state.dragging = true;
-    state.pointerId = e.pointerId;
-    state.lastClientX = e.clientX;
-    state.lastClientY = e.clientY;
-    viewport.classList.add('is-dragging');
+
+    pointers.set(e.pointerId, pointerPoint(e));
     viewport.setPointerCapture(e.pointerId);
+
+    if (pointers.size === 2) {
+      beginPinch();
+    } else if (pointers.size === 1) {
+      singlePanLast = pointerPoint(e);
+      viewport.classList.add('is-dragging');
+    }
+
     e.preventDefault();
   }
 
   function onPointerMove(e) {
-    if (!state.dragging || e.pointerId !== state.pointerId) return;
-    var dx = e.clientX - state.lastClientX;
-    var dy = e.clientY - state.lastClientY;
-    state.lastClientX = e.clientX;
-    state.lastClientY = e.clientY;
-    state.x += dx;
-    state.y += dy;
-    applyTransform();
-    e.preventDefault();
+    if (!lightbox || lightbox.hidden || !pointers.has(e.pointerId)) return;
+
+    pointers.set(e.pointerId, pointerPoint(e));
+
+    if (pointers.size >= 2) {
+      if (!pinchSnapshot) beginPinch();
+      updatePinch();
+      e.preventDefault();
+      return;
+    }
+
+    if (pointers.size === 1 && singlePanLast) {
+      var cur = pointerPoint(e);
+      state.x += cur.x - singlePanLast.x;
+      state.y += cur.y - singlePanLast.y;
+      singlePanLast = cur;
+      applyTransform();
+      e.preventDefault();
+    }
   }
 
   function onPointerUp(e) {
-    if (!state.dragging || e.pointerId !== state.pointerId) return;
-    state.dragging = false;
-    state.pointerId = null;
-    viewport.classList.remove('is-dragging');
+    if (!pointers.has(e.pointerId)) return;
+
+    pointers.delete(e.pointerId);
     try {
       viewport.releasePointerCapture(e.pointerId);
     } catch (err) {
       /* ignore */
+    }
+
+    if (pointers.size < 2) {
+      pinchSnapshot = null;
+      viewport.classList.remove('is-pinching');
+    }
+
+    if (pointers.size === 0) {
+      singlePanLast = null;
+      viewport.classList.remove('is-dragging');
+    } else if (pointers.size === 1) {
+      singlePanLast = Array.from(pointers.values())[0];
+      viewport.classList.add('is-dragging');
     }
   }
 
