@@ -772,6 +772,14 @@
         "dir": "AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio",
         "arxiv": "2511.18857",
         "zhname": "AutoOdom：用自回归式纯本体感知里程计撑住足式机器人的长程定位"
+      },
+      {
+        "title": "InEKFormer: A Hybrid State Estimator for Humanoid Robots",
+        "path": "papers/09_State_Estimation/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots.md",
+        "url": "/papers/09_State_Estimation/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots.html",
+        "dir": "InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots",
+        "arxiv": "2511.16306",
+        "zhname": "InEKFormer：用 InEKF + Transformer 的混合滤波替代手调噪声协方差"
       }
     ],
     "zhname": "状态估计"
