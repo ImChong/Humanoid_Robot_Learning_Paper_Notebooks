@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 390,
-      "last_title": "Towards Motion Turing Test: Evaluating Human-Likeness in Humanoid Robots",
-      "next_module": "12_Hardware_Design"
+      "last_module": "12_Hardware_Design",
+      "last_index": 411,
+      "last_title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
+      "next_module": "13_Physics-Based_Animation"
     },
-    "last_summary_index": 390,
-    "last_summary_date": "2026-05-19",
-    "last_summary_title": "Towards Motion Turing Test: Evaluating Human-Likeness in Humanoid Robots",
+    "last_summary_index": 411,
+    "last_summary_date": "2026-05-24",
+    "last_summary_title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
     "next_summary_index": null,
     "log": [
       {
@@ -320,6 +320,14 @@
         "track": "module_rotation"
       },
       {
+        "date": "2026-05-24",
+        "index": 411,
+        "title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
+        "folder": "papers/12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot",
+        "module": "12_Hardware_Design",
+        "track": "module_rotation"
+      },
+      {
         "date": "2026-05-25",
         "index": "H14",
         "title": "Humanoid Parkour Learning",
@@ -432,6 +440,16 @@
         "note_path": "papers/11_Simulation_Benchmark/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots.md",
         "arxiv": "2603.06181",
         "source_repo": "尚未公开（论文承诺即将释出）",
+        "track": "B"
+      },
+      {
+        "date": "2026-05-24",
+        "index": 411,
+        "module": "12_Hardware_Design",
+        "title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
+        "note_path": "papers/12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot.md",
+        "arxiv": "2601.18963",
+        "source_repo": "未发布开源仓库；提供 Python/C++ SDK（Fauna Robotics）",
         "track": "B"
       }
     ],

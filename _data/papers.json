@@ -863,6 +863,14 @@
         "dir": "Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids",
         "arxiv": "2602.08518",
         "zhname": "肌骨型人形机器人「肌肉」的特性、管理与利用：Kengoro 与 Musashi 上的实证研究"
+      },
+      {
+        "title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
+        "path": "papers/12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot.md",
+        "url": "/papers/12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot.html",
+        "dir": "Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot",
+        "arxiv": "2601.18963",
+        "zhname": "Fauna Sprout：一款轻量、亲和、开发者友好的人形机器人开发平台"
       }
     ],
     "zhname": "硬件设计"
