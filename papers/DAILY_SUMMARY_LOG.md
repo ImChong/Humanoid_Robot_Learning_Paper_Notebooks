@@ -63,6 +63,7 @@
 | 2026-05-19 | 380 | [LIFT: Towards Bridging the Gap between Large-Scale Pretraining and Efficient Finetuning for Humanoid Control](10_Sim-to-Real/LIFT__Towards_Bridging_the_Gap_between_Large-Scale_Pretraining_and_Efficient_F/LIFT__Towards_Bridging_the_Gap_between_Large-Scale_Pretraining_and_Efficient_F.md) | Sim-to-Real / 大规模 SAC 预训练 / 物理先验世界模型 / Dyna 微调 | [bigai-ai/LIFT-humanoid](https://github.com/bigai-ai/LIFT-humanoid) · [项目页](https://lift-humanoid.github.io/) |
 | 2026-05-19 | 390 | [Towards Motion Turing Test: Evaluating Human-Likeness in Humanoid Robots](11_Simulation_Benchmark/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots.md) | Simulation Benchmark / 类人度评估 / 图灵测试范式 | 尚未公开（论文承诺即将释出） |
 | 2026-05-24 | 411 | [Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot](12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot.md) | Hardware Design / 轻量人形 / 软外壳 + 顺应控制 / 开发者平台 | 未发布开源仓库；提供 Python/C++ SDK（[faunarobotics.com](https://faunarobotics.com/product)） |
+| 2026-05-19 | 449 | [CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives](13_Physics-Based_Animation/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit.md) | Physics-Based Animation / Real2Sim / 接触引导补全 / 平面基元场景 / RL 人形跟踪 | [Z1hanW/CRISP-Real2Sim](https://github.com/Z1hanW/CRISP-Real2Sim) · [项目页](https://crisp-real2sim.github.io/CRISP-Real2Sim/) · ICLR 2026 |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -181,6 +182,7 @@
 | 380 | LIFT: Towards Bridging the Gap between Large-Scale Pretraining and Efficient Finetuning for Humanoid Control | 10_Sim-to-Real | ✅ 已完成（2026-05-19） |
 | 390 | Towards Motion Turing Test: Evaluating Human-Likeness in Humanoid Robots | 11_Simulation_Benchmark | ✅ 已完成（2026-05-19） |
 | 411 | Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot | 12_Hardware_Design | ✅ 已完成（2026-05-24） |
-| ? | （明日：13_Physics-Based_Animation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 13_Physics-Based_Animation | ⏭️ 下一篇候选 |
+| 449 | CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives | 13_Physics-Based_Animation | ✅ 已完成（2026-05-19） |
+| ? | （明日：14_Human_Motion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 14_Human_Motion | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
