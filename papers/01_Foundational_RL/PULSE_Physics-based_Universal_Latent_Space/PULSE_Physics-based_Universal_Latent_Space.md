@@ -82,6 +82,17 @@ flowchart TB
 
 ## 🚶 具体实例
 
+<div class="mermaid">
+flowchart TB
+  subgraph sample["随机采样 z"]
+    Z1["z ~ p(z|s)"] --> M1["连贯动作：转圈/挥手/小跑"]
+  end
+  subgraph search["奖励引导"]
+    R["任务奖励"] --> Z2["在 latent 搜索 z"]
+    Z2 --> M2["击打等任务动作"]
+  end
+</div>
+
 通过 PULSE，用户可以：
 - 从 latent space 中随机采样，机器人会自发产生连贯的人类动作（如转圈、挥手、小跑）。
 - 给定一个简单的奖励函数（如"击打目标"），策略能快速学会在 latent 中寻找合适的动作序列。

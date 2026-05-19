@@ -106,39 +106,33 @@ $$\text{gap} \leq f(\text{随机化分布}, \text{样本复杂度})$$
 
 ### 第一步：每个 episode 采样一个 $\theta$
 
-```
-episode i:   μ_i ~ U(0.3, 1.2)       # 从随机化分布采样
-             env = Sim(μ=μ_i)
-             rollout 策略 π(·|s, h)   # h 是历史帧缓冲
-             累积回报 G_i
-```
+<div class="mermaid">
+flowchart LR
+    T["μ_i ~ U(0.3,1.2)"] --> E["env = Sim(μ_i)"]
+    E --> R["π(·|s,h) rollout → G_i"]
+</div>
 
 关键点：每个 episode 的 $\mu$ 不同，策略看到的脚底打滑程度不一样。
 
 ### 第二步：为什么 memory-based policy 必要
 
-假设策略只看当前状态 $s_t$（Markov 策略）：
-- 同样的躯干倾角，$\mu=0.3$（很滑）时该大幅回摆，$\mu=1.0$（干地）时只需轻微修正。
-- 当前状态信息不足以区分两种情况 → 策略只能学"保守平均"，在两端都表现差。
-
-换成**历史依赖策略** $\pi(\cdot | s_t, s_{t-1}, \dots, s_{t-k})$：
-- 从过去几帧中"脚跟是否轻微滑动"的信号，策略可以**隐式推断当前 $\mu$**。
-- 推断出 $\mu$ 后，同一个网络给出合适的力矩。
-- 这就是论文证明的"memory is essential for DR"的直觉版本。
+<div class="mermaid">
+flowchart TB
+    MK["Markov π(a|s_t)"] --> BAD["同 pose 不同 μ → 只能保守平均"]
+    MEM["Memory π(a|s_t,h)"] --> INF["从滑动信号推断 μ"]
+    INF --> GOOD["同一网络给出合适力矩"]
+</div>
 
 ### 第三步：训练循环伪代码
 
-```
-for step in range(N):
-    μ ~ U(0.3, 1.2)
-    s_0 = env.reset(μ)
-    h = []                            # 历史缓冲
-    for t in range(T):
-        a_t = π(s_t, h)               # 历史依赖策略
-        s_{t+1}, r_t = env.step(a_t)
-        h.append(s_t)
-    更新 π via PPO
-```
+<div class="mermaid">
+flowchart TB
+    S["for step in N"] --> MU["μ ~ U(0.3,1.2)"]
+    MU --> RESET["s_0 = env.reset(μ)"]
+    RESET --> LOOP["t: a=π(s,h); step; h←s"]
+    LOOP --> PPO["PPO 更新 π"]
+    PPO --> S
+</div>
 
 ### 第四步：sim-to-real gap 直觉估计
 

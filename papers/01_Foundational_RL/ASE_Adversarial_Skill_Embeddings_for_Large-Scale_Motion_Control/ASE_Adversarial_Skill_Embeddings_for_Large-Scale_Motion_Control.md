@@ -309,9 +309,10 @@ $$
 
 比如：
 
-```text
-z₁ = [0.21, -0.55, 0.08, ..., 0.14]
-```
+<div class="mermaid">
+flowchart LR
+    Z["z ~ Uniform(S^63)"] --> PI["π(a|s,z)"]
+</div>
 
 策略拿到这个 $z$ 后，会产生某种一致的行为风格。
 
@@ -319,9 +320,12 @@ z₁ = [0.21, -0.55, 0.08, ..., 0.14]
 
 策略不再只是看当前身体状态，而是看：
 
-```text
-输入 = 当前观测 s + 当前技能向量 z
-```
+<div class="mermaid">
+flowchart LR
+    S["观测 s"] --> IN["concat"]
+    Z["技能 z"] --> IN
+    IN --> PI["π(a|s,z)"]
+</div>
 
 比如：
 - 某些 z 对应 aggressive forward attack
@@ -336,9 +340,12 @@ z₁ = [0.21, -0.55, 0.08, ..., 0.14]
 
 然后编码器再看当前行为片段，反推出一个预测 latent：
 
-```text
-z_pred = E(o_disc)
-```
+<div class="mermaid">
+flowchart LR
+    O["行为片段 o_disc"] --> E["Encoder E"]
+    E --> ZP["z_pred"]
+    ZP --> CMP["与原始 z 对齐 → enc reward"]
+</div>
 
 如果 `z_pred` 和原始 `z` 对不上，说明这个技能没有真正体现在动作里，于是惩罚。
 
@@ -348,9 +355,11 @@ z_pred = E(o_disc)
 
 高层策略只需要学：
 
-```text
-什么时候输出哪个 z
-```
+<div class="mermaid">
+flowchart TB
+    HLC["高层任务策略"] --> Z["选择 latent z"]
+    Z --> ASE["预训练 ASE π(a|s,z)"]
+</div>
 
 比如在对战任务里：
 - 敌人远 → 选前进型 z

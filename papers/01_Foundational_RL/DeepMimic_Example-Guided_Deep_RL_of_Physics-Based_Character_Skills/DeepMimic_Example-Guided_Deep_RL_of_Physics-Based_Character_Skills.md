@@ -754,6 +754,13 @@ flowchart TB
 
 ### G. Multi-Clip Reward：多剪辑模仿与技能组合
 
+<div class="mermaid">
+flowchart TB
+    M1["Multi-Clip：r = max_j r^(j)"] 
+    M2["Skill Selector：obs + one-hot δ"]
+    M3["Composite：Σ p_i(s) π^i(a|s)<br/>p_i ∝ exp(V^i/T)"]
+</motion.div>
+
 #### 方法一：Multi-Clip Reward（多剪辑奖励）
 
 $$r_t^I = \max_{j=1, \ldots, k} \left( r_t^{I, (j)} \right)$$

@@ -102,24 +102,7 @@ PHC 的思路则变成：
 
 PHC 的核心是 **PMCP（Progressive Multiplicative Control Policy）**，由三个关键组件组成：
 
-```
-输入: 当前身体状态 + 目标姿态
-         ↓
-  ┌──────────────────────────────┐
-  │  多个 Primitive（技能网络）   │
-  │  P¹: 基础技能（走、跑、跳）   │
-  │  P²: 进阶技能（难动作）       │
-  │  P³: 更难的技能              │
-  │  Pᶠ: 摔倒恢复技能            │
-  └──────┬───────────────────────┘
-         ↓
-  ┌──────────────────────────────┐
-  │  Composer C（调度网络）       │
-  │  决定当前时刻各 Primitive 权重 │
-  └──────┬───────────────────────┘
-         ↓
-  输出: PD 控制目标 → 关节扭矩 → 仿真
-```
+（架构见下方 PMCP 运行时数据流图）
 
 ### 📊 PMCP 运行时数据流
 
@@ -218,19 +201,14 @@ $$r_{recover} \approx 0.5 \cdot r_{point} + 0.5 \cdot r_{amp} + 0.1 \cdot r_{ene
 
 训练过程分多轮：
 
-```
-第 1 轮：训练 P¹ 在全部 AMASS 数据集 Q 上
-         ↓ 收敛后冻结 P¹
-         ↓ 找出 P¹ 失败的"难例" Q_hard²
-第 2 轮：训练 P² 只在 Q_hard² 上
-         ↓ 收敛后冻结 P²
-         ↓ 找出 P² 仍然失败的 Q_hard³
-第 3 轮：训练 P³ 只在 Q_hard³ 上
-         ↓ 收敛后冻结 P³
-第 F 轮：训练 Pᶠ 专门学摔倒恢复
-         ↓ 冻结 Pᶠ
-最终：训练 Composer C 学习如何组合所有 Primitive
-```
+<div class="mermaid">
+flowchart TB
+    R1["第1轮：P¹ 在全部 AMASS Q"] --> F1["冻结 P¹ → 导出 Q_hard²"]
+    F1 --> R2["第2轮：P² 仅 Q_hard²"] --> F2["冻结 P² → Q_hard³"]
+    F2 --> R3["第3轮：P³ 仅 Q_hard³"] --> F3["冻结 P³"]
+    F3 --> RF["第F轮：Pᶠ 摔倒恢复"] --> FC["冻结 Pᶠ"]
+    FC --> C["训练 Composer C 混合所有 Primitive"]
+</div>
 
 你可以把它理解成一个**课程学习 + 容量扩展**的组合：
 
@@ -341,6 +319,14 @@ recoveryEpisodeProb: 0.5
 fallInitProb: 0.3
 recoverySteps: 90
 ```
+
+<div class="mermaid">
+flowchart TB
+    N["正常 episode：标准参考 init"] 
+    F["fail init：随机摔倒状态库"]
+    F --> R["recovery 90 步内禁止 reset"]
+    R --> OK["根节点距参考 <0.5m → 切回模仿"]
+</motion.div>
 
 对应逻辑是：
 - 有些 episode 从正常轨迹开始

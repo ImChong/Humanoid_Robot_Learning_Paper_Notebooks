@@ -667,12 +667,20 @@ loss = actor_loss + self._critic_loss_weight * critic_loss
 
 在 `Robotics_Notebooks/Train/MimicKit/MimicKit 06 给定目标速度执行复合动作.md` 里，已经把 MimicKit 中 AMP 的任务导向配置理了一遍。对应到源码/配置层，常见是这几类：
 
-```text
-amp_steering_humanoid_args.txt
-amp_steering_humanoid_sword_shield_args.txt
-amp_location_humanoid_args.txt
-amp_location_humanoid_sword_shield_args.txt
-```
+<div class="mermaid">
+flowchart TB
+    subgraph steer["目标速度/方向 steering"]
+        S1["amp_steering_humanoid_args.txt"]
+        S2["amp_steering_humanoid_sword_shield_args.txt"]
+    end
+    subgraph loc["目标位置 location"]
+        L1["amp_location_humanoid_args.txt"]
+        L2["amp_location_humanoid_sword_shield_args.txt"]
+    end
+    COM["共同：AMP agent + locomotion 数据<br/>r = 风格 + 任务"]
+    steer --> COM
+    loc --> COM
+</div>
 
 它们的共同点是：
 - 使用 **AMP agent**
