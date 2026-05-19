@@ -1423,6 +1423,12 @@ html[data-lang-mode="zh"] .footer-text-zh {
   line-height: 1.5;
   white-space: pre;
   contain: inline-size;
+  /* Grid layout so every row aligns to the same two columns (gutter + cell)
+     and the cell track sizes to the widest line. Without this short rows are
+     narrower than long rows and scrolling looks like ragged per-line drift. */
+  display: grid;
+  grid-template-columns: 3rem auto;
+  grid-auto-flow: row;
 }
 
 [data-theme="dark"] .paper-body .code-block {
@@ -1438,16 +1444,14 @@ html[data-lang-mode="zh"] .footer-text-zh {
 }
 
 .paper-body .code-row {
-  display: flex;
-  align-items: baseline;
-  /* Row never wraps: gutter + code stay on one visual line */
-  flex-wrap: nowrap;
-  min-width: max-content;
+  /* Make the row "transparent" so its two children (.code-ln and .code-cell)
+     become direct grid items of .code-block. This guarantees every row aligns
+     to the same gutter/cell columns regardless of line length. */
+  display: contents;
 }
 
 .paper-body .code-ln {
-  flex: 0 0 3rem;
-  width: 3rem;
+  /* Grid column 1 (3rem) handles the width; gutter just paints inside it. */
   text-align: right;
   padding-right: 0.75rem;
   color: #999;
@@ -1462,7 +1466,8 @@ html[data-lang-mode="zh"] .footer-text-zh {
 }
 
 .paper-body .code-cell {
-  flex: 1;
+  /* Grid column 2 (auto) sizes to the widest cell, so every row visually
+     shares the same right edge while scrolling. */
   padding-right: 1.5rem;
   white-space: pre;
   word-break: normal;
@@ -1553,41 +1558,16 @@ html[data-lang-mode="zh"] .footer-text-zh {
     overflow-x: clip;
   }
 
-  /* Wrap code content on mobile instead of horizontal scrolling. iOS Safari's
-     floating overlay scrollbar otherwise appears at the line a finger last
-     scrolled through, which reads as a "single-line scrollbar" artifact. */
+  /* Scroll the whole .code-block (all lines together), not each .code-cell. */
   .paper-body .code-block {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     /* inline-size only: ``contain: strict`` collapses block height (~1 line) on
        mobile and clips Python/bash samples inside DeepMimic-style notes. */
     contain: inline-size;
-  }
-
-  .paper-body .code-row {
-    /* Allow the row (gutter + cell) to shrink so its cell can wrap. */
-    min-width: 0;
-    /* Gutter aligns with the first wrapped visual line, not the baseline of
-       the last one. */
-    align-items: flex-start;
-  }
-
-  .paper-body .code-cell {
-    /* Wrap long code lines while preserving indentation. */
-    min-width: 0;
-    flex: 1 1 auto;
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-    word-break: normal;
-  }
-
-  /* Plain <pre> (when JS rebuild hasn't run, or for non-rouge code) wraps too. */
-  .paper-body pre {
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-    word-break: normal;
   }
 
   .paper-body .table-wrapper {

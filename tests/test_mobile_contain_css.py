@@ -36,19 +36,15 @@ def test_mobile_code_block_not_contain_strict():
     _assert_uses_inline_size_only(block[idx : idx + 320])
 
 
-def test_mobile_code_wraps_not_per_line_scroll():
-    """Mobile code blocks must wrap (no horizontal scroll). The earlier per-row
-    ``overflow-x: auto`` on ``.code-cell`` caused finger-tracked iOS overlay
-    scrollbars; switching the block to wrap keeps content on screen instead."""
+def test_mobile_code_scrolls_on_block_not_per_line():
+    """Wide code must scroll inside .code-block as a whole, not on each
+    .code-cell row. Per-row ``overflow-x: auto`` would let iOS Safari's
+    floating overlay scrollbar track each line individually."""
     block = _mobile_paper_body_block()
+    assert ".paper-body .code-cell" not in block
     snippet = block[block.index(".paper-body .code-block") :]
     snippet = snippet[: snippet.index(".paper-body .table-wrapper")]
-    # Block itself does not scroll horizontally on mobile.
-    assert "overflow-x: hidden" in snippet
-    assert "overflow-x: auto" not in snippet
-    # Cell wraps with pre-wrap + overflow-wrap so long lines fold to the next line.
-    assert "white-space: pre-wrap" in snippet
-    assert "overflow-wrap: anywhere" in snippet
+    assert "overflow-x: auto" in snippet
 
 
 def test_mobile_inline_code_does_not_shatter_identifiers():
