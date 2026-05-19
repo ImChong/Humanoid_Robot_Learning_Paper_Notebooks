@@ -110,12 +110,15 @@ MimicKit 官方仓库明确提供多个常用方法的实现入口：
 
 假设要训练一个 humanoid 学会 mocap 里的跑步动作：
 
-1. Motion loader 从动作库采样一个参考时间点，得到参考 root、joint rotation、velocity。
-2. Environment 把当前仿真状态与参考状态拼成 observation，交给 policy。
-3. Policy 输出关节控制动作，仿真器推进一步。
-4. Reward 可以来自 DeepMimic tracking 项，也可以加入 AMP discriminator 的自然性奖励。
-5. PPO agent 收集多环境 rollout，计算 advantage，更新 actor 和 critic。
-6. 如果换成 ASE，则额外输入技能 latent，并用判别器约束 latent 对应的动作分布。
+<div class="mermaid">
+flowchart TB
+    L["① Motion loader 采样参考帧"] --> E["② Env：拼 obs = sim + ref"]
+    E --> P["③ Policy → action → 仿真一步"]
+    P --> R["④ Reward：tracking / disc / 混合"]
+    R --> U["⑤ PPO：rollout → advantage → 更新"]
+    U --> L
+    ASE["⑥ ASE 分支：+ latent z + enc/disc"] -.-> P
+</div>
 
 这个流程在论文层面横跨好几篇工作；MimicKit 的意义是把它们放进一套统一工程语义里。
 

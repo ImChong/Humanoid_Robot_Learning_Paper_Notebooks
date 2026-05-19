@@ -168,6 +168,14 @@ LCP 的优势不是“数学更炫”，而是：
 
 也就是说，LCP 的定位不是替代整个 sim-to-real framework，而是：
 
+<div class="mermaid">
+flowchart TB
+    PPO["PPO"] --> DR["Domain Randomization"]
+    DR --> TS["Teacher-Student"]
+    TS --> ROA["ROA 在线适应"]
+    ROA --> LCP["+ LCP 梯度惩罚（几行代码）"]
+</div>
+
 > **在现有 pipeline 里，加一个几乎几行代码就能接进去的平滑正则项。**
 
 这点很重要。因为真正有价值的方法，不只是 paper 里好看，而是你能不改天换地地接到现有工程里。
@@ -220,19 +228,20 @@ policy 输出：
 
 假设两个连续时刻观测非常接近：
 
-```text
-时刻 t:   o_t   = [身体略微前倾, 左腿摆动中, vx_cmd=0.8]
-时刻 t+1: o_t+1 = [身体更前倾一点点, 左腿摆动中, vx_cmd=0.8]
-```
-
-按理说，动作应该只是小修正。
-
-但如果 policy 太敏感，可能输出：
-
-```text
-a_t   = [0.12, -0.03, 0.18, ...]
-a_t+1 = [-0.27, 0.41, -0.22, ...]
-```
+<div class="mermaid">
+flowchart TB
+    subgraph obs["观测几乎不变"]
+        O1["o_t：略前倾, vx=0.8"]
+        O2["o_{t+1}：稍更前倾, vx=0.8"]
+        O1 --> O2
+    end
+    subgraph bad["无 LCP：动作大跳"]
+        A1["a_t 小修正量级"]
+        A2["a_{t+1} 符号/幅度剧变"]
+        A1 --> A2
+    end
+    obs --> bad
+</div>
 
 观测几乎没变，动作却大跳。结果就是：
 - action rate 大
@@ -248,18 +257,11 @@ a_t+1 = [-0.27, 0.41, -0.22, ...]
 
 训练时，对每个 sampled observation，额外算一项：
 
-```text
-GP = || ∂π(o) / ∂o ||²
-```
-
-如果策略对输入太敏感，这个值就会大，loss 就会罚它。
-
-于是 policy 会逐渐学会：
-
-```text
-a_t   = [0.12, -0.03, 0.18, ...]
-a_t+1 = [0.14, -0.01, 0.16, ...]
-```
+<div class="mermaid">
+flowchart LR
+    GP["GP = ||∇_o π(o)||² 大 → 罚"] --> SMOOTH["策略学会连续变化"]
+    SMOOTH --> A["a_t ≈ a_{t+1} 小步修正"]
+</div>
 
 动作还是会变，但变得更连续、更像真实控制器该有的样子。
 
