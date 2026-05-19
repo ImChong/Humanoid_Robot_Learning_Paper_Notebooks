@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "13_Physics-Based_Animation",
-      "last_index": 449,
-      "last_title": "CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives",
-      "next_module": "14_Human_Motion"
+      "last_module": "14_Human_Motion",
+      "last_index": 477,
+      "last_title": "EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents",
+      "next_module": "04_Loco-Manipulation_and_WBC"
     },
-    "last_summary_index": 449,
+    "last_summary_index": 477,
     "last_summary_date": "2026-05-19",
-    "last_summary_title": "CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives",
+    "last_summary_title": "EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents",
     "next_summary_index": null,
     "log": [
       {
@@ -461,6 +461,18 @@
         "arxiv": "2512.14696",
         "source_repo": "https://github.com/Z1hanW/CRISP-Real2Sim",
         "venue": "ICLR 2026",
+        "track": "B"
+      },
+      {
+        "date": "2026-05-19",
+        "index": 477,
+        "module": "14_Human_Motion",
+        "title": "EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents",
+        "note_path": "papers/14_Human_Motion/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents.md",
+        "arxiv": "2602.23205",
+        "source_repo": "https://github.com/WenjiaWang0312/EmbodMocap",
+        "project_page": "https://wenjiawang0312.github.io/projects/embodmocap/",
+        "venue": "CVPR 2026",
         "track": "B"
       }
     ],

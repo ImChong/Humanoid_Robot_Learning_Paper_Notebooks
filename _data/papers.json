@@ -923,6 +923,14 @@
         "dir": "Learned_Motion_Matching",
         "arxiv": "2209.14916",
         "zhname": "学习式动作匹配：用三张小网络替代海量动作数据库"
+      },
+      {
+        "title": "EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents",
+        "path": "papers/14_Human_Motion/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents.md",
+        "url": "/papers/14_Human_Motion/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents.html",
+        "dir": "EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents",
+        "arxiv": "2602.23205",
+        "zhname": "EmbodMocap：双 iPhone 户外 4D 人-场景重建，给具身智能体喂数据"
       }
     ],
     "zhname": "人体运动"
