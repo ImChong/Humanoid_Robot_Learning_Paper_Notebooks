@@ -444,6 +444,7 @@ body {
     max-width: 100vw;
     overflow-x: hidden; /* fallback for browsers without overflow: clip */
     overflow-x: clip;
+    overscroll-behavior-x: none;
   }
 
   /* Container and paper wrappers must not exceed viewport on mobile,
@@ -455,6 +456,8 @@ body {
   .paper-body {
     max-width: 100%;
     box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .site-header {
@@ -1543,11 +1546,43 @@ html[data-lang-mode="zh"] .footer-text-zh {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-    /* Wide Markdown tables: let columns size to content and scroll horizontally
-       instead of forcing width:100% + overflow-wrap:anywhere (which squeezes
-       later columns to one character per line on narrow viewports). */
+    /* Do not make the whole column horizontally scrollable — that shows blank
+       margin on the right when a child (table/code) is wider than the viewport.
+       Tables scroll inside .table-wrapper; code scrolls inside .code-block. */
+    overflow-x: hidden;
+    overflow-x: clip;
+  }
+
+  .paper-body .code-row {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .paper-body .code-cell {
+    min-width: 0;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    max-width: calc(100% - 3rem);
+  }
+
+  .paper-body .code-block {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    contain: strict;
+  }
+
+  .paper-body .table-wrapper {
+    contain: strict;
+  }
+
+  /* Rouge wrapper must clip wide .code-block scroll overflow so it cannot
+     inflate html/body scrollWidth on mobile. */
+  .paper-body .highlighter-rouge {
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-x: clip;
+    contain: inline-size;
   }
 
   .paper-body h1,
@@ -1584,7 +1619,7 @@ html[data-lang-mode="zh"] .footer-text-zh {
   }
 
   /* Inline code in tables (e.g. hidden_dims arrays): keep on one line so
-     columns stay readable; horizontal scroll on .paper-body handles overflow. */
+     columns stay readable; horizontal scroll on .table-wrapper handles overflow. */
   .paper-body th code,
   .paper-body td code {
     white-space: nowrap;
