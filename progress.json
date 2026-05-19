@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 330,
-      "last_title": "ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": 351,
+      "last_title": "FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation",
+      "next_module": "09_State_Estimation"
     },
-    "last_summary_index": 330,
+    "last_summary_index": 351,
     "last_summary_date": "2026-05-19",
-    "last_summary_title": "ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control",
+    "last_summary_title": "FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation",
     "next_summary_index": null,
     "log": [
       {
@@ -393,6 +393,14 @@
         "title": "ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control",
         "folder": "papers/07_Teleoperation/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control",
         "module": "07_Teleoperation",
+        "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-19",
+        "index": 351,
+        "title": "FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation",
+        "folder": "papers/08_Navigation/FocusNav__Spatial_Selective_Attention_with_Waypoint_Guidance_for_Humanoid_Local",
+        "module": "08_Navigation",
         "track": "module_rotation"
       }
     ],
@@ -2863,6 +2871,46 @@
       "title_cn": "学习式动作匹配：用三张小网络替代海量动作数据库",
       "start_date": "2026-05-17",
       "done_date": "2026-05-17"
+    },
+    {
+      "title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
+      "folder": "papers/05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots",
+      "note_file": "APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Locomotion",
+      "title_cn": ""
+    },
+    {
+      "title": "cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots",
+      "folder": "papers/06_Manipulation/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields",
+      "note_file": "cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control",
+      "folder": "papers/07_Teleoperation/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control",
+      "note_file": "ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation",
+      "folder": "papers/08_Navigation/FocusNav__Spatial_Selective_Attention_with_Waypoint_Guidance_for_Humanoid_Local",
+      "note_file": "FocusNav__Spatial_Selective_Attention_with_Waypoint_Guidance_for_Humanoid_Local.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
     }
   ]
 }
