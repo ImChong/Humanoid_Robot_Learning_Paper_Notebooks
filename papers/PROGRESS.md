@@ -516,7 +516,7 @@
 | #   | 论文                                                                                                                                         | 日期      | 🌟  | 状态   |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------- | --- | ---- |
 | 389  | [GRUtopia: Dream General Robots in a City at Scale](https://arxiv.org/abs/2407.10943)                                                      | 2407.10 |     | ✅ 完成 |
-| 390  | [Towards Motion Turing Test: Evaluating Human-Likeness in Humanoid Robots](https://arxiv.org/abs/2603.06181)                               | 2026.03 |     | ⏳ 待读 |
+| 390  | [Towards Motion Turing Test: Evaluating Human-Likeness in Humanoid Robots](https://arxiv.org/abs/2603.06181) ✅ [笔记](11_Simulation_Benchmark/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots.md) | 2026.03 |     | ✅ 已总结 |
 | 391  | [MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation](https://arxiv.org/abs/2602.11337)                        | 2026.02 |     | ⏳ 待读 |
 | 392  | [Benchmarking Humanoid Imitation Learning with Motion Difficulty](https://arxiv.org/abs/2512.07248)                                        | 2025.12 |     | ⏳ 待读 |
 | 393  | [Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report](https://arxiv.org/abs/2510.07092)                    | 2025.10 |     | ⏳ 待读 |
