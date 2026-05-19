@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 411,
-      "last_title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
-      "next_module": "13_Physics-Based_Animation"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 449,
+      "last_title": "CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives",
+      "next_module": "14_Human_Motion"
     },
-    "last_summary_index": 411,
-    "last_summary_date": "2026-05-24",
-    "last_summary_title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
+    "last_summary_index": 449,
+    "last_summary_date": "2026-05-19",
+    "last_summary_title": "CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives",
     "next_summary_index": null,
     "log": [
       {
@@ -450,6 +450,17 @@
         "note_path": "papers/12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot.md",
         "arxiv": "2601.18963",
         "source_repo": "未发布开源仓库；提供 Python/C++ SDK（Fauna Robotics）",
+        "track": "B"
+      },
+      {
+        "date": "2026-05-19",
+        "index": 449,
+        "module": "13_Physics-Based_Animation",
+        "title": "CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives",
+        "note_path": "papers/13_Physics-Based_Animation/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit.md",
+        "arxiv": "2512.14696",
+        "source_repo": "https://github.com/Z1hanW/CRISP-Real2Sim",
+        "venue": "ICLR 2026",
         "track": "B"
       }
     ],

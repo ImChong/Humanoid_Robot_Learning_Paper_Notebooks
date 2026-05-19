@@ -893,6 +893,14 @@
         "dir": "Iterative_Closed-Loop_Motion_Synthesis",
         "arxiv": "2602.21599",
         "zhname": "迭代闭环动作合成：扩展人形机器人控制能力的数据-策略协同进化框架"
+      },
+      {
+        "title": "CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives",
+        "path": "papers/13_Physics-Based_Animation/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit.md",
+        "url": "/papers/13_Physics-Based_Animation/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit.html",
+        "dir": "CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit",
+        "arxiv": "2512.14696",
+        "zhname": "CRISP：用接触引导 + 平面基元从单目视频做 Real2Sim 的人–场景重建"
       }
     ],
     "zhname": "物理动画"
