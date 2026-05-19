@@ -499,7 +499,7 @@
 | #   | 论文                                                                                                                                             | 日期      | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
 | 379  | [RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots](https://arxiv.org/abs/2602.01515) | 2026.02 |     | ✅ 完成 |
-| 380  | [Towards Bridging the Gap between Large-Scale Pretraining and Efficient Finetuning for Humanoid Control](https://arxiv.org/abs/2601.21363)     | 2026.01 |     | ⏳ 待读 |
+| 380  | [Towards Bridging the Gap between Large-Scale Pretraining and Efficient Finetuning for Humanoid Control](https://arxiv.org/abs/2601.21363)     | 2026-05-19 |     | ✅ 完成 |
 | 381  | [PolySim: Bridging the Sim-to-Real Gap for Humanoid Control via Multi-Simulator Dynamics Randomization](https://arxiv.org/abs/2510.01708)      | 2025.10 |     | ⏳ 待读 |
 | 382  | [Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion](https://arxiv.org/abs/2509.12858)        | 2025.09 |     | ⏳ 待读 |
 | 383  | [Towards bridging the gap: Systematic sim-to-real transfer for diverse legged robots](https://arxiv.org/abs/2509.06342)                        | 2025.09 |     | ⏳ 待读 |

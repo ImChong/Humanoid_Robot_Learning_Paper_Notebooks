@@ -60,6 +60,7 @@
 | 2026-05-19 | 330 | [ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control](07_Teleoperation/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control.md) | Teleoperation / 低延迟遥操作 / 末端 SE(3) 控制 | [Genesis-Humanoid `extremcontrol` 分支](https://github.com/UMass-Embodied-AGI/Genesis-Humanoid/tree/extremcontrol) · [项目页](https://extremcontrol.github.io) |
 | 2026-05-19 | 351 | [FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation](08_Navigation/FocusNav__Spatial_Selective_Attention_with_Waypoint_Guidance_for_Humanoid_Local/FocusNav__Spatial_Selective_Attention_with_Waypoint_Guidance_for_Humanoid_Local.md) | Navigation / 局部导航 / 路径点引导注意力 / 稳定性门控 | 截至当前未见公开发布（论文未给出开源链接） |
 | 2026-05-19 | 369 | [InEKFormer: A Hybrid State Estimator for Humanoid Robots](09_State_Estimation/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots.md) | State Estimation / InEKF + Transformer / 噪声协方差学习 | 截至当前未见公开发布（论文未给出 GitHub 链接，DFKI 出版页见笔记内链接） |
+| 2026-05-19 | 380 | [LIFT: Towards Bridging the Gap between Large-Scale Pretraining and Efficient Finetuning for Humanoid Control](10_Sim-to-Real/LIFT__Towards_Bridging_the_Gap_between_Large-Scale_Pretraining_and_Efficient_F/LIFT__Towards_Bridging_the_Gap_between_Large-Scale_Pretraining_and_Efficient_F.md) | Sim-to-Real / 大规模 SAC 预训练 / 物理先验世界模型 / Dyna 微调 | [bigai-ai/LIFT-humanoid](https://github.com/bigai-ai/LIFT-humanoid) · [项目页](https://lift-humanoid.github.io/) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -175,6 +176,7 @@
 | 330 | ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control | 07_Teleoperation | ✅ 已完成（2026-05-19） |
 | 351 | FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation | 08_Navigation | ✅ 已完成（2026-05-19） |
 | 369 | InEKFormer: A Hybrid State Estimator for Humanoid Robots | 09_State_Estimation | ✅ 已完成（2026-05-19） |
-| ? | （明日：10_Sim-to-Real 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → ... → 14 → 04 顺序循环） | 10_Sim-to-Real | ⏭️ 下一篇候选 |
+| 380 | LIFT: Towards Bridging the Gap between Large-Scale Pretraining and Efficient Finetuning for Humanoid Control | 10_Sim-to-Real | ✅ 已完成（2026-05-19） |
+| ? | （明日：11_Simulation_Benchmark 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → ... → 14 → 04 顺序循环） | 11_Simulation_Benchmark | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
