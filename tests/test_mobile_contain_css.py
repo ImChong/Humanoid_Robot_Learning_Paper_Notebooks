@@ -37,9 +37,26 @@ def test_mobile_code_block_not_contain_strict():
 
 
 def test_mobile_code_scrolls_on_block_not_per_line():
-    """Wide code must scroll inside .code-block, not on each .code-cell row."""
+    """Wide code must scroll inside .code-block as a whole, not on each
+    .code-cell row. Per-row ``overflow-x: auto`` would let iOS Safari's
+    floating overlay scrollbar track each line individually."""
     block = _mobile_paper_body_block()
     assert ".paper-body .code-cell" not in block
     snippet = block[block.index(".paper-body .code-block") :]
     snippet = snippet[: snippet.index(".paper-body .table-wrapper")]
     assert "overflow-x: auto" in snippet
+
+
+def test_mobile_inline_code_does_not_shatter_identifiers():
+    """Inline code inside paragraphs/lists must not inherit the parent's
+    ``word-break: break-word`` (which splits ``foo_bar_baz.py`` between
+    arbitrary underscores). Override to ``word-break: normal`` + ``overflow-wrap:
+    anywhere`` so breaks only happen at <wbr> hints and as a last-resort
+    overflow fallback."""
+    block = _mobile_paper_body_block()
+    # Pull the inline-code rule block (".paper-body p code, ..., .paper-body dd code { ... }").
+    idx = block.index(".paper-body p code")
+    end = block.index("}", idx)
+    snippet = block[idx:end]
+    assert "word-break: normal" in snippet
+    assert "overflow-wrap: anywhere" in snippet

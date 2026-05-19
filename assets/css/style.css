@@ -1423,6 +1423,12 @@ html[data-lang-mode="zh"] .footer-text-zh {
   line-height: 1.5;
   white-space: pre;
   contain: inline-size;
+  /* Grid layout so every row aligns to the same two columns (gutter + cell)
+     and the cell track sizes to the widest line. Without this short rows are
+     narrower than long rows and scrolling looks like ragged per-line drift. */
+  display: grid;
+  grid-template-columns: 3rem auto;
+  grid-auto-flow: row;
 }
 
 [data-theme="dark"] .paper-body .code-block {
@@ -1438,16 +1444,14 @@ html[data-lang-mode="zh"] .footer-text-zh {
 }
 
 .paper-body .code-row {
-  display: flex;
-  align-items: baseline;
-  /* Row never wraps: gutter + code stay on one visual line */
-  flex-wrap: nowrap;
-  min-width: max-content;
+  /* Make the row "transparent" so its two children (.code-ln and .code-cell)
+     become direct grid items of .code-block. This guarantees every row aligns
+     to the same gutter/cell columns regardless of line length. */
+  display: contents;
 }
 
 .paper-body .code-ln {
-  flex: 0 0 3rem;
-  width: 3rem;
+  /* Grid column 1 (3rem) handles the width; gutter just paints inside it. */
   text-align: right;
   padding-right: 0.75rem;
   color: #999;
@@ -1462,7 +1466,8 @@ html[data-lang-mode="zh"] .footer-text-zh {
 }
 
 .paper-body .code-cell {
-  flex: 1;
+  /* Grid column 2 (auto) sizes to the widest cell, so every row visually
+     shares the same right edge while scrolling. */
   padding-right: 1.5rem;
   white-space: pre;
   word-break: normal;
@@ -1577,6 +1582,27 @@ html[data-lang-mode="zh"] .footer-text-zh {
     overflow-x: hidden;
     overflow-x: clip;
     contain: inline-size;
+  }
+
+  /* Inline code (in paragraphs/lists/tables): don't shatter identifiers at every
+     underscore the way the parent's ``word-break: break-word`` would. Break at
+     ``<wbr>`` hints (added by paper.js around / . _ - in long paths) first,
+     and only fall back to mid-token breaks when a single token still overflows. */
+  .paper-body p code,
+  .paper-body li code,
+  .paper-body td code,
+  .paper-body th code,
+  .paper-body h1 code,
+  .paper-body h2 code,
+  .paper-body h3 code,
+  .paper-body h4 code,
+  .paper-body h5 code,
+  .paper-body h6 code,
+  .paper-body blockquote code,
+  .paper-body dt code,
+  .paper-body dd code {
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 
   .paper-body h1,
