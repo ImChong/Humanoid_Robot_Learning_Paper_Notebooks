@@ -1553,16 +1553,41 @@ html[data-lang-mode="zh"] .footer-text-zh {
     overflow-x: clip;
   }
 
-  /* Scroll the whole .code-block (all lines together), not each .code-cell. */
+  /* Wrap code content on mobile instead of horizontal scrolling. iOS Safari's
+     floating overlay scrollbar otherwise appears at the line a finger last
+     scrolled through, which reads as a "single-line scrollbar" artifact. */
   .paper-body .code-block {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
     /* inline-size only: ``contain: strict`` collapses block height (~1 line) on
        mobile and clips Python/bash samples inside DeepMimic-style notes. */
     contain: inline-size;
+  }
+
+  .paper-body .code-row {
+    /* Allow the row (gutter + cell) to shrink so its cell can wrap. */
+    min-width: 0;
+    /* Gutter aligns with the first wrapped visual line, not the baseline of
+       the last one. */
+    align-items: flex-start;
+  }
+
+  .paper-body .code-cell {
+    /* Wrap long code lines while preserving indentation. */
+    min-width: 0;
+    flex: 1 1 auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  /* Plain <pre> (when JS rebuild hasn't run, or for non-rouge code) wraps too. */
+  .paper-body pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 
   .paper-body .table-wrapper {
@@ -1577,6 +1602,27 @@ html[data-lang-mode="zh"] .footer-text-zh {
     overflow-x: hidden;
     overflow-x: clip;
     contain: inline-size;
+  }
+
+  /* Inline code (in paragraphs/lists/tables): don't shatter identifiers at every
+     underscore the way the parent's ``word-break: break-word`` would. Break at
+     ``<wbr>`` hints (added by paper.js around / . _ - in long paths) first,
+     and only fall back to mid-token breaks when a single token still overflows. */
+  .paper-body p code,
+  .paper-body li code,
+  .paper-body td code,
+  .paper-body th code,
+  .paper-body h1 code,
+  .paper-body h2 code,
+  .paper-body h3 code,
+  .paper-body h4 code,
+  .paper-body h5 code,
+  .paper-body h6 code,
+  .paper-body blockquote code,
+  .paper-body dt code,
+  .paper-body dd code {
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 
   .paper-body h1,

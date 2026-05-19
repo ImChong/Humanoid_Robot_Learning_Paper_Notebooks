@@ -312,11 +312,73 @@
     }
   }
 
+  // ─── Insert <wbr> in long inline code so paths break at /, then ── ────────
+  // Without these hints the mobile parent's ``word-break: break-word`` shatters
+  // identifiers at arbitrary positions inside a filename. Two-stage hinting:
+  //   1. ``/`` → preferred break (between path segments).
+  //   2. ``.`` and ``_`` and ``-`` → secondary breaks only when a single segment
+  //      between slashes is itself too long to fit.
+  // Anything still longer than the line falls back to ``overflow-wrap: anywhere``
+  // (any-character break) so it cannot overflow the viewport.
+  function applyWbrSplit(code, parts) {
+    while (code.firstChild) code.removeChild(code.firstChild);
+    for (var j = 0; j < parts.length; j++) {
+      if (j > 0) code.appendChild(document.createElement('wbr'));
+      code.appendChild(document.createTextNode(parts[j]));
+    }
+    code.dataset.wbrApplied = '1';
+  }
+
+  function splitLongSegment(seg) {
+    // For a single path segment with no slashes, allow secondary breaks at
+    // ``.``, ``_``, ``-`` boundaries (kept with the next chunk).
+    return seg.split(/(?=[._\-])/);
+  }
+
+  function addInlineCodeBreakHints() {
+    var paperBody = document.getElementById('paper-body');
+    if (!paperBody) return;
+    var codes = paperBody.querySelectorAll('code');
+    for (var i = 0; i < codes.length; i++) {
+      var code = codes[i];
+      // Skip code inside <pre> (block code) and skip if already processed.
+      if (code.closest('pre')) continue;
+      if (code.dataset.wbrApplied === '1') continue;
+      var text = code.textContent;
+      if (!text || text.length < 16) continue;
+      // Only act when the token has no whitespace (paths, identifiers, URLs).
+      if (/\s/.test(text)) continue;
+      // Don't touch code that already contains child elements (syntax-highlighted spans).
+      if (code.firstElementChild) continue;
+
+      // Primary split at ``/`` (kept with the next chunk: ``foo/bar`` →
+      // ``foo`` + ``<wbr>`` + ``/bar``). Path segments stay whole — a 28-char
+      // filename folds to its own line before splitting internally. Only when
+      // a single segment is longer than ~30 characters (true edge case, won't
+      // fit on a mobile line) do we add secondary ``.``/``_``/``-`` breaks so
+      // it can fold without overflowing.
+      var slashParts = text.split(/(?=\/)/);
+      var parts = [];
+      for (var k = 0; k < slashParts.length; k++) {
+        var seg = slashParts[k];
+        if (seg.length > 30) {
+          var sub = splitLongSegment(seg);
+          for (var m = 0; m < sub.length; m++) parts.push(sub[m]);
+        } else {
+          parts.push(seg);
+        }
+      }
+      if (parts.length < 2) continue;
+      applyWbrSplit(code, parts);
+    }
+  }
+
   function init() {
     initPaperNav();
     initTableWrappers();
     initToc();
     rebuildWithLineNumbers();
+    addInlineCodeBreakHints();
   }
 
   if (document.readyState === 'loading') {
