@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 351,
-      "last_title": "FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation",
-      "next_module": "09_State_Estimation"
+      "last_module": "09_State_Estimation",
+      "last_index": 369,
+      "last_title": "InEKFormer: A Hybrid State Estimator for Humanoid Robots",
+      "next_module": "10_Sim-to-Real"
     },
-    "last_summary_index": 351,
+    "last_summary_index": 369,
     "last_summary_date": "2026-05-19",
-    "last_summary_title": "FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation",
+    "last_summary_title": "InEKFormer: A Hybrid State Estimator for Humanoid Robots",
     "next_summary_index": null,
     "log": [
       {
@@ -402,6 +402,16 @@
         "folder": "papers/08_Navigation/FocusNav__Spatial_Selective_Attention_with_Waypoint_Guidance_for_Humanoid_Local",
         "module": "08_Navigation",
         "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-19",
+        "index": 369,
+        "module": "09_State_Estimation",
+        "title": "InEKFormer: A Hybrid State Estimator for Humanoid Robots",
+        "note_path": "papers/09_State_Estimation/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots.md",
+        "arxiv": "2511.16306",
+        "source_repo": "截至当前未见公开发布",
+        "track": "B"
       }
     ],
     "last_completed_index": 30,
