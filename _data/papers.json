@@ -712,6 +712,14 @@
         "dir": "CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation",
         "arxiv": "2602.15060",
         "zhname": "CLOT：用闭环全局动作跟踪做长时序人形遥操作"
+      },
+      {
+        "title": "ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control",
+        "path": "papers/07_Teleoperation/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control.md",
+        "url": "/papers/07_Teleoperation/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control.html",
+        "dir": "ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control",
+        "arxiv": "2602.11321",
+        "zhname": "ExtremControl：用直接末端控制把人形遥操作的端到端延迟压到 50 ms"
       }
     ],
     "zhname": "遥操作"
