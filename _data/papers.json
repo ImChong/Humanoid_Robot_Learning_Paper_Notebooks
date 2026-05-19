@@ -834,6 +834,14 @@
         "dir": "GRUtopia__Dream_General_Robots_in_a_City_at_Scale",
         "arxiv": "2407.10943",
         "zhname": "GRUtopia：城市级交互式 3D 社会，给通用机器人造一座可训练的「乌托邦」"
+      },
+      {
+        "title": "Towards Motion Turing Test: Evaluating Human-Likeness in Humanoid Robots",
+        "path": "papers/11_Simulation_Benchmark/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots.md",
+        "url": "/papers/11_Simulation_Benchmark/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots.html",
+        "dir": "Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots",
+        "arxiv": "2603.06181",
+        "zhname": "迈向动作图灵测试：评估人形机器人的「类人度」"
       }
     ],
     "zhname": "仿真基准"
