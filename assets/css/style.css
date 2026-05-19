@@ -715,6 +715,10 @@ body.mermaid-lightbox-open {
   cursor: grabbing;
 }
 
+.mermaid-lightbox__viewport.is-pinching {
+  cursor: zoom-in;
+}
+
 .mermaid-lightbox__stage {
   position: absolute;
   left: 50%;
