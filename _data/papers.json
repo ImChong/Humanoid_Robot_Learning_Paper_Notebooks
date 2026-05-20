@@ -668,6 +668,14 @@
         "dir": "APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots",
         "arxiv": "2602.11143",
         "zhname": "APEX：用棘轮式进度奖励学习「攀越式」高平台穿越的人形机器人技能"
+      },
+      {
+        "title": "Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels",
+        "path": "papers/05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels.md",
+        "url": "/papers/05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels.html",
+        "dir": "Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels",
+        "arxiv": "2602.06382",
+        "zhname": "Now You See That：高保真深度仿真 + 视觉感知行为蒸馏，让人形机器人从「原始像素」端到端学会复杂地形行走"
       }
     ],
     "zhname": "行走运动"
