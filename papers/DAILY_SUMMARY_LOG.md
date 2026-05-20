@@ -193,6 +193,7 @@
 | 190 | Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels | 05_Locomotion | ✅ 已完成（2026-05-20） |
 | 273 | DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos | 06_Manipulation | ✅ 已完成（2026-05-20） |
 | 331 | TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior | 07_Teleoperation | ✅ 已完成（2026-05-20） |
-| ? | （明日：08_Navigation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 08_Navigation | ⏭️ 下一篇候选 |
+| 352 | STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain | 08_Navigation | ✅ 已完成（2026-05-20） |
+| ? | （明日：09_State_Estimation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 09_State_Estimation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

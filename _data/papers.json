@@ -782,6 +782,14 @@
         "dir": "FocusNav__Spatial_Selective_Attention_with_Waypoint_Guidance_for_Humanoid_Local",
         "arxiv": "2601.12790",
         "zhname": "FocusNav：用路径点引导的空间选择性注意力做人形局部导航"
+      },
+      {
+        "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
+        "path": "papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.md",
+        "url": "/papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.html",
+        "dir": "STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain",
+        "arxiv": "2506.01046",
+        "zhname": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航"
       }
     ],
     "zhname": "导航"
