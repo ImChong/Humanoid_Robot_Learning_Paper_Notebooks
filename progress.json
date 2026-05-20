@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 391,
-      "last_title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
-      "next_module": "12_Hardware_Design"
+      "last_module": "12_Hardware_Design",
+      "last_index": 412,
+      "last_title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand: Toward Dexterous Manipulation for Payload-Constrained Humanoids",
+      "next_module": "13_Physics-Based_Animation"
     },
-    "last_summary_index": 391,
+    "last_summary_index": 412,
     "last_summary_date": "2026-05-20",
-    "last_summary_title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
+    "last_summary_title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand: Toward Dexterous Manipulation for Payload-Constrained Humanoids",
     "next_summary_index": null,
     "log": [
       {
@@ -554,9 +554,21 @@
         "arxiv": "2602.11337",
         "source_repo": "https://github.com/allenai/molmospaces",
         "project_page": "https://allenai.org/blog/molmospaces"
+      },
+      {
+        "date": "2026-05-20",
+        "index": 412,
+        "title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand: Toward Dexterous Manipulation for Payload-Constrained Humanoids",
+        "module": "12_Hardware_Design",
+        "category": "12_Hardware_Design",
+        "note_path": "papers/12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.md",
+        "track": "module_rotation",
+        "arxiv": "2512.24657",
+        "source_repo": null,
+        "project_page": null
       }
     ],
-    "last_completed_index": 391,
+    "last_completed_index": 412,
     "next_index": null
   },
   "papers": [
