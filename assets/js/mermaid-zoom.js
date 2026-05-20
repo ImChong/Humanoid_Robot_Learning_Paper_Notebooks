@@ -238,8 +238,14 @@
   }
 
   function sanitizeMermaidSvg(svgString) {
+    if (typeof window.sanitizeMermaidSvg === 'function') {
+      return window.sanitizeMermaidSvg(svgString);
+    }
     if (typeof DOMPurify !== 'undefined') {
-      return DOMPurify.sanitize(svgString);
+      return DOMPurify.sanitize(svgString, {
+        USE_PROFILES: { svg: true, svgFilters: true },
+        ADD_TAGS: ['foreignObject'],
+      });
     }
     return svgString;
   }
