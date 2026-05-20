@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
-      "last_index": 381,
-      "last_title": "PolySim: Bridging the Sim-to-Real Gap for Humanoid Control via Multi-Simulator Dynamics Randomization",
-      "next_module": "11_Simulation_Benchmark"
+      "last_module": "11_Simulation_Benchmark",
+      "last_index": 391,
+      "last_title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
+      "next_module": "12_Hardware_Design"
     },
-    "last_summary_index": 381,
+    "last_summary_index": 391,
     "last_summary_date": "2026-05-20",
-    "last_summary_title": "PolySim: Bridging the Sim-to-Real Gap for Humanoid Control via Multi-Simulator Dynamics Randomization",
+    "last_summary_title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
     "next_summary_index": null,
     "log": [
       {
@@ -542,9 +542,21 @@
         "note_path": "papers/10_Sim-to-Real/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato.md",
         "track": "module_rotation",
         "source_url": "https://github.com/EmboMaster/PolySim"
+      },
+      {
+        "date": "2026-05-20",
+        "index": 391,
+        "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
+        "module": "11_Simulation_Benchmark",
+        "category": "11_Simulation_Benchmark",
+        "note_path": "papers/11_Simulation_Benchmark/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation.md",
+        "track": "module_rotation",
+        "arxiv": "2602.11337",
+        "source_repo": "https://github.com/allenai/molmospaces",
+        "project_page": "https://allenai.org/blog/molmospaces"
       }
     ],
-    "last_completed_index": 381,
+    "last_completed_index": 391,
     "next_index": null
   },
   "papers": [
