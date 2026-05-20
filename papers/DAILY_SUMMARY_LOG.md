@@ -66,6 +66,7 @@
 | 2026-05-19 | 449 | [CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives](13_Physics-Based_Animation/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit.md) | Physics-Based Animation / Real2Sim / 接触引导补全 / 平面基元场景 / RL 人形跟踪 | [Z1hanW/CRISP-Real2Sim](https://github.com/Z1hanW/CRISP-Real2Sim) · [项目页](https://crisp-real2sim.github.io/CRISP-Real2Sim/) · ICLR 2026 |
 | 2026-05-19 | 477 | [EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents](14_Human_Motion/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents.md) | Human Motion / 4D 重建 / 双 iPhone 联合标定 / 具身数据集 | [WenjiaWang0312/EmbodMocap](https://github.com/WenjiaWang0312/EmbodMocap) · [项目页](https://wenjiawang0312.github.io/projects/embodmocap/) · CVPR 2026 |
 | 2026-05-19 | 52 | [Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots](04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.md) | Loco-Manipulation / WBC · 伴语手势 / 语义对齐 / LLM 检索 + Motion-GPT | 截至当前未见公开发布；论文采用的重定向中间层 [YanjieZe/GMR](https://github.com/YanjieZe/GMR)（ICRA 2026） |
+| 2026-05-20 | 190 | [Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels](05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels.md) | Locomotion / 端到端视觉 / 高保真深度仿真 / 行为蒸馏 | [Hellod035/Now_You_See_That](https://github.com/Hellod035/Now_You_See_That) · [项目页](https://hellod035.github.io/Now_You_See_That/) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -187,6 +188,7 @@
 | 449 | CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives | 13_Physics-Based_Animation | ✅ 已完成（2026-05-19） |
 | 477 | EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents | 14_Human_Motion | ✅ 已完成（2026-05-19） |
 | 52 | Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots | 04_Loco-Manipulation_and_WBC | ✅ 已完成（2026-05-19） |
-| ? | （明日：05_Locomotion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 05_Locomotion | ⏭️ 下一篇候选 |
+| 190 | Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels | 05_Locomotion | ✅ 已完成（2026-05-20） |
+| ? | （明日：06_Manipulation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 06_Manipulation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
