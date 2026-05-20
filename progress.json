@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 190,
-      "last_title": "Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": 273,
+      "last_title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
+      "next_module": "07_Teleoperation"
     },
-    "last_summary_index": 190,
+    "last_summary_index": 273,
     "last_summary_date": "2026-05-20",
-    "last_summary_title": "Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels",
+    "last_summary_title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
     "next_summary_index": null,
     "log": [
       {
@@ -488,9 +488,20 @@
         "folder": "papers/05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels",
         "module": "05_Locomotion",
         "track": "module_rotation"
+      },
+      {
+        "date": "2026-05-20",
+        "index": 273,
+        "title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
+        "folder": "papers/06_Manipulation/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos",
+        "module": "06_Manipulation",
+        "track": "module_rotation",
+        "arxiv": "2602.06949",
+        "source_repo": "https://github.com/nvidia/DreamDojo",
+        "project_page": "https://dreamdojo-world.github.io/"
       }
     ],
-    "last_completed_index": 52,
+    "last_completed_index": 273,
     "next_index": null
   },
   "papers": [
@@ -3027,6 +3038,56 @@
       "pdf_file": "",
       "route": "Sim-to-Real",
       "title_cn": "LIFT：用大批量 SAC 预训练 + 物理先验世界模型微调，把人形 sim-to-real 压到 1 小时"
+    },
+    {
+      "title": "Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels",
+      "folder": "papers/05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels",
+      "note_file": "Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Locomotion",
+      "title_cn": ""
+    },
+    {
+      "title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
+      "folder": "papers/06_Manipulation/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos",
+      "note_file": "DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
+      "folder": "papers/12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot",
+      "note_file": "Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "硬件设计",
+      "title_cn": ""
+    },
+    {
+      "title": "CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives",
+      "folder": "papers/13_Physics-Based_Animation/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit",
+      "note_file": "CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Physics-Based Animation",
+      "title_cn": ""
+    },
+    {
+      "title": "EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents",
+      "folder": "papers/14_Human_Motion/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents",
+      "note_file": "EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "人体动作生成",
+      "title_cn": ""
     }
   ]
 }

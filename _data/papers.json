@@ -706,6 +706,14 @@
         "dir": "cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields",
         "arxiv": "2603.05493",
         "zhname": "cuRoboV2：基于深度融合距离场的高自由度机器人动力学感知运动生成"
+      },
+      {
+        "title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
+        "path": "papers/06_Manipulation/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos.md",
+        "url": "/papers/06_Manipulation/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos.html",
+        "dir": "DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos",
+        "arxiv": "2602.06949",
+        "zhname": "DreamDojo：从大规模人类视频中学到的通用机器人世界模型"
       }
     ],
     "zhname": "灵巧操作"
