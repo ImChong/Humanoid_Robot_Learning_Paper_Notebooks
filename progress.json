@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 352,
-      "last_title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
-      "next_module": "09_State_Estimation"
+      "last_module": "09_State_Estimation",
+      "last_index": 370,
+      "last_title": "Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation in Humanoid Robots",
+      "next_module": "10_Sim-to-Real"
     },
-    "last_summary_index": 352,
+    "last_summary_index": 370,
     "last_summary_date": "2026-05-20",
-    "last_summary_title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
+    "last_summary_title": "Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation in Humanoid Robots",
     "next_summary_index": null,
     "log": [
       {
@@ -521,9 +521,21 @@
         "arxiv": "2506.01046",
         "source_repo": "",
         "project_page": "https://state-nav.github.io/statenav/"
+      },
+      {
+        "date": "2026-05-20",
+        "index": 370,
+        "module": "09_State_Estimation",
+        "title": "Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation in Humanoid Robots",
+        "note_path": "papers/09_State_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation.md",
+        "arxiv": "2507.10105",
+        "source_repo": "https://github.com/ami-iit/paper_sorrentino_ral2024_balancing_torque",
+        "predecessor_pinn_repo": "https://github.com/ami-iit/paper_sorrentino_2024_humanoids_friction_estimation",
+        "venue": "IEEE RA-L 2025",
+        "track": "B"
       }
     ],
-    "last_completed_index": 352,
+    "last_completed_index": 370,
     "next_index": null
   },
   "papers": [
