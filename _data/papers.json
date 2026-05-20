@@ -820,6 +820,14 @@
         "dir": "InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots",
         "arxiv": "2511.16306",
         "zhname": "InEKFormer：用 InEKF + Transformer 的混合滤波替代手调噪声协方差"
+      },
+      {
+        "title": "Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation in Humanoid Robots",
+        "path": "papers/09_State_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation.md",
+        "url": "/papers/09_State_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation.html",
+        "dir": "Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation",
+        "arxiv": "2507.10105",
+        "zhname": "PINN + UKF：让没有力矩传感器的人形机器人也能做精准全身力矩估计"
       }
     ],
     "zhname": "状态估计"
