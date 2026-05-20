@@ -312,6 +312,47 @@
     }
   }
 
+  // ─── Keep “（`fn`）” in headings on one line (mobile word-break splits otherwise) ─
+  function wrapHeadingInlineCodePhrases() {
+    var body = document.getElementById('paper-body');
+    if (!body) return;
+    body.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(function (h) {
+      var codes = h.querySelectorAll(':scope > code');
+      for (var i = 0; i < codes.length; i++) {
+        var code = codes[i];
+        if (code.closest('.heading-code-phrase')) continue;
+        var prev = code.previousSibling;
+        var next = code.nextSibling;
+        if (!prev || prev.nodeType !== Node.TEXT_NODE) continue;
+        if (!next || next.nodeType !== Node.TEXT_NODE) continue;
+        var prevText = prev.textContent;
+        var nextText = next.textContent;
+        var openIdx = Math.max(prevText.lastIndexOf('（'), prevText.lastIndexOf('('));
+        if (openIdx === -1) continue;
+        var openChar = prevText.charAt(openIdx);
+        var closeChar = openChar === '（' ? '）' : ')';
+        if (!nextText.startsWith(closeChar)) continue;
+
+        var span = document.createElement('span');
+        span.className = 'heading-code-phrase';
+        // Keep the word before “（” on the same line as the parenthetical (e.g. “策略（fn）”).
+        var colonIdx = prevText.lastIndexOf('：');
+        var wrapStart =
+          colonIdx >= 0 && colonIdx < openIdx ? colonIdx + 1 : openIdx;
+        prev.textContent = prevText.slice(0, wrapStart);
+        span.appendChild(document.createTextNode(prevText.slice(wrapStart)));
+        span.appendChild(code);
+        span.appendChild(document.createTextNode(closeChar));
+        if (nextText.length > 1) {
+          next.textContent = nextText.slice(1);
+        } else {
+          h.removeChild(next);
+        }
+        h.insertBefore(span, prev.nextSibling);
+      }
+    });
+  }
+
   // ─── Insert <wbr> in long inline code so paths break at /, then ── ────────
   // Without these hints the mobile parent's ``word-break: break-word`` shatters
   // identifiers at arbitrary positions inside a filename. Two-stage hinting:
@@ -343,6 +384,8 @@
       var code = codes[i];
       // Skip code inside <pre> (block code) and skip if already processed.
       if (code.closest('pre')) continue;
+      if (code.closest('.heading-code-phrase')) continue;
+      if (code.closest('h1, h2, h3, h4, h5, h6')) continue;
       if (code.dataset.wbrApplied === '1') continue;
       var text = code.textContent;
       if (!text || text.length < 16) continue;
@@ -378,6 +421,7 @@
     initTableWrappers();
     initToc();
     rebuildWithLineNumbers();
+    wrapHeadingInlineCodePhrases();
     addInlineCodeBreakHints();
   }
 
