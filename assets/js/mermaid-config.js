@@ -33,6 +33,19 @@
   window.MERMAID_RENDER_SCALE = MERMAID_RENDER_SCALE;
   window.MERMAID_LIGHTBOX_SCALE = MERMAID_LIGHTBOX_SCALE;
 
+  /**
+   * Mermaid htmlLabels embed text in SVG foreignObject. Default DOMPurify strips
+   * those nodes and leaves empty boxes in the lightbox / roadmap.
+   */
+  window.sanitizeMermaidSvg = function (svgString) {
+    if (!svgString) return '';
+    if (typeof DOMPurify === 'undefined') return svgString;
+    return DOMPurify.sanitize(svgString, {
+      USE_PROFILES: { svg: true, svgFilters: true },
+      ADD_TAGS: ['foreignObject'],
+    });
+  };
+
   window.getMermaidSiteConfig = function (theme) {
     return {
       startOnLoad: false,

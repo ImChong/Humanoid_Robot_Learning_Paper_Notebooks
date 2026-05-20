@@ -226,7 +226,12 @@
         var renderId = 'roadmap-mermaid-' + cacheKey.replace(':', '-') + '-' + renderSeq;
         return Promise.resolve(mermaid.render(renderId, graphText)).then(function(result) {
           if (renderSeq !== roadmapRenderSeq || getRoadmapCacheKey(normalizedMode) !== cacheKey) return;
-          var safeSvg = typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(result.svg) : result.svg;
+          var safeSvg =
+            typeof window.sanitizeMermaidSvg === 'function'
+              ? window.sanitizeMermaidSvg(result.svg)
+              : typeof DOMPurify !== 'undefined'
+                ? DOMPurify.sanitize(result.svg)
+                : result.svg;
           roadmapSvgCache[cacheKey] = safeSvg;
           mermaidRoadmap.innerHTML = safeSvg;
           mermaidRoadmap.removeAttribute('data-processed');

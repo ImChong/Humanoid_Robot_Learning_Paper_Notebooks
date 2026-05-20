@@ -26,3 +26,10 @@ def test_lightbox_rerenders_from_source():
     text = ZOOM_JS.read_text(encoding="utf-8")
     assert "buildMermaidLightboxGraph" in text
     assert "mermaid.render" in text
+
+
+def test_sanitize_mermaid_svg_keeps_foreign_object():
+    text = CONFIG_JS.read_text(encoding="utf-8")
+    assert "sanitizeMermaidSvg" in text
+    assert "foreignObject" in text
+    assert "USE_PROFILES" in text
