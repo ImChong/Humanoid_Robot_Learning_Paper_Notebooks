@@ -1,7 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light" data-lang-mode="en">
+<html lang="zh-CN" data-theme="dark" data-lang-mode="en">
 <head>
   <meta charset="UTF-8">
+  <script>
+    /* Apply saved theme before first paint (avoids light flash). */
+    (function () {
+      function getSiteTheme() {
+        try {
+          return localStorage.getItem('theme') === 'light' ? 'light' : 'dark';
+        } catch (e) {
+          return 'dark';
+        }
+      }
+      window.getSiteTheme = getSiteTheme;
+      document.documentElement.setAttribute('data-theme', getSiteTheme());
+    })();
+  </script>
+  <style>
+    html { color-scheme: dark; background-color: #1e1e1e; }
+    html[data-theme="light"] { color-scheme: light; background-color: #ffffff; }
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--
     CSP (defence-in-depth). Static site, no fetch/XHR — only KaTeX & mermaid
@@ -369,31 +387,25 @@
       var html = document.documentElement;
 
       function getPreferred() {
-        var saved = localStorage.getItem('theme');
-        if (saved) return saved;
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        return typeof window.getSiteTheme === 'function' ? window.getSiteTheme() : 'dark';
       }
 
       function setTheme(theme) {
         html.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
-        toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        if (toggle) toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
         
         initMermaid(theme);
       }
 
       setTheme(getPreferred());
 
-      toggle.addEventListener('click', function() {
-        var current = html.getAttribute('data-theme');
-        setTheme(current === 'dark' ? 'light' : 'dark');
-      });
-
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-        if (!localStorage.getItem('theme')) {
-          setTheme(e.matches ? 'dark' : 'light');
-        }
-      });
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          var current = html.getAttribute('data-theme');
+          setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+      }
     })();
   </script>
 </body>

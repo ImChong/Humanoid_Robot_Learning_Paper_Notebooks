@@ -1,25 +1,5 @@
-/* ===== CSS Variables ===== */
+/* ===== CSS Variables (default / :root = dark) ===== */
 :root,
-[data-theme="light"] {
-  --bg: #ffffff;
-  --bg-secondary: #f8f8f8;
-  --text: #333333;
-  --text-secondary: #666666;
-  --link: #b31b1b;
-  --link-hover: #8b1515;
-  --border: #e0e0e0;
-  --code-bg: #f5f5f5;
-  --code-border: #e0e0e0;
-  --header-bg: #fafafa;
-  --header-border: #ddd;
-  --card-bg: #ffffff;
-  --card-shadow: rgba(0,0,0,0.08);
-  --blockquote-border: #b31b1b;
-  --blockquote-bg: #fdf6f6;
-  --table-stripe: #f9f9f9;
-  --kbd-bg: #eee;
-}
-
 [data-theme="dark"] {
   --bg: #1e1e1e;
   --bg-secondary: #252526;
@@ -38,6 +18,26 @@
   --blockquote-bg: #252526;
   --table-stripe: #2d2d2d;
   --kbd-bg: #333333;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-secondary: #f8f8f8;
+  --text: #333333;
+  --text-secondary: #666666;
+  --link: #b31b1b;
+  --link-hover: #8b1515;
+  --border: #e0e0e0;
+  --code-bg: #f5f5f5;
+  --code-border: #e0e0e0;
+  --header-bg: #fafafa;
+  --header-border: #ddd;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0,0,0,0.08);
+  --blockquote-border: #b31b1b;
+  --blockquote-bg: #fdf6f6;
+  --table-stripe: #f9f9f9;
+  --kbd-bg: #eee;
 }
 
 /* ===== Transitions ===== */
