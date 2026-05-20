@@ -72,6 +72,7 @@
 | 2026-05-20 | 352 | [STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain](08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.md) | Navigation / 双足导航 / 可通过性估计 / RRT*+MPC | 截至当前未见公开（以项目主页 [state-nav.github.io/statenav](https://state-nav.github.io/statenav/) 后续更新为准） |
 | 2026-05-20 | 370 | [PINN + UKF: Sensorless Joint Torque Estimation in Humanoid Robots](09_State_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation.md) | State Estimation / 无传感器力矩估计 / PINN / UKF / 谐波减速器摩擦 | [ami-iit/paper_sorrentino_ral2024_balancing_torque](https://github.com/ami-iit/paper_sorrentino_ral2024_balancing_torque) · [PINN 前作](https://github.com/ami-iit/paper_sorrentino_2024_humanoids_friction_estimation) |
 | 2026-05-20 | 381 | [PolySim: Bridging the Sim-to-Real Gap for Humanoid Control via Multi-Simulator Dynamics Randomization](10_Sim-to-Real/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato.md) | Sim-to-Real / 多仿真器联合训练 / Dynamics-Level DR / Unitree G1 零样本 | [EmboMaster/PolySim](https://github.com/EmboMaster/PolySim) · [HumanoidVerse](https://github.com/LeCAR-Lab/HumanoidVerse) |
+| 2026-05-20 | 391 | [MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation](11_Simulation_Benchmark/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation.md) | Simulation Benchmark / 230k 室内场景 / 42M 抓取 / 多模拟器统一接口 / VLA 评测 | [allenai/molmospaces](https://github.com/allenai/molmospaces) · [项目页](https://allenai.org/blog/molmospaces) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -199,6 +200,7 @@
 | 352 | STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain | 08_Navigation | ✅ 已完成（2026-05-20） |
 | 370 | Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation | 09_State_Estimation | ✅ 已完成（2026-05-20） |
 | 381 | PolySim: Bridging the Sim-to-Real Gap for Humanoid Control via Multi-Simulator Dynamics Randomization | 10_Sim-to-Real | ✅ 已完成（2026-05-20） |
-| ? | （明日：11_Simulation_Benchmark 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 11_Simulation_Benchmark | ⏭️ 下一篇候选 |
+| 391 | MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation | 11_Simulation_Benchmark | ✅ 已完成（2026-05-20） |
+| ? | （明日：12_Hardware_Design 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 12_Hardware_Design | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
