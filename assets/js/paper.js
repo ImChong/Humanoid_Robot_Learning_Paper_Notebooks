@@ -303,7 +303,7 @@
     });
 
     if (typeof mermaid !== 'undefined') {
-      var theme = document.documentElement.getAttribute('data-theme') || 'light';
+      var theme = document.documentElement.getAttribute('data-theme') || 'dark';
       if (typeof initMermaid === 'function') {
         initMermaid(theme);
       } else {
