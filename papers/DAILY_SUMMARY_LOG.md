@@ -74,6 +74,7 @@
 | 2026-05-20 | 381 | [PolySim: Bridging the Sim-to-Real Gap for Humanoid Control via Multi-Simulator Dynamics Randomization](10_Sim-to-Real/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato.md) | Sim-to-Real / 多仿真器联合训练 / Dynamics-Level DR / Unitree G1 零样本 | [EmboMaster/PolySim](https://github.com/EmboMaster/PolySim) · [HumanoidVerse](https://github.com/LeCAR-Lab/HumanoidVerse) |
 | 2026-05-20 | 391 | [MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation](11_Simulation_Benchmark/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation.md) | Simulation Benchmark / 230k 室内场景 / 42M 抓取 / 多模拟器统一接口 / VLA 评测 | [allenai/molmospaces](https://github.com/allenai/molmospaces) · [项目页](https://allenai.org/blog/molmospaces) |
 | 2026-05-20 | 412 | [Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand](12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.md) | Hardware Design / 灵巧手 / 缆绳驱动 / 拮抗式驱动 / 滚动接触关节 / KAIST | 截至当前未见公开发布（论文未给出 GitHub / 项目页链接） |
+| 2026-05-20 | 450 | [Mimic2DM: Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions](13_Physics-Based_Animation/Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control/Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control.md) | Physics-Based Animation / 视频驱动 / 2D 重投影 / 分层控制 / CUHK + Monash | 截至当前未见公开仓库；[项目页](https://jiann-li.github.io/mimic2dm/) 尚未挂代码 |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -203,6 +204,7 @@
 | 381 | PolySim: Bridging the Sim-to-Real Gap for Humanoid Control via Multi-Simulator Dynamics Randomization | 10_Sim-to-Real | ✅ 已完成（2026-05-20） |
 | 391 | MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation | 11_Simulation_Benchmark | ✅ 已完成（2026-05-20） |
 | 412 | Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand | 12_Hardware_Design | ✅ 已完成（2026-05-20） |
-| ? | （明日：13_Physics-Based_Animation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 13_Physics-Based_Animation | ⏭️ 下一篇候选 |
+| 450 | Mimic2DM: Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions | 13_Physics-Based_Animation | ✅ 已完成（2026-05-20） |
+| ? | （明日：14_Human_Motion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 14_Human_Motion | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

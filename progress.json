@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 412,
-      "last_title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand: Toward Dexterous Manipulation for Payload-Constrained Humanoids",
-      "next_module": "13_Physics-Based_Animation"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 450,
+      "last_title": "Mimic2DM: Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions",
+      "next_module": "14_Human_Motion"
     },
-    "last_summary_index": 412,
+    "last_summary_index": 450,
     "last_summary_date": "2026-05-20",
-    "last_summary_title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand: Toward Dexterous Manipulation for Payload-Constrained Humanoids",
+    "last_summary_title": "Mimic2DM: Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions",
     "next_summary_index": null,
     "log": [
       {
@@ -566,9 +566,21 @@
         "arxiv": "2512.24657",
         "source_repo": null,
         "project_page": null
+      },
+      {
+        "date": "2026-05-20",
+        "index": 450,
+        "title": "Mimic2DM: Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions",
+        "module": "13_Physics-Based_Animation",
+        "category": "13_Physics-Based_Animation",
+        "note_path": "papers/13_Physics-Based_Animation/Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control/Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control.md",
+        "track": "module_rotation",
+        "arxiv": "2512.08500",
+        "source_repo": null,
+        "project_page": "https://jiann-li.github.io/mimic2dm/"
       }
     ],
-    "last_completed_index": 412,
+    "last_completed_index": 450,
     "next_index": null
   },
   "papers": [
