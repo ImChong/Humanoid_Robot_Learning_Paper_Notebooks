@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 273,
-      "last_title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
-      "next_module": "07_Teleoperation"
+      "last_module": "07_Teleoperation",
+      "last_index": 331,
+      "last_title": "TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior",
+      "next_module": "08_Navigation"
     },
-    "last_summary_index": 273,
+    "last_summary_index": 331,
     "last_summary_date": "2026-05-20",
-    "last_summary_title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
+    "last_summary_title": "TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior",
     "next_summary_index": null,
     "log": [
       {
@@ -499,9 +499,20 @@
         "arxiv": "2602.06949",
         "source_repo": "https://github.com/nvidia/DreamDojo",
         "project_page": "https://dreamdojo-world.github.io/"
+      },
+      {
+        "date": "2026-05-20",
+        "index": 331,
+        "title": "TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior",
+        "folder": "papers/07_Teleoperation/TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior",
+        "module": "07_Teleoperation",
+        "track": "module_rotation",
+        "arxiv": "2602.09628",
+        "source_repo": "",
+        "project_page": ""
       }
     ],
-    "last_completed_index": 273,
+    "last_completed_index": 331,
     "next_index": null
   },
   "papers": [
@@ -3088,6 +3099,16 @@
       "pdf_file": "",
       "route": "人体动作生成",
       "title_cn": ""
+    },
+    {
+      "title": "TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior",
+      "folder": "papers/07_Teleoperation/TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior",
+      "note_file": "TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior.md",
+      "status": "done",
+      "arxiv": "2602.09628",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": "TeleGate：用门控专家选择 + 运动先验做全身人形遥操作"
     }
   ]
 }
