@@ -20,3 +20,23 @@ def test_wrap_heading_inline_code_phrases_in_paper_js():
     assert "function wrapHeadingInlineCodePhrases()" in text
     assert "heading-code-phrase" in text
     assert "wrapHeadingInlineCodePhrases();" in text
+
+
+def test_mobile_rouge_block_rule_does_not_target_inline_code():
+    """``display: block`` on ``.highlighter-rouge`` must not apply to ``code`` in headings."""
+    block = _mobile_paper_body_block()
+    idx = block.index("Rouge block wrapper only")
+    snippet = block[idx : idx + 320]
+    assert ".paper-body div.highlighter-rouge" in snippet
+    assert "display: block" in snippet
+    assert ".paper-body .highlighter-rouge {" not in block
+
+
+def _mobile_paper_body_block() -> str:
+    text = STYLE.read_text(encoding="utf-8")
+    marker = ".paper-body .table-wrapper"
+    table_idx = text.find(marker, text.find("@media (max-width: 1200px)"))
+    assert table_idx != -1
+    start = text.rfind("@media (max-width: 1200px)", 0, table_idx)
+    assert start != -1
+    return text[start:]

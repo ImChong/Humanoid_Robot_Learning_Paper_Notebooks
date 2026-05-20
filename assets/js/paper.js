@@ -335,8 +335,12 @@
 
         var span = document.createElement('span');
         span.className = 'heading-code-phrase';
-        prev.textContent = prevText.slice(0, openIdx);
-        span.appendChild(document.createTextNode(prevText.slice(openIdx)));
+        // Keep the word before “（” on the same line as the parenthetical (e.g. “策略（fn）”).
+        var colonIdx = prevText.lastIndexOf('：');
+        var wrapStart =
+          colonIdx >= 0 && colonIdx < openIdx ? colonIdx + 1 : openIdx;
+        prev.textContent = prevText.slice(0, wrapStart);
+        span.appendChild(document.createTextNode(prevText.slice(wrapStart)));
         span.appendChild(code);
         span.appendChild(document.createTextNode(closeChar));
         if (nextText.length > 1) {

@@ -1172,6 +1172,14 @@ body.mermaid-lightbox-open {
 /* Parenthetical function names in headings: keep “（`fn`）” on one line */
 .paper-body .heading-code-phrase {
   white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.paper-body .heading-code-phrase code {
+  display: inline;
+  margin: 0;
+  vertical-align: baseline;
 }
 
 .paper-body p {
@@ -1436,12 +1444,13 @@ html[data-lang-mode="zh"] .footer-text-zh {
 /* ===========================
    Rouge Syntax Highlighting — Single Box (table mode)
    =========================== */
-.paper-body .highlighter-rouge {
+/* Block Rouge wrappers only — inline ``code.highlighter-rouge`` in headings must stay inline */
+.paper-body div.highlighter-rouge {
   margin: 1.2rem 0;
 }
 
 /* ===== Code blocks (rouge colors + custom per-line layout) ===== */
-.paper-body .highlighter-rouge {
+.paper-body div.highlighter-rouge {
   margin: 1.2rem 0;
 }
 
@@ -1608,9 +1617,9 @@ html[data-lang-mode="zh"] .footer-text-zh {
     contain: inline-size;
   }
 
-  /* Rouge wrapper must clip wide .code-block scroll overflow so it cannot
-     inflate html/body scrollWidth on mobile. */
-  .paper-body .highlighter-rouge {
+  /* Rouge block wrapper only (``div.highlighter-rouge``). Inline ``code.highlighter-rouge``
+     in headings must not become ``display: block`` or they break onto their own line. */
+  .paper-body div.highlighter-rouge {
     display: block;
     max-width: 100%;
     overflow-x: hidden;
