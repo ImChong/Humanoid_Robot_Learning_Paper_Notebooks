@@ -1,6 +1,6 @@
 /**
  * Click any rendered Mermaid diagram to open a fullscreen lightbox.
- * Pan with left mouse / one finger; pinch with two fingers on touch devices.
+ * Pan with left mouse / one finger; pinch or mouse wheel to zoom; Esc to close.
  */
 (function () {
   'use strict';
@@ -52,7 +52,7 @@
 
     hintEl = document.createElement('p');
     hintEl.className = 'mermaid-lightbox__hint';
-    hintEl.textContent = '拖拽平移 · 双指缩放 · Esc 关闭';
+    hintEl.textContent = '拖拽平移 · 滚轮/双指缩放 · Esc 关闭';
 
     viewport = document.createElement('div');
     viewport.className = 'mermaid-lightbox__viewport';
@@ -83,6 +83,7 @@
     viewport.addEventListener('pointermove', onPointerMove);
     viewport.addEventListener('pointerup', onPointerUp);
     viewport.addEventListener('pointercancel', onPointerUp);
+    viewport.addEventListener('wheel', onWheel, { passive: false });
 
     document.addEventListener('keydown', onKeyDown);
 
@@ -193,6 +194,15 @@
     viewport.classList.remove('is-dragging');
   }
 
+  function setScaleAtFocal(focalX, focalY, newScale) {
+    var contentX = (focalX - state.x) / state.scale;
+    var contentY = (focalY - state.y) / state.scale;
+    state.scale = clampScale(newScale);
+    state.x = focalX - contentX * state.scale;
+    state.y = focalY - contentY * state.scale;
+    applyTransform();
+  }
+
   function updatePinch() {
     if (!pinchSnapshot || pointers.size < 2) return;
     var pair = getPointerPair();
@@ -210,6 +220,20 @@
     state.x = focal.x - contentX * state.scale;
     state.y = focal.y - contentY * state.scale;
     applyTransform();
+  }
+
+  function wheelScaleFactor(e) {
+    var delta = e.deltaY;
+    if (e.deltaMode === 1) delta *= 16;
+    else if (e.deltaMode === 2) delta *= Math.max(viewport.clientHeight, 1);
+    return Math.exp(-delta * 0.002);
+  }
+
+  function onWheel(e) {
+    if (!lightbox || lightbox.hidden) return;
+    e.preventDefault();
+    var focal = viewportFocal(e.clientX, e.clientY);
+    setScaleAtFocal(focal.x, focal.y, state.scale * wheelScaleFactor(e));
   }
 
   function open(sourceEl) {
