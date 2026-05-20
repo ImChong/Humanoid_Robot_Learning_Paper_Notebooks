@@ -9,8 +9,10 @@ zhname: "iDP3：基于改进版 3D 扩散策略的可泛化人形操作"
 # iDP3: Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies
 **iDP3：基于改进版 3D 扩散策略的可泛化人形操作**
 
-> 📅 阅读日期: 2026-05-18  
-> 🏷️ 板块: 03_High_Impact_Selection / Teleoperation & Imitation Learning（H11）  
+> 📅 阅读日期: 2026-05-18
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Teleoperation & Imitation Learning（H11）
+>
 > 🧭 状态: 首版基础摘要（含 mermaid 流程图）；后续可结合 IROS 2025 版补充更多新场景实验细节。
 
 ---

@@ -9,8 +9,10 @@ zhname: "HOMIE：同构外骨骼驾驶舱式人形遥操作系统"
 # HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit
 **HOMIE：同构外骨骼驾驶舱式人形遥操作系统**
 
-> 📅 阅读日期: 2026-05-15  
-> 🏷️ 板块: 03_High_Impact_Selection / Teleoperation & Imitation Learning  
+> 📅 阅读日期: 2026-05-15
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Teleoperation & Imitation Learning
+>
 > 🧭 状态: 首版基础摘要（含 mermaid 流程图）；后续可结合论文消融表格与硬件 BOM 二读补表。
 
 ---

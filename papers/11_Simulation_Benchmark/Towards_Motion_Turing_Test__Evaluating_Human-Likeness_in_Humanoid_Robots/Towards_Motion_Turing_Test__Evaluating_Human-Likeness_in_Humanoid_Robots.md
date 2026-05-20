@@ -10,7 +10,9 @@ category: "Simulation Benchmark"
 **用 1,000 段 SMPL-X 化运动 + 30 位标注员 × 500 小时打分，给「人形机器人到底像不像人」第一次立起统一标尺**
 
 > 📅 阅读日期: 2026-05-19
+>
 > 🏷️ 板块: 11 Simulation Benchmark · 人形评测 / 类人度 / 数据集与基准
+>
 > 🔁 推进轨: 模块轮转（10_Sim-to-Real → **11_Simulation_Benchmark**）
 
 ---

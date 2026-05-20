@@ -10,7 +10,9 @@ category: "Simulation Benchmark"
 **Ai2 把场景、物体、抓取、机器人、模拟器接口、基准任务一口气全部开源，给「在仿真里训通用 VLA」这件事第一次配齐弹药**
 
 > 📅 阅读日期: 2026-05-20
+>
 > 🏷️ 板块: 11 Simulation Benchmark · 大规模室内仿真 / 抓取标注 / 多模拟器统一接口 / VLA 基准
+>
 > 🔁 推进轨: 模块轮转（10_Sim-to-Real → **11_Simulation_Benchmark**）
 
 ---

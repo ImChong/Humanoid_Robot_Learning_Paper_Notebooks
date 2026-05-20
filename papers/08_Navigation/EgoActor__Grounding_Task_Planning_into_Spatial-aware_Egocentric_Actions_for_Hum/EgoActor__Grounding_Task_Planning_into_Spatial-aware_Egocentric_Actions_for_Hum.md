@@ -10,7 +10,9 @@ category: "Navigation"
 **EgoActor：用 VLM 把任务规划直接落到人形机器人的空间感知第一视角动作上**
 
 > 📅 阅读日期: 2026-05-18
+>
 > 🏷️ 板块: Navigation · VLM · 任务规划 · 第一视角
+>
 > 🔁 推进轨: 模块轮转（07_Teleoperation → **08_Navigation**）
 
 ---

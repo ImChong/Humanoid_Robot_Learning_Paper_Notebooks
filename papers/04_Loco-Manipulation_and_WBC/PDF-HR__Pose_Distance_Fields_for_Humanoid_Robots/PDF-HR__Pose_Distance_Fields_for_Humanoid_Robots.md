@@ -9,7 +9,8 @@ category: "Loco-Manipulation and WBC"
 # PDF-HR: Pose Distance Fields for Humanoid Robots
 **用一个轻量神经距离场表示"合理的人形姿态空间"，可即插即用作为奖励、正则项或可信度打分器**
 
-> 📅 阅读日期: 2026-05-06  
+> 📅 阅读日期: 2026-05-06
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 姿态先验 · 运动跟踪 / 重定向
 
 ---

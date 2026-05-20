@@ -9,8 +9,10 @@ zhname: "HOVER：面向人形机器人的多模态通用神经全身控制器"
 # HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots
 **HOVER：面向人形机器人的多模态通用神经全身控制器**
 
-> 📅 阅读日期: 2026-05-14  
-> 🏷️ 板块: 03_High_Impact_Selection / Whole-Body Control Core  
+> 📅 阅读日期: 2026-05-14
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Whole-Body Control Core
+>
 > 🧭 状态: 首版基础摘要（含 mermaid 流程图）；后续可结合论文表 III/IV/V 数值二读补表。
 
 ---

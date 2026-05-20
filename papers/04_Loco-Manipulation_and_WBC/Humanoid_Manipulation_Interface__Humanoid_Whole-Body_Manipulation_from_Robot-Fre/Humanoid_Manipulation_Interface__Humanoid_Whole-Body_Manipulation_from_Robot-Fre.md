@@ -10,6 +10,7 @@ category: "Loco-Manipulation and WBC"
 **HuMI：通过便携设备捕捉人类动作，实现高效、无机器人的数据收集，并分层学习人形机器人全身技能**
 
 > 📅 阅读日期: 2026-05-04
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · Robot-Free · Hierarchical Control
 
 ---

@@ -9,7 +9,8 @@ category: "Loco-Manipulation and WBC"
 # HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control
 **把"人形 + 滑板"显式建模成一个耦合的混合动力学系统，再用物理感知 RL + AMP 把人形 G1 真的教会了上街滑板**
 
-> 📅 阅读日期: 2026-05-07  
+> 📅 阅读日期: 2026-05-07
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 滑板 · 人物-物体耦合 · 混合动力学
 
 ---

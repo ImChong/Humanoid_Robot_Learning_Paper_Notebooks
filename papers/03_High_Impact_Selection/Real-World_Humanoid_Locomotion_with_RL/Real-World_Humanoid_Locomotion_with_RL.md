@@ -9,8 +9,10 @@ zhname: "首个 RL 真实世界人形行走（Berkeley · Causal Transformer）"
 # Real-World Humanoid Locomotion with Reinforcement Learning
 **首个 RL 真实世界人形行走（Berkeley · Causal Transformer）**
 
-> 📅 阅读日期: 2026-05-16  
-> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics  
+> 📅 阅读日期: 2026-05-16
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics
+>
 > 🧭 状态: 首版基础摘要（含 mermaid 流程图）；后续可结合 v2 附录消融与 Digit URDF 二读补表。
 
 ---

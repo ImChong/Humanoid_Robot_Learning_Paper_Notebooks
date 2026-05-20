@@ -9,7 +9,8 @@ category: "Loco-Manipulation and WBC"
 # EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration
 **EgoHumanoid：首个将大量人类第一视角演示与少量机器人数据联合训练的 VLA 全身操作框架**
 
-> 📅 阅读日期: 2026-04-29  
+> 📅 阅读日期: 2026-04-29
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 跨体态迁移 · 视觉-语言-动作模型
 
 ---

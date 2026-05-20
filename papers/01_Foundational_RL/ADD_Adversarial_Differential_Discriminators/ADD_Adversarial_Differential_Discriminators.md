@@ -8,7 +8,8 @@ category: "Foundational RL"
 # ADD: Adversarial Disentanglement and Distillation
 **对抗差分鉴别器：基于物理的运动模仿**
 
-> 📅 阅读日期: 2026-04-07  
+> 📅 阅读日期: 2026-04-07
+>
 > 🏷️ 板块: Reinforcement Learning / Motion Imitation / Adversarial Learning
 
 ---

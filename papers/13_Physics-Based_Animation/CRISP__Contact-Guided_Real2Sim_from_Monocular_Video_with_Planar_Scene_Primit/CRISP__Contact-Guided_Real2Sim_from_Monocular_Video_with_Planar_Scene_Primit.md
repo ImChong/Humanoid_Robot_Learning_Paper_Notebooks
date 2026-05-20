@@ -10,7 +10,9 @@ category: "Physics-Based Animation"
 **用「人体接触线索 + 平面基元拟合」把一段单目视频变成可仿真的人–场景，把动作跟踪失败率从 55.2% 压到 6.9%**
 
 > 📅 阅读日期: 2026-05-19
+>
 > 🏷️ 板块: 13 Physics-Based Animation · Real2Sim / 单目视频重建 / 接触建模 / 人形 RL 跟踪
+>
 > 🔁 推进轨: 模块轮转（12_Hardware_Design → **13_Physics-Based_Animation**）
 
 ---

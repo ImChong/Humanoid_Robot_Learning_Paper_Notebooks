@@ -8,7 +8,8 @@ category: "Sim-to-Real"
 # Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)
 **平滑人形机器人运动：基于 Lipschitz 约束策略的 Sim-to-Real 动作平滑**
 
-> 📅 阅读日期: 2026-04-06  
+> 📅 阅读日期: 2026-04-06
+>
 > 🏷️ 板块: Sim-to-Real / Humanoid Locomotion / Policy Regularization
 
 ---

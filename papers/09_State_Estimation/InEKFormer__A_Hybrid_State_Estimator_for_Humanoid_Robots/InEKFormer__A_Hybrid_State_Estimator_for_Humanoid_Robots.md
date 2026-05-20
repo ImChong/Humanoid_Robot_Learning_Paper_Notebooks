@@ -10,7 +10,9 @@ category: "State Estimation"
 **让 Transformer 从「状态 / 观测残差历史」里隐式学出噪声参数，把不变扩展卡尔曼滤波（InEKF）从「靠专家手调」解放出来**
 
 > 📅 阅读日期: 2026-05-19
+>
 > 🏷️ 板块: State Estimation · 不变 EKF / Transformer 混合 · 人形浮动基状态估计
+>
 > 🔁 推进轨: 模块轮转（08_Navigation → **09_State_Estimation**）
 
 ---

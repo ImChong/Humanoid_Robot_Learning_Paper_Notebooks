@@ -9,8 +9,10 @@ zhname: "UH-1：从海量互联网人类视频中学习通用人形姿态控制"
 # UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control
 **UH-1：从海量互联网人类视频中学习通用人形姿态控制**
 
-> 📅 阅读日期: 2026-05-21  
-> 🏷️ 板块: 03_High_Impact_Selection / Whole-Body Control Core（H6）  
+> 📅 阅读日期: 2026-05-21
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Whole-Body Control Core（H6）
+>
 > 🧭 状态: 首版基础摘要（含 mermaid 流程图），覆盖 Humanoid-X 数据流水线、UH-1 Transformer 与文本→动作两种控制接口；后续可在跑通官方 checkpoint 后补充消融与定量结果。
 
 ---

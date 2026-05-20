@@ -10,7 +10,9 @@ category: "Manipulation"
 **用 IMU 全身动捕 + 学习式手部重定向，把人形灵巧操作的数据采集门槛打下来**
 
 > 📅 阅读日期: 2026-05-16
+>
 > 🏷️ 板块: Manipulation · 遥操作 · 灵巧手 · 模仿学习
+>
 > 🔁 推进轨: 模块轮转（05_Locomotion → **06_Manipulation**）
 
 ---

@@ -9,8 +9,10 @@ zhname: "HugWBC：面向多步态人形的统一通用全身控制器"
 # HugWBC: A Unified and General Humanoid Whole-Body Controller for Versatile Locomotion
 **HugWBC：面向多步态人形的统一通用全身控制器**
 
-> 📅 阅读日期: 2026-05-17  
-> 🏷️ 板块: 03_High_Impact_Selection / Whole-Body Control Core  
+> 📅 阅读日期: 2026-05-17
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Whole-Body Control Core
+>
 > 🧭 状态: 首版基础摘要（含 mermaid 流程图）；后续可结合论文消融表与代码超参做二读补表。
 
 ---

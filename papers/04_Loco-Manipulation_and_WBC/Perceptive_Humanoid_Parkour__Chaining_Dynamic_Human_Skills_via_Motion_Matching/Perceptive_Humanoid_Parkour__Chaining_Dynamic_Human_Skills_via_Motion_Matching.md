@@ -9,7 +9,8 @@ category: "Loco-Manipulation and WBC"
 # Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching
 **PHP：让人形机器人用“动作匹配 + 感知决策”跨越复杂障碍的长程跑酷框架**
 
-> 📅 阅读日期: 2026-04-28  
+> 📅 阅读日期: 2026-04-28
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 高动态跑酷
 
 ---

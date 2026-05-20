@@ -9,7 +9,8 @@ category: "Loco-Manipulation and WBC"
 # Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework
 **从模仿到感知：渐进式三阶段框架，让 Unitree G1 学会真实球场上的拟人踢球技能**
 
-> 📅 阅读日期: 2026-05-05  
+> 📅 阅读日期: 2026-05-05
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 运动技能 · 视觉-动作集成
 
 ---

@@ -9,8 +9,10 @@ zhname: "ANYmal 敏捷运动技能学习（sim-to-real RL 奠基作）"
 # Learning Agile and Dynamic Motor Skills for Legged Robots
 **ANYmal 敏捷运动技能学习（sim-to-real RL 奠基作）**
 
-> 📅 阅读日期: 2026-05-17  
-> 🏷️ 板块: 03_High_Impact_Selection / Sim-to-Real & Foundation Model  
+> 📅 阅读日期: 2026-05-17
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Sim-to-Real & Foundation Model
+>
 > 🧭 状态: 首版基础摘要（含 mermaid 流程图）；后续可补 actuator network 训练细节与 reward shaping 全表。
 
 ---

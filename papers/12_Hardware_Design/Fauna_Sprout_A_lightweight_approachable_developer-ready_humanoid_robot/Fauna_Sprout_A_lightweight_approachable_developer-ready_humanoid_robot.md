@@ -10,7 +10,9 @@ category: "硬件设计"
 **Fauna Sprout：把"在共享人类空间里安全可玩"作为第一性原则的轻量级人形开发平台**
 
 > 📅 阅读日期: 2026-05-24
+>
 > 🏷️ 板块: 12 Hardware Design · 软体外壳 / 顺应控制 / 开发者平台
+>
 > 🔁 推进轨: 模块轮转（11_Simulation_Benchmark → **12_Hardware_Design**）
 
 ---

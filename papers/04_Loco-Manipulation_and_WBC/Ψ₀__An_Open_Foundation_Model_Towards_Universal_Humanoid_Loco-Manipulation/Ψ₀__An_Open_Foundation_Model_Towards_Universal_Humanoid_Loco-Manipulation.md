@@ -10,6 +10,7 @@ category: "Loco-Manipulation and WBC"
 **Ψ₀：用 800 小时人类视频 + 30 小时机器人数据训出的开源人形 VLA 基础模型**
 
 > 📅 阅读日期: 2026-04-25
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 通用人形基础模型
 
 ---

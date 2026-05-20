@@ -10,7 +10,9 @@ category: "全身控制"
 **鲁棒且通用的人形机器人动作跟踪：用动力学条件化的命令聚合抵御噪声参考**
 
 > 📅 阅读日期: 2026-05-17
+>
 > 🏷️ 板块: 04 Loco-Manipulation / WBC · 动作跟踪 / 单策略全身控制
+>
 > 🔁 推进轨: 模块轮转（14_Human_Motion → **04_Loco-Manipulation_and_WBC**）
 
 ---

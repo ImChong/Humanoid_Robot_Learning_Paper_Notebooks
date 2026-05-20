@@ -10,8 +10,10 @@ paper_order: 205
 # Learning Sim-to-Real Humanoid Locomotion in 15 Minutes
 **15 分钟人形 sim-to-real：FastSAC / FastTD3 大规模并行配方（Amazon FAR）**
 
-> 📅 阅读日期: 2026-05-17  
-> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics（H15）  
+> 📅 阅读日期: 2026-05-17
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics（H15）
+>
 > 🧭 状态: 首版基础摘要稿；含 PDF / HTML、项目页、开源实现与流程图。
 
 ---

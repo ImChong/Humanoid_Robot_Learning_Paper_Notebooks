@@ -10,7 +10,9 @@ category: "Navigation"
 **STATE-NAV：把"双足走多稳"学成一张速度图，再用它驱动 RRT\* + MPC 在粗糙地形上跑稳**
 
 > 📅 阅读日期: 2026-05-20
+>
 > 🏷️ 板块: Navigation · 可通过性估计 · 双足导航 · 粗糙地形 · 风险敏感规划
+>
 > 🔁 推进轨: 模块轮转（07_Teleoperation → **08_Navigation**）
 
 ---

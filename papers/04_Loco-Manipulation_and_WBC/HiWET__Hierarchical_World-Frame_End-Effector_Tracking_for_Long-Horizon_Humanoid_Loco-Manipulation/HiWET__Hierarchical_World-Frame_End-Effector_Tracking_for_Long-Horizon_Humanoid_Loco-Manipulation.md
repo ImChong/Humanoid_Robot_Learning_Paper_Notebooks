@@ -10,6 +10,7 @@ category: "Loco-Manipulation and WBC"
 **分层世界坐标框架：通过子目标分解与运动学流形先验实现稳定的长时域人形 Loco-Manipulation**
 
 > 📅 阅读日期: 2026-05-04
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 层级控制 · 末端执行器跟踪
 
 ---

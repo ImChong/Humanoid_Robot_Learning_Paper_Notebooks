@@ -9,8 +9,10 @@ zhname: "SONIC：用规模化运动跟踪打造自然的人形全身控制器"
 # SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control
 **SONIC：用规模化运动跟踪打造自然的人形全身控制器**
 
-> 📅 阅读日期: 2026-05-20（2026-05-16 扩充：补全官方训练 / 评估命令与源码对照）  
-> 🏷️ 板块: 03_High_Impact_Selection / Whole-Body Control Core（H5）  
+> 📅 阅读日期: 2026-05-20（2026-05-16 扩充：补全官方训练 / 评估命令与源码对照）
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Whole-Body Control Core（H5）
+>
 > 🧭 状态: 已对照 [NVlabs/GR00T-WholeBodyControl](https://github.com/NVlabs/GR00T-WholeBodyControl)（`gear_sonic/` 子树）官方实现核对方法描述，并附训练 / 评估 / ONNX 导出全流程命令。
 
 ---

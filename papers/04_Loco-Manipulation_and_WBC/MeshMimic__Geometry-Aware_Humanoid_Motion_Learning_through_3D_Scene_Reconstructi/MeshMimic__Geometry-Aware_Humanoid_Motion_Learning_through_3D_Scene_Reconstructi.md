@@ -9,7 +9,8 @@ category: "Loco-Manipulation and WBC"
 # MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction
 **MeshMimic：用单目视频重建“人-场景-接触”，再训练人形机器人做地形感知运动**
 
-> 📅 阅读日期: 2026-04-29  
+> 📅 阅读日期: 2026-04-29
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 几何感知模仿学习
 
 ---

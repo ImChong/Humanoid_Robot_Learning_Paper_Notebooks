@@ -9,7 +9,8 @@ category: "Loco-Manipulation and WBC"
 # Learning Human-Like Badminton Skills for Humanoid Robots
 **从模仿到交互：渐进式强化学习框架赋予人形机器人零样本迁移的羽毛球技能**
 
-> 📅 阅读日期: 2026-05-02  
+> 📅 阅读日期: 2026-05-02
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 运动技能 · Sim-to-Real
 
 ---

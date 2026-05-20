@@ -8,7 +8,8 @@ category: "Foundational RL"
 # ASE: Adversarial Skill Embeddings for Large-Scale Motion Control
 **大规模可复用对抗技能嵌入：物理仿真角色**
 
-> 📅 阅读日期: 2026-04-07  
+> 📅 阅读日期: 2026-04-07
+>
 > 🏷️ 板块: Reinforcement Learning / Motion Imitation / Skill Embedding
 
 ---
