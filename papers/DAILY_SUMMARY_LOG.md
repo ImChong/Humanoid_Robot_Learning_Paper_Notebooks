@@ -68,6 +68,7 @@
 | 2026-05-19 | 52 | [Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots](04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.md) | Loco-Manipulation / WBC · 伴语手势 / 语义对齐 / LLM 检索 + Motion-GPT | 截至当前未见公开发布；论文采用的重定向中间层 [YanjieZe/GMR](https://github.com/YanjieZe/GMR)（ICRA 2026） |
 | 2026-05-20 | 190 | [Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels](05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels.md) | Locomotion / 端到端视觉 / 高保真深度仿真 / 行为蒸馏 | [Hellod035/Now_You_See_That](https://github.com/Hellod035/Now_You_See_That) · [项目页](https://hellod035.github.io/Now_You_See_That/) |
 | 2026-05-20 | 273 | [DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos](06_Manipulation/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos.md) | Manipulation / 世界模型 / 视频扩散 / 通用机器人 | [NVIDIA/DreamDojo](https://github.com/nvidia/DreamDojo) · [项目页](https://dreamdojo-world.github.io/) |
+| 2026-05-20 | 331 | [TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior](07_Teleoperation/TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior/TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior.md) | Teleoperation / 多专家门控 / 运动先验 / VAE | 截至当前未见公开发布（[arXiv 2602.09628](https://arxiv.org/abs/2602.09628)） |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -191,6 +192,7 @@
 | 52 | Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots | 04_Loco-Manipulation_and_WBC | ✅ 已完成（2026-05-19） |
 | 190 | Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels | 05_Locomotion | ✅ 已完成（2026-05-20） |
 | 273 | DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos | 06_Manipulation | ✅ 已完成（2026-05-20） |
-| ? | （明日：07_Teleoperation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 07_Teleoperation | ⏭️ 下一篇候选 |
+| 331 | TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior | 07_Teleoperation | ✅ 已完成（2026-05-20） |
+| ? | （明日：08_Navigation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 08_Navigation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

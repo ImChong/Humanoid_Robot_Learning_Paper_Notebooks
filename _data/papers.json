@@ -744,6 +744,14 @@
         "dir": "ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control",
         "arxiv": "2602.11321",
         "zhname": "ExtremControl：用直接末端控制把人形遥操作的端到端延迟压到 50 ms"
+      },
+      {
+        "title": "TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior",
+        "path": "papers/07_Teleoperation/TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior/TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior.md",
+        "url": "/papers/07_Teleoperation/TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior/TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior.html",
+        "dir": "TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior",
+        "arxiv": "2602.09628",
+        "zhname": "TeleGate：用门控专家选择 + 运动先验做全身人形遥操作"
       }
     ],
     "zhname": "遥操作"
