@@ -12,6 +12,7 @@
   var viewport = null;
   var stage = null;
   var hintEl = null;
+  var lightboxRenderSeq = 0;
   var pointers = new Map();
   var pinchSnapshot = null;
   var singlePanLast = null;
@@ -236,34 +237,107 @@
     setScaleAtFocal(focal.x, focal.y, state.scale * wheelScaleFactor(e));
   }
 
-  function open(sourceEl) {
+  function sanitizeMermaidSvg(svgString) {
+    if (typeof DOMPurify !== 'undefined') {
+      return DOMPurify.sanitize(svgString);
+    }
+    return svgString;
+  }
+
+  function mountLightboxSvg(svgString) {
+    stage.innerHTML = sanitizeMermaidSvg(svgString);
+    var svg = stage.querySelector('svg');
+    if (!svg) return null;
+    svg.removeAttribute('width');
+    svg.removeAttribute('height');
+    svg.style.cssText = '';
+    svg.style.maxWidth = 'none';
+    svg.classList.add('mermaid-lightbox__svg');
+    var size = measureSvg(svg);
+    svg.style.width = size.width + 'px';
+    svg.style.height = size.height + 'px';
+    return svg;
+  }
+
+  function openWithSvgClone(sourceEl) {
     var svg = sourceEl.querySelector('svg');
-    if (!svg) return;
-
-    ensureLightbox();
-    stage.innerHTML = '';
+    if (!svg) return false;
     var clone = cloneSvgForLightbox(svg);
+    stage.innerHTML = '';
     stage.appendChild(clone);
-
-    resetPointerState();
-    lightbox.hidden = false;
-    lightbox.classList.add('is-open');
-    document.body.classList.add('mermaid-lightbox-open');
-
     requestAnimationFrame(function () {
       requestAnimationFrame(function () {
         fitToViewport(clone);
       });
     });
+    return true;
+  }
+
+  function open(sourceEl) {
+    var svg = sourceEl.querySelector('svg');
+    if (!svg) return;
+
+    ensureLightbox();
+    resetPointerState();
+    lightbox.hidden = false;
+    lightbox.classList.add('is-open');
+    document.body.classList.add('mermaid-lightbox-open');
+
+    var sourceCode = sourceEl.getAttribute('data-original-code');
+    var canHiResRender =
+      sourceCode &&
+      typeof mermaid !== 'undefined' &&
+      typeof mermaid.render === 'function';
+
+    if (!canHiResRender) {
+      stage.innerHTML = '';
+      openWithSvgClone(sourceEl);
+      return;
+    }
+
+    var renderSeq = ++lightboxRenderSeq;
+    stage.innerHTML = '';
+    stage.setAttribute('aria-busy', 'true');
+
+    var graphText =
+      typeof window.buildMermaidLightboxGraph === 'function'
+        ? window.buildMermaidLightboxGraph(sourceCode)
+        : sourceCode.trim();
+    var renderId = 'mermaid-lightbox-' + renderSeq;
+
+    Promise.resolve(mermaid.render(renderId, graphText))
+      .then(function (result) {
+        if (renderSeq !== lightboxRenderSeq || lightbox.hidden) return;
+        stage.removeAttribute('aria-busy');
+        var mounted = mountLightboxSvg(result.svg);
+        if (!mounted) {
+          openWithSvgClone(sourceEl);
+          return;
+        }
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            fitToViewport(mounted);
+          });
+        });
+      })
+      .catch(function () {
+        if (renderSeq !== lightboxRenderSeq || lightbox.hidden) return;
+        stage.removeAttribute('aria-busy');
+        openWithSvgClone(sourceEl);
+      });
   }
 
   function close() {
     if (!lightbox || lightbox.hidden) return;
+    lightboxRenderSeq += 1;
     lightbox.hidden = true;
     lightbox.classList.remove('is-open');
     document.body.classList.remove('mermaid-lightbox-open');
     resetPointerState();
-    if (stage) stage.innerHTML = '';
+    if (stage) {
+      stage.innerHTML = '';
+      stage.removeAttribute('aria-busy');
+    }
   }
 
   function onKeyDown(e) {
