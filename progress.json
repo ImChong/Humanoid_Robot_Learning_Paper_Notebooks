@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 331,
-      "last_title": "TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": 352,
+      "last_title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
+      "next_module": "09_State_Estimation"
     },
-    "last_summary_index": 331,
+    "last_summary_index": 352,
     "last_summary_date": "2026-05-20",
-    "last_summary_title": "TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior",
+    "last_summary_title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
     "next_summary_index": null,
     "log": [
       {
@@ -510,9 +510,20 @@
         "arxiv": "2602.09628",
         "source_repo": "",
         "project_page": ""
+      },
+      {
+        "date": "2026-05-20",
+        "index": 352,
+        "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
+        "folder": "papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain",
+        "module": "08_Navigation",
+        "track": "module_rotation",
+        "arxiv": "2506.01046",
+        "source_repo": "",
+        "project_page": "https://state-nav.github.io/statenav/"
       }
     ],
-    "last_completed_index": 331,
+    "last_completed_index": 352,
     "next_index": null
   },
   "papers": [
@@ -3109,6 +3120,16 @@
       "pdf_file": "",
       "route": "Teleoperation",
       "title_cn": "TeleGate：用门控专家选择 + 运动先验做全身人形遥操作"
+    },
+    {
+      "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
+      "folder": "papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain",
+      "note_file": "STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.md",
+      "status": "done",
+      "arxiv": "2506.01046",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航"
     }
   ]
 }
