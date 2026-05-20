@@ -935,6 +935,14 @@
         "dir": "Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot",
         "arxiv": "2601.18963",
         "zhname": "Fauna Sprout：一款轻量、亲和、开发者友好的人形机器人开发平台"
+      },
+      {
+        "title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand: Toward Dexterous Manipulation for Payload-Constrained Humanoids",
+        "path": "papers/12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.md",
+        "url": "/papers/12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.html",
+        "dir": "Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand",
+        "arxiv": "2512.24657",
+        "zhname": "拮抗式 Bowden 缆绳驱动的轻量化机器手：面向负载受限人形的灵巧操作"
       }
     ],
     "zhname": "硬件设计"
