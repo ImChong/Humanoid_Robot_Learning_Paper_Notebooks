@@ -64,6 +64,35 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ===== Scrollbars (transparent track — no default white gutter) ===== */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 /* ===== Header ===== */
 .site-header {
   background: var(--header-bg);
@@ -381,12 +410,12 @@ body {
   }
 }
 
-/* TOC scrollbar */
+/* TOC: narrower thumb; track stays transparent via global rules above */
 .toc-sidebar::-webkit-scrollbar {
   width: 3px;
+  height: 3px;
 }
 .toc-sidebar::-webkit-scrollbar-thumb {
-  background: var(--border);
   border-radius: 3px;
 }
 
