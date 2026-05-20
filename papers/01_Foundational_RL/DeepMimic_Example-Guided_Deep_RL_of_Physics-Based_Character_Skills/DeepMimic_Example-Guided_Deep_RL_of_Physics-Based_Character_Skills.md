@@ -8,7 +8,8 @@ category: "Foundational RL"
 # DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills
 **深度模仿：基于示例引导的物理角色技能深度强化学习**
 
-> 📅 阅读日期: -  
+> 📅 阅读日期: -
+>
 > 🏷️ 板块: Reinforcement Learning / Motion Imitation
 
 ---

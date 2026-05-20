@@ -10,8 +10,10 @@ paper_order: 296
 # ECO: Energy-Constrained Optimization with Reinforcement Learning for Humanoid Walking
 **ECO：把人形行走能耗写成显式约束的受限 RL（PPO-Lagrangian · BRUCE）**
 
-> 📅 阅读日期: 2026-05-17  
-> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics（H16）  
+> 📅 阅读日期: 2026-05-17
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics（H16）
+>
 > 🧭 状态: 首版基础摘要稿；含 PDF / HTML、项目页、开源实现与流程图。
 
 ---

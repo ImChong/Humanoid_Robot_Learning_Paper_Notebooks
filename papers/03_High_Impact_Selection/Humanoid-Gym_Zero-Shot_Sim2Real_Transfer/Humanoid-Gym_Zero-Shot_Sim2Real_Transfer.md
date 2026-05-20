@@ -10,7 +10,9 @@ zhname: "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架"
 **Humanoid-Gym：面向人形机器人零样本 Sim2Real 迁移的 RL 框架**
 
 > 📅 阅读日期: 2026-05-18
+>
 > 🏷️ 板块: 03_High_Impact_Selection / Simulation Platform & Tools
+>
 > 🧭 状态: 首版基础摘要（含 mermaid 流程图）；后续可补 reward 全表细节与 XBot-S/L 部署调参经验。
 
 ---

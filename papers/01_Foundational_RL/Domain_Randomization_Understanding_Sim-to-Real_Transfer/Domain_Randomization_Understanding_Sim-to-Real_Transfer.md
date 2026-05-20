@@ -8,7 +8,8 @@ category: "仿真到现实"
 # Understanding Domain Randomization for Sim-to-real Transfer
 **理解域随机化在仿真到现实迁移中的作用**
 
-> 📅 阅读日期: 待读  
+> 📅 阅读日期: 待读
+>
 > 🏷️ 板块: Sim-to-Real / Theory
 
 ---

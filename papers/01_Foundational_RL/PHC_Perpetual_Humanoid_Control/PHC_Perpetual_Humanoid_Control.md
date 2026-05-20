@@ -8,7 +8,8 @@ category: "Foundational RL"
 # PHC: Perpetual Humanoid Control for Real-time Simulated Avatars
 **永续人形控制：面向实时仿真虚拟角色**
 
-> 📅 阅读日期: -  
+> 📅 阅读日期: -
+>
 > 🏷️ 板块: Reinforcement Learning / Motion Imitation / Fault Recovery
 
 ---

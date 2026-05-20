@@ -9,7 +9,8 @@ category: "Loco-Manipulation and WBC"
 # Embedding Classical Balance Control Principles in Reinforcement Learning for Humanoid Recovery
 **把 Capture Point / CoM / Centroidal Momentum 这些经典平衡指标，直接做成 RL 的学习结构**
 
-> 📅 阅读日期: 2026-04-28  
+> 📅 阅读日期: 2026-04-28
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 跌倒恢复
 
 ---

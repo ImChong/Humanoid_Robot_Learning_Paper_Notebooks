@@ -10,7 +10,9 @@ zhname: "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
 **BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架（BRS）**
 
 > 📅 阅读日期: 2026-05-16
+>
 > 🏷️ 板块: 03_High_Impact_Selection / Simulation Platform & Tools
+>
 > 🧭 状态: 首版摘要（含 mermaid）；与 BEHAVIOR-1K 任务族对齐，侧重 JoyLo + WB-VIMA 两条主线。
 
 ---

@@ -10,7 +10,9 @@ paper_order: 1
 **把"人类动作 → 机器人动作"这一步做到好，是 RL tracking 能不能跟上的关键**
 
 > 📅 阅读日期: 2026-04-19
+>
 > 🏷️ 板块: Motion Retargeting
+>
 > ℹ️ 笔记已核对 arXiv HTML 全文（2510.02252）+ `YanjieZe/GMR` GitHub 仓库（README、`DOC.md`、`TEST_MOTIONS.md`、核心代码）。论文独有的 ablation 数字、用户研究结论见下文「实验结果」。
 
 ---

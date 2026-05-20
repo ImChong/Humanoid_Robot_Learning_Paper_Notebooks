@@ -10,7 +10,9 @@ category: "Sim-to-Real"
 **让同一个人形 WBC 策略在 IsaacGym / IsaacSim / Genesis / MuJoCo 四个仿真器里"同时"训练，把每个仿真器的归纳偏置当作天然的 domain randomization**
 
 > 📅 阅读日期: 2026-05-20
+>
 > 🏷️ 板块: Sim-to-Real · 多仿真器联合训练 · 动力学级域随机化 · 人形 WBC
+>
 > 🔁 推进轨: 模块轮转（09_State_Estimation → **10_Sim-to-Real**）
 
 ---

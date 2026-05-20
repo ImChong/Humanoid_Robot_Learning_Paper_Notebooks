@@ -20,6 +20,7 @@ from _common import (  # noqa: E402
     has_frontmatter,
     is_stub,
     normalize_name,
+    normalize_paper_meta_blockquotes,
     parse_frontmatter,
     stub_reason,
 )
@@ -314,6 +315,13 @@ def process_papers():
 
                 with open(fpath, encoding='utf-8') as f:
                     content = f.read()
+
+                normalized, meta_changed = normalize_paper_meta_blockquotes(content)
+                if meta_changed:
+                    content = normalized
+                    with open(fpath, 'w', encoding='utf-8') as f:
+                        f.write(content)
+                    print(f"  Normalized meta blockquotes: {fpath}")
 
                 check_stub(fpath, content)
 

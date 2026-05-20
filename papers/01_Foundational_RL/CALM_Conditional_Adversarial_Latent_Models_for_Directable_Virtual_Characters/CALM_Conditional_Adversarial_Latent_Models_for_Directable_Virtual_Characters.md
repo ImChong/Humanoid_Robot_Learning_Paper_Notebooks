@@ -9,7 +9,8 @@ category: "Foundational RL"
 # CALM: Conditional Adversarial Latent Models for Directable Virtual Characters
 **条件对抗潜变量模型：可控虚拟角色**
 
-> 📅 阅读日期: 2026-04-07  
+> 📅 阅读日期: 2026-04-07
+>
 > 🏷️ 板块: Reinforcement Learning / Motion Imitation / Skill Composition
 
 ---

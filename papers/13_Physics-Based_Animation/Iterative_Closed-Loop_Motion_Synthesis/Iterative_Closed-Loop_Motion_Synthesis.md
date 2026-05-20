@@ -10,7 +10,9 @@ category: "物理仿真动画"
 **迭代闭环动作合成：用「合成 → 训练 → 失败诊断 → 再合成」的循环扩展人形控制能力**
 
 > 📅 阅读日期: 2026-05-17
+>
 > 🏷️ 板块: 13 Physics-Based Animation · 数据自合成 / 课程学习 / 多模态 Agent
+>
 > 🔁 推进轨: 模块轮转（12_Hardware_Design → **13_Physics-Based_Animation**）
 
 ---

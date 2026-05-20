@@ -10,7 +10,9 @@ paper_order: 3
 **双层优化：上层调「跨本体映射参数」，下层用 RL 在物理仿真里把参考轨迹「跑成」可跟踪的样子**
 
 > 📅 阅读日期: 2026-05-13
+>
 > 🏷️ 板块: Motion Retargeting
+>
 > ℹ️ 笔记已对照 [arXiv HTML 2605.06593v1](https://arxiv.org/html/2605.06593v1) 与 arXiv 元数据（SIGGRAPH 2026 / TOG）整理；实现与定理细节以原文为准。
 
 ---

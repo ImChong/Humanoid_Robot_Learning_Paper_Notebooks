@@ -10,7 +10,9 @@ category: "Manipulation"
 **把可执行的轨迹、密集的距离场感知与高自由度全身计算统一进一个 GPU 原生框架**
 
 > 📅 阅读日期: 2026-05-19
+>
 > 🏷️ 板块: 06 Manipulation · 运动规划 · 全身控制 · GPU 加速
+>
 > 🔁 推进轨: 模块轮转（05_Locomotion → **06_Manipulation**）
 
 ---

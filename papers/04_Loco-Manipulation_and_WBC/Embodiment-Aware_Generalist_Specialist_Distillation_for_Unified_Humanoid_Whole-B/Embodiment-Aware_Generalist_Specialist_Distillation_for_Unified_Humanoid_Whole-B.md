@@ -9,7 +9,8 @@ category: "Loco-Manipulation and WBC"
 # Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control
 **一个策略管多种人形：用"泛化—专家"循环蒸馏，把 H1 / G1 / N1 / T1 / Adam 统一成一份 WBC 控制器**
 
-> 📅 阅读日期: 2026-05-08  
+> 📅 阅读日期: 2026-05-08
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 跨本体 · 策略蒸馏 · 统一指令空间
 
 ---

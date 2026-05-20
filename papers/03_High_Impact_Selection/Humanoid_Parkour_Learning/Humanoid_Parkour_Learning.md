@@ -10,8 +10,10 @@ paper_order: 294
 # Humanoid Parkour Learning
 **人形跑酷：无动作先验的端到端视觉全身控制（Unitree H1）**
 
-> 📅 阅读日期: 2026-05-25  
-> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics（H14）  
+> 📅 阅读日期: 2026-05-25
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics（H14）
+>
 > 🧭 状态: 首版基础摘要稿；含 PDF / HTML / 项目页、相关代码与流程图。
 
 ---

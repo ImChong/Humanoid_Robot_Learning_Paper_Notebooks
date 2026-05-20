@@ -10,7 +10,9 @@ category: "全身控制"
 **语义化伴语手势合成与实时控制：LLM 生成检索 + Motion-GPT + GMR 重定向 + MotionTracker 跟踪，让 Unitree G1 边说边比划**
 
 > 📅 阅读日期: 2026-05-19
+>
 > 🏷️ 板块: 04 Loco-Manipulation / WBC · 伴语手势 · 语义对齐 · 文本/语音驱动 · 实时控制
+>
 > 🔁 推进轨: 模块轮转（14_Human_Motion → **04_Loco-Manipulation_and_WBC**）
 
 ---

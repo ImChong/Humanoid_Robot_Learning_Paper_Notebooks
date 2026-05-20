@@ -9,8 +9,10 @@ zhname: "BFM：面向人形全身控制的行为基础模型"
 # Behavior Foundation Model for Humanoid Robots
 **BFM：面向人形全身控制的行为基础模型**
 
-> 📅 阅读日期: 2026-05-17  
-> 🏷️ 板块: 03_High_Impact_Selection / Sim-to-Real & Foundation Model  
+> 📅 阅读日期: 2026-05-17
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Sim-to-Real & Foundation Model
+>
 > 🧭 状态: 首版基础摘要（含 mermaid 流程图）；与 HOVER、MaskedMimic 等「掩码 + 蒸馏」路线对照阅读更佳。
 
 ---

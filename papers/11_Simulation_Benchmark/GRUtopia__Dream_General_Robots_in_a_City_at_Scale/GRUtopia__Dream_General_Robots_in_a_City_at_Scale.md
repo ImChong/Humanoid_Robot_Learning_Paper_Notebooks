@@ -10,7 +10,9 @@ category: "Simulation Benchmark"
 **用 10 万级精标注交互场景 + LLM 驱动的 NPC + Loco-Nav / Loco-Manip 基准，构建首个面向通用机器人的城市级仿真社会**
 
 > 📅 阅读日期: 2026-05-17
+>
 > 🏷️ 板块: 11 Simulation Benchmark · 城市级仿真 / 服务型场景 / 具身 AI
+>
 > 🔁 推进轨: 模块轮转（10_Sim-to-Real → **11_Simulation_Benchmark**）
 
 ---

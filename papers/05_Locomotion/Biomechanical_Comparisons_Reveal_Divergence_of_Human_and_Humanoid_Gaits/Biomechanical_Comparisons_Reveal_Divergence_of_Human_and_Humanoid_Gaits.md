@@ -10,7 +10,9 @@ category: "Locomotion"
 **一个把"人形机器人到底走得多像人"量化下来的生物力学评估框架（GDAF）+ Unitree G1 全速段步态数据集**
 
 > 📅 阅读日期: 2026-05-15
+>
 > 🏷️ 板块: Locomotion · 生物力学评估 · 步态分析 · Sim-to-Real 评估
+>
 > 🔁 推进轨: 模块轮转（04_WBC → **05_Locomotion**）
 
 ---

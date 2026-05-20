@@ -8,7 +8,8 @@ category: "Foundational RL"
 # AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control
 **对抗运动先验：风格化物理角色控制**
 
-> 📅 阅读日期: 2026-04-19  
+> 📅 阅读日期: 2026-04-19
+>
 > 🏷️ 板块: Reinforcement Learning / Motion Imitation / Style Learning
 
 ---

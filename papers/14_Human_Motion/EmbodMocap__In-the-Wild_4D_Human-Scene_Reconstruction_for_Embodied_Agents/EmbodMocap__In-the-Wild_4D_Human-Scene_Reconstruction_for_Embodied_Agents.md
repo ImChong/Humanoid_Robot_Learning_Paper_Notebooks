@@ -10,7 +10,9 @@ category: "人体动作生成"
 **双 iPhone 户外 4D 人-场景重建，给具身智能体喂数据**
 
 > 📅 阅读日期: 2026-05-19
+>
 > 🏷️ 板块: 14 Human Motion · 户外动捕 / 数据采集 / 具身智能数据集
+>
 > 🔁 推进轨: 模块轮转（13_Physics-Based_Animation → **14_Human_Motion**）
 
 ---

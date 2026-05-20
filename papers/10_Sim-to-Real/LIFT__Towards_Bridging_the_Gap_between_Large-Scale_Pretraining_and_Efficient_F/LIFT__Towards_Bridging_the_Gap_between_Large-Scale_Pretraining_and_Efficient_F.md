@@ -10,7 +10,9 @@ category: "Sim-to-Real"
 **JAX-SAC 大批量 + 高 UTD 预训练，叠加 Lagrangian + 残差的物理先验世界模型，1 小时 4090 内完成新环境微调**
 
 > 📅 阅读日期: 2026-05-19
+>
 > 🏷️ 板块: Sim-to-Real · 大规模预训练 · 模型化微调 · 物理先验世界模型
+>
 > 🔁 推进轨: 模块轮转（09_State_Estimation → **10_Sim-to-Real**）
 
 ---

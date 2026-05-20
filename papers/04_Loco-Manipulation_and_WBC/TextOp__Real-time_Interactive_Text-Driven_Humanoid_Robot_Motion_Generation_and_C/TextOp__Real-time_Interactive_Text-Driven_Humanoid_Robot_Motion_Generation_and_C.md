@@ -9,7 +9,8 @@ category: "Loco-Manipulation and WBC"
 # TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control
 **文本即指令：分层扩散架构实现人形机器人实时可交互的自然语言全身控制**
 
-> 📅 阅读日期: 2026-05-03  
+> 📅 阅读日期: 2026-05-03
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 文本驱动 · 实时控制
 
 ---

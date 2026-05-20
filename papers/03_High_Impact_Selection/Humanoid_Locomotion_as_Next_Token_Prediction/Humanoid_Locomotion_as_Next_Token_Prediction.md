@@ -10,8 +10,10 @@ paper_order: 293
 # Humanoid Locomotion as Next Token Prediction
 **人形行走即下一 token 预测（自回归传感运动轨迹 · Digit 实机）**
 
-> 📅 阅读日期: 2026-05-22  
-> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics（H13）  
+> 📅 阅读日期: 2026-05-22
+>
+> 🏷️ 板块: 03_High_Impact_Selection / Locomotion Classics（H13）
+>
 > 🧭 状态: 首版基础摘要稿；含 PDF / HTML / 项目页与流程图。与 H12「RL 因果 Transformer」对照：本文走 **离线自回归生成式建模** 而非在线 PPO。
 
 ---

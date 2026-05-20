@@ -10,7 +10,9 @@ category: "Teleoperation"
 **用高频全局定位反馈把人形遥操作从「局部跟踪」升级为「闭环全局跟踪」，解决长时序漂移问题**
 
 > 📅 阅读日期: 2026-05-17
+>
 > 🏷️ 板块: Teleoperation · 全身控制 · 动作跟踪 · Sim-to-Real
+>
 > 🔁 推进轨: 模块轮转（06_Manipulation → **07_Teleoperation**）
 
 ---

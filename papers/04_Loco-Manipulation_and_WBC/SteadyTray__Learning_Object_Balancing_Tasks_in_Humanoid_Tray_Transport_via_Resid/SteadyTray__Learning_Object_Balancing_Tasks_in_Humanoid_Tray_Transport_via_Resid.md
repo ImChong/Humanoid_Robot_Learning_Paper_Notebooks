@@ -10,6 +10,7 @@ category: "Loco-Manipulation and WBC"
 **SteadyTray：让 Unitree G1 端托盘走路不洒水的"残差师生 RL"**
 
 > 📅 阅读日期: 2026-04-25
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 高动态平衡操作
 
 ---

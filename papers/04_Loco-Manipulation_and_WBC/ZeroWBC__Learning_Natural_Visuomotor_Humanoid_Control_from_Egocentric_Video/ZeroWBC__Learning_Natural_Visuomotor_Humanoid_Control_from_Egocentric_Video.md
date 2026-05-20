@@ -10,6 +10,7 @@ category: "Loco-Manipulation and WBC"
 **ZeroWBC：把人类第一视角视频当训练集，省掉昂贵遥操作的人形全身控制**
 
 > 📅 阅读日期: 2026-04-26
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 视频驱动的人形视触控制
 
 ---

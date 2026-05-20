@@ -10,7 +10,9 @@ category: "硬件设计"
 **肌骨型人形机器人的"肌肉"是怎么造、怎么管、怎么用的——东京大学 JSK 在 Kengoro & Musashi 上的实证总结**
 
 > 📅 阅读日期: 2026-05-23
+>
 > 🏷️ 板块: 12 Hardware Design · 肌骨型人形 / 仿生驱动 / 肌肉建模
+>
 > 🔁 推进轨: 模块轮转（11_Simulation_Benchmark → **12_Hardware_Design**）
 
 ---

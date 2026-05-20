@@ -120,6 +120,63 @@ def parse_frontmatter(content: str) -> dict:
     return result
 
 
+def normalize_paper_meta_blockquotes(content: str) -> tuple[str, bool]:
+    """Ensure paper header blockquote lines render one item per visual line.
+
+    Kramdown merges consecutive ``>`` lines into a single ``<p>`` unless they
+    are separated by an empty ``>`` continuation line. Without that separator,
+    "阅读日期", "板块", and other header callouts collapse onto one line.
+    """
+    lines = content.split('\n')
+    h1_idx = next(
+        (i for i, line in enumerate(lines) if line.startswith('# ') and not line.startswith('## ')),
+        None,
+    )
+    if h1_idx is None:
+        return content, False
+
+    end_idx = len(lines)
+    for i in range(h1_idx + 1, min(len(lines), h1_idx + 30)):
+        stripped = lines[i].strip()
+        if stripped == '---' or lines[i].startswith('## '):
+            end_idx = i
+            break
+
+    content_bq_indices: list[int] = []
+    for i in range(h1_idx + 1, end_idx):
+        if lines[i].startswith('>'):
+            if lines[i].strip() != '>':
+                content_bq_indices.append(i)
+        elif lines[i].strip() and content_bq_indices:
+            break
+
+    if len(content_bq_indices) < 2:
+        return content, False
+
+    changed = False
+    new_lines = list(lines)
+
+    for i in content_bq_indices:
+        stripped = new_lines[i].rstrip()
+        if stripped != new_lines[i]:
+            new_lines[i] = stripped
+            changed = True
+
+    offset = 0
+    for j in range(1, len(content_bq_indices)):
+        prev_i = content_bq_indices[j - 1] + offset
+        curr_i = content_bq_indices[j] + offset
+        between = new_lines[prev_i + 1:curr_i]
+        if not any(line.strip() == '>' for line in between):
+            new_lines.insert(curr_i, '>')
+            offset += 1
+            changed = True
+
+    if not changed:
+        return content, False
+    return '\n'.join(new_lines), True
+
+
 def iter_paper_md_files(papers_dir: str = PAPERS_DIR) -> Iterator[str]:
     """Yield absolute paths of paper note markdown files.
 

@@ -10,6 +10,7 @@ category: "Loco-Manipulation and WBC"
 **LATENT：从不完美的人类动作片段中学出会打网球的 Unitree G1**
 
 > 📅 阅读日期: 2026-04-24
+>
 > 🏷️ 板块: Loco-Manipulation and Whole-Body-Control · 高动态体育技能
 
 ---

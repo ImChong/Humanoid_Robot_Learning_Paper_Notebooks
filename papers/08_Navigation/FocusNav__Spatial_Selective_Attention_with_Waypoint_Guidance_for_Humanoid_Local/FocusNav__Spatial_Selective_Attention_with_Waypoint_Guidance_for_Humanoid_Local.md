@@ -10,7 +10,9 @@ category: "Navigation"
 **FocusNav：用「往哪走 → 看哪里」的路径点引导注意力，把人形局部导航做稳**
 
 > 📅 阅读日期: 2026-05-19
+>
 > 🏷️ 板块: Navigation · 局部导航 · 路径点引导 · 注意力机制 · 稳定性感知
+>
 > 🔁 推进轨: 模块轮转（07_Teleoperation → **08_Navigation**）
 
 ---
