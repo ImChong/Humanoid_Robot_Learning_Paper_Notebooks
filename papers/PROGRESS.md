@@ -630,7 +630,7 @@
 | --- | ------------------------------------------------------------------------------------------------------------------------------------ | ------- | --- | ---- |
 | 476  | [Learned Motion Matching](https://dl.acm.org/doi/10.1145/3386569.3392440) ✅ [笔记](14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.md)                                                                                                              | SIGGRAPH 2020 |     | ✅ 完成 |
 | 477  | [EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents](https://arxiv.org/abs/2602.23205) ✅ [笔记](14_Human_Motion/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents.md) | 2026.02 |     | ✅ 完成 |
-| 478  | [WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos](https://arxiv.org/abs/2602.22209)                                  | 2026.02 |     | ⏳ 待读 |
+| 478  | [WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos](https://arxiv.org/abs/2602.22209) ✅ [笔记](14_Human_Motion/WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos/WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos.md) | 2026.02 |     | ✅ 完成 |
 | 479  | [Diffusion Forcing for Multi-Agent Interaction Sequence Modeling](https://arxiv.org/abs/2512.17900)                                  | 2025.12 |     | ⏳ 待读 |
 | 480  | Control Operators for Interactive Character Animation                                                                                | 2025.12 |     | ⏳ 待读 |
 | 481  | Implicit Bézier Motion Model for Precise Spatial and Temporal Control                                                                | 2025.12 |     | ⏳ 待读 |

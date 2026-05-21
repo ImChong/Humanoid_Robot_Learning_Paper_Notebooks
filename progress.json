@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "13_Physics-Based_Animation",
-      "last_index": 450,
-      "last_title": "Mimic2DM: Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions",
-      "next_module": "14_Human_Motion"
+      "last_module": "14_Human_Motion",
+      "last_index": 478,
+      "last_title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
+      "next_module": "04_Loco-Manipulation_and_WBC"
     },
-    "last_summary_index": 450,
-    "last_summary_date": "2026-05-20",
-    "last_summary_title": "Mimic2DM: Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions",
+    "last_summary_index": 478,
+    "last_summary_date": "2026-05-21",
+    "last_summary_title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
     "next_summary_index": null,
     "log": [
       {
@@ -578,9 +578,21 @@
         "arxiv": "2512.08500",
         "source_repo": null,
         "project_page": "https://jiann-li.github.io/mimic2dm/"
+      },
+      {
+        "date": "2026-05-21",
+        "index": 478,
+        "title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
+        "module": "14_Human_Motion",
+        "category": "14_Human_Motion",
+        "note_path": "papers/14_Human_Motion/WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos/WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos.md",
+        "track": "module_rotation",
+        "arxiv": "2602.22209",
+        "source_repo": null,
+        "project_page": "https://judyye.github.io/whole-www/"
       }
     ],
-    "last_completed_index": 450,
+    "last_completed_index": 478,
     "next_index": null
   },
   "papers": [
