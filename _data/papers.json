@@ -1011,6 +1011,14 @@
         "dir": "EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents",
         "arxiv": "2602.23205",
         "zhname": "EmbodMocap：双 iPhone 户外 4D 人-场景重建，给具身智能体喂数据"
+      },
+      {
+        "title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
+        "path": "papers/14_Human_Motion/WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos/WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos.md",
+        "url": "/papers/14_Human_Motion/WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos/WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos.html",
+        "dir": "WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos",
+        "arxiv": "2602.22209",
+        "zhname": "WHOLE：用扩散先验把第一视角里的手和物体一起 lift 到世界坐标"
       }
     ],
     "zhname": "人体运动"
