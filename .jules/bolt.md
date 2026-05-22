@@ -43,3 +43,7 @@
 ## 2024-05-21 - [Fast String Splitting & DOM Batching]
 **Learning:** In Javascript string processing, character-by-character concatenation (`cur += c`) inside a loop is extremely slow due to continuous memory reallocations. Using index tracking combined with `String.prototype.slice(lastIdx, i)` is nearly an order of magnitude faster. Additionally, when inserting many identical small DOM structures (like code line numbers), constructing a single HTML string and setting it via `innerHTML` is faster than invoking `document.createElement`, `textContent`, and `appendChild` thousands of times, even for seemingly simple nodes.
 **Action:** Always prefer native string slicing over manual character accumulation in JS parsers. Batch large repetitive DOM additions via `innerHTML` strings rather than creating granular elements individually.
+
+## 2025-10-25 - Prevent Layout Thrashing with DOM Write Diff-Checks
+**Learning:** Unconditional assignments to DOM properties like `textContent`, `placeholder`, `aria-label`, and `style.display` in high-frequency loops (such as search filtering or global state toggles like language switches) cause significant layout thrashing. The browser recalculates layout and repaints even if the new string value is exactly identical to the old one.
+**Action:** Always perform strict equality diff-checks (e.g., `if (el.textContent !== newText) { el.textContent = newText; }`) before writing to the DOM, especially within loops that touch multiple elements or run frequently (like debounced search handlers).
