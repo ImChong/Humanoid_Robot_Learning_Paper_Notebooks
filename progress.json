@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 191,
-      "last_title": "A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": 274,
+      "last_title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
+      "next_module": "07_Teleoperation"
     },
-    "last_summary_index": 191,
-    "last_summary_date": "2026-05-23",
-    "last_summary_title": "A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion",
+    "last_summary_index": 274,
+    "last_summary_date": "2026-05-24",
+    "last_summary_title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
     "next_summary_index": null,
     "log": [
       {
@@ -615,6 +615,12 @@
         "source_repo": null,
         "project_page": null,
         "venue": "VDI Mechatronics Conference 2026"
+      },
+      {
+        "date": "2026-05-24",
+        "index": 274,
+        "title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
+        "folder": "papers/06_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation"
       }
     ],
     "last_completed_index": 191,
@@ -3224,6 +3230,86 @@
       "pdf_file": "",
       "route": "Navigation",
       "title_cn": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航"
+    },
+    {
+      "title": "A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion",
+      "folder": "papers/05_Locomotion/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data",
+      "note_file": "Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Locomotion",
+      "title_cn": ""
+    },
+    {
+      "title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
+      "folder": "papers/06_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation",
+      "note_file": "HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation in Humanoid Robots",
+      "folder": "papers/09_State_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation",
+      "note_file": "Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "State Estimation",
+      "title_cn": ""
+    },
+    {
+      "title": "PolySim: Bridging the Sim-to-Real Gap for Humanoid Control via Multi-Simulator Dynamics Randomization",
+      "folder": "papers/10_Sim-to-Real/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato",
+      "note_file": "PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Sim-to-Real",
+      "title_cn": ""
+    },
+    {
+      "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
+      "folder": "papers/11_Simulation_Benchmark/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation",
+      "note_file": "MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Simulation Benchmark",
+      "title_cn": ""
+    },
+    {
+      "title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand: Toward Dexterous Manipulation for Payload-Constrained Humanoids",
+      "folder": "papers/12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand",
+      "note_file": "Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "硬件设计",
+      "title_cn": ""
+    },
+    {
+      "title": "Mimic2DM: Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions",
+      "folder": "papers/13_Physics-Based_Animation/Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control",
+      "note_file": "Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "物理动画",
+      "title_cn": ""
+    },
+    {
+      "title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
+      "folder": "papers/14_Human_Motion/WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos",
+      "note_file": "WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "人体动作生成",
+      "title_cn": ""
     }
   ]
 }
