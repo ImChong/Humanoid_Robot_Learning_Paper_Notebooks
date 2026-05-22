@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "14_Human_Motion",
-      "last_index": 478,
-      "last_title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
-      "next_module": "04_Loco-Manipulation_and_WBC"
+      "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_index": 52,
+      "last_title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
+      "next_module": "05_Locomotion"
     },
-    "last_summary_index": 478,
-    "last_summary_date": "2026-05-21",
-    "last_summary_title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
+    "last_summary_index": 52,
+    "last_summary_date": "2026-05-22",
+    "last_summary_title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
     "next_summary_index": null,
     "log": [
       {
@@ -590,9 +590,21 @@
         "arxiv": "2602.22209",
         "source_repo": null,
         "project_page": "https://judyye.github.io/whole-www/"
+      },
+      {
+        "date": "2026-05-22",
+        "index": 52,
+        "title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
+        "module": "04_Loco-Manipulation_and_WBC",
+        "category": "04_Loco-Manipulation_and_WBC",
+        "note_path": "papers/04_Loco-Manipulation_and_WBC/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing.md",
+        "track": "module_rotation",
+        "arxiv": "2601.22517",
+        "source_repo": null,
+        "project_page": null
       }
     ],
-    "last_completed_index": 478,
+    "last_completed_index": 52,
     "next_index": null
   },
   "papers": [
@@ -1102,15 +1114,15 @@
     },
     {
       "title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
-      "arxiv": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
+      "arxiv": "2601.22517",
       "folder": "papers/04_Loco-Manipulation_and_WBC/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing",
       "note_file": "RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing.md",
       "pdf_file": "RoboStriker.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-05-22",
+      "done_date": "2026-05-22",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "RoboStriker：用潜空间神经虚拟自博弈实现自主人形拳击对抗"
     },
     {
       "title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
