@@ -622,6 +622,14 @@
         "dir": "ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control",
         "arxiv": "2602.00401",
         "zhname": "ZEST：动捕 / 视频 / 动画一锅炖，跨形态零样本迁移到 Atlas、G1、Spot"
+      },
+      {
+        "title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
+        "path": "papers/04_Loco-Manipulation_and_WBC/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing.html",
+        "dir": "RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing",
+        "arxiv": "2601.22517",
+        "zhname": "RoboStriker：用潜空间神经虚拟自博弈实现自主人形拳击对抗"
       }
     ],
     "zhname": "运动操作与全身控制"
