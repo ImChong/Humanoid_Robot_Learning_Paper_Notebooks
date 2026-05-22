@@ -730,6 +730,14 @@
         "dir": "DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos",
         "arxiv": "2602.06949",
         "zhname": "DreamDojo：从大规模人类视频中学到的通用机器人世界模型"
+      },
+      {
+        "title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
+        "path": "papers/06_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation.md",
+        "url": "/papers/06_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation.html",
+        "dir": "HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation",
+        "arxiv": "2601.14874",
+        "zhname": "HumanoidVLM：用视觉语言模型 + RAG 检索为人形机器人挑选阻抗参数与抓取角"
       }
     ],
     "zhname": "灵巧操作"
