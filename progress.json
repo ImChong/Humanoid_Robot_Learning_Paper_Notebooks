@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 52,
-      "last_title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
-      "next_module": "05_Locomotion"
+      "last_module": "05_Locomotion",
+      "last_index": 191,
+      "last_title": "A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion",
+      "next_module": "06_Manipulation"
     },
-    "last_summary_index": 52,
-    "last_summary_date": "2026-05-22",
-    "last_summary_title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
+    "last_summary_index": 191,
+    "last_summary_date": "2026-05-23",
+    "last_summary_title": "A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion",
     "next_summary_index": null,
     "log": [
       {
@@ -602,9 +602,22 @@
         "arxiv": "2601.22517",
         "source_repo": null,
         "project_page": null
+      },
+      {
+        "date": "2026-05-23",
+        "index": 191,
+        "title": "A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion",
+        "module": "05_Locomotion",
+        "category": "05_Locomotion",
+        "note_path": "papers/05_Locomotion/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data.md",
+        "track": "module_rotation",
+        "arxiv": "2602.05855",
+        "source_repo": null,
+        "project_page": null,
+        "venue": "VDI Mechatronics Conference 2026"
       }
     ],
-    "last_completed_index": 52,
+    "last_completed_index": 191,
     "next_index": null
   },
   "papers": [
