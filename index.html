@@ -246,21 +246,25 @@ title: "Home"
           
           subcatCache.items.forEach(function(itemCache) {
             if (itemCache.text.indexOf(query) !== -1) {
-              itemCache.el.style.display = '';
+              if (itemCache.el.style.display !== '') itemCache.el.style.display = '';
               subcatHasMatch = true;
               subcatMatchCount++;
               catHasMatch = true;
               hasAnyMatch = true;
             } else {
-              itemCache.el.style.display = 'none';
+              if (itemCache.el.style.display !== 'none') itemCache.el.style.display = 'none';
             }
           });
           
-          subcatCache.el.style.display = subcatHasMatch || query === '' ? '' : 'none';
+          var targetSubcatDisplay = subcatHasMatch || query === '' ? '' : 'none';
+          if (subcatCache.el.style.display !== targetSubcatDisplay) subcatCache.el.style.display = targetSubcatDisplay;
           if (subcatCache.tocItem) {
-            subcatCache.tocItem.style.display = subcatHasMatch || query === '' ? '' : 'none';
+            if (subcatCache.tocItem.style.display !== targetSubcatDisplay) subcatCache.tocItem.style.display = targetSubcatDisplay;
             var countEl = subcatCache.tocItem.querySelector('.toc-count');
-            if (countEl) countEl.textContent = '(' + subcatMatchCount + ')';
+            if (countEl) {
+              var targetText = '(' + subcatMatchCount + ')';
+              if (countEl.textContent !== targetText) countEl.textContent = targetText;
+            }
           }
           catTotalMatch += subcatMatchCount;
         });
@@ -268,25 +272,30 @@ title: "Home"
         var directMatchCount = 0;
         catCache.directItems.forEach(function(itemCache) {
           if (itemCache.text.indexOf(query) !== -1) {
-            itemCache.el.style.display = '';
+            if (itemCache.el.style.display !== '') itemCache.el.style.display = '';
             catHasMatch = true;
             hasAnyMatch = true;
             directMatchCount++;
           } else {
-            itemCache.el.style.display = 'none';
+            if (itemCache.el.style.display !== 'none') itemCache.el.style.display = 'none';
           }
         });
         catTotalMatch += directMatchCount;
 
-        catCache.el.style.display = catHasMatch || query === '' ? '' : 'none';
+        var targetCatDisplay = catHasMatch || query === '' ? '' : 'none';
+        if (catCache.el.style.display !== targetCatDisplay) catCache.el.style.display = targetCatDisplay;
         if (catCache.tocItem) {
-          catCache.tocItem.style.display = catHasMatch || query === '' ? '' : 'none';
+          if (catCache.tocItem.style.display !== targetCatDisplay) catCache.tocItem.style.display = targetCatDisplay;
           var countEl = catCache.tocItem.querySelector('.toc-count');
-          if (countEl) countEl.textContent = '(' + catTotalMatch + ')';
+          if (countEl) {
+            var targetText = '(' + catTotalMatch + ')';
+            if (countEl.textContent !== targetText) countEl.textContent = targetText;
+          }
         }
       });
 
-      noResults.style.display = hasAnyMatch || query === '' ? 'none' : 'block';
+      var targetNoResultsDisplay = hasAnyMatch || query === '' ? 'none' : 'block';
+      if (noResults.style.display !== targetNoResultsDisplay) noResults.style.display = targetNoResultsDisplay;
     }, 150);
   });
 
