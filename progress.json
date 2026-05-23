@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 274,
-      "last_title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
-      "next_module": "07_Teleoperation"
+      "last_module": "07_Teleoperation",
+      "last_index": 332,
+      "last_title": "SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation",
+      "next_module": "08_Navigation"
     },
-    "last_summary_index": 274,
-    "last_summary_date": "2026-05-24",
-    "last_summary_title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
+    "last_summary_index": 332,
+    "last_summary_date": "2026-05-25",
+    "last_summary_title": "SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation",
     "next_summary_index": null,
     "log": [
       {
@@ -621,9 +621,21 @@
         "index": 274,
         "title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
         "folder": "papers/06_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation"
+      },
+      {
+        "date": "2026-05-25",
+        "index": 332,
+        "title": "SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation",
+        "module": "07_Teleoperation",
+        "category": "07_Teleoperation",
+        "note_path": "papers/07_Teleoperation/SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation/SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation.md",
+        "track": "module_rotation",
+        "arxiv": "2602.01632",
+        "source_repo": null,
+        "project_page": "https://sew-mimic.com/"
       }
     ],
-    "last_completed_index": 191,
+    "last_completed_index": 332,
     "next_index": null
   },
   "papers": [

@@ -776,6 +776,14 @@
         "dir": "TeleGate__Whole-Body_Humanoid_Teleoperation_via_Gated_Expert_Selection_with_Motion_Prior",
         "arxiv": "2602.09628",
         "zhname": "TeleGate：用门控专家选择 + 运动先验做全身人形遥操作"
+      },
+      {
+        "title": "SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation",
+        "path": "papers/07_Teleoperation/SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation/SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation.md",
+        "url": "/papers/07_Teleoperation/SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation/SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation.html",
+        "dir": "SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation",
+        "arxiv": "2602.01632",
+        "zhname": "SEW-Mimic：用肩-肘-腕几何对齐给出有最优性保证的闭式上肢重定向解"
       }
     ],
     "zhname": "遥操作"

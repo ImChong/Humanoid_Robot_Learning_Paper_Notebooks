@@ -79,6 +79,7 @@
 | 2026-05-22 | 52 | [RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing](04_Loco-Manipulation_and_WBC/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing.md) | Loco-Manipulation / WBC · 双人零和博弈 / 自博弈 / 潜空间动作 / Unitree G1 拳击 | 截至当前未见公开发布（作者 [yinkangning0124](https://github.com/yinkangning0124)）；重定向中间层 [YanjieZe/GMR](https://github.com/YanjieZe/GMR) |
 | 2026-05-23 | 191 | [A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion](05_Locomotion/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data.md) | Locomotion / 地形感知 / 多模态融合 / CNN+GRU 自编码器 · Leibniz Hannover IMES | 截至当前未见公开发布；机构 [imes.uni-hannover.de](https://www.imes.uni-hannover.de/)，VDI Mechatronics 2026 |
 | 2026-05-24 | 274 | [HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation](06_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation.md) | Manipulation / 接触富集 / 阻抗控制 / VLM + FAISS-RAG · Skoltech ISR Lab | 截至当前未见公开发布（HRI 2026 Companion · 同组前作 [ImpedanceGPT 2503.02723](https://arxiv.org/abs/2503.02723)） |
+| 2026-05-25 | 332 | [SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation](07_Teleoperation/SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation/SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation.md) | Teleoperation / 上肢重定向 / 闭式几何求解 / SEW 关键点 · Georgia Tech + Qualcomm + Standard Bots | 截至当前未见公开源码；[项目页 sew-mimic.com](https://sew-mimic.com/) · [Kinova 推文](https://www.kinovarobotics.com/resource/sew-mimic-fast-precise-and-natural-humanoid-robot-teleoperation) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -213,6 +214,7 @@
 | 52 | RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing | 04_Loco-Manipulation_and_WBC | ✅ 已完成（2026-05-22） |
 | 191 | A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion | 05_Locomotion | ✅ 已完成（2026-05-23） |
 | 274 | HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation | 06_Manipulation | ✅ 已完成（2026-05-24） |
-| ? | （明日：07_Teleoperation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 07_Teleoperation | ⏭️ 下一篇候选 |
+| 332 | SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation | 07_Teleoperation | ✅ 已完成（2026-05-25） |
+| ? | （明日：08_Navigation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 08_Navigation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
