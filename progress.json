@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 332,
-      "last_title": "SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": 353,
+      "last_title": "Thinking in 360°: Humanoid Visual Search in the Wild",
+      "next_module": "09_State_Estimation"
     },
-    "last_summary_index": 332,
-    "last_summary_date": "2026-05-25",
-    "last_summary_title": "SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation",
+    "last_summary_index": 353,
+    "last_summary_date": "2026-05-26",
+    "last_summary_title": "Thinking in 360°: Humanoid Visual Search in the Wild",
     "next_summary_index": null,
     "log": [
       {
@@ -633,9 +633,22 @@
         "arxiv": "2602.01632",
         "source_repo": null,
         "project_page": "https://sew-mimic.com/"
+      },
+      {
+        "date": "2026-05-26",
+        "index": 353,
+        "title": "Thinking in 360°: Humanoid Visual Search in the Wild",
+        "module": "08_Navigation",
+        "category": "08_Navigation",
+        "note_path": "papers/08_Navigation/Thinking_in_360__Humanoid_Visual_Search_in_the_Wild/Thinking_in_360__Humanoid_Visual_Search_in_the_Wild.md",
+        "track": "module_rotation",
+        "arxiv": "2511.20351",
+        "source_repo": "https://github.com/THUSI-Lab/hstar",
+        "project_page": "https://humanoid-vstar.github.io/",
+        "venue": "CVPR 2026"
       }
     ],
-    "last_completed_index": 332,
+    "last_completed_index": 353,
     "next_index": null
   },
   "papers": [

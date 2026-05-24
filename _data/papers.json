@@ -822,6 +822,14 @@
         "dir": "STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain",
         "arxiv": "2506.01046",
         "zhname": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航"
+      },
+      {
+        "title": "Thinking in 360°: Humanoid Visual Search in the Wild",
+        "path": "papers/08_Navigation/Thinking_in_360__Humanoid_Visual_Search_in_the_Wild/Thinking_in_360__Humanoid_Visual_Search_in_the_Wild.md",
+        "url": "/papers/08_Navigation/Thinking_in_360__Humanoid_Visual_Search_in_the_Wild/Thinking_in_360__Humanoid_Visual_Search_in_the_Wild.html",
+        "dir": "Thinking_in_360__Humanoid_Visual_Search_in_the_Wild",
+        "arxiv": "2511.20351",
+        "zhname": "在 360° 里思考：把人形视觉搜索做成「转头看路 + 转头找物」的两类显式任务"
       }
     ],
     "zhname": "导航"
