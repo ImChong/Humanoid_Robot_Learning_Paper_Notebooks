@@ -250,20 +250,35 @@
   }
 
   function splitByNewline(html) {
-    // ⚡ Bolt Optimization: Use html.slice instead of char-by-char concatenation
-    // for an order of magnitude faster parsing
+    // ⚡ Bolt Optimization: Use native indexOf for fast string scanning instead
+    // of character-by-character loops, leading to an order of magnitude faster parsing
     var lines = [],
       lastIdx = 0,
-      inTag = false;
-    for (var i = 0; i < html.length; i++) {
-      var c = html[i];
-      if (c === '<') {
-        inTag = true;
-      } else if (c === '>') {
-        inTag = false;
-      } else if (c === '\n' && !inTag) {
-        lines.push(html.slice(lastIdx, i));
-        lastIdx = i + 1;
+      inTag = false,
+      i = 0;
+    while (i < html.length) {
+      if (!inTag) {
+        var nextTag = html.indexOf('<', i);
+        var nextNl = html.indexOf('\n', i);
+
+        if (nextNl !== -1 && (nextTag === -1 || nextNl < nextTag)) {
+          lines.push(html.slice(lastIdx, nextNl));
+          lastIdx = nextNl + 1;
+          i = nextNl + 1;
+        } else if (nextTag !== -1) {
+          inTag = true;
+          i = nextTag + 1;
+        } else {
+          break;
+        }
+      } else {
+        var nextEnd = html.indexOf('>', i);
+        if (nextEnd !== -1) {
+          inTag = false;
+          i = nextEnd + 1;
+        } else {
+          break;
+        }
       }
     }
     if (lastIdx < html.length) {
