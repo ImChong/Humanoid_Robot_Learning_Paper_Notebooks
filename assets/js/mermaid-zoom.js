@@ -247,7 +247,7 @@
         ADD_TAGS: ['foreignObject'],
       });
     }
-    return svgString;
+    return '';
   }
 
   function mountLightboxSvg(svgString) {

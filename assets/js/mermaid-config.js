@@ -39,7 +39,7 @@
    */
   window.sanitizeMermaidSvg = function (svgString) {
     if (!svgString) return '';
-    if (typeof DOMPurify === 'undefined') return svgString;
+    if (typeof DOMPurify === 'undefined') return '';
     return DOMPurify.sanitize(svgString, {
       USE_PROFILES: { svg: true, svgFilters: true },
       ADD_TAGS: ['foreignObject'],

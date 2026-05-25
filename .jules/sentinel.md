@@ -23,3 +23,8 @@
 **Vulnerability:** Found a vulnerability in `index.html` where dynamically generated file URLs (like `paper.url` and `page.url`) were injected into `href` attributes without HTML escaping (e.g., `href="{{ site.baseurl }}{{ paper.url }}"`).
 **Learning:** If a paper's file path contains quote characters (`"` or `'`), injecting it unescaped into an HTML attribute allows an attacker to break out of the attribute context and inject arbitrary HTML attributes or events, leading to Cross-Site Scripting (XSS).
 **Prevention:** Always append the `| escape` filter when injecting dynamic content, including URLs and paths generated from filenames, into HTML attributes in Jekyll templates.
+
+## 2025-05-20 - [Fail-open XSS in Client-Side Sanitization]
+**Vulnerability:** Found a fail-open XSS vulnerability where client-side JavaScript (in `assets/js/mermaid-config.js`, `assets/js/mermaid-zoom.js`, and `_layouts/default.html`) conditionally used `DOMPurify` to sanitize HTML/SVG, but fell back to returning/using the raw, unsanitized string if `DOMPurify` was not loaded or undefined.
+**Learning:** If a critical security dependency like `DOMPurify` fails to load (e.g., due to network issues, ad blockers, or CDN unavailability), a "fail-open" logic path that uses the raw input completely bypasses the intended security controls. This allows any underlying XSS payload to be executed.
+**Prevention:** Always design security controls to "fail-closed." If a required sanitization library is unavailable, the application should return a safe default (like an empty string) or throw an error, rather than processing potentially malicious data unsanitized.

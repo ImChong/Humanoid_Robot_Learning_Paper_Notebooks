@@ -249,7 +249,7 @@
               ? window.sanitizeMermaidSvg(result.svg)
               : typeof DOMPurify !== 'undefined'
                 ? DOMPurify.sanitize(result.svg)
-                : result.svg;
+                : '';
           roadmapSvgCache[cacheKey] = safeSvg;
           mermaidRoadmap.innerHTML = safeSvg;
           mermaidRoadmap.removeAttribute('data-processed');
