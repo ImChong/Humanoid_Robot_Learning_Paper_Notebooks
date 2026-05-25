@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 353,
-      "last_title": "Thinking in 360°: Humanoid Visual Search in the Wild",
-      "next_module": "09_State_Estimation"
+      "last_module": "09_State_Estimation",
+      "last_index": 371,
+      "last_title": "An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems",
+      "next_module": "10_Sim-to-Real"
     },
-    "last_summary_index": 353,
-    "last_summary_date": "2026-05-26",
-    "last_summary_title": "Thinking in 360°: Humanoid Visual Search in the Wild",
+    "last_summary_index": 371,
+    "last_summary_date": "2026-05-27",
+    "last_summary_title": "An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems",
     "next_summary_index": null,
     "log": [
       {
@@ -646,9 +646,22 @@
         "source_repo": "https://github.com/THUSI-Lab/hstar",
         "project_page": "https://humanoid-vstar.github.io/",
         "venue": "CVPR 2026"
+      },
+      {
+        "date": "2026-05-27",
+        "index": 371,
+        "title": "An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems",
+        "module": "09_State_Estimation",
+        "category": "09_State_Estimation",
+        "note_path": "papers/09_State_Estimation/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems.md",
+        "track": "module_rotation",
+        "arxiv": "2207.06780",
+        "source_repo": "https://github.com/PyojinKim/ARKit-Data-Logger",
+        "project_page": "https://www.mdpi.com/1424-8220/22/24/9873",
+        "venue": "Sensors (MDPI) 2022, DOI 10.3390/s22249873"
       }
     ],
-    "last_completed_index": 353,
+    "last_completed_index": 371,
     "next_index": null
   },
   "papers": [

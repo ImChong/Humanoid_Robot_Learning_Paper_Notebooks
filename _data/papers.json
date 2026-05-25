@@ -868,6 +868,14 @@
         "dir": "Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation",
         "arxiv": "2507.10105",
         "zhname": "PINN + UKF：让没有力矩传感器的人形机器人也能做精准全身力矩估计"
+      },
+      {
+        "title": "An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems",
+        "path": "papers/09_State_Estimation/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems.md",
+        "url": "/papers/09_State_Estimation/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems.html",
+        "dir": "An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems",
+        "arxiv": "2207.06780",
+        "zhname": "ARKit / ARCore / T265 / ZED 2 四款主流商用 VIO 系统的统一硬件横评"
       }
     ],
     "zhname": "状态估计"
