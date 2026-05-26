@@ -26,6 +26,14 @@ def test_lightbox_rerenders_from_source():
     text = ZOOM_JS.read_text(encoding="utf-8")
     assert "buildMermaidLightboxGraph" in text
     assert "mermaid.render" in text
+    assert "openWithSvgClone" in text
+    assert "is-preparing" in text
+    assert "scheduleFitToViewport" in text
+
+
+def test_lightbox_hides_stage_until_fit():
+    css = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
+    assert ".mermaid-lightbox__stage.is-preparing" in css
 
 
 def test_sanitize_mermaid_svg_keeps_foreign_object():
