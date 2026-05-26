@@ -82,6 +82,7 @@
 | 2026-05-25 | 332 | [SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation](07_Teleoperation/SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation/SEW-Mimic__Closed-Form_Geometric_Retargeting_Solver_for_Upper_Body_Humanoid_Teleoperation.md) | Teleoperation / 上肢重定向 / 闭式几何求解 / SEW 关键点 · Georgia Tech + Qualcomm + Standard Bots | 截至当前未见公开源码；[项目页 sew-mimic.com](https://sew-mimic.com/) · [Kinova 推文](https://www.kinovarobotics.com/resource/sew-mimic-fast-precise-and-natural-humanoid-robot-teleoperation) |
 | 2026-05-26 | 353 | [Thinking in 360°: Humanoid Visual Search in the Wild](08_Navigation/Thinking_in_360__Humanoid_Visual_Search_in_the_Wild/Thinking_in_360__Humanoid_Visual_Search_in_the_Wild.md) | Navigation / 视觉搜索 / 360° 全景 / HOS + HPS / 掩码 GRPO · 清华 THUSI + NYU + NVIDIA + Stanford | [THUSI-Lab/hstar](https://github.com/THUSI-Lab/hstar) · [humanoid-vstar/hstar](https://github.com/humanoid-vstar/hstar) · [项目页](https://humanoid-vstar.github.io/) · CVPR 2026 |
 | 2026-05-27 | 371 | [An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems](09_State_Estimation/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems.md) | State Estimation / 商用 VIO 横评 / ARKit + ARCore + T265 + ZED 2 · Sookmyung + 仁川大学 | [PyojinKim/ARKit-Data-Logger](https://github.com/PyojinKim/ARKit-Data-Logger) · [PyojinKim/ARCore-Data-Logger](https://github.com/PyojinKim/ARCore-Data-Logger) · 期刊版 [MDPI Sensors 22(24):9873](https://www.mdpi.com/1424-8220/22/24/9873) |
+| 2026-05-28 | 382 | [Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion](10_Sim-to-Real/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion.md) | Sim-to-Real / 对比表征学习 / 自适应步态时钟 / 特权信息蒸馏 · HKU ArcLab | 截至当前未见公开发布（实验室主页 [ArcLab @ HKU](https://arclab.hku.hk/)） |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -219,6 +220,7 @@
 | 332 | SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation | 07_Teleoperation | ✅ 已完成（2026-05-25） |
 | 353 | Thinking in 360°: Humanoid Visual Search in the Wild | 08_Navigation | ✅ 已完成（2026-05-26） |
 | 371 | An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems | 09_State_Estimation | ✅ 已完成（2026-05-27） |
-| ? | （明日：10_Sim-to-Real 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 10_Sim-to-Real | ⏭️ 下一篇候选 |
+| 382 | Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion | 10_Sim-to-Real | ✅ 已完成（2026-05-28） |
+| ? | （明日：11_Simulation_Benchmark 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 11_Simulation_Benchmark | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

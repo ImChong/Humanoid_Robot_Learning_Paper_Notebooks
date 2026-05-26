@@ -502,7 +502,7 @@
 | 379  | [RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots](https://arxiv.org/abs/2602.01515) | 2026.02 |     | ✅ 完成 |
 | 380  | [Towards Bridging the Gap between Large-Scale Pretraining and Efficient Finetuning for Humanoid Control](https://arxiv.org/abs/2601.21363)     | 2026-05-19 |     | ✅ 完成 |
 | 381  | [PolySim: Bridging the Sim-to-Real Gap for Humanoid Control via Multi-Simulator Dynamics Randomization](https://arxiv.org/abs/2510.01708) ✅ [笔记](10_Sim-to-Real/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato.md) | 2026-05-20 |     | ✅ 已总结 |
-| 382  | [Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion](https://arxiv.org/abs/2509.12858)        | 2025.09 |     | ⏳ 待读 |
+| 382  | [Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion](https://arxiv.org/abs/2509.12858) ✅ [笔记](10_Sim-to-Real/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion.md) | 2026-05-28 |     | ✅ 已总结 |
 | 383  | [Towards bridging the gap: Systematic sim-to-real transfer for diverse legged robots](https://arxiv.org/abs/2509.06342)                        | 2025.09 |     | ⏳ 待读 |
 | 384  | [Robot Trains Robot: Automatic Real-World Policy Adaptation and Learning for Humanoids](https://arxiv.org/abs/2508.12252)                      | 2025.08 |     | ⏳ 待读 |
 | 385  | [DiffCoTune: Differentiable Co-Tuning for Cross-domain Robot Control](https://arxiv.org/abs/2505.24068)                                        | 2025.05 |     | ⏳ 待读 |

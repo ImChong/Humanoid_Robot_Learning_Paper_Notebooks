@@ -914,6 +914,14 @@
         "dir": "PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato",
         "arxiv": "2510.01708",
         "zhname": "PolySim：把「域随机化」从参数维度推到「整套仿真器」维度"
+      },
+      {
+        "title": "Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion",
+        "path": "papers/10_Sim-to-Real/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion.md",
+        "url": "/papers/10_Sim-to-Real/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion.html",
+        "dir": "Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion",
+        "arxiv": "2509.12858",
+        "zhname": "对比表征学习：把仿真特权信息蒸进 actor 隐状态，驱动自适应步态时钟"
       }
     ],
     "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
