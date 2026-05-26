@@ -144,6 +144,25 @@
     applyTransform();
   }
 
+  /** Hide stage until fitToViewport runs — avoids scale(1) flash. */
+  function setStagePreparing(preparing) {
+    if (!stage) return;
+    stage.classList.toggle('is-preparing', !!preparing);
+  }
+
+  function scheduleFitToViewport(svg, done) {
+    function run() {
+      fitToViewport(svg);
+      setStagePreparing(false);
+      if (typeof done === 'function') done();
+    }
+    if (viewport && viewport.clientWidth > 0 && viewport.clientHeight > 0) {
+      run();
+      return;
+    }
+    requestAnimationFrame(run);
+  }
+
   function resetPointerState() {
     pointers.clear();
     pinchSnapshot = null;
@@ -268,14 +287,26 @@
   function openWithSvgClone(sourceEl) {
     var svg = sourceEl.querySelector('svg');
     if (!svg) return false;
+    setStagePreparing(true);
     var clone = cloneSvgForLightbox(svg);
     stage.innerHTML = '';
     stage.appendChild(clone);
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        fitToViewport(clone);
-      });
-    });
+    scheduleFitToViewport(clone);
+    return true;
+  }
+
+  function swapLightboxSvg(svgString, sourceEl) {
+    setStagePreparing(true);
+    var mounted = mountLightboxSvg(svgString);
+    if (!mounted) {
+      if (!stage.querySelector('svg')) {
+        openWithSvgClone(sourceEl);
+      } else {
+        setStagePreparing(false);
+      }
+      return false;
+    }
+    scheduleFitToViewport(mounted);
     return true;
   }
 
@@ -289,20 +320,20 @@
     lightbox.classList.add('is-open');
     document.body.classList.add('mermaid-lightbox-open');
 
+    if (!openWithSvgClone(sourceEl)) {
+      setStagePreparing(false);
+      return;
+    }
+
     var sourceCode = sourceEl.getAttribute('data-original-code');
     var canHiResRender =
       sourceCode &&
       typeof mermaid !== 'undefined' &&
       typeof mermaid.render === 'function';
 
-    if (!canHiResRender) {
-      stage.innerHTML = '';
-      openWithSvgClone(sourceEl);
-      return;
-    }
+    if (!canHiResRender) return;
 
     var renderSeq = ++lightboxRenderSeq;
-    stage.innerHTML = '';
     stage.setAttribute('aria-busy', 'true');
 
     var graphText =
@@ -315,21 +346,12 @@
       .then(function (result) {
         if (renderSeq !== lightboxRenderSeq || lightbox.hidden) return;
         stage.removeAttribute('aria-busy');
-        var mounted = mountLightboxSvg(result.svg);
-        if (!mounted) {
-          openWithSvgClone(sourceEl);
-          return;
-        }
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            fitToViewport(mounted);
-          });
-        });
+        swapLightboxSvg(result.svg, sourceEl);
       })
       .catch(function () {
         if (renderSeq !== lightboxRenderSeq || lightbox.hidden) return;
         stage.removeAttribute('aria-busy');
-        openWithSvgClone(sourceEl);
+        setStagePreparing(false);
       });
   }
 
@@ -343,6 +365,7 @@
     if (stage) {
       stage.innerHTML = '';
       stage.removeAttribute('aria-busy');
+      stage.classList.remove('is-preparing');
     }
   }
 

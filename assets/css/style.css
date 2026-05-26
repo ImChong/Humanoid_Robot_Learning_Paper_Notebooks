@@ -759,6 +759,11 @@ body.mermaid-lightbox-open {
   will-change: transform;
 }
 
+/* Hidden until fitToViewport — prevents one frame at scale(1). */
+.mermaid-lightbox__stage.is-preparing {
+  visibility: hidden;
+}
+
 .mermaid-lightbox__stage .mermaid-lightbox__svg {
   display: block;
   max-width: none !important;
