@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "09_State_Estimation",
-      "last_index": 371,
-      "last_title": "An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems",
-      "next_module": "10_Sim-to-Real"
+      "last_module": "10_Sim-to-Real",
+      "last_index": 382,
+      "last_title": "Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion",
+      "next_module": "11_Simulation_Benchmark"
     },
-    "last_summary_index": 371,
-    "last_summary_date": "2026-05-27",
-    "last_summary_title": "An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems",
+    "last_summary_index": 382,
+    "last_summary_date": "2026-05-28",
+    "last_summary_title": "Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion",
     "next_summary_index": null,
     "log": [
       {
@@ -659,6 +659,12 @@
         "source_repo": "https://github.com/PyojinKim/ARKit-Data-Logger",
         "project_page": "https://www.mdpi.com/1424-8220/22/24/9873",
         "venue": "Sensors (MDPI) 2022, DOI 10.3390/s22249873"
+      },
+      {
+        "date": "2026-05-28",
+        "index": 382,
+        "title": "Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion",
+        "folder": "papers/10_Sim-to-Real/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion"
       }
     ],
     "last_completed_index": 371,
