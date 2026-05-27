@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
-      "last_index": 382,
-      "last_title": "Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion",
-      "next_module": "11_Simulation_Benchmark"
+      "last_module": "11_Simulation_Benchmark",
+      "last_index": 392,
+      "last_title": "Benchmarking Humanoid Imitation Learning with Motion Difficulty",
+      "next_module": "12_Hardware_Design"
     },
-    "last_summary_index": 382,
-    "last_summary_date": "2026-05-28",
-    "last_summary_title": "Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion",
+    "last_summary_index": 392,
+    "last_summary_date": "2026-05-29",
+    "last_summary_title": "Benchmarking Humanoid Imitation Learning with Motion Difficulty",
     "next_summary_index": null,
     "log": [
       {
@@ -665,9 +665,15 @@
         "index": 382,
         "title": "Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion",
         "folder": "papers/10_Sim-to-Real/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion"
+      },
+      {
+        "date": "2026-05-29",
+        "index": 392,
+        "title": "Benchmarking Humanoid Imitation Learning with Motion Difficulty",
+        "folder": "papers/11_Simulation_Benchmark/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty"
       }
     ],
-    "last_completed_index": 371,
+    "last_completed_index": 392,
     "next_index": null
   },
   "papers": [
