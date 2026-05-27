@@ -64,6 +64,13 @@ CATEGORY_ZHNAME = {
     '14_Human_Motion': '人体动作分析与生成',
 }
 
+# Categories that keep curated reading order from PROGRESS / front matter
+# instead of arXiv-newest-first sorting.
+CATEGORIES_PROGRESS_ORDER = frozenset({
+    '01_Foundational_RL',
+    '03_High_Impact_Selection',
+})
+
 
 _TITLE_RE = re.compile(r'^#\s+(.+)$', re.MULTILINE)
 
@@ -519,8 +526,8 @@ def process_papers():
 
                 papers.append(paper_entry)
 
-        # High Impact keeps curated H# order from PROGRESS; other categories sort by arXiv.
-        if category_dir == '03_High_Impact_Selection':
+        # Foundational RL and High Impact keep curated PROGRESS order; others by arXiv.
+        if category_dir in CATEGORIES_PROGRESS_ORDER:
             papers.sort(key=lambda p: p['_order'])
         else:
             # 1) arXiv newest-first to align with upstream awesome list
