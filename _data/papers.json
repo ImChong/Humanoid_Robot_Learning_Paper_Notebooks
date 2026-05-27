@@ -16,6 +16,7 @@
         "url": "/papers/01_Foundational_RL/AWR_Advantage_Weighted_Regression/AWR_Advantage_Weighted_Regression.html",
         "dir": "AWR_Advantage_Weighted_Regression",
         "arxiv": "1910.00177",
+        "has_open_source": true,
         "zhname": "优势加权回归 (AWR)"
       },
       {
@@ -24,6 +25,7 @@
         "url": "/papers/01_Foundational_RL/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills/DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills.html",
         "dir": "DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills",
         "arxiv": "1804.02717",
+        "has_open_source": true,
         "zhname": "DeepMimic：基于示例引导的物理角色技能深度强化学习"
       },
       {
@@ -32,6 +34,7 @@
         "url": "/papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.html",
         "dir": "AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control",
         "arxiv": "2104.02180",
+        "has_open_source": true,
         "zhname": "AMP：对抗运动先验的风格化物理角色控制"
       },
       {
@@ -40,6 +43,7 @@
         "url": "/papers/01_Foundational_RL/PHC_Perpetual_Humanoid_Control/PHC_Perpetual_Humanoid_Control.html",
         "dir": "PHC_Perpetual_Humanoid_Control",
         "arxiv": "2305.06456",
+        "has_open_source": true,
         "zhname": "PHC：实时仿真虚拟角色的持续人形控制"
       },
       {
@@ -48,6 +52,7 @@
         "url": "/papers/01_Foundational_RL/ADD_Adversarial_Differential_Discriminators/ADD_Adversarial_Differential_Discriminators.html",
         "dir": "ADD_Adversarial_Differential_Discriminators",
         "arxiv": "2505.04961",
+        "has_open_source": true,
         "zhname": "ADD：对抗解耦与蒸馏"
       },
       {
@@ -56,6 +61,7 @@
         "url": "/papers/01_Foundational_RL/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.html",
         "dir": "ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control",
         "arxiv": "2205.01906",
+        "has_open_source": true,
         "zhname": "ASE：大规模运动控制的对抗技能嵌入"
       },
       {
@@ -64,6 +70,7 @@
         "url": "/papers/01_Foundational_RL/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters.html",
         "dir": "CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters",
         "arxiv": "2305.02195",
+        "has_open_source": true,
         "zhname": "CALM：面向可控虚拟角色的条件对抗潜变量模型"
       },
       {
@@ -72,6 +79,7 @@
         "url": "/papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.html",
         "dir": "PULSE_Physics-based_Universal_Latent_Space",
         "arxiv": "2310.04582",
+        "has_open_source": true,
         "zhname": "PULSE：物理可行的通用潜在技能提取"
       },
       {
@@ -80,6 +88,7 @@
         "url": "/papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.html",
         "dir": "Diffusion_Policy",
         "arxiv": "2303.04137",
+        "has_open_source": true,
         "zhname": "Diffusion Policy：基于动作扩散的视觉运动策略学习"
       },
       {
@@ -120,6 +129,7 @@
         "url": "/papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.html",
         "dir": "MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control",
         "arxiv": "2510.13794",
+        "has_open_source": true,
         "zhname": "MimicKit：运动模仿与控制的强化学习框架"
       }
     ],
@@ -136,6 +146,7 @@
         "url": "/papers/02_Motion_Retargeting/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking.html",
         "dir": "Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking",
         "arxiv": "2510.02252",
+        "has_open_source": true,
         "zhname": "Retargeting Matters：面向人形运动跟踪的通用动作重定向"
       },
       {
@@ -175,6 +186,7 @@
             "url": "/papers/03_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.html",
             "dir": "Expressive_Whole-Body_Control_for_Humanoid_Robots",
             "arxiv": "2402.16796",
+            "has_open_source": true,
             "zhname": "人形机器人表现力全身控制"
           },
           {
@@ -183,6 +195,7 @@
             "url": "/papers/03_High_Impact_Selection/HOVER_Versatile_Neural_Whole-Body_Controller/HOVER_Versatile_Neural_Whole-Body_Controller.html",
             "dir": "HOVER_Versatile_Neural_Whole-Body_Controller",
             "arxiv": "2410.21229",
+            "has_open_source": true,
             "zhname": "HOVER：面向人形机器人的多模态通用神经全身控制器"
           },
           {
@@ -199,6 +212,7 @@
             "url": "/papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.html",
             "dir": "HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller",
             "arxiv": "2502.03206",
+            "has_open_source": true,
             "zhname": "HugWBC：面向多步态人形的统一通用全身控制器"
           },
           {
@@ -207,6 +221,7 @@
             "url": "/papers/03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.html",
             "dir": "SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control",
             "arxiv": "2511.07820",
+            "has_open_source": true,
             "zhname": "SONIC：用规模化运动跟踪打造自然的人形全身控制器"
           },
           {
@@ -215,6 +230,7 @@
             "url": "/papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.html",
             "dir": "UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
             "arxiv": "2412.14172",
+            "has_open_source": true,
             "zhname": "UH-1：从海量互联网人类视频中学习通用人形姿态控制"
           }
         ],
@@ -237,6 +253,7 @@
             "url": "/papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.html",
             "dir": "HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
             "arxiv": "2502.13013",
+            "has_open_source": true,
             "zhname": "HOMIE：同构外骨骼驾驶舱式人形遥操作系统"
           },
           {
@@ -245,6 +262,7 @@
             "url": "/papers/03_High_Impact_Selection/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies.html",
             "dir": "iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies",
             "arxiv": "2410.10803",
+            "has_open_source": true,
             "zhname": "iDP3：基于改进版 3D 扩散策略的可泛化人形操作"
           }
         ],
@@ -275,6 +293,7 @@
             "url": "/papers/03_High_Impact_Selection/Humanoid_Parkour_Learning/Humanoid_Parkour_Learning.html",
             "dir": "Humanoid_Parkour_Learning",
             "arxiv": "2406.10759",
+            "has_open_source": true,
             "zhname": "人形跑酷：无动作先验的端到端视觉全身控制（Unitree H1）"
           },
           {
@@ -283,6 +302,7 @@
             "url": "/papers/03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.html",
             "dir": "Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes",
             "arxiv": "2512.01996",
+            "has_open_source": true,
             "zhname": "15 分钟人形 sim-to-real：FastSAC / FastTD3 大规模并行配方（Amazon FAR）"
           },
           {
@@ -291,6 +311,7 @@
             "url": "/papers/03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.html",
             "dir": "ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking",
             "arxiv": "2602.06445",
+            "has_open_source": true,
             "zhname": "ECO：把人形行走能耗写成显式约束的受限 RL（PPO-Lagrangian · BRUCE）"
           },
           {
@@ -312,6 +333,7 @@
             "url": "/papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.html",
             "dir": "Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots",
             "arxiv": "1901.08652",
+            "has_open_source": true,
             "zhname": "ANYmal 敏捷运动技能学习（sim-to-real RL 奠基作）"
           },
           {
@@ -320,6 +342,7 @@
             "url": "/papers/03_High_Impact_Selection/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills.html",
             "dir": "ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills",
             "arxiv": "2502.01143",
+            "has_open_source": true,
             "zhname": "ASAP：用残差动作模型对齐仿真与真机动力学的人形敏捷全身技能"
           },
           {
@@ -350,6 +373,7 @@
             "url": "/papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.html",
             "dir": "Humanoid-Gym_Zero-Shot_Sim2Real_Transfer",
             "arxiv": "2404.05695",
+            "has_open_source": true,
             "zhname": "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架"
           },
           {
@@ -358,6 +382,7 @@
             "url": "/papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.html",
             "dir": "BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation",
             "arxiv": "2503.05652",
+            "has_open_source": true,
             "zhname": "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
           },
           {
@@ -366,6 +391,7 @@
             "url": "/papers/03_High_Impact_Selection/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control.html",
             "dir": "ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control",
             "arxiv": "2409.14393",
+            "has_open_source": true,
             "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架"
           },
           {
@@ -373,6 +399,7 @@
             "path": "papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.md",
             "url": "/papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.html",
             "dir": "Isaac_Lab_GPU_Simulation",
+            "has_open_source": true,
             "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
           }
         ],
@@ -389,7 +416,16 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation/Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation.html",
         "dir": "Learning_Humanoid_End-Effector_Control_for_Open-Vocabulary_Visual_Loco-Manipulation",
         "arxiv": "2501.17173",
+        "has_open_source": true,
         "zhname": "HERO：基于开放词汇视觉引导的人形机器人末端执行器控制"
+      },
+      {
+        "title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
+        "path": "papers/04_Loco-Manipulation_and_WBC/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing.html",
+        "dir": "RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing",
+        "arxiv": "2601.22517",
+        "zhname": "RoboStriker：用潜空间神经虚拟自博弈实现自主人形拳击对抗"
       },
       {
         "title": "Robust and Generalized Humanoid Motion Tracking",
@@ -445,6 +481,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.html",
         "dir": "GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object",
         "arxiv": "2511.04679",
+        "has_open_source": true,
         "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
       },
       {
@@ -453,6 +490,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.html",
         "dir": "LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat",
         "arxiv": "2603.12686",
+        "has_open_source": true,
         "zhname": "LATENT：从不完美的人类动作数据中学习人形机器人网球运动技能"
       },
       {
@@ -461,6 +499,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation/Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation.html",
         "dir": "Ψ₀__An_Open_Foundation_Model_Towards_Universal_Humanoid_Loco-Manipulation",
         "arxiv": "2603.12263",
+        "has_open_source": true,
         "zhname": "Ψ₀：迈向通用人形机器人 Loco-Manipulation 的开源基础模型"
       },
       {
@@ -469,6 +508,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid/SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid.html",
         "dir": "SteadyTray__Learning_Object_Balancing_Tasks_in_Humanoid_Tray_Transport_via_Resid",
         "arxiv": "2603.10306",
+        "has_open_source": true,
         "zhname": "SteadyTray：用残差强化学习教人形机器人端着托盘稳稳走路"
       },
       {
@@ -517,6 +557,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation.html",
         "dir": "General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation",
         "arxiv": "2602.11929",
+        "has_open_source": true,
         "zhname": "FAST：通过预训练与快速适应实现通用人形机器人全身控制"
       },
       {
@@ -533,6 +574,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_/EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_.html",
         "dir": "EgoHumanoid__Unlocking_In-the-Wild_Loco-Manipulation_with_Robot-Free_Egocentric_",
         "arxiv": "2602.10106",
+        "has_open_source": true,
         "zhname": "EgoHumanoid：利用免机器人第一视角示范解锁野外环境全身操作"
       },
       {
@@ -541,6 +583,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_.html",
         "dir": "MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_",
         "arxiv": "2602.08594",
+        "has_open_source": true,
         "zhname": "MOSAIC：通过快速残差自适应弥合通用人形运动跟踪与遥操作的仿真到真实差距"
       },
       {
@@ -557,6 +600,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C/TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C.html",
         "dir": "TextOp__Real-time_Interactive_Text-Driven_Humanoid_Robot_Motion_Generation_and_C",
         "arxiv": "2602.07439",
+        "has_open_source": true,
         "zhname": "TextOp：实时交互式文本驱动人形机器人动作生成与控制"
       },
       {
@@ -589,6 +633,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control/HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control.html",
         "dir": "HUSKY__Humanoid_Skateboarding_System_via_Physics-Aware_Whole-Body_Control",
         "arxiv": "2602.03205",
+        "has_open_source": true,
         "zhname": "HUSKY：基于物理感知全身控制的人形滑板系统"
       },
       {
@@ -605,6 +650,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi/HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi.html",
         "dir": "HumanX__Toward_Agile_and_Generalizable_Humanoid_Interaction_Skills_from_Human_Vi",
         "arxiv": "2602.02473",
+        "has_open_source": true,
         "zhname": "HumanX：从人类视频学习敏捷且可泛化的人形交互技能"
       },
       {
@@ -622,14 +668,6 @@
         "dir": "ZEST__Zero-shot_Embodied_Skill_Transfer_for_Athletic_Robot_Control",
         "arxiv": "2602.00401",
         "zhname": "ZEST：动捕 / 视频 / 动画一锅炖，跨形态零样本迁移到 Atlas、G1、Spot"
-      },
-      {
-        "title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
-        "path": "papers/04_Loco-Manipulation_and_WBC/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing/RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing.html",
-        "dir": "RoboStriker__Hierarchical_Decision-Making_for_Autonomous_Humanoid_Boxing",
-        "arxiv": "2601.22517",
-        "zhname": "RoboStriker：用潜空间神经虚拟自博弈实现自主人形拳击对抗"
       }
     ],
     "zhname": "运动操作与全身控制"
@@ -643,6 +681,7 @@
         "url": "/papers/05_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.html",
         "dir": "Learning_to_Walk_in_Minutes",
         "arxiv": "2109.11978",
+        "has_open_source": true,
         "zhname": "几分钟学会走路：大规模并行深度强化学习"
       },
       {
@@ -651,6 +690,7 @@
         "url": "/papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.html",
         "dir": "Extreme_Parkour_with_Legged_Robots",
         "arxiv": "2309.14341",
+        "has_open_source": true,
         "zhname": "足式机器人的极限跑酷"
       },
       {
@@ -683,6 +723,7 @@
         "url": "/papers/05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels.html",
         "dir": "Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels",
         "arxiv": "2602.06382",
+        "has_open_source": true,
         "zhname": "Now You See That：高保真深度仿真 + 视觉感知行为蒸馏，让人形机器人从「原始像素」端到端学会复杂地形行走"
       },
       {
@@ -713,6 +754,7 @@
         "url": "/papers/06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy.html",
         "dir": "HumDex_Humanoid_Dexterous_Manipulation_Made_Easy",
         "arxiv": "2603.12260",
+        "has_open_source": true,
         "zhname": "HumDex：让人形灵巧操作变简单（IMU 全身遥操作 + 学习式手部重定向）"
       },
       {
@@ -721,6 +763,7 @@
         "url": "/papers/06_Manipulation/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields/cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields.html",
         "dir": "cuRoboV2_Dynamics-Aware_Motion_Generation_with_Depth-Fused_Distance_Fields",
         "arxiv": "2603.05493",
+        "has_open_source": true,
         "zhname": "cuRoboV2：基于深度融合距离场的高自由度机器人动力学感知运动生成"
       },
       {
@@ -729,6 +772,7 @@
         "url": "/papers/06_Manipulation/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos.html",
         "dir": "DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos",
         "arxiv": "2602.06949",
+        "has_open_source": true,
         "zhname": "DreamDojo：从大规模人类视频中学到的通用机器人世界模型"
       },
       {
@@ -751,6 +795,7 @@
         "url": "/papers/07_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.html",
         "dir": "HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans",
         "arxiv": "2406.10454",
+        "has_open_source": true,
         "zhname": "HumanPlus：人形机器人对人类的影子跟随与模仿"
       },
       {
@@ -759,6 +804,7 @@
         "url": "/papers/07_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation.html",
         "dir": "CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation",
         "arxiv": "2602.15060",
+        "has_open_source": true,
         "zhname": "CLOT：用闭环全局动作跟踪做长时序人形遥操作"
       },
       {
@@ -767,6 +813,7 @@
         "url": "/papers/07_Teleoperation/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control/ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control.html",
         "dir": "ExtremControl__Low-Latency_Humanoid_Teleoperation_with_Direct_Extremity_Control",
         "arxiv": "2602.11321",
+        "has_open_source": true,
         "zhname": "ExtremControl：用直接末端控制把人形遥操作的端到端延迟压到 50 ms"
       },
       {
@@ -829,6 +876,7 @@
         "url": "/papers/08_Navigation/Thinking_in_360__Humanoid_Visual_Search_in_the_Wild/Thinking_in_360__Humanoid_Visual_Search_in_the_Wild.html",
         "dir": "Thinking_in_360__Humanoid_Visual_Search_in_the_Wild",
         "arxiv": "2511.20351",
+        "has_open_source": true,
         "zhname": "在 360° 里思考：把人形视觉搜索做成「转头看路 + 转头找物」的两类显式任务"
       }
     ],
@@ -867,6 +915,7 @@
         "url": "/papers/09_State_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation.html",
         "dir": "Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation",
         "arxiv": "2507.10105",
+        "has_open_source": true,
         "zhname": "PINN + UKF：让没有力矩传感器的人形机器人也能做精准全身力矩估计"
       },
       {
@@ -875,7 +924,7 @@
         "url": "/papers/09_State_Estimation/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems.html",
         "dir": "An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems",
         "arxiv": "2207.06780",
-        "zhname": "ARKit / ARCore / T265 / ZED 2 四款主流商用 VIO 系统的统一硬件横评"
+        "zhname": "把四款主流商用 VIO（ARKit / ARCore / T265 / ZED 2）拉到统一实验台做一次硬核横评"
       }
     ],
     "zhname": "状态估计"
@@ -905,6 +954,7 @@
         "url": "/papers/10_Sim-to-Real/LIFT__Towards_Bridging_the_Gap_between_Large-Scale_Pretraining_and_Efficient_F/LIFT__Towards_Bridging_the_Gap_between_Large-Scale_Pretraining_and_Efficient_F.html",
         "dir": "LIFT__Towards_Bridging_the_Gap_between_Large-Scale_Pretraining_and_Efficient_F",
         "arxiv": "2601.21363",
+        "has_open_source": true,
         "zhname": "LIFT：用大批量 SAC 预训练 + 物理先验世界模型微调，把人形 sim-to-real 压到 1 小时"
       },
       {
@@ -913,6 +963,7 @@
         "url": "/papers/10_Sim-to-Real/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato/PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato.html",
         "dir": "PolySim__Bridging_the_Sim-to-Real_Gap_for_Humanoid_Control_via_Multi-Simulato",
         "arxiv": "2510.01708",
+        "has_open_source": true,
         "zhname": "PolySim：把「域随机化」从参数维度推到「整套仿真器」维度"
       },
       {
@@ -921,7 +972,7 @@
         "url": "/papers/10_Sim-to-Real/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion.html",
         "dir": "Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion",
         "arxiv": "2509.12858",
-        "zhname": "对比表征学习：把仿真特权信息蒸进 actor 隐状态，驱动自适应步态时钟"
+        "zhname": "对比表征学习：把仿真里的特权信息\"蒸\"进 actor 隐状态，再驱动一个自适应步态时钟"
       }
     ],
     "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
@@ -937,6 +988,7 @@
         "url": "/papers/11_Simulation_Benchmark/HumanoidBench/HumanoidBench.html",
         "dir": "HumanoidBench",
         "arxiv": "2403.10506",
+        "has_open_source": true,
         "zhname": "HumanoidBench：全身运动与操作的人形机器人仿真基准"
       },
       {
@@ -945,6 +997,7 @@
         "url": "/papers/11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale/GRUtopia__Dream_General_Robots_in_a_City_at_Scale.html",
         "dir": "GRUtopia__Dream_General_Robots_in_a_City_at_Scale",
         "arxiv": "2407.10943",
+        "has_open_source": true,
         "zhname": "GRUtopia：城市级交互式 3D 社会，给通用机器人造一座可训练的「乌托邦」"
       },
       {
@@ -961,6 +1014,7 @@
         "url": "/papers/11_Simulation_Benchmark/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation.html",
         "dir": "MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation",
         "arxiv": "2602.11337",
+        "has_open_source": true,
         "zhname": "MolmoSpaces：230k+ 室内场景 × 130k+ 物体 × 42M 抓取的全开源具身 AI 评测生态"
       }
     ],
@@ -993,7 +1047,7 @@
         "zhname": "Fauna Sprout：一款轻量、亲和、开发者友好的人形机器人开发平台"
       },
       {
-        "title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand: Toward Dexterous Manipulation for Payload-Constrained Humanoids",
+        "title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand",
         "path": "papers/12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.md",
         "url": "/papers/12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.html",
         "dir": "Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand",
@@ -1028,10 +1082,11 @@
         "url": "/papers/13_Physics-Based_Animation/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit.html",
         "dir": "CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit",
         "arxiv": "2512.14696",
+        "has_open_source": true,
         "zhname": "CRISP：用接触引导 + 平面基元从单目视频做 Real2Sim 的人–场景重建"
       },
       {
-        "title": "Mimic2DM: Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions",
+        "title": "Mimic2DM: Generating and Mimicking 2D Motions for 3D Character Control",
         "path": "papers/13_Physics-Based_Animation/Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control/Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control.md",
         "url": "/papers/13_Physics-Based_Animation/Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control/Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control.html",
         "dir": "Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control",
@@ -1050,6 +1105,7 @@
         "url": "/papers/14_Human_Motion/HumanML3D/HumanML3D.html",
         "dir": "HumanML3D",
         "arxiv": "2204.09419",
+        "has_open_source": true,
         "zhname": "从文本描述生成多样化且自然的 3D 人体运动"
       },
       {
@@ -1058,6 +1114,7 @@
         "url": "/papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.html",
         "dir": "Learned_Motion_Matching",
         "arxiv": "2209.14916",
+        "has_open_source": true,
         "zhname": "学习式动作匹配：用三张小网络替代海量动作数据库"
       },
       {
@@ -1066,6 +1123,7 @@
         "url": "/papers/14_Human_Motion/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents/EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents.html",
         "dir": "EmbodMocap__In-the-Wild_4D_Human-Scene_Reconstruction_for_Embodied_Agents",
         "arxiv": "2602.23205",
+        "has_open_source": true,
         "zhname": "EmbodMocap：双 iPhone 户外 4D 人-场景重建，给具身智能体喂数据"
       },
       {

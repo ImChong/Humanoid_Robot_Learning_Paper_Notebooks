@@ -53,6 +53,72 @@ def extract_title(content):
 _ = (is_stub, normalize_name)  # re-exported for backwards compatibility
 
 
+_BASIC_INFO_SECTION_RE = re.compile(
+    r'^##\s*📋\s*基本信息\s*$',
+    re.MULTILINE,
+)
+_NEXT_H2_RE = re.compile(r'^##\s', re.MULTILINE)
+_CODE_ROW_LABEL_RE = re.compile(
+    r'(?:代码|源码|GitHub|官方代码|算法代码)',
+    re.IGNORECASE,
+)
+_CODE_ROW_EXCLUDE_LABEL_RE = re.compile(
+    r'相关|许可|文档|主页|进阶|配套|同组|项目主页',
+    re.IGNORECASE,
+)
+_NO_OPEN_SOURCE_VALUE_RE = re.compile(
+    r'未开源|暂未开源|暂无公开|未见到.*(?:官方|独立)|未集中给出|原文未开源|'
+    r'待官方释出|待确认公开|🚧|暂未完全公开|暂无公开仓库',
+    re.IGNORECASE,
+)
+_GITHUB_REPO_URL_RE = re.compile(
+    r'https?://(?:www\.)?github\.com/[\w.-]+/[\w.-]+',
+    re.IGNORECASE,
+)
+
+
+def _extract_basic_info_section(content):
+    """Return markdown under the ``## 📋 基本信息`` heading, or ``None``."""
+    match = _BASIC_INFO_SECTION_RE.search(content)
+    if not match:
+        return None
+    start = match.end()
+    rest = content[start:]
+    next_heading = _NEXT_H2_RE.search(rest)
+    end = start + next_heading.start() if next_heading else len(content)
+    return content[start:end]
+
+
+def extract_has_open_source(content):
+    """True when the basic-info table links to this paper's open-source code on GitHub."""
+    section = _extract_basic_info_section(content)
+    if not section:
+        return False
+
+    for line in section.split('\n'):
+        line = line.strip()
+        if not line.startswith('|') or re.match(r'^\|[\s\-:|]+\|$', line):
+            continue
+        cols = [c.strip() for c in line.split('|')]
+        cols = [c for c in cols if c]
+        if len(cols) < 2:
+            continue
+
+        label = re.sub(r'\*+', '', cols[0]).strip()
+        value = cols[-1] if len(cols) == 2 else ' | '.join(cols[1:])
+
+        if _CODE_ROW_EXCLUDE_LABEL_RE.search(label):
+            continue
+        if not _CODE_ROW_LABEL_RE.search(label):
+            continue
+        if _NO_OPEN_SOURCE_VALUE_RE.search(value):
+            continue
+        if _GITHUB_REPO_URL_RE.search(value):
+            return True
+
+    return False
+
+
 def extract_arxiv(content):
     """Extract arXiv ID from common note metadata table formats."""
     # ⚡ Bolt Optimization: Avoid re.search and string lowercasing copies by
@@ -389,6 +455,9 @@ def process_papers():
                 arxiv = arxiv_for_order or existing_meta_for_paper.get('arxiv')
                 if arxiv:
                     paper_entry['arxiv'] = arxiv
+
+                if extract_has_open_source(content):
+                    paper_entry['has_open_source'] = True
 
                 # Prefer zhname from front matter when present
                 if 'zhname' in frontmatter_meta:

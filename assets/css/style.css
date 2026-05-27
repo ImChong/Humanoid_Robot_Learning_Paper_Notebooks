@@ -195,6 +195,13 @@ html {
   margin-top: 0.3rem;
 }
 
+.index-header .index-legend {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  opacity: 0.85;
+  margin: 0.35rem 0 0;
+}
+
 .paper-count {
   font-size: 0.85em;
   font-weight: 400;
@@ -271,7 +278,9 @@ html {
 }
 
 .paper-card {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.7rem 1rem;
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -288,7 +297,14 @@ html {
 }
 
 .paper-card .paper-title {
+  flex: 1;
+  min-width: 0;
   font-weight: 600;
+}
+
+.paper-card .paper-opensource {
+  flex-shrink: 0;
+  line-height: 1;
 }
 
 /* ===== Paper Layout with TOC ===== */
