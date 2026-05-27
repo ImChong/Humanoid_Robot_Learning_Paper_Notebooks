@@ -3,100 +3,12 @@
     "display_name": "Foundational RL",
     "papers": [
       {
-        "title": "MimicKit: A Reinforcement Learning Framework for Motion Imitation and Control",
-        "path": "papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.md",
-        "url": "/papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.html",
-        "dir": "MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control",
-        "arxiv": "2510.13794",
-        "has_open_source": true,
-        "zhname": "MimicKit：运动模仿与控制的强化学习框架"
-      },
-      {
-        "title": "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion",
-        "path": "papers/01_Foundational_RL/BeyondMimic/BeyondMimic.md",
-        "url": "/papers/01_Foundational_RL/BeyondMimic/BeyondMimic.html",
-        "dir": "BeyondMimic",
-        "arxiv": "2508.08241",
-        "zhname": "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
-      },
-      {
-        "title": "ADD: Adversarial Disentanglement and Distillation",
-        "path": "papers/01_Foundational_RL/ADD_Adversarial_Differential_Discriminators/ADD_Adversarial_Differential_Discriminators.md",
-        "url": "/papers/01_Foundational_RL/ADD_Adversarial_Differential_Discriminators/ADD_Adversarial_Differential_Discriminators.html",
-        "dir": "ADD_Adversarial_Differential_Discriminators",
-        "arxiv": "2505.04961",
-        "has_open_source": true,
-        "zhname": "ADD：对抗解耦与蒸馏"
-      },
-      {
-        "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
-        "path": "papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.md",
-        "url": "/papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.html",
-        "dir": "LCP_Sim-to-Real_Action_Smoothing",
-        "arxiv": "2410.11825",
-        "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
-      },
-      {
-        "title": "PULSE: Universal Humanoid Motion Representations for Physics-Based Control",
-        "path": "papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.md",
-        "url": "/papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.html",
-        "dir": "PULSE_Physics-based_Universal_Latent_Space",
-        "arxiv": "2310.04582",
-        "has_open_source": true,
-        "zhname": "PULSE：物理可行的通用潜在技能提取"
-      },
-      {
-        "title": "PHC: Perpetual Humanoid Control for Real-time Simulated Avatars",
-        "path": "papers/01_Foundational_RL/PHC_Perpetual_Humanoid_Control/PHC_Perpetual_Humanoid_Control.md",
-        "url": "/papers/01_Foundational_RL/PHC_Perpetual_Humanoid_Control/PHC_Perpetual_Humanoid_Control.html",
-        "dir": "PHC_Perpetual_Humanoid_Control",
-        "arxiv": "2305.06456",
-        "has_open_source": true,
-        "zhname": "PHC：实时仿真虚拟角色的持续人形控制"
-      },
-      {
-        "title": "CALM: Conditional Adversarial Latent Models for Directable Virtual Characters",
-        "path": "papers/01_Foundational_RL/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters.md",
-        "url": "/papers/01_Foundational_RL/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters.html",
-        "dir": "CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters",
-        "arxiv": "2305.02195",
-        "has_open_source": true,
-        "zhname": "CALM：面向可控虚拟角色的条件对抗潜变量模型"
-      },
-      {
-        "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
-        "path": "papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.md",
-        "url": "/papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.html",
-        "dir": "Diffusion_Policy",
-        "arxiv": "2303.04137",
-        "has_open_source": true,
-        "zhname": "Diffusion Policy：基于动作扩散的视觉运动策略学习"
-      },
-      {
-        "title": "ASE: Adversarial Skill Embeddings for Large-Scale Motion Control",
-        "path": "papers/01_Foundational_RL/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.md",
-        "url": "/papers/01_Foundational_RL/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.html",
-        "dir": "ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control",
-        "arxiv": "2205.01906",
-        "has_open_source": true,
-        "zhname": "ASE：大规模运动控制的对抗技能嵌入"
-      },
-      {
-        "title": "Understanding Domain Randomization for Sim-to-real Transfer",
-        "path": "papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.md",
-        "url": "/papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.html",
-        "dir": "Domain_Randomization_Understanding_Sim-to-Real_Transfer",
-        "arxiv": "2110.03239",
-        "zhname": "理解域随机化在仿真到现实迁移中的作用"
-      },
-      {
-        "title": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
-        "path": "papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.md",
-        "url": "/papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.html",
-        "dir": "AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control",
-        "arxiv": "2104.02180",
-        "has_open_source": true,
-        "zhname": "AMP：对抗运动先验的风格化物理角色控制"
+        "title": "Proximal Policy Optimization Algorithms (PPO)",
+        "path": "papers/01_Foundational_RL/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.md",
+        "url": "/papers/01_Foundational_RL/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.html",
+        "dir": "PPO_Proximal_Policy_Optimization",
+        "arxiv": "1707.06347",
+        "zhname": "近端策略优化算法 (PPO)"
       },
       {
         "title": "Advantage Weighted Regression (AWR)",
@@ -117,12 +29,83 @@
         "zhname": "DeepMimic：基于示例引导的物理角色技能深度强化学习"
       },
       {
-        "title": "Proximal Policy Optimization Algorithms (PPO)",
-        "path": "papers/01_Foundational_RL/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.md",
-        "url": "/papers/01_Foundational_RL/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.html",
-        "dir": "PPO_Proximal_Policy_Optimization",
-        "arxiv": "1707.06347",
-        "zhname": "近端策略优化算法 (PPO)"
+        "title": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
+        "path": "papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.md",
+        "url": "/papers/01_Foundational_RL/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control/AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control.html",
+        "dir": "AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control",
+        "arxiv": "2104.02180",
+        "has_open_source": true,
+        "zhname": "AMP：对抗运动先验的风格化物理角色控制"
+      },
+      {
+        "title": "PHC: Perpetual Humanoid Control for Real-time Simulated Avatars",
+        "path": "papers/01_Foundational_RL/PHC_Perpetual_Humanoid_Control/PHC_Perpetual_Humanoid_Control.md",
+        "url": "/papers/01_Foundational_RL/PHC_Perpetual_Humanoid_Control/PHC_Perpetual_Humanoid_Control.html",
+        "dir": "PHC_Perpetual_Humanoid_Control",
+        "arxiv": "2305.06456",
+        "has_open_source": true,
+        "zhname": "PHC：实时仿真虚拟角色的持续人形控制"
+      },
+      {
+        "title": "ADD: Adversarial Disentanglement and Distillation",
+        "path": "papers/01_Foundational_RL/ADD_Adversarial_Differential_Discriminators/ADD_Adversarial_Differential_Discriminators.md",
+        "url": "/papers/01_Foundational_RL/ADD_Adversarial_Differential_Discriminators/ADD_Adversarial_Differential_Discriminators.html",
+        "dir": "ADD_Adversarial_Differential_Discriminators",
+        "arxiv": "2505.04961",
+        "has_open_source": true,
+        "zhname": "ADD：对抗解耦与蒸馏"
+      },
+      {
+        "title": "ASE: Adversarial Skill Embeddings for Large-Scale Motion Control",
+        "path": "papers/01_Foundational_RL/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.md",
+        "url": "/papers/01_Foundational_RL/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control/ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control.html",
+        "dir": "ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control",
+        "arxiv": "2205.01906",
+        "has_open_source": true,
+        "zhname": "ASE：大规模运动控制的对抗技能嵌入"
+      },
+      {
+        "title": "CALM: Conditional Adversarial Latent Models for Directable Virtual Characters",
+        "path": "papers/01_Foundational_RL/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters.md",
+        "url": "/papers/01_Foundational_RL/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters/CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters.html",
+        "dir": "CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters",
+        "arxiv": "2305.02195",
+        "has_open_source": true,
+        "zhname": "CALM：面向可控虚拟角色的条件对抗潜变量模型"
+      },
+      {
+        "title": "PULSE: Universal Humanoid Motion Representations for Physics-Based Control",
+        "path": "papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.md",
+        "url": "/papers/01_Foundational_RL/PULSE_Physics-based_Universal_Latent_Space/PULSE_Physics-based_Universal_Latent_Space.html",
+        "dir": "PULSE_Physics-based_Universal_Latent_Space",
+        "arxiv": "2310.04582",
+        "has_open_source": true,
+        "zhname": "PULSE：物理可行的通用潜在技能提取"
+      },
+      {
+        "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+        "path": "papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.md",
+        "url": "/papers/01_Foundational_RL/Diffusion_Policy/Diffusion_Policy.html",
+        "dir": "Diffusion_Policy",
+        "arxiv": "2303.04137",
+        "has_open_source": true,
+        "zhname": "Diffusion Policy：基于动作扩散的视觉运动策略学习"
+      },
+      {
+        "title": "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion",
+        "path": "papers/01_Foundational_RL/BeyondMimic/BeyondMimic.md",
+        "url": "/papers/01_Foundational_RL/BeyondMimic/BeyondMimic.html",
+        "dir": "BeyondMimic",
+        "arxiv": "2508.08241",
+        "zhname": "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
+      },
+      {
+        "title": "Understanding Domain Randomization for Sim-to-real Transfer",
+        "path": "papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.md",
+        "url": "/papers/01_Foundational_RL/Domain_Randomization_Understanding_Sim-to-Real_Transfer/Domain_Randomization_Understanding_Sim-to-Real_Transfer.html",
+        "dir": "Domain_Randomization_Understanding_Sim-to-Real_Transfer",
+        "arxiv": "2110.03239",
+        "zhname": "理解域随机化在仿真到现实迁移中的作用"
       },
       {
         "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
@@ -131,6 +114,23 @@
         "dir": "Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_the_Real_World",
         "arxiv": "1703.06907",
         "zhname": "域随机化：从仿真到真实世界的深度神经网络迁移"
+      },
+      {
+        "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
+        "path": "papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.md",
+        "url": "/papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.html",
+        "dir": "LCP_Sim-to-Real_Action_Smoothing",
+        "arxiv": "2410.11825",
+        "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
+      },
+      {
+        "title": "MimicKit: A Reinforcement Learning Framework for Motion Imitation and Control",
+        "path": "papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.md",
+        "url": "/papers/01_Foundational_RL/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control/MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control.html",
+        "dir": "MimicKit_A_Reinforcement_Learning_Framework_for_Motion_Imitation_and_Control",
+        "arxiv": "2510.13794",
+        "has_open_source": true,
+        "zhname": "MimicKit：运动模仿与控制的强化学习框架"
       }
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research",
