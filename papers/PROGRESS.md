@@ -126,7 +126,7 @@
 | 50   | [ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control](https://arxiv.org/abs/2602.00401)                                                           | 2026-05-14 |     | ✅ 完成 |
 | 51   | [Robust and Generalized Humanoid Motion Tracking](https://arxiv.org/abs/2601.23080)                                                                              | 2026-05-17 |     | ✅ 完成 |
 | 52   | [RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing](https://arxiv.org/abs/2601.22517)                                                     | 2026.01    | 2026-05-22 | ✅ 已完成 |
-| 53   | [PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes](https://arxiv.org/abs/2601.17440)                           | 2026.01    |     | ⏳ 待读 |
+| 53   | [PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes](https://arxiv.org/abs/2601.17440)                           | 2026.01    | 2026-06-02 | ✅ 已完成 |
 | 54   | [Collision-Free Humanoid Traversal in Cluttered Indoor Scenes](https://arxiv.org/abs/2601.16035)                                                                 | 2026.01    |     | ⏳ 待读 |
 | 55   | [FRoM-W1: Towards General Humanoid Whole-Body Control with Language Instructions](https://arxiv.org/abs/2601.12799)                                              | 2026.01    |     | ⏳ 待读 |
 | 56   | [Learning Whole-Body Human-Humanoid Interaction from Human-Human Demonstrations](https://arxiv.org/abs/2601.09518)                                               | 2026.01    |     | ⏳ 待读 |
