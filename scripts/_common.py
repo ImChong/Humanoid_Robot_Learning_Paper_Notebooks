@@ -17,8 +17,8 @@ import re
 from collections.abc import Iterator
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PAPERS_DIR = os.path.join(BASE_DIR, 'papers')
-SKIP_DIRS = {'todos'}
+PAPERS_DIR = os.path.join(BASE_DIR, "papers")
+SKIP_DIRS = {"todos"}
 
 # A note is considered a stub when EITHER:
 #   1. it is short AND has no recognisable "方法" (method) section heading, OR
@@ -28,7 +28,7 @@ SKIP_DIRS = {'todos'}
 # single source of truth.
 STUB_MIN_LINES = 150
 STUB_CONSTRUCTION_THRESHOLD = 5
-_METHOD_HEADING_RE = re.compile(r'^##\s*(?:🔧|🛠️)?\s*.*方法', re.MULTILINE)
+_METHOD_HEADING_RE = re.compile(r"^##\s*(?:🔧|🛠️)?\s*.*方法", re.MULTILINE)
 
 
 def is_stub(content: str) -> bool:
@@ -39,13 +39,13 @@ def is_stub(content: str) -> bool:
     front matter, which is acceptable since real notes are far longer than the
     threshold either way.
     """
-    construction_count = content.count('🚧')
+    construction_count = content.count("🚧")
     if construction_count >= STUB_CONSTRUCTION_THRESHOLD:
         return True
 
-    line_count = content.count('\n') + 1
+    line_count = content.count("\n") + 1
     if line_count < STUB_MIN_LINES:
-        has_method = '方法' in content and bool(_METHOD_HEADING_RE.search(content))
+        has_method = "方法" in content and bool(_METHOD_HEADING_RE.search(content))
         if not has_method:
             return True
 
@@ -54,20 +54,20 @@ def is_stub(content: str) -> bool:
 
 def stub_reason(content: str) -> str | None:
     """Human-readable reason this note is a stub, or None if it is not."""
-    line_count = content.count('\n') + 1
+    line_count = content.count("\n") + 1
     if line_count < STUB_MIN_LINES:
-        has_method = '方法' in content and bool(_METHOD_HEADING_RE.search(content))
+        has_method = "方法" in content and bool(_METHOD_HEADING_RE.search(content))
         if not has_method:
             return f"{line_count} lines, missing 方法详解"
 
-    construction_count = content.count('🚧')
+    construction_count = content.count("🚧")
     if construction_count >= STUB_CONSTRUCTION_THRESHOLD:
         return f"{construction_count} 🚧 markers, skeleton"
 
     return None
 
 
-_NORMALIZE_NON_ALNUM_RE = re.compile(r'[^a-z0-9\s]')
+_NORMALIZE_NON_ALNUM_RE = re.compile(r"[^a-z0-9\s]")
 
 
 def normalize_name(name: str) -> str:
@@ -79,12 +79,12 @@ def normalize_name(name: str) -> str:
     # ⚡ Bolt Optimization: Use a compiled regex for non-alphanumeric removal
     # and string split()/join() for whitespace squashing. This avoids a second
     # re.sub() pass and makes the function over 2x faster.
-    return ' '.join(_NORMALIZE_NON_ALNUM_RE.sub('', name.lower()).split())
+    return " ".join(_NORMALIZE_NON_ALNUM_RE.sub("", name.lower()).split())
 
 
 def has_frontmatter(content: str) -> bool:
     """Check if ``content`` already starts with a Jekyll front matter block."""
-    return content.startswith('---\n') or content.startswith('---\r\n')
+    return content.startswith("---\n") or content.startswith("---\r\n")
 
 
 def parse_frontmatter(content: str) -> dict:
@@ -98,18 +98,18 @@ def parse_frontmatter(content: str) -> dict:
         return {}
     # ⚡ Bolt Optimization: Use `find` to avoid allocating a large string
     # copy for the body when we only need the frontmatter section.
-    end_idx = content.find('---', 3)
+    end_idx = content.find("---", 3)
     if end_idx == -1:
         return {}
     front_matter_str = content[3:end_idx]
     result: dict[str, str] = {}
     for line in front_matter_str.splitlines():
         line = line.strip()
-        if not line or line.startswith('#'):
+        if not line or line.startswith("#"):
             continue
-        if ':' not in line:
+        if ":" not in line:
             continue
-        key, _, value = line.partition(':')
+        key, _, value = line.partition(":")
         key = key.strip()
         value = value.strip()
         # Unquote symmetric quote characters
@@ -127,9 +127,9 @@ def normalize_paper_meta_blockquotes(content: str) -> tuple[str, bool]:
     are separated by an empty ``>`` continuation line. Without that separator,
     "阅读日期", "板块", and other header callouts collapse onto one line.
     """
-    lines = content.split('\n')
+    lines = content.split("\n")
     h1_idx = next(
-        (i for i, line in enumerate(lines) if line.startswith('# ') and not line.startswith('## ')),
+        (i for i, line in enumerate(lines) if line.startswith("# ") and not line.startswith("## ")),
         None,
     )
     if h1_idx is None:
@@ -138,14 +138,14 @@ def normalize_paper_meta_blockquotes(content: str) -> tuple[str, bool]:
     end_idx = len(lines)
     for i in range(h1_idx + 1, min(len(lines), h1_idx + 30)):
         stripped = lines[i].strip()
-        if stripped == '---' or lines[i].startswith('## '):
+        if stripped == "---" or lines[i].startswith("## "):
             end_idx = i
             break
 
     content_bq_indices: list[int] = []
     for i in range(h1_idx + 1, end_idx):
-        if lines[i].startswith('>'):
-            if lines[i].strip() != '>':
+        if lines[i].startswith(">"):
+            if lines[i].strip() != ">":
                 content_bq_indices.append(i)
         elif lines[i].strip() and content_bq_indices:
             break
@@ -166,15 +166,15 @@ def normalize_paper_meta_blockquotes(content: str) -> tuple[str, bool]:
     for j in range(1, len(content_bq_indices)):
         prev_i = content_bq_indices[j - 1] + offset
         curr_i = content_bq_indices[j] + offset
-        between = new_lines[prev_i + 1:curr_i]
-        if not any(line.strip() == '>' for line in between):
-            new_lines.insert(curr_i, '>')
+        between = new_lines[prev_i + 1 : curr_i]
+        if not any(line.strip() == ">" for line in between):
+            new_lines.insert(curr_i, ">")
             offset += 1
             changed = True
 
     if not changed:
         return content, False
-    return '\n'.join(new_lines), True
+    return "\n".join(new_lines), True
 
 
 def iter_paper_md_files(papers_dir: str = PAPERS_DIR) -> Iterator[str]:
@@ -197,5 +197,5 @@ def iter_paper_md_files(papers_dir: str = PAPERS_DIR) -> Iterator[str]:
             if not os.path.isdir(paper_path):
                 continue
             for fname in sorted(os.listdir(paper_path)):
-                if fname.endswith('.md'):
+                if fname.endswith(".md"):
                     yield os.path.join(paper_path, fname)
