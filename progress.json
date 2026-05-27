@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "14_Human_Motion",
-      "last_index": 479,
-      "last_title": "MAGNet: Diffusion Forcing for Multi-Agent Interaction Sequence Modeling",
-      "next_module": "04_Loco-Manipulation_and_WBC"
+      "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_index": 53,
+      "last_title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
+      "next_module": "05_Locomotion"
     },
-    "last_summary_index": 479,
-    "last_summary_date": "2026-06-01",
-    "last_summary_title": "MAGNet: Diffusion Forcing for Multi-Agent Interaction Sequence Modeling",
+    "last_summary_index": 53,
+    "last_summary_date": "2026-06-02",
+    "last_summary_title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
     "next_summary_index": null,
     "log": [
       {
@@ -689,9 +689,21 @@
         "index": 479,
         "title": "MAGNet: Diffusion Forcing for Multi-Agent Interaction Sequence Modeling",
         "folder": "papers/14_Human_Motion/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling"
+      },
+      {
+        "date": "2026-06-02",
+        "index": 53,
+        "title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
+        "module": "04_Loco-Manipulation_and_WBC",
+        "category": "04_Loco-Manipulation_and_WBC",
+        "note_path": "papers/04_Loco-Manipulation_and_WBC/PILOT__A_Perceptive_Integrated_Low-level_Controller_for_Loco-manipulation/PILOT__A_Perceptive_Integrated_Low-level_Controller_for_Loco-manipulation.md",
+        "track": "module_rotation",
+        "arxiv": "2601.17440",
+        "source_repo": null,
+        "project_page": null
       }
     ],
-    "last_completed_index": 479,
+    "last_completed_index": 53,
     "next_index": null
   },
   "papers": [
@@ -1213,15 +1225,15 @@
     },
     {
       "title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
-      "arxiv": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/PILOT__A_Perceptive_Integrated_Low-level_Controller_for_Loco-manipulation_over_U",
-      "note_file": "PILOT__A_Perceptive_Integrated_Low-level_Controller_for_Loco-manipulation_over_U.md",
+      "arxiv": "2601.17440",
+      "folder": "papers/04_Loco-Manipulation_and_WBC/PILOT__A_Perceptive_Integrated_Low-level_Controller_for_Loco-manipulation",
+      "note_file": "PILOT__A_Perceptive_Integrated_Low-level_Controller_for_Loco-manipulation.md",
       "pdf_file": "PILOT.pdf",
-      "status": "pending",
-      "start_date": null,
-      "done_date": null,
+      "status": "done",
+      "start_date": "2026-06-02",
+      "done_date": "2026-06-02",
       "route": "Loco-Manipulation",
-      "title_cn": ""
+      "title_cn": "PILOT：在非结构化场景中实现感知-动作一体化的人形 Loco-Manipulation 底层控制器"
     },
     {
       "title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",

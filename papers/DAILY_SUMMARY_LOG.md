@@ -229,6 +229,7 @@
 | 413 | Olaf: Bringing an Animated Character to Life in the Physical World | 12_Hardware_Design | ✅ 已完成（2026-05-30） |
 | 451 | PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction | 13_Physics-Based_Animation | ✅ 已完成（2026-05-31） |
 | 479 | MAGNet: Diffusion Forcing for Multi-Agent Interaction Sequence Modeling | 14_Human_Motion | ✅ 已完成（2026-06-01） |
-| ? | （明日：04_Loco-Manipulation_and_WBC 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 04_Loco-Manipulation_and_WBC | ⏭️ 下一篇候选 |
+| 53 | PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes | 04_Loco-Manipulation_and_WBC | ✅ 已完成（2026-06-02） |
+| ? | （明日：05_Locomotion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 05_Locomotion | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
