@@ -519,16 +519,21 @@ def process_papers():
 
                 papers.append(paper_entry)
 
-        # Sort papers inside each category:
-        # 1) arXiv newest-first to align with upstream awesome list
-        # 2) keep _order as tiebreaker / fallback for non-arXiv entries
-        papers.sort(
-            key=lambda p: (
-                _arxiv_sort_key(p.get('arxiv')),
-                -int(p.get('_order', 10**9)) if isinstance(p.get('_order'), int) else -10**9,
-            ),
-            reverse=True,
-        )
+        # High Impact keeps curated H# order from PROGRESS; other categories sort by arXiv.
+        if category_dir == '03_High_Impact_Selection':
+            papers.sort(key=lambda p: p['_order'])
+        else:
+            # 1) arXiv newest-first to align with upstream awesome list
+            # 2) keep _order as tiebreaker / fallback for non-arXiv entries
+            papers.sort(
+                key=lambda p: (
+                    _arxiv_sort_key(p.get('arxiv')),
+                    -int(p.get('_order', 10**9))
+                    if isinstance(p.get('_order'), int)
+                    else -10**9,
+                ),
+                reverse=True,
+            )
         # Load existing category meta (subtitle, subcategories) from current papers.json
         existing_meta = existing_papers_json.get(category_dir, {})
 

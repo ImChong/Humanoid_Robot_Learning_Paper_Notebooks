@@ -181,39 +181,13 @@
         "name": "Whole-Body Control Core",
         "papers": [
           {
-            "title": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
-            "path": "papers/03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.md",
-            "url": "/papers/03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.html",
-            "dir": "SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control",
-            "arxiv": "2511.07820",
+            "title": "Expressive Whole-Body Control for Humanoid Robots",
+            "path": "papers/03_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.md",
+            "url": "/papers/03_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.html",
+            "dir": "Expressive_Whole-Body_Control_for_Humanoid_Robots",
+            "arxiv": "2402.16796",
             "has_open_source": true,
-            "zhname": "SONIC：用规模化运动跟踪打造自然的人形全身控制器"
-          },
-          {
-            "title": "HugWBC: A Unified and General Humanoid Whole-Body Controller for Versatile Locomotion",
-            "path": "papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.md",
-            "url": "/papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.html",
-            "dir": "HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller",
-            "arxiv": "2502.03206",
-            "has_open_source": true,
-            "zhname": "HugWBC：面向多步态人形的统一通用全身控制器"
-          },
-          {
-            "title": "UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control",
-            "path": "papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md",
-            "url": "/papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.html",
-            "dir": "UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
-            "arxiv": "2412.14172",
-            "has_open_source": true,
-            "zhname": "UH-1：从海量互联网人类视频中学习通用人形姿态控制"
-          },
-          {
-            "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
-            "path": "papers/03_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.md",
-            "url": "/papers/03_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.html",
-            "dir": "ExBody2_Advanced_Expressive_Whole-Body_Control",
-            "arxiv": "2412.13196",
-            "zhname": "ExBody2：进阶的表达性人形全身控制"
+            "zhname": "人形机器人表现力全身控制"
           },
           {
             "title": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
@@ -225,13 +199,39 @@
             "zhname": "HOVER：面向人形机器人的多模态通用神经全身控制器"
           },
           {
-            "title": "Expressive Whole-Body Control for Humanoid Robots",
-            "path": "papers/03_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.md",
-            "url": "/papers/03_High_Impact_Selection/Expressive_Whole-Body_Control_for_Humanoid_Robots/Expressive_Whole-Body_Control_for_Humanoid_Robots.html",
-            "dir": "Expressive_Whole-Body_Control_for_Humanoid_Robots",
-            "arxiv": "2402.16796",
+            "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
+            "path": "papers/03_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.md",
+            "url": "/papers/03_High_Impact_Selection/ExBody2_Advanced_Expressive_Whole-Body_Control/ExBody2_Advanced_Expressive_Whole-Body_Control.html",
+            "dir": "ExBody2_Advanced_Expressive_Whole-Body_Control",
+            "arxiv": "2412.13196",
+            "zhname": "ExBody2：进阶的表达性人形全身控制"
+          },
+          {
+            "title": "HugWBC: A Unified and General Humanoid Whole-Body Controller for Versatile Locomotion",
+            "path": "papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.md",
+            "url": "/papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.html",
+            "dir": "HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller",
+            "arxiv": "2502.03206",
             "has_open_source": true,
-            "zhname": "人形机器人表现力全身控制"
+            "zhname": "HugWBC：面向多步态人形的统一通用全身控制器"
+          },
+          {
+            "title": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
+            "path": "papers/03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.md",
+            "url": "/papers/03_High_Impact_Selection/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control/SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control.html",
+            "dir": "SONIC_Supersizing_Motion_Tracking_for_Natural_Humanoid_Control",
+            "arxiv": "2511.07820",
+            "has_open_source": true,
+            "zhname": "SONIC：用规模化运动跟踪打造自然的人形全身控制器"
+          },
+          {
+            "title": "UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control",
+            "path": "papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md",
+            "url": "/papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.html",
+            "dir": "UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
+            "arxiv": "2412.14172",
+            "has_open_source": true,
+            "zhname": "UH-1：从海量互联网人类视频中学习通用人形姿态控制"
           }
         ],
         "zhname": "全身控制核心"
@@ -239,6 +239,14 @@
       {
         "name": "Teleoperation & Imitation Learning",
         "papers": [
+          {
+            "title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
+            "path": "papers/03_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.md",
+            "url": "/papers/03_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.html",
+            "dir": "OmniH2O_Universal_Whole-Body_Teleoperation",
+            "arxiv": "2406.08858",
+            "zhname": "OmniH2O：通用灵巧的人到人形整体遥操与学习"
+          },
           {
             "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
             "path": "papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md",
@@ -256,14 +264,6 @@
             "arxiv": "2410.10803",
             "has_open_source": true,
             "zhname": "iDP3：基于改进版 3D 扩散策略的可泛化人形操作"
-          },
-          {
-            "title": "OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning",
-            "path": "papers/03_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.md",
-            "url": "/papers/03_High_Impact_Selection/OmniH2O_Universal_Whole-Body_Teleoperation/OmniH2O_Universal_Whole-Body_Teleoperation.html",
-            "dir": "OmniH2O_Universal_Whole-Body_Teleoperation",
-            "arxiv": "2406.08858",
-            "zhname": "OmniH2O：通用灵巧的人到人形整体遥操与学习"
           }
         ],
         "zhname": "遥操作与模仿学习"
@@ -272,22 +272,20 @@
         "name": "Locomotion Classics",
         "papers": [
           {
-            "title": "ECO: Energy-Constrained Optimization with Reinforcement Learning for Humanoid Walking",
-            "path": "papers/03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.md",
-            "url": "/papers/03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.html",
-            "dir": "ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking",
-            "arxiv": "2602.06445",
-            "has_open_source": true,
-            "zhname": "ECO：把人形行走能耗写成显式约束的受限 RL（PPO-Lagrangian · BRUCE）"
+            "title": "Real-World Humanoid Locomotion with Reinforcement Learning",
+            "path": "papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.md",
+            "url": "/papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.html",
+            "dir": "Real-World_Humanoid_Locomotion_with_RL",
+            "arxiv": "2303.03381",
+            "zhname": "首个 RL 真实世界人形行走（Berkeley · Causal Transformer）"
           },
           {
-            "title": "Learning Sim-to-Real Humanoid Locomotion in 15 Minutes",
-            "path": "papers/03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.md",
-            "url": "/papers/03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.html",
-            "dir": "Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes",
-            "arxiv": "2512.01996",
-            "has_open_source": true,
-            "zhname": "15 分钟人形 sim-to-real：FastSAC / FastTD3 大规模并行配方（Amazon FAR）"
+            "title": "Humanoid Locomotion as Next Token Prediction",
+            "path": "papers/03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction/Humanoid_Locomotion_as_Next_Token_Prediction.md",
+            "url": "/papers/03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction/Humanoid_Locomotion_as_Next_Token_Prediction.html",
+            "dir": "Humanoid_Locomotion_as_Next_Token_Prediction",
+            "arxiv": "2402.19469",
+            "zhname": "人形行走即下一 token 预测（自回归传感运动轨迹 · Digit 实机）"
           },
           {
             "title": "Humanoid Parkour Learning",
@@ -299,20 +297,22 @@
             "zhname": "人形跑酷：无动作先验的端到端视觉全身控制（Unitree H1）"
           },
           {
-            "title": "Humanoid Locomotion as Next Token Prediction",
-            "path": "papers/03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction/Humanoid_Locomotion_as_Next_Token_Prediction.md",
-            "url": "/papers/03_High_Impact_Selection/Humanoid_Locomotion_as_Next_Token_Prediction/Humanoid_Locomotion_as_Next_Token_Prediction.html",
-            "dir": "Humanoid_Locomotion_as_Next_Token_Prediction",
-            "arxiv": "2402.19469",
-            "zhname": "人形行走即下一 token 预测（自回归传感运动轨迹 · Digit 实机）"
+            "title": "Learning Sim-to-Real Humanoid Locomotion in 15 Minutes",
+            "path": "papers/03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.md",
+            "url": "/papers/03_High_Impact_Selection/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes/Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes.html",
+            "dir": "Learning_Sim-to-Real_Humanoid_Locomotion_in_15_Minutes",
+            "arxiv": "2512.01996",
+            "has_open_source": true,
+            "zhname": "15 分钟人形 sim-to-real：FastSAC / FastTD3 大规模并行配方（Amazon FAR）"
           },
           {
-            "title": "Real-World Humanoid Locomotion with Reinforcement Learning",
-            "path": "papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.md",
-            "url": "/papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.html",
-            "dir": "Real-World_Humanoid_Locomotion_with_RL",
-            "arxiv": "2303.03381",
-            "zhname": "首个 RL 真实世界人形行走（Berkeley · Causal Transformer）"
+            "title": "ECO: Energy-Constrained Optimization with Reinforcement Learning for Humanoid Walking",
+            "path": "papers/03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.md",
+            "url": "/papers/03_High_Impact_Selection/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking/ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking.html",
+            "dir": "ECO_Energy_Constrained_Optimization_with_RL_for_Humanoid_Walking",
+            "arxiv": "2602.06445",
+            "has_open_source": true,
+            "zhname": "ECO：把人形行走能耗写成显式约束的受限 RL（PPO-Lagrangian · BRUCE）"
           },
           {
             "title": "Learning Quadrupedal Locomotion over Challenging Terrain",
@@ -328,20 +328,13 @@
         "name": "Sim-to-Real & Foundation Model",
         "papers": [
           {
-            "title": "Behavior Foundation Model for Humanoid Robots",
-            "path": "papers/03_High_Impact_Selection/Behavior_Foundation_Model_for_Humanoid_Robots/Behavior_Foundation_Model_for_Humanoid_Robots.md",
-            "url": "/papers/03_High_Impact_Selection/Behavior_Foundation_Model_for_Humanoid_Robots/Behavior_Foundation_Model_for_Humanoid_Robots.html",
-            "dir": "Behavior_Foundation_Model_for_Humanoid_Robots",
-            "arxiv": "2509.13780",
-            "zhname": "BFM：面向人形全身控制的行为基础模型"
-          },
-          {
-            "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
-            "path": "papers/03_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.md",
-            "url": "/papers/03_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.html",
-            "dir": "GR00T_N1_Humanoid_Foundation_Model",
-            "arxiv": "2503.14734",
-            "zhname": "GR00T N1：面向通用人形机器人的开放基础模型"
+            "title": "Learning Agile and Dynamic Motor Skills for Legged Robots",
+            "path": "papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.md",
+            "url": "/papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.html",
+            "dir": "Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots",
+            "arxiv": "1901.08652",
+            "has_open_source": true,
+            "zhname": "ANYmal 敏捷运动技能学习（sim-to-real RL 奠基作）"
           },
           {
             "title": "ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills",
@@ -353,13 +346,20 @@
             "zhname": "ASAP：用残差动作模型对齐仿真与真机动力学的人形敏捷全身技能"
           },
           {
-            "title": "Learning Agile and Dynamic Motor Skills for Legged Robots",
-            "path": "papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.md",
-            "url": "/papers/03_High_Impact_Selection/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots/Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots.html",
-            "dir": "Learning_Agile_and_Dynamic_Motor_Skills_for_Legged_Robots",
-            "arxiv": "1901.08652",
-            "has_open_source": true,
-            "zhname": "ANYmal 敏捷运动技能学习（sim-to-real RL 奠基作）"
+            "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+            "path": "papers/03_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.md",
+            "url": "/papers/03_High_Impact_Selection/GR00T_N1_Humanoid_Foundation_Model/GR00T_N1_Humanoid_Foundation_Model.html",
+            "dir": "GR00T_N1_Humanoid_Foundation_Model",
+            "arxiv": "2503.14734",
+            "zhname": "GR00T N1：面向通用人形机器人的开放基础模型"
+          },
+          {
+            "title": "Behavior Foundation Model for Humanoid Robots",
+            "path": "papers/03_High_Impact_Selection/Behavior_Foundation_Model_for_Humanoid_Robots/Behavior_Foundation_Model_for_Humanoid_Robots.md",
+            "url": "/papers/03_High_Impact_Selection/Behavior_Foundation_Model_for_Humanoid_Robots/Behavior_Foundation_Model_for_Humanoid_Robots.html",
+            "dir": "Behavior_Foundation_Model_for_Humanoid_Robots",
+            "arxiv": "2509.13780",
+            "zhname": "BFM：面向人形全身控制的行为基础模型"
           }
         ],
         "zhname": "仿真到现实与基座模型"
@@ -367,6 +367,15 @@
       {
         "name": "Simulation Platform & Tools",
         "papers": [
+          {
+            "title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
+            "path": "papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.md",
+            "url": "/papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.html",
+            "dir": "Humanoid-Gym_Zero-Shot_Sim2Real_Transfer",
+            "arxiv": "2404.05695",
+            "has_open_source": true,
+            "zhname": "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架"
+          },
           {
             "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
             "path": "papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.md",
@@ -384,15 +393,6 @@
             "arxiv": "2409.14393",
             "has_open_source": true,
             "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架"
-          },
-          {
-            "title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
-            "path": "papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.md",
-            "url": "/papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.html",
-            "dir": "Humanoid-Gym_Zero-Shot_Sim2Real_Transfer",
-            "arxiv": "2404.05695",
-            "has_open_source": true,
-            "zhname": "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架"
           },
           {
             "title": "Isaac Lab: Unified GPU Simulation Platform for Robot Learning",
