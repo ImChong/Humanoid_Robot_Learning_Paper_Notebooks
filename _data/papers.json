@@ -962,6 +962,14 @@
         "dir": "MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation",
         "arxiv": "2602.11337",
         "zhname": "MolmoSpaces：230k+ 室内场景 × 130k+ 物体 × 42M 抓取的全开源具身 AI 评测生态"
+      },
+      {
+        "title": "Benchmarking Humanoid Imitation Learning with Motion Difficulty",
+        "path": "papers/11_Simulation_Benchmark/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty.md",
+        "url": "/papers/11_Simulation_Benchmark/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty.html",
+        "dir": "Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty",
+        "arxiv": "2512.07248",
+        "zhname": "用「动作难度」给人形模仿学习评测立标尺：MDS + MD-AMASS + MID/DSJE"
       }
     ],
     "zhname": "仿真基准"
