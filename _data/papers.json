@@ -1108,6 +1108,15 @@
         "dir": "Mimic2DM__Generating_and_Mimicking_2D_Motions_for_3D_Character_Control",
         "arxiv": "2512.08500",
         "zhname": "Mimic2DM：仅靠 2D 关键点轨迹学习物理仿真 3D 角色控制器"
+      },
+      {
+        "title": "PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction",
+        "path": "papers/13_Physics-Based_Animation/PhysHMR__Learning_Humanoid_Control_Policies_from_Vision_for_Physical_HMR/PhysHMR__Learning_Humanoid_Control_Policies_from_Vision_for_Physical_HMR.md",
+        "url": "/papers/13_Physics-Based_Animation/PhysHMR__Learning_Humanoid_Control_Policies_from_Vision_for_Physical_HMR/PhysHMR__Learning_Humanoid_Control_Policies_from_Vision_for_Physical_HMR.html",
+        "dir": "PhysHMR__Learning_Humanoid_Control_Policies_from_Vision_for_Physical_HMR",
+        "arxiv": "2510.02566",
+        "has_open_source": true,
+        "zhname": "PhysHMR：用视觉条件策略直接产出物理可行的人体动作重建"
       }
     ],
     "zhname": "物理动画"

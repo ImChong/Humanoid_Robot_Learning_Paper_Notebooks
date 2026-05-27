@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 413,
-      "last_title": "Olaf: Bringing an Animated Character to Life in the Physical World",
-      "next_module": "13_Physics-Based_Animation"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 451,
+      "last_title": "PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction",
+      "next_module": "14_Human_Motion"
     },
-    "last_summary_index": 413,
-    "last_summary_date": "2026-05-30",
-    "last_summary_title": "Olaf: Bringing an Animated Character to Life in the Physical World",
+    "last_summary_index": 451,
+    "last_summary_date": "2026-05-31",
+    "last_summary_title": "PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction",
     "next_summary_index": null,
     "log": [
       {
@@ -677,9 +677,15 @@
         "index": 413,
         "title": "Olaf: Bringing an Animated Character to Life in the Physical World",
         "folder": "papers/12_Hardware_Design/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World"
+      },
+      {
+        "date": "2026-05-31",
+        "index": 451,
+        "title": "PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction",
+        "folder": "papers/13_Physics-Based_Animation/PhysHMR__Learning_Humanoid_Control_Policies_from_Vision_for_Physical_HMR"
       }
     ],
-    "last_completed_index": 392,
+    "last_completed_index": 451,
     "next_index": null
   },
   "papers": [
@@ -3366,6 +3372,16 @@
       "pdf_file": "",
       "route": "人体动作生成",
       "title_cn": ""
+    },
+    {
+      "title": "PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction",
+      "folder": "papers/13_Physics-Based_Animation/PhysHMR__Learning_Humanoid_Control_Policies_from_Vision_for_Physical_HMR",
+      "note_file": "PhysHMR__Learning_Humanoid_Control_Policies_from_Vision_for_Physical_HMR.md",
+      "status": "done",
+      "arxiv": "2510.02566",
+      "pdf_file": "",
+      "route": "物理动画",
+      "title_cn": "PhysHMR：用视觉条件策略直接产出物理可行的人体动作重建"
     }
   ]
 }
