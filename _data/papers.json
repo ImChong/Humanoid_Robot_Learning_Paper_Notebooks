@@ -1061,6 +1061,14 @@
         "dir": "Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand",
         "arxiv": "2512.24657",
         "zhname": "拮抗式 Bowden 缆绳驱动的轻量化机器手：面向负载受限人形的灵巧操作"
+      },
+      {
+        "title": "Olaf: Bringing an Animated Character to Life in the Physical World",
+        "path": "papers/12_Hardware_Design/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World.md",
+        "url": "/papers/12_Hardware_Design/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World.html",
+        "dir": "Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World",
+        "arxiv": "2512.16705",
+        "zhname": "Olaf：把动画角色搬进物理世界——非常规角色形态下的硬件 + RL 一体化设计"
       }
     ],
     "zhname": "硬件设计"

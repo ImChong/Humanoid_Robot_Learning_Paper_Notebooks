@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 392,
-      "last_title": "Benchmarking Humanoid Imitation Learning with Motion Difficulty",
-      "next_module": "12_Hardware_Design"
+      "last_module": "12_Hardware_Design",
+      "last_index": 413,
+      "last_title": "Olaf: Bringing an Animated Character to Life in the Physical World",
+      "next_module": "13_Physics-Based_Animation"
     },
-    "last_summary_index": 392,
-    "last_summary_date": "2026-05-29",
-    "last_summary_title": "Benchmarking Humanoid Imitation Learning with Motion Difficulty",
+    "last_summary_index": 413,
+    "last_summary_date": "2026-05-30",
+    "last_summary_title": "Olaf: Bringing an Animated Character to Life in the Physical World",
     "next_summary_index": null,
     "log": [
       {
@@ -671,6 +671,12 @@
         "index": 392,
         "title": "Benchmarking Humanoid Imitation Learning with Motion Difficulty",
         "folder": "papers/11_Simulation_Benchmark/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty"
+      },
+      {
+        "date": "2026-05-30",
+        "index": 413,
+        "title": "Olaf: Bringing an Animated Character to Life in the Physical World",
+        "folder": "papers/12_Hardware_Design/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World"
       }
     ],
     "last_completed_index": 392,

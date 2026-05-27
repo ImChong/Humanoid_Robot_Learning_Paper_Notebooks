@@ -84,6 +84,7 @@
 | 2026-05-27 | 371 | [An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems](09_State_Estimation/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems.md) | State Estimation / 商用 VIO 横评 / ARKit + ARCore + T265 + ZED 2 · Sookmyung + 仁川大学 | [PyojinKim/ARKit-Data-Logger](https://github.com/PyojinKim/ARKit-Data-Logger) · [PyojinKim/ARCore-Data-Logger](https://github.com/PyojinKim/ARCore-Data-Logger) · 期刊版 [MDPI Sensors 22(24):9873](https://www.mdpi.com/1424-8220/22/24/9873) |
 | 2026-05-28 | 382 | [Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion](10_Sim-to-Real/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion/Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion.md) | Sim-to-Real / 对比表征学习 / 自适应步态时钟 / 特权信息蒸馏 · HKU ArcLab | 截至当前未见公开发布（实验室主页 [ArcLab @ HKU](https://arclab.hku.hk/)） |
 | 2026-05-29 | 392 | [Benchmarking Humanoid Imitation Learning with Motion Difficulty](11_Simulation_Benchmark/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty.md) | Simulation Benchmark / 动作难度量化 / MDS + MD-AMASS / MID + DSJE · 厦门大学 + Cardiff | 截至当前未见公开发布（论文未给出 GitHub 链接） |
+| 2026-05-30 | 413 | [Olaf: Bringing an Animated Character to Life in the Physical World](12_Hardware_Design/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World.md) | Hardware Design / 角色机器人 / 不对称双腿 / 球面连杆 / 动画参考 RL · Disney Research Imagineering + NVIDIA Isaac | 截至当前未公开（Disney Imagineering 项目；NVIDIA Isaac Sim / Lab 训练） |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -222,6 +223,8 @@
 | 353 | Thinking in 360°: Humanoid Visual Search in the Wild | 08_Navigation | ✅ 已完成（2026-05-26） |
 | 371 | An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems | 09_State_Estimation | ✅ 已完成（2026-05-27） |
 | 382 | Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion | 10_Sim-to-Real | ✅ 已完成（2026-05-28） |
-| ? | （明日：11_Simulation_Benchmark 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 11_Simulation_Benchmark | ⏭️ 下一篇候选 |
+| 392 | Benchmarking Humanoid Imitation Learning with Motion Difficulty | 11_Simulation_Benchmark | ✅ 已完成（2026-05-29） |
+| 413 | Olaf: Bringing an Animated Character to Life in the Physical World | 12_Hardware_Design | ✅ 已完成（2026-05-30） |
+| ? | （明日：13_Physics-Based_Animation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 13_Physics-Based_Animation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
