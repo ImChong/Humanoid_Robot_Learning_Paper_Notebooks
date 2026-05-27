@@ -680,71 +680,6 @@
     ],
     "zhname": "运动操作与全身控制"
   },
-  "05_Locomotion": {
-    "display_name": "Locomotion",
-    "papers": [
-      {
-        "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
-        "path": "papers/05_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.md",
-        "url": "/papers/05_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.html",
-        "dir": "Learning_to_Walk_in_Minutes",
-        "arxiv": "2109.11978",
-        "has_open_source": true,
-        "zhname": "几分钟学会走路：大规模并行深度强化学习"
-      },
-      {
-        "title": "Extreme Parkour with Legged Robots",
-        "path": "papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.md",
-        "url": "/papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.html",
-        "dir": "Extreme_Parkour_with_Legged_Robots",
-        "arxiv": "2309.14341",
-        "has_open_source": true,
-        "zhname": "足式机器人的极限跑酷"
-      },
-      {
-        "title": "ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots",
-        "path": "papers/05_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.md",
-        "url": "/papers/05_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.html",
-        "dir": "ANYmal_Parkour_Robust_Perceptive_Locomotion",
-        "arxiv": "2306.14874",
-        "zhname": "ANYmal 跑酷：足式机器人的敏捷导航学习"
-      },
-      {
-        "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
-        "path": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md",
-        "url": "/papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.html",
-        "dir": "Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits",
-        "arxiv": "2602.21666",
-        "zhname": "用生物力学定量度量人形步态：GDAF 框架与 28 速 G1 数据集"
-      },
-      {
-        "title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
-        "path": "papers/05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots.md",
-        "url": "/papers/05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots.html",
-        "dir": "APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots",
-        "arxiv": "2602.11143",
-        "zhname": "APEX：用棘轮式进度奖励学习「攀越式」高平台穿越的人形机器人技能"
-      },
-      {
-        "title": "Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels",
-        "path": "papers/05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels.md",
-        "url": "/papers/05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels.html",
-        "dir": "Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels",
-        "arxiv": "2602.06382",
-        "has_open_source": true,
-        "zhname": "Now You See That：高保真深度仿真 + 视觉感知行为蒸馏，让人形机器人从「原始像素」端到端学会复杂地形行走"
-      },
-      {
-        "title": "A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion",
-        "path": "papers/05_Locomotion/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data.md",
-        "url": "/papers/05_Locomotion/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data.html",
-        "dir": "Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data",
-        "arxiv": "2602.05855",
-        "zhname": "用 CNN+GRU 混合自编码器把 LiDAR + 深度相机 + IMU 融成机器人坐标系下的鲁棒高度图，作为人形复杂地形行走的统一中间表征"
-      }
-    ],
-    "zhname": "行走运动"
-  },
   "06_Manipulation": {
     "display_name": "Manipulation",
     "papers": [
@@ -842,6 +777,71 @@
       }
     ],
     "zhname": "遥操作"
+  },
+  "05_Locomotion": {
+    "display_name": "Locomotion",
+    "papers": [
+      {
+        "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
+        "path": "papers/05_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.md",
+        "url": "/papers/05_Locomotion/Learning_to_Walk_in_Minutes/Learning_to_Walk_in_Minutes.html",
+        "dir": "Learning_to_Walk_in_Minutes",
+        "arxiv": "2109.11978",
+        "has_open_source": true,
+        "zhname": "几分钟学会走路：大规模并行深度强化学习"
+      },
+      {
+        "title": "Extreme Parkour with Legged Robots",
+        "path": "papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.md",
+        "url": "/papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.html",
+        "dir": "Extreme_Parkour_with_Legged_Robots",
+        "arxiv": "2309.14341",
+        "has_open_source": true,
+        "zhname": "足式机器人的极限跑酷"
+      },
+      {
+        "title": "ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots",
+        "path": "papers/05_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.md",
+        "url": "/papers/05_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion/ANYmal_Parkour_Robust_Perceptive_Locomotion.html",
+        "dir": "ANYmal_Parkour_Robust_Perceptive_Locomotion",
+        "arxiv": "2306.14874",
+        "zhname": "ANYmal 跑酷：足式机器人的敏捷导航学习"
+      },
+      {
+        "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
+        "path": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md",
+        "url": "/papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.html",
+        "dir": "Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits",
+        "arxiv": "2602.21666",
+        "zhname": "用生物力学定量度量人形步态：GDAF 框架与 28 速 G1 数据集"
+      },
+      {
+        "title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
+        "path": "papers/05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots.md",
+        "url": "/papers/05_Locomotion/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots/APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots.html",
+        "dir": "APEX_Learning_Adaptive_High-Platform_Traversal_for_Humanoid_Robots",
+        "arxiv": "2602.11143",
+        "zhname": "APEX：用棘轮式进度奖励学习「攀越式」高平台穿越的人形机器人技能"
+      },
+      {
+        "title": "Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels",
+        "path": "papers/05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels.md",
+        "url": "/papers/05_Locomotion/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels/Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels.html",
+        "dir": "Now_You_See_That_Learning_End-to-End_Humanoid_Locomotion_from_Raw_Pixels",
+        "arxiv": "2602.06382",
+        "has_open_source": true,
+        "zhname": "Now You See That：高保真深度仿真 + 视觉感知行为蒸馏，让人形机器人从「原始像素」端到端学会复杂地形行走"
+      },
+      {
+        "title": "A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion",
+        "path": "papers/05_Locomotion/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data.md",
+        "url": "/papers/05_Locomotion/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data/Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data.html",
+        "dir": "Hybrid_Autoencoder_for_Robust_Heightmap_from_Fused_Lidar_and_Depth_Data",
+        "arxiv": "2602.05855",
+        "zhname": "用 CNN+GRU 混合自编码器把 LiDAR + 深度相机 + IMU 融成机器人坐标系下的鲁棒高度图，作为人形复杂地形行走的统一中间表征"
+      }
+    ],
+    "zhname": "行走运动"
   },
   "08_Navigation": {
     "display_name": "Navigation",
@@ -987,6 +987,51 @@
     "subtitle_zh": "核心理论与算法见 01 基础 RL：Domain Randomization、LCP。本分类暂留给后续专项论文（Real-to-Sim、ADR、Privileged Learning 等）。",
     "zhname": "仿真到现实"
   },
+  "12_Hardware_Design": {
+    "display_name": "Hardware Design",
+    "papers": [
+      {
+        "title": "Unitree H1 Humanoid Robot Whitepaper & Specifications",
+        "path": "papers/12_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.md",
+        "url": "/papers/12_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.html",
+        "dir": "Unitree_H1_Whitepaper",
+        "zhname": "Unitree H1 人形机器人白皮书与技术规格"
+      },
+      {
+        "title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids",
+        "path": "papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md",
+        "url": "/papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.html",
+        "dir": "Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids",
+        "arxiv": "2602.08518",
+        "zhname": "肌骨型人形机器人「肌肉」的特性、管理与利用：Kengoro 与 Musashi 上的实证研究"
+      },
+      {
+        "title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
+        "path": "papers/12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot.md",
+        "url": "/papers/12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot.html",
+        "dir": "Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot",
+        "arxiv": "2601.18963",
+        "zhname": "Fauna Sprout：一款轻量、亲和、开发者友好的人形机器人开发平台"
+      },
+      {
+        "title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand",
+        "path": "papers/12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.md",
+        "url": "/papers/12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.html",
+        "dir": "Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand",
+        "arxiv": "2512.24657",
+        "zhname": "拮抗式 Bowden 缆绳驱动的轻量化机器手：面向负载受限人形的灵巧操作"
+      },
+      {
+        "title": "Olaf: Bringing an Animated Character to Life in the Physical World",
+        "path": "papers/12_Hardware_Design/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World.md",
+        "url": "/papers/12_Hardware_Design/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World.html",
+        "dir": "Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World",
+        "arxiv": "2512.16705",
+        "zhname": "Olaf：把动画角色搬进物理世界——非常规角色形态下的硬件 + RL 一体化设计"
+      }
+    ],
+    "zhname": "硬件设计"
+  },
   "11_Simulation_Benchmark": {
     "display_name": "Simulation Benchmark",
     "papers": [
@@ -1035,51 +1080,6 @@
       }
     ],
     "zhname": "仿真基准"
-  },
-  "12_Hardware_Design": {
-    "display_name": "Hardware Design",
-    "papers": [
-      {
-        "title": "Unitree H1 Humanoid Robot Whitepaper & Specifications",
-        "path": "papers/12_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.md",
-        "url": "/papers/12_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.html",
-        "dir": "Unitree_H1_Whitepaper",
-        "zhname": "Unitree H1 人形机器人白皮书与技术规格"
-      },
-      {
-        "title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids",
-        "path": "papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md",
-        "url": "/papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.html",
-        "dir": "Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids",
-        "arxiv": "2602.08518",
-        "zhname": "肌骨型人形机器人「肌肉」的特性、管理与利用：Kengoro 与 Musashi 上的实证研究"
-      },
-      {
-        "title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
-        "path": "papers/12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot.md",
-        "url": "/papers/12_Hardware_Design/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot/Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot.html",
-        "dir": "Fauna_Sprout_A_lightweight_approachable_developer-ready_humanoid_robot",
-        "arxiv": "2601.18963",
-        "zhname": "Fauna Sprout：一款轻量、亲和、开发者友好的人形机器人开发平台"
-      },
-      {
-        "title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand",
-        "path": "papers/12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.md",
-        "url": "/papers/12_Hardware_Design/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand/Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand.html",
-        "dir": "Antagonistic_Bowden-Cable_Actuation_of_a_Lightweight_Robotic_Hand",
-        "arxiv": "2512.24657",
-        "zhname": "拮抗式 Bowden 缆绳驱动的轻量化机器手：面向负载受限人形的灵巧操作"
-      },
-      {
-        "title": "Olaf: Bringing an Animated Character to Life in the Physical World",
-        "path": "papers/12_Hardware_Design/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World.md",
-        "url": "/papers/12_Hardware_Design/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World.html",
-        "dir": "Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World",
-        "arxiv": "2512.16705",
-        "zhname": "Olaf：把动画角色搬进物理世界——非常规角色形态下的硬件 + RL 一体化设计"
-      }
-    ],
-    "zhname": "硬件设计"
   },
   "13_Physics-Based_Animation": {
     "display_name": "Physics-Based Animation",
