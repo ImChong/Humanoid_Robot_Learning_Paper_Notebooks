@@ -105,9 +105,7 @@ title: "Home"
         <ul class="paper-list">
           {% for paper in cat_data.papers %}
           <li data-search="{{ paper.title | escape }} {{ paper.zhname | escape }} {{ paper.arxiv | escape }}">
-            <a href="{{ site.baseurl }}{{ paper.url | escape }}" class="paper-card">
-              <span class="paper-title" data-en="{{ paper.title | escape }}" data-zh="{{ paper.zhname | escape }}">{{ paper.title | escape }}</span>
-            </a>
+            {% include paper-card.html paper=paper %}
           </li>
           {% endfor %}
         </ul>
@@ -123,9 +121,7 @@ title: "Home"
           <ul class="paper-list">
             {% for paper in subcat.papers %}
             <li data-search="{{ paper.title | escape }} {{ paper.zhname | escape }} {{ paper.arxiv | escape }}">
-              <a href="{{ site.baseurl }}{{ paper.url | escape }}" class="paper-card">
-                <span class="paper-title" data-en="{{ paper.title | escape }}" data-zh="{{ paper.zhname | escape }}">{{ paper.title | escape }}</span>
-              </a>
+              {% include paper-card.html paper=paper %}
             </li>
             {% endfor %}
           </ul>
@@ -138,9 +134,7 @@ title: "Home"
       <ul class="paper-list">
         {% for paper in cat_data.papers %}
         <li data-search="{{ paper.title | escape }} {{ paper.zhname | escape }} {{ paper.arxiv | escape }}">
-          <a href="{{ site.baseurl }}{{ paper.url | escape }}" class="paper-card">
-            <span class="paper-title" data-en="{{ paper.title | escape }}" data-zh="{{ paper.zhname | escape }}">{{ paper.title | escape }}</span>
-          </a>
+          {% include paper-card.html paper=paper %}
         </li>
         {% endfor %}
       </ul>
