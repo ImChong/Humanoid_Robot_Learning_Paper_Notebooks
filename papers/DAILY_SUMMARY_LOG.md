@@ -86,6 +86,7 @@
 | 2026-05-29 | 392 | [Benchmarking Humanoid Imitation Learning with Motion Difficulty](11_Simulation_Benchmark/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty.md) | Simulation Benchmark / 动作难度量化 / MDS + MD-AMASS / MID + DSJE · 厦门大学 + Cardiff | 截至当前未见公开发布（论文未给出 GitHub 链接） |
 | 2026-05-30 | 413 | [Olaf: Bringing an Animated Character to Life in the Physical World](12_Hardware_Design/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World/Olaf_Bringing_an_Animated_Character_to_Life_in_the_Physical_World.md) | Hardware Design / 角色机器人 / 不对称双腿 / 球面连杆 / 动画参考 RL · Disney Research Imagineering + NVIDIA Isaac | 截至当前未公开（Disney Imagineering 项目；NVIDIA Isaac Sim / Lab 训练） |
 | 2026-05-31 | 451 | [PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction](13_Physics-Based_Animation/PhysHMR__Learning_Humanoid_Control_Policies_from_Vision_for_Physical_HMR/PhysHMR__Learning_Humanoid_Control_Policies_from_Vision_for_Physical_HMR.md) | Physics-Based Animation / 视觉条件 RL / pixel-as-ray 全局软对齐 / GVHMR feature / BC+RL 课程 · University of Pennsylvania · SIGGRAPH Asia 2025 | [fengq1a0/physhmr](https://github.com/fengq1a0/physhmr) · [项目页](https://fengq1a0.github.io/projects/physhmr/index.html) · [ACM DOI](https://doi.org/10.1145/3757377.3763951) |
+| 2026-06-01 | 479 | [MAGNet: Diffusion Forcing for Multi-Agent Interaction Sequence Modeling](14_Human_Motion/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling.md) | Human Motion / 多人交互生成 / Diffusion Forcing / VQ-VAE + DFOT / 单模型多任务 · UC Berkeley + Sony + Meta | [Von31/MAGNet-code](https://github.com/Von31/MAGNet-code)（计划 2026-03-26 释出训练代码 + Drive 权重） · [Berkeley 项目页](https://people.eecs.berkeley.edu/~vongani_maluleke/blogs/blog-magnet.html) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -227,6 +228,7 @@
 | 392 | Benchmarking Humanoid Imitation Learning with Motion Difficulty | 11_Simulation_Benchmark | ✅ 已完成（2026-05-29） |
 | 413 | Olaf: Bringing an Animated Character to Life in the Physical World | 12_Hardware_Design | ✅ 已完成（2026-05-30） |
 | 451 | PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction | 13_Physics-Based_Animation | ✅ 已完成（2026-05-31） |
-| ? | （明日：14_Human_Motion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 14_Human_Motion | ⏭️ 下一篇候选 |
+| 479 | MAGNet: Diffusion Forcing for Multi-Agent Interaction Sequence Modeling | 14_Human_Motion | ✅ 已完成（2026-06-01） |
+| ? | （明日：04_Loco-Manipulation_and_WBC 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 04_Loco-Manipulation_and_WBC | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

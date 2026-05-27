@@ -1158,6 +1158,15 @@
         "dir": "WHOLE__World-Grounded_Hand-Object_Lifted_from_Egocentric_Videos",
         "arxiv": "2602.22209",
         "zhname": "WHOLE：用扩散先验把第一视角里的手和物体一起 lift 到世界坐标"
+      },
+      {
+        "title": "MAGNet: Diffusion Forcing for Multi-Agent Interaction Sequence Modeling",
+        "path": "papers/14_Human_Motion/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling.md",
+        "url": "/papers/14_Human_Motion/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling.html",
+        "dir": "MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling",
+        "arxiv": "2512.17900",
+        "has_open_source": true,
+        "zhname": "MAGNet：用扩散强制把多人长时序交互装进一个自回归生成模型"
       }
     ],
     "zhname": "人体运动"
