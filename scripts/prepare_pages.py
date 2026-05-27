@@ -27,6 +27,43 @@ from _common import (  # noqa: E402
 
 PROGRESS_PATH = os.path.join(PAPERS_DIR, 'PROGRESS.md')
 
+# Keep homepage category order aligned with
+# https://github.com/YanjieZe/awesome-humanoid-robot-learning.
+CATEGORY_ORDER = [
+    '01_Foundational_RL',
+    '02_Motion_Retargeting',
+    '03_High_Impact_Selection',
+    '04_Loco-Manipulation_and_WBC',
+    '06_Manipulation',
+    '07_Teleoperation',
+    '05_Locomotion',
+    '08_Navigation',
+    '09_State_Estimation',
+    '10_Sim-to-Real',
+    '12_Hardware_Design',
+    '11_Simulation_Benchmark',
+    '13_Physics-Based_Animation',
+    '14_Human_Motion',
+]
+
+# Canonical Chinese category names aligned with upstream section semantics.
+CATEGORY_ZHNAME = {
+    '01_Foundational_RL': '基础强化学习',
+    '02_Motion_Retargeting': '运动重定向',
+    '03_High_Impact_Selection': '高影响力精选',
+    '04_Loco-Manipulation_and_WBC': '运动操作与全身控制',
+    '05_Locomotion': '行走运动',
+    '06_Manipulation': '灵巧操作',
+    '07_Teleoperation': '遥操作',
+    '08_Navigation': '导航',
+    '09_State_Estimation': '状态估计',
+    '10_Sim-to-Real': '仿真到现实',
+    '11_Simulation_Benchmark': '仿真与基准',
+    '12_Hardware_Design': '硬件设计',
+    '13_Physics-Based_Animation': '物理动画',
+    '14_Human_Motion': '人体动作分析与生成',
+}
+
 
 _TITLE_RE = re.compile(r'^#\s+(.+)$', re.MULTILINE)
 
@@ -205,6 +242,20 @@ _ARXIV_IN_MARKDOWN_CELL_RE = re.compile(
     r'(?:arxiv\.org/(?:abs|html|pdf)/|arxiv:)(\d{4}\.\d{4,5}(?:v\d+)?)',
     re.IGNORECASE,
 )
+
+
+def _arxiv_sort_key(arxiv_id):
+    """Return sortable key for arXiv IDs (newest first when reversed).
+
+    Supports modern IDs such as ``2603.12686``; unknown formats sort last.
+    """
+    if not arxiv_id:
+        return (-1, -1, -1)
+    m = re.match(r'^(\d{2})(\d{2})\.(\d{4,5})(?:v\d+)?$', str(arxiv_id).strip())
+    if not m:
+        return (-1, -1, -1)
+    yy, mm, seq = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    return (yy, mm, seq)
 
 
 def parse_high_impact_h_order():
@@ -468,8 +519,16 @@ def process_papers():
 
                 papers.append(paper_entry)
 
-        # Sort: global categories by PROGRESS row order; High Impact uses H# from PROGRESS when matched
-        papers.sort(key=lambda p: p['_order'])
+        # Sort papers inside each category:
+        # 1) arXiv newest-first to align with upstream awesome list
+        # 2) keep _order as tiebreaker / fallback for non-arXiv entries
+        papers.sort(
+            key=lambda p: (
+                _arxiv_sort_key(p.get('arxiv')),
+                -int(p.get('_order', 10**9)) if isinstance(p.get('_order'), int) else -10**9,
+            ),
+            reverse=True,
+        )
         # Load existing category meta (subtitle, subcategories) from current papers.json
         existing_meta = existing_papers_json.get(category_dir, {})
 
@@ -490,7 +549,9 @@ def process_papers():
         if 'subtitle_zh' in existing_meta:
             entry['subtitle_zh'] = existing_meta['subtitle_zh']
         # Support both zhname (new) and display_name_zh (legacy) field names
-        if 'zhname' in existing_meta:
+        if category_dir in CATEGORY_ZHNAME:
+            entry['zhname'] = CATEGORY_ZHNAME[category_dir]
+        elif 'zhname' in existing_meta:
             entry['zhname'] = existing_meta['zhname']
         elif 'display_name_zh' in existing_meta:
             entry['zhname'] = existing_meta['display_name_zh']
@@ -539,7 +600,9 @@ def process_papers():
                 entry['subtitle'] = existing_meta['subtitle']
             if 'subtitle_zh' in existing_meta:
                 entry['subtitle_zh'] = existing_meta['subtitle_zh']
-            if 'zhname' in existing_meta:
+            if category_dir in CATEGORY_ZHNAME:
+                entry['zhname'] = CATEGORY_ZHNAME[category_dir]
+            elif 'zhname' in existing_meta:
                 entry['zhname'] = existing_meta['zhname']
             elif 'display_name_zh' in existing_meta:
                 entry['zhname'] = existing_meta['display_name_zh']
@@ -550,8 +613,14 @@ def process_papers():
                         s['zhname'] = s.pop('name_zh')
             index_data[category_dir] = entry
 
-    # Sort by category directory name prefix (01_, 02_, etc.)
-    sorted_data = dict(sorted(index_data.items()))
+    # Sort by upstream awesome-list order first; unknown folders keep lexical tail order.
+    rank = {name: i for i, name in enumerate(CATEGORY_ORDER)}
+    sorted_data = dict(
+        sorted(
+            index_data.items(),
+            key=lambda kv: (rank.get(kv[0], len(CATEGORY_ORDER)), kv[0]),
+        )
+    )
 
     # Write index data
     data_dir = os.path.join(BASE_DIR, '_data')
