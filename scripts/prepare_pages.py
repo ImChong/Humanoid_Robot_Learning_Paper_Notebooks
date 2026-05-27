@@ -27,6 +27,25 @@ from _common import (  # noqa: E402
 
 PROGRESS_PATH = os.path.join(PAPERS_DIR, 'PROGRESS.md')
 
+# Keep homepage category order aligned with
+# https://github.com/YanjieZe/awesome-humanoid-robot-learning.
+CATEGORY_ORDER = [
+    '01_Foundational_RL',
+    '02_Motion_Retargeting',
+    '03_High_Impact_Selection',
+    '04_Loco-Manipulation_and_WBC',
+    '06_Manipulation',
+    '07_Teleoperation',
+    '05_Locomotion',
+    '08_Navigation',
+    '09_State_Estimation',
+    '10_Sim-to-Real',
+    '12_Hardware_Design',
+    '11_Simulation_Benchmark',
+    '13_Physics-Based_Animation',
+    '14_Human_Motion',
+]
+
 
 _TITLE_RE = re.compile(r'^#\s+(.+)$', re.MULTILINE)
 
@@ -550,8 +569,14 @@ def process_papers():
                         s['zhname'] = s.pop('name_zh')
             index_data[category_dir] = entry
 
-    # Sort by category directory name prefix (01_, 02_, etc.)
-    sorted_data = dict(sorted(index_data.items()))
+    # Sort by upstream awesome-list order first; unknown folders keep lexical tail order.
+    rank = {name: i for i, name in enumerate(CATEGORY_ORDER)}
+    sorted_data = dict(
+        sorted(
+            index_data.items(),
+            key=lambda kv: (rank.get(kv[0], len(CATEGORY_ORDER)), kv[0]),
+        )
+    )
 
     # Write index data
     data_dir = os.path.join(BASE_DIR, '_data')
