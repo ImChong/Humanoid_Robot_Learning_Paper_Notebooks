@@ -25,43 +25,43 @@ from _common import (  # noqa: E402
     stub_reason,
 )
 
-PROGRESS_PATH = os.path.join(PAPERS_DIR, 'PROGRESS.md')
+PROGRESS_PATH = os.path.join(PAPERS_DIR, "PROGRESS.md")
 
 # Keep homepage category order aligned with
 # https://github.com/YanjieZe/awesome-humanoid-robot-learning.
 CATEGORY_ORDER = [
-    '01_Foundational_RL',
-    '02_Motion_Retargeting',
-    '03_High_Impact_Selection',
-    '04_Loco-Manipulation_and_WBC',
-    '06_Manipulation',
-    '07_Teleoperation',
-    '05_Locomotion',
-    '08_Navigation',
-    '09_State_Estimation',
-    '10_Sim-to-Real',
-    '12_Hardware_Design',
-    '11_Simulation_Benchmark',
-    '13_Physics-Based_Animation',
-    '14_Human_Motion',
+    "01_Foundational_RL",
+    "02_Motion_Retargeting",
+    "03_High_Impact_Selection",
+    "04_Loco-Manipulation_and_WBC",
+    "06_Manipulation",
+    "07_Teleoperation",
+    "05_Locomotion",
+    "08_Navigation",
+    "09_State_Estimation",
+    "10_Sim-to-Real",
+    "12_Hardware_Design",
+    "11_Simulation_Benchmark",
+    "13_Physics-Based_Animation",
+    "14_Human_Motion",
 ]
 
 # Canonical Chinese category names aligned with upstream section semantics.
 CATEGORY_ZHNAME = {
-    '01_Foundational_RL': '基础强化学习',
-    '02_Motion_Retargeting': '运动重定向',
-    '03_High_Impact_Selection': '高影响力精选',
-    '04_Loco-Manipulation_and_WBC': '运动操作与全身控制',
-    '05_Locomotion': '行走运动',
-    '06_Manipulation': '灵巧操作',
-    '07_Teleoperation': '遥操作',
-    '08_Navigation': '导航',
-    '09_State_Estimation': '状态估计',
-    '10_Sim-to-Real': '仿真到现实',
-    '11_Simulation_Benchmark': '仿真与基准',
-    '12_Hardware_Design': '硬件设计',
-    '13_Physics-Based_Animation': '物理动画',
-    '14_Human_Motion': '人体动作分析与生成',
+    "01_Foundational_RL": "基础强化学习",
+    "02_Motion_Retargeting": "运动重定向",
+    "03_High_Impact_Selection": "高影响力精选",
+    "04_Loco-Manipulation_and_WBC": "运动操作与全身控制",
+    "05_Locomotion": "行走运动",
+    "06_Manipulation": "灵巧操作",
+    "07_Teleoperation": "遥操作",
+    "08_Navigation": "导航",
+    "09_State_Estimation": "状态估计",
+    "10_Sim-to-Real": "仿真到现实",
+    "11_Simulation_Benchmark": "仿真与基准",
+    "12_Hardware_Design": "硬件设计",
+    "13_Physics-Based_Animation": "物理动画",
+    "14_Human_Motion": "人体动作分析与生成",
 }
 
 # Categories that keep curated reading order from PROGRESS / front matter
@@ -72,7 +72,8 @@ CATEGORIES_PROGRESS_ORDER = frozenset({
 })
 
 
-_TITLE_RE = re.compile(r'^#\s+(.+)$', re.MULTILINE)
+_TITLE_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
+
 
 def extract_title(content):
     """Extract title from first H1 heading."""
@@ -80,11 +81,11 @@ def extract_title(content):
     # ⚡ Bolt Optimization: Use `find` to skip frontmatter without string copies,
     # and use `find('#')` as a fast pre-check before running the regex.
     if has_frontmatter(content):
-        end_idx = content.find('---', 3)
+        end_idx = content.find("---", 3)
         if end_idx != -1:
             start_idx = end_idx + 3
 
-    if content.find('#', start_idx) != -1:
+    if content.find("#", start_idx) != -1:
         match = _TITLE_RE.search(content, start_idx)
         if match:
             return match.group(1).strip()
@@ -98,38 +99,42 @@ _ = (is_stub, normalize_name)  # re-exported for backwards compatibility
 
 
 _BASIC_INFO_SECTION_RE = re.compile(
-    r'^##\s*📋\s*基本信息\s*$',
+    r"^##\s*📋\s*基本信息\s*$",
     re.MULTILINE,
 )
-_NEXT_H2_RE = re.compile(r'^##\s', re.MULTILINE)
+_NEXT_H2_RE = re.compile(r"^##\s", re.MULTILINE)
 _CODE_ROW_LABEL_RE = re.compile(
-    r'(?:代码|源码|GitHub|官方代码|算法代码)',
+    r"(?:代码|源码|GitHub|官方代码|算法代码)",
     re.IGNORECASE,
 )
 _CODE_ROW_EXCLUDE_LABEL_RE = re.compile(
-    r'相关|许可|文档|主页|进阶|配套|同组|项目主页',
+    r"相关|许可|文档|主页|进阶|配套|同组|项目主页",
     re.IGNORECASE,
 )
 _NO_OPEN_SOURCE_VALUE_RE = re.compile(
-    r'未开源|暂未开源|暂无公开|未见到.*(?:官方|独立)|未集中给出|原文未开源|'
-    r'待官方释出|待确认公开|🚧|暂未完全公开|暂无公开仓库',
+    r"未开源|暂未开源|暂无公开|未见到.*(?:官方|独立)|未集中给出|原文未开源|"
+    r"待官方释出|待确认公开|🚧|暂未完全公开|暂无公开仓库",
     re.IGNORECASE,
 )
 _GITHUB_REPO_URL_RE = re.compile(
-    r'https?://(?:www\.)?github\.com/[\w.-]+/[\w.-]+',
+    r"https?://(?:www\.)?github\.com/[\w.-]+/[\w.-]+",
     re.IGNORECASE,
 )
 
 
 def _extract_basic_info_section(content):
     """Return markdown under the ``## 📋 基本信息`` heading, or ``None``."""
+    # ⚡ Bolt Optimization: Use fast `in` operator to short-circuit regex execution
+    # when the heading is absent, and scan for the next heading using the `pos`
+    # parameter (`start`) to avoid a massive O(N) string allocation for `content[start:]`.
+    if "基本信息" not in content:
+        return None
     match = _BASIC_INFO_SECTION_RE.search(content)
     if not match:
         return None
     start = match.end()
-    rest = content[start:]
-    next_heading = _NEXT_H2_RE.search(rest)
-    end = start + next_heading.start() if next_heading else len(content)
+    next_heading = _NEXT_H2_RE.search(content, start)
+    end = next_heading.start() if next_heading else len(content)
     return content[start:end]
 
 
@@ -139,17 +144,17 @@ def extract_has_open_source(content):
     if not section:
         return False
 
-    for line in section.split('\n'):
+    for line in section.split("\n"):
         line = line.strip()
-        if not line.startswith('|') or re.match(r'^\|[\s\-:|]+\|$', line):
+        if not line.startswith("|") or re.match(r"^\|[\s\-:|]+\|$", line):
             continue
-        cols = [c.strip() for c in line.split('|')]
+        cols = [c.strip() for c in line.split("|")]
         cols = [c for c in cols if c]
         if len(cols) < 2:
             continue
 
-        label = re.sub(r'\*+', '', cols[0]).strip()
-        value = cols[-1] if len(cols) == 2 else ' | '.join(cols[1:])
+        label = re.sub(r"\*+", "", cols[0]).strip()
+        value = cols[-1] if len(cols) == 2 else " | ".join(cols[1:])
 
         if _CODE_ROW_EXCLUDE_LABEL_RE.search(label):
             continue
@@ -170,17 +175,21 @@ def extract_arxiv(content):
     # Case-insensitive pre-check: the patterns below use IGNORECASE, so the
     # guard must not require the exact substrings ``arxiv`` / ``arXiv`` (e.g.
     # ``| ARXIV |`` or ``Arxiv:`` would otherwise be skipped and drop metadata).
-    if ('arxiv' not in content and 'arXiv' not in content and
-        'Arxiv' not in content and 'ARXIV' not in content and
-        'ArXiv' not in content):
+    if (
+        "arxiv" not in content
+        and "arXiv" not in content
+        and "Arxiv" not in content
+        and "ARXIV" not in content
+        and "ArXiv" not in content
+    ):
         # Fallback to a case-insensitive regex check for unusual casings
         # to guarantee 100% correctness without regressions.
-        if re.search(r'arxiv', content, re.IGNORECASE) is None:
+        if re.search(r"arxiv", content, re.IGNORECASE) is None:
             return None
 
     patterns = [
-        r'\|\s*(?:\*\*)?arXiv(?:\*\*)?\s*\|\s*\[?(\d{4}\.\d{4,5}(?:v\d+)?)',
-        r'(?:arXiv:|arxiv\.org/(?:abs|html|pdf)/)(\d{4}\.\d{4,5}(?:v\d+)?)',
+        r"\|\s*(?:\*\*)?arXiv(?:\*\*)?\s*\|\s*\[?(\d{4}\.\d{4,5}(?:v\d+)?)",
+        r"(?:arXiv:|arxiv\.org/(?:abs|html|pdf)/)(\d{4}\.\d{4,5}(?:v\d+)?)",
     ]
     for pattern in patterns:
         match = re.search(pattern, content, re.IGNORECASE)
@@ -191,8 +200,8 @@ def extract_arxiv(content):
 
 def get_category_name(category_dir):
     """Clean category directory name for display."""
-    name = re.sub(r'^\d+_', '', category_dir)
-    name = name.replace('_', ' ')
+    name = re.sub(r"^\d+_", "", category_dir)
+    name = name.replace("_", " ")
     return name
 
 
@@ -205,7 +214,7 @@ def parse_progress_order():
     if not os.path.exists(PROGRESS_PATH):
         return {}
 
-    with open(PROGRESS_PATH, encoding='utf-8') as f:
+    with open(PROGRESS_PATH, encoding="utf-8") as f:
         content = f.read()
 
     # Extract all paper names mentioned in table rows (| # | paper_name | ... |)
@@ -213,26 +222,26 @@ def parse_progress_order():
     order = {}
     idx = 0
 
-    for line in content.split('\n'):
+    for line in content.split("\n"):
         line = line.strip()
-        if not line.startswith('|'):
+        if not line.startswith("|"):
             continue
         # Skip header/separator rows
-        cols = [c.strip() for c in line.split('|')]
+        cols = [c.strip() for c in line.split("|")]
         cols = [c for c in cols if c]  # remove empty
         if len(cols) < 2:
             continue
-        if cols[0] in ('#', '---', '----', '-----') or re.match(r'^-+$', cols[0]):
+        if cols[0] in ("#", "---", "----", "-----") or re.match(r"^-+$", cols[0]):
             continue
         # First col is usually the number, second is paper name/title
         paper_col = cols[1] if len(cols) > 1 else cols[0]
 
         # Extract the key text (remove markdown links, bold, etc.)
-        paper_text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', paper_col)
-        paper_text = re.sub(r'[*_`\[\]]', '', paper_text)
+        paper_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", paper_col)
+        paper_text = re.sub(r"[*_`\[\]]", "", paper_text)
         paper_text = paper_text.strip()
 
-        if not paper_text or paper_text in ('论文', '---', '笔记', '状态', '日期', '路线'):
+        if not paper_text or paper_text in ("论文", "---", "笔记", "状态", "日期", "路线"):
             continue
 
         # Normalize for matching: lowercase, remove special chars
@@ -244,9 +253,9 @@ def parse_progress_order():
     return order
 
 
-_H_INDEX_RE = re.compile(r'^H(\d+)$', re.IGNORECASE)
+_H_INDEX_RE = re.compile(r"^H(\d+)$", re.IGNORECASE)
 _ARXIV_IN_MARKDOWN_CELL_RE = re.compile(
-    r'(?:arxiv\.org/(?:abs|html|pdf)/|arxiv:)(\d{4}\.\d{4,5}(?:v\d+)?)',
+    r"(?:arxiv\.org/(?:abs|html|pdf)/|arxiv:)(\d{4}\.\d{4,5}(?:v\d+)?)",
     re.IGNORECASE,
 )
 
@@ -258,7 +267,7 @@ def _arxiv_sort_key(arxiv_id):
     """
     if not arxiv_id:
         return (-1, -1, -1)
-    m = re.match(r'^(\d{2})(\d{2})\.(\d{4,5})(?:v\d+)?$', str(arxiv_id).strip())
+    m = re.match(r"^(\d{2})(\d{2})\.(\d{4,5})(?:v\d+)?$", str(arxiv_id).strip())
     if not m:
         return (-1, -1, -1)
     yy, mm, seq = int(m.group(1)), int(m.group(2)), int(m.group(3))
@@ -278,21 +287,21 @@ def parse_high_impact_h_order():
     if not os.path.exists(PROGRESS_PATH):
         return {}, {}
 
-    with open(PROGRESS_PATH, encoding='utf-8') as f:
+    with open(PROGRESS_PATH, encoding="utf-8") as f:
         content = f.read()
 
     by_name = {}
     by_arxiv = {}
 
-    for line in content.split('\n'):
+    for line in content.split("\n"):
         line = line.strip()
-        if not line.startswith('|'):
+        if not line.startswith("|"):
             continue
-        cols = [c.strip() for c in line.split('|')]
+        cols = [c.strip() for c in line.split("|")]
         cols = [c for c in cols if c]
         if len(cols) < 2:
             continue
-        if cols[0] in ('#', '---', '----', '-----') or re.match(r'^-+$', cols[0]):
+        if cols[0] in ("#", "---", "----", "-----") or re.match(r"^-+$", cols[0]):
             continue
 
         tag_m = _H_INDEX_RE.match(cols[0])
@@ -303,11 +312,11 @@ def parse_high_impact_h_order():
         paper_col = cols[1]
 
         for ax_m in _ARXIV_IN_MARKDOWN_CELL_RE.finditer(paper_col):
-            ax = re.sub(r'v\d+$', '', ax_m.group(1).lower())
+            ax = re.sub(r"v\d+$", "", ax_m.group(1).lower())
             by_arxiv[ax] = h_num
 
-        paper_text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', paper_col)
-        paper_text = re.sub(r'[*_`\[\]]', '', paper_text)
+        paper_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", paper_col)
+        paper_text = re.sub(r"[*_`\[\]]", "", paper_text)
         paper_text = paper_text.strip()
         if not paper_text:
             continue
@@ -325,8 +334,8 @@ def match_high_impact_h_order(paper_title, paper_dir, arxiv_id, by_name, by_arxi
         ax_key = arxiv_id.lower()
         if ax_key in by_arxiv:
             return by_arxiv[ax_key]
-        if re.search(r'v\d+$', ax_key):
-            ax_key = re.sub(r'v\d+$', '', ax_key)
+        if re.search(r"v\d+$", ax_key):
+            ax_key = re.sub(r"v\d+$", "", ax_key)
             if ax_key in by_arxiv:
                 return by_arxiv[ax_key]
 
@@ -334,7 +343,7 @@ def match_high_impact_h_order(paper_title, paper_dir, arxiv_id, by_name, by_arxi
     if norm_title and norm_title in by_name:
         return by_name[norm_title]
 
-    norm_dir = normalize_name(paper_dir.replace('_', ' '))
+    norm_dir = normalize_name(paper_dir.replace("_", " "))
     if norm_dir and norm_dir in by_name:
         return by_name[norm_dir]
 
@@ -356,7 +365,7 @@ def match_paper_order(paper_title, paper_dir, progress_order):
     if norm_title and norm_title in progress_order:
         return progress_order[norm_title]
 
-    norm_dir = normalize_name(paper_dir.replace('_', ' '))
+    norm_dir = normalize_name(paper_dir.replace("_", " "))
     if norm_dir and norm_dir in progress_order:
         return progress_order[norm_dir]
 
@@ -393,22 +402,22 @@ def process_papers():
     index_data = {}
 
     # Load existing papers.json to preserve metadata (subtitle, subcategories, zhname)
-    existing_papers_json_path = os.path.join(BASE_DIR, '_data', 'papers.json')
+    existing_papers_json_path = os.path.join(BASE_DIR, "_data", "papers.json")
     existing_papers_json = {}
     existing_paper_meta = {}  # title/path -> metadata from existing data
     if os.path.exists(existing_papers_json_path):
         try:
-            with open(existing_papers_json_path, encoding='utf-8') as f:
+            with open(existing_papers_json_path, encoding="utf-8") as f:
                 existing_papers_json = json.load(f)
             # Build metadata lookup from all papers (top-level and subcategory)
             for cat_data in existing_papers_json.values():
-                for p in cat_data.get('papers', []):
-                    existing_paper_meta[p.get('title')] = p
-                    existing_paper_meta[p.get('path')] = p
-                for sc in cat_data.get('subcategories', []):
-                    for p in sc.get('papers', []):
-                        existing_paper_meta[p.get('title')] = p
-                        existing_paper_meta[p.get('path')] = p
+                for p in cat_data.get("papers", []):
+                    existing_paper_meta[p.get("title")] = p
+                    existing_paper_meta[p.get("path")] = p
+                for sc in cat_data.get("subcategories", []):
+                    for p in sc.get("papers", []):
+                        existing_paper_meta[p.get("title")] = p
+                        existing_paper_meta[p.get("path")] = p
         except (OSError, json.JSONDecodeError, UnicodeDecodeError):
             pass
 
@@ -432,39 +441,39 @@ def process_papers():
                 continue
 
             for fname in sorted(os.listdir(paper_path)):
-                if not fname.endswith('.md'):
+                if not fname.endswith(".md"):
                     continue
 
                 fpath = os.path.join(paper_path, fname)
 
-                with open(fpath, encoding='utf-8') as f:
+                with open(fpath, encoding="utf-8") as f:
                     content = f.read()
 
                 normalized, meta_changed = normalize_paper_meta_blockquotes(content)
                 if meta_changed:
                     content = normalized
-                    with open(fpath, 'w', encoding='utf-8') as f:
+                    with open(fpath, "w", encoding="utf-8") as f:
                         f.write(content)
                     print(f"  Normalized meta blockquotes: {fpath}")
 
                 check_stub(fpath, content)
 
-                title = extract_title(content) or paper_dir.replace('_', ' ')
+                title = extract_title(content) or paper_dir.replace("_", " ")
 
                 # Add front matter if not present
                 if not has_frontmatter(content):
                     # Use json.dumps to safely escape title and category for YAML
                     safe_title = json.dumps(title, ensure_ascii=False)
                     safe_category = json.dumps(category_display, ensure_ascii=False)
-                    frontmatter = f'---\nlayout: paper\ntitle: {safe_title}\ncategory: {safe_category}\n---\n\n'
-                    with open(fpath, 'w', encoding='utf-8') as f:
+                    frontmatter = f"---\nlayout: paper\ntitle: {safe_title}\ncategory: {safe_category}\n---\n\n"
+                    with open(fpath, "w", encoding="utf-8") as f:
                         f.write(frontmatter + content)
                     print(f"  Added front matter: {fpath}")
                 else:
                     print(f"  Already has front matter: {fpath}")
 
                 rel_path = os.path.relpath(fpath, BASE_DIR)
-                url_path = '/' + rel_path.rsplit('.md', 1)[0] + '.html'
+                url_path = "/" + rel_path.rsplit(".md", 1)[0] + ".html"
 
                 # ⚡ Bolt Optimization: Extract front matter explicitly with O(1) parsing
                 # instead of running multiple multi-line regexes over the whole file
@@ -474,70 +483,66 @@ def process_papers():
 
                 order_idx = match_paper_order(title, paper_dir, progress_order)
 
-                if category_dir == '03_High_Impact_Selection':
-                    h_idx = match_high_impact_h_order(
-                        title, paper_dir, arxiv_for_order, hi_by_name, hi_by_arxiv
-                    )
+                if category_dir == "03_High_Impact_Selection":
+                    h_idx = match_high_impact_h_order(title, paper_dir, arxiv_for_order, hi_by_name, hi_by_arxiv)
                     if h_idx is not None:
                         order_idx = h_idx
-                    elif 'paper_order' in frontmatter_meta:
+                    elif "paper_order" in frontmatter_meta:
                         try:
-                            order_idx = int(frontmatter_meta['paper_order'])
+                            order_idx = int(frontmatter_meta["paper_order"])
                         except ValueError:
                             pass
-                elif 'paper_order' in frontmatter_meta:
+                elif "paper_order" in frontmatter_meta:
                     # Front-matter `paper_order: <n>` overrides PROGRESS.md matching.
                     # Used to put papers in README's recommended learning-path order
                     # even when their titles don't match the awesome-list table rows.
                     try:
-                        order_idx = int(frontmatter_meta['paper_order'])
+                        order_idx = int(frontmatter_meta["paper_order"])
                     except ValueError:
                         pass
 
                 # Extract subcategory from front matter if present
-                paper_subcat = frontmatter_meta.get('subcategory')
+                paper_subcat = frontmatter_meta.get("subcategory")
 
                 paper_entry = {
-                    'title': title,
-                    'path': rel_path,
-                    'url': url_path,
-                    'dir': paper_dir,
-                    '_order': order_idx,
-                    '_subcategory': paper_subcat
+                    "title": title,
+                    "path": rel_path,
+                    "url": url_path,
+                    "dir": paper_dir,
+                    "_order": order_idx,
+                    "_subcategory": paper_subcat,
                 }
 
                 existing_meta_for_paper = existing_paper_meta.get(title) or existing_paper_meta.get(rel_path) or {}
 
                 # Extract arXiv ID, preserving existing metadata when the note
                 # uses a format the parser does not recognize.
-                arxiv = arxiv_for_order or existing_meta_for_paper.get('arxiv')
+                arxiv = arxiv_for_order or existing_meta_for_paper.get("arxiv")
                 if arxiv:
-                    paper_entry['arxiv'] = arxiv
+                    paper_entry["arxiv"] = arxiv
 
                 if extract_has_open_source(content):
-                    paper_entry['has_open_source'] = True
+                    paper_entry["has_open_source"] = True
 
                 # Prefer zhname from front matter when present
-                if 'zhname' in frontmatter_meta:
-                    paper_entry['zhname'] = frontmatter_meta['zhname']
+                if "zhname" in frontmatter_meta:
+                    paper_entry["zhname"] = frontmatter_meta["zhname"]
                 # Otherwise restore zhname from existing data if available
-                elif existing_meta_for_paper.get('zhname'):
-                    paper_entry['zhname'] = existing_meta_for_paper['zhname']
+                elif existing_meta_for_paper.get("zhname"):
+                    paper_entry["zhname"] = existing_meta_for_paper["zhname"]
 
                 papers.append(paper_entry)
 
         # Foundational RL and High Impact keep curated PROGRESS order; others by arXiv.
         if category_dir in CATEGORIES_PROGRESS_ORDER:
-            papers.sort(key=lambda p: p['_order'])
+            papers.sort(key=lambda p: p["_order"])
         else:
             # 1) arXiv newest-first to align with upstream awesome list
             # 2) keep _order as tiebreaker / fallback for non-arXiv entries
             papers.sort(
                 key=lambda p: (
-                    _arxiv_sort_key(p.get('arxiv')),
-                    -int(p.get('_order', 10**9))
-                    if isinstance(p.get('_order'), int)
-                    else -10**9,
+                    _arxiv_sort_key(p.get("arxiv")),
+                    -int(p.get("_order", 10**9)) if isinstance(p.get("_order"), int) else -(10**9),
                 ),
                 reverse=True,
             )
@@ -545,55 +550,49 @@ def process_papers():
         existing_meta = existing_papers_json.get(category_dir, {})
 
         if papers:
-            entry = {
-                'display_name': category_display,
-                'papers': papers
-            }
+            entry = {"display_name": category_display, "papers": papers}
         else:
-            entry = {
-                'display_name': category_display,
-                'papers': []
-            }
+            entry = {"display_name": category_display, "papers": []}
 
         # Preserve subtitle, i18n names, and subtitle_zh if exists
-        if 'subtitle' in existing_meta:
-            entry['subtitle'] = existing_meta['subtitle']
-        if 'subtitle_zh' in existing_meta:
-            entry['subtitle_zh'] = existing_meta['subtitle_zh']
+        if "subtitle" in existing_meta:
+            entry["subtitle"] = existing_meta["subtitle"]
+        if "subtitle_zh" in existing_meta:
+            entry["subtitle_zh"] = existing_meta["subtitle_zh"]
         # Support both zhname (new) and display_name_zh (legacy) field names
         if category_dir in CATEGORY_ZHNAME:
-            entry['zhname'] = CATEGORY_ZHNAME[category_dir]
-        elif 'zhname' in existing_meta:
-            entry['zhname'] = existing_meta['zhname']
-        elif 'display_name_zh' in existing_meta:
-            entry['zhname'] = existing_meta['display_name_zh']
+            entry["zhname"] = CATEGORY_ZHNAME[category_dir]
+        elif "zhname" in existing_meta:
+            entry["zhname"] = existing_meta["zhname"]
+        elif "display_name_zh" in existing_meta:
+            entry["zhname"] = existing_meta["display_name_zh"]
 
         # Distribute papers into subcategories if defined
-        if 'subcategories' in existing_meta:
-            subcats = [dict(s) for s in existing_meta['subcategories']]
+        if "subcategories" in existing_meta:
+            subcats = [dict(s) for s in existing_meta["subcategories"]]
             # Reset papers in each subcat and migrate name_zh -> zhname
             for s in subcats:
-                s['papers'] = []
-                if 'name_zh' in s:
-                    s['zhname'] = s.pop('name_zh')
-            subcat_map = {s['name']: s for s in subcats}
+                s["papers"] = []
+                if "name_zh" in s:
+                    s["zhname"] = s.pop("name_zh")
+            subcat_map = {s["name"]: s for s in subcats}
             ungrouped = []
             for paper in papers:
-                paper_subcat = paper.get('_subcategory')
+                paper_subcat = paper.get("_subcategory")
                 if paper_subcat and paper_subcat in subcat_map:
-                    subcat_map[paper_subcat]['papers'].append(paper)
+                    subcat_map[paper_subcat]["papers"].append(paper)
                 else:
                     ungrouped.append(paper)
-            entry['subcategories'] = subcats
+            entry["subcategories"] = subcats
             # ungrouped papers stay in top-level papers list
-            entry['papers'] = ungrouped
+            entry["papers"] = ungrouped
 
         # Remove internal fields
         for p in papers:
-            if '_order' in p:
-                del p['_order']
-            if '_subcategory' in p:
-                del p['_subcategory']
+            if "_order" in p:
+                del p["_order"]
+            if "_subcategory" in p:
+                del p["_subcategory"]
 
         index_data[category_dir] = entry
 
@@ -604,25 +603,22 @@ def process_papers():
             continue
         if os.path.isdir(category_path) and category_dir not in index_data:
             existing_meta = existing_papers_json.get(category_dir, {})
-            entry = {
-                'display_name': get_category_name(category_dir),
-                'papers': []
-            }
-            if 'subtitle' in existing_meta:
-                entry['subtitle'] = existing_meta['subtitle']
-            if 'subtitle_zh' in existing_meta:
-                entry['subtitle_zh'] = existing_meta['subtitle_zh']
+            entry = {"display_name": get_category_name(category_dir), "papers": []}
+            if "subtitle" in existing_meta:
+                entry["subtitle"] = existing_meta["subtitle"]
+            if "subtitle_zh" in existing_meta:
+                entry["subtitle_zh"] = existing_meta["subtitle_zh"]
             if category_dir in CATEGORY_ZHNAME:
-                entry['zhname'] = CATEGORY_ZHNAME[category_dir]
-            elif 'zhname' in existing_meta:
-                entry['zhname'] = existing_meta['zhname']
-            elif 'display_name_zh' in existing_meta:
-                entry['zhname'] = existing_meta['display_name_zh']
-            if 'subcategories' in existing_meta:
-                entry['subcategories'] = [dict(s, papers=[]) for s in existing_meta['subcategories']]
-                for s in entry['subcategories']:
-                    if 'name_zh' in s:
-                        s['zhname'] = s.pop('name_zh')
+                entry["zhname"] = CATEGORY_ZHNAME[category_dir]
+            elif "zhname" in existing_meta:
+                entry["zhname"] = existing_meta["zhname"]
+            elif "display_name_zh" in existing_meta:
+                entry["zhname"] = existing_meta["display_name_zh"]
+            if "subcategories" in existing_meta:
+                entry["subcategories"] = [dict(s, papers=[]) for s in existing_meta["subcategories"]]
+                for s in entry["subcategories"]:
+                    if "name_zh" in s:
+                        s["zhname"] = s.pop("name_zh")
             index_data[category_dir] = entry
 
     # Sort by upstream awesome-list order first; unknown folders keep lexical tail order.
@@ -635,21 +631,21 @@ def process_papers():
     )
 
     # Write index data
-    data_dir = os.path.join(BASE_DIR, '_data')
+    data_dir = os.path.join(BASE_DIR, "_data")
     os.makedirs(data_dir, exist_ok=True)
 
-    with open(os.path.join(data_dir, 'papers.json'), 'w', encoding='utf-8') as f:
+    with open(os.path.join(data_dir, "papers.json"), "w", encoding="utf-8") as f:
         json.dump(sorted_data, f, ensure_ascii=False, indent=2)
-        f.write('\n')
+        f.write("\n")
 
     total = sum(
-        len(v['papers']) + sum(len(s.get('papers', [])) for s in v.get('subcategories', []))
+        len(v["papers"]) + sum(len(s.get("papers", [])) for s in v.get("subcategories", []))
         for v in sorted_data.values()
     )
     print(f"\nGenerated _data/papers.json with {total} papers in {len(sorted_data)} categories")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("Preparing paper pages for Jekyll...\n")
     process_papers()
     print("\nDone!")
