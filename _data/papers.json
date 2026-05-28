@@ -815,6 +815,14 @@
         "zhname": "用 CNN+GRU 混合自编码器把 LiDAR + 深度相机 + IMU 融成机器人坐标系下的鲁棒高度图，作为人形复杂地形行走的统一中间表征"
       },
       {
+        "title": "Scalable and General Whole-Body Control for Cross-Humanoid Locomotion",
+        "path": "papers/05_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion.md",
+        "url": "/papers/05_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion.html",
+        "dir": "XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion",
+        "arxiv": "2602.05791",
+        "zhname": "XHugWBC：跨本体随机化 + 语义对齐的观测/动作空间 + 形态-动力学感知策略，让一套全身控制策略零样本跑通 12 仿真 + 7 真机不同形态人形"
+      },
+      {
         "title": "Extreme Parkour with Legged Robots",
         "path": "papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.md",
         "url": "/papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.html",

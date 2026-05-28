@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 53,
-      "last_title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
-      "next_module": "05_Locomotion"
+      "last_module": "05_Locomotion",
+      "last_index": 192,
+      "last_title": "XHugWBC: Scalable and General Whole-Body Control for Cross-Humanoid Locomotion",
+      "next_module": "06_Manipulation"
     },
-    "last_summary_index": 53,
-    "last_summary_date": "2026-06-02",
-    "last_summary_title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
+    "last_summary_index": 192,
+    "last_summary_date": "2026-06-03",
+    "last_summary_title": "XHugWBC: Scalable and General Whole-Body Control for Cross-Humanoid Locomotion",
     "next_summary_index": null,
     "log": [
       {
@@ -701,9 +701,21 @@
         "arxiv": "2601.17440",
         "source_repo": null,
         "project_page": null
+      },
+      {
+        "date": "2026-06-03",
+        "index": 192,
+        "title": "XHugWBC: Scalable and General Whole-Body Control for Cross-Humanoid Locomotion",
+        "module": "05_Locomotion",
+        "category": "05_Locomotion",
+        "note_path": "papers/05_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion.md",
+        "track": "module_rotation",
+        "arxiv": "2602.05791",
+        "source_repo": null,
+        "project_page": "https://xhugwbc.github.io/"
       }
     ],
-    "last_completed_index": 53,
+    "last_completed_index": 192,
     "next_index": null
   },
   "papers": [
