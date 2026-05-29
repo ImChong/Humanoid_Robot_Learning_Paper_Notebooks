@@ -41,16 +41,22 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 192,
-      "last_title": "XHugWBC: Scalable and General Whole-Body Control for Cross-Humanoid Locomotion",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": 275,
+      "last_title": "Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation",
+      "next_module": "07_Teleoperation"
     },
-    "last_summary_index": 192,
-    "last_summary_date": "2026-06-03",
-    "last_summary_title": "XHugWBC: Scalable and General Whole-Body Control for Cross-Humanoid Locomotion",
+    "last_summary_index": 275,
+    "last_summary_date": "2026-06-04",
+    "last_summary_title": "Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-04",
+        "index": 275,
+        "title": "Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation",
+        "folder": "papers/06_Manipulation/RGMP-S__Generalizable_Geometric_Prior_and_Recurrent_Spiking_Feature_Learning_for_Humanoid_Manipulation"
+      },
       {
         "date": "2026-04-24",
         "index": 14,
