@@ -719,6 +719,15 @@
         "zhname": "HumanoidVLM：用视觉语言模型 + RAG 检索为人形机器人挑选阻抗参数与抓取角"
       },
       {
+        "title": "Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation",
+        "path": "papers/06_Manipulation/RGMP-S__Generalizable_Geometric_Prior_and_Recurrent_Spiking_Feature_Learning_for_Humanoid_Manipulation/RGMP-S__Generalizable_Geometric_Prior_and_Recurrent_Spiking_Feature_Learning_for_Humanoid_Manipulation.md",
+        "url": "/papers/06_Manipulation/RGMP-S__Generalizable_Geometric_Prior_and_Recurrent_Spiking_Feature_Learning_for_Humanoid_Manipulation/RGMP-S__Generalizable_Geometric_Prior_and_Recurrent_Spiking_Feature_Learning_for_Humanoid_Manipulation.html",
+        "dir": "RGMP-S__Generalizable_Geometric_Prior_and_Recurrent_Spiking_Feature_Learning_for_Humanoid_Manipulation",
+        "arxiv": "2601.09031",
+        "has_open_source": true,
+        "zhname": "RGMP-S：用 2D 几何先验做长程技能选择 + 递归脉冲网络稀疏示范下学动作"
+      },
+      {
         "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
         "path": "papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
         "url": "/papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",
