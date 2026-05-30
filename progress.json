@@ -41,16 +41,22 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 275,
-      "last_title": "Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation",
-      "next_module": "07_Teleoperation"
+      "last_module": "07_Teleoperation",
+      "last_index": 333,
+      "last_title": "Learning Adaptive Neural Teleoperation for Humanoid Robots: From Inverse Kinematics to End-to-End Control",
+      "next_module": "08_Navigation"
     },
-    "last_summary_index": 275,
-    "last_summary_date": "2026-06-04",
-    "last_summary_title": "Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation",
+    "last_summary_index": 333,
+    "last_summary_date": "2026-06-05",
+    "last_summary_title": "Learning Adaptive Neural Teleoperation for Humanoid Robots: From Inverse Kinematics to End-to-End Control",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-05",
+        "index": 333,
+        "title": "Learning Adaptive Neural Teleoperation for Humanoid Robots: From Inverse Kinematics to End-to-End Control",
+        "folder": "papers/07_Teleoperation/Learning_Adaptive_Neural_Teleoperation_for_Humanoid_Robots"
+      },
       {
         "date": "2026-06-04",
         "index": 275,

@@ -776,6 +776,14 @@
         "zhname": "SEW-Mimic：用肩-肘-腕几何对齐给出有最优性保证的闭式上肢重定向解"
       },
       {
+        "title": "Learning Adaptive Neural Teleoperation for Humanoid Robots: From Inverse Kinematics to End-to-End Control",
+        "path": "papers/07_Teleoperation/Learning_Adaptive_Neural_Teleoperation_for_Humanoid_Robots/Learning_Adaptive_Neural_Teleoperation_for_Humanoid_Robots.md",
+        "url": "/papers/07_Teleoperation/Learning_Adaptive_Neural_Teleoperation_for_Humanoid_Robots/Learning_Adaptive_Neural_Teleoperation_for_Humanoid_Robots.html",
+        "dir": "Learning_Adaptive_Neural_Teleoperation_for_Humanoid_Robots",
+        "arxiv": "2511.12390",
+        "zhname": "学习式神经遥操作：用 RL 端到端策略替换 IK+PD，让 VR 控制器直接驱动人形机器人"
+      },
+      {
         "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
         "path": "papers/07_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.md",
         "url": "/papers/07_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.html",
