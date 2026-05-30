@@ -13,7 +13,7 @@
 
   // ─── Paper navigation (prev/next) ─────────────────────────────────────────
   function initPaperNav() {
-    var dataEl = document.getElementById('paper-nav-data');
+    var dataEl = document.querySelector('script#paper-nav-data');
     if (!dataEl) return;
     var navData;
     try {
