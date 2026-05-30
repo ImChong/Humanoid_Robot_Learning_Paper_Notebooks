@@ -332,10 +332,15 @@
       // if the unescape introduces ``<`` characters they remain literal text.
       var mathRegex = /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\$[\s\S]*?\$|\\\([\s\S]*?\\\))/g;
 
+      // ⚡ Bolt Optimization: Restrict KaTeX DOM parsing exclusively to the main content area
+      // (like #paper-body) rather than the entire document.body. This entirely skips thousands
+      // of irrelevant nodes in the TOC sidebar, header, and footer, preventing main thread blocking.
+      var mathContainer = document.getElementById('paper-body') || document.body;
+
       // ⚡ Bolt Optimization: Include SHOW_ELEMENT to proactively prune irrelevant subtrees
       // (like code blocks) by returning FILTER_REJECT, avoiding deep DOM traversal.
       var walker = document.createTreeWalker(
-        document.body, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
+        mathContainer, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
           acceptNode: function(node) {
             if (node.nodeType === 1) { // Element node
               var tag = node.tagName;
@@ -359,7 +364,7 @@
         if (fixed !== v) textNode.nodeValue = fixed;
       }
 
-      renderMathInElement(document.body, {
+      renderMathInElement(mathContainer, {
         delimiters: [
           {left: "$$", right: "$$", display: true},
           {left: "\\[", right: "\\]", display: true},
