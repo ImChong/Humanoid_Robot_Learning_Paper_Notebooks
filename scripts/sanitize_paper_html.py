@@ -127,6 +127,10 @@ def _replace_paper_body(site_root: Path, path: Path) -> bool:
 
     inner = paper_body.decode_contents()
     cleaned = sanitize_paper_body_fragment(inner)
+
+    if inner == cleaned:
+        return False
+
     for child in list(paper_body.contents):
         child.extract()
 
