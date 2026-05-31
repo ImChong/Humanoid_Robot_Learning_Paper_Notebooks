@@ -41,16 +41,22 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 333,
-      "last_title": "Learning Adaptive Neural Teleoperation for Humanoid Robots: From Inverse Kinematics to End-to-End Control",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": 354,
+      "last_title": "Quantum deep reinforcement learning for humanoid robot navigation task",
+      "next_module": "09_State_Estimation"
     },
-    "last_summary_index": 333,
-    "last_summary_date": "2026-06-05",
-    "last_summary_title": "Learning Adaptive Neural Teleoperation for Humanoid Robots: From Inverse Kinematics to End-to-End Control",
+    "last_summary_index": 354,
+    "last_summary_date": "2026-06-06",
+    "last_summary_title": "Quantum deep reinforcement learning for humanoid robot navigation task",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-06",
+        "index": 354,
+        "title": "Quantum deep reinforcement learning for humanoid robot navigation task",
+        "folder": "papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation"
+      },
       {
         "date": "2026-06-05",
         "index": 333,
