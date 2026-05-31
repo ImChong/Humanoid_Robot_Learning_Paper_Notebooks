@@ -911,6 +911,14 @@
         "dir": "NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation",
         "arxiv": "2412.04453",
         "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
+      },
+      {
+        "title": "Quantum deep reinforcement learning for humanoid robot navigation task",
+        "path": "papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.md",
+        "url": "/papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.html",
+        "dir": "Quantum_Deep_RL_for_Humanoid_Robot_Navigation",
+        "arxiv": "2509.11388",
+        "zhname": "量子深度强化学习做人形机器人导航：用变分量子 SAC 直接控制高维连续动作"
       }
     ],
     "zhname": "导航"
