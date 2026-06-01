@@ -41,16 +41,22 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 354,
-      "last_title": "Quantum deep reinforcement learning for humanoid robot navigation task",
-      "next_module": "09_State_Estimation"
+      "last_module": "09_State_Estimation",
+      "last_index": 373,
+      "last_title": "Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors",
+      "next_module": "10_Sim-to-Real"
     },
-    "last_summary_index": 354,
-    "last_summary_date": "2026-06-06",
-    "last_summary_title": "Quantum deep reinforcement learning for humanoid robot navigation task",
+    "last_summary_index": 373,
+    "last_summary_date": "2026-06-07",
+    "last_summary_title": "Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-07",
+        "index": 373,
+        "title": "Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors",
+        "folder": "papers/09_State_Estimation/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors"
+      },
       {
         "date": "2026-06-06",
         "index": 354,
@@ -733,7 +739,7 @@
         "project_page": "https://xhugwbc.github.io/"
       }
     ],
-    "last_completed_index": 192,
+    "last_completed_index": 373,
     "next_index": null
   },
   "papers": [

@@ -966,6 +966,14 @@
         "dir": "Contact-Aided_Invariant_EKF_for_Legged_Robots",
         "arxiv": "1904.09251",
         "zhname": "基于接触辅助的不变扩展卡尔曼滤波的足式机器人状态估计"
+      },
+      {
+        "title": "Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors",
+        "path": "papers/09_State_Estimation/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors.md",
+        "url": "/papers/09_State_Estimation/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors.html",
+        "dir": "Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors",
+        "arxiv": "1712.05873",
+        "zhname": "用「前向运动学因子 + 预积分接触因子」把足式机器人状态估计搬到因子图平滑上"
       }
     ],
     "zhname": "状态估计"
