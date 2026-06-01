@@ -127,6 +127,9 @@ def normalize_paper_meta_blockquotes(content: str) -> tuple[str, bool]:
     are separated by an empty ``>`` continuation line. Without that separator,
     "阅读日期", "板块", and other header callouts collapse onto one line.
     """
+    if "\n>" not in content and not content.startswith(">"):
+        return content, False
+
     lines = content.split("\n")
     h1_idx = next(
         (i for i, line in enumerate(lines) if line.startswith("# ") and not line.startswith("## ")),
