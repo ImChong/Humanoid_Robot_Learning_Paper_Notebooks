@@ -59,3 +59,7 @@
 ## 2026-06-03 - Prevent HTML Re-Parsing and I/O when Sanitization is Clean
 **Learning:** In `scripts/sanitize_paper_html.py`, reading raw HTML into `BeautifulSoup`, extracting `#paper-body`, passing it through `nh3.clean()`, and then unconditionally re-parsing the returned string back into `BeautifulSoup` and writing back to disk is extremely slow for a post-build step. The majority of paper notes contain no malicious payloads, so `nh3` returns the exact same string it received. Unconditionally executing the BeautifulSoup DOM mutation and filesystem write loop creates a massive and completely avoidable O(N) performance bottleneck for static site generation.
 **Action:** When running sanitization scripts like `nh3.clean()` on large HTML strings, always diff-check the input and output strings (`if inner == cleaned`). If they are identical, short-circuit the execution and return early, skipping any expensive re-parsing, DOM tree generation, or disk I/O.
+
+## 2024-05-24 - Short-circuiting expensive string operations
+**Learning:** `content.split("\n")` on large markdown files is very expensive, especially when iterating over hundreds of files.
+**Action:** Use fast substring pre-checks like `if "\n>" not in content:` to short-circuit functions before executing expensive `split` operations.
