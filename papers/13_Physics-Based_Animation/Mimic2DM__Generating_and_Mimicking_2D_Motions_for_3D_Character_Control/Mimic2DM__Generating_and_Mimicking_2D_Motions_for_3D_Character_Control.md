@@ -10,7 +10,9 @@ category: "物理动画"
 **绕开"先 3D 重建再模仿"的老路 —— 直接用视频里的 2D 关键点轨迹，通过重投影误差训练物理仿真中的单视角 2D 追踪策略**
 
 > 📅 阅读日期: 2026-05-20
+>
 > 🏷️ 板块: 13 Physics-Based Animation · 角色控制 / 视频驱动 / 2D 重投影 / 分层控制
+>
 > 🔁 推进轨: 模块轮转（12_Hardware_Design → **13_Physics-Based_Animation**）
 
 ---
