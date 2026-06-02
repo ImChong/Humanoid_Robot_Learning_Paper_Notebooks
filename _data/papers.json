@@ -832,7 +832,7 @@
         "zhname": "用 CNN+GRU 混合自编码器把 LiDAR + 深度相机 + IMU 融成机器人坐标系下的鲁棒高度图，作为人形复杂地形行走的统一中间表征"
       },
       {
-        "title": "Scalable and General Whole-Body Control for Cross-Humanoid Locomotion",
+        "title": "Scalable and General Whole-Body Control for Cross-Humanoid Locomotion (XHugWBC)",
         "path": "papers/05_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion.md",
         "url": "/papers/05_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion.html",
         "dir": "XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion",
@@ -897,6 +897,14 @@
         "zhname": "在 360° 里思考：把人形视觉搜索做成「转头看路 + 转头找物」的两类显式任务"
       },
       {
+        "title": "Quantum deep reinforcement learning for humanoid robot navigation task",
+        "path": "papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.md",
+        "url": "/papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.html",
+        "dir": "Quantum_Deep_RL_for_Humanoid_Robot_Navigation",
+        "arxiv": "2509.11388",
+        "zhname": "量子深度强化学习做人形机器人导航：用变分量子 SAC 直接控制高维连续动作"
+      },
+      {
         "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
         "path": "papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.md",
         "url": "/papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.html",
@@ -911,14 +919,6 @@
         "dir": "NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation",
         "arxiv": "2412.04453",
         "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
-      },
-      {
-        "title": "Quantum deep reinforcement learning for humanoid robot navigation task",
-        "path": "papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.md",
-        "url": "/papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.html",
-        "dir": "Quantum_Deep_RL_for_Humanoid_Robot_Navigation",
-        "arxiv": "2509.11388",
-        "zhname": "量子深度强化学习做人形机器人导航：用变分量子 SAC 直接控制高维连续动作"
       }
     ],
     "zhname": "导航"
@@ -973,6 +973,7 @@
         "url": "/papers/09_State_Estimation/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors.html",
         "dir": "Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors",
         "arxiv": "1712.05873",
+        "has_open_source": true,
         "zhname": "用「前向运动学因子 + 预积分接触因子」把足式机器人状态估计搬到因子图平滑上"
       }
     ],
@@ -1014,6 +1015,15 @@
         "dir": "Contrastive_Representation_Learning_for_Adaptive_Humanoid_Locomotion",
         "arxiv": "2509.12858",
         "zhname": "对比表征学习：把仿真里的特权信息\"蒸\"进 actor 隐状态，再驱动一个自适应步态时钟"
+      },
+      {
+        "title": "Towards Bridging the Gap: Systematic Sim-to-Real Transfer for Diverse Legged Robots（PACE）",
+        "path": "papers/10_Sim-to-Real/PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots/PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots.md",
+        "url": "/papers/10_Sim-to-Real/PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots/PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots.html",
+        "dir": "PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots",
+        "arxiv": "2509.06342",
+        "has_open_source": true,
+        "zhname": "PACE：用一套\"自下而上的物理参数辨识 + PMSM 能量模型\"，让一个 RL 策略在不做动力学域随机化的前提下迁移到 13 台不同的腿足机器人"
       },
       {
         "title": "RMA: Rapid Motor Adaptation for Legged Robots",

@@ -10,7 +10,9 @@ category: "物理动画"
 **把"视觉 → 动作"做成一个端到端 RL 策略，跳过"先重建再物理后修"的两段式 HMR**
 
 > 📅 阅读日期: 2026-05-31
+>
 > 🏷️ 板块: 13 Physics-Based Animation · 视频驱动 HMR / 物理可行性 / 视觉条件 RL / 像素射线投射
+>
 > 🔁 推进轨: 模块轮转（12_Hardware_Design → **13_Physics-Based_Animation**）
 
 ---
