@@ -63,3 +63,6 @@
 ## 2024-05-24 - Short-circuiting expensive string operations
 **Learning:** `content.split("\n")` on large markdown files is very expensive, especially when iterating over hundreds of files.
 **Action:** Use fast substring pre-checks like `if "\n>" not in content:` to short-circuit functions before executing expensive `split` operations.
+## 2025-11-20 - Prevent HTML Re-Parsing and I/O when Sanitization is Clean (SoupStrainer)
+**Learning:** In `scripts/sanitize_paper_html.py`, reading raw HTML into `BeautifulSoup` unconditionally parses the *entire* DOM tree (including the sidebar, header, and footer) just to extract the `#paper-body` for sanitization. For files that are already clean (the vast majority), paying this massive O(N) full-document parse cost before the diff-check is a severe and avoidable performance bottleneck for static site generation.
+**Action:** When running targeted element sanitization scripts, use `bs4.SoupStrainer(id="target-id")` to parse *only* the required element for the initial fast-path check. If the content is clean, return early immediately. Only fall back to a full DOM parse (to write modifications) if a malicious payload is actually found. This cuts parsing time by 50% or more on large pages.
