@@ -41,16 +41,28 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "09_State_Estimation",
-      "last_index": 373,
-      "last_title": "Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors",
-      "next_module": "10_Sim-to-Real"
+      "last_module": "11_Simulation_Benchmark",
+      "last_index": 393,
+      "last_title": "Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report",
+      "next_module": "12_Hardware_Design"
     },
-    "last_summary_index": 373,
-    "last_summary_date": "2026-06-07",
-    "last_summary_title": "Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors",
+    "last_summary_index": 393,
+    "last_summary_date": "2026-06-09",
+    "last_summary_title": "Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-09",
+        "index": 393,
+        "title": "Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report",
+        "folder": "papers/11_Simulation_Benchmark/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report"
+      },
+      {
+        "date": "2026-06-08",
+        "index": 383,
+        "title": "Towards Bridging the Gap: Systematic Sim-to-Real Transfer for Diverse Legged Robots (PACE)",
+        "folder": "papers/10_Sim-to-Real/PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots"
+      },
       {
         "date": "2026-06-07",
         "index": 373,
@@ -3505,6 +3517,76 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "硬件设计",
+      "title_cn": ""
+    },
+    {
+      "title": "Scalable and General Whole-Body Control for Cross-Humanoid Locomotion",
+      "folder": "papers/05_Locomotion/XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion",
+      "note_file": "XHugWBC__Scalable_and_General_Whole-Body_Control_for_Cross-Humanoid_Locomotion.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Locomotion",
+      "title_cn": ""
+    },
+    {
+      "title": "Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation",
+      "folder": "papers/06_Manipulation/RGMP-S__Generalizable_Geometric_Prior_and_Recurrent_Spiking_Feature_Learning_for_Humanoid_Manipulation",
+      "note_file": "RGMP-S__Generalizable_Geometric_Prior_and_Recurrent_Spiking_Feature_Learning_for_Humanoid_Manipulation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Learning Adaptive Neural Teleoperation for Humanoid Robots: From Inverse Kinematics to End-to-End Control",
+      "folder": "papers/07_Teleoperation/Learning_Adaptive_Neural_Teleoperation_for_Humanoid_Robots",
+      "note_file": "Learning_Adaptive_Neural_Teleoperation_for_Humanoid_Robots.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "Quantum deep reinforcement learning for humanoid robot navigation task",
+      "folder": "papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation",
+      "note_file": "Quantum_Deep_RL_for_Humanoid_Robot_Navigation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors",
+      "folder": "papers/09_State_Estimation/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors",
+      "note_file": "Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "State Estimation",
+      "title_cn": ""
+    },
+    {
+      "title": "Towards Bridging the Gap: Systematic Sim-to-Real Transfer for Diverse Legged Robots",
+      "folder": "papers/10_Sim-to-Real/PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots",
+      "note_file": "PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Sim-to-Real",
+      "title_cn": ""
+    },
+    {
+      "title": "Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report",
+      "folder": "papers/11_Simulation_Benchmark/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report",
+      "note_file": "Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Simulation Benchmark",
       "title_cn": ""
     }
   ]
