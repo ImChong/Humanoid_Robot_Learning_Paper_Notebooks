@@ -92,6 +92,8 @@
 | 2026-06-01 | 479 | [MAGNet: Diffusion Forcing for Multi-Agent Interaction Sequence Modeling](14_Human_Motion/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling.md) | Human Motion / 多人交互生成 / Diffusion Forcing / VQ-VAE + DFOT / 单模型多任务 · UC Berkeley + Sony + Meta | [Von31/MAGNet-code](https://github.com/Von31/MAGNet-code)（计划 2026-03-26 释出训练代码 + Drive 权重） · [Berkeley 项目页](https://people.eecs.berkeley.edu/~vongani_maluleke/blogs/blog-magnet.html) |
 | 2026-06-06 | 354 | [Quantum deep reinforcement learning for humanoid robot navigation task](08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.md) | Navigation / 量子强化学习 / 变分量子电路 / QuantumSAC / MuJoCo Humanoid-v4 · Walker2d-v4 · Tonguz 团队 | 截至当前未见公开发布（论文未给出 GitHub 链接） · [arXiv 2509.11388](https://arxiv.org/abs/2509.11388) |
 | 2026-06-07 | 373 | [Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors](09_State_Estimation/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors.md) | State Estimation / 因子图平滑 / IMU 预积分 + 前向运动学因子 + 预积分接触因子 / Cassie · UMich (Hartley, Eustice, Grizzle) · ICRA 2018 | 未见本文专门仓库；基于 [GTSAM](https://github.com/borglab/gtsam)，同组滤波版 [RossHartley/invariant-ekf](https://github.com/RossHartley/invariant-ekf) · [arXiv 1712.05873](https://arxiv.org/abs/1712.05873) |
+| 2026-06-08 | 383 | [PACE: Towards Bridging the Gap — Systematic Sim-to-Real Transfer for Diverse Legged Robots](10_Sim-to-Real/PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots/PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots.md) | Sim-to-Real / 系统辨识 / 执行器建模 / PMSM 能量模型 / CMA-ES · 替代域随机化跨 13 台腿足机器人 | 截至当前未见公开发布 · [arXiv 2509.06342](https://arxiv.org/abs/2509.06342) |
+| 2026-06-09 | 393 | [Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report](11_Simulation_Benchmark/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report.md) | Simulation Benchmark / 世界模型 / 视频预测 / 离散 token 压缩 / Wan-2.2 + AdaLN-Zero + LoRA + 时空 Transformer · Team Revontuli 双赛道第一 | [1x-technologies/1xgpt](https://github.com/1x-technologies/1xgpt) · [HF 数据集 worldmodel](https://huggingface.co/datasets/1x-technologies/worldmodel) · [arXiv 2510.07092](https://arxiv.org/abs/2510.07092) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -238,6 +240,10 @@
 | 192 | XHugWBC: Scalable and General Whole-Body Control for Cross-Humanoid Locomotion | 05_Locomotion | ✅ 已完成（2026-06-03） |
 | 275 | Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation | 06_Manipulation | ✅ 已完成（2026-06-04） |
 | 333 | Learning Adaptive Neural Teleoperation for Humanoid Robots: From Inverse Kinematics to End-to-End Control | 07_Teleoperation | ✅ 已完成（2026-06-05） |
-| ? | （明日：08_Navigation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 08_Navigation | ⏭️ 下一篇候选 |
+| 354 | Quantum deep reinforcement learning for humanoid robot navigation task | 08_Navigation | ✅ 已完成（2026-06-06） |
+| 373 | Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors | 09_State_Estimation | ✅ 已完成（2026-06-07） |
+| 383 | PACE: Towards Bridging the Gap — Systematic Sim-to-Real Transfer for Diverse Legged Robots | 10_Sim-to-Real | ✅ 已完成（2026-06-08） |
+| 393 | Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report | 11_Simulation_Benchmark | ✅ 已完成（2026-06-09） |
+| ? | （明日：12_Hardware_Design 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 12_Hardware_Design | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

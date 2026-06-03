@@ -1128,6 +1128,15 @@
         "arxiv": "2403.10506",
         "has_open_source": true,
         "zhname": "HumanoidBench：全身运动与操作的人形机器人仿真基准"
+      },
+      {
+        "title": "Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report",
+        "path": "papers/11_Simulation_Benchmark/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report.md",
+        "url": "/papers/11_Simulation_Benchmark/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report.html",
+        "dir": "Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report",
+        "arxiv": "2510.07092",
+        "has_open_source": true,
+        "zhname": "1X 世界模型挑战赛技术报告：用「视频生成大模型 + 状态条件」拿采样赛道、用时空 Transformer 拿压缩赛道双冠"
       }
     ],
     "zhname": "仿真与基准"
