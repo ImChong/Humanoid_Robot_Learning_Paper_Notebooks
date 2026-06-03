@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 import nh3
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, SoupStrainer
 
 _ALLOWED_TAGS = frozenset(
     {
@@ -120,15 +120,28 @@ def sanitize_paper_body_fragment(html_fragment: str) -> str:
 
 def _replace_paper_body(site_root: Path, path: Path) -> bool:
     raw = path.read_text(encoding="utf-8")
-    soup = BeautifulSoup(raw, "html.parser")
-    paper_body = soup.find(id="paper-body")
-    if paper_body is None:
+
+    # ⚡ Bolt Optimization: Use SoupStrainer to parse only the #paper-body element
+    # for the initial sanitization check, avoiding the massive O(N) overhead of
+    # parsing the entire DOM (sidebar, header, footer) for files that are already clean.
+    strainer = SoupStrainer(id="paper-body")
+    fast_soup = BeautifulSoup(raw, "html.parser", parse_only=strainer)
+    paper_body_fast = fast_soup.find(id="paper-body")
+
+    if paper_body_fast is None:
         return False
 
-    inner = paper_body.decode_contents()
+    inner = paper_body_fast.decode_contents()
     cleaned = sanitize_paper_body_fragment(inner)
 
     if inner == cleaned:
+        return False
+
+    # Slow path: if we actually need to rewrite the file, parse the full DOM
+    soup = BeautifulSoup(raw, "html.parser")
+    paper_body = soup.find(id="paper-body")
+
+    if paper_body is None:
         return False
 
     for child in list(paper_body.contents):
