@@ -41,16 +41,22 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "13_Physics-Based_Animation",
-      "last_index": 452,
-      "last_title": "Learning to Ball: Composing Policies for Long-Horizon Basketball Moves",
-      "next_module": "14_Human_Motion"
+      "last_module": "14_Human_Motion",
+      "last_index": 480,
+      "last_title": "Control Operators for Interactive Character Animation",
+      "next_module": "04_Loco-Manipulation_and_WBC"
     },
-    "last_summary_index": 452,
-    "last_summary_date": "2026-06-11",
-    "last_summary_title": "Learning to Ball: Composing Policies for Long-Horizon Basketball Moves",
+    "last_summary_index": 480,
+    "last_summary_date": "2026-06-12",
+    "last_summary_title": "Control Operators for Interactive Character Animation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-12",
+        "index": 480,
+        "title": "Control Operators for Interactive Character Animation",
+        "folder": "papers/14_Human_Motion/Control_Operators_for_Interactive_Character_Animation"
+      },
       {
         "date": "2026-06-11",
         "index": 452,
@@ -3625,6 +3631,16 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "Physics-Based Animation",
+      "title_cn": ""
+    },
+    {
+      "title": "Control Operators for Interactive Character Animation",
+      "folder": "papers/14_Human_Motion/Control_Operators_for_Interactive_Character_Animation",
+      "note_file": "Control_Operators_for_Interactive_Character_Animation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "人体动作分析与生成",
       "title_cn": ""
     }
   ]

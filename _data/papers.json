@@ -1253,6 +1253,14 @@
         "arxiv": "2204.09419",
         "has_open_source": true,
         "zhname": "从文本描述生成多样化且自然的 3D 人体运动"
+      },
+      {
+        "title": "Control Operators for Interactive Character Animation",
+        "path": "papers/14_Human_Motion/Control_Operators_for_Interactive_Character_Animation/Control_Operators_for_Interactive_Character_Animation.md",
+        "url": "/papers/14_Human_Motion/Control_Operators_for_Interactive_Character_Animation/Control_Operators_for_Interactive_Character_Animation.html",
+        "dir": "Control_Operators_for_Interactive_Character_Animation",
+        "has_open_source": true,
+        "zhname": "控制算子：让非技术用户也能搭出自己的「学习型」角色控制器"
       }
     ],
     "zhname": "人体动作分析与生成"
