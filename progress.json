@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 393,
-      "last_title": "Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report",
-      "next_module": "12_Hardware_Design"
+      "last_module": "12_Hardware_Design",
+      "last_index": 414,
+      "last_title": "OSMO: Open-Source Tactile Glove for Human-to-Robot Skill Transfer",
+      "next_module": "13_Physics-Based_Animation"
     },
-    "last_summary_index": 393,
-    "last_summary_date": "2026-06-09",
-    "last_summary_title": "Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report",
+    "last_summary_index": 414,
+    "last_summary_date": "2026-06-10",
+    "last_summary_title": "OSMO: Open-Source Tactile Glove for Human-to-Robot Skill Transfer",
     "next_summary_index": null,
     "log": [
       {
@@ -749,6 +749,18 @@
         "arxiv": "2602.05791",
         "source_repo": null,
         "project_page": "https://xhugwbc.github.io/"
+      },
+      {
+        "date": "2026-06-10",
+        "index": 414,
+        "title": "OSMO: Open-Source Tactile Glove for Human-to-Robot Skill Transfer",
+        "module": "12_Hardware_Design",
+        "category": "12_Hardware_Design",
+        "note_path": "papers/12_Hardware_Design/OSMO_Open-Source_Tactile_Glove_for_Human-to-Robot_Skill_Transfer/OSMO_Open-Source_Tactile_Glove_for_Human-to-Robot_Skill_Transfer.md",
+        "track": "module_rotation",
+        "arxiv": "2512.08920",
+        "source_repo": "https://github.com/jessicayin/osmo_tactile_glove",
+        "project_page": "https://jessicayin.github.io/osmo_tactile_glove/"
       }
     ],
     "last_completed_index": 373,
