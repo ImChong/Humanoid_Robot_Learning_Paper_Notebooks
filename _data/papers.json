@@ -1188,6 +1188,15 @@
         "zhname": "PhysHMR：用视觉条件策略直接产出物理可行的人体动作重建"
       },
       {
+        "title": "Learning to Ball: Composing Policies for Long-Horizon Basketball Moves",
+        "path": "papers/13_Physics-Based_Animation/Learning_to_Ball__Composing_Policies_for_Long-Horizon_Basketball_Moves/Learning_to_Ball__Composing_Policies_for_Long-Horizon_Basketball_Moves.md",
+        "url": "/papers/13_Physics-Based_Animation/Learning_to_Ball__Composing_Policies_for_Long-Horizon_Basketball_Moves/Learning_to_Ball__Composing_Policies_for_Long-Horizon_Basketball_Moves.html",
+        "dir": "Learning_to_Ball__Composing_Policies_for_Long-Horizon_Basketball_Moves",
+        "arxiv": "2509.22442",
+        "has_open_source": true,
+        "zhname": "Learning to Ball：用「策略组合 + 高层软路由」拼出长程篮球连招"
+      },
+      {
         "title": "Character Controllers using Motion VAEs",
         "path": "papers/13_Physics-Based_Animation/MotionVAE/MotionVAE.md",
         "url": "/papers/13_Physics-Based_Animation/MotionVAE/MotionVAE.html",
