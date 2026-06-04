@@ -41,16 +41,22 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 414,
-      "last_title": "OSMO: Open-Source Tactile Glove for Human-to-Robot Skill Transfer",
-      "next_module": "13_Physics-Based_Animation"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 452,
+      "last_title": "Learning to Ball: Composing Policies for Long-Horizon Basketball Moves",
+      "next_module": "14_Human_Motion"
     },
-    "last_summary_index": 414,
-    "last_summary_date": "2026-06-10",
-    "last_summary_title": "OSMO: Open-Source Tactile Glove for Human-to-Robot Skill Transfer",
+    "last_summary_index": 452,
+    "last_summary_date": "2026-06-11",
+    "last_summary_title": "Learning to Ball: Composing Policies for Long-Horizon Basketball Moves",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-11",
+        "index": 452,
+        "title": "Learning to Ball: Composing Policies for Long-Horizon Basketball Moves",
+        "folder": "papers/13_Physics-Based_Animation/Learning_to_Ball__Composing_Policies_for_Long-Horizon_Basketball_Moves"
+      },
       {
         "date": "2026-06-09",
         "index": 393,
@@ -3599,6 +3605,26 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "Simulation Benchmark",
+      "title_cn": ""
+    },
+    {
+      "title": "OSMO: Open-Source Tactile Glove for Human-to-Robot Skill Transfer",
+      "folder": "papers/12_Hardware_Design/OSMO_Open-Source_Tactile_Glove_for_Human-to-Robot_Skill_Transfer",
+      "note_file": "OSMO_Open-Source_Tactile_Glove_for_Human-to-Robot_Skill_Transfer.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "硬件设计",
+      "title_cn": ""
+    },
+    {
+      "title": "Learning to Ball: Composing Policies for Long-Horizon Basketball Moves",
+      "folder": "papers/13_Physics-Based_Animation/Learning_to_Ball__Composing_Policies_for_Long-Horizon_Basketball_Moves",
+      "note_file": "Learning_to_Ball__Composing_Policies_for_Long-Horizon_Basketball_Moves.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Physics-Based Animation",
       "title_cn": ""
     }
   ]
