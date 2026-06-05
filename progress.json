@@ -41,16 +41,22 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "14_Human_Motion",
-      "last_index": 480,
-      "last_title": "Control Operators for Interactive Character Animation",
-      "next_module": "04_Loco-Manipulation_and_WBC"
+      "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_index": 54,
+      "last_title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
+      "next_module": "05_Locomotion"
     },
-    "last_summary_index": 480,
-    "last_summary_date": "2026-06-12",
-    "last_summary_title": "Control Operators for Interactive Character Animation",
+    "last_summary_index": 54,
+    "last_summary_date": "2026-06-13",
+    "last_summary_title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-13",
+        "index": 54,
+        "title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes"
+      },
       {
         "date": "2026-06-12",
         "index": 480,

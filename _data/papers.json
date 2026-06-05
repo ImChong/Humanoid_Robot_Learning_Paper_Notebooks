@@ -652,6 +652,15 @@
         "zhname": "PILOT：在非结构化场景中实现感知-动作一体化的人形 Loco-Manipulation 底层控制器"
       },
       {
+        "title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes/Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes/Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes.html",
+        "dir": "Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes",
+        "arxiv": "2601.16035",
+        "has_open_source": true,
+        "zhname": "在杂乱室内场景中实现无碰撞人形穿越（Click-and-Traverse / CAT）"
+      },
+      {
         "title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
         "path": "papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.html",
