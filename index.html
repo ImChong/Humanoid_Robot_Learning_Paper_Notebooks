@@ -340,9 +340,13 @@ title: "Home"
 
     // Only update DOM if the active section actually changed
     if (current !== lastActive) {
-      targets.forEach(function(t, idx) {
-        t.link.classList.toggle('active', idx === current);
-      });
+      // ⚡ Bolt Optimization: O(1) targeted DOM class toggling instead of O(N) loop
+      if (lastActive >= 0 && targets[lastActive]) {
+        targets[lastActive].link.classList.remove('active');
+      }
+      if (current >= 0 && targets[current]) {
+        targets[current].link.classList.add('active');
+      }
       lastActive = current;
     }
   }
