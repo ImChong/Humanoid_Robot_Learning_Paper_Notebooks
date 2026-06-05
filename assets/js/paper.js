@@ -186,9 +186,13 @@
       }
       // Only update DOM if the active section actually changed.
       if (current !== lastActive) {
-        links.forEach(function (link, idx) {
-          link.classList.toggle('active', idx === current);
-        });
+        // ⚡ Bolt Optimization: O(1) targeted DOM class toggling instead of O(N) loop
+        if (lastActive >= 0 && links[lastActive]) {
+          links[lastActive].classList.remove('active');
+        }
+        if (current >= 0 && links[current]) {
+          links[current].classList.add('active');
+        }
         lastActive = current;
       }
     }
