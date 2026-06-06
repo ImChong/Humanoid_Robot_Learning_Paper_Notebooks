@@ -8,6 +8,7 @@
         "url": "/papers/01_Foundational_RL/PPO_Proximal_Policy_Optimization/PPO_Proximal_Policy_Optimization.html",
         "dir": "PPO_Proximal_Policy_Optimization",
         "arxiv": "1707.06347",
+        "has_open_source": true,
         "zhname": "近端策略优化算法 (PPO)"
       },
       {

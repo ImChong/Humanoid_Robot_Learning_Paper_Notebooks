@@ -253,6 +253,13 @@
     });
   }
 
+  function normalizeRougeLineBreaks(html) {
+    // Rouge/kramdown often emits "\n</span>" (newline inside the span). Naive
+    // HTML string splitting then breaks tags across rows and clips highlighted
+    // code (e.g. "def" → "de"). Move the newline after the closing tag.
+    return html.replace(/\n(\s*<\/span>)/g, '$1\n');
+  }
+
   function splitByNewline(html) {
     // ⚡ Bolt Optimization: Use native indexOf for fast string scanning instead
     // of character-by-character loops, leading to an order of magnitude faster parsing
@@ -296,7 +303,7 @@
     document.querySelectorAll('div.highlighter-rouge:not(.mermaid-processed)').forEach(function (outer) {
       var code = outer.querySelector('pre code');
       if (!code) return;
-      var html = code.innerHTML;
+      var html = normalizeRougeLineBreaks(code.innerHTML);
       if (html.endsWith('\n')) html = html.slice(0, -1);
       var lines = splitByNewline(html);
 

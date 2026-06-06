@@ -23,6 +23,7 @@ category: "基础路线图"
 | **作者** | John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, Oleg Klimov |
 | **机构** | OpenAI |
 | **发布时间** | 2017年7月20日 |
+| **GitHub** | [openai/baselines (PPO2)](https://github.com/openai/baselines/tree/master/baselines/ppo2)<br>[xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) |
 
 ---
 
