@@ -522,12 +522,17 @@ html {
   .toc-sidebar {
     position: fixed;
     top: 0;
+    /* Stop above the floating sidebar toggle (24px + 48px) with breathing room */
+    bottom: calc(24px + 48px + 28px + env(safe-area-inset-bottom, 0px));
     left: -280px;
     width: 260px;
-    height: 100%;
+    height: auto;
+    max-height: none;
     background: var(--bg);
     margin: 0;
     padding: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     box-shadow: 2px 0 12px rgba(0,0,0,0.15);
     border-radius: 0 16px 16px 0;
     z-index: 1300;
@@ -574,13 +579,25 @@ html {
 
 @media (max-width: 1200px) {
   .index-layout .toc-sidebar {
+    /* Mirror subpage mobile drawer; desktop float/height must not leak here */
+    float: none;
     position: fixed;
     top: 0;
+    bottom: calc(24px + 48px + 28px + env(safe-area-inset-bottom, 0px));
     left: -280px;
     width: 260px;
-    height: 100%;
+    height: auto;
+    max-height: none;
     margin: 0;
+    margin-left: 0;
+    padding: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: var(--bg);
+    box-shadow: 2px 0 12px rgba(0,0,0,0.15);
     border-radius: 0 16px 16px 0;
+    z-index: 1300;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
   }
   .index-layout .toc-sidebar.open {
