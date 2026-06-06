@@ -388,13 +388,13 @@
   function addInlineCodeBreakHints() {
     var paperBody = document.getElementById('paper-body');
     if (!paperBody) return;
-    var codes = paperBody.querySelectorAll('code');
+    // ⚡ Bolt Optimization: Offload filtering to the browser's native C++ selector engine
+    // rather than calling `.closest()` inside a loop for every single `<code>` node,
+    // avoiding O(N) DOM tree traversals.
+    var codes = paperBody.querySelectorAll('code:not(pre code, .heading-code-phrase code, h1 code, h2 code, h3 code, h4 code, h5 code, h6 code)');
     for (var i = 0; i < codes.length; i++) {
       var code = codes[i];
-      // Skip code inside <pre> (block code) and skip if already processed.
-      if (code.closest('pre')) continue;
-      if (code.closest('.heading-code-phrase')) continue;
-      if (code.closest('h1, h2, h3, h4, h5, h6')) continue;
+      // Skip if already processed.
       if (code.dataset.wbrApplied === '1') continue;
       var text = code.textContent;
       if (!text || text.length < 16) continue;
