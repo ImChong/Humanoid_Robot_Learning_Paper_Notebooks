@@ -41,16 +41,22 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 54,
-      "last_title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
-      "next_module": "05_Locomotion"
+      "last_module": "05_Locomotion",
+      "last_index": 55,
+      "last_title": "HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation",
+      "next_module": "06_Manipulation"
     },
-    "last_summary_index": 54,
-    "last_summary_date": "2026-06-13",
-    "last_summary_title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
+    "last_summary_index": 193,
+    "last_summary_date": "2026-06-14",
+    "last_summary_title": "HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-14",
+        "index": 193,
+        "title": "HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation",
+        "folder": "papers/05_Locomotion/HoRD__Robust_Humanoid_Control_via_History-Conditioned_RL_and_Online_Distillation"
+      },
       {
         "date": "2026-06-13",
         "index": 54,

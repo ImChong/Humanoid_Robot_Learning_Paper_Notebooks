@@ -849,6 +849,14 @@
         "zhname": "XHugWBC：跨本体随机化 + 语义对齐的观测/动作空间 + 形态-动力学感知策略，让一套全身控制策略零样本跑通 12 仿真 + 7 真机不同形态人形"
       },
       {
+        "title": "HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation",
+        "path": "papers/05_Locomotion/HoRD__Robust_Humanoid_Control_via_History-Conditioned_RL_and_Online_Distillation/HoRD__Robust_Humanoid_Control_via_History-Conditioned_RL_and_Online_Distillation.md",
+        "url": "/papers/05_Locomotion/HoRD__Robust_Humanoid_Control_via_History-Conditioned_RL_and_Online_Distillation/HoRD__Robust_Humanoid_Control_via_History-Conditioned_RL_and_Online_Distillation.html",
+        "dir": "HoRD__Robust_Humanoid_Control_via_History-Conditioned_RL_and_Online_Distillation",
+        "arxiv": "2602.04412",
+        "zhname": "HoRD：教师用历史条件 RL 在线推断动力学上下文 + 在线蒸馏到基于稀疏 3D 关键点的 Transformer 学生策略，让单一策略零样本适配未见域与外部扰动"
+      },
+      {
         "title": "Extreme Parkour with Legged Robots",
         "path": "papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.md",
         "url": "/papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.html",
