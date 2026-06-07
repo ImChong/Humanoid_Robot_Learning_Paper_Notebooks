@@ -358,7 +358,7 @@ MimicKit 这篇论文的“源码对照”就是官方仓库本身：
 | 关注点 | 官方位置 |
 |--------|----------|
 | 主仓库 | [xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) |
-| DeepMimic 实现 | `mimickit/learning/deepmimic_agent.py` |
+| DeepMimic 实现 | `mimickit/envs/deepmimic_env.py` + `mimickit/learning/ppo_agent.py` |
 | AMP 实现 | `mimickit/learning/amp_agent.py` |
 | ASE 实现 | `mimickit/learning/ase_agent.py` |
 | ADD 实现 | `mimickit/learning/add_agent.py` |
@@ -367,7 +367,7 @@ MimicKit 这篇论文的“源码对照”就是官方仓库本身：
 读代码建议顺序：
 
 1. 先看 `ppo_agent.py`，理解 rollout、advantage、policy update 的共用训练骨架。
-2. 再看 `deepmimic_agent.py`，把 reference motion reward 跑通。
+2. 再看 `deepmimic_env.py`，把 reference motion reward 跑通。
 3. 然后看 `amp_agent.py`，理解 discriminator reward 如何接进 PPO。
 4. 最后看 `ase_agent.py` / `add_agent.py`，比较 latent skill 和差异判别的变化点。
 

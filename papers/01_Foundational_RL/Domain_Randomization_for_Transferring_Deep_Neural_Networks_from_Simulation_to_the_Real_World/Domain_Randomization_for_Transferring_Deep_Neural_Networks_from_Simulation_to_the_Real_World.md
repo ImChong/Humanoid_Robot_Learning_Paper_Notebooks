@@ -25,6 +25,7 @@ zhname: "域随机化：从仿真到真实世界的深度神经网络迁移"
 | **机构** | OpenAI, UC Berkeley |
 | **会议** | IROS 2017 |
 | **发布时间** | 2017年3月 |
+| **代码** | OpenAI **未发布**官方实现；社区复现可参考 [matwilso/domrand](https://github.com/matwilso/domrand)（KUKA 臂物体定位，非 Fetch 原版） |
 
 ---
 
@@ -135,6 +136,18 @@ flowchart TB
 | **视觉感知** | 相机位置、光照随机化用于视觉策略 sim-to-real |
 | **后续工作** | AMP、PHC、MimicKit 等均使用 DR；ADR（自动域随机化）扩展了本文思路 |
 | **理论基础** | Understanding DR（2021）从理论上解释了 DR 有效性，揭示了 memory-based policy 的必要性 |
+
+---
+
+## 📁 源码与 MimicKit 对照
+
+| 类型 | 说明 |
+|------|------|
+| 官方代码 | OpenAI 2017 论文**无公开仓库**（仅方法描述 + 实验结果） |
+| 社区复现 | [matwilso/domrand](https://github.com/matwilso/domrand)：MuJoCo 纹理/光照/相机随机化 + 物体定位 CNN |
+| MimicKit | DR 作为**通用训练技术**而非独立算法：各 env 的 domain randomization 在环境配置与 `events` 中开启（如 BeyondMimic 的 `events.py`、MimicKit humanoid env yaml 中的物理参数扰动） |
+
+> 本篇是 DR 的奠基实证工作；读代码时更常对照的是后续 Isaac Gym/Lab 系 locomotion 仓库中的 `domain_rand` / `events` 模块，而非 MimicKit 的单一 agent 文件。
 
 ---
 

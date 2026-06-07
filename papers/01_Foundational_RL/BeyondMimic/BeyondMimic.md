@@ -27,7 +27,7 @@ zhname: "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
 | **机构** | Stanford University / UC Berkeley |
 | **发布时间** | 2025-08 |
 | **项目主页** | [BeyondMimic Website](https://beyondmimic.github.io/) |
-| **代码** | 🚧 暂无公开仓库 |
+| **代码** | [HybridRobotics/whole_body_tracking](https://github.com/HybridRobotics/whole_body_tracking)（运动跟踪训练）<br>[HybridRobotics/motion_tracking_controller](https://github.com/HybridRobotics/motion_tracking_controller)（sim-to-real 推理部署） |
 
 ---
 
@@ -104,9 +104,19 @@ flowchart LR
 
 ---
 
-## 📁 MimicKit 源码对照
+## 📁 官方源码对照
 
-> ❌ 预期 MimicKit 尚未覆盖。BeyondMimic 代表了最新的科研进展，目前仍以独立项目形式存在。
+BeyondMimic **不在 MimicKit 内**，但官方已开源运动跟踪管线（2025-08 起）。引导扩散蒸馏与 test-time guidance 部分论文有展示，**尚未见独立公开仓库**。
+
+| 模块 | 仓库 | 核心路径 |
+|------|------|----------|
+| 运动跟踪训练（Isaac Lab + RSL-RL） | [HybridRobotics/whole_body_tracking](https://github.com/HybridRobotics/whole_body_tracking) | `source/whole_body_tracking/whole_body_tracking/tasks/tracking/mdp/`（`commands.py` / `rewards.py` / `events.py`） |
+| 真机 / MuJoCo 推理部署 | [HybridRobotics/motion_tracking_controller](https://github.com/HybridRobotics/motion_tracking_controller) | `MotionTrackingController`、`MotionOnnxPolicy` |
+| 引导扩散策略 | 暂无公开仓库 | 论文描述基于 Diffuse-CLoC 框架的状态-动作联合扩散 + classifier guidance |
+
+### MimicKit 关系
+
+> ❌ MimicKit 未集成 BeyondMimic。概念上，`whole_body_tracking` 的 `rewards.py` 沿用 DeepMimic 式 tracking reward，`events.py` 含域随机化，与 MimicKit `deepmimic_env.py` 思路相近，但工程栈为 Isaac Lab 而非 MimicKit。
 
 ---
 

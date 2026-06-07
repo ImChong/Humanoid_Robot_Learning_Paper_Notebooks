@@ -98,6 +98,7 @@
         "url": "/papers/01_Foundational_RL/BeyondMimic/BeyondMimic.html",
         "dir": "BeyondMimic",
         "arxiv": "2508.08241",
+        "has_open_source": true,
         "zhname": "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
       },
       {
@@ -114,6 +115,7 @@
         "url": "/papers/01_Foundational_RL/Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_the_Real_World/Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_the_Real_World.html",
         "dir": "Domain_Randomization_for_Transferring_Deep_Neural_Networks_from_Simulation_to_the_Real_World",
         "arxiv": "1703.06907",
+        "has_open_source": true,
         "zhname": "域随机化：从仿真到真实世界的深度神经网络迁移"
       },
       {
@@ -122,6 +124,7 @@
         "url": "/papers/01_Foundational_RL/LCP_Sim-to-Real_Action_Smoothing/LCP_Sim-to-Real_Action_Smoothing.html",
         "dir": "LCP_Sim-to-Real_Action_Smoothing",
         "arxiv": "2410.11825",
+        "has_open_source": true,
         "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
       },
       {

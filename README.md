@@ -162,21 +162,24 @@
 >
 > 🌍 **世界模型 / 世界-动作模型支线**：**世界模型（World Model）**——DreamDojo、1X World Model、HAIC（动力学感知 WM）——学会预测未来观测与动力学，既能"做梦"生成训练数据、又能做基于模型的规划；再进一步，**世界-动作模型（World Action Model, WAM）**（如 DreamZero）让世界模型本身充当零样本策略，与 VLA / BFM 一同构成"通用机器人大模型"的顶层。（DreamZero 目前在 [PROGRESS.md](papers/PROGRESS.md) 待读清单中，尚无笔记。）
 
-## 源码层面一览（MimicKit 覆盖情况）
+## 源码层面一览（基础强化学习 · 官方仓库与 MimicKit）
 
-| 论文 | MimicKit 源码 | 核心实现文件 |
-|------|:---:|------|
-| PPO | ✅ | `mimickit/learning/ppo_agent.py` |
-| AWR | ✅ | `mimickit/learning/awr_agent.py` |
-| AMP | ✅ | `mimickit/learning/amp_agent.py` |
-| DeepMimic | ✅ | `mimickit/learning/deepmimic_agent.py` |
-| ASE | ✅ | `mimickit/learning/ase_agent.py` |
-| **LCP** | ✅ | `mimickit/learning/lcp_agent.py` |
-| ADD | ✅ | `mimickit/learning/add_agent.py` |
-| MimicKit | ✅ | 官方框架论文与仓库总览 |
-| PULSE | ❌ | 笔记骨架已建，MimicKit 暂无覆盖 |
-| Diffusion Policy | ❌ | 非 MimicKit 覆盖范围（模仿学习框架不同） |
-| BeyondMimic | ❌ | 2025 年新工作，MimicKit 暂无覆盖 |
-| ProtoMotions3 | N/A | NVIDIA sibling framework，非 MimicKit 覆盖项 |
+| 论文 | 官方源码 | MimicKit | 核心实现 / 入口 |
+|------|----------|:--------:|-----------------|
+| PPO | [openai/baselines](https://github.com/openai/baselines/tree/master/baselines/ppo2) | ✅ | `mimickit/learning/ppo_agent.py` |
+| AWR | [xbpeng/awr](https://github.com/xbpeng/awr) | ✅ | `mimickit/learning/awr_agent.py` |
+| DeepMimic | [xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) | ✅ | `mimickit/envs/deepmimic_env.py` + `ppo_agent.py` |
+| AMP | [nv-tlabs/ASE](https://github.com/nv-tlabs/ASE)（含 AMP） | ✅ | `mimickit/learning/amp_agent.py` |
+| ASE | [nv-tlabs/ASE](https://github.com/nv-tlabs/ASE) | ✅ | `mimickit/learning/ase_agent.py` |
+| ADD | [xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) | ✅ | `mimickit/learning/add_agent.py` |
+| LCP | [zixuan417/smooth-humanoid-locomotion](https://github.com/zixuan417/smooth-humanoid-locomotion) | ✅ | `mimickit/learning/lcp_agent.py` |
+| PHC | [ZhengyiLuo/PHC](https://github.com/ZhengyiLuo/PHC) | ❌ | `phc/learning/amp_network_pnn_builder.py`（独立仓库） |
+| CALM | [NVlabs/CALM](https://github.com/NVlabs/CALM) | ❌ | IsaacGym 独立实现，不在 MimicKit |
+| PULSE | [ZhengyiLuo/PULSE](https://github.com/ZhengyiLuo/PULSE) | ❌ | `phc/learning/amp_network_z_builder.py`（基于 PHC 扩展） |
+| Diffusion Policy | [columbia-ai-robotics/diffusion_policy](https://github.com/columbia-ai-robotics/diffusion_policy) | ❌ | 视觉模仿学习框架，与 MimicKit 定位不同 |
+| BeyondMimic | [HybridRobotics/whole_body_tracking](https://github.com/HybridRobotics/whole_body_tracking)（训练）<br>[HybridRobotics/motion_tracking_controller](https://github.com/HybridRobotics/motion_tracking_controller)（部署） | ❌ | Isaac Lab + RSL-RL；引导扩散部分尚未单独开源 |
+| Domain Randomization (2017) | 无官方代码；可参考 [matwilso/domrand](https://github.com/matwilso/domrand) 复现 | N/A | DR 作为通用技术在 MimicKit / Isaac 系 env 的 `events` 中体现 |
+| Understanding DR (2021) | 理论论文，无配套代码 | N/A | — |
+| MimicKit | [xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) | ✅ | 框架本身，汇总上表 ✅ 项 |
 
-> 注：打 ✅ 表示笔记中已附「MimicKit 源码对照」章节，可直接对照论文公式与代码实现。
+> 注：MimicKit 列打 ✅ 表示该算法在 [MimicKit](https://github.com/xbpeng/MimicKit) 有官方实现，且对应笔记含「📁 MimicKit 源码对照」章节；打 ❌ 表示有独立官方仓库、不在 MimicKit 内。
