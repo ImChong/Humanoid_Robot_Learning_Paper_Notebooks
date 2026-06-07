@@ -73,3 +73,7 @@
 ## 2026-06-25 - Prevent O(N) DOM Traversal using Native CSS Selectors
 **Learning:** In frontend DOM manipulation, querying all generic elements (e.g., `querySelectorAll('code')`) and then iterating over them in Javascript using `.closest()` to filter out unwanted nodes forces the engine to perform O(N) upward tree traversals across the Javascript/C++ boundary. This can be extremely slow, particularly on pages with large DOM trees (e.g. hundreds of code snippets).
 **Action:** Always offload element filtering to the browser's highly optimized, native C++ CSS selector engine by using the `:not()` pseudo-class within the initial `querySelectorAll` call (e.g., `querySelectorAll('code:not(pre code)')`). This completely eliminates the need for expensive DOM traversal loops in JavaScript.
+
+## 2024-05-19 - Globally Pre-Compile Regexes in Python Processors
+**Learning:** In string-processing scripts that parse markdown sequentially via loops (e.g., `prepare_pages.py`), utilizing dynamically compiled `re.sub()` and `re.match()` triggers heavy re-evaluations inside the engine loop, adding massive overhead.
+**Action:** When working on Python text processing, always assign heavy patterns like `re.compile(r"...")` to module-level private constants (like `_MD_LINK_RE`) and execute `.match()` or `.sub()` methods from that object to skip cyclic regex parsing.

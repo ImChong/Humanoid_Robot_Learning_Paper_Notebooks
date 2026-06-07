@@ -66,6 +66,19 @@ CATEGORY_ZHNAME = {
 
 # Categories that keep curated reading order from PROGRESS / front matter
 # instead of arXiv-newest-first sorting.
+
+# ⚡ Bolt Optimization: Globally pre-compile regular expressions used inside loops
+# and high-frequency functions to prevent the regex engine from re-parsing the
+# pattern on every iteration, reducing CPU overhead and allocation churn.
+_EMPTY_TABLE_ROW_RE = re.compile(r"^\|[\s\-:|]+\|$")
+_DASH_ROW_RE = re.compile(r"^-+$")
+_LABEL_STARS_RE = re.compile(r"\*+")
+_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
+_MD_CHARS_RE = re.compile(r"[*_`\[\]]")
+_CATEGORY_PREFIX_RE = re.compile(r"^\d+_")
+_ARXIV_ID_PARTS_RE = re.compile(r"^(\d{2})(\d{2})\.(\d{4,5})(?:v\d+)?$")
+_ARXIV_VERSION_SUFFIX_RE = re.compile(r"v\d+$")
+
 CATEGORIES_PROGRESS_ORDER = frozenset({
     '01_Foundational_RL',
     '03_High_Impact_Selection',
@@ -146,14 +159,14 @@ def extract_has_open_source(content):
 
     for line in section.split("\n"):
         line = line.strip()
-        if not line.startswith("|") or re.match(r"^\|[\s\-:|]+\|$", line):
+        if not line.startswith("|") or _EMPTY_TABLE_ROW_RE.match(line):
             continue
         cols = [c.strip() for c in line.split("|")]
         cols = [c for c in cols if c]
         if len(cols) < 2:
             continue
 
-        label = re.sub(r"\*+", "", cols[0]).strip()
+        label = _LABEL_STARS_RE.sub("", cols[0]).strip()
         value = cols[-1] if len(cols) == 2 else " | ".join(cols[1:])
 
         if _CODE_ROW_EXCLUDE_LABEL_RE.search(label):
@@ -200,7 +213,7 @@ def extract_arxiv(content):
 
 def get_category_name(category_dir):
     """Clean category directory name for display."""
-    name = re.sub(r"^\d+_", "", category_dir)
+    name = _CATEGORY_PREFIX_RE.sub("", category_dir)
     name = name.replace("_", " ")
     return name
 
@@ -231,14 +244,14 @@ def parse_progress_order():
         cols = [c for c in cols if c]  # remove empty
         if len(cols) < 2:
             continue
-        if cols[0] in ("#", "---", "----", "-----") or re.match(r"^-+$", cols[0]):
+        if cols[0] in ("#", "---", "----", "-----") or _DASH_ROW_RE.match(cols[0]):
             continue
         # First col is usually the number, second is paper name/title
         paper_col = cols[1] if len(cols) > 1 else cols[0]
 
         # Extract the key text (remove markdown links, bold, etc.)
-        paper_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", paper_col)
-        paper_text = re.sub(r"[*_`\[\]]", "", paper_text)
+        paper_text = _MD_LINK_RE.sub(r"\1", paper_col)
+        paper_text = _MD_CHARS_RE.sub("", paper_text)
         paper_text = paper_text.strip()
 
         if not paper_text or paper_text in ("论文", "---", "笔记", "状态", "日期", "路线"):
@@ -267,7 +280,7 @@ def _arxiv_sort_key(arxiv_id):
     """
     if not arxiv_id:
         return (-1, -1, -1)
-    m = re.match(r"^(\d{2})(\d{2})\.(\d{4,5})(?:v\d+)?$", str(arxiv_id).strip())
+    m = _ARXIV_ID_PARTS_RE.match(str(arxiv_id).strip())
     if not m:
         return (-1, -1, -1)
     yy, mm, seq = int(m.group(1)), int(m.group(2)), int(m.group(3))
@@ -301,7 +314,7 @@ def parse_high_impact_h_order():
         cols = [c for c in cols if c]
         if len(cols) < 2:
             continue
-        if cols[0] in ("#", "---", "----", "-----") or re.match(r"^-+$", cols[0]):
+        if cols[0] in ("#", "---", "----", "-----") or _DASH_ROW_RE.match(cols[0]):
             continue
 
         tag_m = _H_INDEX_RE.match(cols[0])
@@ -312,11 +325,11 @@ def parse_high_impact_h_order():
         paper_col = cols[1]
 
         for ax_m in _ARXIV_IN_MARKDOWN_CELL_RE.finditer(paper_col):
-            ax = re.sub(r"v\d+$", "", ax_m.group(1).lower())
+            ax = _ARXIV_VERSION_SUFFIX_RE.sub("", ax_m.group(1).lower())
             by_arxiv[ax] = h_num
 
-        paper_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", paper_col)
-        paper_text = re.sub(r"[*_`\[\]]", "", paper_text)
+        paper_text = _MD_LINK_RE.sub(r"\1", paper_col)
+        paper_text = _MD_CHARS_RE.sub("", paper_text)
         paper_text = paper_text.strip()
         if not paper_text:
             continue
@@ -334,8 +347,8 @@ def match_high_impact_h_order(paper_title, paper_dir, arxiv_id, by_name, by_arxi
         ax_key = arxiv_id.lower()
         if ax_key in by_arxiv:
             return by_arxiv[ax_key]
-        if re.search(r"v\d+$", ax_key):
-            ax_key = re.sub(r"v\d+$", "", ax_key)
+        if _ARXIV_VERSION_SUFFIX_RE.search(ax_key):
+            ax_key = _ARXIV_VERSION_SUFFIX_RE.sub("", ax_key)
             if ax_key in by_arxiv:
                 return by_arxiv[ax_key]
 
