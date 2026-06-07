@@ -99,6 +99,7 @@
 | 2026-06-12 | 480 | [Control Operators for Interactive Character Animation](14_Human_Motion/Control_Operators_for_Interactive_Character_Animation/Control_Operators_for_Interactive_Character_Animation.md) | Human Motion / 交互式角色动画 / 可组合语义控制接口 / 流匹配自回归 + Learned Motion Matching 变体 · UBC + Epic Games · SIGGRAPH Asia 2025 最佳论文 | [gouruiyu/ControlOperators](https://github.com/gouruiyu/ControlOperators) · [项目页](https://theorangeduck.com/page/control-operators-interactive-character-animation) · [ACM DOI 10.1145/3763319](https://dl.acm.org/doi/10.1145/3763319) |
 | 2026-06-13 | 54 | [Collision-Free Humanoid Traversal in Cluttered Indoor Scenes](04_Loco-Manipulation_and_WBC/Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes/Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes.md) | Loco-Manipulation / WBC · 无碰撞穿越 / 全空间约束 / HumanoidPF 人形势场 / 混合场景生成 / 专家→通才 DAgger 蒸馏 · 清华 Li Yi + 银河通用 · Unitree G1 跨障 + 下蹲 + 挤窄缝 | [GalaxyGeneralRobotics/Click-and-Traverse](https://github.com/GalaxyGeneralRobotics/Click-and-Traverse)（Apache-2.0） · [项目页 axian12138.github.io/CAT](https://axian12138.github.io/CAT/) · [arXiv 2601.16035](https://arxiv.org/abs/2601.16035) |
 | 2026-06-14 | 193 | [HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation](05_Locomotion/HoRD__Robust_Humanoid_Control_via_History-Conditioned_RL_and_Online_Distillation/HoRD__Robust_Humanoid_Control_via_History-Conditioned_RL_and_Online_Distillation.md) | Locomotion / 鲁棒控制 / 历史条件 RL 教师在线推断动力学上下文 + 在线蒸馏到稀疏 3D 关键点 Transformer 学生 · 单策略零样本适配未见域/抗扰动 · Unitree G1 | [项目主页 tonywang-0517.github.io/hord](https://tonywang-0517.github.io/hord/) · [arXiv 2602.04412](https://arxiv.org/abs/2602.04412) |
+| 2026-06-15 | 276 | [DexterCap: An Affordable and Automated System for Capturing Dexterous Hand-Object Manipulation](06_Manipulation/DexterCap__An_Affordable_and_Automated_System_for_Capturing_Dexterous_Hand-Object/DexterCap__An_Affordable_and_Automated_System_for_Capturing_Dexterous_Hand-Object.md) | Manipulation / 数据采集 / 低成本光学动捕 / 字符编码密集标记贴片（324 唯一双字符 ID·19 贴片每手）/ 三级 Marker→Edge→Tag 检测识别 / 自动重建拟合 MANO 手 + 物体位姿铰接 · 发布 DexterHand 数据集（基元→魔方）· 北大 PKU-MoCCA | [PKU-MoCCA/dextercap](https://github.com/PKU-MoCCA/dextercap) · [项目主页](https://pku-mocca.github.io/Dextercap-Page/) · [arXiv 2601.05844](https://arxiv.org/abs/2601.05844) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -249,6 +250,12 @@
 | 373 | Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors | 09_State_Estimation | ✅ 已完成（2026-06-07） |
 | 383 | PACE: Towards Bridging the Gap — Systematic Sim-to-Real Transfer for Diverse Legged Robots | 10_Sim-to-Real | ✅ 已完成（2026-06-08） |
 | 393 | Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report | 11_Simulation_Benchmark | ✅ 已完成（2026-06-09） |
-| ? | （明日：05_Locomotion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 05_Locomotion | ⏭️ 下一篇候选 |
+| 414 | OSMO: Open-Source Tactile Glove for Human-to-Robot Skill Transfer | 12_Hardware_Design | ✅ 已完成（2026-06-10） |
+| 452 | Learning to Ball: Composing Policies for Long-Horizon Basketball Moves | 13_Physics-Based_Animation | ✅ 已完成（2026-06-11） |
+| 480 | Control Operators for Interactive Character Animation | 14_Human_Motion | ✅ 已完成（2026-06-12） |
+| 54 | Collision-Free Humanoid Traversal in Cluttered Indoor Scenes | 04_Loco-Manipulation_and_WBC | ✅ 已完成（2026-06-13） |
+| 193 | HoRD: Robust Humanoid Control via History-Conditioned RL and Online Distillation | 05_Locomotion | ✅ 已完成（2026-06-14） |
+| 276 | DexterCap: An Affordable and Automated System for Capturing Dexterous Hand-Object Manipulation | 06_Manipulation | ✅ 已完成（2026-06-15） |
+| ? | （明日：07_Teleoperation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 07_Teleoperation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
