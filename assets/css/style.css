@@ -97,10 +97,13 @@ html {
 .site-header {
   background: var(--header-bg);
   border-bottom: 1px solid var(--header-border);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  right: 0;
+  left: 0;
+  z-index: 1200;
   backdrop-filter: blur(8px);
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .header-inner {
@@ -159,7 +162,8 @@ html {
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 2rem 24px;
+  /* Reserve space for fixed site-header (min-height 56px + vertical padding). */
+  padding: calc(72px + env(safe-area-inset-top, 0px) + 2rem) 24px 2rem;
 }
 
 /* Paper pages: shift right to make room for left TOC */
@@ -503,20 +507,6 @@ html {
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-x: clip;
-  }
-
-  .site-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1200;
-  }
-
-  .container {
-    /* Two-line site-title can grow header to ~68px; reserve 72px so
-       fixed header never overlaps content. */
-    padding-top: calc(72px + env(safe-area-inset-top, 0px));
   }
 
   .toc-sidebar {
