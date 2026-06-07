@@ -109,9 +109,23 @@ flowchart TB
 
 ---
 
-## 📁 MimicKit 源码对照
+## 📁 PULSE 官方源码对照
 
-> 🚧 待确认。ASE 和 CALM 在 MimicKit 中有体现，PULSE 的官方实现独立于 GitHub。
+PULSE **不在 MimicKit 内**，官方实现为独立仓库 [ZhengyiLuo/PULSE](https://github.com/ZhengyiLuo/PULSE)，代码基于 PHC/IsaacGym 栈扩展。
+
+| 论文概念 | 官方路径 | 说明 |
+|----------|----------|------|
+| 大规模模仿（阶段 1） | `phc/env/tasks/humanoid_im.py` | 跟踪 AMASS 多样动作 |
+| VIB 潜空间蒸馏（阶段 2） | `phc/env/tasks/humanoid_im_distill.py` | 将模仿器蒸馏到潜变量 |
+| 潜空间策略网络 | `phc/learning/amp_network_z_builder.py` | 32 维 latent $z$ 的 actor-critic |
+| 本体感受先验 | `phc/learning/ar_prior.py` | 以当前状态为条件的先验 $p(z\|s)$ |
+| 下游任务配置 | `phc/data/cfg/learning/pulse_z_task.yaml` 等 | 击打、地形、VR 等任务 |
+
+训练入口见仓库 `scripts/` 与 `phc/data/cfg/env/env_pulse_*.yaml`。
+
+### MimicKit 关系
+
+> ❌ MimicKit 仅覆盖 ASE（`ase_agent.py`）等对抗潜空间方法，**未实现 PULSE 的 VIB 蒸馏与 proprioceptive prior**。读 PULSE 请直接用官方仓库；读 ASE 对照可用 MimicKit `docs/README_ASE.md`。
 
 ---
 

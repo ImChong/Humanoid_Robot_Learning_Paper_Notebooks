@@ -107,9 +107,20 @@ flowchart TB
 
 ---
 
-## 📁 MimicKit 源码对照
+## 📁 官方源码对照
 
-> ❌ MimicKit 目前主要面向 RL 和运动模仿，尚未集成标准的视觉扩散策略。
+Diffusion Policy **不在 MimicKit 内**；官方实现为 [columbia-ai-robotics/diffusion_policy](https://github.com/columbia-ai-robotics/diffusion_policy)。
+
+| 论文概念 | 官方路径 | 说明 |
+|----------|----------|------|
+| 条件去噪 UNet（1D 时序） | `diffusion_policy/model/diffusion/conditional_unet1d.py` | action chunk 扩散骨干 |
+| Transformer 变体 | `diffusion_policy/model/diffusion/transformer_for_diffusion.py` | 长序列交互建模 |
+| 训练工作区 | `diffusion_policy/workspace/` | 各 benchmark 的训练脚本与配置 |
+| 推理与 RHC | workspace 内 rollout 逻辑 | 预测 $H$ 步、执行前 $k$ 步、滑动重规划 |
+
+### MimicKit 关系
+
+> ❌ MimicKit 面向物理仿真 RL 与运动模仿（PPO/AMP/ASE 等），**未集成视觉-运动扩散策略**。MimicKit 仓库中有 `mimickit/learning/tinymdm/` 子目录，属于另一套运动扩散实验，**不是** Columbia Diffusion Policy 实现。
 
 ---
 
