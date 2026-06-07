@@ -41,16 +41,22 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 55,
-      "last_title": "HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": 276,
+      "last_title": "DexterCap: An Affordable and Automated System for Capturing Dexterous Hand-Object Manipulation",
+      "next_module": "07_Teleoperation"
     },
-    "last_summary_index": 193,
-    "last_summary_date": "2026-06-14",
-    "last_summary_title": "HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation",
+    "last_summary_index": 276,
+    "last_summary_date": "2026-06-15",
+    "last_summary_title": "DexterCap: An Affordable and Automated System for Capturing Dexterous Hand-Object Manipulation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-15",
+        "index": 276,
+        "title": "DexterCap: An Affordable and Automated System for Capturing Dexterous Hand-Object Manipulation",
+        "folder": "papers/06_Manipulation/DexterCap__An_Affordable_and_Automated_System_for_Capturing_Dexterous_Hand-Object"
+      },
       {
         "date": "2026-06-14",
         "index": 193,

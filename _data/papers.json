@@ -738,6 +738,15 @@
         "zhname": "RGMP-S：用 2D 几何先验做长程技能选择 + 递归脉冲网络稀疏示范下学动作"
       },
       {
+        "title": "DexterCap: An Affordable and Automated System for Capturing Dexterous Hand-Object Manipulation",
+        "path": "papers/06_Manipulation/DexterCap__An_Affordable_and_Automated_System_for_Capturing_Dexterous_Hand-Object/DexterCap__An_Affordable_and_Automated_System_for_Capturing_Dexterous_Hand-Object.md",
+        "url": "/papers/06_Manipulation/DexterCap__An_Affordable_and_Automated_System_for_Capturing_Dexterous_Hand-Object/DexterCap__An_Affordable_and_Automated_System_for_Capturing_Dexterous_Hand-Object.html",
+        "dir": "DexterCap__An_Affordable_and_Automated_System_for_Capturing_Dexterous_Hand-Object",
+        "arxiv": "2601.05844",
+        "has_open_source": true,
+        "zhname": "DexterCap：用密集「字符编码」标记贴片 + 三级检测识别 + 自动重建流水线，低成本采集严重自遮挡下的灵巧手-物交互，并发布 DexterHand 数据集"
+      },
+      {
         "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
         "path": "papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
         "url": "/papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",
