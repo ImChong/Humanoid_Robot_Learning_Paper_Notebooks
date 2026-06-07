@@ -12,8 +12,6 @@ zhname: "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
 > 📅 阅读日期: 2026-04-21
 >
 > 🏷️ 板块: 扩散 + 控制主线终点
->
-> 🚧 本笔记已填充基本信息，深度技术细节待细化。
 
 ---
 
@@ -23,8 +21,8 @@ zhname: "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
 |------|------|
 | **arXiv** | [2508.08241](https://arxiv.org/abs/2508.08241) |
 | **PDF** | [Download](https://arxiv.org/pdf/2508.08241.pdf) |
-| **作者** | Qiayuan Liao, Takara Truong, C. Karen Liu |
-| **机构** | Stanford University / UC Berkeley |
+| **作者** | Qiayuan Liao, Takara E. Truong, Xiaoyu Huang, Guy Tevet, Koushil Sreenath, C. Karen Liu |
+| **机构** | UC Berkeley / Stanford University |
 | **发布时间** | 2025-08 |
 | **项目主页** | [BeyondMimic Website](https://beyondmimic.github.io/) |
 | **代码** | [HybridRobotics/whole_body_tracking](https://github.com/HybridRobotics/whole_body_tracking)（运动跟踪训练）<br>[HybridRobotics/motion_tracking_controller](https://github.com/HybridRobotics/motion_tracking_controller)（sim-to-real 推理部署） |
@@ -33,7 +31,7 @@ zhname: "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
 
 ## 🎯 一句话总结
 
-> BeyondMimic 提出了一套统一的扩散策略框架，不仅能高质量追踪复杂的人类运动（如侧手翻、空翻），还能通过"分类器引导"实现零样本（Zero-shot）的任务控制。
+> BeyondMimic 用**一套统一 MDP + 共享超参**在真机上实现高动态全身跟踪，再将跟踪策略离线蒸馏为 **Diffuse-CLoC 状态-动作联合扩散模型**，推理时以 **Classifier Guidance** 对未见任务做零样本引导——无需为每个新任务重训 RL。
 
 ---
 
@@ -41,91 +39,385 @@ zhname: "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
 
 | 缩写 | 全称 | 简单解释 |
 |------|------|----------|
-| SMPL-X | Expressive Whole-Body Human Model | 包含手部、面部、足部细节的全身人体模型 |
-| Classifier Guidance | 分类器引导 | 生成模型技术，通过梯度引导生成符合特定条件的内容 |
-| Zero-Shot | 零样本/零次学习 | 智能体在未见过特定任务训练的情况下直接完成任务 |
+| **Diffuse-CLoC** | Guided Diffusion for Physics-Based Character Control | 状态-动作联合扩散 + 测试时引导，BeyondMimic 扩散阶段的骨干 |
+| **Classifier Guidance** | 分类器引导 | 在去噪 score 上叠加任务代价梯度，把采样推向低代价轨迹 |
+| **SDF** | Signed Distance Field | 有符号距离场，用于避障代价的梯度计算 |
+| **DR** | Domain Randomization | 域随机化，仅对真正不确定的物理量扰动 |
+| **LAFAN1** | Locomotion Analysis Framework | 长序列人形动作数据集，论文主要训练数据来源 |
+| **AMASS** | Archive of Motion Capture as Surface Shapes | 大规模人体动捕库，扩散蒸馏阶段补充行走数据 |
+| **RHC** | Receding Horizon Control | 预测未来轨迹、只执行前段、滚动重规划 |
+| **ONNX** | Open Neural Network Exchange | 跟踪策略真机部署格式 |
+| **Zero-Shot** | 零样本 | 部署后仅靠测试时代价函数引导，无需任务专属训练 |
 
 ---
 
 ## ❓ BeyondMimic 要解决什么问题？
 
-- **从模仿到合成的跨越**：之前的研究（DeepMimic, PHC）主要关注如何"复刻"单一动作片段，难以将不同动作组合成有意义的任务。
-- **可控性与泛化性**：ASE/CALM 虽然有潜空间，但控制精度有限。BeyondMimic 试图利用扩散模型的高容量，将海量动作原语（Primitives）整合进一个模型。
-- **任务适应**：如何在不重新训练网络的情况下，让机器人完成导航、避障等具体任务？
+人形机器人与人体形态相近，从人类演示中学习是获得敏捷性与自然性的可扩展路径。但现有工作普遍卡在两个缺口：
+
+### 缺口一：可扩展的高质量运动跟踪
+
+| 路线 | 代表 | 痛点 |
+|------|------|------|
+| 单动作专用 | ASAP、KungfuBot、HuB | sim-to-real 好，但每条动作要单独调 DR / 奖励 |
+| 多动作统一 | OmniH2O、GMT、TWIST | 可扩展，但动态动作质量差或牺牲全局轨迹 |
+| 动画侧标杆 | PHC | 仿真里很强，真机高动态多动作跟踪尚未被证明 |
+
+BeyondMimic 主张：**不必堆复杂 DR 和动作专属调参**——用紧凑、有原则的 MDP（锚定跟踪 + 低阻抗 PD + 极简正则）+ 适度 DR，同一套超参覆盖侧手翻、空翻、冲刺等分钟级长参考。
+
+### 缺口二：跟踪之后如何「会用」这些技能
+
+| 路线 | 痛点 |
+|------|------|
+| 分层：跟踪器 + 规划器 | 规划-控制鸿沟，敏捷性牺牲 |
+| VAE / 条件生成（CALM、PULSE） | 训练时需显式目标条件，对避障、长程导航等隐式目标泛化差 |
+| 纯动作扩散（Diffusion Policy、HugWBC） | 任务在状态空间、动作在 PD 目标空间，难以直接做 test-time guidance |
+
+BeyondMimic 的突破口：**Diffuse-CLoC 式状态-动作联合扩散**——扩散的是物理可行的 $(s, a)$ 轨迹，推理时可在**状态与动作**上同时施加可微代价，实现导航、遥操作、避障、motion inpainting 等零样本组合。
 
 ---
 
 ## 🔧 方法详解
 
-1. **高保真动作追踪管线**：
-   - 将 SMPL-X 格式的大规模人类运动数据转换为物理仿真中人形机器人的轨迹。
-   - 实现了极具动态挑战的动作，如 **Jumping Spins, Sprinting, Cartwheels**。
-2. **统一潜扩散策略 (Unified Latent Diffusion Policy)**：
-   - 将多样化的运动原语蒸馏（Distill）到一个潜扩散模型中。
-3. **分类器引导的任务执行**：
-   - 在推理阶段，利用简单的成本函数（Cost function）引导扩散过程。
-   - 实现了 Waypoint Navigation（路点导航）、Joystick Teleoperation（摇杆遥操作）等下游应用。
+整体为**三阶段流水线**：
 
-### 📊 BeyondMimic 推理管线（追踪 + 引导扩散）
+<div class="mermaid">
+flowchart LR
+    MoCap["人类动捕 / LAFAN1"] --> Retarget["Retarget → 机器人参考轨迹"]
+    Retarget --> RL["阶段1：RL 运动跟踪<br/>Isaac Lab + RSL-RL"]
+    RL --> Rollout["阶段2：专家 rollout 采数据"]
+    Rollout --> Diff["Diffuse-CLoC 蒸馏<br/>状态-动作联合扩散"]
+    Diff --> Deploy["阶段3：真机部署<br/>Classifier Guidance"]
+    Task["任务代价<br/>导航/遥操作/避障"] --> Deploy
+</div>
+
+---
+
+### 阶段 1：可扩展运动跟踪（Scalable Motion Tracking）
+
+#### 1.1 锚定跟踪目标（Anchor Tracking）
+
+真机不可避免全局漂移。若 rigid 跟踪世界系绝对位姿，策略会过度纠偏、动作僵硬。BeyondMimic 选定参考体 $b_{\text{ref}}$（通常为躯干/root），将各刚体位姿**相对锚定**到当前机器人姿态：
+
+$$\hat{T}_b = T_{\text{anchor}}\, T_{b_{\text{ref}}}^{-1}\, T_{b,\text{motion}}$$
+
+其中 $T_{\text{anchor}}$ 保留机器人当前 $xy$ 位置与参考高度、仅对齐 yaw：
+
+- $p_{\text{anchor}} = [p_{b_{\text{ref}},x},\; p_{b_{\text{ref}},y},\; p_{b_{\text{ref}},z,\text{motion}}]$
+- $R_{\text{anchor}} = R_z\!\left(\mathrm{yaw}(R_{b_{\text{ref}}} R_{b_{\text{ref}},\text{motion}}^\top)\right)$
+
+各体 twist $\hat{\mathcal{V}}_b = \mathcal{V}_{b,\text{motion}}$ 不变。只跟踪子集 $\mathcal{B}_{\text{target}}$ 上的刚体，避免过密连杆带来的冗余。
+
+> 🔑 **直觉**：保留动作风格与相对协调，允许水平面漂移；锚体位姿误差仍提供平衡与漂移修正信号。
+
+开源实现中，每步在 `commands.py` 用机器人锚定姿态与参考锚定姿态的 yaw 差更新 `body_pos_relative_w` / `body_quat_relative_w`，与上式一致。
+
+#### 1.2 观测空间（单步、无历史）
+
+跟踪策略**刻意不用历史**，观测 $\mathbf{o}$ 由三部分拼接：
+
+| 分量 | 符号 | 维度/含义 | 作用 |
+|------|------|-----------|------|
+| 动作相位 | $\mathbf{c} = [\mathbf{q}_{\text{joint,motion}}, \mathbf{v}_{\text{joint,motion}}]$ | 参考关节位姿/速度 | 仅作时间相位，**不**直接关节跟踪 |
+| 锚定误差 | $\xi_{b_{\text{ref}}} \in \mathbb{R}^9$ | 位置误差 3 + 旋转误差矩阵前两列 6 | 平衡、全局朝向与漂移修正 |
+| 本体感知 | ${}^{b_{\text{root}}}\mathcal{V}_{b_{\text{root}}}, \mathbf{q}_{\text{joint}}, \mathbf{v}_{\text{joint}}, \mathbf{a}_{\text{last}}$ | 根 twist、关节状态、上一步动作 | 运动无关反馈 |
+
+$$\mathbf{o} = [\mathbf{c},\; \xi_{b_{\text{ref}}},\; {}^{b_{\text{root}}}\mathcal{V}_{b_{\text{root}}},\; \mathbf{q}_{\text{joint}},\; \mathbf{v}_{\text{joint}},\; \mathbf{a}_{\text{last}}]$$
+
+Critic 使用**非对称 actor-critic**：在 policy 观测之外额外输入各体相对参考体的位姿 $T_{b_{\text{ref}}}^{-1} T_{b,\text{motion}}$，便于在笛卡尔空间直接估计跟踪误差。
+
+> 若状态估计不可靠，可省略线速度相关的锚定位置误差与根线性 twist。
+
+#### 1.3 低阻抗 PD 与动作参数化
+
+动画工作常用高 $k_p$ 近似运动学跟踪；真机上会放大噪声、损失碰撞柔顺性。BeyondMimic 按 Raibert 启发式设阻抗：
+
+$$k_{p,j} = I_j \omega_n^2, \quad k_{d,j} = 2 I_j \zeta \omega_n$$
+
+- 反射惯量 $I_j = k_{g,j}^2 I_{\text{motor},j}$
+- 自然频率 $\omega_n = 10\,\text{Hz}$（偏低，促柔顺）
+- 阻尼比 $\zeta = 2$（过阻尼，补偿惯量低估）
+
+动作是**归一化关节位置设定点**，而非力矩直接输出：
+
+$$\mathbf{q}_{j,t} = \bar{\mathbf{q}}_j + \alpha_j \mathbf{a}_{j,t}, \quad \alpha_j = 0.25 \frac{\tau_{j,\max}}{k_{p,j}}$$
+
+低增益下 $\mathbf{q}_{j,t}$ 是生成力矩的中间变量，**故意不**按关节限位 clip。
+
+#### 1.4 奖励：一项任务 + 三项正则
+
+对 $\mathcal{B}_{\text{target}}$ 上各体计算位姿/速度误差，再对全体取均方：
+
+$$\bar{e}_\chi = \frac{1}{|\mathcal{B}_{\text{target}}|} \sum_{b} \|\mathbf{e}_{\chi,b}\|^2, \quad \chi \in \{p, R, v, w\}$$
+
+每项用高斯型指数奖励：
+
+$$r(\bar{e}_\chi, \sigma_\chi) = \exp\!\left(-\frac{\bar{e}_\chi}{\sigma_\chi^2}\right)$$
+
+$$r_{\text{tracking}} = \sum_{\chi \in \{p,R,v,w\}} r(\bar{e}_\chi, \sigma_\chi)$$
+
+仅加三个对 sim-to-real 关键的惩罚：
+
+$$r = r_{\text{tracking}} - \lambda_l r_{\text{limit}} - \lambda_s r_{\text{smooth}} - \lambda_c r_{\text{contact}}$$
+
+| 惩罚项 | 含义 |
+|--------|------|
+| $r_{\text{limit}}$ | 软关节限位越界 |
+| $r_{\text{smooth}}$ | 动作变化率（抑制抖动） |
+| $r_{\text{contact}}$ | 末端自碰撞接触力超阈值计数 |
+
+可选：对 $b_{\text{ref}}$ 再加全局位置/朝向跟踪奖励。
+
+> 对比 DeepMimic/PHC：没有力矩扰动、接触力大惩罚、滑移惩罚等大量启发式——论文认为**原则性建模 + 系统实现**（延迟、校准）比堆 DR 更重要。
+
+#### 1.5 终止、重置与自适应采样
+
+**终止**：(1) $b_{\text{ref}}$ 高度或 pitch/roll 误差超阈；(2) 任末端执行器高度偏离参考过多。
+
+**重置**：从参考轨迹自适应采样起始相位 + 根位姿/速度/关节扰动。
+
+长参考（数分钟、多技能串联）若均匀采样起始点，简单片段占主导。BeyondMimic 将轨迹按 **1 秒** 分箱，按失败率加权采样：
+
+$$p_s = \frac{\sum_{\tau=0}^{K-1} \gamma^\tau \bar{r}_{s+\tau}}{\sum_j \sum_\tau \gamma^\tau \bar{r}_{j+\tau}}$$
+
+再与均匀分布混合 $p_s' = \lambda \frac{1}{S} + (1-\lambda) p_s$，防止灾难性遗忘。非因果指数核 $\gamma^\tau$ 强调失败前邻近时段。
+
+#### 1.6 域随机化（极简）
+
+仅随机化三类**真正不确定**的物理量：
+
+| 随机化项 | 模拟内容 |
+|----------|----------|
+| 地面摩擦系数 | 接触不确定性 |
+| 默认关节位置 $\bar{\mathbf{q}}_j$ | 标定误差（同时影响动作与观测） |
+| 躯干质心位置 | 模型误差 |
+
+另加环境扰动 push 等。与 ASAP/KungfuBot 的大范围力矩/延迟随机化形成对比。
+
+#### 1.7 训练与数据规模
+
+- **引擎**：Isaac Lab + RSL-RL（PPO）
+- **数据**：LAFAN1（Unitree retarget）为主，约 **2.5 小时**人类动作；随机选 **25** 条长参考（每类至少一条），sim-to-sim 全部跑通
+- **真机验证**：从中挑 **29** 条高动态片段（共约 15 分钟）上 Unitree G1
+- **同一 MDP、同一超参**训练所有动作，含 3 分钟级多技能串联参考
+
+---
+
+### 阶段 2：Diffuse-CLoC 状态-动作联合扩散
+
+跟踪策略 $\pi$ 仅会复现训练过的参考。为获得任务泛化，将多个跟踪专家**离线蒸馏**为单一生成模型。
+
+#### 2.1 预测对象与条件
+
+预测未来轨迹（预测控制式）：
+
+$$\bm{\tau}_t = [\bm{a}_t,\; \bm{s}_{t+1},\; \ldots,\; \bm{s}_{t+H},\; \bm{a}_{t+H}]$$
+
+条件于观测历史 $\bm{O}_t = [\bm{s}_{t-N}, \bm{a}_{t-N}, \ldots, \bm{s}_t]$。
+
+| 超参 | 取值 | 说明 |
+|------|------|------|
+| 历史长度 $N$ | 4 | 稳定预测，但易陷入重复步态（见局限） |
+| 预测视野 $H$ | 16 | 约 0.64 s（50 Hz 控制） |
+| 动作监督长度 | 8（loss mask） | 只对未来 8 步动作算损失 |
+| 去噪步数（训练/推理） | 20 | 推理约 **20 ms**/步 |
+| 网络 | Transformer decoder | 6 层、4 头、512 维嵌入，**19.95M** 参数 |
+| 状态/动作噪声 | 独立 schedule | $\bm{k} = (\bm{k}_s, \bm{k}_a)$ |
+
+训练目标：标准 DDPM，网络 $x_{0,\theta}$ 预测干净轨迹，MSE 损失：
+
+$$\mathcal{L} = \text{MSE}\big(x_{0,\theta}(\bm{\tau}_t^{\bm{k}}, \bm{O}_t, \bm{k}),\; \bm{\tau}_t\big)$$
+
+蒸馏数据：按 PDP / Diffuse-CLoC 流程 rollout 专家策略采集；相对跟踪阶段**额外加入动作延迟 DR**——扩散推理本身有观测→动作延迟，训练需对齐。
+
+#### 2.2 状态表示（sim-to-real 关键）
+
+论文对比两种局部状态编码：
+
+| 表示 | 局部状态内容 | Walk+Perturb 成功率 | Joystick 成功率 |
+|------|-------------|---------------------|-----------------|
+| **Body-Pos**（选用） | 各连杆笛卡尔位置+线速度（角色系） | **100%** | **80%** |
+| Joint-Rot | 关节角+角速度 | 72% | **0%** |
+
+全局部分两者相同：根位置、线速度、旋转矢量（相对当前角色系）。
+
+> Joint-Rot 理论上更 Markov，但关节估计误差沿运动链累积，扩散多步预测误差更大；在 Joint-Rot 上加 guidance 会迅速 OOD 失稳。
+
+#### 2.3 Classifier Guidance
+
+由 Bayes 分解条件 score：
+
+$$\nabla_{\bm{\tau}} \log p(\bm{\tau} \mid \bm{\tau}^*) = \nabla_{\bm{\tau}} \log p(\bm{\tau}) + \nabla_{\bm{\tau}} \log p(\bm{\tau}^* \mid \bm{\tau})$$
+
+设 $p(\bm{\tau}^* \mid \bm{\tau}) \propto \exp(-G^c_{\bm{\tau}}(\bm{\tau}))$，引导项为 $-\nabla_{\bm{\tau}} G^c_{\bm{\tau}}(\bm{\tau})$。多个任务代价可**直接相加**，无需训练时枚举组合。
+
+**摇杆速度跟踪**：
+
+$$G^c_{\bm{\tau}}(\bm{\tau}) = \frac{1}{2} \sum_{t'=t}^{t+H} \| V_{xy,t'}(\bm{\tau}_{t'}) - g_v \|^2$$
+
+**路点导航**（近目标时加大速度惩罚以停下）：
+
+$$G^{\text{ts}}_{\bm{\tau}}(\bm{\tau}) = \sum_{t'=t}^{t+H} (1 - e^{-2d}) \| P_x(\bm{s}_{t'}) - g_p \|^2 + e^{-2d} \| V_{x,t'}(\bm{\tau}_{t'}) \|^2$$
+
+其中 $d = \|P_x(\bm{s}_{t'}) - g_p\|$（对梯度 detach）。
+
+**避障**（SDF + 松弛 barrier）：
+
+$$G^c_{\bm{\tau}}(\bm{\tau}) = \sum_{t', b \in \mathcal{B}_c} B\!\left(\text{SDF}(\mathbf{P}_{b,t'}(\bm{\tau})) - r_i,\; \delta\right)$$
+
+$$B(x,\delta) = \begin{cases} -\ln(x) & x \geq \delta \\ -\ln(\delta) + \frac{1}{2}\left[\left(\frac{x-2\delta}{\delta}\right)^2 - 1\right] & x < \delta \end{cases}$$
+
+推理时引导梯度用 **CppAD** 在每个去噪步自动求导；扩散策略在 **RTX 4060 Mobile + TensorRT** 上异步线程运行，跟踪策略仍在机载 CPU ONNX 执行。
+
+#### 2.4 Motion Inpainting 与任务切换
+
+除弱速度/位置引导外，可用**稀疏关键帧**做 motion inpainting：例如摇杆行走中每 **0.2 s** 注入侧手翻关键帧，扩散策略补全中间连续轨迹，完成后平滑回到速度跟踪。
+
+支持**任务规格自由切换**：连续三次侧手翻前后接走/跑；在速度跟踪与 inpainting 之间来回切换，展示长程模式切换能力。
+
+---
+
+### 📊 两阶段推理管线总览
 
 <div class="mermaid">
 flowchart TB
-    Data["SMPL-X 人类动作库"] --> Track["高保真追踪 / 原语蒸馏"]
-    Track --> LDM["统一潜扩散策略"]
-    Obs["当前观测 + 任务上下文"] --> LDM
-    LDM --> Sample["潜空间多步去噪采样"]
-    Cost["任务成本函数<br/>导航 / 避障 / 遥操作"] --> Guide["分类器引导梯度"]
-    Guide --> Sample
-    Sample --> Act["全身控制轨迹输出"]
+    subgraph track["跟踪模式（开源）"]
+        Ref["参考动作相位 c"] --> Pol["RL 跟踪策略 π"]
+        Obs1["锚定误差 + 本体感知"] --> Pol
+        Pol --> PD["低阻抗 PD → 力矩"]
+    end
+    subgraph diff["扩散模式（论文，未单独开源）"]
+        Hist["历史 O_t (N=4)"] --> Denoise["状态-动作扩散去噪"]
+        Denoise --> Tau["轨迹 τ: s,a × H"]
+        Cost["代价 G: 速度/路点/SDF/inpaint"] --> Guide["Classifier Guidance 梯度"]
+        Guide --> Denoise
+        Tau --> Exec["执行首段动作 + RHC"]
+    end
 </div>
 
 ---
 
 ## 🚶 具体实例
 
+### 实例 1：单策略侧手翻 + 避障（任务组合）
+
 <div class="mermaid">
 flowchart LR
-    D["扩散原语：侧手翻"] --> G["cost 引导去噪"]
-    G --> OUT["避障 + 动态感轨迹"]
+    D["扩散先验：侧手翻原语"] --> G["G_waypoint + G_SDF"]
+    G --> OUT["绕障轨迹：保留动态感"]
 </div>
 
-当需要机器人执行"侧手翻并避开前方障碍"时：
-- 扩散模型提供侧手翻的动作原语。
-- 引导函数计算轨迹与障碍物的距离，修正去噪方向。
-- 最终生成的轨迹既保留了人类侧手翻的动态感，又成功绕开了障碍。
+- 预训练扩散模型已内化侧手翻等多模态原语。
+- 测试时 $G = G^{\text{waypoint}} + G^{\text{SDF}}$，无需重训。
+- SDF 在每步去噪中提供远离障碍的梯度，与路点吸引共同作用。
+
+### 实例 2：摇杆行走 → 注入侧手翻关键帧 → 恢复行走
+
+1. 摇杆速度代价维持行走。
+2. 在指定时刻注入侧手翻关键帧（inpainting 代价）。
+3. 扩散补全过渡；完成后去掉 inpainting 项，回到速度跟踪。
+
+### 实例 3：高动态跟踪真机（阶段 1）
+
+- **空中侧手翻**：骨盆角速度峰值约 **20 rad/s**（均值 7.01 rad/s），峰值加速度 **31 m/s²**，与人类特技动作同量级。
+- **连续 5 次** C 罗庆祝跳转身（ASAP 仅展示单次）。
+- 户外软土、落叶、不平地面仍完成武术式序列。
+
+---
+
+## 📊 实验结果摘要
+
+### 运动跟踪（阶段 1）
+
+| 维度 | 结果 |
+|------|------|
+| 数据 | LAFAN1 25 条长参考 sim-to-sim 全通过；29 条上 G1 真机 |
+| 自然性（用户研究 N=77） | 整体偏好 70.8% vs Unitree 原生 29.2%（p<.001）；跑步 84.7% vs 15.3% |
+| GRF 形态 | 步行双峰、跑步单峰，与人类力板数据对齐 |
+| 速度跟踪误差（仿真） | 步行 **12.14%**，跑步 **13.65%** |
+| 长跑 | 跑道连续 **50 m+** |
+
+### 扩散控制（阶段 2）
+
+| 任务 | 设置 | 指标 |
+|------|------|------|
+| Walk-Perturb | 15 s 行走，每秒 0–0.5 m/s 根速度扰动 | Body-Pos 表示 **0%** 摔倒率（50 次） |
+| Joystick | 前/后/左转/右转各 3 s | Body-Pos **80%** 成功率 |
 
 ---
 
 ## 🤖 工程价值
 
-- **路线图地位**：它是本项目阅读计划中"扩散 + 控制"路线的**终点**，代表了 2025 年人形机器人全身控制的前沿。
-- **多功能性**：一个模型解决多个问题（追踪 + 组合 + 任务适配）。
-- **零样本能力**：极大地减少了为每个新任务设计奖励函数并从零训练 RL 的繁琐过程。
+- **路线图地位**：扩散 + 控制主线**终点**——把 Diffusion Policy 的生成式思想推到人形全身、真机、测试时优化。
+- **开源影响**：`whole_body_tracking` 已被 MJLab、Unitree RL Lab 等采纳为默认跟踪方案；Retargeting Matters 等论文刻意选其作「中性跟踪器」以隔离 retarget 质量影响。
+- **范式转变**：从「每条动作调 DR/奖励」→「统一跟踪 + 蒸馏 + 引导」；训练完全**任务无关、无标签**。
+- **多功能**：跟踪 / 组合 / 任务适配由同一扩散先验 + 不同代价完成。
+
+---
+
+## ⚠️ 局限与后续方向
+
+| 局限 | 说明 |
+|------|------|
+| 预测视野短 | $H=16$ 约 0.64 s，够反应式避障，不够长程提前规划 |
+| 历史依赖 | $N=4$ 稳定预测但易陷重复步态；加大 guidance 权重在模式切换时不稳定 |
+| 启停瞬态 | 引导扩散下步态建立后稳定，但动作起止易绊倒 |
+| 状态估计 | 扩散质量依赖本体感知；极端接触场景用 LIO 或去掉估计相关观测 |
+| 细粒度目标 | 粗粒度代价效果好；精细操作仍需 SFT / adapter 等 |
+| 开源范围 | **跟踪管线已开源**；引导扩散蒸馏与 test-time guidance **尚无独立仓库** |
 
 ---
 
 ## 📁 官方源码对照
 
-BeyondMimic **不在 MimicKit 内**，但官方已开源运动跟踪管线（2025-08 起）。引导扩散蒸馏与 test-time guidance 部分论文有展示，**尚未见独立公开仓库**。
+BeyondMimic **不在 MimicKit 内**。下表映射**已开源**的运动跟踪部分；扩散蒸馏见论文与 Diffuse-CLoC。
 
-| 模块 | 仓库 | 核心路径 |
-|------|------|----------|
-| 运动跟踪训练（Isaac Lab + RSL-RL） | [HybridRobotics/whole_body_tracking](https://github.com/HybridRobotics/whole_body_tracking) | `source/whole_body_tracking/whole_body_tracking/tasks/tracking/mdp/`（`commands.py` / `rewards.py` / `events.py`） |
-| 真机 / MuJoCo 推理部署 | [HybridRobotics/motion_tracking_controller](https://github.com/HybridRobotics/motion_tracking_controller) | `MotionTrackingController`、`MotionOnnxPolicy` |
-| 引导扩散策略 | 暂无公开仓库 | 论文描述基于 Diffuse-CLoC 框架的状态-动作联合扩散 + classifier guidance |
+| 论文概念 | 仓库路径 | 说明 |
+|----------|----------|------|
+| 参考动作加载 | `tasks/tracking/mdp/commands.py` → `MotionLoader` | NPZ：`joint_pos/vel`、`body_pos/quat/vel` |
+| 锚定相对位姿 | `MotionCommand._update_command()` | yaw 对齐 + 高度锚定，更新 `body_*_relative_w` |
+| 自适应采样 | `MotionCommand._adaptive_sampling()` | 按 bin 失败率 + 指数核卷积 |
+| 跟踪奖励 | `tasks/tracking/mdp/rewards.py` | 锚定/相对体 位姿、速度指数奖励 |
+| 关节零位 DR | `tasks/tracking/mdp/events.py` → `randomize_joint_default_pos` | 模拟标定误差 |
+| 质心 DR | `events.py` → `randomize_rigid_body_com` | 躯干 CoM 扰动 |
+| 真机部署 | [motion_tracking_controller](https://github.com/HybridRobotics/motion_tracking_controller) | `MotionTrackingController`、`MotionOnnxPolicy` |
+| 扩散 + Guidance | 暂无公开仓库 | Diffuse-CLoC 框架；TensorRT + CppAD 引导 |
+
+跟踪奖励与论文公式对应示例（相对体位置）：
+
+```python
+# rewards.py — motion_relative_body_position_error_exp
+error = torch.sum(
+    torch.square(command.body_pos_relative_w[:, body_indexes]
+                 - command.robot_body_pos_w[:, body_indexes]), dim=-1)
+return torch.exp(-error.mean(-1) / std**2)
+```
 
 ### MimicKit 关系
 
-> ❌ MimicKit 未集成 BeyondMimic。概念上，`whole_body_tracking` 的 `rewards.py` 沿用 DeepMimic 式 tracking reward，`events.py` 含域随机化，与 MimicKit `deepmimic_env.py` 思路相近，但工程栈为 Isaac Lab 而非 MimicKit。
+> ❌ MimicKit 未集成 BeyondMimic。概念上 `rewards.py` 沿用 DeepMimic 式指数跟踪奖励，`events.py` 做 DR，与 MimicKit `deepmimic_env.py` 思路相近，但工程栈为 **Isaac Lab** 而非 MimicKit。
 
 ---
 
 ## 🎤 面试高频问题 & 参考回答
 
-1. **BeyondMimic 相比 DeepMimic 的核心优势？**
-   - DeepMimic 是单动作跟踪且缺乏组合能力，BeyondMimic 使用扩散模型实现了多模态动作的统一建模与零样本引导。
-2. **如何实现零样本控制？**
-   - 核心在于 Classifier Guidance，通过在去噪步中加入任务相关的梯度引导。
+1. **BeyondMimic 相比 DeepMimic / PHC 的核心差异？**
+   - DeepMimic：单参考、重奖励工程。PHC：仿真大规模 PMCP，真机高动态多动作未证明。BeyondMimic：**真机**上统一 MDP 跟踪分钟级多技能，再蒸馏为可引导的扩散策略，实现训练时无任务标签、测试时零样本组合。
+
+2. **为什么跟踪不用历史，扩散却用 $N=4$ 历史？**
+   - 跟踪要 sim-to-real 简洁、延迟低；单步观测 + 锚定误差已够。扩散做多步轨迹生成，需要过去状态-动作上下文；但历史也带来步态锁定副作用。
+
+3. **Classifier Guidance 与训练时条件扩散有何不同？**
+   - 条件扩散需在训练集目标上标注条件。Classifier guidance 利用已学到的无条件 score + 任意可微代价梯度，**部署后**才指定任务，可组合多个代价。
+
+4. **为何选 Body-Pos 而非 Joint-Rot 状态？**
+   - 真机关节估计误差经运动学链放大，扩散多步预测更易崩；笛卡尔 body 状态对 guidance 更鲁棒（Joystick 0% vs 80%）。
+
+5. **锚定跟踪 vs 全局跟踪？**
+   - 全局跟踪在漂移时过度纠偏、损失风格；锚定保留相对协调，仅用 $b_{\text{ref}}$ 全局误差做平衡与漂移修正。GMT 等用相对速度牺牲全局轨迹，BeyondMimic 用锚定兼顾风格与可控漂移。
+
+6. **与 SONIC / GMT 等的定位？**
+   - SONIC 走**超大规模数据 + token 接口**；BeyondMimic 走**紧凑跟踪 + 扩散引导**，强调 test-time 优化与真机高动态。GMT 牺牲全局轨迹换鲁棒性；BeyondMimic 锚定方案保留更多全局语义。
 
 ---
 
@@ -135,11 +427,16 @@ BeyondMimic **不在 MimicKit 内**，但官方已开源运动跟踪管线（202
 
 | 论文 | 关系 |
 |------|------|
-| AMP / ASE / PULSE | 提供运动先验与物理潜空间的研究基础 |
-| Diffusion Policy | 提供基于扩散过程的策略建模骨干 |
-| **BeyondMimic** | 成功将大规模动作库与实时任务引导融合的集大成者 |
+| DeepMimic | 指数跟踪奖励范式源头 |
+| PHC / PULSE | 大规模动作模仿与潜空间组合路线（仿真侧重） |
+| Diffusion Policy | 动作扩散 + RHC；BeyondMimic 扩展到状态-动作联合 + 全身人形 |
+| Diffuse-CLoC | 扩散蒸馏与 classifier guidance 的直接方法论来源 |
+| Retargeting Matters | 选 BeyondMimic 作中性跟踪器做 retarget 消融 |
+| SONIC / GMT / UH-1 | 同期大规模人形控制，路线对照（数据规模 vs 测试时引导） |
 
 ### B. 参考来源
 
 - [arXiv:2508.08241](https://arxiv.org/abs/2508.08241)
 - [Project Website](https://beyondmimic.github.io/)
+- [HybridRobotics/whole_body_tracking](https://github.com/HybridRobotics/whole_body_tracking)
+- [Diffuse-CLoC (Huang et al.)](https://arxiv.org/abs/2410.05272)
