@@ -188,15 +188,22 @@
         EWBC --> HugWBC(["HugWBC"])
         EWBC --> ExBody2(["ExBody2"])
     end
-    subgraph SG_Manip ["5a · Manipulation"]
+    subgraph SG_Manip ["5 · Manipulation"]
         iDP3(["iDP3"]) --> EgoMimic(["EgoMimic"])
         EgoMimic --> HumDex(["HumDex"])
     end
-    subgraph SG_Loco ["5b · Loco-Manipulation"]
+    subgraph SG_Loco ["6 · Loco-Manipulation"]
         HOMIE(["HOMIE"]) --> ULTRA(["ULTRA"])
         ULTRA --> Psi(["Ψ₀"])
     end
-    subgraph SG_FM ["6 · Foundation Models"]
+    subgraph SG_WM ["7 · World Model"]
+        DreamDojo(["DreamDojo"]) --> WM1X(["1X World Model"])
+        HAIC(["HAIC — Dynamics-Aware WM"])
+    end
+    subgraph SG_WAM ["8 · World Action Model"]
+        DreamZero(["DreamZero"])
+    end
+    subgraph SG_FM ["9 · Foundation Models"]
         VLA(["VLA — GR00T N1"])
         BFM(["BFM — Behavior FM"])
     end
@@ -215,7 +222,14 @@
     HumDex --> VLA
     ULTRA --> VLA
     Psi --> BFM
-    ULTRA --> BFM`,
+    ULTRA --> BFM
+    BM --> DreamDojo
+    HumDex --> DreamDojo
+    ULTRA --> HAIC
+    DreamDojo --> DreamZero
+    WM1X --> DreamZero
+    DreamZero --> VLA
+    DreamZero --> BFM`,
         zh: `graph TD
     subgraph SG_Basic ["1 · 基础 RL"]
         PPO(["PPO"]) --> AWR(["AWR"])
@@ -238,15 +252,22 @@
         EWBC --> HugWBC(["HugWBC"])
         EWBC --> ExBody2(["ExBody2"])
     end
-    subgraph SG_Manip ["5a · 操作 Manipulation"]
+    subgraph SG_Manip ["5 · 操作 Manipulation"]
         iDP3(["iDP3"]) --> EgoMimic(["EgoMimic"])
         EgoMimic --> HumDex(["HumDex"])
     end
-    subgraph SG_Loco ["5b · 移动操作 Loco-Manip"]
+    subgraph SG_Loco ["6 · 移动操作 Loco-Manip"]
         HOMIE(["HOMIE"]) --> ULTRA(["ULTRA"])
         ULTRA --> Psi(["Ψ₀"])
     end
-    subgraph SG_FM ["6 · 基础模型 VLA / BFM"]
+    subgraph SG_WM ["7 · 世界模型 World Model"]
+        DreamDojo(["DreamDojo"]) --> WM1X(["1X 世界模型"])
+        HAIC(["HAIC — 动力学感知 WM"])
+    end
+    subgraph SG_WAM ["8 · 世界-动作模型 WAM"]
+        DreamZero(["DreamZero"])
+    end
+    subgraph SG_FM ["9 · 基础模型 VLA / BFM"]
         VLA(["VLA — GR00T N1"])
         BFM(["BFM — 行为基础模型"])
     end
@@ -265,7 +286,14 @@
     HumDex --> VLA
     ULTRA --> VLA
     Psi --> BFM
-    ULTRA --> BFM`
+    ULTRA --> BFM
+    BM --> DreamDojo
+    HumDex --> DreamDojo
+    ULTRA --> HAIC
+    DreamDojo --> DreamZero
+    WM1X --> DreamZero
+    DreamZero --> VLA
+    DreamZero --> BFM`
       };
 
       function getRoadmapCacheKey(mode) {

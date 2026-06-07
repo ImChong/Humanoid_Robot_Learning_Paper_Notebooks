@@ -135,17 +135,20 @@
 ④ 【全身控制 WBC】        ← 把技能 / 扩散策略落到整机关节
   Expressive WBC (2024) → HOVER / HugWBC / ExBody2
        ↓
-       ├─────────────────────────────┐
-       ↓                             ↓
-⑤a【操作 Manipulation 分支】   ⑤b【移动操作 Loco-Manipulation 分支】
-  iDP3      (3D 扩散策略)        HOMIE   (外骨骼遥操作)
-   → EgoMimic (自我中心视频)      → ULTRA  (多模态全身控制)
-   → HumDex   (灵巧手)           → Ψ₀     (loco-manip 基础模型)
-       ↓                             ↓
-       └──────────────┬──────────────┘
-                      ↓
-⑥ 【基础模型终点 (VLA / BFM)】   ← 一路从 PPO 爬到这里
-  VLA：GR00T N1                ── 视觉-语言-动作，端到端通才策略
+   ┌── 从 WBC / 扩散分出多条上行支线，最终都汇聚到 ⑨ ──┐
+   │
+   ├─ ⑤ 操作 Manipulation：         iDP3 → EgoMimic → HumDex
+   │                                （3D 扩散策略 / 自我中心视频 / 灵巧手）
+   │
+   ├─ ⑥ 移动操作 Loco-Manipulation： HOMIE → ULTRA → Ψ₀
+   │                                （外骨骼遥操作 → 多模态全身控制 → loco-manip 基础模型）
+   │
+   └─ ⑦ 世界模型 World Model：       DreamDojo → 1X World Model；HAIC（动力学感知 WM）
+            ↓（世界模型"会做梦"预测未来 / 动力学，再升级为可直接当策略的模型）
+       ⑧ 世界-动作模型 WAM：         DreamZero（World Action Models are Zero-shot Policies）
+       ↓
+⑨ 【基础模型终点 (VLA / BFM)】   ← 一路从 PPO 爬到这里
+  VLA：GR00T N1                  ── 视觉-语言-动作，端到端通才策略
   BFM：Behavior Foundation Model ── 行为基础模型 / 全身控制先验
 
 【Sim-to-Real 工程层】  ← 横跨整个路线
@@ -155,7 +158,9 @@
 
 > 💡 **为什么把动作重定向单列一层**：精确模仿 / 风格学习 / 遥操作（OmniH2O、ExBody2 等）都依赖"人体动作 → 机器人可执行轨迹"的转换；重定向质量直接决定下游策略能学到什么动作，是被很多论文一笔带过、却最容易踩坑的工程环节。
 >
-> 🚀 **从 WBC 到基础模型的两条上行支线**：全身控制（WBC）把底层技能 / 扩散策略落到整机关节后，路线分出**操作（Manipulation）**与**移动操作（Loco-Manipulation）**两条分支；二者最终都汇聚到**基础模型终点**——以 GR00T N1 为代表的 **VLA**（视觉-语言-动作）和以 Behavior Foundation Model（BFM-Zero）为代表的 **BFM**（行为基础模型），即"一路从 PPO 上到 VLA / BFM"的顶点。
+> 🚀 **从 WBC 到基础模型的上行支线**：全身控制（WBC）把底层技能 / 扩散策略落到整机关节后，路线分出**操作（Manipulation）**与**移动操作（Loco-Manipulation）**等分支；它们最终都汇聚到**基础模型终点**——以 GR00T N1 为代表的 **VLA**（视觉-语言-动作）和以 Behavior Foundation Model（BFM-Zero）为代表的 **BFM**（行为基础模型），即"一路从 PPO 上到 VLA / BFM"的顶点。
+>
+> 🌍 **世界模型 / 世界-动作模型支线**：**世界模型（World Model）**——DreamDojo、1X World Model、HAIC（动力学感知 WM）——学会预测未来观测与动力学，既能"做梦"生成训练数据、又能做基于模型的规划；再进一步，**世界-动作模型（World Action Model, WAM）**（如 DreamZero）让世界模型本身充当零样本策略，与 VLA / BFM 一同构成"通用机器人大模型"的顶层。（DreamZero 目前在 [PROGRESS.md](papers/PROGRESS.md) 待读清单中，尚无笔记。）
 
 ## 源码层面一览（MimicKit 覆盖情况）
 
