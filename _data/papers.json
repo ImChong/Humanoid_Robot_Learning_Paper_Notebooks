@@ -755,6 +755,7 @@
         "url": "/papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",
         "dir": "EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video",
         "arxiv": "2410.24221",
+        "has_open_source": true,
         "zhname": "EgoMimic：通过第一视角视频扩展模仿学习"
       }
     ],
