@@ -521,7 +521,8 @@ html {
 
   .toc-sidebar {
     position: fixed;
-    top: 0;
+    /* Match Robotics_Notebooks mobile drawer: gap below viewport top / notch */
+    top: calc(16px + env(safe-area-inset-top, 0px));
     /* Stop above the floating sidebar toggle (24px + 48px) with breathing room */
     bottom: calc(24px + 48px + 28px + env(safe-area-inset-bottom, 0px));
     left: -280px;
@@ -582,7 +583,7 @@ html {
     /* Mirror subpage mobile drawer; desktop float/height must not leak here */
     float: none;
     position: fixed;
-    top: 0;
+    top: calc(16px + env(safe-area-inset-top, 0px));
     bottom: calc(24px + 48px + 28px + env(safe-area-inset-bottom, 0px));
     left: -280px;
     width: 260px;
