@@ -262,6 +262,7 @@
 | 186  | [SafeFlow: Real-Time Text-Driven Humanoid Whole-Body Control via Physics-Guided Rectified Flow and Selective Safety Gating](https://arxiv.org/abs/2603.23983) | 2026.03 |  | ⏳ 待读 |
 | 532  | [ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting](https://arxiv.org/abs/2605.06593) | 2026.05 |  | ⏳ 待读 |
 | 533  | [SUGAR: A Scalable Human-Video-Driven Generalizable Humanoid Loco-Manipulation Learning Framework](https://arxiv.org/abs/2605.20373) | 2026.05 | 🌟 | ⏳ 待读 |
+| 534  | [SplitAdapter: Load-Aware Humanoid Loco-Manipulation via Factorized Adaptation](https://arxiv.org/abs/2606.03297) | 2026.06 |  | ⏳ 待读 |
 
 
 ### Locomotion（84篇）
