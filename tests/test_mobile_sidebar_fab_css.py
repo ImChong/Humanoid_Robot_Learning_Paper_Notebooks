@@ -13,8 +13,12 @@ def _mobile_toc_block() -> str:
     return text[start:end]
 
 
+MOBILE_DRAWER_TOP = "top: calc(16px + env(safe-area-inset-top, 0px))"
+
+
 def test_mobile_toc_sidebar_clears_floating_toggle():
     block = _mobile_toc_block()
+    assert MOBILE_DRAWER_TOP in block
     assert "bottom: calc(24px + 48px + 28px + env(safe-area-inset-bottom, 0px))" in block
     assert "height: auto" in block
     assert "max-height: none" in block
@@ -27,6 +31,7 @@ def test_index_mobile_toc_sidebar_matches_subpage_drawer():
     end = text.index("/* ===== Search Box ===== */", start)
     block = text[start:end]
     assert "float: none" in block
+    assert MOBILE_DRAWER_TOP in block
     assert "bottom: calc(24px + 48px + 28px + env(safe-area-inset-bottom, 0px))" in block
     assert "height: auto" in block
     assert "overflow-y: auto" in block
