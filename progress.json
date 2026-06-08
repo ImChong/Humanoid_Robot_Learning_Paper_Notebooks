@@ -1876,14 +1876,14 @@
     {
       "title": "OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction",
       "arxiv": "OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc",
+      "folder": "papers/02_Motion_Retargeting/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc",
       "note_file": "OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc.md",
       "pdf_file": "OmniRetarget.pdf",
       "status": "pending",
       "start_date": null,
       "done_date": null,
-      "route": "Loco-Manipulation",
-      "title_cn": ""
+      "route": "Motion Retargeting",
+      "title_cn": "OmniRetarget：面向人形全身运动操作与场景交互的交互保持数据生成"
     },
     {
       "title": "Towards Versatile Humanoid Table Tennis: Unified Reinforcement Learning with Prediction Augmentation",
