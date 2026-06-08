@@ -35,15 +35,45 @@
 
   /**
    * Mermaid htmlLabels embed text in SVG foreignObject. Default DOMPurify strips
-   * those nodes and leaves empty boxes in the lightbox / roadmap.
+   * XHTML inside foreignObject (leaving bare text and wrong dark-theme colors in
+   * the lightbox). Sanitize SVG structure and foreignObject inner HTML separately.
    */
   window.sanitizeMermaidSvg = function (svgString) {
     if (!svgString) return '';
     if (typeof DOMPurify === 'undefined') return '';
-    return DOMPurify.sanitize(svgString, {
+
+    var foreignObjects = [];
+    var protectedSvg = svgString.replace(
+      /<foreignObject([^>]*)>([\s\S]*?)<\/foreignObject>/gi,
+      function (_match, attrs, inner) {
+        var id = foreignObjects.length;
+        var safeInner = DOMPurify.sanitize(inner, {
+          USE_PROFILES: { html: true },
+          ALLOWED_TAGS: ['div', 'span', 'p', 'br', 'b', 'i', 'em', 'strong'],
+          ALLOWED_ATTR: ['style', 'class', 'xmlns'],
+        });
+        foreignObjects.push({ attrs: attrs, inner: safeInner, id: id });
+        return '<foreignObject data-fo-placeholder="' + id + '"></foreignObject>';
+      }
+    );
+
+    var sanitized = DOMPurify.sanitize(protectedSvg, {
       USE_PROFILES: { svg: true, svgFilters: true },
       ADD_TAGS: ['foreignObject'],
+      ADD_ATTR: ['data-fo-placeholder'],
     });
+
+    foreignObjects.forEach(function (fo) {
+      sanitized = sanitized.replace(
+        new RegExp(
+          '<foreignObject[^>]*data-fo-placeholder="' + fo.id + '"[^>]*></foreignObject>',
+          'i'
+        ),
+        '<foreignObject' + fo.attrs + '>' + fo.inner + '</foreignObject>'
+      );
+    });
+
+    return sanitized;
   };
 
   window.getMermaidSiteConfig = function (theme) {

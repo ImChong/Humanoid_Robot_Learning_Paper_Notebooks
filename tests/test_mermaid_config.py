@@ -36,6 +36,19 @@ def test_lightbox_hides_stage_until_fit():
     assert ".mermaid-lightbox__stage.is-preparing" in css
 
 
+def test_dark_mode_mermaid_cluster_labels_apply_in_lightbox():
+    css = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
+    assert ":is(.paper-body .mermaid, .mermaid-lightbox__stage)" in css
+    assert "cluster-label span" in css
+
+
+def test_sanitize_mermaid_svg_preserves_foreign_object_labels():
+    text = CONFIG_JS.read_text(encoding="utf-8")
+    assert "data-fo-placeholder" in text
+    assert "ALLOWED_TAGS" in text
+    assert "foreignObject" in text
+
+
 def test_sanitize_mermaid_svg_keeps_foreign_object():
     text = CONFIG_JS.read_text(encoding="utf-8")
     assert "sanitizeMermaidSvg" in text
