@@ -301,6 +301,50 @@
         return theme + ':' + mode;
       }
 
+      window.attachRoadmapNodeLinks = function(container) {
+        if (!container) return;
+        var dataEl = document.getElementById('roadmap-node-links');
+        if (!dataEl) return;
+        var links;
+        try {
+          links = JSON.parse(dataEl.textContent);
+        } catch (e) {
+          return;
+        }
+        var svg = container.querySelector('svg');
+        if (!svg) return;
+
+        Object.keys(links).forEach(function(nodeId) {
+          var url = links[nodeId];
+          if (!url || typeof url !== 'string') return;
+          var nodeGroup = svg.querySelector('[id^="flowchart-' + nodeId + '-"]');
+          if (!nodeGroup) return;
+          nodeGroup.classList.add('roadmap-node-link');
+          nodeGroup.setAttribute('role', 'link');
+          nodeGroup.setAttribute('tabindex', '0');
+          nodeGroup.setAttribute('aria-label', nodeId);
+          nodeGroup.setAttribute('data-roadmap-url', url);
+
+          function goToNote(e) {
+            if (e) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+            window.location.assign(url);
+          }
+
+          nodeGroup.addEventListener('pointerdown', function(e) {
+            e.stopPropagation();
+          });
+          nodeGroup.addEventListener('click', goToNote);
+          nodeGroup.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              goToNote(e);
+            }
+          });
+        });
+      };
+
       window.renderRoadmapMermaid = function(mode) {
         var mermaidRoadmap = document.getElementById('roadmap-mermaid');
         if (!mermaidRoadmap) return Promise.resolve();
@@ -314,6 +358,7 @@
         if (cachedSvg) {
           mermaidRoadmap.innerHTML = cachedSvg;
           mermaidRoadmap.removeAttribute('data-processed');
+          window.attachRoadmapNodeLinks(mermaidRoadmap);
           return Promise.resolve();
         }
 
@@ -333,6 +378,7 @@
           roadmapSvgCache[cacheKey] = safeSvg;
           mermaidRoadmap.innerHTML = safeSvg;
           mermaidRoadmap.removeAttribute('data-processed');
+          window.attachRoadmapNodeLinks(mermaidRoadmap);
         }).catch(function() {
           // Keep the previous SVG visible if rendering fails.
         });
