@@ -13,8 +13,6 @@ import os
 import re
 import sys
 
-import yaml
-
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _common import _METHOD_HEADING_RE, BASE_DIR, PAPERS_DIR, is_stub, stub_reason  # noqa: E402
 
@@ -34,6 +32,26 @@ MIN_METHOD_SECTION_CHARS = 300
 def _md_path_from_html(site_path: str) -> str:
     rel = site_path.removeprefix("/papers/")
     return os.path.join(PAPERS_DIR, rel.replace(".html", ".md"))
+
+
+def load_roadmap_entries(path: str = ROADMAP_PATH) -> list[dict[str, str]]:
+    """Parse ``_data/roadmap_order.yml`` without a PyYAML dependency."""
+    entries: list[dict[str, str]] = []
+    current: dict[str, str] | None = None
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            if line.startswith("- short:"):
+                if current is not None:
+                    entries.append(current)
+                current = {"short": line.split(":", 1)[1].strip()}
+                continue
+            if current is None:
+                continue
+            if line.startswith("  path:"):
+                current["path"] = line.split(":", 1)[1].strip()
+    if current is not None:
+        entries.append(current)
+    return entries
 
 
 def _section_chars(content: str, heading_re: re.Pattern[str]) -> int:
@@ -61,8 +79,7 @@ def _has_method_section(content: str) -> bool:
 
 def check_roadmap() -> list[str]:
     """Return human-readable failure messages (empty list = all pass)."""
-    with open(ROADMAP_PATH, encoding="utf-8") as f:
-        entries = yaml.safe_load(f)
+    entries = load_roadmap_entries()
 
     failures: list[str] = []
     for entry in entries:
@@ -104,7 +121,7 @@ def main() -> int:
         for msg in failures:
             print(f"  - {msg}", file=sys.stderr)
         return 1
-    count = len(yaml.safe_load(open(ROADMAP_PATH, encoding="utf-8")))
+    count = len(load_roadmap_entries())
     print(f"Roadmap quality check OK ({count} papers)")
     return 0
 
