@@ -687,6 +687,38 @@ html {
   cursor: zoom-in;
 }
 
+#roadmap-mermaid:has(svg) {
+  cursor: default;
+}
+
+.roadmap-link-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+#roadmap-mermaid svg g.roadmap-node-link {
+  cursor: pointer;
+}
+
+#roadmap-mermaid svg g.roadmap-node-link:focus {
+  outline: none;
+}
+
+#roadmap-mermaid svg g.roadmap-node-link:focus-visible > rect,
+#roadmap-mermaid svg g.roadmap-node-link:focus-visible > polygon,
+#roadmap-mermaid svg g.roadmap-node-link:focus-visible > path {
+  stroke: var(--link-color, #4a9eff);
+  stroke-width: 2.5px;
+}
+
+#roadmap-mermaid svg g.roadmap-node-link:hover > rect,
+#roadmap-mermaid svg g.roadmap-node-link:hover > polygon,
+#roadmap-mermaid svg g.roadmap-node-link:hover > path {
+  filter: brightness(1.12);
+  stroke-width: 2.5px;
+}
+
 /* ===== Mermaid lightbox (click to enlarge, drag to pan) ===== */
 body.mermaid-lightbox-open {
   overflow: hidden;

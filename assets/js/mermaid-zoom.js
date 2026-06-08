@@ -442,7 +442,7 @@
   function findMermaidTarget(target) {
     if (!target || !target.closest) return null;
     var el = target.closest('.mermaid');
-    if (!el || !el.querySelector('svg')) return null;
+    if (!el || el.id === 'roadmap-mermaid' || !el.querySelector('svg')) return null;
     return el;
   }
 
