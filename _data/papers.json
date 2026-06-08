@@ -714,6 +714,15 @@
         "zhname": "cuRoboV2：基于深度融合距离场的高自由度机器人动力学感知运动生成"
       },
       {
+        "title": "DreamZero: World Action Models are Zero-shot Policies",
+        "path": "papers/06_Manipulation/DreamZero_World_Action_Models_are_Zero-shot_Policies/DreamZero_World_Action_Models_are_Zero-shot_Policies.md",
+        "url": "/papers/06_Manipulation/DreamZero_World_Action_Models_are_Zero-shot_Policies/DreamZero_World_Action_Models_are_Zero-shot_Policies.html",
+        "dir": "DreamZero_World_Action_Models_are_Zero-shot_Policies",
+        "arxiv": "2602.15922",
+        "has_open_source": true,
+        "zhname": "DreamZero：世界-动作模型即零样本策略"
+      },
+      {
         "title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
         "path": "papers/06_Manipulation/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos.md",
         "url": "/papers/06_Manipulation/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos/DreamDojo_A_Generalist_Robot_World_Model_from_Large-Scale_Human_Videos.html",

@@ -414,7 +414,7 @@
 | 319  | [Open-TeleVision: Teleoperation with Immersive Active Visual Feedback](https://arxiv.org/abs/2407.01512)                                                  | 2024.07 |     | ⏳ 待读 |
 | 320  | [Learning Visuotactile Skills with Two Multifingered Hands](https://arxiv.org/abs/2404.16823)                                                             | 2024.04 |     | ⏳ 待读 |
 | 321  | [DexCap: Scalable and Portable Mocap Data Collection System for Dexterous Manipulation](https://arxiv.org/abs/2403.07788)                                 | 2024.03 |     | ⏳ 待读 |
-| 322  | DreamZero: World Action Models are Zero-shot Policies                                                                                                     | -       |     | ⏳ 待读 |
+| 322  | [DreamZero: World Action Models are Zero-shot Policies](https://arxiv.org/abs/2602.15922) ✅ [笔记](06_Manipulation/DreamZero_World_Action_Models_are_Zero-shot_Policies/DreamZero_World_Action_Models_are_Zero-shot_Policies.md) | 2026.02 |     | ✅ 完成 |
 | 323  | A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation                                         | -       |     | ⏳ 待读 |
 | 324  | Learning to Grasp Anything by Playing with Random Toys                                                                                                    | -       |     | ⏳ 待读 |
 | 325  | [A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation](https://arxiv.org/abs/2510.25725) | 2025.10 |  | ⏳ 待读 |

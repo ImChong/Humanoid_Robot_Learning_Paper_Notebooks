@@ -160,7 +160,7 @@
 >
 > 🚀 **从 WBC 到基础模型的上行支线**：全身控制（WBC）把底层技能 / 扩散策略落到整机关节后，路线分出**操作（Manipulation）**与**移动操作（Loco-Manipulation）**等分支；它们最终都汇聚到**基础模型终点**——以 GR00T N1 为代表的 **VLA**（视觉-语言-动作）和以 Behavior Foundation Model（BFM-Zero）为代表的 **BFM**（行为基础模型），即"一路从 PPO 上到 VLA / BFM"的顶点。
 >
-> 🌍 **世界模型 / 世界-动作模型支线**：**世界模型（World Model）**——DreamDojo、1X World Model、HAIC（动力学感知 WM）——学会预测未来观测与动力学，既能"做梦"生成训练数据、又能做基于模型的规划；再进一步，**世界-动作模型（World Action Model, WAM）**（如 DreamZero）让世界模型本身充当零样本策略，与 VLA / BFM 一同构成"通用机器人大模型"的顶层。（DreamZero 目前在 [PROGRESS.md](papers/PROGRESS.md) 待读清单中，尚无笔记。）
+> 🌍 **世界模型 / 世界-动作模型支线**：**世界模型（World Model）**——DreamDojo、1X World Model、HAIC（动力学感知 WM）——学会预测未来观测与动力学，既能"做梦"生成训练数据、又能做基于模型的规划；再进一步，**世界-动作模型（World Action Model, WAM）**（如 [DreamZero](papers/06_Manipulation/DreamZero_World_Action_Models_are_Zero-shot_Policies/DreamZero_World_Action_Models_are_Zero-shot_Policies.md)）让世界模型本身充当零样本策略，与 VLA / BFM 一同构成"通用机器人大模型"的顶层。
 
 ## 源码层面一览（基础强化学习 · 官方仓库与 MimicKit）
 
