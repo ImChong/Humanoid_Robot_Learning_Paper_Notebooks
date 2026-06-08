@@ -168,6 +168,15 @@
         "arxiv": "2510.02252",
         "has_open_source": true,
         "zhname": "Retargeting Matters：面向人形运动跟踪的通用动作重定向"
+      },
+      {
+        "title": "OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction",
+        "path": "papers/02_Motion_Retargeting/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc.md",
+        "url": "/papers/02_Motion_Retargeting/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc.html",
+        "dir": "OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc",
+        "arxiv": "2509.26633",
+        "has_open_source": true,
+        "zhname": "OmniRetarget：面向人形全身运动操作与场景交互的交互保持数据生成"
       }
     ],
     "subtitle": "Bridging human motion data and humanoid policies — geometric IK, learned retargeting, and the engineering choices that determine downstream policy quality",
@@ -815,6 +824,14 @@
         "zhname": "学习式神经遥操作：用 RL 端到端策略替换 IK+PD，让 VR 控制器直接驱动人形机器人"
       },
       {
+        "title": "Development of an Intuitive GUI for Non-Expert Teleoperation of Humanoid Robots",
+        "path": "papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.md",
+        "url": "/papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.html",
+        "dir": "Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots",
+        "arxiv": "2510.13594",
+        "zhname": "为非专家用户设计的人形机器人遥操作直观图形界面（面向 FIRA HuroCup 障碍赛）"
+      },
+      {
         "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
         "path": "papers/07_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.md",
         "url": "/papers/07_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.html",
@@ -822,14 +839,6 @@
         "arxiv": "2406.10454",
         "has_open_source": true,
         "zhname": "HumanPlus：人形机器人对人类的影子跟随与模仿"
-      },
-      {
-        "title": "Development of an Intuitive GUI for Non-Expert Teleoperation of Humanoid Robots",
-        "path": "papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.md",
-        "url": "/papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.html",
-        "dir": "Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots",
-        "arxiv": "2510.13594",
-        "zhname": "为非专家用户设计的人形机器人遥操作直观图形界面（面向 FIRA HuroCup 障碍赛）"
       }
     ],
     "zhname": "遥操作"
