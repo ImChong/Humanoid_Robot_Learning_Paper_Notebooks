@@ -76,7 +76,7 @@ title: "Home"
 {%- for pair in site.data.roadmap_links -%}
 {%- unless link_first -%},{%- endunless -%}
 {%- assign link_first = false -%}
-      {{ pair[0] | jsonify }}: {{ pair[1] | relative_url | jsonify }}
+      {{ pair[0] | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }}: {{ pair[1] | relative_url | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }}
 {%- endfor -%}
     }</script>
 
