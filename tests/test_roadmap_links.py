@@ -39,8 +39,7 @@ def test_roadmap_graph_nodes_with_notes_are_linked():
     graph = DEFAULT_LAYOUT.read_text(encoding="utf-8")
     node_ids = set(re.findall(r"\b([A-Z][A-Za-z0-9]+)\(\[", graph))
     linked = set(_load_roadmap_links())
-    optional = {"DreamZero"}
-    missing = sorted(node_ids - linked - optional)
+    missing = sorted(node_ids - linked)
     assert not missing, f"Roadmap nodes without links: {missing}"
 
 
