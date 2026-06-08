@@ -822,6 +822,14 @@
         "arxiv": "2406.10454",
         "has_open_source": true,
         "zhname": "HumanPlus：人形机器人对人类的影子跟随与模仿"
+      },
+      {
+        "title": "Development of an Intuitive GUI for Non-Expert Teleoperation of Humanoid Robots",
+        "path": "papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.md",
+        "url": "/papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.html",
+        "dir": "Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots",
+        "arxiv": "2510.13594",
+        "zhname": "为非专家用户设计的人形机器人遥操作直观图形界面（面向 FIRA HuroCup 障碍赛）"
       }
     ],
     "zhname": "遥操作"
