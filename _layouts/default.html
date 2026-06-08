@@ -301,7 +301,7 @@
         return theme + ':' + mode;
       }
 
-      function attachRoadmapNodeLinks(container) {
+      window.attachRoadmapNodeLinks = function(container) {
         if (!container) return;
         var dataEl = document.getElementById('roadmap-node-links');
         if (!dataEl) return;
@@ -323,6 +323,7 @@
           nodeGroup.setAttribute('role', 'link');
           nodeGroup.setAttribute('tabindex', '0');
           nodeGroup.setAttribute('aria-label', nodeId);
+          nodeGroup.setAttribute('data-roadmap-url', url);
 
           function goToNote(e) {
             if (e) {
@@ -332,6 +333,9 @@
             window.location.assign(url);
           }
 
+          nodeGroup.addEventListener('pointerdown', function(e) {
+            e.stopPropagation();
+          });
           nodeGroup.addEventListener('click', goToNote);
           nodeGroup.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -339,7 +343,7 @@
             }
           });
         });
-      }
+      };
 
       window.renderRoadmapMermaid = function(mode) {
         var mermaidRoadmap = document.getElementById('roadmap-mermaid');
@@ -354,7 +358,7 @@
         if (cachedSvg) {
           mermaidRoadmap.innerHTML = cachedSvg;
           mermaidRoadmap.removeAttribute('data-processed');
-          attachRoadmapNodeLinks(mermaidRoadmap);
+          window.attachRoadmapNodeLinks(mermaidRoadmap);
           return Promise.resolve();
         }
 
@@ -374,7 +378,7 @@
           roadmapSvgCache[cacheKey] = safeSvg;
           mermaidRoadmap.innerHTML = safeSvg;
           mermaidRoadmap.removeAttribute('data-processed');
-          attachRoadmapNodeLinks(mermaidRoadmap);
+          window.attachRoadmapNodeLinks(mermaidRoadmap);
         }).catch(function() {
           // Keep the previous SVG visible if rendering fails.
         });

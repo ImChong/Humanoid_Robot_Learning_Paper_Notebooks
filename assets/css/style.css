@@ -687,10 +687,6 @@ html {
   cursor: zoom-in;
 }
 
-#roadmap-mermaid:has(svg) {
-  cursor: default;
-}
-
 .roadmap-link-hint {
   margin: 0.35rem 0 0;
   font-size: 0.8rem;
@@ -714,9 +710,16 @@ html {
 
 #roadmap-mermaid svg g.roadmap-node-link:hover > rect,
 #roadmap-mermaid svg g.roadmap-node-link:hover > polygon,
-#roadmap-mermaid svg g.roadmap-node-link:hover > path {
+#roadmap-mermaid svg g.roadmap-node-link:hover > path,
+.mermaid-lightbox__stage svg g.roadmap-node-link:hover > rect,
+.mermaid-lightbox__stage svg g.roadmap-node-link:hover > polygon,
+.mermaid-lightbox__stage svg g.roadmap-node-link:hover > path {
   filter: brightness(1.12);
   stroke-width: 2.5px;
+}
+
+.mermaid-lightbox__stage svg g.roadmap-node-link {
+  cursor: pointer;
 }
 
 /* ===== Mermaid lightbox (click to enlarge, drag to pan) ===== */

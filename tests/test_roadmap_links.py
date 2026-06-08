@@ -56,12 +56,21 @@ def test_roadmap_click_handlers_wired_in_layout():
     assert "roadmap-node-link" in text
 
 
-def test_roadmap_excluded_from_mermaid_lightbox():
+def test_roadmap_lightbox_opens_on_non_node_click():
     text = ZOOM_JS.read_text(encoding="utf-8")
+    assert "isRoadmapNodeClick" in text
+    assert "attachRoadmapLinksInLightbox" in text
     assert "roadmap-mermaid" in text
+    assert "el.id === 'roadmap-mermaid' && isRoadmapNodeClick(target)" in text
+
+
+def test_attach_roadmap_node_links_exposed_globally():
+    text = DEFAULT_LAYOUT.read_text(encoding="utf-8")
+    assert "window.attachRoadmapNodeLinks" in text
+    assert "pointerdown" in text
 
 
 def test_roadmap_link_styles_present():
     css = STYLE_CSS.read_text(encoding="utf-8")
     assert ".roadmap-node-link" in css
-    assert "#roadmap-mermaid:has(svg)" in css
+    assert ".mermaid-lightbox__stage svg g.roadmap-node-link" in css
