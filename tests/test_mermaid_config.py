@@ -36,6 +36,37 @@ def test_lightbox_hides_stage_until_fit():
     assert ".mermaid-lightbox__stage.is-preparing" in css
 
 
+def test_dark_mode_mermaid_cluster_labels_apply_in_lightbox():
+    css = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
+    assert ":is(.paper-body .mermaid, .mermaid-lightbox__stage)" in css
+    assert 'rect[style*="fill:#"]' in css
+    assert "cluster-label span" in css
+
+
+def test_all_paper_mermaid_fill_colors_are_covered_by_generic_cluster_rule():
+    import re
+
+    css = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
+    assert 'g.cluster:has(> rect[style*="fill:#"])' in css
+
+    fills = set()
+    for md in (ROOT / "papers").rglob("*.md"):
+        for match in re.finditer(r"style\s+\w+\s+fill:(#[0-9a-fA-F]{3,8})", md.read_text(encoding="utf-8")):
+            fills.add(match.group(1).lower())
+
+    assert fills, "expected at least one styled mermaid subgraph in papers/"
+    for color in sorted(fills):
+        assert color.startswith("#")
+        assert 'rect[style*="fill:#"]' in css
+
+
+def test_sanitize_mermaid_svg_preserves_foreign_object_labels():
+    text = CONFIG_JS.read_text(encoding="utf-8")
+    assert "data-fo-placeholder" in text
+    assert "ALLOWED_TAGS" in text
+    assert "foreignObject" in text
+
+
 def test_sanitize_mermaid_svg_keeps_foreign_object():
     text = CONFIG_JS.read_text(encoding="utf-8")
     assert "sanitizeMermaidSvg" in text
