@@ -66,7 +66,6 @@
               theme: theme === 'dark' ? 'dark' : 'default',
               flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'basis' },
               securityLevel: 'strict',
-              legacyMathML: true,
             };
       mermaid.initialize(config);
       window.roadmapMermaidConfigured = true;
@@ -86,7 +85,13 @@
 
       var nodes = Array.prototype.slice.call(document.querySelectorAll('.mermaid:not(#roadmap-mermaid)'));
       if (nodes.length > 0) {
-        mermaid.run({ nodes: nodes });
+        Promise.resolve(mermaid.run({ nodes: nodes })).then(function () {
+          if (typeof window.fixMermaidMathNodeLayout === 'function') {
+            nodes.forEach(function (node) {
+              window.fixMermaidMathNodeLayout(node);
+            });
+          }
+        });
       }
 
       if (window.renderRoadmapMermaid) {
@@ -474,6 +479,9 @@
               if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'PRE' || tag === 'CODE' || tag === 'ANNOTATION' || tag === 'TEXTAREA') {
                 return NodeFilter.FILTER_REJECT;
               }
+              if (node.classList && node.classList.contains('mermaid')) {
+                return NodeFilter.FILTER_REJECT;
+              }
               return NodeFilter.FILTER_SKIP;
             }
             return NodeFilter.FILTER_ACCEPT;
@@ -499,7 +507,8 @@
           {left: "\\(", right: "\\)", display: false}
         ],
         throwOnError: false,
-        strict: false
+        strict: false,
+        ignoredClasses: ['mermaid']
       });
       return true;
     }

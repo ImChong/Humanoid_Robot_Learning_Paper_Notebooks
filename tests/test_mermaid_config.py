@@ -15,13 +15,15 @@ def test_mermaid_config_uses_higher_render_scale():
     assert "useMaxWidth: false" in text
     assert "buildMermaidLightboxGraph" in text
     assert "forceLegacyMathML: true" not in text
-    assert "legacyMathML: true" in text
+    assert "fixMermaidMathNodeLayout" in text
 
 
 def test_default_layout_loads_mermaid_config():
     text = DEFAULT_LAYOUT.read_text(encoding="utf-8")
     assert "mermaid-config.js" in text
     assert "getMermaidSiteConfig" in text
+    assert "ignoredClasses: ['mermaid']" in text
+    assert "fixMermaidMathNodeLayout" in text
 
 
 def test_lightbox_rerenders_from_source():
@@ -31,6 +33,7 @@ def test_lightbox_rerenders_from_source():
     assert "openWithSvgClone" in text
     assert "is-preparing" in text
     assert "scheduleFitToViewport" in text
+    assert "fixMermaidMathNodeLayout" in text
 
 
 def test_lightbox_hides_stage_until_fit():

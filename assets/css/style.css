@@ -1092,6 +1092,14 @@ body.mermaid-lightbox-open {
   display: inline-block;
 }
 
+:is(.paper-body .mermaid, .mermaid-lightbox__stage) foreignObject {
+  overflow: visible;
+}
+
+:is(.paper-body .mermaid, .mermaid-lightbox__stage) math {
+  color: inherit;
+}
+
 /* ===== Paper Nav ===== */
 .paper-nav {
   margin-top: 3rem;

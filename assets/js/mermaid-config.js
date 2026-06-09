@@ -136,6 +136,39 @@
     return sanitized;
   };
 
+  /**
+   * Mermaid can under-size foreignObject labels that contain MathML. Expand node
+   * boxes to fit measured label width (also used after lightbox re-render).
+   */
+  window.fixMermaidMathNodeLayout = function (root) {
+    var scope = root && root.querySelectorAll ? root : document;
+    var nodeGroups =
+      root && root.querySelectorAll && !root.querySelectorAll('.mermaid svg g.node').length && root.matches && root.matches('g.node')
+        ? [root]
+        : scope.querySelectorAll('.mermaid svg g.node, .mermaid-lightbox__stage svg g.node');
+
+    nodeGroups.forEach(function (nodeGroup) {
+      var fo = nodeGroup.querySelector('foreignObject');
+      var rect = nodeGroup.querySelector('rect');
+      var label = fo && fo.querySelector('.nodeLabel');
+      if (!fo || !label || !label.querySelector('math, .katex-html')) return;
+
+      var padding = 16;
+      var needed = Math.ceil(label.getBoundingClientRect().width + padding);
+      var current = Math.ceil(parseFloat(fo.getAttribute('width')) || fo.getBoundingClientRect().width);
+      if (!needed || needed <= current) return;
+
+      var delta = needed - current;
+      fo.setAttribute('width', String(needed));
+      if (rect) {
+        var rectWidth = parseFloat(rect.getAttribute('width'));
+        if (!isNaN(rectWidth)) {
+          rect.setAttribute('width', String(rectWidth + delta));
+        }
+      }
+    });
+  };
+
   window.getMermaidSiteConfig = function (theme) {
     return {
       startOnLoad: false,
@@ -145,10 +178,7 @@
       flowchart: scaledFlowchart(MERMAID_RENDER_SCALE),
       securityLevel: 'strict',
       // Node labels: wrap LaTeX with $$...$$ (mermaid.js.org/config/math.html).
-      // Do NOT set forceLegacyMathML — it sizes nodes from hidden 1px MathML and
-      // clips KaTeX HTML; default MathML renders and measures correctly in modern
-      // browsers. legacyMathML falls back to KaTeX CSS when MathML is unavailable.
-      legacyMathML: true,
+      // Use default MathML (do not set forceLegacyMathML / legacyMathML here).
     };
   };
 

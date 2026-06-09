@@ -271,6 +271,9 @@
 
   function mountLightboxSvg(svgString) {
     stage.innerHTML = sanitizeMermaidSvg(svgString);
+    if (typeof window.fixMermaidMathNodeLayout === 'function') {
+      window.fixMermaidMathNodeLayout(stage);
+    }
     var svg = stage.querySelector('svg');
     if (!svg) return null;
     svg.removeAttribute('width');
