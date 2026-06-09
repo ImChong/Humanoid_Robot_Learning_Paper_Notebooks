@@ -759,8 +759,8 @@ flowchart TB
 flowchart TB
     M1["Multi-Clip：r = max_j r^(j)"] 
     M2["Skill Selector：obs + one-hot δ"]
-    M3["Composite：Σ p_i(s) π^i(a|s)<br/>p_i ∝ exp(V^i/T)"]
-</motion.div>
+    M3["Composite：Σ p_i(s) π^i(a#124;s)<br/>p_i ∝ exp(V^i/T)"]
+</div>
 
 #### 方法一：Multi-Clip Reward（多剪辑奖励）
 

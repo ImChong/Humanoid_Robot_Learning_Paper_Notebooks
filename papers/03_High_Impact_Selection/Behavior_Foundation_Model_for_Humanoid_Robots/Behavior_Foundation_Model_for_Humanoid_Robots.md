@@ -55,7 +55,7 @@ zhname: "BFM：面向人形全身控制的行为基础模型"
 
 ## 📌 训练与部署管线（mermaid）
 
-```mermaid
+<div class="mermaid">
 flowchart LR
   subgraph data["数据准备"]
     A["AMASS / SMPL"]
@@ -63,7 +63,7 @@ flowchart LR
     A --> R
   end
   subgraph proxy["Proxy 策略"]
-    P["仿真特权观测 + goal\nPPO 运动模仿"]
+    P["仿真特权观测 + goal<br/>PPO 运动模仿"]
     R --> P
     O["在线 rollout 采 (s^p_real, s^g_real, a)"]
     P --> O
@@ -83,7 +83,7 @@ flowchart LR
     V --> Q
   end
   data --> proxy --> bfm --> app
-```
+</div>
 
 ---
 

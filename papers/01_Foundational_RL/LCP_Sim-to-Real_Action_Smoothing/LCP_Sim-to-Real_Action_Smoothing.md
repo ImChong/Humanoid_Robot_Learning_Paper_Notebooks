@@ -188,7 +188,7 @@ flowchart TB
 flowchart TB
     DR["Domain Randomization<br/>并行仿真"] --> Roll["Rollout 收集轨迹"]
     Roll --> PPO["PPO 策略梯度<br/>L_RL"]
-    PPO --> GP["梯度惩罚项<br/>-λ_gp E||∇_o π(o)||²"]
+    PPO --> GP["梯度惩罚项<br/>-λ_gp E ## ∇_o π(o) ## ²"]
     GP --> Total["L_total = L_RL + L_GP"]
     Total --> Upd["更新策略 π_θ"]
     Upd --> Roll
@@ -261,7 +261,7 @@ flowchart TB
 
 <div class="mermaid">
 flowchart LR
-    GP["GP = ||∇_o π(o)||² 大 → 罚"] --> SMOOTH["策略学会连续变化"]
+    GP["GP =  ## ∇_o π(o) ## ² 大 → 罚"] --> SMOOTH["策略学会连续变化"]
     SMOOTH --> A["a_t ≈ a_{t+1} 小步修正"]
 </div>
 

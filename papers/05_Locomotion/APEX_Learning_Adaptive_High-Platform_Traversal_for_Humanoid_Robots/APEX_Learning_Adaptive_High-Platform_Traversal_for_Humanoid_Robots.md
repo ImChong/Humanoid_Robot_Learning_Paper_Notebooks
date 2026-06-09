@@ -119,7 +119,7 @@ flowchart LR
         DEPLOY_FILT["部署时：滤波 + inpainting"]
     end
 
-    subgraph CORE["🤖 单一策略 π(a | s)"]
+    subgraph CORE["🤖 单一策略 π(a #124; s)"]
         POLICY["全身 29-DoF 控制器<br/>蒸馏 6 个子技能"]
     end
 

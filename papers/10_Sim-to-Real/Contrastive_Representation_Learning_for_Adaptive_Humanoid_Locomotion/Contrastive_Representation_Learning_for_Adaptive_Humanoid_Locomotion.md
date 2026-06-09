@@ -194,7 +194,7 @@ flowchart TB
 
     subgraph POL["🎮 策略 + 自适应时钟"]
         CLK["⏱️ Adaptive Gait Clock<br/>ω_t = ω_base + Δω(z_t)"]
-        ACT["🦿 Actor π(a | o, z, φ)"]
+        ACT["🦿 Actor π(a #124; o, z, φ)"]
     end
 
     Z --> CLK

@@ -124,7 +124,7 @@ flowchart LR
     end
 
     subgraph TOK["🔀 时间轴交错 token 序列"]
-        T1["A_t | B_t | C_t | A_{t+1} | B_{t+1} | C_{t+1} | …"]
+        T1["A_t #124; B_t #124; C_t #124; A_{t+1} #124; B_{t+1} #124; C_{t+1} #124; …"]
         VQ1 --> T1
     end
 

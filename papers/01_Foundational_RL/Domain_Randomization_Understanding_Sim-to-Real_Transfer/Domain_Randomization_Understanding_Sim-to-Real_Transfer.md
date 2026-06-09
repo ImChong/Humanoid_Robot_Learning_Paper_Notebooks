@@ -111,7 +111,7 @@ $$\text{gap} \leq f(\text{随机化分布}, \text{样本复杂度})$$
 <div class="mermaid">
 flowchart LR
     T["μ_i ~ U(0.3,1.2)"] --> E["env = Sim(μ_i)"]
-    E --> R["π(·|s,h) rollout → G_i"]
+    E --> R["π(·#124;s,h) rollout → G_i"]
 </div>
 
 关键点：每个 episode 的 $\mu$ 不同，策略看到的脚底打滑程度不一样。
@@ -120,8 +120,8 @@ flowchart LR
 
 <div class="mermaid">
 flowchart TB
-    MK["Markov π(a|s_t)"] --> BAD["同 pose 不同 μ → 只能保守平均"]
-    MEM["Memory π(a|s_t,h)"] --> INF["从滑动信号推断 μ"]
+    MK["Markov π(a#124;s_t)"] --> BAD["同 pose 不同 μ → 只能保守平均"]
+    MEM["Memory π(a#124;s_t,h)"] --> INF["从滑动信号推断 μ"]
     INF --> GOOD["同一网络给出合适力矩"]
 </div>
 
@@ -153,7 +153,7 @@ flowchart TB
     Start["训练步开始"] --> Sample["采样 θ ~ p(θ)<br/>构造 MDP M_θ"]
     Sample --> Reset["env.reset(θ)"]
     Reset --> Loop{"时步 t 是否未达 T"}
-    Loop -->|是| Act["a_t = π(·|s_t, h)<br/>历史依赖策略"]
+    Loop -->|是| Act["a_t = π(·#124;s_t, h)<br/>历史依赖策略"]
     Act --> Step["s_{t+1}, r_t = env.step"]
     Step --> Hist["更新历史缓冲 h"]
     Hist --> Loop

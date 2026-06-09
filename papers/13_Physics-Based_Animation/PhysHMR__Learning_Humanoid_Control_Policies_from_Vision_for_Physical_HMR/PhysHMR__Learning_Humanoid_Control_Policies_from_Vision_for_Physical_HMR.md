@@ -149,10 +149,10 @@ flowchart TB
 
     subgraph TRAIN["🛠️ 三阶段训练"]
         subgraph EXPERT["阶段 1 · MoCap 专家"]
-            EX["π_expert(a | s_sim, s_mocap)<br/>(PHC 风格强追踪)"]
+            EX["π_expert(a #124; s_sim, s_mocap)<br/>(PHC 风格强追踪)"]
         end
         subgraph BC["阶段 2 · 视觉策略 BC 蒸馏"]
-            VS["π_vis(a | s_sim, F_LOCAL, RAY)"]
+            VS["π_vis(a #124; s_sim, F_LOCAL, RAY)"]
             EX -. "动作监督" .-> VS
         end
         subgraph RL["阶段 3 · 物理 reward 微调"]

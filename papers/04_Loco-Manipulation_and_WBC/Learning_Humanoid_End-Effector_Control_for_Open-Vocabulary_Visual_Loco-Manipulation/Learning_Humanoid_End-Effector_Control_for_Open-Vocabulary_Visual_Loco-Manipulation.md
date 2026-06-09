@@ -161,7 +161,7 @@ f_{EE}(x_t) = FK(x_t) \oplus \eta\bigl(x_t,\, FK(x_t)\bigr)
 
 ## 🧭 整体流程（mermaid）
 
-```mermaid
+<div class="mermaid">
 flowchart LR
   LANG[自然语言 / 开放词汇查询] --> LVM[大型视觉模型]
   RGBD[RGB-D] --> LVM
@@ -178,7 +178,7 @@ flowchart LR
   POL --> JOINT[关节目标]
   JOINT --> PD[低层 PD 控制器]
   PD --> G1[Unitree G1]
-```
+</div>
 
 ---
 

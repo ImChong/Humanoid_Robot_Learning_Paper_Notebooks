@@ -113,7 +113,7 @@ flowchart TB
     subgraph TRAIN["🧩 UH-1 训练"]
         TOK["VQ-VAE Tokenizer<br/>K 帧 → 1 motion token<br/>L1 + 一阶差分 loss"]
         TXT["CLIP Text Encoder<br/>𝒯 → embedding l"]
-        TR["UH-1 Transformer<br/>自回归 P(z_i | z_{1:i-1}, l)<br/>[End] 终止"]
+        TR["UH-1 Transformer<br/>自回归 P(z_i #124; z_{1:i-1}, l)<br/>[End] 终止"]
         TOK --> TR
         TXT --> TR
     end

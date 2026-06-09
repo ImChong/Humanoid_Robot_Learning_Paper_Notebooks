@@ -121,10 +121,10 @@ flowchart TB
 
     subgraph TRAIN["🛠️ 训练（无需 3D 真值）"]
         subgraph LOW["低层 · 2D 追踪策略 (RL)"]
-            P["Policy π(a|s, kpt_2d_ref)"]
+            P["Policy π(a#124;s, kpt_2d_ref)"]
             SIM["物理仿真<br/>(角色 3D 状态)"]
             PI["相机投影 Π(·)"]
-            R["重投影奖励<br/>exp(-||Π(pose_sim) - kpt_2d_ref||²)"]
+            R["重投影奖励<br/>exp(- ## Π(pose_sim) - kpt_2d_ref ## ²)"]
             P --> SIM --> PI --> R
             R -->|"梯度"| P
         end

@@ -98,7 +98,7 @@ flowchart LR
         FORCE["⬆ 退火上拉力<br/>annealed upward assist"]
     end
 
-    POL["🤖 策略网络 π(a|·)"]
+    POL["🤖 策略网络 π(a#124;·)"]
     ENV["🌍 仿真环境 (G1 29 DoF)"]
     REAL["🚶 G1 真机部署<br/>零样本到新动作"]
 
