@@ -78,6 +78,11 @@ _MD_CHARS_RE = re.compile(r"[*_`\[\]]")
 _CATEGORY_PREFIX_RE = re.compile(r"^\d+_")
 _ARXIV_ID_PARTS_RE = re.compile(r"^(\d{2})(\d{2})\.(\d{4,5})(?:v\d+)?$")
 _ARXIV_VERSION_SUFFIX_RE = re.compile(r"v\d+$")
+_ARXIV_FALLBACK_RE = re.compile(r"arxiv", re.IGNORECASE)
+_ARXIV_PATTERNS = [
+    re.compile(r"\|\s*(?:\*\*)?arXiv(?:\*\*)?\s*\|\s*\[?(\d{4}\.\d{4,5}(?:v\d+)?)", re.IGNORECASE),
+    re.compile(r"(?:arXiv:|arxiv\.org/(?:abs|html|pdf)/)(\d{4}\.\d{4,5}(?:v\d+)?)", re.IGNORECASE),
+]
 
 CATEGORIES_PROGRESS_ORDER = frozenset({
     '01_Foundational_RL',
@@ -197,15 +202,11 @@ def extract_arxiv(content):
     ):
         # Fallback to a case-insensitive regex check for unusual casings
         # to guarantee 100% correctness without regressions.
-        if re.search(r"arxiv", content, re.IGNORECASE) is None:
+        if _ARXIV_FALLBACK_RE.search(content) is None:
             return None
 
-    patterns = [
-        r"\|\s*(?:\*\*)?arXiv(?:\*\*)?\s*\|\s*\[?(\d{4}\.\d{4,5}(?:v\d+)?)",
-        r"(?:arXiv:|arxiv\.org/(?:abs|html|pdf)/)(\d{4}\.\d{4,5}(?:v\d+)?)",
-    ]
-    for pattern in patterns:
-        match = re.search(pattern, content, re.IGNORECASE)
+    for pattern in _ARXIV_PATTERNS:
+        match = pattern.search(content)
         if match:
             return match.group(1)
     return None

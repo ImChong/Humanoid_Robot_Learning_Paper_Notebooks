@@ -77,3 +77,6 @@
 ## 2024-05-19 - Globally Pre-Compile Regexes in Python Processors
 **Learning:** In string-processing scripts that parse markdown sequentially via loops (e.g., `prepare_pages.py`), utilizing dynamically compiled `re.sub()` and `re.match()` triggers heavy re-evaluations inside the engine loop, adding massive overhead.
 **Action:** When working on Python text processing, always assign heavy patterns like `re.compile(r"...")` to module-level private constants (like `_MD_LINK_RE`) and execute `.match()` or `.sub()` methods from that object to skip cyclic regex parsing.
+## 2025-10-25 - Globally pre-compile regexes in Python performance-critical scripts
+**Learning:** Calling `re.search()` or compiling dynamic regular expressions (e.g. `re.compile(r"arxiv")`) inside a high-frequency loop introduces severe and unnecessary overhead. The regex engine re-evaluates the string or fetches it from a limited cache.
+**Action:** Always extract regex patterns into module-level compiled objects (`re.compile()`) and call their `.search()` or `.sub()` methods inside the loops.
