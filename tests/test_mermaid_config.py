@@ -73,3 +73,10 @@ def test_sanitize_mermaid_svg_keeps_foreign_object():
     assert "sanitizeMermaidSvg" in text
     assert "foreignObject" in text
     assert "USE_PROFILES" in text
+
+
+def test_mermaid_katex_display_not_contained():
+    """contain:inline-size on .katex-display collapses math labels to 0px width."""
+    css = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
+    assert ":is(.paper-body .mermaid, .mermaid-lightbox__stage) .katex-display" in css
+    assert "contain: none" in css

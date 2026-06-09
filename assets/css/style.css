@@ -1071,10 +1071,25 @@ body.mermaid-lightbox-open {
   contain: inline-size;
 }
 
-/* KaTeX inside Mermaid flowchart labels (forceLegacyMathML) */
+/*
+ * Mermaid node labels wrap math in span.katex-display (block). Global
+ * .katex-display { contain: inline-size } collapses them to 0px inside
+ * foreignObject/flex, hiding all formula text — reset in diagram context.
+ */
+:is(.paper-body .mermaid, .mermaid-lightbox__stage) .katex-display {
+  display: inline-block;
+  contain: none;
+  overflow: visible;
+  padding: 0;
+}
+
 :is(.paper-body .mermaid, .mermaid-lightbox__stage) .katex {
   font-size: 1em;
   color: inherit;
+}
+
+:is(.paper-body .mermaid, .mermaid-lightbox__stage) .katex .katex-html {
+  display: inline-block;
 }
 
 /* ===== Paper Nav ===== */
