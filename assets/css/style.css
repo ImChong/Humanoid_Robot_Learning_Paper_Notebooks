@@ -1081,6 +1081,45 @@ body.mermaid-lightbox-open {
   overflow: visible;
 }
 
+/* Mobile Safari: nowrap flex labels + max-content KaTeX can paint outside node boxes. */
+@media (max-width: 600px) {
+  .paper-body .mermaid {
+    contain: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .paper-body .mermaid svg foreignObject {
+    overflow: hidden;
+  }
+
+  .paper-body .mermaid foreignObject .nodeLabel > div,
+  .paper-body .mermaid foreignObject .labelBkg,
+  .paper-body .mermaid foreignObject .edgeLabel > div {
+    display: block !important;
+    width: 100% !important;
+    max-width: calc(100vw - 3rem) !important;
+    white-space: normal !important;
+    line-height: 1.35 !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .paper-body .mermaid foreignObject .katex-display {
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .paper-body .mermaid foreignObject .katex {
+    max-width: 100%;
+    font-size: 0.95em;
+  }
+}
+
 /* ===== Paper Nav ===== */
 .paper-nav {
   margin-top: 3rem;

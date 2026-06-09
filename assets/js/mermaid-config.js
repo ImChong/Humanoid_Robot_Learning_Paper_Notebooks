@@ -11,14 +11,23 @@
   /** Extra density when opening the fullscreen lightbox. */
   var MERMAID_LIGHTBOX_SCALE = 1.85;
 
+  function isMobileViewport() {
+    return (
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(max-width: 600px)').matches
+    );
+  }
+
   function scaledFlowchart(scale) {
+    var mobile = isMobileViewport();
     return {
       useMaxWidth: false,
       curve: 'basis',
-      nodeSpacing: Math.round(50 * scale),
-      rankSpacing: Math.round(50 * scale),
-      wrappingWidth: Math.round(200 * scale),
-      diagramPadding: Math.round(20 * scale),
+      nodeSpacing: Math.round((mobile ? 36 : 50) * scale),
+      rankSpacing: Math.round((mobile ? 40 : 50) * scale),
+      wrappingWidth: mobile ? 150 : Math.round(200 * scale),
+      diagramPadding: Math.round((mobile ? 12 : 20) * scale),
     };
   }
 
@@ -94,12 +103,14 @@
   };
 
   window.getMermaidSiteConfig = function (theme) {
+    var mobile = isMobileViewport();
+    var scale = mobile ? 1.05 : MERMAID_RENDER_SCALE;
     return {
       startOnLoad: false,
       theme: theme === 'dark' ? 'dark' : 'default',
-      fontSize: Math.round(16 * MERMAID_RENDER_SCALE),
+      fontSize: Math.round((mobile ? 14 : 16) * scale),
       htmlLabels: true,
-      flowchart: scaledFlowchart(MERMAID_RENDER_SCALE),
+      flowchart: scaledFlowchart(scale),
       securityLevel: 'strict',
       // Site already loads KaTeX CSS; use CSS-based math for consistent flowchart labels.
       forceLegacyMathML: true,

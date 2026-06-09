@@ -93,13 +93,16 @@
       });
 
       var nodes = Array.prototype.slice.call(document.querySelectorAll('.mermaid:not(#roadmap-mermaid)'));
-      if (nodes.length > 0) {
-        mermaid.run({ nodes: nodes });
-      }
+      var paperRun =
+        nodes.length > 0 ? Promise.resolve(mermaid.run({ nodes: nodes })) : Promise.resolve();
+      var roadmapRun =
+        window.renderRoadmapMermaid
+          ? window.renderRoadmapMermaid(document.documentElement.getAttribute('data-lang-mode') || 'en')
+          : Promise.resolve();
 
-      if (window.renderRoadmapMermaid) {
-        window.renderRoadmapMermaid(document.documentElement.getAttribute('data-lang-mode') || 'en');
-      }
+      Promise.all([paperRun, roadmapRun]).then(function() {
+        if (typeof window.initKaTeX === 'function') window.initKaTeX();
+      });
     }
   </script>
 
@@ -451,8 +454,9 @@
   </script>
 
   <script>
-    // KaTeX auto-render with HTML entity fix
-    function initKaTeX() {
+    // KaTeX auto-render with HTML entity fix (math inside Mermaid is rendered by Mermaid itself).
+    window.initKaTeX = function initKaTeX() {
+      if (window.__katexInitialized) return true;
       if (typeof renderMathInElement === 'undefined') return false;
 
       // Fix HTML entities inside math delimiters before KaTeX scans the DOM.
@@ -474,9 +478,19 @@
 
       // ⚡ Bolt Optimization: Include SHOW_ELEMENT to proactively prune irrelevant subtrees
       // (like code blocks) by returning FILTER_REJECT, avoiding deep DOM traversal.
+      function isInsideMermaid(node) {
+        for (var el = node.nodeType === 1 ? node : node.parentElement; el; el = el.parentElement) {
+          if (!el.classList) continue;
+          if (el.classList.contains('mermaid') || el.classList.contains('mermaid-container')) return true;
+          if (el.id === 'roadmap-mermaid') return true;
+        }
+        return false;
+      }
+
       var walker = document.createTreeWalker(
         mathContainer, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
           acceptNode: function(node) {
+            if (isInsideMermaid(node)) return NodeFilter.FILTER_REJECT;
             if (node.nodeType === 1) { // Element node
               var tag = node.tagName;
               if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'PRE' || tag === 'CODE' || tag === 'ANNOTATION' || tag === 'TEXTAREA') {
@@ -506,17 +520,24 @@
           {left: "$", right: "$", display: false},
           {left: "\\(", right: "\\)", display: false}
         ],
+        ignoredTags: ['script', 'style', 'pre', 'code', 'textarea', 'annotation'],
+        ignoredClasses: ['mermaid', 'mermaid-container'],
         throwOnError: false,
         strict: false
       });
+      window.__katexInitialized = true;
       return true;
-    }
+    };
 
     document.addEventListener("DOMContentLoaded", function() {
-      if (!initKaTeX()) {
-        var check = setInterval(function() {
-          if (initKaTeX()) clearInterval(check);
-        }, 100);
+      var hasMermaid =
+        document.querySelector('.mermaid') || document.getElementById('roadmap-mermaid');
+      if (!hasMermaid) {
+        if (!window.initKaTeX()) {
+          var check = setInterval(function() {
+            if (window.initKaTeX()) clearInterval(check);
+          }, 100);
+        }
       }
     });
   </script>
