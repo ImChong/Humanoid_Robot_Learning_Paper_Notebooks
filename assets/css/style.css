@@ -1081,6 +1081,17 @@ body.mermaid-lightbox-open {
   overflow: visible;
 }
 
+/* iOS Safari: KaTeX display math inside foreignObject is unstable — prefer plain labels. */
+html.ios .paper-body .mermaid foreignObject .katex-display,
+html.ios .paper-body .mermaid foreignObject .katex {
+  display: none !important;
+}
+
+html.ios .paper-body .mermaid foreignObject .katex-mathml {
+  display: inline-block !important;
+  max-width: 100%;
+}
+
 /* Mobile Safari: nowrap flex labels + max-content KaTeX can paint outside node boxes. */
 @media (max-width: 600px) {
   .paper-body .mermaid {

@@ -89,7 +89,12 @@
           if (source) el.setAttribute('data-original-code', source);
         }
         el.removeAttribute('data-processed');
-        writeSource(el, el.getAttribute('data-original-code'));
+        var canonical = el.getAttribute('data-original-code');
+        var renderSource =
+          typeof window.prepareMermaidRenderSource === 'function'
+            ? window.prepareMermaidRenderSource(canonical)
+            : canonical;
+        writeSource(el, renderSource);
       });
 
       var nodes = Array.prototype.slice.call(document.querySelectorAll('.mermaid:not(#roadmap-mermaid)'));
@@ -101,6 +106,11 @@
           : Promise.resolve();
 
       Promise.all([paperRun, roadmapRun]).then(function() {
+        if (typeof window.patchMermaidForeignObjects === 'function') {
+          document.querySelectorAll('.mermaid:not(#roadmap-mermaid)').forEach(function(el) {
+            window.patchMermaidForeignObjects(el);
+          });
+        }
         if (typeof window.initKaTeX === 'function') window.initKaTeX();
       });
     }

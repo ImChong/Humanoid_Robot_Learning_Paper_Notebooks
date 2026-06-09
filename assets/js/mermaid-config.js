@@ -19,6 +19,74 @@
     );
   }
 
+  function isIos() {
+    if (typeof navigator === 'undefined') return false;
+    return (
+      /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+    );
+  }
+
+  /** iOS Safari paints KaTeX-in-foreignObject unreliably; use plain labels instead. */
+  window.shouldUsePlainMermaidMath = function () {
+    return isIos();
+  };
+
+  window.mermaidMathToPlain = function (tex) {
+    return tex
+      .replace(/\\pi_\{\\theta_\{old\}\}\s*\\leftarrow\s*\\pi_\\theta/g, 'π_old ← π_θ')
+      .replace(/\\pi_\\theta,\s*\\,?\s*V_\\phi/g, 'π_θ, V_φ')
+      .replace(
+        /r_t\(\\theta\)=\\frac\{([^}]+)\}\{([^}]+)\}/g,
+        'r_t(θ)=$1/$2'
+      )
+      .replace(
+        /L\^\{CLIP\}=\\min\(r_t\\hat\{A\}_t,\\,\\mathrm\{clip\}\(r_t,0\.8,1\.2\)\\hat\{A\}_t\)/g,
+        'L^CLIP=min(r_t·Â_t, clip·Â_t)'
+      )
+      .replace(/\\hat\{A\}_t/g, 'Â_t')
+      .replace(/\\delta_t/g, 'δ_t')
+      .replace(/\\gamma\\lambda/g, 'γλ')
+      .replace(/\\gamma/g, 'γ')
+      .replace(/\\lambda/g, 'λ')
+      .replace(/N \\times T/g, 'N×T')
+      .replace(/\\min\(/g, 'min(')
+      .replace(/\\mathrm\{clip\}/g, 'clip')
+      .replace(/\\mid/g, '|')
+      .replace(/\\leftarrow/g, '←')
+      .replace(/\\theta/g, 'θ')
+      .replace(/\\phi/g, 'φ')
+      .replace(/\\pi/g, 'π')
+      .replace(/\\,/g, ' ')
+      .replace(/[{}]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  };
+
+  window.prepareMermaidRenderSource = function (source) {
+    if (!source || !window.shouldUsePlainMermaidMath()) return source;
+    return source.replace(/\$\$([\s\S]*?)\$\$/g, function (_match, tex) {
+      return window.mermaidMathToPlain(tex.trim());
+    });
+  };
+
+  window.patchMermaidForeignObjects = function (root) {
+    if (!isIos() && !isMobileViewport()) return;
+    var scope = root && root.querySelectorAll ? root : document;
+    scope.querySelectorAll('.mermaid svg foreignObject').forEach(function (fo) {
+      var inner = fo.querySelector('.nodeLabel > div, .edgeLabel > div, .labelBkg');
+      if (!inner) return;
+      inner.style.setProperty('display', 'block', 'important');
+      inner.style.setProperty('white-space', 'normal', 'important');
+      inner.style.setProperty('max-width', 'min(280px, calc(100vw - 3rem))', 'important');
+      inner.style.setProperty('box-sizing', 'border-box', 'important');
+      var w = inner.scrollWidth;
+      var h = inner.scrollHeight;
+      if (w > 0) fo.setAttribute('width', String(Math.ceil(w)));
+      if (h > 0) fo.setAttribute('height', String(Math.ceil(h)));
+    });
+  };
+
   function scaledFlowchart(scale) {
     var mobile = isMobileViewport();
     return {
@@ -104,6 +172,7 @@
 
   window.getMermaidSiteConfig = function (theme) {
     var mobile = isMobileViewport();
+    var ios = isIos();
     var scale = mobile ? 1.05 : MERMAID_RENDER_SCALE;
     return {
       startOnLoad: false,
@@ -112,8 +181,8 @@
       htmlLabels: true,
       flowchart: scaledFlowchart(scale),
       securityLevel: 'strict',
-      // Site already loads KaTeX CSS; use CSS-based math for consistent flowchart labels.
-      forceLegacyMathML: true,
+      // iOS Safari: native MathML; other platforms use KaTeX CSS in foreignObject.
+      forceLegacyMathML: !ios,
     };
   };
 
@@ -121,6 +190,10 @@
   window.buildMermaidLightboxGraph = function (source) {
     var text = (source || '').trim();
     if (!text) return '';
+    text =
+      typeof window.prepareMermaidRenderSource === 'function'
+        ? window.prepareMermaidRenderSource(text)
+        : text;
     return (
       '%%{init: ' +
       JSON.stringify(initDirective(MERMAID_LIGHTBOX_SCALE)) +
@@ -128,4 +201,8 @@
       text
     );
   };
+
+  if (typeof document !== 'undefined' && isIos()) {
+    document.documentElement.classList.add('ios');
+  }
 })();
