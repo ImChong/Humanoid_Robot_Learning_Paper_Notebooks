@@ -424,7 +424,7 @@
 | 526  | [Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids](https://toruowo.github.io/recipe/) | 2025.02 |  | ⏳ 待读 |
 
 
-### Teleoperation（21篇）
+### Teleoperation（24篇）
 
 
 | #   | 论文                                                                                                                                                             | 日期      | 🌟  | 状态   |
@@ -450,6 +450,9 @@
 | 347  | [Deep Imitation Learning for Humanoid Loco-manipulation through Human Teleoperation](https://arxiv.org/abs/2309.01952)                                         | 2023.09 |     | ⏳ 待读 |
 | 348  | [Teleoperation of Humanoid Robots: A Survey](https://arxiv.org/abs/2301.04317)                                                                                 | 2023.01 |     | ⏳ 待读 |
 | 349  | [iCub3 Avatar System: Enabling Remote Fully-Immersive Embodiment of Humanoid Robots](https://arxiv.org/abs/2203.06972)                                         | 2022.03 |     | ⏳ 待读 |
+| 535  | [EgoPoser: Robust Real-Time Egocentric Pose Estimation from Sparse and Intermittent Observations Everywhere](https://arxiv.org/pdf/2308.06493) 🌟              | ECCV 2024 |     | ⏳ 待读 |
+| 536  | [AvatarPoser: Articulated Full-Body Pose Tracking from Sparse Motion Sensing](https://arxiv.org/abs/2207.13784) 🌟                                             | ECCV 2022 |     | ⏳ 待读 |
+| 537  | [A Mobile Robot Hand-Arm Teleoperation System by Vision and IMU](https://arxiv.org/pdf/2003.05212) 🌟                                                          | IROS 2020 |     | ⏳ 待读 |
 
 
 ### Navigation（18篇）
@@ -625,7 +628,7 @@
 | 530  | [PARC: Physics-based Augmentation with Reinforcement Learning for Character Controllers](https://michaelx.io/parc/index.html) | 2025 SIGGRAPH |  | ⏳ 待读 |
 
 
-### Human Motion Analysis and Synthesis（48篇）
+### Human Motion Analysis and Synthesis（49篇）
 
 
 | #   | 论文                                                                                                                                   | 日期      | 🌟  | 状态   |
@@ -678,3 +681,4 @@
 | 521  | [HUMOTO: A 4D Dataset of Mocap Human Object Interactions](https://arxiv.org/abs/2504.10414) | 2025.04 |  | ⏳ 待读 |
 | 522  | [ClimbingCap: Multi-Modal Dataset and Method for Rock Climbing in World Coordinate](https://arxiv.org/abs/2503.21268) | 2025.03 |  | ⏳ 待读 |
 | 523  | [Example-based Motion Synthesis via Generative Motion Matching](https://arxiv.org/abs/2306.00378) | 2023.06 |  | ⏳ 待读 |
+| 538  | [MANIKIN: Biomechanically Accurate Neural Inverse Kinematics for Human Motion Estimation](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00194.pdf) | ECCV 2024 |  | ⏳ 待读 |
