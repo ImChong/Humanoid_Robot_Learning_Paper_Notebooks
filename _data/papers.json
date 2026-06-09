@@ -975,6 +975,15 @@
         "dir": "NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation",
         "arxiv": "2412.04453",
         "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
+      },
+      {
+        "title": "LookOut: Real-World Humanoid Egocentric Navigation",
+        "path": "papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation.md",
+        "url": "/papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation.html",
+        "dir": "LookOut__Real-World_Humanoid_Egocentric_Navigation",
+        "arxiv": "2508.14466",
+        "has_open_source": true,
+        "zhname": "LookOut：从第一视角视频预测未来 6-DoF 头部位姿，学人类转头看路与避障"
       }
     ],
     "zhname": "导航"

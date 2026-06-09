@@ -41,16 +41,24 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 334,
-      "last_title": "Development of an Intuitive GUI for Non-Expert Teleoperation of Humanoid Robots",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": 355,
+      "last_title": "LookOut: Real-World Humanoid Egocentric Navigation",
+      "next_module": "09_State_Estimation"
     },
-    "last_summary_index": 334,
-    "last_summary_date": "2026-06-16",
-    "last_summary_title": "Development of an Intuitive GUI for Non-Expert Teleoperation of Humanoid Robots",
+    "last_summary_index": 355,
+    "last_summary_date": "2026-06-17",
+    "last_summary_title": "LookOut: Real-World Humanoid Egocentric Navigation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-17",
+        "index": 355,
+        "title": "LookOut: Real-World Humanoid Egocentric Navigation",
+        "folder": "papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation",
+        "module": "08_Navigation",
+        "source": "https://sites.google.com/stanford.edu/lookout"
+      },
       {
         "date": "2026-06-16",
         "index": 334,
