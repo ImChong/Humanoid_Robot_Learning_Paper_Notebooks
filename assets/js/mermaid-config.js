@@ -84,6 +84,8 @@
       htmlLabels: true,
       flowchart: scaledFlowchart(MERMAID_RENDER_SCALE),
       securityLevel: 'strict',
+      // Site already loads KaTeX CSS; use CSS-based math for consistent flowchart labels.
+      forceLegacyMathML: true,
     };
   };
 

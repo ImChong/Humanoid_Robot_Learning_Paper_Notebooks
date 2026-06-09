@@ -102,9 +102,9 @@ $\epsilon$ 通常取 0.2，意味着概率比被限制在 $[0.8, 1.2]$ 之间。
 
 <div class="mermaid">
 flowchart TB
-    A["① 收集经验<br/>N 个并行环境各跑 T 步（共 N×T 个样本）"] --> B["② 计算优势<br/>用 GAE 得到每个 Â_t"]
+    A["① 收集经验<br/>N 个并行环境各跑 T 步（共 $$N \times T$$ 个样本）"] --> B["② 计算优势<br/>用 GAE 得到每个 $$\hat{A}_t$$"]
     B --> C["③ 多轮更新<br/>同一批数据 K 个 epoch（Clip 防止过度更新）"]
-    C --> D["④ 更新旧策略<br/>π_θ_old ← π_θ"]
+    C --> D["④ 更新旧策略<br/>$$\pi_{\theta_{old}} \leftarrow \pi_\theta$$"]
     D --> A
 </div>
 
@@ -176,8 +176,8 @@ t=48:  s₄₈ = [重新站立...],  继续收集到 t=63
 
 <div class="mermaid">
 flowchart TB
-    V["① V(s) 估计"] --> TD["② δ_t = r + γV(s') - V(s)<br/>done 时不加 V(s')"]
-    TD --> GAE["③ 逆序 GAE：Â_t = δ_t + γλÂ_{t+1}<br/>done 边界截断"]
+    V["① $$V(s)$$ 估计"] --> TD["② $$\delta_t = r + \gamma V(s') - V(s)$$<br/>done 时不加 V(s')"]
+    TD --> GAE["③ 逆序 GAE：$$\hat{A}_t = \delta_t + \gamma\lambda\hat{A}_{t+1}$$<br/>done 边界截断"]
 </div>
 
 结果：站稳时 $\hat{A}_t > 0$（好动作），摔倒前 $\hat{A}_t \ll 0$（差动作）。
@@ -230,14 +230,15 @@ for epoch in range(10):
 
 <div class="mermaid">
 flowchart TB
-    I["初始化 π_θ, V_φ（随机）<br/>创建 N=32 个并行环境"]
+    I["初始化 $$\pi_\theta, V_\phi$$（随机）<br/>创建 $$N=32$$ 个并行环境"]
     L["32 个环境并行收集，各 64 步<br/>→ 2048 个样本"]
-    G["按环境/轨迹独立计算 GAE 优势 Â_t"]
-    S["保存 π_θ_old ← π_θ"]
-    P["PPO 更新（10 epoch）<br/>打乱 2048 个样本（跨环境混合）<br/>mini_batch 64：r(θ)=π_θ/π_old<br/>L=min(r·Â, clip(r,0.8,1.2)·Â)<br/>更新 θ（策略）与 φ（价值 MSE）"]
+    G["按环境/轨迹独立计算 GAE 优势 $$\hat{A}_t$$"]
+    S["保存 $$\pi_{\theta_{old}} \leftarrow \pi_\theta$$"]
+    R["概率比 $$r_t(\theta)=\frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{old}}(a_t|s_t)}$$"]
+    P["PPO 更新（10 epoch）<br/>$$L^{CLIP}=\min(r_t\hat{A}_t,\ \mathrm{clip}(r_t,0.8,1.2)\hat{A}_t)$$<br/>更新 $$\theta$$（策略）与 $$\phi$$（价值 MSE）"]
     Q{回报 > 目标?}
     DONE((训练完成))
-    I --> L --> G --> S --> P --> Q
+    I --> L --> G --> S --> R --> P --> Q
     Q -->|是| DONE
     Q -->|否| L
 </div>
