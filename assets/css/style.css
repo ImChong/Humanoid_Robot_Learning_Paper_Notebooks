@@ -1071,6 +1071,16 @@ body.mermaid-lightbox-open {
   contain: inline-size;
 }
 
+/* Mermaid htmlLabels render math inside SVG foreignObject; inline-size containment collapses width to 0. */
+.mermaid foreignObject .katex-display {
+  contain: none;
+  display: inline-block;
+  width: max-content;
+  max-width: none;
+  padding: 0;
+  overflow: visible;
+}
+
 /* ===== Paper Nav ===== */
 .paper-nav {
   margin-top: 3rem;

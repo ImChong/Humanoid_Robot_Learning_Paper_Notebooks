@@ -70,17 +70,26 @@
       mermaid.initialize(config);
       window.roadmapMermaidConfigured = true;
       
-      // 1. Re-render paper notebook diagrams if they have original code
-      document.querySelectorAll('.mermaid[data-original-code]:not(#roadmap-mermaid)').forEach(function(el) {
-        el.removeAttribute('data-processed');
-        el.textContent = el.getAttribute('data-original-code');
-      });
-
-      // 2. For any other mermaid blocks that might not have original code yet
-      document.querySelectorAll('.mermaid:not([data-original-code]):not(#roadmap-mermaid)').forEach(function(el) {
-        if (el.textContent.trim().length > 0) {
-          el.setAttribute('data-original-code', el.textContent);
+      // 1. Snapshot source once (keep <br> as newlines); re-render from snapshot on theme changes.
+      document.querySelectorAll('.mermaid:not(#roadmap-mermaid)').forEach(function(el) {
+        var readSource =
+          typeof window.readMermaidBlockSource === 'function'
+            ? window.readMermaidBlockSource
+            : function(node) {
+                return (node.getAttribute('data-original-code') || node.textContent || '').trim();
+              };
+        var writeSource =
+          typeof window.writeMermaidBlockSource === 'function'
+            ? window.writeMermaidBlockSource
+            : function(node, source) {
+                node.textContent = source;
+              };
+        if (!el.getAttribute('data-original-code')) {
+          var source = readSource(el);
+          if (source) el.setAttribute('data-original-code', source);
         }
+        el.removeAttribute('data-processed');
+        writeSource(el, el.getAttribute('data-original-code'));
       });
 
       var nodes = Array.prototype.slice.call(document.querySelectorAll('.mermaid:not(#roadmap-mermaid)'));
