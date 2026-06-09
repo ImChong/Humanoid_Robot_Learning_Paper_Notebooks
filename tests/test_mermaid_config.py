@@ -14,6 +14,7 @@ def test_mermaid_config_uses_higher_render_scale():
     assert "MERMAID_LIGHTBOX_SCALE" in text
     assert "useMaxWidth: false" in text
     assert "buildMermaidLightboxGraph" in text
+    assert "forceLegacyMathML: true" in text
 
 
 def test_default_layout_loads_mermaid_config():

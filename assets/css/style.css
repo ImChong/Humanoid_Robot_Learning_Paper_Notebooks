@@ -1071,6 +1071,12 @@ body.mermaid-lightbox-open {
   contain: inline-size;
 }
 
+/* KaTeX inside Mermaid flowchart labels (forceLegacyMathML) */
+:is(.paper-body .mermaid, .mermaid-lightbox__stage) .katex {
+  font-size: 1em;
+  color: inherit;
+}
+
 /* ===== Paper Nav ===== */
 .paper-nav {
   margin-top: 3rem;
