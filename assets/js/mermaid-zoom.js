@@ -349,6 +349,9 @@
         if (renderSeq !== lightboxRenderSeq || lightbox.hidden) return;
         stage.removeAttribute('aria-busy');
         if (swapLightboxSvg(result.svg, sourceEl)) {
+          if (typeof window.patchMermaidForeignObjects === 'function') {
+            window.patchMermaidForeignObjects(stage);
+          }
           attachRoadmapLinksInLightbox(sourceEl);
         }
       })
