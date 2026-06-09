@@ -69,7 +69,7 @@ flowchart TB
     end
 
     subgraph LOWER["下层：RL 跟踪"]
-        G --> RL["策略 pi_phi(a|o,g_t)"]
+        G --> RL["策略 pi_phi(a#124;o,g_t)"]
         RL --> SIM["物理仿真 + 接触动力学"]
         SIM --> S["状态 rollout s_t"]
     end

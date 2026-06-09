@@ -238,7 +238,7 @@ disc_reward_weight: 1.0
 flowchart TB
     A["参考动作 humanoid_spinkick.pkl"] --> B["参考帧 r_t<br/>+ 前瞻 r_(t+1, t+2, t+3)"]
     C["Isaac Gym<br/>4096 并行 env"] --> D["当前 sim 状态 s_t"]
-    B --> E["obs = s_t || r_(t+1..t+3)"]
+    B --> E["obs = s_t  ##  r_(t+1..t+3)"]
     D --> E
     E --> F["Actor pi<br/>fc_2x1024, sigma=0.05"]
     F --> G["action a_t (28-D)"]

@@ -226,7 +226,7 @@ q_t^\star = \arg\min_{q_t} \sum_i \| L(p_{t,i}^{\text{source}}) - L(p_{t,i}^{\te
 flowchart TB
     subgraph FRAME["帧 t 序贯优化"]
         WS["Warm-start<br/>上一帧 q*"] --> SQP["SQP 迭代"]
-        SQP --> OBJ["二次近似目标<br/>Laplacian 形变 + ||q_t - q_{t-1}||_Q"]
+        SQP --> OBJ["二次近似目标<br/>Laplacian 形变 +  ## q_t - q_{t-1} ## _Q"]
         SQP --> LIN["线性化硬约束"]
         LIN --> C1["phi_j(q_t) >= 0<br/>碰撞对 SDF"]
         LIN --> C2["q_min <= q_t <= q_max<br/>速度限位"]
@@ -303,7 +303,7 @@ flowchart TB
         O4["上一步动作"]
     end
 
-    OBS --> POL["RL 策略 pi(a|o)"]
+    OBS --> POL["RL 策略 pi(a#124;o)"]
     POL --> SIM["仿真跟踪训练"]
 
     subgraph REW["5 项奖励（BeyondMimic 权重）"]

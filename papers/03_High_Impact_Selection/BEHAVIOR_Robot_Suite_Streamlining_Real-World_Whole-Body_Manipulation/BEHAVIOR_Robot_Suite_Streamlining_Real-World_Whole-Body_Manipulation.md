@@ -41,7 +41,7 @@ zhname: "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
 
 ## 📌 流程概览（mermaid）
 
-```mermaid
+<div class="mermaid">
 flowchart TD
   subgraph analysis["任务与能力分析"]
     B1K["BEHAVIOR-1K 任务统计"]
@@ -61,7 +61,7 @@ flowchart TD
   end
   analysis --> brs
   WB --> EVAL["真实家庭五类长程任务评测"]
-```
+</div>
 
 ---
 

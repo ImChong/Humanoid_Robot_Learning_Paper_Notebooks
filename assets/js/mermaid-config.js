@@ -33,6 +33,23 @@
   window.MERMAID_RENDER_SCALE = MERMAID_RENDER_SCALE;
   window.MERMAID_LIGHTBOX_SCALE = MERMAID_LIGHTBOX_SCALE;
 
+  /** Preserve <br> line breaks when snapshotting Mermaid source from built HTML. */
+  window.readMermaidBlockSource = function (el) {
+    if (!el) return '';
+    var stored = el.getAttribute('data-original-code');
+    if (stored) return stored;
+    var clone = el.cloneNode(true);
+    clone.querySelectorAll('br').forEach(function (br) {
+      br.replaceWith(document.createTextNode('\n'));
+    });
+    return clone.textContent.trim();
+  };
+
+  window.writeMermaidBlockSource = function (el, source) {
+    if (!el) return;
+    el.textContent = source || '';
+  };
+
   /**
    * Mermaid htmlLabels embed text in SVG foreignObject. Default DOMPurify strips
    * XHTML inside foreignObject (leaving bare text and wrong dark-theme colors in
@@ -84,6 +101,8 @@
       htmlLabels: true,
       flowchart: scaledFlowchart(MERMAID_RENDER_SCALE),
       securityLevel: 'strict',
+      // Site already loads KaTeX CSS; use CSS-based math for consistent flowchart labels.
+      forceLegacyMathML: true,
     };
   };
 

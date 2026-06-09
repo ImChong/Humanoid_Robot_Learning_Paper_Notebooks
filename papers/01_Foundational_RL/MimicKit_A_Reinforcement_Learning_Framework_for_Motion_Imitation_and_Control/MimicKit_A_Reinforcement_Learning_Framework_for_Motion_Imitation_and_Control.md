@@ -140,7 +140,7 @@ flowchart TB
     B --> C["参考帧 ref_t<br/>root + 29-DOF"]
     C --> D["前瞻 ref_(t+1, t+2, t+3)"]
     E["Isaac Gym<br/>4096 并行 env"] --> F["当前状态 s_t"]
-    F --> G["obs = s_t || ref_(t+1..t+3)"]
+    F --> G["obs = s_t  ##  ref_(t+1..t+3)"]
     D --> G
     G --> H["Actor MLP<br/>fc 2x1024, sigma=0.05"]
     H --> I["action a_t (29-D)"]
@@ -166,7 +166,7 @@ flowchart TB
     E --> F["disc reward<br/>r_disc = -log(1 - D)"]
     G["可选 Task reward<br/>(target heading / 速度)"] --> H["合成 reward<br/>w_task·r_task + w_disc·r_disc"]
     F --> H
-    D --> I["Actor pi(a | s_t)<br/>fc 2x1024, sigma=0.05<br/>obs 不含未来参考帧"]
+    D --> I["Actor pi(a #124; s_t)<br/>fc 2x1024, sigma=0.05<br/>obs 不含未来参考帧"]
     I --> C
     H --> J["PPO Buffer<br/>4096 x 32 steps"]
     J --> K["PPO + Disc 联合更新<br/>disc grad penalty=5"]
@@ -182,7 +182,7 @@ flowchart TB
 <div class="mermaid">
 flowchart TB
     A["dataset_g1_locomotion.yaml<br/>(多段 G1 步态)"] --> B["expert (s_t, s_t+1)"]
-    Z["latent z ~ Uniform(S^63)<br/>每 0~5s 重采样"] --> P["Actor pi(a | s_t, z)<br/>fc 3x1024"]
+    Z["latent z ~ Uniform(S^63)<br/>每 0~5s 重采样"] --> P["Actor pi(a #124; s_t, z)<br/>fc 3x1024"]
     P --> C["Isaac Gym 4096 env"]
     C --> D["policy (s_t, s_t+1)"]
     B --> F["Discriminator D(s, s')<br/>fc 3x1024"]
@@ -209,7 +209,7 @@ flowchart TB
 flowchart TB
     A["g1_walk.pkl<br/>(单段参考)"] --> B["参考帧 ref_t<br/>+ 前瞻 ref_(t+1, t+2, t+3)"]
     C["Isaac Gym 4096 env"] --> D["当前状态 s_t"]
-    B --> O["obs = s_t || ref_(t+1..t+3)"]
+    B --> O["obs = s_t  ##  ref_(t+1..t+3)"]
     D --> O
     O --> P["Actor pi<br/>fc 2x1024, sigma=0.05"]
     P --> Q["action a_t (29-D)"]

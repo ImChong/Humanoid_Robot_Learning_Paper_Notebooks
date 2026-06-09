@@ -142,7 +142,7 @@ $\beta$ 是温度参数，控制权重的"尖锐程度"：
 flowchart TB
     R["Replay Buffer<br/>存储 (s,a,r) 轨迹"] --> E["评估：V_φ 与回报 R_t<br/>算优势 A(s,a)"]
     E --> W["权重 w ∝ exp(A/β)<br/>归一化 Z"]
-    W --> U["加权监督更新<br/>max E[w·log π_θ(a|s)]"]
+    W --> U["加权监督更新<br/>max E[w·log π_θ(a#124;s)]"]
     U --> C["环境 rollout<br/>写入 Buffer"]
     C --> R
 </div>
@@ -232,7 +232,7 @@ flowchart TB
 <div class="mermaid">
 flowchart TB
     S["从 Replay Buffer 采样 batch"] --> W["w_i = exp(A_i/β) / Z"]
-    W --> L["log π_θ(a_i | s_i)"]
+    W --> L["log π_θ(a_i #124; s_i)"]
     L --> G["θ ← θ + α ∇_θ Σ w_i · log π_θ"]
     G --> E["w≈0.95 强模仿好动作<br/>w≈0.03 几乎无影响<br/>w≈0.0001 基本忽略"]
 </div>
@@ -258,7 +258,7 @@ flowchart TB
     V["从缓冲区采样<br/>训练 V_φ（MSE loss）"]
     A["计算优势 A(s,a) = R - V_φ(s)"]
     W["计算权重 w = exp(A/β) / Z"]
-    U["加权回归更新策略<br/>max Σ w · log π_θ(a|s)"]
+    U["加权回归更新策略<br/>max Σ w · log π_θ(a#124;s)"]
     Q{回报 > 目标?}
     DONE((训练完成))
     I --> C --> V --> A --> W --> U --> Q
@@ -461,7 +461,7 @@ flowchart TB
     Col["① 收集：π_θ rollout → 加入 D"]
     Val["② 估计价值：采样 batch<br/>R_t = Σ γ^k r_{t+k}<br/>minimize MSE(V_φ(s), R_t)"]
     Adv["③ 加权回归：A = R_t - V_φ(s)<br/>w = exp(A/β) / Z"]
-    Pol["maximize Σ w · log π_θ(a|s)"]
+    Pol["maximize Σ w · log π_θ(a#124;s)"]
     Init --> Col --> Val --> Adv --> Pol --> Col
 </div>
 

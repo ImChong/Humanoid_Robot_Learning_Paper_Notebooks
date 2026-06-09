@@ -186,7 +186,7 @@ r_t = r^{\text{imit}}_t + r^{\text{reg}}_t + r^{\text{post}}_t
 
 ## 🧭 整体流程（mermaid）
 
-```mermaid
+<div class="mermaid">
 flowchart TB
   subgraph Data["数据因子化"]
     V[平地人类视频] --> VM[VideoMimic + SMPL]
@@ -210,7 +210,7 @@ flowchart TB
 
   Teacher -->|latent + BC + DAgger| Student
   Student --> G1[Unitree G1 真机零样本]
-```
+</div>
 
 ---
 

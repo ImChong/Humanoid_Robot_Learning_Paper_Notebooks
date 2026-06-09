@@ -216,8 +216,12 @@
     var code = source.trim();
     var div = document.createElement('div');
     div.className = 'mermaid';
+    if (typeof window.writeMermaidBlockSource === 'function') {
+      window.writeMermaidBlockSource(div, code);
+    } else {
+      div.textContent = code;
+    }
     div.setAttribute('data-original-code', code);
-    div.textContent = code;
     return div;
   }
 

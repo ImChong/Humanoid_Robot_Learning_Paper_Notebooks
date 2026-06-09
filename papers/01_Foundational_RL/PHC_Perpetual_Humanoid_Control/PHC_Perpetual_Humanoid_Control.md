@@ -327,7 +327,7 @@ flowchart TB
     F["fail init：随机摔倒状态库"]
     F --> R["recovery 90 步内禁止 reset"]
     R --> OK["根节点距参考 <0.5m → 切回模仿"]
-</motion.div>
+</div>
 
 对应逻辑是：
 - 有些 episode 从正常轨迹开始

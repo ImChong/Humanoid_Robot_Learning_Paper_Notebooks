@@ -73,7 +73,7 @@ PULSE 采用两阶段学习框架：
 flowchart TB
     AMASS["AMASS 大规模动作"] --> M1["阶段1：模仿器<br/>跟踪多样动作"]
     M1 --> M2["阶段2：VIB 蒸馏<br/>32 维潜变量 z"]
-    Prop["本体感受先验<br/>p(z|s)"] --> M2
+    Prop["本体感受先验<br/>p(z#124;s)"] --> M2
     M2 --> Z["通用潜空间 Z"]
     Z --> HL["高层策略<br/>采样或优化 z"]
     HL --> Low["低层执行 / 跟踪器"]
@@ -87,7 +87,7 @@ flowchart TB
 <div class="mermaid">
 flowchart TB
   subgraph sample["随机采样 z"]
-    Z1["z ~ p(z|s)"] --> M1["连贯动作：转圈/挥手/小跑"]
+    Z1["z ~ p(z#124;s)"] --> M1["连贯动作：转圈/挥手/小跑"]
   end
   subgraph search["奖励引导"]
     R["任务奖励"] --> Z2["在 latent 搜索 z"]
