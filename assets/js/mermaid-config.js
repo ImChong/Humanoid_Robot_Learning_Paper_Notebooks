@@ -144,9 +144,11 @@
       htmlLabels: true,
       flowchart: scaledFlowchart(MERMAID_RENDER_SCALE),
       securityLevel: 'strict',
-      // Site already loads KaTeX CSS; use it for consistent math in flowcharts.
-      // Wrap LaTeX in node labels with $$...$$ (see mermaid.js.org/config/math.html).
-      forceLegacyMathML: true,
+      // Node labels: wrap LaTeX with $$...$$ (mermaid.js.org/config/math.html).
+      // Do NOT set forceLegacyMathML — it sizes nodes from hidden 1px MathML and
+      // clips KaTeX HTML; default MathML renders and measures correctly in modern
+      // browsers. legacyMathML falls back to KaTeX CSS when MathML is unavailable.
+      legacyMathML: true,
     };
   };
 
