@@ -22,7 +22,7 @@ category: "Foundational RL"
 | **PDF** | [下载](https://arxiv.org/pdf/1910.00177) |
 | **作者** | Xue Bin Peng, Aviral Kumar, Grace Zhang, Sergey Levine |
 | **机构** | UC Berkeley |
-| **发布时间** | 2019年9月30日 |
+| **发布时间** | 2019年9月30日（arXiv） |
 | **GitHub** | [xbpeng/awr](https://github.com/xbpeng/awr) |
 
 ---

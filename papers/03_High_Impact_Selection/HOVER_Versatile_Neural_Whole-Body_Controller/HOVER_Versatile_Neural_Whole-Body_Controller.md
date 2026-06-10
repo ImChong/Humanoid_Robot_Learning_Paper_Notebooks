@@ -25,6 +25,7 @@ zhname: "HOVER：面向人形机器人的多模态通用神经全身控制器"
 | **HTML** | [arxiv.org/html/2410.21229v2](https://arxiv.org/html/2410.21229v2) |
 | **PDF** | [arxiv.org/pdf/2410.21229](https://arxiv.org/pdf/2410.21229) |
 | **项目主页** | [hover-versatile-humanoid.github.io](https://hover-versatile-humanoid.github.io/) |
+| **发布时间** | 2024-10-28 (arXiv), ICRA 2025 |
 | **源码** | [NVlabs/HOVER](https://github.com/NVlabs/HOVER) （Apache-2.0） |
 | **Isaac Lab 部署示例** | [HOVER Policy 教程](https://isaac-sim.github.io/IsaacLab/v2.1.0/source/policy_deployment/00_hover/hover_policy.html) |
 | **作者** | Tairan He∗, Wenli Xiao∗, Toru Lin, Zhengyi Luo, Zhenjia Xu, Zhenyu Jiang, Jan Kautz, Changliu Liu, Guanya Shi, Xiaolong Wang, Linxi "Jim" Fan†, Yuke Zhu† |

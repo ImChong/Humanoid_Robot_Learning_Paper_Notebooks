@@ -20,7 +20,7 @@ category: "Loco-Manipulation and WBC"
 |------|------|
 | **arXiv** | [2602.21723](https://arxiv.org/abs/2602.21723) |
 | **PDF** | [下载](https://arxiv.org/pdf/2602.21723) |
-| **发布时间** | 2026年2月25日 |
+| **发布时间** | 2026年2月25日（arXiv） |
 | **机构** | BIGAI、北京大学、华中科技大学 |
 
 **作者**: Yutang Lin\*, Jieming Cui\*, Yixuan Li  

@@ -25,7 +25,7 @@ zhname: "几分钟学会走路：大规模并行深度强化学习"
 | **PDF** | [Download](https://arxiv.org/pdf/2109.11978.pdf) |
 | **作者** | Nikita Rudin, David Hoeller, Philipp Reist, Marco Hutter |
 | **机构** | ETH Zurich / NVIDIA |
-| **发布时间** | 2021-09 |
+| **发布时间** | 2021-09 (arXiv) |
 | **项目主页** | [ETH RSL Website](https://rsl.ethz.ch/research/legged-robotics.html) |
 | **代码** | [legged_gym (GitHub)](https://github.com/leggedrobotics/legged_gym) |
 

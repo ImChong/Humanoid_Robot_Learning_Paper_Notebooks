@@ -26,6 +26,7 @@ category: "Navigation"
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2508.14466) |
 | 会议版本 | [ICCV 2025（CVF 开放获取）](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_LookOut_Real-World_Humanoid_Egocentric_Navigation_ICCV_2025_paper.pdf) |
 | 项目主页 | [sites.google.com/stanford.edu/lookout](https://sites.google.com/stanford.edu/lookout) |
+| **发布时间** | 2025-08-20 (arXiv), [ICCV 2025（CVF 开放获取）](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_LookOut_Real-World_Humanoid_Egocentric_Navigation_ICCV_2025_paper.pdf) |
 | 源码 | 见项目主页（代码 / 数据集 AND 释出，论文未在正文给出独立 GitHub 短链） |
 | 机构 | **Stanford University** |
 | 主要作者 | **Boxiao Pan**, Adam W. Harley, C. Karen Liu, Leonidas J. Guibas |

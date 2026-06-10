@@ -25,7 +25,7 @@ zhname: "HumanoidBench：全身运动与操作的人形机器人仿真基准"
 | **PDF** | [Download](https://arxiv.org/pdf/2403.10506.pdf) |
 | **作者** | Carlos Ferrazza 等 |
 | **机构** | UCL / CMU / Oxford / Berkeley 等 |
-| **发布时间** | 2024-03 |
+| **发布时间** | 2024-03 (arXiv) |
 | **项目主页** | [humanoid-bench.github.io](https://humanoid-bench.github.io) |
 | **代码** | [GitHub - carlosferrazza/humanoid-bench](https://github.com/carlosferrazza/humanoid-bench) |
 

@@ -30,6 +30,7 @@ paper_order: 296
 | **机构** | 北京通用人工智能研究院（BIGAI）等 |
 | **硬件** | 小型人形机器人 **BRUCE**（实机 sim-to-real；策略 100 Hz → PD 力矩 1 kHz） |
 | **仿真** | **Isaac Gym** 训练；文中另含 sim-to-sim（MuJoCo、Gazebo 等）对照讨论 |
+| **发布时间** | 2026-02-06 (arXiv) |
 | **源码** | [bigai-ai/ECO-humanoid](https://github.com/bigai-ai/ECO-humanoid) |
 
 ---

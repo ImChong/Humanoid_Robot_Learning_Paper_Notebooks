@@ -24,6 +24,7 @@ category: "Teleoperation"
 | arXiv | [2602.15060](https://arxiv.org/abs/2602.15060) |
 | HTML | [在线阅读](https://arxiv.org/html/2602.15060v1) |
 | PDF | [下载](https://arxiv.org/pdf/2602.15060) |
+| **发布时间** | 2026-02-13 (arXiv) |
 | 源码 | [zhutengjie/CLOT](https://github.com/zhutengjie/CLOT) |
 | 提交日期 | 2026-02 |
 

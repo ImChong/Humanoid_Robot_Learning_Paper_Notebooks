@@ -28,6 +28,7 @@ category: "Manipulation"
 | 作者 | Yara Mahmoud, Yasheerah Yaqoot, Miguel Altamirano Cabrera, Dzmitry Tsetserukou |
 | 机构 | Skoltech · Intelligent Space Robotics Lab |
 | 发表时间 | 2026-01（HRI 2026 Companion Proceedings） |
+| **发布时间** | 2026-01-21 (arXiv), [HRI 2026 Companion · ACM DOI 10.1145/3776734.3794528](https://doi.org/10.1145/3776734.3794528) |
 | 源码 | 截至当前未见官方仓库公开（同组前作 ImpedanceGPT 路径可参考） |
 | 平台 | Unitree G1（双臂 + 三指夹爪，task-space 阻抗控制） |
 

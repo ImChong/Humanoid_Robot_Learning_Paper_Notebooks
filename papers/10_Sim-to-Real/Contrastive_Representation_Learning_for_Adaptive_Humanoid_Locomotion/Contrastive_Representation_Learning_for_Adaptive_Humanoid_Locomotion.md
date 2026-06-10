@@ -24,6 +24,7 @@ category: "Sim-to-Real"
 | arXiv | [2509.12858](https://arxiv.org/abs/2509.12858) |
 | HTML | [在线阅读 v1](https://arxiv.org/html/2509.12858v1) |
 | PDF | [下载](https://arxiv.org/pdf/2509.12858) |
+| **发布时间** | 2025-09-16 (arXiv) |
 | 源码 | 截至当前未见公开（实验室主页 [ArcLab @ HKU](https://arclab.hku.hk/) 可关注后续释出） |
 | 提交日期 | 2025-09-16 |
 

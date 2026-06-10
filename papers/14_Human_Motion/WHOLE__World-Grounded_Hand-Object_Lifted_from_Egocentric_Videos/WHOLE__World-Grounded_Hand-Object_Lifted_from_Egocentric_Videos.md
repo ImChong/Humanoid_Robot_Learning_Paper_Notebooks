@@ -21,7 +21,7 @@ category: "人体动作生成"
 
 | 项目 | 链接 |
 |---|---|
-| 时间 | 2026 年 2 月 |
+| 时间 | 2026 年 2 月（arXiv） |
 | arXiv | [2602.22209](https://arxiv.org/abs/2602.22209) |
 | HTML | [arxiv.org/html/2602.22209v1](https://arxiv.org/html/2602.22209v1) |
 | PDF | [arxiv.org/pdf/2602.22209](https://arxiv.org/pdf/2602.22209) |

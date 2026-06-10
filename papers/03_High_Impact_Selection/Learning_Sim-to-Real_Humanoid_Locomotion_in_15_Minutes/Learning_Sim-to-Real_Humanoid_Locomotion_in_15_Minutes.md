@@ -29,6 +29,7 @@ paper_order: 205
 | **作者** | Younggyo Seo*, Carmelo Sferrazza*, Juyue Chen, Guanya Shi, Rocky Duan, Pieter Abbeel |
 | **机构** | Amazon FAR（Frontier AI & Robotics） |
 | **硬件** | **Unitree G1**、**Booster T1**（速度跟踪与全身动作跟踪的 sim-to-real） |
+| **发布时间** | 2025-12-01 (arXiv) |
 | **源码** | 官方实现收录于 **Holosoma** 仓库：[amazon-far/holosoma](https://github.com/amazon-far/holosoma)（论文正文亦指向该仓库） |
 
 ---

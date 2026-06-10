@@ -25,6 +25,7 @@ category: "Teleoperation"
 | HTML | [arXiv HTML v1](https://arxiv.org/html/2602.09628v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2602.09628) |
 | 项目主页 | 截至当前未见公开发布 |
+| **发布时间** | 2026-02-10 (arXiv) |
 | 源码 | 截至当前未见公开发布 |
 | 机构 | 中国科学技术大学（USTC）· AnyWit Robotics |
 | 作者 | Jie Li · Bing Tang · Feng Wu · Rongyun Cao |

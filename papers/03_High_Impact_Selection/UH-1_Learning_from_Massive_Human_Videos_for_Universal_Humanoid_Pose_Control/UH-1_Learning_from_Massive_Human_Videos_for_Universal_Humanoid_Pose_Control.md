@@ -25,6 +25,7 @@ zhname: "UH-1：从海量互联网人类视频中学习通用人形姿态控制"
 | **HTML** | [arxiv.org/html/2412.14172](https://arxiv.org/html/2412.14172) |
 | **PDF** | [arxiv.org/pdf/2412.14172](https://arxiv.org/pdf/2412.14172) |
 | **项目主页** | [usc-gvl.github.io/UH-1](https://usc-gvl.github.io/UH-1/) |
+| **发布时间** | 2024-12-18 (arXiv) |
 | **源码（官方）** | [github.com/sihengz02/UH-1](https://github.com/sihengz02/UH-1) |
 | **模型权重** | [huggingface.co/USC-PSI-Lab/UH-1](https://huggingface.co/USC-PSI-Lab/UH-1) |
 | **数据集** | Humanoid-X（163,800 段视频 · 20M+ 帧 · 约 240 h） |

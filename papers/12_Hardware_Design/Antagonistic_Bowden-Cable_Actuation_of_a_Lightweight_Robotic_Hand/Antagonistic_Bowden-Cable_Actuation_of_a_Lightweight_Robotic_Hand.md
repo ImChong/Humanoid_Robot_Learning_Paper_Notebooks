@@ -28,6 +28,7 @@ category: "硬件设计"
 | 作者 | Sungjae Min, Hyungjoo Kim, David Hyunchul Shim |
 | 机构 | **KAIST 电机系**（韩国科学技术院） |
 | 作者参考 | [DBLP: David Hyunchul Shim](https://dblp.org/pid/51/281.html) |
+| **发布时间** | 2025-12-31 (arXiv) |
 | 源码 | ⚠️ 截至当前未见公开仓库；论文未给出 GitHub / 项目主页链接 |
 
 ---

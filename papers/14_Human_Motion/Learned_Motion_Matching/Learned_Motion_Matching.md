@@ -28,6 +28,7 @@ category: "人体动作生成"
 | 项目主页 | [theorangeduck.com/page/learned-motion-matching](https://theorangeduck.com/page/learned-motion-matching) |
 | 作者 | Daniel Holden, Oussama Kanoun, Maksym Perepichka, Tiberiu Popa |
 | 机构 | **Ubisoft La Forge**（蒙特利尔）/ Concordia University |
+| **发布时间** | 2022-09-29 (arXiv), **ACM SIGGRAPH 2020**（ACM TOG, Vol. 39, No. 4, Article 53） |
 | 代码（作者后续开源 demo） | [orangeduck/Motion-Matching](https://github.com/orangeduck/Motion-Matching) |
 | 代码（社区实现） | [pau1o-hs/Learned-Motion-Matching](https://github.com/pau1o-hs/Learned-Motion-Matching) |
 | 配套动作数据 | [ubisoft/ubisoft-laforge-animation-dataset (LaFAN1)](https://github.com/ubisoft/ubisoft-laforge-animation-dataset) |

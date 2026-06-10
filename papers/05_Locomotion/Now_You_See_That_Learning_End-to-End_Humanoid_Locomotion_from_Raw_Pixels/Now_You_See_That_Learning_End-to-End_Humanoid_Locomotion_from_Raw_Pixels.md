@@ -25,6 +25,7 @@ category: "Locomotion"
 | HTML | [arXiv HTML](https://arxiv.org/html/2602.06382) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2602.06382) |
 | 项目主页 | [hellod035.github.io/Now_You_See_That](https://hellod035.github.io/Now_You_See_That/) |
+| **发布时间** | 2026-02-06 (arXiv) |
 | 源码 | [Hellod035/Now_You_See_That](https://github.com/Hellod035/Now_You_See_That) |
 | 机构 | Harbin Institute of Technology · HONOR Robot Team |
 | 发表时间 | 2026-02 |

@@ -24,7 +24,7 @@ category: "Loco-Manipulation and WBC"
 | **PDF (arXiv)** | [下载](https://arxiv.org/pdf/2603.09170) |
 | **项目主页** | [zerowbc.github.io](https://zerowbc.github.io/) |
 | **GitHub** | 待官方释出（项目主页声明将开源数据/训练/推理流水线） |
-| **发布时间** | 2026 年 3 月 |
+| **发布时间** | 2026 年 3 月（arXiv） |
 | **任务定位** | 人形机器人 Visuomotor Whole-Body Control |
 | **数据来源** | 人类第一人称（egocentric）视频 + 少量真机轨迹 |
 

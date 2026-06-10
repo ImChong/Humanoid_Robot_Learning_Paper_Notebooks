@@ -22,7 +22,7 @@ category: "Loco-Manipulation and WBC"
 | **PDF** | [下载](https://arxiv.org/pdf/2603.03279) |
 | **项目主页** | [ultra-humanoid.github.io](https://ultra-humanoid.github.io/) |
 | **GitHub** | 暂未开源（2026.03 刚发布） |
-| **发布时间** | 2026年3月3日 |
+| **发布时间** | 2026年3月3日（arXiv） |
 | **机构** | University of Illinois Urbana-Champaign (UIUC) |
 | **实验平台** | Unitree G1 人形机器人 |
 

@@ -23,6 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.15827) |
 | PDF | [下载](https://arxiv.org/pdf/2602.15827) |
 | DOI | [10.48550/arXiv.2602.15827](https://doi.org/10.48550/arXiv.2602.15827) |
+| **发布时间** | 2026-02-17 (arXiv) |
 | 代码 | 暂未公开（截至 2026-04-28） |
 | 实验平台 | Unitree G1 |
 | 提交日期 | 2026-02-17 |

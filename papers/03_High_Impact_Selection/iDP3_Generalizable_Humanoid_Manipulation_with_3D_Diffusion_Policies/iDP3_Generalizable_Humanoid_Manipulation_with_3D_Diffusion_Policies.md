@@ -25,6 +25,7 @@ zhname: "iDP3：基于改进版 3D 扩散策略的可泛化人形操作"
 | **HTML** | [arxiv.org/html/2410.10803v3](https://arxiv.org/html/2410.10803v3) |
 | **PDF** | [arxiv.org/pdf/2410.10803](https://arxiv.org/pdf/2410.10803) |
 | **项目主页** | [humanoid-manipulation.github.io](https://humanoid-manipulation.github.io/) |
+| **发布时间** | 2024-10-14 (arXiv), IROS 2025 |
 | **源码（策略）** | [YanjieZe/Improved-3D-Diffusion-Policy](https://github.com/YanjieZe/Improved-3D-Diffusion-Policy) |
 | **源码（遥操作）** | [YanjieZe/humanoid_teleoperation](https://github.com/YanjieZe/humanoid_teleoperation) |
 | **作者** | Yanjie Ze, Zixuan Chen, Wenhao Wang, Tianyi Chen, Xialin He, Ying Yuan, Xue Bin Peng, Jiajun Wu |

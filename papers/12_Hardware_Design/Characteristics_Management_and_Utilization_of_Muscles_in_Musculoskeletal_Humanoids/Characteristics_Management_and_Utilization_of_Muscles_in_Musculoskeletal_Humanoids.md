@@ -25,6 +25,7 @@ category: "硬件设计"
 | HTML | [在线阅读](https://arxiv.org/html/2602.08518v1) |
 | PDF | [下载](https://arxiv.org/pdf/2602.08518) |
 | 期刊 | **Advanced Intelligent Systems**（Wiley, 2026） |
+| **发布时间** | 2026-02-09 (arXiv) |
 | 源码 | ⚠️ 截至当前未见配套代码仓库（综述/实证类文章，作者 [haraduka/GitHub](https://github.com/haraduka) 仅维护各子方向的独立工程） |
 | 作者主页 | [haraduka.github.io](https://haraduka.github.io/) |
 | 提交日期 | 2026-02 |

@@ -24,7 +24,7 @@ category: "Loco-Manipulation and WBC"
 | **PDF** | [下载](https://arxiv.org/pdf/2511.04679) |
 | **项目主页** | [gentle-humanoid.axell.top](https://gentle-humanoid.axell.top) |
 | **GitHub** | [Deployment](https://github.com/Axellwppr/gentle-humanoid) / [Training](https://github.com/Axellwppr/gentle-humanoid-training) |
-| **发布时间** | 2025年11月6日 |
+| **发布时间** | 2025年11月6日（arXiv） |
 | **机构** | Stanford University |
 | **实验平台** | Unitree G1 humanoid |
 | **控制频率** | 高层策略 50 Hz，低层 PD 跟踪 |

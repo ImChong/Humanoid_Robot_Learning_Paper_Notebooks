@@ -25,6 +25,7 @@ category: "硬件设计"
 | HTML | [在线阅读](https://arxiv.org/html/2512.08920v1) |
 | PDF | [下载](https://arxiv.org/pdf/2512.08920) |
 | 项目主页 | [jessicayin.github.io/osmo_tactile_glove](https://jessicayin.github.io/osmo_tactile_glove/) |
+| **发布时间** | 2025-12-09 (arXiv) |
 | 源码 / 硬件 | [github.com/jessicayin/osmo_tactile_glove](https://github.com/jessicayin/osmo_tactile_glove)（含固件、PCB、装配指南，硬件文件在 `website` 分支） |
 | 演示视频 | [YouTube](https://www.youtube.com/watch?v=rhLiipDpKRc) |
 | 机构 | Meta FAIR · UC Berkeley · University of Pennsylvania |

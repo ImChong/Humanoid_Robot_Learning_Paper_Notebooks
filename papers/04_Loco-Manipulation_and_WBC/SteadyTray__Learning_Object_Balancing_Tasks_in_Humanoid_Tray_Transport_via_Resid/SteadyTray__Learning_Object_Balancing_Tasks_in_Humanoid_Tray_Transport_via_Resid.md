@@ -25,7 +25,7 @@ category: "Loco-Manipulation and WBC"
 | **项目主页** | [steadytray.github.io](https://steadytray.github.io) |
 | **GitHub (官方)** | [AllenHuangGit/steadytray](https://github.com/AllenHuangGit/steadytray) |
 | **作者主页** | [Anlun Huang](https://allenhuanggit.github.io/) |
-| **发布时间** | 2026 年 3 月 |
+| **发布时间** | 2026 年 3 月（arXiv） |
 | **机构** | UC San Diego · Advanced Robotics and Controls Lab (ARCLAB) |
 | **实验平台** | Unitree G1 (29-DoF) |
 | **仿真器** | IsaacLab（训练）+ MuJoCo（Sim2Sim 验证） |

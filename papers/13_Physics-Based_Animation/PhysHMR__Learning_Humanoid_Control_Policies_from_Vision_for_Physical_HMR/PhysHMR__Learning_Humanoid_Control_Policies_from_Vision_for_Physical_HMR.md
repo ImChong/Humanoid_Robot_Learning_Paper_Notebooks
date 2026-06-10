@@ -29,6 +29,7 @@ category: "物理动画"
 | 提交日期 | 2025-10-02 |
 | 作者 | Qiao Feng, Yiming Huang, Yufu Wang, Jiatao Gu, Lingjie Liu |
 | 机构 | **University of Pennsylvania** |
+| **发布时间** | 2025-10-02 (arXiv), **SIGGRAPH Asia 2025**（[ACM DOI 10.1145/3757377.3763951](https://doi.org/10.1145/3757377.3763951)） |
 | 源码 | ✅ [fengq1a0/physhmr](https://github.com/fengq1a0/physhmr)（Isaac Gym + PHC 基线 + AIST++ 数据集） |
 
 ---

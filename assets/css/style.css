@@ -314,10 +314,22 @@ html {
   color: var(--link);
 }
 
-.paper-card .paper-title {
+.paper-card-text {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.paper-card .paper-title {
   font-weight: 600;
+}
+
+.paper-card .paper-published {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.3;
 }
 
 .paper-card .paper-opensource {

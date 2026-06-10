@@ -23,6 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.02960v2) |
 | PDF | [下载](https://arxiv.org/pdf/2602.02960) |
 | alphaXiv | [overview](https://www.alphaxiv.org/overview/2602.02960) |
+| **发布时间** | 2026-02-03 (arXiv) |
 | 源码 | 截至论文发布暂未公开（作者主页 [@Bariona](https://github.com/Bariona)） |
 | 提交日期 | 2026-02 |
 

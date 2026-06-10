@@ -26,7 +26,7 @@ paper_order: 1
 | **项目主页** | [jaraujo98.github.io/retargeting_matters](https://jaraujo98.github.io/retargeting_matters) |
 | **PDF** | [arXiv PDF](https://arxiv.org/pdf/2510.02252) |
 | **会议** | **ICRA 2026**（README 已标注） |
-| **发布时间** | 2025 年 10 月 |
+| **发布时间** | 2025 年 10 月（arXiv） |
 | **许可** | MIT License（代码） |
 | **机构** | Stanford University（C. Karen Liu / Jiajun Wu 组） |
 | **联系方式** | lastyanjieze@gmail.com（提交新机器人 / 新格式支持） |

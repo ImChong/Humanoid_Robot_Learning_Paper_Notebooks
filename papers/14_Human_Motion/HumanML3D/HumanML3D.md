@@ -25,7 +25,7 @@ zhname: "从文本描述生成多样化且自然的 3D 人体运动"
 | **PDF** | [Download](https://arxiv.org/pdf/2204.09419.pdf) |
 | **作者** | Chuan Guo, Shihao Zou, Xinxin Zuo, Sen Wang, Wei Ji, Xingyuan Li, Li Cheng |
 | **机构** | University of Alberta / Simon Fraser University |
-| **发布时间** | 2022-04 |
+| **发布时间** | 2022-04 (arXiv) |
 | **项目主页** | [Text-to-Motion Project](https://ericguo5513.github.io/text-to-motion/) |
 | **代码** | [EricGuo5513/text-to-motion](https://github.com/EricGuo5513/text-to-motion) |
 

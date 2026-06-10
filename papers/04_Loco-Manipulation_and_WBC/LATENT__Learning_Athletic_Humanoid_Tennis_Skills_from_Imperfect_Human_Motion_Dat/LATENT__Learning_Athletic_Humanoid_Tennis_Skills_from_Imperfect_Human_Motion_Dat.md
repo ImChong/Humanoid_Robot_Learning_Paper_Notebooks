@@ -25,7 +25,7 @@ category: "Loco-Manipulation and WBC"
 | **PDF (项目主页)** | [Humanoid_Tennis.pdf](https://zzk273.github.io/LATENT/static/scripts/Humanoid_Tennis.pdf) |
 | **项目主页** | [zzk273.github.io/LATENT](https://zzk273.github.io/LATENT/) |
 | **GitHub** | [GalaxyGeneralRobotics/LATENT](https://github.com/GalaxyGeneralRobotics/LATENT) |
-| **发布时间** | 2026 年 3 月 |
+| **发布时间** | 2026 年 3 月（arXiv） |
 | **机构** | Tsinghua University · Peking University · Galbot 等 |
 | **实验平台** | Unitree G1 humanoid |
 | **仿真器** | MuJoCo（JAX/Brax 训练，ONNX 部署） |

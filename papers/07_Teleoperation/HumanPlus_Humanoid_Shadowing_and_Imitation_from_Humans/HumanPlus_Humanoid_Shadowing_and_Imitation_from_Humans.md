@@ -25,7 +25,7 @@ zhname: "HumanPlus：人形机器人对人类的影子跟随与模仿"
 | **PDF** | [Download](https://arxiv.org/pdf/2406.10454.pdf) |
 | **作者** | Zipeng Fu, Zhuo Xu, Shuran Song |
 | **机构** | Stanford University |
-| **发布时间** | 2024-06 |
+| **发布时间** | 2024-06 (arXiv) |
 | **项目主页** | [humanoid-ai.github.io](https://humanoid-ai.github.io/) |
 | **代码** | [GitHub - MarkFzp/humanplus](https://github.com/MarkFzp/humanplus) |
 

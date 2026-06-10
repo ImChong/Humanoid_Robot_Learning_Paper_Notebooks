@@ -24,6 +24,7 @@ category: "Loco-Manipulation and WBC"
 | PDF | [下载](https://arxiv.org/pdf/2602.00401) |
 | 项目主页 | 暂未释出（参考 [The AI Institute](https://theaiinstitute.com/)） |
 | 视频解读 | [YouTube AI Podcast](https://www.youtube.com/watch?v=HDv2RJ5pUeY) |
+| **发布时间** | 2026-01-30 (arXiv) |
 | 源码 | 截至论文发布暂未公开 |
 | 提交日期 | 2026-02 |
 

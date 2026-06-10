@@ -26,6 +26,7 @@ category: "Navigation"
 | PDF | [下载](https://arxiv.org/pdf/2602.04515) |
 | 项目主页 | [baai-agents.github.io/EgoActor](https://baai-agents.github.io/EgoActor/) |
 | Hugging Face | [papers/2602.04515](https://huggingface.co/papers/2602.04515) |
+| **发布时间** | 2026-02-04 (arXiv) |
 | 源码 / 权重 | 待官方释出（论文声明开源代码、模型、数据与评测协议） |
 | 提交日期 | 2026-02 |
 

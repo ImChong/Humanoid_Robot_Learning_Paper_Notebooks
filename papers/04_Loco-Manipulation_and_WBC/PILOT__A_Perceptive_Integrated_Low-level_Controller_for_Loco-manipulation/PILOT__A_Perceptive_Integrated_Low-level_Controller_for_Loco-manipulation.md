@@ -26,6 +26,7 @@ category: "Loco-Manipulation and WBC"
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2601.17440) |
 | alphaXiv | [alphaXiv 概览页](https://www.alphaxiv.org/overview/2601.17440v1) |
 | 项目主页 | 截至当前未见公开发布 |
+| **发布时间** | 2026-01-24 (arXiv) |
 | 源码 | 截至当前未见公开发布 |
 | 作者 | Xinru Cui, Linxi Feng, Yixuan Zhou, Haoqi Han, Zhe Liu, Hesheng Wang |
 | 机构 | 上海交通大学 自动化与感知学院（School of Automation and Intelligent Sensing, SJTU） |

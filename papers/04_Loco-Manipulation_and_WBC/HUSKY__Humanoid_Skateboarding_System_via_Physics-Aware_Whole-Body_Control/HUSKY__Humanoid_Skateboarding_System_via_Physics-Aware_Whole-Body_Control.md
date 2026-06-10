@@ -23,6 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.03205v1) |
 | PDF | [下载](https://arxiv.org/pdf/2602.03205) |
 | 项目主页 | [husky-humanoid.github.io](https://husky-humanoid.github.io/) |
+| **发布时间** | 2026-02-03 (arXiv) |
 | 源码 | [TeleHuman/humanoid_skateboarding](https://github.com/TeleHuman/humanoid_skateboarding) |
 | 收录 | RSS 2026 |
 | 提交日期 | 2026-02 |

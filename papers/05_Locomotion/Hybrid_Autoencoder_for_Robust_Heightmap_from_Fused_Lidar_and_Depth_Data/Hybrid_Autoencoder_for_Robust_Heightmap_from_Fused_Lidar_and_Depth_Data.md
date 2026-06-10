@@ -25,6 +25,7 @@ category: "Locomotion"
 | HTML | [arXiv HTML v1](https://arxiv.org/html/2602.05855v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2602.05855) |
 | 项目主页 | 截至当前未见公开发布 |
+| **发布时间** | 2026-02-05 (arXiv), VDI Mechatronics Conference 2026 |
 | 源码 | 截至当前未见公开发布 |
 | 作者 | Dennis Bank, Joost Cordes, Thomas Seel, Simon F. G. Ehlers |
 | 机构 | Institute of Mechatronic Systems · Leibniz University Hannover |
