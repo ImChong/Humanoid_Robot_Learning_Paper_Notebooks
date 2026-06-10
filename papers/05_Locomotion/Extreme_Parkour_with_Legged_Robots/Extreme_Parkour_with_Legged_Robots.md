@@ -25,7 +25,7 @@ zhname: "足式机器人的极限跑酷"
 | **PDF** | [Download](https://arxiv.org/pdf/2309.14341.pdf) |
 | **作者** | Xuxin Cheng, Kexin Shi, Ananye Agarwal, Deepak Pathak |
 | **机构** | Carnegie Mellon University (CMU) |
-| **发布时间** | 2023-09 |
+| **发布时间** | 2023-09 (arXiv) |
 | **项目主页** | [extreme-parkour.github.io](https://extreme-parkour.github.io/) |
 | **代码** | [GitHub - extreme-parkour](https://github.com/cheng-xuxin/extreme-parkour) |
 

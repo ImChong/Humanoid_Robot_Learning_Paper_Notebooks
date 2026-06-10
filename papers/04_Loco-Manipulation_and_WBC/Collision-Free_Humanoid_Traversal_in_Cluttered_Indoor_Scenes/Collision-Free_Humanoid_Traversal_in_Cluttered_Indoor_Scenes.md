@@ -25,7 +25,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [arXiv HTML](https://arxiv.org/html/2601.16035v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2601.16035) |
 | 项目主页 | [axian12138.github.io/CAT](https://axian12138.github.io/CAT/) |
-| **发布时间** | 2026-01-22 |
+| **发布时间** | 2026-01-22 (arXiv) |
 | 源码 | [GalaxyGeneralRobotics/Click-and-Traverse](https://github.com/GalaxyGeneralRobotics/Click-and-Traverse)（Apache-2.0） |
 | 作者 | Han Xue, Sikai Liang, Zhikai Zhang, Zicheng Zeng, Yun Liu, Yunrui Lian, Jilong Wang, Qingtao Liu, Xuesong Shi, Li Yi |
 | 机构 | 清华大学（Li Yi 团队）· 银河通用 Galaxy General Robotics |

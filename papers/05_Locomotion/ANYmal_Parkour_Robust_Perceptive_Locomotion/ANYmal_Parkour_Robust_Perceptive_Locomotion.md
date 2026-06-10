@@ -25,7 +25,7 @@ zhname: "ANYmal 跑酷：足式机器人的敏捷导航学习"
 | **PDF** | [Download](https://arxiv.org/pdf/2306.14874.pdf) |
 | **作者** | David Hoeller, Nikita Rudin, Christopher Sako, Marco Hutter |
 | **机构** | ETH Zurich / NVIDIA |
-| **发布时间** | 2023-06 |
+| **发布时间** | 2023-06 (arXiv) |
 | **项目主页** | [ETH RSL ANYmal Parkour Website](https://rsl.ethz.ch/research/anymal-parkour.html) |
 | **代码** | 🚧 宇树 Go1 版有部分复现，官方代码部分开源 |
 

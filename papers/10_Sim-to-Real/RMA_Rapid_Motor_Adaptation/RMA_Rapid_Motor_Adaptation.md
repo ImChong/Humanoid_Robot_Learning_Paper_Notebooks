@@ -25,7 +25,7 @@ zhname: "RMA：足式机器人的快速电机自适应"
 | **PDF** | [Download](https://arxiv.org/pdf/2107.04034.pdf) |
 | **作者** | Ashish Kumar, Zipeng Fu, Deepak Pathak, Jitendra Malik |
 | **机构** | UC Berkeley / Facebook AI Research / CMU |
-| **发布时间** | 2021-07 |
+| **发布时间** | 2021-07 (arXiv) |
 | **项目主页** | [ashish-kmr.github.io/rma-legged-robots/](https://ashish-kmr.github.io/rma-legged-robots/) |
 | **代码** | 🚧 |
 

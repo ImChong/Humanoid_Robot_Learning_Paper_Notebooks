@@ -25,7 +25,7 @@ category: "Manipulation"
 | HTML | [arXiv HTML v2](https://arxiv.org/html/2601.05844v2) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2601.05844) |
 | 项目主页 | [pku-mocca.github.io/Dextercap-Page](https://pku-mocca.github.io/Dextercap-Page/) |
-| **发布时间** | 2026-01-09 |
+| **发布时间** | 2026-01-09 (arXiv) |
 | 源码 | [PKU-MoCCA/dextercap](https://github.com/PKU-MoCCA/dextercap) |
 | 团队 | 北京大学 PKU-MoCCA |
 | 发表时间 | 2026-01 |

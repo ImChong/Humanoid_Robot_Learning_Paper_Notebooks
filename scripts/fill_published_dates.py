@@ -19,10 +19,18 @@ from prepare_pages import (  # noqa: E402
     _EMPTY_TABLE_ROW_RE,
     _LABEL_STARS_RE,
     _NEXT_H2_RE,
+    _PUBLISH_DATE_LABEL_RE,
     _extract_basic_info_section,
     extract_arxiv,
     extract_published_date,
 )
+
+_ARXIV_MENTION_RE = re.compile(r"arXiv|arxiv", re.IGNORECASE)
+_VENUE_IN_DATE_RE = re.compile(
+    r"SIGGRAPH|ICCV|ICLR|RSS|CoRL|IROS|CVPR|NeurIPS|HRI|ICRA|Science Robotics|ACM TOG",
+    re.IGNORECASE,
+)
+_CHINESE_DATE_RE = re.compile(r"[年月日]")
 
 _ARXIV_API = "http://export.arxiv.org/api/query"
 _ARXIV_NS = {"a": "http://www.w3.org/2005/Atom"}
@@ -80,11 +88,20 @@ def _extract_time_row(section: str) -> str | None:
     return None
 
 
+def ensure_arxiv_tag(date: str) -> str:
+    """Append ``(arXiv)`` / ``（arXiv）`` when the date has no arXiv marker or venue label."""
+    date = date.strip()
+    if not date or _ARXIV_MENTION_RE.search(date) or _VENUE_IN_DATE_RE.search(date):
+        return date
+    suffix = "（arXiv）" if _CHINESE_DATE_RE.search(date) else " (arXiv)"
+    return f"{date}{suffix}"
+
+
 def _format_publish_date(arxiv_date: str | None, conference: str | None) -> str | None:
     if arxiv_date and conference:
         return f"{arxiv_date} (arXiv), {conference}"
     if arxiv_date:
-        return arxiv_date
+        return ensure_arxiv_tag(arxiv_date)
     if conference:
         return conference
     return None
@@ -145,6 +162,55 @@ def _find_insert_offset(section_lines: list[str]) -> int:
     return insert_at if last_anchor == 0 else last_anchor
 
 
+def replace_published_date_value(content: str, new_value: str) -> tuple[str, bool]:
+    bounds = _find_basic_info_bounds(content)
+    if bounds is None:
+        return content, False
+
+    start, end = bounds
+    section_lines = content[start:end].splitlines(keepends=True)
+    changed = False
+    for idx, line in enumerate(section_lines):
+        label = _table_label(line)
+        if not label or not _PUBLISH_DATE_LABEL_RE.search(label):
+            continue
+        cols = [c.strip() for c in line.strip().split("|")]
+        cols = [c for c in cols if c]
+        if len(cols) < 2:
+            continue
+        label_cell = cols[0]
+        section_lines[idx] = f"| {label_cell} | {new_value} |\n"
+        changed = True
+        break
+
+    if not changed:
+        return content, False
+
+    new_section = "".join(section_lines)
+    return content[:start] + new_section + content[end:], True
+
+
+def normalize_arxiv_tags_in_note(path: str, dry_run: bool) -> bool:
+    content = open(path, encoding="utf-8").read()
+    if not extract_arxiv(content):
+        return False
+    current = extract_published_date(content)
+    if not current:
+        return False
+    new_date = ensure_arxiv_tag(current)
+    if new_date == current:
+        return False
+    new_content, changed = replace_published_date_value(content, new_date)
+    if not changed:
+        return False
+    rel = os.path.relpath(path, BASE_DIR)
+    print(f"{'[dry-run] ' if dry_run else ''}normalize {rel}: {current} -> {new_date}")
+    if not dry_run:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(new_content)
+    return True
+
+
 def insert_published_date_row(content: str, date_value: str) -> tuple[str, bool]:
     if extract_published_date(content):
         return content, False
@@ -189,7 +255,18 @@ def collect_targets() -> list[dict]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true", help="Print planned updates only")
+    parser.add_argument(
+        "--skip-normalize",
+        action="store_true",
+        help="Do not add missing (arXiv) markers to existing publish dates",
+    )
     args = parser.parse_args()
+
+    if not args.skip_normalize:
+        normalized = sum(
+            normalize_arxiv_tags_in_note(path, args.dry_run) for path in iter_paper_md_files()
+        )
+        print(f"\nNormalized arXiv tags: {normalized}")
 
     targets = collect_targets()
     arxiv_ids = sorted({t["arxiv"] for t in targets if t["arxiv"]})
@@ -217,7 +294,7 @@ def main() -> int:
                 f.write(new_content)
         updated += 1
 
-    print(f"\nUpdated: {updated}")
+    print(f"\nInserted missing publish dates: {updated}")
     if skipped:
         print(f"Skipped (no date source): {len(skipped)}")
         for path in skipped:

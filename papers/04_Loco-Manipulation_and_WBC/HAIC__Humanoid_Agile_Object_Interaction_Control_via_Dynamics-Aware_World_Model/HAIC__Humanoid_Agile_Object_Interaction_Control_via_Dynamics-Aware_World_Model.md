@@ -23,7 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.11758) |
 | PDF | [下载](https://arxiv.org/pdf/2602.11758) |
 | 项目主页 | [haic-humanoid.github.io](https://haic-humanoid.github.io/) |
-| **发布时间** | 2026-02-12 |
+| **发布时间** | 2026-02-12 (arXiv) |
 | 源码 | 待官方释出（项目主页与 arXiv 截至 2026-04-29 暂未公开仓库链接） |
 | 提交日期 | 2026-02-12 |
 

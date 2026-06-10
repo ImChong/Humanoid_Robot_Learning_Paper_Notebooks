@@ -25,7 +25,7 @@ category: "Loco-Manipulation and WBC"
 | 代码 | 暂未公开（截至 2026-04-28） |
 | 平台 | Unitree H1-2 |
 | 仿真器 | Isaac Lab（训练）+ MuJoCo（Sim2Sim） |
-| 发布时间 | 2026-03-09 |
+| 发布时间 | 2026-03-09 (arXiv) |
 
 **作者**：Nehar Poddar, Stephen McCrory, Luigi Penco, Geoffrey Clark, Hakki Erhan Svil, Robert Griffin
 

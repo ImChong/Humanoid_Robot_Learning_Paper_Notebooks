@@ -24,7 +24,7 @@ category: "Loco-Manipulation and WBC"
 | PDF | [下载](https://arxiv.org/pdf/2602.02473) |
 | 项目主页 | [wyhuai.github.io/human-x](https://wyhuai.github.io/human-x/) |
 | 作者主页 | [@wyhuai](https://github.com/wyhuai) |
-| **发布时间** | 2026-02-02 |
+| **发布时间** | 2026-02-02 (arXiv) |
 | 源码 | 截至论文发布暂未公开（同作者前作 [PhysHOI](https://github.com/wyhuai/PhysHOI)、[SkillMimic](https://github.com/wyhuai/SkillMimic) 可参考） |
 | 提交日期 | 2026-02 |
 

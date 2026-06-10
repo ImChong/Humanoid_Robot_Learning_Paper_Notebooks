@@ -25,7 +25,7 @@ category: "Simulation Benchmark"
 | arXiv | [2510.07092](https://arxiv.org/abs/2510.07092) |
 | HTML | [在线阅读 v1](https://arxiv.org/html/2510.07092v1) |
 | PDF | [下载](https://arxiv.org/pdf/2510.07092) |
-| **发布时间** | 2025-10-08 |
+| **发布时间** | 2025-10-08 (arXiv) |
 | 挑战赛 / 源码 | [1x-technologies/1xgpt](https://github.com/1x-technologies/1xgpt) |
 | 数据集 | [HuggingFace · 1x-technologies/worldmodel](https://huggingface.co/datasets/1x-technologies/worldmodel)（Apache 2.0） |
 | 提交日期 | 2025-10-08 |

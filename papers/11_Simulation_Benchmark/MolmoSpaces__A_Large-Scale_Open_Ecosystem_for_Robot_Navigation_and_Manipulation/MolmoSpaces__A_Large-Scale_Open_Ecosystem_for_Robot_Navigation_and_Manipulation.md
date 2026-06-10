@@ -25,7 +25,7 @@ category: "Simulation Benchmark"
 | HTML | [在线阅读 v2](https://arxiv.org/html/2602.11337v2) |
 | PDF | [下载](https://arxiv.org/pdf/2602.11337) |
 | 项目页 | [allenai.org/blog/molmospaces](https://allenai.org/blog/molmospaces) · [论文页](https://allenai.org/papers/molmospaces) |
-| **发布时间** | 2026-02-11 |
+| **发布时间** | 2026-02-11 (arXiv) |
 | 源码 | [allenai/molmospaces](https://github.com/allenai/molmospaces) |
 | Hugging Face | [papers/2602.11337](https://huggingface.co/papers/2602.11337) |
 | 提交日期 | 2026-02 |

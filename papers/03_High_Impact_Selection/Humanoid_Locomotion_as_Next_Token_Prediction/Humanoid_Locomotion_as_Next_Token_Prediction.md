@@ -30,7 +30,7 @@ paper_order: 293
 | **作者** | Ilija Radosavovic, Bike Zhang, Baifeng Shi, Jathushan Rajasegaran, Sarthak Kamat, Trevor Darrell, Koushil Sreenath, Jitendra Malik |
 | **机构** | UC Berkeley（Hybrid Robotics / BAIR） |
 | **机器人** | Agility Robotics **Digit**（与 H12 相同平台，约 1.6 m / 45 kg / 高维闭链） |
-| **发布时间** | 2024-02-29 |
+| **发布时间** | 2024-02-29 (arXiv) |
 | **源码** | 截至笔记整理时 **未见到与论文标题一致的独立官方训练代码仓库**；数据管线涉及 PHALP、AMASS/KIT 与 Agility 仿真器，可与同组 [learning-humanoid-locomotion](https://learning-humanoid-locomotion.github.io/)（H12）生态对照阅读 |
 
 ---

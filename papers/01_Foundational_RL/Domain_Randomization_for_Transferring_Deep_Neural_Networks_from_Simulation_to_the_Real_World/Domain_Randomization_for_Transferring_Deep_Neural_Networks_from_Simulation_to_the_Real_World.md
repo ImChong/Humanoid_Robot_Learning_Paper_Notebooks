@@ -24,7 +24,7 @@ zhname: "域随机化：从仿真到真实世界的深度神经网络迁移"
 | **作者** | Josh Tobin, Rachel Fong, Alex Ray, Jonas Schneider, Wojciech Zaremba, Pieter Abbeel |
 | **机构** | OpenAI, UC Berkeley |
 | **会议** | IROS 2017 |
-| **发布时间** | 2017年3月 |
+| **发布时间** | 2017年3月（arXiv） |
 | **代码** | OpenAI **未发布**官方实现；社区复现可参考 [matwilso/domrand](https://github.com/matwilso/domrand)（KUKA 臂物体定位，非 Fetch 原版） |
 
 ---

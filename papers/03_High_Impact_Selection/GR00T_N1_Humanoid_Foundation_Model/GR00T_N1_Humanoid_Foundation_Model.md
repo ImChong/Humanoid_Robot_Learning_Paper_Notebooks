@@ -26,7 +26,7 @@ zhname: "GR00T N1：面向通用人形机器人的开放基础模型"
 | **PDF** | [Download](https://arxiv.org/pdf/2503.14734.pdf) |
 | **作者** | NVIDIA Project GR00T Team (Linxi Fan, Yuke Zhu 等) |
 | **机构** | NVIDIA |
-| **发布时间** | 2025-03 |
+| **发布时间** | 2025-03 (arXiv) |
 | **项目主页** | [NVIDIA GR00T Website](https://www.nvidia.com/en-us/geforce/news/project-gr00t-humanoid-robots/) |
 | **代码 / 模型** | [Hugging Face - GR00T-N1](https://huggingface.co/nvidia/GR00T-N1-2B) |
 

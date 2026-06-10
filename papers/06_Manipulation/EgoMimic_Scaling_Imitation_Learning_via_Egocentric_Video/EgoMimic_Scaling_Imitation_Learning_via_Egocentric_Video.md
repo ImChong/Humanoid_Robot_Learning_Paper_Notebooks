@@ -29,7 +29,7 @@ zhname: "EgoMimic：通过第一视角视频扩展模仿学习"
 | **源码（硬件/Eve 机器人）** | [SimarKareer/EgoMimic-Eve](https://github.com/SimarKareer/EgoMimic-Eve) |
 | **作者** | Simar Kareer, Dhruv Patel, Ryan Punamiya, Pranay Mathur, Shuo Cheng, Chen Wang, Judy Hoffman, Danfei Xu |
 | **机构** | Georgia Institute of Technology · Stanford University |
-| **发布时间** | 2024-10 |
+| **发布时间** | 2024-10 (arXiv) |
 | **机器人平台** | **Eve** — 双臂 ViperX 300S（6-DoF × 2）+ WidowX leader 遥操作 + Aria 头戴主视角 |
 
 ---

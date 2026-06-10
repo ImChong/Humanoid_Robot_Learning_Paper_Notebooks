@@ -25,7 +25,7 @@ category: "State Estimation"
 | HTML | [在线阅读](https://arxiv.org/html/2511.16306) |
 | PDF | [下载](https://arxiv.org/pdf/2511.16306) |
 | 项目页 | [DFKI 出版页](https://www.dfki.de/en/web/research/projects-and-publications/publication/16541) |
-| **发布时间** | 2025-11-20 |
+| **发布时间** | 2025-11-20 (arXiv) |
 | 源码 | 截至当前未见公开发布（论文未给出 GitHub 链接） |
 | 提交日期 | 2025-11 |
 

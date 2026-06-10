@@ -25,7 +25,7 @@ category: "Loco-Manipulation and WBC"
 | **项目主页** | [psi-lab.ai/Psi0](https://psi-lab.ai/Psi0/) |
 | **实验室主页** | [Physical Superintelligence Lab](https://psi-lab.ai/) |
 | **GitHub** | [physical-superintelligence-lab/Psi0](https://github.com/physical-superintelligence-lab/Psi0) |
-| **发布时间** | 2026 年 3 月 |
+| **发布时间** | 2026 年 3 月（arXiv） |
 | **机构** | USC Physical Superintelligence (PSI) Lab 等 |
 | **实验平台** | Unitree G1（29-DoF + Dex3-1 七指手）/ Unitree H1（27-DoF + INSPIRE 六指手） |
 | **License** | Apache 2.0 |

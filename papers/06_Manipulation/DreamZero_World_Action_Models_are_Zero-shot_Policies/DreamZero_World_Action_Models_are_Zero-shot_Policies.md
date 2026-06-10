@@ -27,7 +27,7 @@ category: "Manipulation"
 | HTML | [arXiv HTML v1](https://arxiv.org/html/2602.15922v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2602.15922) |
 | 项目主页 | [dreamzero0.github.io](https://dreamzero0.github.io/) |
-| **发布时间** | 2026-02-17 |
+| **发布时间** | 2026-02-17 (arXiv) |
 | 源码 / 权重 | [dreamzero0/dreamzero](https://github.com/dreamzero0/dreamzero) |
 | 机构 | NVIDIA（合作含 UC Berkeley、CMU 等） |
 | 发表时间 | 2026-02 |

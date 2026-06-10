@@ -25,7 +25,7 @@ category: "Locomotion"
 | HTML | [在线阅读](https://arxiv.org/html/2602.21666v1) |
 | PDF | [下载](https://arxiv.org/pdf/2602.21666) |
 | 项目主页 | 暂未明确单独主页（数据集与代码随论文释出） |
-| **发布时间** | 2026-02-25 |
+| **发布时间** | 2026-02-25 (arXiv) |
 | 源码 | 含 MuJoCo 可视化 + 两个 Jupyter Notebook（`GDAF_01_Data_Visualization.ipynb` / `GDAF_02_Divergence_Analysis.ipynb`），随论文释出 |
 | 数据集 | 28 速 Unitree G1 步态轨迹（关节位置 / 力矩 / 功率），与人类步态配对，随论文释出 |
 | 提交日期 | 2026-02 |

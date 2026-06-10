@@ -26,7 +26,7 @@ category: "Teleoperation"
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2602.01632) |
 | 项目主页 | [sew-mimic.com](https://sew-mimic.com/) |
 | 商业推介 | [Kinova Robotics 推文](https://www.kinovarobotics.com/resource/sew-mimic-fast-precise-and-natural-humanoid-robot-teleoperation) |
-| **发布时间** | 2026-02-02 |
+| **发布时间** | 2026-02-02 (arXiv) |
 | 源码 | 截至当前未见公开发布（项目页未挂代码仓库） |
 | 机构 | Georgia Tech（IRIM / AE / ME）· Qualcomm · Standard Bots · Florida A&M-FSU |
 | 主要作者 | Chuizheng Kong · Yunho Cho · Wonsuhk Jung · Long Kiu Chung · Danfei Xu · Taylor Higgins · **Shreyas Kousik** |

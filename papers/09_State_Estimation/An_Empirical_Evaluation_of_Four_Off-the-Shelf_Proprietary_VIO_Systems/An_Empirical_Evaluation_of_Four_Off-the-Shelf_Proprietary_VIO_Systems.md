@@ -26,7 +26,7 @@ category: "State Estimation"
 | PDF | [arXiv pdf](https://arxiv.org/pdf/2207.06780) |
 | 期刊版 | *Sensors* (MDPI) 22(24): 9873, 2022-12-15，DOI [10.3390/s22249873](https://doi.org/10.3390/s22249873)，期刊标题改为 **"A Benchmark Comparison of Four Off-the-Shelf Proprietary Visual–Inertial Odometry Systems"** |
 | OA 全文 | [PMC9785098](https://pmc.ncbi.nlm.nih.gov/articles/PMC9785098/) · [MDPI](https://www.mdpi.com/1424-8220/22/24/9873) · [PubMed 36560242](https://pubmed.ncbi.nlm.nih.gov/36560242/) |
-| **发布时间** | 2022-07-14 |
+| **发布时间** | 2022-07-14 (arXiv) |
 | 配套数据采集源码（iOS） | [PyojinKim/ARKit-Data-Logger](https://github.com/PyojinKim/ARKit-Data-Logger)（把 ARKit 6-DoF 位姿存成文本，供离线评测） |
 | 配套数据采集源码（Android） | [PyojinKim/ARCore-Data-Logger](https://github.com/PyojinKim/ARCore-Data-Logger)（同上，对应 ARCore） |
 | 第一作者 GitHub | [PyojinKim](https://github.com/PyojinKim)（含 LPVO / OPVO / 多套 VO 评估工具） |

@@ -27,7 +27,7 @@ category: "硬件设计"
 | 技术报告（厂商镜像） | [Fauna Robotics Technical Report (PDF)](https://cdn.prod.website-files.com/6931911db0300aa6e7e3fc81/6977d45ede8301c558098bf9_Fauna_Robotics_Technical_Report.pdf) |
 | 产品页 | [Sprout Creator Edition](https://faunarobotics.com/product) |
 | 公司主页 | [Fauna Robotics（NYC）](https://faunarobotics.com/) |
-| **发布时间** | 2026-01-26 |
+| **发布时间** | 2026-01-26 (arXiv) |
 | 源码 | ⚠️ 截至当前未发布开源仓库，仅提供 Python / C++ SDK 给"Creator Edition"用户；兼容 Isaac Sim / Isaac Lab / Gazebo / MuJoCo |
 | 提交日期 | 2026-01 |
 

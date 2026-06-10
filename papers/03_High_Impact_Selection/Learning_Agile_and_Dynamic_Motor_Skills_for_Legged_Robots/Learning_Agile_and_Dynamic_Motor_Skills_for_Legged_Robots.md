@@ -26,7 +26,7 @@ zhname: "ANYmal 敏捷运动技能学习（sim-to-real RL 奠基作）"
 | **PDF** | [arxiv.org/pdf/1901.08652](https://arxiv.org/pdf/1901.08652) |
 | **期刊版** | Science Robotics 4(26): eaau5872 |
 | **DOI** | [10.1126/scirobotics.aau5872](https://doi.org/10.1126/scirobotics.aau5872) |
-| **发布时间** | 2019-01-24 |
+| **发布时间** | 2019-01-24 (arXiv) |
 | **源码 / 数据** | [junja94/anymal_science_robotics_supplementary](https://github.com/junja94/anymal_science_robotics_supplementary)（含 ANYmal 任务环境与训练好的策略） |
 | **同组后续生态** | [leggedrobotics/legged_gym](https://github.com/leggedrobotics/legged_gym)、[leggedrobotics/RSLGym](https://github.com/leggedrobotics/RSLGym)（基于 RaiSim） |
 | **作者** | Jemin Hwangbo, Joonho Lee, Alexey Dosovitskiy, Dario Bellicoso, Vassilios Tsounis, Vladlen Koltun, Marco Hutter |

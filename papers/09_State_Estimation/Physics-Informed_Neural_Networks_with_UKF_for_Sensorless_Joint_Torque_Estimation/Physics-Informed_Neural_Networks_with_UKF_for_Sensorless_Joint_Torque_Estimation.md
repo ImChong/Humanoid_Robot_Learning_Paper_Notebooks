@@ -26,7 +26,7 @@ category: "State Estimation"
 | PDF | [下载](https://arxiv.org/pdf/2507.10105) |
 | IEEE Xplore | [document/10971218](https://ieeexplore.ieee.org/document/10971218/) |
 | 视频 Demo | [YouTube：PINNs with UKF for Sensorless Joint Torque Estimation](https://www.youtube.com/watch?v=FufYAPuL_nA) |
-| **发布时间** | 2025-07-14 |
+| **发布时间** | 2025-07-14 (arXiv) |
 | 源码（主） | [ami-iit/paper_sorrentino_ral2024_balancing_torque](https://github.com/ami-iit/paper_sorrentino_ral2024_balancing_torque)（C++ 控制框架，BSD-3-Clause） |
 | 源码（前作 PINN） | [ami-iit/paper_sorrentino_2024_humanoids_friction_estimation](https://github.com/ami-iit/paper_sorrentino_2024_humanoids_friction_estimation)（Python 训练 + ONNX 部署） |
 | 数据集 | HuggingFace `ami-iit/sensorless-torque-control`（摩擦 / 力矩，前作配套，本文复用） |

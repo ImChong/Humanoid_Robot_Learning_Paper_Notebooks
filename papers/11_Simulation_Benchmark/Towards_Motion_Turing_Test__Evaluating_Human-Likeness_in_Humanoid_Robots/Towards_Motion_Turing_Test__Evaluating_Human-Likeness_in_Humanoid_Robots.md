@@ -24,7 +24,7 @@ category: "Simulation Benchmark"
 | arXiv | [2603.06181](https://arxiv.org/abs/2603.06181) |
 | HTML | [在线阅读](https://arxiv.org/html/2603.06181v1) |
 | PDF | [下载](https://arxiv.org/pdf/2603.06181) |
-| **发布时间** | 2026-03-06 |
+| **发布时间** | 2026-03-06 (arXiv) |
 | 源码 / 数据集 | 论文声明「dataset, code, and benchmark will be publicly released」，截至 2026-05 尚未在 GitHub 公开 |
 | 提交日期 | 2026-03 |
 

@@ -24,7 +24,7 @@ category: "State Estimation"
 | arXiv | [2510.16755](https://arxiv.org/abs/2510.16755) |
 | HTML | [在线阅读](https://arxiv.org/html/2510.16755) |
 | PDF | [下载](https://arxiv.org/pdf/2510.16755) |
-| **发布时间** | 2025-10-19 |
+| **发布时间** | 2025-10-19 (arXiv) |
 | 源码 | 截至当前未见公开发布（论文未给出 GitHub 链接） 🚧 |
 | 提交日期 | 2025-10-19 |
 

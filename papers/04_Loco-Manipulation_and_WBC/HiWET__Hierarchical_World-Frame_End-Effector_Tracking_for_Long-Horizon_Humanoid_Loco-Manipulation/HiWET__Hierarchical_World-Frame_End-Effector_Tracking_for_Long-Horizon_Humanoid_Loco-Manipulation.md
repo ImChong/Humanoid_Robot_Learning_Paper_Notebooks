@@ -23,7 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.06341) |
 | PDF | [下载](https://arxiv.org/pdf/2602.06341) |
 | 项目主页 | 暂未发布 |
-| **发布时间** | 2026-02-06 |
+| **发布时间** | 2026-02-06 (arXiv) |
 | 源码 | 暂未开源 |
 | 提交日期 | 2026-02-06 |
 

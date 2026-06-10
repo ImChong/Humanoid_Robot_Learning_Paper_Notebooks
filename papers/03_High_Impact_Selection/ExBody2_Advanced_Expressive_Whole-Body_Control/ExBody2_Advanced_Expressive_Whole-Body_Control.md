@@ -23,7 +23,7 @@ zhname: "ExBody2：进阶的表达性人形全身控制"
 |------|------|
 | **arXiv** | [2412.13196](https://arxiv.org/abs/2412.13196) |
 | **作者** | Mazeyu Ji, Xuanbin Peng, Fangchen Liu, Jialong Li, Ge Yang, Xuxin Cheng, Xiaolong Wang |
-| **发布时间** | 2024-12-17 |
+| **发布时间** | 2024-12-17 (arXiv) |
 | **领域** | Robotics, Artificial Intelligence, Machine Learning |
 | **关键词** | Humanoid whole-body tracking, expressive motion, teacher-student, sim-to-real |
 | **核心对象** | 真实人形机器人上的跑步、蹲伏、舞蹈等高动态表达性动作 |

@@ -25,7 +25,7 @@ zhname: "BFM：面向人形全身控制的行为基础模型"
 | **HTML** | [arxiv.org/html/2509.13780v1](https://arxiv.org/html/2509.13780v1) |
 | **PDF** | [arxiv.org/pdf/2509.13780](https://arxiv.org/pdf/2509.13780) |
 | **项目主页 / 视频** | [bfm4humanoid.github.io](https://bfm4humanoid.github.io/) |
-| **发布时间** | 2025-09-17 |
+| **发布时间** | 2025-09-17 (arXiv) |
 | **源码** | 截至当前论文与项目页**未集中给出与本文一一对应的官方训练代码仓库**；同主题的后续探索可参考 LeCAR 的 [BFM-Zero](https://github.com/LeCAR-Lab/BFM-Zero)（方法侧重无监督 RL，与本文 CVAE+蒸馏管线不同，仅作相关阅读） |
 | **作者** | Weishuai Zeng, Shunlin Lu, Kangning Yin, Xiaojie Niu, Minyue Dai, Jingbo Wang, Jiangmiao Pang |
 | **机构** | 北京大学 · 香港中文大学（深圳）· 上海交通大学 · 复旦大学 · 上海人工智能实验室 |

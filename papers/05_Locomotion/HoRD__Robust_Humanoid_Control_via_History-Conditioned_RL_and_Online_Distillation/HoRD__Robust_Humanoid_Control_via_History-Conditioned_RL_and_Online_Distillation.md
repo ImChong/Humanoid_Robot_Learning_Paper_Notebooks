@@ -25,7 +25,7 @@ category: "Locomotion"
 | HTML | [arXiv HTML v2](https://arxiv.org/html/2602.04412v2) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2602.04412) |
 | 项目主页 | [tonywang-0517.github.io/hord](https://tonywang-0517.github.io/hord/) |
-| **发布时间** | 2026-02-04 |
+| **发布时间** | 2026-02-04 (arXiv) |
 | 源码 | 见项目主页（关注作者 [tonywang-0517](https://github.com/tonywang-0517) 后续发布） |
 | 平台 | Unitree G1 |
 | 发表时间 | 2026-02 |

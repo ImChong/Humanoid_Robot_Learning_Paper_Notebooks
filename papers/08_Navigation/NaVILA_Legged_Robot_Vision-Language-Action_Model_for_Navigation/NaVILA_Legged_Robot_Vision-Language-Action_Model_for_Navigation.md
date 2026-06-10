@@ -25,7 +25,7 @@ zhname: "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
 | **PDF** | [Download](https://arxiv.org/pdf/2412.04453.pdf) |
 | **作者** | NVIDIA & UC San Diego Team |
 | **机构** | NVIDIA / UCSD |
-| **发布时间** | 2024-12 |
+| **发布时间** | 2024-12 (arXiv) |
 | **项目主页** | 🚧 |
 | **代码** | 🚧 |
 

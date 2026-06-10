@@ -25,7 +25,7 @@ zhname: "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目
 | **PDF** | [Download](https://arxiv.org/pdf/2602.16511.pdf) |
 | **作者** | Osher Azulay, Zhengjie Xu, Andrew Scheffer, Stella X. Yu |
 | **机构** | University of Michigan, Ann Arbor |
-| **发布时间** | 2026-02 |
+| **发布时间** | 2026-02 (arXiv) |
 | **项目主页** | [vigor2026.github.io](https://vigor2026.github.io/) |
 | **代码** | 🚧 暂未完全公开 |
 | **实验平台** | Unitree G1（23-DoF + 头部 RealSense 深度相机） |

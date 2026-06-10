@@ -25,7 +25,7 @@ category: "Simulation Benchmark"
 | HTML | [在线阅读 v1](https://arxiv.org/html/2512.07248v1) |
 | PDF | [下载](https://arxiv.org/pdf/2512.07248) |
 | ResearchGate | [Publication 398475692](https://www.researchgate.net/publication/398475692_Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty) |
-| **发布时间** | 2025-12-08 |
+| **发布时间** | 2025-12-08 (arXiv) |
 | 源码 / 数据集 | 截至当前未见公开发布（论文未给出 GitHub 链接，作者主页见下） |
 | 提交日期 | 2025-12-08 |
 

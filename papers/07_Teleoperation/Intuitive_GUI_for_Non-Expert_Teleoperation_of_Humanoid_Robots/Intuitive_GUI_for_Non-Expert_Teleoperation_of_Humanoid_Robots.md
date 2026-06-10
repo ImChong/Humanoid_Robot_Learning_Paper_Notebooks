@@ -24,7 +24,7 @@ category: "Teleoperation"
 | arXiv | [2510.13594](https://arxiv.org/abs/2510.13594) |
 | HTML | [arXiv HTML](https://arxiv.org/html/2510.13594v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2510.13594) |
-| **发布时间** | 2025-10-15 |
+| **发布时间** | 2025-10-15 (arXiv) |
 | 源码 | 截至当前未见公开仓库（论文未给出 GitHub 链接） |
 | 机构 | Laurentian University，Bharti School of Engineering and Computer Science（加拿大）· Laurentian Intelligent Mobile Robotics Lab（LIMRL） |
 | 主要作者 | **Austin Barrett**, **Meng Cheng Lau** |

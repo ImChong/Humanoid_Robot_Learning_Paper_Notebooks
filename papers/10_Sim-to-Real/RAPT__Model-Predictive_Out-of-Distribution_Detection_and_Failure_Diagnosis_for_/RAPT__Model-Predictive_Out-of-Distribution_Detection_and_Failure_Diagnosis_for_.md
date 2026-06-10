@@ -24,7 +24,7 @@ category: "Sim-to-Real"
 | arXiv | [2602.01515](https://arxiv.org/abs/2602.01515) |
 | HTML | [在线阅读](https://arxiv.org/html/2602.01515v1) |
 | PDF | [下载](https://arxiv.org/pdf/2602.01515) |
-| **发布时间** | 2026-02-02 |
+| **发布时间** | 2026-02-02 (arXiv) |
 | 源码 / 权重 | 截至当前未见公开发布（作者主页 [humphreymunn](https://github.com/humphreymunn) 暂未上线 RAPT 代码） |
 | 提交日期 | 2026-02 |
 

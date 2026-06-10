@@ -28,7 +28,7 @@ category: "全身控制"
 | 项目仓库 | [zeonsunlightyu/RGMT.github.io](https://github.com/zeonsunlightyu/RGMT.github.io)（目前为项目页仓库，训练代码截至论文发布暂未公开） |
 | 作者 | Yubiao Ma, Han Yu, Jiayin Xie, Changtai Lv, Qiang Luo, Chi Zhang, Yunpeng Yin, Boyang Xing, Xuemei Ren, Dongdong Zheng |
 | 机构 | Beijing Institute of Technology 等 |
-| **发布时间** | 2026-01-30 |
+| **发布时间** | 2026-01-30 (arXiv) |
 | 发表时间 | 2026-01-30（arXiv） |
 | 评测平台 | Unitree G1（29 DoF）真机 + 仿真 |
 

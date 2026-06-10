@@ -23,7 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.11929) |
 | PDF | [下载](https://arxiv.org/pdf/2602.11929) |
 | 项目主页 | [BeingBeyond FAST](https://research.beingbeyond.com/fast) |
-| **发布时间** | 2026-02-12 |
+| **发布时间** | 2026-02-12 (arXiv) |
 | 源码 | [BeingBeyond/FAST](https://github.com/BeingBeyond/FAST) |
 | 机构 | WHU, BeingBeyond, PKU |
 | 提交日期 | 2026-02-12 |

@@ -25,7 +25,7 @@ zhname: "SONIC：用规模化运动跟踪打造自然的人形全身控制器"
 | **HTML** | [arxiv.org/html/2511.07820v2](https://arxiv.org/html/2511.07820v2) |
 | **PDF** | [arxiv.org/pdf/2511.07820](https://arxiv.org/pdf/2511.07820) |
 | **项目主页** | [nvlabs.github.io/SONIC](https://nvlabs.github.io/SONIC/) |
-| **发布时间** | 2025-11-11 |
+| **发布时间** | 2025-11-11 (arXiv) |
 | **配套文档** | [GR00T-WholeBodyControl Documentation](https://nvlabs.github.io/GR00T-WholeBodyControl/) |
 | **官方代码** | [NVlabs/GR00T-WholeBodyControl](https://github.com/NVlabs/GR00T-WholeBodyControl) · 训练 / 部署位于 [`gear_sonic/`](https://github.com/NVlabs/GR00T-WholeBodyControl/tree/main/gear_sonic) 与 [`gear_sonic_deploy/`](https://github.com/NVlabs/GR00T-WholeBodyControl/tree/main/gear_sonic_deploy) |
 | **作者** | Zhengyi Luo, Ye Yuan, Tingwu Wang, Chenran Li, Sirui Chen, Jim Fan, Yuke Zhu 等 |

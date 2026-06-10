@@ -23,7 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.08370) |
 | PDF | [下载](https://arxiv.org/pdf/2602.08370) |
 | 项目主页 | [astrorix.github.io/LHBS](https://astrorix.github.io/LHBS/) |
-| **发布时间** | 2026-02-09 |
+| **发布时间** | 2026-02-09 (arXiv) |
 | 源码 | 待官方释出 |
 | 提交日期 | 2026-02-09 |
 

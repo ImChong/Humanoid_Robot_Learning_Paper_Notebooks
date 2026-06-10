@@ -28,7 +28,7 @@ zhname: "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架"
 | **项目页** | [sites.google.com/view/humanoid-gym](https://sites.google.com/view/humanoid-gym/) |
 | **作者** | Xinyang Gu *, Yen-Jen Wang *, Jianyu Chen（* 共同一作） |
 | **机构** | Shanghai Qi Zhi Institute · RobotEra · Tsinghua University |
-| **发布时间** | 2024-04-08 |
+| **发布时间** | 2024-04-08 (arXiv) |
 | **关键词** | Humanoid locomotion, Isaac Gym, MuJoCo, sim-to-sim, sim-to-real, domain randomization, gait reward |
 
 ---

@@ -20,7 +20,7 @@ category: "Loco-Manipulation and WBC"
 |------|------|
 | **arXiv** | [2602.23843](https://arxiv.org/abs/2602.23843) |
 | **PDF** | [下载](https://arxiv.org/pdf/2602.23843) |
-| **发布时间** | 2026年2月27日 |
+| **发布时间** | 2026年2月27日（arXiv） |
 | **机构** | BIGAI（北京通用人工智能研究院）、上交大、中科大、宇树科技 |
 | **实验平台** | Unitree G1 人形机器人 |
 | **部署硬件** | 机载 NVIDIA Jetson Orin NX |

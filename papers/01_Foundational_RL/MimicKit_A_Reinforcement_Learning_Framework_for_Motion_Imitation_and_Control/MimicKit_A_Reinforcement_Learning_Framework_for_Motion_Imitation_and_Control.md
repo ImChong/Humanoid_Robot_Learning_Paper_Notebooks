@@ -22,7 +22,7 @@ zhname: "MimicKit：运动模仿与控制的强化学习框架"
 | **arXiv** | [2510.13794](https://arxiv.org/abs/2510.13794) |
 | **PDF** | [Download](https://arxiv.org/pdf/2510.13794) |
 | **作者** | Xue Bin Peng |
-| **发布时间** | 2025-10-15 初版；2026-01-18 v4 |
+| **发布时间** | 2025-10-15 初版；2026-01-18 v4 (arXiv) |
 | **领域** | Computer Graphics / Machine Learning / Robotics |
 | **代码** | [GitHub - xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) |
 

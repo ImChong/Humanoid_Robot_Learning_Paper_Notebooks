@@ -23,7 +23,7 @@ zhname: "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
 | **PDF** | [Download](https://arxiv.org/pdf/2508.08241.pdf) |
 | **作者** | Qiayuan Liao, Takara E. Truong, Xiaoyu Huang, Guy Tevet, Koushil Sreenath, C. Karen Liu |
 | **机构** | UC Berkeley / Stanford University |
-| **发布时间** | 2025-08 |
+| **发布时间** | 2025-08 (arXiv) |
 | **项目主页** | [BeyondMimic Website](https://beyondmimic.github.io/) |
 | **代码** | [HybridRobotics/whole_body_tracking](https://github.com/HybridRobotics/whole_body_tracking)（运动跟踪训练）<br>[HybridRobotics/motion_tracking_controller](https://github.com/HybridRobotics/motion_tracking_controller)（sim-to-real 推理部署） |
 

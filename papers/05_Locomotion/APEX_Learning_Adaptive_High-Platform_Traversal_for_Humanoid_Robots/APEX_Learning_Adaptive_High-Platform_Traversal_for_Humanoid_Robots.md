@@ -27,7 +27,7 @@ category: "Locomotion"
 | 项目主页 | [apex-humanoid.github.io](https://apex-humanoid.github.io/) |
 | 视频 | [YouTube 介绍视频](https://www.youtube.com/watch?v=jq7xx9Fusd8) |
 | 概览（alphaXiv） | [alphaxiv.org/overview/2602.11143v1](https://www.alphaxiv.org/overview/2602.11143v1) |
-| **发布时间** | 2026-02-11 |
+| **发布时间** | 2026-02-11 (arXiv) |
 | 源码 | 截至当前未见独立公开训练仓库；最新动态以 [项目页](https://apex-humanoid.github.io/) 为准 |
 | 机构 | Carnegie Mellon University · Bosch Center for Artificial Intelligence |
 | 发表时间 | 2026-02（v1）/ 2026-03（v2） |

@@ -25,7 +25,7 @@ category: "Navigation"
 | HTML | [在线阅读](https://arxiv.org/html/2511.20351v1) |
 | PDF | [下载](https://arxiv.org/pdf/2511.20351) |
 | 项目主页 | [humanoid-vstar.github.io](https://humanoid-vstar.github.io/) |
-| **发布时间** | 2025-11-25 |
+| **发布时间** | 2025-11-25 (arXiv) |
 | 源码（官方）| [THUSI-Lab/hstar](https://github.com/THUSI-Lab/hstar) · [humanoid-vstar/hstar](https://github.com/humanoid-vstar/hstar) |
 | 模型权重 | HuggingFace HVS-3B（Qwen2.5-VL-3B-Instruct 微调，详见仓库 README） |
 | 出版 | CVPR 2026 |

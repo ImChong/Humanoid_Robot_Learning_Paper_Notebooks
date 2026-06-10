@@ -25,7 +25,7 @@ category: "State Estimation"
 | HTML | [在线阅读](https://arxiv.org/html/1712.05873) |
 | PDF | [下载](https://arxiv.org/pdf/1712.05873) |
 | 出版 | ICRA 2018（IEEE Int. Conf. on Robotics and Automation） |
-| **发布时间** | 2017-12-15 |
+| **发布时间** | 2017-12-15 (arXiv) |
 | 源码 | 未见本文专门的开源仓库；方法基于 [GTSAM](https://github.com/borglab/gtsam) 因子图框架实现。同组「滤波版」对照实现见 [RossHartley/invariant-ekf](https://github.com/RossHartley/invariant-ekf) |
 | 提交日期 | 2017-12 |
 

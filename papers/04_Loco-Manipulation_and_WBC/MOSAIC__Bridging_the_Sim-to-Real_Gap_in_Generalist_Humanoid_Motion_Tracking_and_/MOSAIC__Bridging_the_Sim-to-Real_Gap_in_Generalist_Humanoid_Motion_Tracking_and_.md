@@ -22,7 +22,7 @@ category: "Loco-Manipulation and WBC"
 | arXiv | [2602.08594](https://arxiv.org/abs/2602.08594) |
 | HTML | [在线阅读](https://arxiv.org/html/2602.08594v1) |
 | PDF | [下载](https://arxiv.org/pdf/2602.08594) |
-| **发布时间** | 2026-02-09 |
+| **发布时间** | 2026-02-09 (arXiv) |
 | 源码 | [BAAI-Humanoid/MOSAIC](https://github.com/BAAI-Humanoid/MOSAIC) |
 | 数据集 | [BAAI-Humanoid/MOSAIC_Dataset](https://huggingface.co/datasets/BAAI-Humanoid/MOSAIC_Dataset) |
 | 提交日期 | 2026-02-09 |
