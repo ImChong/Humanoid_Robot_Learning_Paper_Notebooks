@@ -24,6 +24,7 @@ category: "Manipulation"
 | arXiv | [2601.09031](https://arxiv.org/abs/2601.09031) |
 | HTML | [arXiv HTML v1](https://arxiv.org/html/2601.09031v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2601.09031) |
+| **发布时间** | 2026-01-13 |
 | 源码 | [GitHub · xtli12/RGMP-S](https://github.com/xtli12/RGMP-S) |
 | 第一作者 | Xuetao Li 等 |
 | 机构 | Wuhan University · School of Computer Science / School of Robotics / Institute of Technological Sciences |

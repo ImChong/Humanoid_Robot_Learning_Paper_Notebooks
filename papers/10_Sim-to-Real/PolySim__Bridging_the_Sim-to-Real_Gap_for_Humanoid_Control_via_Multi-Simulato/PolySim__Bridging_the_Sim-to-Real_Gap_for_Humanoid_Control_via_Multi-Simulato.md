@@ -24,6 +24,7 @@ category: "Sim-to-Real"
 | arXiv | [2510.01708](https://arxiv.org/abs/2510.01708) |
 | HTML | [在线阅读 v3](https://arxiv.org/html/2510.01708v3) |
 | PDF | [下载](https://arxiv.org/pdf/2510.01708) |
+| **发布时间** | 2025-10-02 |
 | 源码 | [EmboMaster/PolySim](https://github.com/EmboMaster/PolySim) |
 | 依赖框架 | [LeCAR-Lab/HumanoidVerse](https://github.com/LeCAR-Lab/HumanoidVerse) |
 | OpenReview | [Zi1oawm4cA](https://openreview.net/forum?id=Zi1oawm4cA) |

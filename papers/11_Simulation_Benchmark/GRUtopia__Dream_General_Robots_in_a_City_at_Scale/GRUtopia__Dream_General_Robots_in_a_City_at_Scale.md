@@ -24,6 +24,7 @@ category: "Simulation Benchmark"
 | arXiv | [2407.10943](https://arxiv.org/abs/2407.10943) |
 | HTML | [在线阅读](https://arxiv.org/html/2407.10943v1) |
 | PDF | [下载](https://arxiv.org/pdf/2407.10943) |
+| **发布时间** | 2024-07-15 |
 | 源码 | [OpenRobotLab/GRUtopia](https://github.com/OpenRobotLab/GRUtopia)（现已更名 InternUtopia，2.2.x 维护中） |
 | HuggingFace | [papers/2407.10943](https://huggingface.co/papers/2407.10943) |
 | 提交日期 | 2024-07 |

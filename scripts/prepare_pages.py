@@ -164,7 +164,7 @@ _BASIC_INFO_SECTION_RE = re.compile(
     re.MULTILINE,
 )
 _NEXT_H2_RE = re.compile(r"^##\s", re.MULTILINE)
-_PUBLISH_DATE_LABEL_RE = re.compile(r"发布时间")
+_PUBLISH_DATE_LABEL_RE = re.compile(r"发布时间|^时间$")
 _CODE_ROW_LABEL_RE = re.compile(
     r"(?:代码|源码|GitHub|官方代码|算法代码)",
     re.IGNORECASE,

@@ -26,6 +26,7 @@ category: "Sim-to-Real"
 | HTML | [在线阅读 v1](https://arxiv.org/html/2509.06342v1) |
 | PDF | [下载](https://arxiv.org/pdf/2509.06342) |
 | 项目主页 | [pace.filipbjelonic.com](https://pace.filipbjelonic.com/) · [leggedrobotics.github.io/pace-sim2real](https://leggedrobotics.github.io/pace-sim2real/) |
+| **发布时间** | 2025-09-08 |
 | 源码 | 🌟 [github.com/leggedrobotics/pace-sim2real](https://github.com/leggedrobotics/pace-sim2real)（基于 NVIDIA Isaac Lab） |
 | 提交日期 | 2025-09-08 |
 

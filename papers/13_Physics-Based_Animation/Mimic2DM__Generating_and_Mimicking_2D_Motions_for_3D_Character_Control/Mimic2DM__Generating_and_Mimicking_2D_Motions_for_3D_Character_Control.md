@@ -28,6 +28,7 @@ category: "物理动画"
 | 提交日期 | 2025-12-09 |
 | 作者 | Jianan Li, Xiao Chen, Tao Huang, Tien-Tsin Wong |
 | 机构 | **The Chinese University of Hong Kong** · **Monash University** |
+| **发布时间** | 2025-12-09 |
 | 源码 | ⚠️ 截至当前未见公开仓库；项目页未挂代码链接，后续等作者释出 |
 
 ---

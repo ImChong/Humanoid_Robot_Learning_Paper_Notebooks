@@ -25,6 +25,7 @@ zhname: "HOMIE：同构外骨骼驾驶舱式人形遥操作系统"
 | **HTML** | [arxiv.org/html/2502.13013v2](https://arxiv.org/html/2502.13013v2) |
 | **PDF** | [arxiv.org/pdf/2502.13013](https://arxiv.org/pdf/2502.13013) |
 | **项目主页** | [homietele.github.io](https://homietele.github.io/) |
+| **发布时间** | 2025-02-18 (arXiv), RSS 2025 |
 | **源码** | [InternRobotics/OpenHomie](https://github.com/InternRobotics/OpenHomie) |
 | **OpenReview** | [WSZKGX2Ty7](https://openreview.net/forum?id=WSZKGX2Ty7) |
 | **作者** | Qingwei Ben*, Feiyu Jia*, Jia Zeng, Junting Dong, Dahua Lin, Jiangmiao Pang |

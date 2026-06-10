@@ -25,6 +25,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [arXiv HTML](https://arxiv.org/html/2601.22517v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2601.22517) |
 | 项目主页 | 截至当前未见公开（搜索结果未发现独立项目页） |
+| **发布时间** | 2026-01-30 |
 | 源码 | 截至当前未公开（作者主页 [yinkangning0124](https://github.com/yinkangning0124)） |
 | 相关源码（动作重定向） | [YanjieZe/GMR](https://github.com/YanjieZe/GMR)（论文采用的 General Motion Retargeting） |
 | 作者 | Kangning Yin, Zhe Cao, Wentao Dong, Weishuai Zeng, Tianyi Zhang, Qiang Zhang, Jingbo Wang, Jiangmiao Pang, Ming Zhou, Weinan Zhang |

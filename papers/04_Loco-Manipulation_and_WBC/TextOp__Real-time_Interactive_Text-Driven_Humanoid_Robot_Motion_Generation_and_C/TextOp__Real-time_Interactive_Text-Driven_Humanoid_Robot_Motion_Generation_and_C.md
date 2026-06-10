@@ -23,6 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.07439) |
 | PDF | [下载](https://arxiv.org/pdf/2602.07439) |
 | 项目主页 | [text-op.github.io](https://text-op.github.io/) |
+| **发布时间** | 2026-02-07 |
 | 源码 | [TeleHuman/TextOp](https://github.com/TeleHuman/TextOp) |
 | 提交日期 | 2026-02-07 |
 

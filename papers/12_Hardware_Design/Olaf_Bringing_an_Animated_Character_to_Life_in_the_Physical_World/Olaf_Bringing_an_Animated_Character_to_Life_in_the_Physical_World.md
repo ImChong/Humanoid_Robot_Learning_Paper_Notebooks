@@ -28,6 +28,7 @@ category: "硬件设计"
 | 机构 | [Disney Research Imagineering（Zurich / Glendale）](https://la.disneyresearch.com/) |
 | 仿真器 | NVIDIA Isaac Sim / Isaac Lab（合作） |
 | 部署场景 | Disneyland Paris · World of Frozen · *Celebration in Arendelle*（湖面浮船上行走） |
+| **发布时间** | 2025-12-18 |
 | 源码 | ⚠️ 截至当前未公开（Disney Imagineering 项目，论文未给出 GitHub / 项目页） |
 | 提交日期 | 2025-12-18（v1）；2026-04-02（v2 修订） |
 

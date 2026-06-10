@@ -25,6 +25,7 @@ category: "全身控制"
 | HTML | [arXiv HTML](https://arxiv.org/html/2512.17183v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2512.17183) |
 | 项目主页 | 暂未公开 |
+| **发布时间** | 2025-12-19 |
 | 源码 | 截至当前未见公开发布 |
 | 相关源码（GMR 重定向） | [YanjieZe/GMR](https://github.com/YanjieZe/GMR)（论文采用的 General Motion Retargeting，ICRA 2026） |
 | 第一作者 | Gang Zhang 等 |

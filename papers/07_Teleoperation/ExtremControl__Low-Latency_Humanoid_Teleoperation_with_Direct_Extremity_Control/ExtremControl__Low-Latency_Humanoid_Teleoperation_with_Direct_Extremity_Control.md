@@ -25,6 +25,7 @@ category: "Teleoperation"
 | HTML | [arXiv HTML](https://arxiv.org/html/2602.11321) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2602.11321) |
 | 项目主页 | [extremcontrol.github.io](https://extremcontrol.github.io) |
+| **发布时间** | 2026-02-11 |
 | 源码 | [UMass-Embodied-AGI/Genesis-Humanoid `extremcontrol` 分支](https://github.com/UMass-Embodied-AGI/Genesis-Humanoid/tree/extremcontrol) |
 | 机构 | UMass Amherst · CMU · MIT-IBM Watson AI Lab |
 | 作者 | Ziyan Xiong · Lixing Fang · Junyun Huang · Kashu Yamazaki · Hao Zhang · Chuang Gan |

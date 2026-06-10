@@ -25,6 +25,7 @@ category: "Manipulation"
 | HTML | [在线阅读](https://arxiv.org/html/2603.12260v2) |
 | PDF | [下载](https://arxiv.org/pdf/2603.12260) |
 | 项目主页 | [psi-lab.ai/humdex](https://psi-lab.ai/humdex) |
+| **发布时间** | 2026-03-12 |
 | 源码 | [physical-superintelligence-lab/HumDex](https://github.com/physical-superintelligence-lab/HumDex) |
 | 模型权重 | [huggingface.co/heng222/humdex](https://huggingface.co/heng222/humdex) |
 | 提交日期 | 2026-03 |

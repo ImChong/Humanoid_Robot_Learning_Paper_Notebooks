@@ -24,6 +24,7 @@ category: "Navigation"
 | arXiv | [2601.12790](https://arxiv.org/abs/2601.12790) |
 | HTML | [在线阅读](https://arxiv.org/html/2601.12790v1) |
 | PDF | [下载](https://arxiv.org/pdf/2601.12790) |
+| **发布时间** | 2026-01-19 |
 | 源码 / 项目主页 | 截至当前未见公开发布（论文未给出开源链接） |
 | 提交日期 | 2026-01 |
 

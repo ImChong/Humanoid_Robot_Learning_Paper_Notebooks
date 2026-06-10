@@ -25,6 +25,7 @@ category: "Navigation"
 | HTML | [在线阅读](https://arxiv.org/html/2506.01046v2) |
 | PDF | [下载](https://arxiv.org/pdf/2506.01046) |
 | 项目主页 | [state-nav.github.io/statenav](https://state-nav.github.io/statenav/) |
+| **发布时间** | 2025-06-01 |
 | 源码 | 截至当前公开页面未见正式发布（以项目主页后续更新为准） |
 | 出版 | IEEE RA-L 2025 |
 | 提交日期 | 2025-06 |

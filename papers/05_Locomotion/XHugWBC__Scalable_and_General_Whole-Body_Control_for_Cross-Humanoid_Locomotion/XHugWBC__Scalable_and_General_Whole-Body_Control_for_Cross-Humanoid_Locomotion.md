@@ -25,6 +25,7 @@ category: "Locomotion"
 | HTML | [arXiv HTML v1](https://arxiv.org/html/2602.05791v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2602.05791) |
 | 项目主页 | [xhugwbc.github.io](https://xhugwbc.github.io/) |
+| **发布时间** | 2026-02-05 |
 | 源码 | 截至当前未见公开发布（关注项目主页与 [SJTU-Marl](https://github.com/sjtu-marl) 后续更新） |
 | 作者 | Yufei Xue, Yunfeng Lin, Wentao Dong, Yang Tang, Jingbo Wang, Jiangmiao Pang, Ming Zhou, Minghuan Liu, Weinan Zhang |
 | 机构 | Shanghai Jiao Tong University · Shanghai AI Lab · ECNU |

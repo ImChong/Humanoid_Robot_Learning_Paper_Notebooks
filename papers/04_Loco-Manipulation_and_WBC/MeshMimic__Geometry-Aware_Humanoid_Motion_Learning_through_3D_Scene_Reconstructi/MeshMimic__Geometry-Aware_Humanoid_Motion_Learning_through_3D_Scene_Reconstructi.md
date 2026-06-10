@@ -23,6 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.15733) |
 | PDF | [下载](https://arxiv.org/pdf/2602.15733) |
 | 项目主页 | [meshmimic.github.io](https://meshmimic.github.io/) |
+| **发布时间** | 2026-02-17 |
 | 代码 | 暂未公开（项目主页标注 Code Coming Soon，截至 2026-04-29） |
 | 数据/模型 | 暂未公开（项目主页标注 Data and Model Coming Soon，截至 2026-04-29） |
 | 机构 | X-Humanoid, HKUST(GZ), HKU, Tsinghua, CUHK, SJTU, ANU |

@@ -26,6 +26,7 @@ category: "人体动作生成"
 | HTML | [arxiv.org/html/2602.23205](https://arxiv.org/html/2602.23205) |
 | PDF | [arxiv.org/pdf/2602.23205](https://arxiv.org/pdf/2602.23205) |
 | 项目主页 | [wenjiawang0312.github.io/projects/embodmocap](https://wenjiawang0312.github.io/projects/embodmocap/) |
+| **发布时间** | 2026-02-26 (arXiv), **CVPR 2026**（仓库 README 标识） |
 | 代码 | [WenjiaWang0312/EmbodMocap](https://github.com/WenjiaWang0312/EmbodMocap)（Apache-2.0） |
 | 数据集 | HuggingFace / OneDrive 镜像（仓库 README 提供链接） |
 | 作者 | Wenjia Wang, Liang Pan, Huaijin Pi, Yuke Lou, Xuqian Ren, Yifan Wu, Zhouyingcheng Liao, Lei Yang, Rishabh Dabral, Christian Theobalt, Taku Komura |

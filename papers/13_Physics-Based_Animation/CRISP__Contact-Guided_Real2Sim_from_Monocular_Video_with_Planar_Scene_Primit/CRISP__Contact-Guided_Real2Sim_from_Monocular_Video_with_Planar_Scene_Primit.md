@@ -25,6 +25,7 @@ category: "Physics-Based Animation"
 | HTML | [在线阅读](https://arxiv.org/html/2512.14696v1) |
 | PDF | [下载](https://arxiv.org/pdf/2512.14696) |
 | 项目主页 | [crisp-real2sim.github.io/CRISP-Real2Sim](https://crisp-real2sim.github.io/CRISP-Real2Sim/) |
+| **发布时间** | 2025-12-16 |
 | 源码 | [Z1hanW/CRISP-Real2Sim](https://github.com/Z1hanW/CRISP-Real2Sim)（ICLR 2026，已开源完整 pipeline） |
 | OpenReview | [ICLR 2026 forum](https://openreview.net/forum?id=xlr3NqxUqY) |
 | Hugging Face | [papers/2512.14696](https://huggingface.co/papers/2512.14696) |

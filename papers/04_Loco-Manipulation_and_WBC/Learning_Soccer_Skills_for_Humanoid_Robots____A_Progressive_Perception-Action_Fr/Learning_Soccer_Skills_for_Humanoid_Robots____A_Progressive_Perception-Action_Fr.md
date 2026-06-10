@@ -23,6 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.05310) |
 | PDF | [下载](https://arxiv.org/pdf/2602.05310) |
 | 项目主页 | [soccer-humanoid.github.io](https://soccer-humanoid.github.io/) |
+| **发布时间** | 2026-02-05 |
 | 源码 | 待官方释出 |
 | 提交日期 | 2026-02-05 |
 

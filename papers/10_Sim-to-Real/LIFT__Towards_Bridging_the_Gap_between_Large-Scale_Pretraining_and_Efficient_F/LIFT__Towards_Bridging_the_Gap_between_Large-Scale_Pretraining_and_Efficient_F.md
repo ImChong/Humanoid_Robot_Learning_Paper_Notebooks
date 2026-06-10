@@ -25,6 +25,7 @@ category: "Sim-to-Real"
 | HTML | [在线阅读](https://arxiv.org/html/2601.21363) |
 | PDF | [下载](https://arxiv.org/pdf/2601.21363) |
 | 项目主页 | [lift-humanoid.github.io](https://lift-humanoid.github.io/) |
+| **发布时间** | 2026-01-29 |
 | 源码 | [bigai-ai/LIFT-humanoid](https://github.com/bigai-ai/LIFT-humanoid) |
 | OpenReview | [NEOTsyyYH7](https://openreview.net/forum?id=NEOTsyyYH7) |
 | HuggingFace Papers | [2601.21363](https://huggingface.co/papers/2601.21363) |

@@ -25,6 +25,7 @@ zhname: "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
 | **HTML** | [arxiv.org/html/2503.05652](https://arxiv.org/html/2503.05652) |
 | **PDF** | [arxiv.org/pdf/2503.05652.pdf](https://arxiv.org/pdf/2503.05652.pdf) |
 | **项目主页** | [behavior-robot-suite.github.io](https://behavior-robot-suite.github.io/) |
+| **发布时间** | 2025-03-07 (arXiv), CoRL 2025 |
 | **算法代码（WB-VIMA 等）** | [behavior-robot-suite/brs-algo](https://github.com/behavior-robot-suite/brs-algo) |
 | **硬件与遥操作（JoyLo / 控制栈）** | [behavior-robot-suite/brs-ctrl](https://github.com/behavior-robot-suite/brs-ctrl) |
 | **会议** | CoRL 2025 |

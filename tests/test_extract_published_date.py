@@ -78,3 +78,8 @@ def test_to_published_date_en_iso_and_mixed_phrases():
 
 def test_to_published_date_en_leaves_plain_year_unchanged():
     assert to_published_date_en("2025") == "2025"
+
+
+def test_extracts_time_row_as_publish_date():
+    content = _note(("时间", "2025 年 12 月（SIGGRAPH Asia 2025）"))
+    assert extract_published_date(content) == "2025 年 12 月（SIGGRAPH Asia 2025）"

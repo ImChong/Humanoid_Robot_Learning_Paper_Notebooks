@@ -30,6 +30,7 @@ paper_order: 294
 | **作者** | Ziwen Zhuang, Shenzhe Yao, Hang Zhao |
 | **机构** | 上海期智研究院、上海科技大学、清华大学 |
 | **机器人** | **Unitree H1**（Isaac Gym 训练与实机部署） |
+| **发布时间** | 2024-06-15 |
 | **源码** | 论文管线与前期四足跑酷工作同系；可参考作者仓库 [ZiwenZhuang/parkour](https://github.com/ZiwenZhuang/parkour)（Robot Parkour Learning / legged_gym 生态）；人形扩展细节以论文与项目页为准 |
 
 ---

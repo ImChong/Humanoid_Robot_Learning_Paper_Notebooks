@@ -25,6 +25,7 @@ zhname: "HugWBC：面向多步态人形的统一通用全身控制器"
 | **HTML** | [arxiv.org/html/2502.03206v3](https://arxiv.org/html/2502.03206v3) |
 | **PDF** | [arxiv.org/pdf/2502.03206](https://arxiv.org/pdf/2502.03206) |
 | **项目主页** | [hugwbc.github.io](https://hugwbc.github.io/) |
+| **发布时间** | 2025-02-05 (arXiv), RSS 2025 |
 | **源码（团队主仓）** | [apexrl/HugWBC](https://github.com/apexrl/HugWBC) |
 | **源码（机构镜像）** | [InternRobotics/HugWBC](https://github.com/InternRobotics/HugWBC) |
 | **会议** | RSS 2025 |

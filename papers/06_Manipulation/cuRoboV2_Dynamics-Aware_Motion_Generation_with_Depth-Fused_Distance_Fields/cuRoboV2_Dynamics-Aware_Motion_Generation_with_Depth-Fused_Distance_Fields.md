@@ -25,6 +25,7 @@ category: "Manipulation"
 | HTML | [arXiv HTML v2](https://arxiv.org/html/2603.05493v2) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2603.05493) |
 | 项目主页 | [nvlabs.github.io/curobo](https://nvlabs.github.io/curobo/) |
+| **发布时间** | 2026-03-05 |
 | 源码 | [NVlabs/curobo](https://github.com/NVlabs/curobo)（v0.7.8 为 v1 旧 tag，主分支为 v2） |
 | 概览（alphaXiv） | [alphaxiv.org/overview/2603.05493v1](https://www.alphaxiv.org/overview/2603.05493v1) |
 | 机构 | NVIDIA Research |

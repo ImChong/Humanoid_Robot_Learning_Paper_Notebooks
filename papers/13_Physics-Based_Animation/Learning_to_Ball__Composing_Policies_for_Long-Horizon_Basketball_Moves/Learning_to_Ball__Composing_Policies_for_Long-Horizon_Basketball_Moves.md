@@ -25,6 +25,7 @@ category: "Physics-Based Animation"
 | HTML | [在线阅读](https://arxiv.org/html/2509.22442v1) |
 | PDF | [下载](https://arxiv.org/pdf/2509.22442) |
 | 项目主页 | [pei-xu.github.io/basketball](https://pei-xu.github.io/basketball) |
+| **发布时间** | 2025-09-26 |
 | 源码 | [xupei0610/basketball](https://github.com/xupei0610/basketball)（SIGGRAPH Asia 2025，MIT，含预训练模型） |
 | 发表 | **ACM TOG / SIGGRAPH Asia 2025**（Vol. 44, No. 6，[DOI 10.1145/3763367](https://doi.org/10.1145/3763367)） |
 | 提交日期 | 2025-09-26 |

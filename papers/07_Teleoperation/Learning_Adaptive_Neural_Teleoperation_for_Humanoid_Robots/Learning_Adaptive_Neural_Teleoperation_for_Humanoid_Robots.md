@@ -25,6 +25,7 @@ category: "Teleoperation"
 | HTML | [arXiv HTML](https://arxiv.org/html/2511.12390v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2511.12390) |
 | 期刊版本 | [Sustainability of Education, Socio-Economic Science Theory, 2025](https://interoncof.com/index.php/finland/article/view/16183) |
+| **发布时间** | 2025-11-15 |
 | 源码 | 截至当前未见公开发布（论文未给出 GitHub 链接） |
 | 机构 | Georgia Institute of Technology（作者后续创立 Humanola）|
 | 主要作者 | **Sanjar Atamuradov** |

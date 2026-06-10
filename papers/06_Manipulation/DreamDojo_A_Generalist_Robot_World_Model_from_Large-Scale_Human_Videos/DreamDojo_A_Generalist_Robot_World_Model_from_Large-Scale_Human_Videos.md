@@ -25,6 +25,7 @@ category: "Manipulation"
 | HTML | [arXiv HTML v1](https://arxiv.org/html/2602.06949v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2602.06949) |
 | 项目主页 | [dreamdojo-world.github.io](https://dreamdojo-world.github.io/) |
+| **发布时间** | 2026-02-06 |
 | 源码 | [NVIDIA/DreamDojo](https://github.com/nvidia/DreamDojo)（Apache-2.0） |
 | HuggingFace | [papers/2602.06949](https://huggingface.co/papers/2602.06949) |
 | 概览（alphaXiv） | [alphaxiv.org/overview/2602.06949](https://www.alphaxiv.org/overview/2602.06949) |

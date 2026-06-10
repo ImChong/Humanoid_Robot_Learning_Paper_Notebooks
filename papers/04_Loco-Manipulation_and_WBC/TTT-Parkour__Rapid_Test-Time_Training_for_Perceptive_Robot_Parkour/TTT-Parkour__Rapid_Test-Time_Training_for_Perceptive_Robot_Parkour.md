@@ -24,6 +24,7 @@ category: "Loco-Manipulation and WBC"
 | PDF | [下载](https://arxiv.org/pdf/2602.02331) |
 | 项目主页 | [ttt-parkour.github.io](https://ttt-parkour.github.io/) |
 | 演示视频 | [YouTube](https://www.youtube.com/watch?v=ayfYpZf4N6M) |
+| **发布时间** | 2026-02-02 |
 | 源码 | 截至论文发布暂未公开（参见项目主页的后续释出说明） |
 | 提交日期 | 2026-02 |
 

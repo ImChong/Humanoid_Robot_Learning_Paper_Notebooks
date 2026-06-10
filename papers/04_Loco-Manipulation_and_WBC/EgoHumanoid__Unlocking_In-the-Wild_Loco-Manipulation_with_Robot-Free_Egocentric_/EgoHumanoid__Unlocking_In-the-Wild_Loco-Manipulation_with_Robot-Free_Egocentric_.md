@@ -23,6 +23,7 @@ category: "Loco-Manipulation and WBC"
 | HTML | [在线阅读](https://arxiv.org/html/2602.10106) |
 | PDF | [下载](https://arxiv.org/pdf/2602.10106) |
 | 项目主页 | [opendrivelab.com/EgoHumanoid](https://opendrivelab.com/EgoHumanoid/) |
+| **发布时间** | 2026-02-10 |
 | 源码 | [OpenDriveLab/EgoHumanoid](https://github.com/OpenDriveLab/EgoHumanoid)（Apache 2.0） |
 | 提交日期 | 2026-02-10 |
 
