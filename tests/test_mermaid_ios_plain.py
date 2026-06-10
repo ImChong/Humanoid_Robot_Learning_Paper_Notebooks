@@ -1,12 +1,16 @@
-"""Tests for iOS plain-label Mermaid math fallback."""
+"""Tests for the iOS Mermaid math strategy (native MathML + plain-text kill-switch)."""
 
 from pathlib import Path
 
 from scripts.adapt_mermaid_blocks import escape_pipes_in_node_labels
 
-# The iOS foreignObject-overlap workaround happens at runtime:
-# prepareMermaidRenderSource() downgrades $$...$$ to Unicode plain text on iOS
-# only. The markdown source must keep KaTeX math so desktop/Android render it.
+# iOS WebKit paints foreignObject content that gets its own compositing layer
+# (opacity, filters, scroll containers, position offsets) at the SVG origin.
+# KaTeX's HTML output relies on position:relative offsets, so Mermaid math on
+# iOS renders as native MathML instead (forceLegacyMathML: false) and the
+# lightbox sanitizer must let MathML through. The old plain-text downgrade
+# (mermaidMathToPlain) stays in the bundle as a kill-switch: flipping
+# shouldUsePlainMermaidMath back to `return isIos();` restores it.
 
 
 def _ppo_full_flowchart_block() -> str:
@@ -21,19 +25,42 @@ def _ppo_full_flowchart_block() -> str:
 
 def test_ppo_full_flowchart_keeps_katex_math_in_source():
     block = _ppo_full_flowchart_block()
-    assert "$$" in block, "完整流程图源码应保留 $$..$$ KaTeX 公式（iOS 降级由前端运行时处理）"
+    assert "$$" in block, "完整流程图源码应保留 $$..$$ KaTeX 公式（iOS 由 Mermaid 渲染为原生 MathML）"
     assert r"\hat{A}_t" in block
     assert r"\pi_{\theta_{old}}" in block
 
 
-def test_ios_runtime_fallback_covers_full_flowchart_formulas():
+def test_ios_mathml_strategy_wired_in_config():
+    config_js = Path("assets/js/mermaid-config.js").read_text(encoding="utf-8")
+    # iOS renders math as native MathML; other platforms keep KaTeX HTML.
+    assert "forceLegacyMathML: !ios" in config_js
+    # The lightbox sanitizer must not strip MathML out of foreignObject.
+    assert "mathMl: true" in config_js
+    assert "'semantics', 'annotation'" in config_js
+
+
+def test_plain_text_kill_switch_retained():
     config_js = Path("assets/js/mermaid-config.js").read_text(encoding="utf-8")
     assert "prepareMermaidRenderSource" in config_js
     assert "shouldUsePlainMermaidMath" in config_js
-    # Plain-text replacements exist for each formula used in the flowchart.
+    # Plain-text replacements for the PPO flowchart formulas stay available.
     assert "mermaidMathToPlain" in config_js
     assert r"\\hat\{A\}_t" in config_js
     assert "L\\^\\{CLIP\\}" in config_js
+
+
+def test_ios_css_does_not_blank_mathml_output():
+    css = Path("assets/css/style.css").read_text(encoding="utf-8")
+    # Regression guard: with output:'mathml' the whole formula lives inside
+    # .katex — hiding it on iOS would blank every Mermaid formula.
+    assert (
+        "html.ios .paper-body .mermaid foreignObject .katex-display,\n"
+        "html.ios .paper-body .mermaid foreignObject .katex {" not in css
+    )
+    # Dual-output safety net: hide the layer-creating HTML half, surface the
+    # MathML copy without absolute positioning.
+    assert "foreignObject .katex-html" in css
+    assert "position: static !important" in css
 
 
 def test_escape_pipes_still_works():
