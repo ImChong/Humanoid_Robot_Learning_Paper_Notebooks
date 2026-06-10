@@ -1,4 +1,7 @@
 <a href="{{ site.baseurl }}{{ include.paper.url | escape }}" class="paper-card">
-  <span class="paper-title" data-en="{{ include.paper.title | escape }}" data-zh="{{ include.paper.zhname | escape }}">{{ include.paper.title | escape }}</span>
+  <span class="paper-card-text">
+    <span class="paper-title" data-en="{{ include.paper.title | escape }}" data-zh="{{ include.paper.zhname | escape }}">{{ include.paper.title | escape }}</span>
+    {% if include.paper.published_date %}<span class="paper-published">{{ include.paper.published_date | escape }}</span>{% endif %}
+  </span>
   {% if include.paper.has_open_source %}<span class="paper-opensource" aria-label="笔记含开源源码链接" title="⭐️ 笔记含开源源码链接">⭐️</span>{% endif %}
 </a>

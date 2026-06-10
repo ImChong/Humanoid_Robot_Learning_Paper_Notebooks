@@ -164,6 +164,7 @@ _BASIC_INFO_SECTION_RE = re.compile(
     re.MULTILINE,
 )
 _NEXT_H2_RE = re.compile(r"^##\s", re.MULTILINE)
+_PUBLISH_DATE_LABEL_RE = re.compile(r"发布时间")
 _CODE_ROW_LABEL_RE = re.compile(
     r"(?:代码|源码|GitHub|官方代码|算法代码)",
     re.IGNORECASE,
@@ -197,6 +198,40 @@ def _extract_basic_info_section(content):
     next_heading = _NEXT_H2_RE.search(content, start)
     end = next_heading.start() if next_heading else len(content)
     return content[start:end]
+
+
+def _clean_table_cell_value(value):
+    """Strip markdown links and HTML for plain-text metadata display."""
+    value = _MD_LINK_RE.sub(r"\1", value)
+    value = re.sub(r"<br\s*/?>", "; ", value, flags=re.IGNORECASE)
+    value = _MD_CHARS_RE.sub("", value)
+    return " ".join(value.split()).strip()
+
+
+def extract_published_date(content):
+    """Extract publication date from the basic-info table, if present."""
+    section = _extract_basic_info_section(content)
+    if not section:
+        return None
+
+    for line in section.split("\n"):
+        line = line.strip()
+        if not line.startswith("|") or _EMPTY_TABLE_ROW_RE.match(line):
+            continue
+        cols = [c.strip() for c in line.split("|")]
+        cols = [c for c in cols if c]
+        if len(cols) < 2:
+            continue
+
+        label = _LABEL_STARS_RE.sub("", cols[0]).strip()
+        if not _PUBLISH_DATE_LABEL_RE.search(label):
+            continue
+
+        value = cols[-1] if len(cols) == 2 else " | ".join(cols[1:])
+        cleaned = _clean_table_cell_value(value)
+        return cleaned or None
+
+    return None
 
 
 def extract_has_open_source(content):
@@ -599,6 +634,12 @@ def process_papers():
 
                 if extract_has_open_source(content):
                     paper_entry["has_open_source"] = True
+
+                published_date = extract_published_date(content) or existing_meta_for_paper.get(
+                    "published_date"
+                )
+                if published_date:
+                    paper_entry["published_date"] = published_date
 
                 # Prefer zhname from front matter when present
                 if "zhname" in frontmatter_meta:
