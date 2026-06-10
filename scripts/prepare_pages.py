@@ -257,10 +257,28 @@ _PUBLISH_DATE_Y_VENUE_CN_RE = re.compile(r"(\d{4})\s*年(\s*\([^)]+\))")
 _PUBLISH_DATE_Y_CN_RE = re.compile(r"(\d{4})\s*年")
 _PUBLISH_DATE_ISO_YMD_RE = re.compile(r"(\d{4})-(\d{2})-(\d{2})\b")
 _PUBLISH_DATE_ISO_YM_RE = re.compile(r"(\d{4})-(\d{2})\b")
+_PUBLISH_DATE_V_TAG_ISO_RE = re.compile(r"(\d{4}-\d{2}-\d{2})\s+(v\d+)\b", re.IGNORECASE)
+_PUBLISH_DATE_V_TAG_CN_RE = re.compile(
+    r"(\d{4}\s*年\s*\d{1,2}\s*月\s*\d{1,2}\s*日)\s*(v\d+)\b", re.IGNORECASE
+)
 _PUBLISH_DATE_EN_PHRASES = (
     ("初版", "initial release"),
     ("项目源自 Orbit / Isaac Gym 生态演进", "evolved from the Orbit / Isaac Gym ecosystem"),
+    ("香港 12.15–12.18", "Hong Kong, Dec 15–18"),
+    ("仓库 README 标识", "per repository README"),
+    ("开放获取", "open access"),
+    ("修订", "revised"),
 )
+# Bare year directly followed by a parenthesized venue at the start of the
+# string or right after a list separator, e.g. ``2025 (arXiv)`` — venue-year
+# tails such as ``RSS 2023`` must stay untouched.
+_PUBLISH_DATE_ZH_BARE_YEAR_RE = re.compile(r"(^|[，；,;]\s*)(\d{4})\s*（")
+_PUBLISH_DATE_ZH_SPACED_YM_RE = re.compile(r"(\d{4})\s*年\s*(\d{1,2})\s*月")
+# Unparenthesized ``arXiv`` right after a date, e.g. ``2024年6月13日 arXiv；…``.
+_PUBLISH_DATE_ZH_BARE_ARXIV_RE = re.compile(r"(?<=[年月日])\s+arXiv(?=[，；,;]|$)")
+_CJK_GAP_RE = re.compile(r"(?<=[一-鿿])\s+(?=[一-鿿])")
+_LATIN_BEFORE_CJK_RE = re.compile(r"(?<=[0-9A-Za-z])(?=[一-鿿])")
+_CJK_BEFORE_LATIN_RE = re.compile(r"(?<=[一-鿿])(?=[0-9A-Za-z])")
 
 
 def _month_name(month: int, *, short: bool = False) -> str:
@@ -270,7 +288,11 @@ def _month_name(month: int, *, short: bool = False) -> str:
 
 
 def to_published_date_en(text):
-    """Convert mixed Chinese/ISO publish-date strings to English display text."""
+    """Convert mixed Chinese/ISO publish-date strings to English display text.
+
+    All dates are rendered with abbreviated English month names, e.g.
+    ``Feb 25, 2026 (arXiv)``.
+    """
     if not text:
         return text
 
@@ -278,20 +300,17 @@ def to_published_date_en(text):
     result = result.replace("（", "(").replace("）", ")")
     result = result.replace("；", "; ").replace("，", ", ")
     result = re.sub(r"\s+", " ", result)
-    result = re.sub(r"(\d{4}-\d{2}-\d{2})\s+(v\d+)\b", r"\2 \1", result, flags=re.IGNORECASE)
+    result = _PUBLISH_DATE_V_TAG_ISO_RE.sub(r"\2 \1", result)
+    result = _PUBLISH_DATE_V_TAG_CN_RE.sub(r"\2 \1", result)
 
     def _ymd_cn(match):
         year, month, day = int(match.group(1)), int(match.group(2)), int(match.group(3))
-        return f"{_month_name(month)} {day}, {year}"
+        return f"{_month_name(month, short=True)} {day}, {year}"
 
     def _ym_cn(match):
         year, month = int(match.group(1)), int(match.group(2))
         suffix = match.group(3) or ""
         return f"{_month_name(month, short=True)} {year}{suffix}"
-
-    def _iso_ymd(match):
-        year, month, day = int(match.group(1)), int(match.group(2)), int(match.group(3))
-        return f"{_month_name(month, short=True)} {day}, {year}"
 
     def _iso_ym(match):
         year, month = int(match.group(1)), int(match.group(2))
@@ -301,13 +320,79 @@ def to_published_date_en(text):
     result = _PUBLISH_DATE_YM_CN_RE.sub(_ym_cn, result)
     result = _PUBLISH_DATE_Y_VENUE_CN_RE.sub(r"\1\2", result)
     result = _PUBLISH_DATE_Y_CN_RE.sub(r"\1", result)
-    result = _PUBLISH_DATE_ISO_YMD_RE.sub(_iso_ymd, result)
+    result = _PUBLISH_DATE_ISO_YMD_RE.sub(_ymd_cn, result)
     result = _PUBLISH_DATE_ISO_YM_RE.sub(_iso_ym, result)
 
+    # Re-open CJK/Latin boundaries that the Chinese normalizer compacted so the
+    # phrase translations below keep a space around them.
+    result = _LATIN_BEFORE_CJK_RE.sub(" ", result)
+    result = _CJK_BEFORE_LATIN_RE.sub(" ", result)
     for zh_phrase, en_phrase in _PUBLISH_DATE_EN_PHRASES:
         result = result.replace(zh_phrase, en_phrase)
 
     result = re.sub(r"(\S)\(", r"\1 (", result)
+    return result.strip()
+
+
+def _zh_top_level_punctuation(text):
+    """Convert ``,``/``;`` between date segments to ``，``/``；``.
+
+    Separators inside parentheses (e.g. ``（ACM TOG, Vol. 39）``) belong to
+    embedded English content and are left untouched.
+    """
+    out = []
+    depth = 0
+    i = 0
+    while i < len(text):
+        ch = text[i]
+        if ch == "（":
+            depth += 1
+        elif ch == "）":
+            depth = max(0, depth - 1)
+        if depth == 0 and ch in ",;":
+            out.append("，" if ch == "," else "；")
+            if i + 1 < len(text) and text[i + 1] == " ":
+                i += 1
+        else:
+            out.append(ch)
+        i += 1
+    return "".join(out)
+
+
+def to_published_date_zh(text):
+    """Normalize mixed Chinese/ISO publish-date strings to Chinese display text.
+
+    All dates are rendered as compact ``YYYY年M月D日`` with full-width
+    parentheses and top-level punctuation, e.g. ``2026年2月25日（arXiv）``.
+    """
+    if not text:
+        return text
+
+    result = text.strip()
+    result = re.sub(r"\s+", " ", result)
+    result = result.replace("(", "（").replace(")", "）")
+
+    def _cn_ymd(match):
+        year, month, day = int(match.group(1)), int(match.group(2)), int(match.group(3))
+        return f"{year}年{month}月{day}日"
+
+    def _cn_ym(match):
+        year, month = int(match.group(1)), int(match.group(2))
+        return f"{year}年{month}月"
+
+    # Compact spaced Chinese dates (``2025 年 10 月`` → ``2025年10月``) and
+    # convert ISO dates; YMD must run before YM so ``2025-10-15`` is not
+    # consumed as ``2025-10``.
+    result = _PUBLISH_DATE_YMD_CN_RE.sub(_cn_ymd, result)
+    result = _PUBLISH_DATE_ZH_SPACED_YM_RE.sub(_cn_ym, result)
+    result = _PUBLISH_DATE_ISO_YMD_RE.sub(_cn_ymd, result)
+    result = _PUBLISH_DATE_ISO_YM_RE.sub(_cn_ym, result)
+
+    result = _PUBLISH_DATE_ZH_BARE_ARXIV_RE.sub("（arXiv）", result)
+    result = _PUBLISH_DATE_ZH_BARE_YEAR_RE.sub(r"\1\2年（", result)
+    result = _zh_top_level_punctuation(result)
+    result = re.sub(r"\s+（", "（", result)
+    result = _CJK_GAP_RE.sub("", result)
     return result.strip()
 
 
@@ -719,12 +804,13 @@ def process_papers():
                 if extract_has_open_source(content):
                     paper_entry["has_open_source"] = True
 
-                published_date_zh = (
+                published_date_raw = (
                     extract_published_date(content)
                     or existing_meta_for_paper.get("published_date_zh")
                     or existing_meta_for_paper.get("published_date")
                 )
-                if published_date_zh:
+                if published_date_raw:
+                    published_date_zh = to_published_date_zh(published_date_raw)
                     paper_entry["published_date_zh"] = published_date_zh
                     paper_entry["published_date_en"] = to_published_date_en(published_date_zh)
 
