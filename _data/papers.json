@@ -961,6 +961,14 @@
         "zhname": "量子深度强化学习做人形机器人导航：用变分量子 SAC 直接控制高维连续动作"
       },
       {
+        "title": "LookOut: Real-World Humanoid Egocentric Navigation",
+        "path": "papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation.md",
+        "url": "/papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation.html",
+        "dir": "LookOut__Real-World_Humanoid_Egocentric_Navigation",
+        "arxiv": "2508.14466",
+        "zhname": "LookOut：从第一视角视频预测未来 6-DoF 头部位姿，学人类「转头看路 + 避障」的导航行为"
+      },
+      {
         "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
         "path": "papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.md",
         "url": "/papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.html",
@@ -975,15 +983,6 @@
         "dir": "NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation",
         "arxiv": "2412.04453",
         "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
-      },
-      {
-        "title": "LookOut: Real-World Humanoid Egocentric Navigation",
-        "path": "papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation.md",
-        "url": "/papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation.html",
-        "dir": "LookOut__Real-World_Humanoid_Egocentric_Navigation",
-        "arxiv": "2508.14466",
-        "has_open_source": true,
-        "zhname": "LookOut：从第一视角视频预测未来 6-DoF 头部位姿，学人类转头看路与避障"
       }
     ],
     "zhname": "导航"
@@ -1006,6 +1005,14 @@
         "dir": "InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots",
         "arxiv": "2511.16306",
         "zhname": "InEKFormer：用 InEKF + Transformer 的混合滤波替代手调噪声协方差"
+      },
+      {
+        "title": "Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation",
+        "path": "papers/09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.md",
+        "url": "/papers/09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.html",
+        "dir": "Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation",
+        "arxiv": "2510.16755",
+        "zhname": "自适应不变扩展卡尔曼滤波：让足式机器人状态估计自己调接触噪声"
       },
       {
         "title": "Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation in Humanoid Robots",
