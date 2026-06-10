@@ -723,11 +723,15 @@ html {
   cursor: pointer;
 }
 
+/* 年份淡化只能用文字颜色实现，不能用 opacity / filter / transform：
+   这些属性会让 WebKit（iOS Safari）为 foreignObject 内的元素单独建合成层，
+   绘制时丢失祖先 SVG 的 transform，所有年份会堆叠到图表左上角原点。
+   color-mix 不支持时回退为继承色（位置正确，仅不淡化）。 */
 #roadmap-mermaid .roadmap-node-year,
 .mermaid-lightbox__stage .roadmap-node-year {
   font-size: 0.72em;
   font-weight: 400;
-  opacity: 0.68;
+  color: color-mix(in srgb, currentColor 68%, transparent);
   line-height: 1.2;
 }
 
