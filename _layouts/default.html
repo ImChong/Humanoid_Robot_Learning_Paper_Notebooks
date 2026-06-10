@@ -488,22 +488,15 @@
 
       // ⚡ Bolt Optimization: Include SHOW_ELEMENT to proactively prune irrelevant subtrees
       // (like code blocks) by returning FILTER_REJECT, avoiding deep DOM traversal.
-      function isInsideMermaid(node) {
-        for (var el = node.nodeType === 1 ? node : node.parentElement; el; el = el.parentElement) {
-          if (!el.classList) continue;
-          if (el.classList.contains('mermaid') || el.classList.contains('mermaid-container')) return true;
-          if (el.id === 'roadmap-mermaid') return true;
-        }
-        return false;
-      }
-
       var walker = document.createTreeWalker(
         mathContainer, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
           acceptNode: function(node) {
-            if (isInsideMermaid(node)) return NodeFilter.FILTER_REJECT;
             if (node.nodeType === 1) { // Element node
               var tag = node.tagName;
               if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'PRE' || tag === 'CODE' || tag === 'ANNOTATION' || tag === 'TEXTAREA') {
+                return NodeFilter.FILTER_REJECT;
+              }
+              if ((node.classList && (node.classList.contains('mermaid') || node.classList.contains('mermaid-container'))) || node.id === 'roadmap-mermaid') {
                 return NodeFilter.FILTER_REJECT;
               }
               return NodeFilter.FILTER_SKIP;
