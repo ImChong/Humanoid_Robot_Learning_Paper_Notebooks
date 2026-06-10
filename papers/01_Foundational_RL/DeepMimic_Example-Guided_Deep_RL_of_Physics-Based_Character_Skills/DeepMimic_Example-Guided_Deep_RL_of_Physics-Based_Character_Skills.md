@@ -99,10 +99,10 @@ $$r_t^I = w^p \cdot r_t^p + w^v \cdot r_t^v + w^{ee} \cdot r_t^{ee} + w^{com} \c
     <tr><th>分量</th><th>衡量什么</th><th>计算方式</th></tr>
   </thead>
   <tbody>
-    <tr><td>$r^p$（关节姿态）</td><td>每个关节角度是否匹配</td><td>$\exp\left(-2 \sum_j | \hat{q}_{j} - q_{j} |^2\right)$</td></tr>
-    <tr><td>$r^v$（关节速度）</td><td>每个关节角速度是否匹配</td><td>$\exp\left(-0.1 \sum_j | \dot{\hat{q}}_{j} - \dot{q}_{j} |^2\right)$</td></tr>
-    <tr><td>$r^{ee}$（末端位置）</td><td>手脚位置是否正确</td><td>$\exp\left(-40 \sum_e | \hat{p}_{e} - p_{e} |^2\right)$</td></tr>
-    <tr><td>$r^{com}$（质心位置）</td><td>身体重心是否在对的位置</td><td>$\exp\left(-10 | \hat{p}_{com} - p_{com} |^2\right)$</td></tr>
+    <tr><td>$r^p$（关节姿态）</td><td>每个关节角度是否匹配</td><td>$\exp\left(-2 \sum_j \| \hat{q}_{j} - q_{j} \|^2\right)$</td></tr>
+    <tr><td>$r^v$（关节速度）</td><td>每个关节角速度是否匹配</td><td>$\exp\left(-0.1 \sum_j \| \dot{\hat{q}}_{j} - \dot{q}_{j} \|^2\right)$</td></tr>
+    <tr><td>$r^{ee}$（末端位置）</td><td>手脚位置是否正确</td><td>$\exp\left(-40 \sum_e \| \hat{p}_{e} - p_{e} \|^2\right)$</td></tr>
+    <tr><td>$r^{com}$（质心位置）</td><td>身体重心是否在对的位置</td><td>$\exp\left(-10 \| \hat{p}_{com} - p_{com} \|^2\right)$</td></tr>
   </tbody>
 </table>
 

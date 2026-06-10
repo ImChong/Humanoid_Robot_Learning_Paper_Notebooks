@@ -29,7 +29,7 @@ paper_order: 3
 
 **作者**: David Müller, Agon Serifi, Sammy Christen, Ruben Grandia, Espen Knoop, Moritz Bächer
 
-**一行定位**：把「生成可模仿参考」与「学会跟踪它」放进 **同一个物理仿真回路**：**上层**优化少量、可解释的重定向参数 $\mathbf{p}$，**下层**用 RL 学 $\pi_\phi(a|o,g)$ 跟踪由 $\mathbf{p}$ 诱导的参考 $\mathbf{g}_t$；用 **TTSA 式双时间尺度更新** 与 **对上层梯度的结构化近似**，避免在每个内层 RL 收敛后再求隐式 Hessian 那种不现实开销。
+**一行定位**：把「生成可模仿参考」与「学会跟踪它」放进 **同一个物理仿真回路**：**上层**优化少量、可解释的重定向参数 $\mathbf{p}$，**下层**用 RL 学 $\pi_\phi(a \mid o,g)$ 跟踪由 $\mathbf{p}$ 诱导的参考 $\mathbf{g}_t$；用 **TTSA 式双时间尺度更新** 与 **对上层梯度的结构化近似**，避免在每个内层 RL 收敛后再求隐式 Hessian 那种不现实开销。
 
 ---
 

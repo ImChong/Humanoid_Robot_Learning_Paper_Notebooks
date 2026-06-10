@@ -148,7 +148,7 @@ $$\mathbf{q}_{j,t} = \bar{\mathbf{q}}_j + \alpha_j \mathbf{a}_{j,t}, \quad \alph
 
 对 $\mathcal{B}_{\text{target}}$ 上各体计算位姿/速度误差，再对全体取均方：
 
-$$\bar{e}_\chi = \frac{1}{|\mathcal{B}_{\text{target}}|} \sum_{b} \|\mathbf{e}_{\chi,b}\|^2, \quad \chi \in \{p, R, v, w\}$$
+$$\bar{e}_\chi = \frac{1}{\|\mathcal{B}_{\text{target}}\|} \sum_{b} \|\mathbf{e}_{\chi,b}\|^2, \quad \chi \in \{p, R, v, w\}$$
 
 每项用高斯型指数奖励：
 
