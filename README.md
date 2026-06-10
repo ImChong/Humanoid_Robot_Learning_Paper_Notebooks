@@ -112,12 +112,14 @@
 
 ## 学习路线图
 
+> 💡 括号内为论文 arXiv 首次发布年份，与首页路线图节点下方的年份小字一致。
+
 ```
 ① 【基础 RL】
-  PPO → AWR
-       ↓
+  PPO (2017) → AWR (2019)
+              ↓
    【人体动作数据层】        ← 模仿类方法开始需要参考数据
-  AMASS / HumanML3D  →  人体 SMPL 动作数据集
+  AMASS (2019) / HumanML3D (2022)  →  人体 SMPL 动作数据集
        ↓
    【动作重定向层】          ← 人体骨架 → 机器人骨架的桥梁
   几何重定向 (IK-based)  →  GMR / Retargeting Matters (2025)
@@ -129,30 +131,30 @@
   PHC (2023)            ADD (2025)
        ↓
 ③ 【技能组合 / 扩散】
-  ASE (2022) → CALM (2023) → PULSE (2024)
-  Diffusion Policy → BeyondMimic (2025)
+  ASE (2022) → CALM (2023) → PULSE (2023)
+  Diffusion Policy (2023) → BeyondMimic (2025)
        ↓
 ④ 【全身控制 WBC】        ← 把技能 / 扩散策略落到整机关节
-  Expressive WBC (2024) → HOVER / HugWBC / ExBody2
+  Expressive WBC (2024) → HOVER (2024) / HugWBC (2025) / ExBody2 (2024)
        ↓
    ┌── 从 WBC / 扩散分出多条上行支线，最终都汇聚到 ⑨ ──┐
    │
-   ├─ ⑤ 操作 Manipulation：         iDP3 → EgoMimic → HumDex
+   ├─ ⑤ 操作 Manipulation：         iDP3 (2024) → EgoMimic (2024) → HumDex (2026)
    │                                （3D 扩散策略 / 自我中心视频 / 灵巧手）
    │
-   ├─ ⑥ 移动操作 Loco-Manipulation： HOMIE → ULTRA → Ψ₀
+   ├─ ⑥ 移动操作 Loco-Manipulation： HOMIE (2025) → ULTRA (2026) → Ψ₀ (2026)
    │                                （外骨骼遥操作 → 多模态全身控制 → loco-manip 基础模型）
    │
-   └─ ⑦ 世界模型 World Model：       DreamDojo → 1X World Model；HAIC（动力学感知 WM）
+   └─ ⑦ 世界模型 World Model：       DreamDojo (2026) → 1X World Model (2025)；HAIC (2026)（动力学感知 WM）
             ↓（世界模型"会做梦"预测未来 / 动力学，再升级为可直接当策略的模型）
-       ⑧ 世界-动作模型 WAM：         DreamZero（World Action Models are Zero-shot Policies）
+       ⑧ 世界-动作模型 WAM：         DreamZero (2026)（World Action Models are Zero-shot Policies）
        ↓
 ⑨ 【基础模型终点 (VLA / BFM)】   ← 一路从 PPO 爬到这里
-  VLA：GR00T N1                  ── 视觉-语言-动作，端到端通才策略
-  BFM：Behavior Foundation Model ── 行为基础模型 / 全身控制先验
+  VLA：GR00T N1 (2025)                  ── 视觉-语言-动作，端到端通才策略
+  BFM：Behavior Foundation Model (2025) ── 行为基础模型 / 全身控制先验
 
 【Sim-to-Real 工程层】  ← 横跨整个路线
-  Domain Randomization (2017) → LCP (2025)
+  Domain Randomization (2017) → LCP (2024)
   ↑ sim环境随机化迁移        ↑ 动作平滑，替代低通滤波器
 ```
 
