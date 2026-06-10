@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "09_State_Estimation",
-      "last_index": 539,
-      "last_title": "Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation",
-      "next_module": "10_Sim-to-Real"
+      "last_module": "10_Sim-to-Real",
+      "last_index": 540,
+      "last_title": "HALO: Closing Sim-to-Real Gap for Heavy-loaded Humanoid Agile Motion Skills via Differentiable Simulation",
+      "next_module": "11_Simulation_Benchmark"
     },
     "last_summary_index": 355,
     "last_summary_date": "2026-06-17",
@@ -807,6 +807,18 @@
         "arxiv": "2512.08920",
         "source_repo": "https://github.com/jessicayin/osmo_tactile_glove",
         "project_page": "https://jessicayin.github.io/osmo_tactile_glove/"
+      },
+      {
+        "date": "2026-06-10",
+        "index": 540,
+        "title": "HALO: Closing Sim-to-Real Gap for Heavy-loaded Humanoid Agile Motion Skills via Differentiable Simulation",
+        "module": "10_Sim-to-Real",
+        "category": "10_Sim-to-Real",
+        "note_path": "papers/10_Sim-to-Real/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion.md",
+        "track": "module_rotation",
+        "arxiv": "2603.15084",
+        "source_repo": null,
+        "project_page": "https://mwondering.github.io/halo-humanoid/"
       }
     ],
     "last_completed_index": 373,
