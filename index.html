@@ -109,6 +109,7 @@ title: "Home"
       {% endif %}
         <h2 class="category-title" id="cat-{{ forloop.index }}"><span class="cat-icon">{{ icon }}</span> <span class="cat-name" data-en="{{ cat_data.display_name | escape }}" data-zh="{{ cat_data.zhname | escape }}">{{ cat_data.display_name | escape }}</span> <span class="paper-count">({{ main_total }})</span></h2>
       {% if cat_data.subtitle %}<p class="category-subtitle" data-en="{{ cat_data.subtitle | escape }}" data-zh="{{ cat_data.subtitle_zh | escape }}">{{ cat_data.subtitle | escape }}</p>{% endif %}
+      {% if cat_data.sort_order_hint %}<p class="category-sort-hint" data-en="{{ cat_data.sort_order_hint | escape }}" data-zh="{{ cat_data.sort_order_hint_zh | escape }}">{{ cat_data.sort_order_hint | escape }}</p>{% endif %}
 
       {% if cat_data.subcategories %}
         {% if cat_data.papers.size > 0 %}
@@ -127,6 +128,7 @@ title: "Home"
             <span class="subcat-name" data-en="{{ subcat.name | escape }}" data-zh="{{ subcat.zhname | escape }}">{{ subcat.name | escape }}</span>
             <span class="paper-count">({{ subcat.papers | size }})</span>
           </h3>
+          {% if subcat.sort_order_hint %}<p class="subcategory-sort-hint" data-en="{{ subcat.sort_order_hint | escape }}" data-zh="{{ subcat.sort_order_hint_zh | escape }}">{{ subcat.sort_order_hint | escape }}</p>{% endif %}
           {% if subcat.papers.size > 0 %}
           <ul class="paper-list">
             {% for paper in subcat.papers %}

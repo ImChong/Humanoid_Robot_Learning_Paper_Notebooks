@@ -96,6 +96,42 @@ CATEGORIES_ARXIV_OLDEST_FIRST = frozenset({
     "03_High_Impact_Selection",
 })
 
+CATEGORY_SORT_ORDER_HINT = {
+    "01_Foundational_RL": {
+        "en": "Paper tags ordered by recommended learning path",
+        "zh": "论文标签按推荐阅读路线顺序排列",
+    },
+    "02_Motion_Retargeting": {
+        "en": "Paper tags ordered by arXiv date, oldest first",
+        "zh": "论文标签按 arXiv 发表时间旧→新排列",
+    },
+    "03_High_Impact_Selection": {
+        "en": "Paper tags ordered by arXiv date, oldest first (same within subcategories)",
+        "zh": "论文标签按 arXiv 发表时间旧→新排列（各子模块同理）",
+    },
+}
+
+DEFAULT_SORT_ORDER_HINT = {
+    "en": "Paper tags ordered by arXiv date, newest first",
+    "zh": "论文标签按 arXiv 发表时间新→旧排列",
+}
+
+_SUBCATEGORY_SORT_ORDER_HINT = {
+    "en": "Paper tags ordered by arXiv date, oldest first",
+    "zh": "论文标签按 arXiv 发表时间旧→新排列",
+}
+
+
+def apply_sort_order_hint(entry, category_dir):
+    """Attach bilingual sort-order hints for the homepage category block."""
+    hint = CATEGORY_SORT_ORDER_HINT.get(category_dir, DEFAULT_SORT_ORDER_HINT)
+    entry["sort_order_hint"] = hint["en"]
+    entry["sort_order_hint_zh"] = hint["zh"]
+    if category_dir in CATEGORIES_ARXIV_OLDEST_FIRST:
+        for subcat in entry.get("subcategories", []):
+            subcat["sort_order_hint"] = _SUBCATEGORY_SORT_ORDER_HINT["en"]
+            subcat["sort_order_hint_zh"] = _SUBCATEGORY_SORT_ORDER_HINT["zh"]
+
 
 _TITLE_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
 
@@ -623,6 +659,8 @@ def process_papers():
                 for sc in entry["subcategories"]:
                     sort_papers_by_arxiv(sc["papers"], newest_first=False)
 
+        apply_sort_order_hint(entry, category_dir)
+
         # Remove internal fields
         for p in papers:
             if "_order" in p:
@@ -655,6 +693,7 @@ def process_papers():
                 for s in entry["subcategories"]:
                     if "name_zh" in s:
                         s["zhname"] = s.pop("name_zh")
+            apply_sort_order_hint(entry, category_dir)
             index_data[category_dir] = entry
 
     # Sort by upstream awesome-list order first; unknown folders keep lexical tail order.

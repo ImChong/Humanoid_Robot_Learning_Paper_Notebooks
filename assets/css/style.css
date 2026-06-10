@@ -246,6 +246,20 @@ html {
   font-style: italic;
 }
 
+.category-sort-hint {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  margin: -0.55rem 0 0.75rem;
+}
+
+.subcategory-sort-hint {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  opacity: 0.75;
+  margin: -0.25rem 0 0.45rem 0.8rem;
+}
+
 .subcategory-section {
   margin-bottom: 1.2rem;
 }

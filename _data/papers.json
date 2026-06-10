@@ -139,7 +139,9 @@
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research",
     "subtitle_zh": "基础强化学习理论与经典算法 — 理解后续研究的必要前置知识",
-    "zhname": "基础强化学习"
+    "zhname": "基础强化学习",
+    "sort_order_hint": "Paper tags ordered by recommended learning path",
+    "sort_order_hint_zh": "论文标签按推荐阅读路线顺序排列"
   },
   "02_Motion_Retargeting": {
     "display_name": "Motion Retargeting",
@@ -181,7 +183,9 @@
     ],
     "subtitle": "Bridging human motion data and humanoid policies — geometric IK, learned retargeting, and the engineering choices that determine downstream policy quality",
     "subtitle_zh": "连接人体动作数据与人形策略的桥梁 — 几何 IK、学习式重定向以及决定下游策略质量的工程取舍",
-    "zhname": "运动重定向"
+    "zhname": "运动重定向",
+    "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
   },
   "03_High_Impact_Selection": {
     "display_name": "High Impact Selection",
@@ -247,7 +251,9 @@
             "zhname": "SONIC：用规模化运动跟踪打造自然的人形全身控制器"
           }
         ],
-        "zhname": "全身控制核心"
+        "zhname": "全身控制核心",
+        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
       },
       {
         "name": "Teleoperation & Imitation Learning",
@@ -279,7 +285,9 @@
             "zhname": "HOMIE：同构外骨骼驾驶舱式人形遥操作系统"
           }
         ],
-        "zhname": "遥操作与模仿学习"
+        "zhname": "遥操作与模仿学习",
+        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
       },
       {
         "name": "Locomotion Classics",
@@ -335,7 +343,9 @@
             "zhname": "ECO：把人形行走能耗写成显式约束的受限 RL（PPO-Lagrangian · BRUCE）"
           }
         ],
-        "zhname": "行走经典"
+        "zhname": "行走经典",
+        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
       },
       {
         "name": "Sim-to-Real & Foundation Model",
@@ -375,7 +385,9 @@
             "zhname": "BFM：面向人形全身控制的行为基础模型"
           }
         ],
-        "zhname": "仿真到现实与基座模型"
+        "zhname": "仿真到现实与基座模型",
+        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
       },
       {
         "name": "Simulation Platform & Tools",
@@ -416,9 +428,13 @@
             "zhname": "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
           }
         ],
-        "zhname": "仿真平台与工具"
+        "zhname": "仿真平台与工具",
+        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
       }
-    ]
+    ],
+    "sort_order_hint": "Paper tags ordered by arXiv date, oldest first (same within subcategories)",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列（各子模块同理）"
   },
   "04_Loco-Manipulation_and_WBC": {
     "display_name": "Loco-Manipulation and WBC",
@@ -699,7 +715,9 @@
         "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
       }
     ],
-    "zhname": "运动操作与全身控制"
+    "zhname": "运动操作与全身控制",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "06_Manipulation": {
     "display_name": "Manipulation",
@@ -776,7 +794,9 @@
         "zhname": "EgoMimic：通过第一视角视频扩展模仿学习"
       }
     ],
-    "zhname": "灵巧操作"
+    "zhname": "灵巧操作",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "07_Teleoperation": {
     "display_name": "Teleoperation",
@@ -841,7 +861,9 @@
         "zhname": "HumanPlus：人形机器人对人类的影子跟随与模仿"
       }
     ],
-    "zhname": "遥操作"
+    "zhname": "遥操作",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "05_Locomotion": {
     "display_name": "Locomotion",
@@ -922,7 +944,9 @@
         "zhname": "几分钟学会走路：大规模并行深度强化学习"
       }
     ],
-    "zhname": "行走运动"
+    "zhname": "行走运动",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "08_Navigation": {
     "display_name": "Navigation",
@@ -985,7 +1009,9 @@
         "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
       }
     ],
-    "zhname": "导航"
+    "zhname": "导航",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "09_State_Estimation": {
     "display_name": "State Estimation",
@@ -1041,7 +1067,9 @@
         "zhname": "用「前向运动学因子 + 预积分接触因子」把足式机器人状态估计搬到因子图平滑上"
       }
     ],
-    "zhname": "状态估计"
+    "zhname": "状态估计",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "10_Sim-to-Real": {
     "display_name": "Sim-to-Real",
@@ -1100,7 +1128,9 @@
     ],
     "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
     "subtitle_zh": "核心理论与算法见 01 基础 RL：Domain Randomization、LCP。本分类暂留给后续专项论文（Real-to-Sim、ADR、Privileged Learning 等）。",
-    "zhname": "仿真到现实"
+    "zhname": "仿真到现实",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "12_Hardware_Design": {
     "display_name": "Hardware Design",
@@ -1154,7 +1184,9 @@
         "zhname": "Unitree H1 人形机器人白皮书与技术规格"
       }
     ],
-    "zhname": "硬件设计"
+    "zhname": "硬件设计",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "11_Simulation_Benchmark": {
     "display_name": "Simulation Benchmark",
@@ -1212,7 +1244,9 @@
         "zhname": "HumanoidBench：全身运动与操作的人形机器人仿真基准"
       }
     ],
-    "zhname": "仿真与基准"
+    "zhname": "仿真与基准",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "13_Physics-Based_Animation": {
     "display_name": "Physics-Based Animation",
@@ -1269,7 +1303,9 @@
         "zhname": "基于运动 VAE 的角色控制器"
       }
     ],
-    "zhname": "物理动画"
+    "zhname": "物理动画",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "14_Human_Motion": {
     "display_name": "Human Motion",
@@ -1327,6 +1363,8 @@
         "zhname": "控制算子：让非技术用户也能搭出自己的「学习型」角色控制器"
       }
     ],
-    "zhname": "人体动作分析与生成"
+    "zhname": "人体动作分析与生成",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   }
 }

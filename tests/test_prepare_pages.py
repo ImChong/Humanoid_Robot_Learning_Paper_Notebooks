@@ -117,3 +117,14 @@ def test_category_sort_policy_constants():
         "02_Motion_Retargeting",
         "03_High_Impact_Selection",
     })
+
+
+def test_apply_sort_order_hint_category_and_subcategories():
+    entry = {"subcategories": [{"name": "Whole-Body Control Core", "papers": []}]}
+    prepare_pages.apply_sort_order_hint(entry, "03_High_Impact_Selection")
+    assert "旧→新" in entry["sort_order_hint_zh"]
+    assert entry["subcategories"][0]["sort_order_hint_zh"].startswith("论文标签按 arXiv")
+
+    newest_entry = {}
+    prepare_pages.apply_sort_order_hint(newest_entry, "04_Loco-Manipulation_and_WBC")
+    assert "新→旧" in newest_entry["sort_order_hint_zh"]
