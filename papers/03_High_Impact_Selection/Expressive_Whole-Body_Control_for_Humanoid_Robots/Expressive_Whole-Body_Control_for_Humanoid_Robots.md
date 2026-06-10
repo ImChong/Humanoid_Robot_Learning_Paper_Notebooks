@@ -23,7 +23,7 @@ subcategory: "Whole-Body Control Core"
 | **PDF** | [下载](https://arxiv.org/pdf/2402.16796) |
 | **作者** | Xuxin Cheng, Yandong Ji, Junming Chen, Ruihan Yang, Ge Yang, Xiaolong Wang |
 | **机构** | UC San Diego |
-| **发布时间** | 2024年（RSS 2024） |
+| **发布时间** | 2024-02-26 (arXiv), RSS 2024 |
 | **项目主页** | [expressive-humanoid.github.io](https://expressive-humanoid.github.io/) |
 | **代码** | [GitHub 🌟](https://github.com/chengxuxin/expressive-humanoid) |
 

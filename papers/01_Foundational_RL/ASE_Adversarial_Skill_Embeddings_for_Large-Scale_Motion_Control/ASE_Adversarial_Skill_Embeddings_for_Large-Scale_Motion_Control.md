@@ -22,7 +22,7 @@ category: "Foundational RL"
 | **PDF** | [下载](https://arxiv.org/pdf/2205.01906) |
 | **作者** | Xue Bin Peng, Yunrong Guo, Lina Halper, Sergey Levine, Sanja Fidler |
 | **机构** | UC Berkeley, NVIDIA |
-| **发布时间** | 2022年（SIGGRAPH 2022, ACM TOG） |
+| **发布时间** | 2022-05-04 (arXiv), SIGGRAPH 2022 (ACM TOG) |
 | **项目主页** | [ASE Project Page](https://xbpeng.github.io/projects/ASE/) |
 | **GitHub** | [nv-tlabs/ASE](https://github.com/nv-tlabs/ASE)<br>[xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) |
 

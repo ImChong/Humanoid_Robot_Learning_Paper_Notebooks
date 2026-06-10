@@ -22,7 +22,7 @@ category: "Foundational RL"
 | **PDF** | [下载](https://arxiv.org/pdf/2505.04961) |
 | **作者** | Ziyu Zhang, Sergey Bashkirov, Dun Yang, Yi Shi, Michael Taylor, Xue Bin Peng |
 | **机构** | Simon Fraser University, NVIDIA |
-| **发布时间** | 2025年（SIGGRAPH Asia 2025） |
+| **发布时间** | 2025-05-08 (arXiv), SIGGRAPH Asia 2025 |
 | **项目主页** | [ADD Project Page](https://add-moo.github.io/) |
 | **GitHub** | [xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) |
 

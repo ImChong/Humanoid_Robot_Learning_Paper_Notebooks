@@ -268,6 +268,7 @@ _PUBLISH_DATE_EN_PHRASES = (
     ("仓库 README 标识", "per repository README"),
     ("开放获取", "open access"),
     ("修订", "revised"),
+    ("v3 发布", "v3 release"),
 )
 # Bare year directly followed by a parenthesized venue at the start of the
 # string or right after a list separator, e.g. ``2025 (arXiv)`` — venue-year

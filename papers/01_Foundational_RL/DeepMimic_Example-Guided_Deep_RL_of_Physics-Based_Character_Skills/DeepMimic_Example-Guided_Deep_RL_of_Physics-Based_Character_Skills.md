@@ -22,7 +22,7 @@ category: "Foundational RL"
 | **PDF** | [下载](https://arxiv.org/pdf/1804.02717) |
 | **作者** | Xue Bin Peng, Pieter Abbeel, Sergey Levine, Michiel van de Panne |
 | **机构** | UC Berkeley, University of British Columbia |
-| **发布时间** | 2018年（SIGGRAPH 2018） |
+| **发布时间** | 2018-04-08 (arXiv), SIGGRAPH 2018 |
 | **项目主页** | [xbpeng.github.io/DeepMimic](https://xbpeng.github.io/DeepMimic/) |
 | **GitHub** | [xbpeng/MimicKit](https://github.com/xbpeng/MimicKit) |
 
