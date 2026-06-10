@@ -260,6 +260,7 @@
 | 276 | DexterCap: An Affordable and Automated System for Capturing Dexterous Hand-Object Manipulation | 06_Manipulation | ✅ 已完成（2026-06-15） |
 | 539 | Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation | 09_State_Estimation | ✅ 已完成（2026-06-10） |
 | 540 | HALO: Closing Sim-to-Real Gap for Heavy-loaded Humanoid Agile Motion Skills via Differentiable Simulation | 10_Sim-to-Real | ✅ 已完成（2026-06-10） |
-| ? | （明日：11_Simulation_Benchmark 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 11_Simulation_Benchmark | ⏭️ 下一篇候选 |
+| 408 | ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control | 11_Simulation_Benchmark | ✅ 已完成（2026-06-10） |
+| ? | （明日：12_Hardware_Design 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 12_Hardware_Design | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
