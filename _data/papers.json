@@ -1033,6 +1033,14 @@
         "zhname": "InEKFormer：用 InEKF + Transformer 的混合滤波替代手调噪声协方差"
       },
       {
+        "title": "Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation",
+        "path": "papers/09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.md",
+        "url": "/papers/09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.html",
+        "dir": "Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation",
+        "arxiv": "2510.16755",
+        "zhname": "自适应不变扩展卡尔曼滤波：让足式机器人状态估计自己调接触噪声"
+      },
+      {
         "title": "Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation in Humanoid Robots",
         "path": "papers/09_State_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation.md",
         "url": "/papers/09_State_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation.html",

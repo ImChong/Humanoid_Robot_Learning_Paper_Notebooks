@@ -480,16 +480,17 @@
 | 367  | [NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance](https://arxiv.org/abs/2505.08712) | 2025.05 |  | ⏳ 待读 |
 
 
-### State Estimation（11篇）
+### State Estimation（12篇）
 
 
 | #   | 论文                                                                                                                                       | 日期      | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
+| 539  | [Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation](https://arxiv.org/abs/2510.16755) ✅ [笔记](09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.md) | 2025.10 |     | ✅ 已总结 |
 | 368  | [AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion](https://arxiv.org/abs/2511.18857) ✅ [笔记](09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md)                     | 2025.11 |     | ✅ 完成 |
 | 369  | [InEKFormer: A Hybrid State Estimator for Humanoid Robots](https://arxiv.org/abs/2511.16306) ✅ [笔记](09_State_Estimation/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots.md)                                             | 2025.11 |     | ✅ 完成 |
 | 370  | [Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation](https://arxiv.org/abs/2507.10105) ✅ [笔记](09_State_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation/Physics-Informed_Neural_Networks_with_UKF_for_Sensorless_Joint_Torque_Estimation.md) | 2025.07 |     | ✅ 完成 |
 | 371  | [An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems](https://arxiv.org/abs/2207.06780) ✅ [笔记](09_State_Estimation/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems/An_Empirical_Evaluation_of_Four_Off-the-Shelf_Proprietary_VIO_Systems.md) | 2026-05-27 |     | ✅ 完成 |
-| 372  | [Contact-Aided Invariant Extended Kalman Filtering for Robot State Estimation](https://arxiv.org/abs/1904.09251)                         | 2019.04 |     | ⏳ 待读 |
+| 372  | [Contact-Aided Invariant Extended Kalman Filtering for Robot State Estimation](https://arxiv.org/abs/1904.09251) ✅ [笔记](09_State_Estimation/Contact-Aided_Invariant_EKF_for_Legged_Robots/Contact-Aided_Invariant_EKF_for_Legged_Robots.md) | 2019.04 |     | ✅ 完成 |
 | 373  | [Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors](https://arxiv.org/abs/1712.05873) ✅ [笔记](09_State_Estimation/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors.md)   | 2017.05 |     | ✅ 完成 |
 | 374  | [The invariant extended Kalman filter as a stable observer](https://arxiv.org/abs/1410.1465)                                             | 2014.10 |     | ⏳ 待读 |
 | 375  | GTSAM: Factor graphs for Sensor Fusion in Robotics                                                                                       | -       |     | ⏳ 待读 |

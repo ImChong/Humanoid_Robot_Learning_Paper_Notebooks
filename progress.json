@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 355,
-      "last_title": "LookOut: Real-World Humanoid Egocentric Navigation",
-      "next_module": "09_State_Estimation"
+      "last_module": "09_State_Estimation",
+      "last_index": 539,
+      "last_title": "Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation",
+      "next_module": "10_Sim-to-Real"
     },
     "last_summary_index": 355,
     "last_summary_date": "2026-06-17",
