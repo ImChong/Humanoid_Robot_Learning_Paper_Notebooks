@@ -132,15 +132,15 @@ flowchart TB
 ### 第 0 步：初始化
 
 ```
-策略网络 πθ:  MLP [376] → 256 → 256 → [17] (输出高斯分布的均值)
-价值网络 Vφ:  MLP [376] → 256 → 256 → [1]  (输出标量V值)
+策略网络 πθ:  MLP [376] → 256 → 256 → [17] (输出高斯分布的均值)   # Actor：输入376维观测，输出17维动作分布
+价值网络 Vφ:  MLP [376] → 256 → 256 → [1]  (输出标量V值)          # Critic：评估当前状态的好坏
 
-超参数:
-  clip ε = 0.2
-  γ = 0.99, λ = 0.95
-  lr = 3e-4 (Adam)
-  n_envs = 32, n_steps = 64  → 每轮收集 32×64 = 2048 个样本
-  n_epochs = 10, mini_batch_size = 64
+超参数:                                  # 训练前一次性设定
+  clip ε = 0.2                          # 裁剪范围：概率比限制在 [0.8, 1.2]
+  γ = 0.99, λ = 0.95                    # 折扣因子 γ + GAE 偏差-方差平衡系数 λ
+  lr = 3e-4 (Adam)                      # 学习率，使用一阶优化器 Adam
+  n_envs = 32, n_steps = 64  → 每轮收集 32×64 = 2048 个样本   # 并行环境数 × 每环境步数
+  n_epochs = 10, mini_batch_size = 64   # 同批数据复用 10 轮，每次取 64 个样本更新
 ```
 
 此时策略随机输出扭矩 → 人形机器人一站起来就乱抖，几步就摔倒。
@@ -157,12 +157,12 @@ flowchart TB
 以环境 #1 为例（训练早期）：
 
 ```
-t=0:   s₀ = [站立姿态...],  a₀ ~ πθ(·|s₀) = [-0.12, 0.35, ...],  r₀ = 0.3
-t=1:   s₁ = [微倾斜...],    a₁ ~ πθ(·|s₁) = [0.28, -0.05, ...],  r₁ = 0.1
-t=2:   s₂ = [大幅摇晃...],  a₂ ~ πθ(·|s₂) = [-0.40, 0.22, ...],  r₂ = -0.5
-...
-t=47:  摔倒！done=True → 环境自动 reset
-t=48:  s₄₈ = [重新站立...],  继续收集到 t=63
+t=0:   s₀ = [站立姿态...],  a₀ ~ πθ(·|s₀) = [-0.12, 0.35, ...],  r₀ = 0.3    # 观察状态→策略采样动作→环境返回奖励
+t=1:   s₁ = [微倾斜...],    a₁ ~ πθ(·|s₁) = [0.28, -0.05, ...],  r₁ = 0.1    # 身体开始倾斜，奖励变小
+t=2:   s₂ = [大幅摇晃...],  a₂ ~ πθ(·|s₂) = [-0.40, 0.22, ...],  r₂ = -0.5   # 大幅摇晃，奖励为负
+...                                                                          # 持续"状态→动作→奖励"循环
+t=47:  摔倒！done=True → 环境自动 reset                                       # 轨迹终止：质心高度 < 0.8m
+t=48:  s₄₈ = [重新站立...],  继续收集到 t=63                                  # 重置后开启新轨迹，凑满 64 步
 ```
 
 > **为什么要并行？**
@@ -187,8 +187,8 @@ flowchart TB
 保存旧策略 $\pi_{\theta_{old}} \leftarrow \pi_\theta$，然后对 2048 个样本做 **10 个 epoch** 的更新：
 
 ```
-for epoch in range(10):
-    for batch in shuffle_and_split(buffer, size=64):
+for epoch in range(10):                                  # 同一批 2048 个样本复用 10 轮
+    for batch in shuffle_and_split(buffer, size=64):     # 打乱并切成 64 样本的 mini-batch
         
         # 样本 t=15（一个好动作，Â₁₅ = +2.3）
         # 旧策略: πold(a₁₅|s₁₅) = 0.032
@@ -210,8 +210,8 @@ for epoch in range(10):
         # → 含义：新策略已经充分远离这个坏动作，不需要再继续远离
         
         # 汇总 loss，梯度更新
-        loss = -mean(L_clip) + 0.5 * MSE(V(s), R_target)
-        optimizer.step()
+        loss = -mean(L_clip) + 0.5 * MSE(V(s), R_target) # 策略损失（取负做最小化）+ 价值损失
+        optimizer.step()                                 # 一步梯度下降，同时更新 θ 与 φ
 ```
 
 > 🔑 **关键理解**：epoch 1 时 $r_t \approx 1$（新旧策略一样），随着更新 $r_t$ 逐渐偏离 1，裁剪开始生效，**自动限制更新幅度**——这就是 PPO 的"自带刹车"。
@@ -230,12 +230,12 @@ for epoch in range(10):
 
 <div class="mermaid">
 flowchart TB
-    I["初始化 π_θ, V_φ（随机）<br/>创建 N=32 个并行环境"]
+    I["初始化 $$\pi_\theta,\, V_\phi$$（随机）<br/>创建 N=32 个并行环境"]
     L["32 个环境并行收集，各 64 步<br/>→ 2048 个样本"]
-    G["按环境/轨迹独立计算 GAE 优势 Â_t"]
-    S["保存 π_old ← π_θ"]
-    R["概率比<br/>r_t(θ)=π_θ(a#124;s)/π_old(a#124;s)"]
-    P["PPO 更新（10 epoch）<br/>L^CLIP=min(r_t·Â_t, clip·Â_t)"]
+    G["按环境/轨迹独立计算 GAE 优势 $$\hat{A}_t$$"]
+    S["保存 $$\pi_{\theta_{old}} \leftarrow \pi_\theta$$"]
+    R["概率比 $$r_t(\theta)=\frac{\pi_\theta(a_t \mid s_t)}{\pi_{\theta_{old}}(a_t \mid s_t)}$$"]
+    P["PPO 更新（10 epoch）<br/>$$L^{CLIP}=\min(r_t\hat{A}_t,\,\mathrm{clip}(r_t,0.8,1.2)\hat{A}_t)$$"]
     U["更新 θ（策略）与 φ（价值 MSE）"]
     Q{回报 > 目标?}
     DONE((训练完成))
@@ -267,16 +267,16 @@ flowchart TB
 
 ```python
 # mimickit/learning/ppo_model.py
-class PPOModel(base_model.BaseModel):
-    def eval_actor(self, obs):
-        h = self._actor_layers(obs)
-        a_dist = self._action_dist(h)
-        return a_dist
+class PPOModel(base_model.BaseModel):     # Actor-Critic 模型，继承通用模型基类
+    def eval_actor(self, obs):            # 前向计算策略分布 π_θ(·|s)
+        h = self._actor_layers(obs)       # 观测经过 Actor 专属 MLP 提取特征
+        a_dist = self._action_dist(h)     # 由特征构造动作分布（高斯：均值+方差）
+        return a_dist                     # 返回分布对象，可采样动作或求 log_prob
     
-    def eval_critic(self, obs):
-        h = self._critic_layers(obs)
-        val = self._critic_out(h)
-        return val
+    def eval_critic(self, obs):           # 前向计算状态价值 V_φ(s)
+        h = self._critic_layers(obs)      # 观测经过 Critic 专属 MLP（与 Actor 独立）
+        val = self._critic_out(h)         # 线性输出层得到标量价值
+        return val                        # 返回 V(s) 估计值
 ```
 
 Actor 和 Critic 各自独立（不共享 backbone），这是人形机器人领域的主流选择。
@@ -285,27 +285,27 @@ Actor 和 Critic 各自独立（不共享 backbone），这是人形机器人领
 
 ```python
 # mimickit/learning/nets/fc_2layers_1024units.py
-def build_net(input_dict, activation):
-    layer_sizes = [1024, 512]  # 两层 MLP
+def build_net(input_dict, activation):    # 构建两层全连接网络（Actor/Critic 通用）
+    layer_sizes = [1024, 512]  # 两层 MLP 的隐藏层宽度
     
-    input_dim = np.sum([np.prod(curr_input.shape) for curr_input in input_dict.values()])
+    input_dim = np.sum([np.prod(curr_input.shape) for curr_input in input_dict.values()])  # 所有输入展平后的总维度
     
-    in_size = input_dim
-    layers = []
-    for out_size in layer_sizes:
-        curr_layer = torch.nn.Linear(in_size, out_size)
-        torch.nn.init.zeros_(curr_layer.bias)
-        layers.append(curr_layer)
-        layers.append(activation())
-        in_size = out_size
+    in_size = input_dim                   # 当前层的输入维度，从观测维度开始
+    layers = []                           # 收集各层模块的列表
+    for out_size in layer_sizes:          # 逐层构建：input → 1024 → 512
+        curr_layer = torch.nn.Linear(in_size, out_size)  # 全连接层
+        torch.nn.init.zeros_(curr_layer.bias)            # 偏置初始化为 0
+        layers.append(curr_layer)         # 加入线性层
+        layers.append(activation())       # 加入激活函数（配置指定，如 ReLU）
+        in_size = out_size                # 下一层的输入维度 = 本层输出维度
     
-    net = torch.nn.Sequential(*layers)
-    return net, info
+    net = torch.nn.Sequential(*layers)    # 串联成完整的前馈网络
+    return net, info                      # 返回网络模块与构建信息
 ```
 
 对应 `deepmimic_humanoid_ppo_agent.yaml` 中的配置：
 ```yaml
-model:
+model:                               # 网络结构配置
   actor_net: "fc_2layers_1024units"  # [obs] → 1024 → 512 → [17] (动作均值)
   critic_net: "fc_2layers_1024units" # [obs] → 1024 → 512 → [1] (价值标量)
 ```
@@ -314,25 +314,25 @@ model:
 
 ```python
 # mimickit/learning/ppo_agent.py - _compute_actor_loss()
-a_dist = self._model.eval_actor(norm_obs)
-a_logp = a_dist.log_prob(norm_a)
+a_dist = self._model.eval_actor(norm_obs) # 用当前策略计算动作分布 π_θ(·|s)
+a_logp = a_dist.log_prob(norm_a)          # 新策略下旧动作的对数概率 log π_θ(a|s)
 
 # 概率比 r_t(θ) = π_θ(a|s) / π_θ_old(a|s)
-a_ratio = torch.exp(a_logp - old_a_logp)
+a_ratio = torch.exp(a_logp - old_a_logp)  # 对数概率相减再取指数，数值上更稳定
 ```
 
 ### 4. PPO 裁剪机制（核心！）
 
 ```python
 # mimickit/learning/ppo_agent.py - _compute_actor_loss()
-a_ratio = torch.exp(a_logp - old_a_logp)
+a_ratio = torch.exp(a_logp - old_a_logp)              # 概率比 r_t(θ)
 
 # L^CLIP(θ) = min(r_t(θ)·Â_t, clip(r_t(θ), 1-ε, 1+ε)·Â_t)
-actor_loss0 = adv * a_ratio
-actor_loss1 = adv * torch.clamp(a_ratio, 
+actor_loss0 = adv * a_ratio                           # 未裁剪项：r_t·Â_t
+actor_loss1 = adv * torch.clamp(a_ratio,              # 裁剪项：先把 r_t 截断再乘优势
                                  1.0 - self._ppo_clip_ratio,  # ε=0.2 → 下界 0.8
                                  1.0 + self._ppo_clip_ratio)  # ε=0.2 → 上界 1.2
-actor_loss = torch.minimum(actor_loss0, actor_loss1)
+actor_loss = torch.minimum(actor_loss0, actor_loss1)  # 逐元素取较小值（悲观估计）
 actor_loss = -torch.mean(actor_loss)  # 加负号因为 optimizer 做最小化
 ```
 
@@ -346,27 +346,27 @@ norm_adv_clip: 4.0    # 优势归一化后限制在 [-4, 4]
 
 ```python
 # mimickit/learning/rl_util.py
-def compute_td_lambda_return(r, next_vals, done, discount, td_lambda):
-    return_t = torch.zeros_like(r)
-    reset_mask = done != base_env.DoneFlags.NULL.value
-    reset_mask = reset_mask.type(torch.float)
+def compute_td_lambda_return(r, next_vals, done, discount, td_lambda):  # 逆序计算 TD(λ) 回报
+    return_t = torch.zeros_like(r)                       # 初始化回报数组，形状同奖励序列
+    reset_mask = done != base_env.DoneFlags.NULL.value   # 标记哪些时间步轨迹结束（done）
+    reset_mask = reset_mask.type(torch.float)            # 转浮点，便于后面做乘法掩码
 
-    last_val = r[-1] + discount * next_vals[-1]
-    return_t[-1] = last_val
+    last_val = r[-1] + discount * next_vals[-1]          # 最后一步：r + γ·V(s')，用 V 估计补尾
+    return_t[-1] = last_val                              # 作为逆序递推的起点
 
-    timesteps = r.shape[0]
-    for i in reversed(range(0, timesteps - 1)):
-        curr_r = r[i]
-        curr_reset = reset_mask[i]
-        next_v = next_vals[i]
-        next_ret = return_t[i + 1]
+    timesteps = r.shape[0]                               # 总步数 T
+    for i in reversed(range(0, timesteps - 1)):          # 从 T-2 逆序递推到 0
+        curr_r = r[i]                                    # 当前步的即时奖励
+        curr_reset = reset_mask[i]                       # 当前步是否为轨迹边界
+        next_v = next_vals[i]                            # 下一状态的价值估计 V(s')
+        next_ret = return_t[i + 1]                       # 已算好的下一步回报
 
         # λ=0.95 时，遇到 done 截断，不跨越轨迹
-        curr_lambda = td_lambda * (1.0 - curr_reset)
-        curr_val = curr_r + discount * ((1.0 - curr_lambda) * next_v + curr_lambda * next_ret)
-        return_t[i] = curr_val
+        curr_lambda = td_lambda * (1.0 - curr_reset)     # done 处把 λ 置 0，切断跨轨迹传播
+        curr_val = curr_r + discount * ((1.0 - curr_lambda) * next_v + curr_lambda * next_ret)  # 按 λ 混合一步估计与多步回报
+        return_t[i] = curr_val                           # 写回当前步的目标回报
     
-    return return_t
+    return return_t                                      # 返回整条序列的 TD-λ 回报（Critic 的 target）
 ```
 
 对应配置：
@@ -379,35 +379,35 @@ discount: 0.99         # 折扣因子 γ=0.99
 
 ```python
 # mimickit/learning/ppo_agent.py - _compute_critic_loss()
-def _compute_critic_loss(self, batch):
-    norm_obs = self._obs_norm.normalize(batch["obs"])
+def _compute_critic_loss(self, batch):                 # 计算价值网络的回归损失
+    norm_obs = self._obs_norm.normalize(batch["obs"])  # 观测归一化（减均值除标准差）
     tar_val = batch["tar_val"]  # TD-λ 回报 target
     pred = self._model.eval_critic(norm_obs)  # V(s) 预测
-    pred = pred.squeeze(-1)
+    pred = pred.squeeze(-1)                   # 去掉末尾维度：[B,1] → [B]
 
-    diff = tar_val - pred
+    diff = tar_val - pred                     # 目标回报与预测的误差
     loss = torch.mean(torch.square(diff))  # MSE 损失
 
-    info = {"critic_loss": loss}
-    return info
+    info = {"critic_loss": loss}              # 打包成字典便于日志记录
+    return info                               # 返回损失信息
 ```
 
 ### 7. 训练循环（PPO Update）
 
 ```python
 # mimickit/learning/ppo_agent.py - _update_model()
-def _update_model(self):
-    num_samples = self._exp_buffer.get_sample_count()
+def _update_model(self):                                # 一轮收集结束后的参数更新入口
+    num_samples = self._exp_buffer.get_sample_count()   # 本轮收集到的样本总数
     
     # 先更新 Critic（多个 epoch）
-    critic_batch_size = int(np.ceil(self._critic_batch_size * num_envs))
-    num_critic_steps = num_critic_batches * self._critic_epochs
-    self._update_critic(critic_batch_size, num_critic_steps)
+    critic_batch_size = int(np.ceil(self._critic_batch_size * num_envs))  # 按环境数换算实际 batch 大小
+    num_critic_steps = num_critic_batches * self._critic_epochs           # 总更新步数 = 批数 × epoch 数
+    self._update_critic(critic_batch_size, num_critic_steps)              # 执行 Critic 梯度更新
     
     # 再更新 Actor（多个 epoch）
-    actor_batch_size = int(np.ceil(self._actor_batch_size * num_envs))
-    num_actor_steps = num_actor_batches * self._actor_epochs
-    self._update_actor(actor_batch_size, num_actor_steps)
+    actor_batch_size = int(np.ceil(self._actor_batch_size * num_envs))    # 按环境数换算实际 batch 大小
+    num_actor_steps = num_actor_batches * self._actor_epochs              # 总更新步数 = 批数 × epoch 数
+    self._update_actor(actor_batch_size, num_actor_steps)                 # 执行 Actor 梯度更新（含 PPO 裁剪）
 ```
 
 对应配置：
@@ -415,26 +415,26 @@ def _update_model(self):
 actor_epochs: 5        # Actor 更新 5 个 epoch
 actor_batch_size: 4    # 每个 batch 4 个环境
 critic_epochs: 2       # Critic 更新 2 个 epoch
-critic_batch_size: 2
+critic_batch_size: 2   # 每个 batch 2 个环境
 ```
 
 ### 8. Experience Buffer
 
 ```python
 # mimickit/learning/experience_buffer.py
-class ExperienceBuffer():
-    def __init__(self, buffer_length, batch_size, device):
+class ExperienceBuffer():                    # 经验缓冲区：暂存一轮 rollout 的数据
+    def __init__(self, buffer_length, batch_size, device):  # 初始化缓冲区形状
         self._buffer_length = buffer_length  # 每环境收集步数（如 32）
         self._batch_size = batch_size        # 并行环境数（如 4096）
     
-    def record(self, name, data):
+    def record(self, name, data):            # 收集阶段：每个时间步写入一条数据
         # 记录 (s, a, r, done, logp) 等数据
-        data_buf[self._buffer_head] = data
+        data_buf[self._buffer_head] = data   # 写入缓冲区当前位置
     
-    def sample(self, n):
+    def sample(self, n):                     # 更新阶段：随机抽取 n 个样本
         # 随机采样 mini-batch 用于更新
-        rand_idx = self._sample_rand_idx(n)
-        ...
+        rand_idx = self._sample_rand_idx(n)  # 生成随机索引（打乱混合所有环境的样本）
+        ...                                  # 按索引取出对应的 (s, a, Â, logp, ...) 等字段
 ```
 
 对应配置：
@@ -446,7 +446,7 @@ steps_per_iter: 32     # 每轮收集 32 步 × N 个环境
 
 ```yaml
 # deepmimic_humanoid_ppo_agent.yaml
-agent_name: "PPO"
+agent_name: "PPO"           # 使用 PPO 算法
 discount: 0.99              # 折扣因子 γ
 td_lambda: 0.95             # GAE λ
 ppo_clip_ratio: 0.2         # 裁剪范围 ε
@@ -455,7 +455,7 @@ norm_adv_clip: 4.0          # 优势归一化后截断
 actor_epochs: 5             # Actor 更新轮数
 actor_batch_size: 4         # Actor batch size
 critic_epochs: 2            # Critic 更新轮数
-critic_batch_size: 2
+critic_batch_size: 2        # Critic batch size
 
 action_bound_weight: 10.0   # 动作范围惩罚（防止动作超出边界）
 action_entropy_weight: 0.0  # 熵正则（0 表示不用）
