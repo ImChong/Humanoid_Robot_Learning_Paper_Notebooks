@@ -230,12 +230,12 @@ for epoch in range(10):
 
 <div class="mermaid">
 flowchart TB
-    I["初始化 π_θ, V_φ（随机）<br/>创建 N=32 个并行环境"]
+    I["初始化 $$\pi_\theta,\, V_\phi$$（随机）<br/>创建 N=32 个并行环境"]
     L["32 个环境并行收集，各 64 步<br/>→ 2048 个样本"]
-    G["按环境/轨迹独立计算 GAE 优势 Â_t"]
-    S["保存 π_old ← π_θ"]
-    R["概率比<br/>r_t(θ)=π_θ(a#124;s)/π_old(a#124;s)"]
-    P["PPO 更新（10 epoch）<br/>L^CLIP=min(r_t·Â_t, clip·Â_t)"]
+    G["按环境/轨迹独立计算 GAE 优势 $$\hat{A}_t$$"]
+    S["保存 $$\pi_{\theta_{old}} \leftarrow \pi_\theta$$"]
+    R["概率比 $$r_t(\theta)=\frac{\pi_\theta(a_t \mid s_t)}{\pi_{\theta_{old}}(a_t \mid s_t)}$$"]
+    P["PPO 更新（10 epoch）<br/>$$L^{CLIP}=\min(r_t\hat{A}_t,\,\mathrm{clip}(r_t,0.8,1.2)\hat{A}_t)$$"]
     U["更新 θ（策略）与 φ（价值 MSE）"]
     Q{回报 > 目标?}
     DONE((训练完成))
