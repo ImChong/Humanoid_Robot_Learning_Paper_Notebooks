@@ -95,6 +95,22 @@
     });
   };
 
+  /** After roadmap SVG insert (incl. lang-cache swap), fix iOS foreignObject sizing
+   *  and strip alpha/compositing styles from year labels. */
+  window.patchRoadmapMermaidDom = function (container) {
+    if (!container) return;
+    if (typeof window.patchMermaidForeignObjects === 'function') {
+      window.patchMermaidForeignObjects(container);
+    }
+    if (!isIos()) return;
+    container.querySelectorAll('.roadmap-node-year').forEach(function (el) {
+      el.style.removeProperty('opacity');
+      el.style.removeProperty('filter');
+      el.style.removeProperty('transform');
+      el.style.removeProperty('-webkit-transform');
+    });
+  };
+
   function scaledFlowchart(scale) {
     var mobile = isMobileViewport();
     return {
