@@ -723,6 +723,14 @@ html {
   cursor: pointer;
 }
 
+#roadmap-mermaid .roadmap-node-year,
+.mermaid-lightbox__stage .roadmap-node-year {
+  font-size: 0.72em;
+  font-weight: 400;
+  opacity: 0.68;
+  line-height: 1.2;
+}
+
 #roadmap-mermaid svg g.roadmap-node-link:focus {
   outline: none;
 }
