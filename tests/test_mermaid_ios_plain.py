@@ -63,6 +63,16 @@ def test_ios_css_does_not_blank_mathml_output():
     assert "position: static !important" in css
 
 
+def test_ios_edge_label_width_is_intrinsic():
+    css = Path("assets/css/style.css").read_text(encoding="utf-8")
+    # WebKit resolves percentage widths inside foreignObject against the SVG
+    # viewport, so the mobile `width: 100%` rule stretches short edge labels
+    # (是/否) into diagram-wide bars on iOS. Intrinsic sizing avoids the
+    # containing-block resolution entirely.
+    idx = css.index("html.ios .paper-body .mermaid foreignObject .labelBkg")
+    assert "width: fit-content !important" in css[idx : idx + 400]
+
+
 def test_escape_pipes_still_works():
     src = 'R["pi(a|s)"]'
     out = escape_pipes_in_node_labels(src)
