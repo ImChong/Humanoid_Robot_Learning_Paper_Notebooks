@@ -1119,15 +1119,32 @@ body.mermaid-lightbox-open {
   overflow: visible;
 }
 
-/* iOS Safari: KaTeX display math inside foreignObject is unstable — prefer plain labels. */
-html.ios .paper-body .mermaid foreignObject .katex-display,
-html.ios .paper-body .mermaid foreignObject .katex {
+/* iOS WebKit:foreignObject 内任何自带合成层的内容（opacity、filter、滚动
+   容器、定位偏移）都会丢失祖先 SVG 变换、被画到图表左上角原点。KaTeX 的
+   HTML 输出依赖 position:relative 偏移排版，无法整体规避，因此 iOS 上
+   Mermaid 公式改走原生 MathML（mermaid-config.js 中 forceLegacyMathML:
+   false）。以下为兜底：若意外出现 KaTeX 双输出，隐藏会触发 bug 的 HTML
+   部分，并把默认用 absolute+clip 隐藏的 MathML 副本恢复为可见静态排版
+   （absolute 定位本身也会触发该 bug）。 */
+html.ios :is(.paper-body .mermaid, .mermaid-lightbox__stage) foreignObject .katex-html {
   display: none !important;
 }
 
-html.ios .paper-body .mermaid foreignObject .katex-mathml {
+html.ios :is(.paper-body .mermaid, .mermaid-lightbox__stage) foreignObject .katex-mathml {
+  position: static !important;
+  clip: auto !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
   display: inline-block !important;
   max-width: 100%;
+}
+
+/* 下方移动端规则会把 .katex-display 变成滚动容器；滚动容器在 WebKit 里
+   也是层叠合成层，处于 foreignObject 内同样触发错位，iOS 上保持不可滚动。 */
+html.ios .paper-body .mermaid foreignObject .katex-display {
+  overflow: visible !important;
+  -webkit-overflow-scrolling: auto !important;
 }
 
 /* Mobile Safari: nowrap flex labels + max-content KaTeX can paint outside node boxes. */

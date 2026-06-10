@@ -27,9 +27,17 @@
     );
   }
 
-  /** iOS Safari paints KaTeX-in-foreignObject unreliably; use plain labels instead. */
+  /**
+   * Kill-switch for the legacy plain-text math downgrade. iOS now renders
+   * Mermaid math as native MathML (see getMermaidSiteConfig): KaTeX's HTML
+   * output leans on position:relative offsets, which iOS WebKit paints at
+   * the SVG origin inside foreignObject (the compositing-layer bug — same
+   * class of issue as the roadmap-year opacity fix), while MathML creates
+   * no layers. If MathML misbehaves on some WebKit build, revert this to
+   * `return isIos();` to restore the mermaidMathToPlain downgrade below.
+   */
   window.shouldUsePlainMermaidMath = function () {
-    return isIos();
+    return false;
   };
 
   window.mermaidMathToPlain = function (tex) {
@@ -141,10 +149,15 @@
       /<foreignObject([^>]*)>([\s\S]*?)<\/foreignObject>/gi,
       function (_match, attrs, inner) {
         var id = foreignObjects.length;
+        // mathMl profile: on iOS Mermaid emits math as native MathML
+        // (forceLegacyMathML: false). DOMPurify ignores ALLOWED_TAGS /
+        // ALLOWED_ATTR once USE_PROFILES is set, so extras go via ADD_*.
+        // semantics/annotation are KaTeX's inert TeX-source carriers —
+        // stripping them keeps their text and leaks raw TeX into the label.
         var safeInner = DOMPurify.sanitize(inner, {
-          USE_PROFILES: { html: true },
-          ALLOWED_TAGS: ['div', 'span', 'p', 'br', 'b', 'i', 'em', 'strong'],
-          ALLOWED_ATTR: ['style', 'class', 'xmlns'],
+          USE_PROFILES: { html: true, mathMl: true },
+          ADD_TAGS: ['semantics', 'annotation'],
+          ADD_ATTR: ['xmlns', 'encoding'],
         });
         foreignObjects.push({ attrs: attrs, inner: safeInner, id: id });
         return '<foreignObject data-fo-placeholder="' + id + '"></foreignObject>';
@@ -181,7 +194,9 @@
       htmlLabels: true,
       flowchart: scaledFlowchart(scale),
       securityLevel: 'strict',
-      // iOS Safari: native MathML; other platforms use KaTeX CSS in foreignObject.
+      // iOS WebKit: native MathML — KaTeX HTML inside foreignObject trips the
+      // compositing-layer bug (fragments fly to the SVG origin). Other
+      // platforms keep KaTeX HTML rendering via the KaTeX stylesheet.
       forceLegacyMathML: !ios,
     };
   };
