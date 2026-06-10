@@ -31,8 +31,8 @@
         "dir": "DeepMimic_Example-Guided_Deep_RL_of_Physics-Based_Character_Skills",
         "arxiv": "1804.02717",
         "has_open_source": true,
-        "published_date_zh": "2018年（SIGGRAPH 2018）",
-        "published_date_en": "2018 (SIGGRAPH 2018)",
+        "published_date_zh": "2018年4月8日（arXiv），SIGGRAPH 2018",
+        "published_date_en": "Apr 8, 2018 (arXiv), SIGGRAPH 2018",
         "zhname": "DeepMimic：基于示例引导的物理角色技能深度强化学习"
       },
       {
@@ -42,8 +42,8 @@
         "dir": "AMP_Adversarial_Motion_Priors_for_Stylized_Physics-Based_Character_Control",
         "arxiv": "2104.02180",
         "has_open_source": true,
-        "published_date_zh": "2021年（SIGGRAPH 2021）",
-        "published_date_en": "2021 (SIGGRAPH 2021)",
+        "published_date_zh": "2021年4月5日（arXiv），SIGGRAPH 2021",
+        "published_date_en": "Apr 5, 2021 (arXiv), SIGGRAPH 2021",
         "zhname": "AMP：对抗运动先验的风格化物理角色控制"
       },
       {
@@ -53,8 +53,8 @@
         "dir": "PHC_Perpetual_Humanoid_Control",
         "arxiv": "2305.06456",
         "has_open_source": true,
-        "published_date_zh": "2023年（ICCV 2023）",
-        "published_date_en": "2023 (ICCV 2023)",
+        "published_date_zh": "2023年5月10日（arXiv），ICCV 2023",
+        "published_date_en": "May 10, 2023 (arXiv), ICCV 2023",
         "zhname": "PHC：实时仿真虚拟角色的持续人形控制"
       },
       {
@@ -64,8 +64,8 @@
         "dir": "ADD_Adversarial_Differential_Discriminators",
         "arxiv": "2505.04961",
         "has_open_source": true,
-        "published_date_zh": "2025年（SIGGRAPH Asia 2025）",
-        "published_date_en": "2025 (SIGGRAPH Asia 2025)",
+        "published_date_zh": "2025年5月8日（arXiv），SIGGRAPH Asia 2025",
+        "published_date_en": "May 8, 2025 (arXiv), SIGGRAPH Asia 2025",
         "zhname": "ADD：对抗解耦与蒸馏"
       },
       {
@@ -75,8 +75,8 @@
         "dir": "ASE_Adversarial_Skill_Embeddings_for_Large-Scale_Motion_Control",
         "arxiv": "2205.01906",
         "has_open_source": true,
-        "published_date_zh": "2022年（SIGGRAPH 2022, ACM TOG）",
-        "published_date_en": "2022 (SIGGRAPH 2022, ACM TOG)",
+        "published_date_zh": "2022年5月4日（arXiv），SIGGRAPH 2022（ACM TOG）",
+        "published_date_en": "May 4, 2022 (arXiv), SIGGRAPH 2022 (ACM TOG)",
         "zhname": "ASE：大规模运动控制的对抗技能嵌入"
       },
       {
@@ -86,8 +86,8 @@
         "dir": "CALM_Conditional_Adversarial_Latent_Models_for_Directable_Virtual_Characters",
         "arxiv": "2305.02195",
         "has_open_source": true,
-        "published_date_zh": "2023年（SIGGRAPH 2023）",
-        "published_date_en": "2023 (SIGGRAPH 2023)",
+        "published_date_zh": "2023年5月2日（arXiv），SIGGRAPH 2023",
+        "published_date_en": "May 2, 2023 (arXiv), SIGGRAPH 2023",
         "zhname": "CALM：面向可控虚拟角色的条件对抗潜变量模型"
       },
       {
@@ -242,8 +242,8 @@
             "dir": "Expressive_Whole-Body_Control_for_Humanoid_Robots",
             "arxiv": "2402.16796",
             "has_open_source": true,
-            "published_date_zh": "2024年（RSS 2024）",
-            "published_date_en": "2024 (RSS 2024)",
+            "published_date_zh": "2024年2月26日（arXiv），RSS 2024",
+            "published_date_en": "Feb 26, 2024 (arXiv), RSS 2024",
             "zhname": "人形机器人表现力全身控制"
           },
           {
@@ -496,8 +496,8 @@
             "dir": "ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control",
             "arxiv": "2409.14393",
             "has_open_source": true,
-            "published_date_zh": "2025年（arXiv）",
-            "published_date_en": "2025 (arXiv)",
+            "published_date_zh": "2025年12月2日（GitHub v3 发布）",
+            "published_date_en": "Dec 2, 2025 (GitHub v3 release)",
             "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架"
           },
           {
@@ -1285,8 +1285,8 @@
         "url": "/papers/09_State_Estimation/Contact-Aided_Invariant_EKF_for_Legged_Robots/Contact-Aided_Invariant_EKF_for_Legged_Robots.html",
         "dir": "Contact-Aided_Invariant_EKF_for_Legged_Robots",
         "arxiv": "1904.09251",
-        "published_date_zh": "2018年（RSS），2019年（arXiv）",
-        "published_date_en": "2018 (RSS), 2019 (arXiv)",
+        "published_date_zh": "2018年6月（RSS 2018），2019年4月19日（arXiv）",
+        "published_date_en": "Jun 2018 (RSS 2018), Apr 19, 2019 (arXiv)",
         "zhname": "基于接触辅助的不变扩展卡尔曼滤波的足式机器人状态估计"
       },
       {

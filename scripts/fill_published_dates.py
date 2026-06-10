@@ -27,7 +27,7 @@ from prepare_pages import (  # noqa: E402
 
 _ARXIV_MENTION_RE = re.compile(r"arXiv|arxiv", re.IGNORECASE)
 _VENUE_IN_DATE_RE = re.compile(
-    r"SIGGRAPH|ICCV|ICLR|RSS|CoRL|IROS|CVPR|NeurIPS|HRI|ICRA|Science Robotics|ACM TOG",
+    r"SIGGRAPH|ICCV|ICLR|RSS|CoRL|IROS|CVPR|NeurIPS|HRI|ICRA|Science Robotics|ACM TOG|GitHub",
     re.IGNORECASE,
 )
 _CHINESE_DATE_RE = re.compile(r"[年月日]")

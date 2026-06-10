@@ -23,7 +23,7 @@ category: "Foundational RL"
 | **PDF** | [下载](https://arxiv.org/pdf/2305.02195) |
 | **作者** | Chen Tessler, Yoni Kasten, Yunrong Guo, Shie Mannor, Gal Chechik, Xue Bin Peng |
 | **机构** | NVIDIA, Technion, Bar-Ilan University, Simon Fraser University |
-| **发布时间** | 2023年（SIGGRAPH 2023） |
+| **发布时间** | 2023-05-02 (arXiv), SIGGRAPH 2023 |
 | **项目主页** | [NVIDIA PAR Lab](https://research.nvidia.com/labs/par/calm/) |
 | **GitHub** | [NVlabs/CALM](https://github.com/NVlabs/CALM) |
 

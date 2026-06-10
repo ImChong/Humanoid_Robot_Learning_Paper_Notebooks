@@ -22,7 +22,7 @@ category: "Foundational RL"
 | **PDF** | [下载](https://arxiv.org/pdf/2305.06456) |
 | **作者** | Zhengyi Luo, Jinkun Cao, Alexander W. Winkler, Kris Kitani, Weipeng Xu |
 | **机构** | Carnegie Mellon University, Meta Reality Labs |
-| **发布时间** | 2023年（ICCV 2023） |
+| **发布时间** | 2023-05-10 (arXiv), ICCV 2023 |
 | **项目主页** | [zhengyiluo.github.io/PHC](https://zhengyiluo.github.io/PHC/) |
 | **代码** | [GitHub](https://github.com/ZhengyiLuo/PHC) |
 

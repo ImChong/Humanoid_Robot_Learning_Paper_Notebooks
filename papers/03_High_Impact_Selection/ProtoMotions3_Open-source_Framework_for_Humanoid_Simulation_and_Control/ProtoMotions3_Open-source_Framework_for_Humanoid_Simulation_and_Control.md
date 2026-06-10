@@ -24,7 +24,7 @@ zhname: "ProtoMotions3：面向人形仿真与控制的开源框架"
 | **代码** | [GitHub - NVlabs/ProtoMotions](https://github.com/NVlabs/ProtoMotions) |
 | **引用标题** | ProtoMotions3: An Open-source Framework for Humanoid Simulation and Control |
 | **作者** | Chen Tessler, Yifeng Jiang, Xue Bin Peng, Erwin Coumans, Yi Shi, Haotian Zhang, Davis Rempe, Gal Chechik, Sanja Fidler |
-| **发布时间** | 2025 (arXiv) |
+| **发布时间** | 2025-12-02（GitHub v3 发布） |
 | **许可证** | Apache-2.0 |
 | **相关论文** | [MaskedMimic](https://arxiv.org/abs/2409.14393), [AMP](https://arxiv.org/abs/2104.02180), [ASE](https://arxiv.org/abs/2205.01906), [DeepMimic](https://xbpeng.github.io/projects/DeepMimic/index.html) |
 
