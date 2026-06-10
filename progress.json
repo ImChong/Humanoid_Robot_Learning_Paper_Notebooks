@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
-      "last_index": 540,
-      "last_title": "HALO: Closing Sim-to-Real Gap for Heavy-loaded Humanoid Agile Motion Skills via Differentiable Simulation",
-      "next_module": "11_Simulation_Benchmark"
+      "last_module": "11_Simulation_Benchmark",
+      "last_index": 408,
+      "last_title": "ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control",
+      "next_module": "12_Hardware_Design"
     },
     "last_summary_index": 355,
     "last_summary_date": "2026-06-17",
@@ -819,6 +819,18 @@
         "arxiv": "2603.15084",
         "source_repo": null,
         "project_page": "https://mwondering.github.io/halo-humanoid/"
+      },
+      {
+        "date": "2026-06-10",
+        "index": 408,
+        "title": "ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control",
+        "module": "11_Simulation_Benchmark",
+        "category": "11_Simulation_Benchmark",
+        "note_path": "papers/11_Simulation_Benchmark/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine.md",
+        "track": "module_rotation",
+        "arxiv": "2603.12185",
+        "source_repo": "https://github.com/asu-iris/comfree_warp",
+        "project_page": "https://irislab.tech/comfree-sim/"
       }
     ],
     "last_completed_index": 373,

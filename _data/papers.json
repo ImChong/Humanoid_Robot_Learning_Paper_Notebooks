@@ -1460,6 +1460,17 @@
     "display_name": "Simulation Benchmark",
     "papers": [
       {
+        "title": "ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control",
+        "path": "papers/11_Simulation_Benchmark/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine.md",
+        "url": "/papers/11_Simulation_Benchmark/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine.html",
+        "dir": "ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine",
+        "arxiv": "2603.12185",
+        "has_open_source": true,
+        "published_date_zh": "2026-03-12 (arXiv)",
+        "published_date_en": "Mar 12, 2026 (arXiv)",
+        "zhname": "ComFree-Sim：免互补约束的解析接触物理引擎，闭式冲量 + GPU 并行实现接触数量近线性扩展，兼容 MuJoCo API"
+      },
+      {
         "title": "Towards Motion Turing Test: Evaluating Human-Likeness in Humanoid Robots",
         "path": "papers/11_Simulation_Benchmark/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots.md",
         "url": "/papers/11_Simulation_Benchmark/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots/Towards_Motion_Turing_Test__Evaluating_Human-Likeness_in_Humanoid_Robots.html",

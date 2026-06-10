@@ -541,7 +541,7 @@
 | 405  | [Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer](https://arxiv.org/abs/2404.05695)               | 2024.04 |     | ⏳ 待读 |
 | 406  | [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](https://arxiv.org/abs/2403.10506)                 | 2024.03 |     | ⏳ 待读 |
 | 407  | RoboCasa365: A Large-Scale Simulation Framework for Training and Benchmarking Generalist Robots                                            | -       |     | ⏳ 待读 |
-| 408  | [ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control](https://arxiv.org/abs/2603.12185) | 2026.03 |  | ⏳ 待读 |
+| 408  | [ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control](https://arxiv.org/abs/2603.12185) ✅ [笔记](11_Simulation_Benchmark/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine.md) | 2026.03 |  | ✅ 已总结 |
 | 409  | [Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation](https://arxiv.org/abs/2510.08807) | 2025.10 |  | ⏳ 待读 |
 | 527  | [MuJoCo Playground](https://playground.mujoco.org/)                                                                                       | 2025.01 |     | ⏳ 待读 |
 
