@@ -698,6 +698,10 @@ html {
   overflow-y: visible;
   -webkit-overflow-scrolling: touch;
   contain: inline-size;
+  /* iOS 文本自动放大会让 foreignObject 内文字超出 Mermaid 渲染时测量的
+     标签宽度，行尾字符被裁掉（如「并行环境」缺「境」）。 */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Mermaid sometimes injects fixed-width SVGs that can stretch the document
@@ -1184,6 +1188,17 @@ html.ios .paper-body .mermaid foreignObject .katex-display {
     max-width: 100%;
     font-size: 0.95em;
   }
+}
+
+/* iOS WebKit 会把 foreignObject 内的百分比宽度按外层 SVG 视口（而非
+   foreignObject 自身）解析，上方媒体查询的 width: 100% 因此把「是/否」
+   等短边标签的背景拉成横贯整图的宽条。iOS 改用内在尺寸取宽——
+   fit-content 不依赖包含块解析，在解析正确的浏览器上与 100%
+   （= 标签实测宽度）结果一致。 */
+html.ios .paper-body .mermaid foreignObject .nodeLabel > div,
+html.ios .paper-body .mermaid foreignObject .labelBkg,
+html.ios .paper-body .mermaid foreignObject .edgeLabel > div {
+  width: fit-content !important;
 }
 
 /* ===== Paper Nav ===== */
