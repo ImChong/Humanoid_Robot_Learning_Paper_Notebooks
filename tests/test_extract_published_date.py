@@ -1,6 +1,6 @@
-"""Tests for ``extract_published_date`` in ``prepare_pages``."""
+"""Tests for publish-date helpers in ``prepare_pages``."""
 
-from scripts.prepare_pages import extract_published_date
+from scripts.prepare_pages import extract_published_date, to_published_date_en
 
 _BASIC_INFO = """# Sample
 
@@ -53,3 +53,28 @@ def test_returns_none_without_basic_info_section():
 def test_returns_none_when_publish_date_missing():
     content = _note(("**arXiv**", "[1234.56789](https://arxiv.org/abs/1234.56789)"))
     assert extract_published_date(content) is None
+
+
+def test_to_published_date_en_full_chinese_date():
+    assert to_published_date_en("2017年7月20日") == "July 20, 2017"
+
+
+def test_to_published_date_en_year_with_venue():
+    assert to_published_date_en("2018年（SIGGRAPH 2018）") == "2018 (SIGGRAPH 2018)"
+
+
+def test_to_published_date_en_year_month_with_suffix():
+    assert to_published_date_en("2025 年 9 月（arXiv）") == "Sep 2025 (arXiv)"
+
+
+def test_to_published_date_en_iso_and_mixed_phrases():
+    assert to_published_date_en("2023-03 (arXiv), 2024-05 (ICLR)") == (
+        "Mar 2023 (arXiv), May 2024 (ICLR)"
+    )
+    assert to_published_date_en("2025-10-15 初版；2026-01-18 v4") == (
+        "Oct 15, 2025 initial release; v4 Jan 18, 2026"
+    )
+
+
+def test_to_published_date_en_leaves_plain_year_unchanged():
+    assert to_published_date_en("2025") == "2025"

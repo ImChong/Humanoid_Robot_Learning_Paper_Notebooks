@@ -234,6 +234,82 @@ def extract_published_date(content):
     return None
 
 
+_MONTH_EN = (
+    "",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+)
+_MONTH_SHORT = ("", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+_PUBLISH_DATE_YMD_CN_RE = re.compile(r"(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日")
+_PUBLISH_DATE_YM_CN_RE = re.compile(r"(\d{4})\s*年\s*(\d{1,2})\s*月(\s*\([^)]+\))?")
+_PUBLISH_DATE_Y_VENUE_CN_RE = re.compile(r"(\d{4})\s*年(\s*\([^)]+\))")
+_PUBLISH_DATE_Y_CN_RE = re.compile(r"(\d{4})\s*年")
+_PUBLISH_DATE_ISO_YMD_RE = re.compile(r"(\d{4})-(\d{2})-(\d{2})\b")
+_PUBLISH_DATE_ISO_YM_RE = re.compile(r"(\d{4})-(\d{2})\b")
+_PUBLISH_DATE_EN_PHRASES = (
+    ("初版", "initial release"),
+    ("项目源自 Orbit / Isaac Gym 生态演进", "evolved from the Orbit / Isaac Gym ecosystem"),
+)
+
+
+def _month_name(month: int, *, short: bool = False) -> str:
+    if month < 1 or month > 12:
+        return str(month)
+    return (_MONTH_SHORT if short else _MONTH_EN)[month]
+
+
+def to_published_date_en(text):
+    """Convert mixed Chinese/ISO publish-date strings to English display text."""
+    if not text:
+        return text
+
+    result = text.strip()
+    result = result.replace("（", "(").replace("）", ")")
+    result = result.replace("；", "; ").replace("，", ", ")
+    result = re.sub(r"\s+", " ", result)
+    result = re.sub(r"(\d{4}-\d{2}-\d{2})\s+(v\d+)\b", r"\2 \1", result, flags=re.IGNORECASE)
+
+    def _ymd_cn(match):
+        year, month, day = int(match.group(1)), int(match.group(2)), int(match.group(3))
+        return f"{_month_name(month)} {day}, {year}"
+
+    def _ym_cn(match):
+        year, month = int(match.group(1)), int(match.group(2))
+        suffix = match.group(3) or ""
+        return f"{_month_name(month, short=True)} {year}{suffix}"
+
+    def _iso_ymd(match):
+        year, month, day = int(match.group(1)), int(match.group(2)), int(match.group(3))
+        return f"{_month_name(month, short=True)} {day}, {year}"
+
+    def _iso_ym(match):
+        year, month = int(match.group(1)), int(match.group(2))
+        return f"{_month_name(month, short=True)} {year}"
+
+    result = _PUBLISH_DATE_YMD_CN_RE.sub(_ymd_cn, result)
+    result = _PUBLISH_DATE_YM_CN_RE.sub(_ym_cn, result)
+    result = _PUBLISH_DATE_Y_VENUE_CN_RE.sub(r"\1\2", result)
+    result = _PUBLISH_DATE_Y_CN_RE.sub(r"\1", result)
+    result = _PUBLISH_DATE_ISO_YMD_RE.sub(_iso_ymd, result)
+    result = _PUBLISH_DATE_ISO_YM_RE.sub(_iso_ym, result)
+
+    for zh_phrase, en_phrase in _PUBLISH_DATE_EN_PHRASES:
+        result = result.replace(zh_phrase, en_phrase)
+
+    result = re.sub(r"(\S)\(", r"\1 (", result)
+    return result.strip()
+
+
 def extract_has_open_source(content):
     """True when the basic-info table links to this paper's open-source code on GitHub."""
     section = _extract_basic_info_section(content)
@@ -635,11 +711,14 @@ def process_papers():
                 if extract_has_open_source(content):
                     paper_entry["has_open_source"] = True
 
-                published_date = extract_published_date(content) or existing_meta_for_paper.get(
-                    "published_date"
+                published_date_zh = (
+                    extract_published_date(content)
+                    or existing_meta_for_paper.get("published_date_zh")
+                    or existing_meta_for_paper.get("published_date")
                 )
-                if published_date:
-                    paper_entry["published_date"] = published_date
+                if published_date_zh:
+                    paper_entry["published_date_zh"] = published_date_zh
+                    paper_entry["published_date_en"] = to_published_date_en(published_date_zh)
 
                 # Prefer zhname from front matter when present
                 if "zhname" in frontmatter_meta:
