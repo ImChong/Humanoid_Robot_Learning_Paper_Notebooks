@@ -139,26 +139,21 @@
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research",
     "subtitle_zh": "基础强化学习理论与经典算法 — 理解后续研究的必要前置知识",
-    "zhname": "基础强化学习"
+    "zhname": "基础强化学习",
+    "sort_order_hint": "Paper tags ordered by recommended learning path",
+    "sort_order_hint_zh": "论文标签按推荐阅读路线顺序排列"
   },
   "02_Motion_Retargeting": {
     "display_name": "Motion Retargeting",
     "papers": [
       {
-        "title": "ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting",
-        "path": "papers/02_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting.md",
-        "url": "/papers/02_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting.html",
-        "dir": "ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting",
-        "arxiv": "2605.06593v1",
-        "zhname": "ReActor：面向物理可行动作重定向的强化学习"
-      },
-      {
-        "title": "Make Tracking Easy: Neural Motion Retargeting for Humanoid Whole-body Control",
-        "path": "papers/02_Motion_Retargeting/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control.md",
-        "url": "/papers/02_Motion_Retargeting/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control.html",
-        "dir": "Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control",
-        "arxiv": "2603.22201v3",
-        "zhname": "让跟踪变简单：面向人形全身控制的神经动作重定向（NMR）"
+        "title": "OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction",
+        "path": "papers/02_Motion_Retargeting/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc.md",
+        "url": "/papers/02_Motion_Retargeting/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc.html",
+        "dir": "OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc",
+        "arxiv": "2509.26633",
+        "has_open_source": true,
+        "zhname": "OmniRetarget：面向人形全身运动操作与场景交互的交互保持数据生成"
       },
       {
         "title": "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking",
@@ -170,18 +165,27 @@
         "zhname": "Retargeting Matters：面向人形运动跟踪的通用动作重定向"
       },
       {
-        "title": "OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation and Scene Interaction",
-        "path": "papers/02_Motion_Retargeting/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc.md",
-        "url": "/papers/02_Motion_Retargeting/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc.html",
-        "dir": "OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc",
-        "arxiv": "2509.26633",
-        "has_open_source": true,
-        "zhname": "OmniRetarget：面向人形全身运动操作与场景交互的交互保持数据生成"
+        "title": "Make Tracking Easy: Neural Motion Retargeting for Humanoid Whole-body Control",
+        "path": "papers/02_Motion_Retargeting/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control.md",
+        "url": "/papers/02_Motion_Retargeting/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control/Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control.html",
+        "dir": "Make_Tracking_Easy__Neural_Motion_Retargeting_for_Humanoid_Whole-body_Control",
+        "arxiv": "2603.22201v3",
+        "zhname": "让跟踪变简单：面向人形全身控制的神经动作重定向（NMR）"
+      },
+      {
+        "title": "ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting",
+        "path": "papers/02_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting.md",
+        "url": "/papers/02_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting/ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting.html",
+        "dir": "ReActor__Reinforcement_Learning_for_Physics-Aware_Motion_Retargeting",
+        "arxiv": "2605.06593v1",
+        "zhname": "ReActor：面向物理可行动作重定向的强化学习"
       }
     ],
     "subtitle": "Bridging human motion data and humanoid policies — geometric IK, learned retargeting, and the engineering choices that determine downstream policy quality",
     "subtitle_zh": "连接人体动作数据与人形策略的桥梁 — 几何 IK、学习式重定向以及决定下游策略质量的工程取舍",
-    "zhname": "运动重定向"
+    "zhname": "运动重定向",
+    "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
   },
   "03_High_Impact_Selection": {
     "display_name": "High Impact Selection",
@@ -220,6 +224,15 @@
             "zhname": "ExBody2：进阶的表达性人形全身控制"
           },
           {
+            "title": "UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control",
+            "path": "papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md",
+            "url": "/papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.html",
+            "dir": "UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
+            "arxiv": "2412.14172",
+            "has_open_source": true,
+            "zhname": "UH-1：从海量互联网人类视频中学习通用人形姿态控制"
+          },
+          {
             "title": "HugWBC: A Unified and General Humanoid Whole-Body Controller for Versatile Locomotion",
             "path": "papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.md",
             "url": "/papers/03_High_Impact_Selection/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller/HugWBC_A_Unified_and_General_Humanoid_Whole-Body_Controller.html",
@@ -236,18 +249,11 @@
             "arxiv": "2511.07820",
             "has_open_source": true,
             "zhname": "SONIC：用规模化运动跟踪打造自然的人形全身控制器"
-          },
-          {
-            "title": "UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control",
-            "path": "papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.md",
-            "url": "/papers/03_High_Impact_Selection/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control/UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control.html",
-            "dir": "UH-1_Learning_from_Massive_Human_Videos_for_Universal_Humanoid_Pose_Control",
-            "arxiv": "2412.14172",
-            "has_open_source": true,
-            "zhname": "UH-1：从海量互联网人类视频中学习通用人形姿态控制"
           }
         ],
-        "zhname": "全身控制核心"
+        "zhname": "全身控制核心",
+        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
       },
       {
         "name": "Teleoperation & Imitation Learning",
@@ -261,15 +267,6 @@
             "zhname": "OmniH2O：通用灵巧的人到人形整体遥操与学习"
           },
           {
-            "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
-            "path": "papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md",
-            "url": "/papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.html",
-            "dir": "HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
-            "arxiv": "2502.13013",
-            "has_open_source": true,
-            "zhname": "HOMIE：同构外骨骼驾驶舱式人形遥操作系统"
-          },
-          {
             "title": "iDP3: Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies",
             "path": "papers/03_High_Impact_Selection/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies.md",
             "url": "/papers/03_High_Impact_Selection/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies/iDP3_Generalizable_Humanoid_Manipulation_with_3D_Diffusion_Policies.html",
@@ -277,13 +274,31 @@
             "arxiv": "2410.10803",
             "has_open_source": true,
             "zhname": "iDP3：基于改进版 3D 扩散策略的可泛化人形操作"
+          },
+          {
+            "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
+            "path": "papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.md",
+            "url": "/papers/03_High_Impact_Selection/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit/HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit.html",
+            "dir": "HOMIE_Humanoid_Loco-Manipulation_with_Isomorphic_Exoskeleton_Cockpit",
+            "arxiv": "2502.13013",
+            "has_open_source": true,
+            "zhname": "HOMIE：同构外骨骼驾驶舱式人形遥操作系统"
           }
         ],
-        "zhname": "遥操作与模仿学习"
+        "zhname": "遥操作与模仿学习",
+        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
       },
       {
         "name": "Locomotion Classics",
         "papers": [
+          {
+            "title": "Learning Quadrupedal Locomotion over Challenging Terrain",
+            "path": "papers/03_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.md",
+            "url": "/papers/03_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.html",
+            "dir": "Learning_Quadrupedal_Locomotion_over_Challenging_Terrain",
+            "zhname": "挑战地形下的四足运动学习（ANYmal 里程碑）"
+          },
           {
             "title": "Real-World Humanoid Locomotion with Reinforcement Learning",
             "path": "papers/03_High_Impact_Selection/Real-World_Humanoid_Locomotion_with_RL/Real-World_Humanoid_Locomotion_with_RL.md",
@@ -326,16 +341,11 @@
             "arxiv": "2602.06445",
             "has_open_source": true,
             "zhname": "ECO：把人形行走能耗写成显式约束的受限 RL（PPO-Lagrangian · BRUCE）"
-          },
-          {
-            "title": "Learning Quadrupedal Locomotion over Challenging Terrain",
-            "path": "papers/03_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.md",
-            "url": "/papers/03_High_Impact_Selection/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain/Learning_Quadrupedal_Locomotion_over_Challenging_Terrain.html",
-            "dir": "Learning_Quadrupedal_Locomotion_over_Challenging_Terrain",
-            "zhname": "挑战地形下的四足运动学习（ANYmal 里程碑）"
           }
         ],
-        "zhname": "行走经典"
+        "zhname": "行走经典",
+        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
       },
       {
         "name": "Sim-to-Real & Foundation Model",
@@ -375,11 +385,21 @@
             "zhname": "BFM：面向人形全身控制的行为基础模型"
           }
         ],
-        "zhname": "仿真到现实与基座模型"
+        "zhname": "仿真到现实与基座模型",
+        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
       },
       {
         "name": "Simulation Platform & Tools",
         "papers": [
+          {
+            "title": "Isaac Lab: Unified GPU Simulation Platform for Robot Learning",
+            "path": "papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.md",
+            "url": "/papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.html",
+            "dir": "Isaac_Lab_GPU_Simulation",
+            "has_open_source": true,
+            "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
+          },
           {
             "title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
             "path": "papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.md",
@@ -388,15 +408,6 @@
             "arxiv": "2404.05695",
             "has_open_source": true,
             "zhname": "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架"
-          },
-          {
-            "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
-            "path": "papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.md",
-            "url": "/papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.html",
-            "dir": "BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation",
-            "arxiv": "2503.05652",
-            "has_open_source": true,
-            "zhname": "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
           },
           {
             "title": "ProtoMotions3: An Open-source Framework for Humanoid Simulation and Control",
@@ -408,17 +419,22 @@
             "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架"
           },
           {
-            "title": "Isaac Lab: Unified GPU Simulation Platform for Robot Learning",
-            "path": "papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.md",
-            "url": "/papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.html",
-            "dir": "Isaac_Lab_GPU_Simulation",
+            "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
+            "path": "papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.md",
+            "url": "/papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.html",
+            "dir": "BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation",
+            "arxiv": "2503.05652",
             "has_open_source": true,
-            "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
+            "zhname": "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
           }
         ],
-        "zhname": "仿真平台与工具"
+        "zhname": "仿真平台与工具",
+        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
+        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
       }
-    ]
+    ],
+    "sort_order_hint": "Paper tags ordered by arXiv date, oldest first (same within subcategories)",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列（各子模块同理）"
   },
   "04_Loco-Manipulation_and_WBC": {
     "display_name": "Loco-Manipulation and WBC",
@@ -699,7 +715,9 @@
         "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
       }
     ],
-    "zhname": "运动操作与全身控制"
+    "zhname": "运动操作与全身控制",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "06_Manipulation": {
     "display_name": "Manipulation",
@@ -776,7 +794,9 @@
         "zhname": "EgoMimic：通过第一视角视频扩展模仿学习"
       }
     ],
-    "zhname": "灵巧操作"
+    "zhname": "灵巧操作",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "07_Teleoperation": {
     "display_name": "Teleoperation",
@@ -841,7 +861,9 @@
         "zhname": "HumanPlus：人形机器人对人类的影子跟随与模仿"
       }
     ],
-    "zhname": "遥操作"
+    "zhname": "遥操作",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "05_Locomotion": {
     "display_name": "Locomotion",
@@ -922,7 +944,9 @@
         "zhname": "几分钟学会走路：大规模并行深度强化学习"
       }
     ],
-    "zhname": "行走运动"
+    "zhname": "行走运动",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "08_Navigation": {
     "display_name": "Navigation",
@@ -961,6 +985,14 @@
         "zhname": "量子深度强化学习做人形机器人导航：用变分量子 SAC 直接控制高维连续动作"
       },
       {
+        "title": "LookOut: Real-World Humanoid Egocentric Navigation",
+        "path": "papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation.md",
+        "url": "/papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation.html",
+        "dir": "LookOut__Real-World_Humanoid_Egocentric_Navigation",
+        "arxiv": "2508.14466",
+        "zhname": "LookOut：从第一视角视频预测未来 6-DoF 头部位姿，学人类「转头看路 + 避障」的导航行为"
+      },
+      {
         "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
         "path": "papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.md",
         "url": "/papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.html",
@@ -975,18 +1007,11 @@
         "dir": "NaVILA_Legged_Robot_Vision-Language-Action_Model_for_Navigation",
         "arxiv": "2412.04453",
         "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
-      },
-      {
-        "title": "LookOut: Real-World Humanoid Egocentric Navigation",
-        "path": "papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation.md",
-        "url": "/papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation.html",
-        "dir": "LookOut__Real-World_Humanoid_Egocentric_Navigation",
-        "arxiv": "2508.14466",
-        "has_open_source": true,
-        "zhname": "LookOut：从第一视角视频预测未来 6-DoF 头部位姿，学人类转头看路与避障"
       }
     ],
-    "zhname": "导航"
+    "zhname": "导航",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "09_State_Estimation": {
     "display_name": "State Estimation",
@@ -1042,7 +1067,9 @@
         "zhname": "用「前向运动学因子 + 预积分接触因子」把足式机器人状态估计搬到因子图平滑上"
       }
     ],
-    "zhname": "状态估计"
+    "zhname": "状态估计",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "10_Sim-to-Real": {
     "display_name": "Sim-to-Real",
@@ -1101,7 +1128,9 @@
     ],
     "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
     "subtitle_zh": "核心理论与算法见 01 基础 RL：Domain Randomization、LCP。本分类暂留给后续专项论文（Real-to-Sim、ADR、Privileged Learning 等）。",
-    "zhname": "仿真到现实"
+    "zhname": "仿真到现实",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "12_Hardware_Design": {
     "display_name": "Hardware Design",
@@ -1155,7 +1184,9 @@
         "zhname": "Unitree H1 人形机器人白皮书与技术规格"
       }
     ],
-    "zhname": "硬件设计"
+    "zhname": "硬件设计",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "11_Simulation_Benchmark": {
     "display_name": "Simulation Benchmark",
@@ -1213,7 +1244,9 @@
         "zhname": "HumanoidBench：全身运动与操作的人形机器人仿真基准"
       }
     ],
-    "zhname": "仿真与基准"
+    "zhname": "仿真与基准",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "13_Physics-Based_Animation": {
     "display_name": "Physics-Based Animation",
@@ -1270,7 +1303,9 @@
         "zhname": "基于运动 VAE 的角色控制器"
       }
     ],
-    "zhname": "物理动画"
+    "zhname": "物理动画",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   },
   "14_Human_Motion": {
     "display_name": "Human Motion",
@@ -1328,6 +1363,8 @@
         "zhname": "控制算子：让非技术用户也能搭出自己的「学习型」角色控制器"
       }
     ],
-    "zhname": "人体动作分析与生成"
+    "zhname": "人体动作分析与生成",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   }
 }
