@@ -65,7 +65,10 @@ CATEGORY_ZHNAME = {
 }
 
 # Categories that keep curated reading order from PROGRESS / front matter
-# instead of arXiv-newest-first sorting.
+# instead of arXiv-based sorting.
+#
+# Other modules default to arXiv newest-first (新→旧). Motion retargeting and
+# high-impact selection (including all subcategories) use oldest-first (旧→新).
 
 # ⚡ Bolt Optimization: Globally pre-compile regular expressions used inside loops
 # and high-frequency functions to prevent the regex engine from re-parsing the
@@ -85,8 +88,12 @@ _ARXIV_PATTERNS = [
 ]
 
 CATEGORIES_PROGRESS_ORDER = frozenset({
-    '01_Foundational_RL',
-    '03_High_Impact_Selection',
+    "01_Foundational_RL",
+})
+
+CATEGORIES_ARXIV_OLDEST_FIRST = frozenset({
+    "02_Motion_Retargeting",
+    "03_High_Impact_Selection",
 })
 
 
@@ -286,6 +293,25 @@ def _arxiv_sort_key(arxiv_id):
         return (-1, -1, -1)
     yy, mm, seq = int(m.group(1)), int(m.group(2)), int(m.group(3))
     return (yy, mm, seq)
+
+
+def _order_tiebreaker(paper, *, newest_first: bool):
+    """Secondary sort key from PROGRESS / front-matter ``paper_order``."""
+    order_val = paper.get("_order")
+    if not isinstance(order_val, int):
+        order_val = 10**9
+    return -order_val if newest_first else order_val
+
+
+def sort_papers_by_arxiv(papers, *, newest_first: bool):
+    """Sort papers by arXiv ID; ``newest_first`` controls direction."""
+    papers.sort(
+        key=lambda p: (
+            _arxiv_sort_key(p.get("arxiv")),
+            _order_tiebreaker(p, newest_first=newest_first),
+        ),
+        reverse=newest_first,
+    )
 
 
 def parse_high_impact_h_order():
@@ -547,19 +573,12 @@ def process_papers():
 
                 papers.append(paper_entry)
 
-        # Foundational RL and High Impact keep curated PROGRESS order; others by arXiv.
         if category_dir in CATEGORIES_PROGRESS_ORDER:
             papers.sort(key=lambda p: p["_order"])
+        elif category_dir in CATEGORIES_ARXIV_OLDEST_FIRST:
+            sort_papers_by_arxiv(papers, newest_first=False)
         else:
-            # 1) arXiv newest-first to align with upstream awesome list
-            # 2) keep _order as tiebreaker / fallback for non-arXiv entries
-            papers.sort(
-                key=lambda p: (
-                    _arxiv_sort_key(p.get("arxiv")),
-                    -int(p.get("_order", 10**9)) if isinstance(p.get("_order"), int) else -(10**9),
-                ),
-                reverse=True,
-            )
+            sort_papers_by_arxiv(papers, newest_first=True)
         # Load existing category meta (subtitle, subcategories) from current papers.json
         existing_meta = existing_papers_json.get(category_dir, {})
 
@@ -600,6 +619,9 @@ def process_papers():
             entry["subcategories"] = subcats
             # ungrouped papers stay in top-level papers list
             entry["papers"] = ungrouped
+            if category_dir in CATEGORIES_ARXIV_OLDEST_FIRST:
+                for sc in entry["subcategories"]:
+                    sort_papers_by_arxiv(sc["papers"], newest_first=False)
 
         # Remove internal fields
         for p in papers:

@@ -90,3 +90,30 @@ def test_match_high_impact_h_order_prefers_arxiv():
         by_arxiv,
     )
     assert got == 7
+
+
+def test_sort_papers_by_arxiv_newest_first():
+    papers = [
+        {"title": "old", "arxiv": "2001.00001", "_order": 1},
+        {"title": "new", "arxiv": "2501.00001", "_order": 2},
+    ]
+    prepare_pages.sort_papers_by_arxiv(papers, newest_first=True)
+    assert [p["title"] for p in papers] == ["new", "old"]
+
+
+def test_sort_papers_by_arxiv_oldest_first():
+    papers = [
+        {"title": "new", "arxiv": "2501.00001", "_order": 2},
+        {"title": "old", "arxiv": "2001.00001", "_order": 1},
+    ]
+    prepare_pages.sort_papers_by_arxiv(papers, newest_first=False)
+    assert [p["title"] for p in papers] == ["old", "new"]
+
+
+def test_category_sort_policy_constants():
+    """Only foundational RL keeps PROGRESS order; motion retargeting & high impact are oldest-first."""
+    assert prepare_pages.CATEGORIES_PROGRESS_ORDER == frozenset({"01_Foundational_RL"})
+    assert prepare_pages.CATEGORIES_ARXIV_OLDEST_FIRST == frozenset({
+        "02_Motion_Retargeting",
+        "03_High_Impact_Selection",
+    })
