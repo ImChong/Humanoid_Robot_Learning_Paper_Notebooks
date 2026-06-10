@@ -120,6 +120,79 @@ def parse_frontmatter(content: str) -> dict:
     return result
 
 
+_INLINE_MATH_RE = re.compile(r"(?<!\$)\$(?!\$)(.+?)(?<!\$)\$(?!\$)", re.DOTALL)
+_DISPLAY_MATH_RE = re.compile(r"\$\$(.+?)\$\$", re.DOTALL)
+
+
+def _escape_pipe_in_math_segment(tex: str) -> str:
+    """Escape bare ``|`` inside a LaTeX fragment so kramdown GFM won't treat it as a table column."""
+    out: list[str] = []
+    i = 0
+    while i < len(tex):
+        ch = tex[i]
+        if ch == "|" and (i == 0 or tex[i - 1] != "\\"):
+            prev = tex[i - 1] if i > 0 else ""
+            nxt = tex[i + 1] if i + 1 < len(tex) else ""
+            if (prev.isalnum() or prev in ")}_]") and (nxt.isalnum() or nxt in "({[_"):
+                out.append(" \\mid ")
+            else:
+                out.append("\\|")
+        else:
+            out.append(ch)
+        i += 1
+    return "".join(out)
+
+
+def _escape_pipes_in_math_delimiters(text: str) -> str:
+    def _inline_repl(match: re.Match[str]) -> str:
+        inner = match.group(1)
+        escaped = _escape_pipe_in_math_segment(inner)
+        if escaped == inner:
+            return match.group(0)
+        return f"${escaped}$"
+
+    def _display_repl(match: re.Match[str]) -> str:
+        inner = match.group(1)
+        escaped = _escape_pipe_in_math_segment(inner)
+        if escaped == inner:
+            return match.group(0)
+        return f"$${escaped}$$"
+
+    text = _DISPLAY_MATH_RE.sub(_display_repl, text)
+    return _INLINE_MATH_RE.sub(_inline_repl, text)
+
+
+def normalize_kramdown_math_pipes(content: str) -> tuple[str, bool]:
+    """Prevent inline ``$...$`` pipes from being parsed as GFM table column separators.
+
+    Kramdown splits a prose line on ``|`` even when the delimiter appears inside
+    inline math (e.g. ``$\\pi(a|o)$``), yielding a broken two-column table.
+    """
+    lines = content.split("\n")
+    in_fence = False
+    changed = False
+    new_lines: list[str] = []
+
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            in_fence = not in_fence
+            new_lines.append(line)
+            continue
+        if in_fence or stripped.startswith("|"):
+            new_lines.append(line)
+            continue
+
+        escaped = _escape_pipes_in_math_delimiters(line)
+        if escaped != line:
+            changed = True
+        new_lines.append(escaped)
+
+    if not changed:
+        return content, False
+    return "\n".join(new_lines), True
+
+
 def normalize_paper_meta_blockquotes(content: str) -> tuple[str, bool]:
     """Ensure paper header blockquote lines render one item per visual line.
 

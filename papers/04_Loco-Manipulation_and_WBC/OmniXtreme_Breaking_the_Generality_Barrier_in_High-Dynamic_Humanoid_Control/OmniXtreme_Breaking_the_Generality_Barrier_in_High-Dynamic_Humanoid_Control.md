@@ -207,7 +207,7 @@ $$\mathcal{L}_{\text{neg-power}} = \sum_{j \in \mathcal{J}} \left( \frac{\max(-P
 
 建模真实执行器的**转矩-速度操作包络**（标准方法忽略了反电动势）：
 
-$$\tau_{\text{clipped}}(v) = \begin{cases} \tau_{\max,0}, & |v| < v_{x1} \\ \tau_{\max,0}\left(1 - \frac{|v| - v_{x1}}{v_{x2} - v_{x1}}\right), & v_{x1} \leq |v| \leq v_{x2} \\ 0, & |v| > v_{x2} \end{cases}$$
+$$\tau_{\text{clipped}}(v) = \begin{cases} \tau_{\max,0}, & \|v\| < v_{x1} \\ \tau_{\max,0}\left(1 - \frac{\|v\| - v_{x1}}{v_{x2} - v_{x1}}\right), & v_{x1} \leq \|v\| \leq v_{x2} \\ 0, & \|v\| > v_{x2} \end{cases}$$
 
 最大转矩还取决于转矩与速度是否同向（驱动 vs 制动）：
 
