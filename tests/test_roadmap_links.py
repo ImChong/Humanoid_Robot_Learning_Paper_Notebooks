@@ -11,6 +11,7 @@ PAPERS_DIR = ROOT / "papers"
 DEFAULT_LAYOUT = ROOT / "_layouts" / "default.html"
 INDEX_HTML = ROOT / "index.html"
 ZOOM_JS = ROOT / "assets" / "js" / "mermaid-zoom.js"
+CONFIG_JS = ROOT / "assets" / "js" / "mermaid-config.js"
 STYLE_CSS = ROOT / "assets" / "css" / "style.css"
 
 
@@ -73,3 +74,20 @@ def test_roadmap_link_styles_present():
     css = STYLE_CSS.read_text(encoding="utf-8")
     assert ".roadmap-node-link" in css
     assert ".mermaid-lightbox__stage svg g.roadmap-node-link" in css
+
+
+def test_roadmap_year_labels_avoid_ios_compositing():
+    css = STYLE_CSS.read_text(encoding="utf-8")
+    assert ".roadmap-node-year" in css
+    assert "color-mix" not in css.split(".roadmap-node-year")[1].split("}")[0]
+    assert "var(--text-secondary)" in css
+    assert "opacity:" not in css.split(".roadmap-node-year")[1].split("}")[0]
+
+
+def test_roadmap_lang_switch_reapplies_ios_patch():
+    layout = DEFAULT_LAYOUT.read_text(encoding="utf-8")
+    config = CONFIG_JS.read_text(encoding="utf-8")
+    assert "finishRoadmapInsert" in layout
+    assert "patchRoadmapMermaidDom" in config
+    assert "requestAnimationFrame" in layout
+    assert "window.patchRoadmapMermaidDom" in layout

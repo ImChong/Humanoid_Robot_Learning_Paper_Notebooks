@@ -367,6 +367,17 @@
         });
       };
 
+      function finishRoadmapInsert(mermaidRoadmap) {
+        mermaidRoadmap.removeAttribute('data-processed');
+        window.attachRoadmapNodeLinks(mermaidRoadmap);
+        if (typeof window.patchRoadmapMermaidDom === 'function') {
+          window.patchRoadmapMermaidDom(mermaidRoadmap);
+          requestAnimationFrame(function() {
+            window.patchRoadmapMermaidDom(mermaidRoadmap);
+          });
+        }
+      }
+
       window.renderRoadmapMermaid = function(mode) {
         var mermaidRoadmap = document.getElementById('roadmap-mermaid');
         if (!mermaidRoadmap) return Promise.resolve();
@@ -379,8 +390,7 @@
 
         if (cachedSvg) {
           mermaidRoadmap.innerHTML = cachedSvg;
-          mermaidRoadmap.removeAttribute('data-processed');
-          window.attachRoadmapNodeLinks(mermaidRoadmap);
+          finishRoadmapInsert(mermaidRoadmap);
           return Promise.resolve();
         }
 
@@ -399,8 +409,7 @@
                 : '';
           roadmapSvgCache[cacheKey] = safeSvg;
           mermaidRoadmap.innerHTML = safeSvg;
-          mermaidRoadmap.removeAttribute('data-processed');
-          window.attachRoadmapNodeLinks(mermaidRoadmap);
+          finishRoadmapInsert(mermaidRoadmap);
         }).catch(function() {
           // Keep the previous SVG visible if rendering fails.
         });
