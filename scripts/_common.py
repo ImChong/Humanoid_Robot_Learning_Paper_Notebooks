@@ -126,20 +126,33 @@ _DISPLAY_MATH_RE = re.compile(r"\$\$(.+?)\$\$", re.DOTALL)
 
 def _escape_pipe_in_math_segment(tex: str) -> str:
     """Escape bare ``|`` inside a LaTeX fragment so kramdown GFM won't treat it as a table column."""
+    # ⚡ Bolt Optimization: Fast-path string scanning. Avoid character-by-character
+    # iteration overhead in Python by using native `find` and string slicing.
+    if "|" not in tex:
+        return tex
+
     out: list[str] = []
-    i = 0
-    while i < len(tex):
-        ch = tex[i]
-        if ch == "|" and (i == 0 or tex[i - 1] != "\\"):
-            prev = tex[i - 1] if i > 0 else ""
-            nxt = tex[i + 1] if i + 1 < len(tex) else ""
+    last_idx = 0
+    while True:
+        idx = tex.find("|", last_idx)
+        if idx == -1:
+            out.append(tex[last_idx:])
+            break
+
+        out.append(tex[last_idx:idx])
+
+        if idx > 0 and tex[idx - 1] == "\\":
+            out.append("|")
+        else:
+            prev = tex[idx - 1] if idx > 0 else ""
+            nxt = tex[idx + 1] if idx + 1 < len(tex) else ""
             if (prev.isalnum() or prev in ")}_]") and (nxt.isalnum() or nxt in "({[_"):
                 out.append(" \\mid ")
             else:
                 out.append("\\|")
-        else:
-            out.append(ch)
-        i += 1
+
+        last_idx = idx + 1
+
     return "".join(out)
 
 
