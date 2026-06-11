@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 408,
-      "last_title": "ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control",
-      "next_module": "12_Hardware_Design"
+      "last_module": "12_Hardware_Design",
+      "last_index": 415,
+      "last_title": "DIJIT: A Robotic Head for an Active Observer",
+      "next_module": "13_Physics-Based_Animation"
     },
     "last_summary_index": 355,
     "last_summary_date": "2026-06-17",

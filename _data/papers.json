@@ -1443,6 +1443,16 @@
         "zhname": "OSMO：人机共用的开源触觉手套——把「接触力」从人手直接迁移到机器手"
       },
       {
+        "title": "DIJIT: A Robotic Head for an Active Observer",
+        "path": "papers/12_Hardware_Design/DIJIT_A_Robotic_Head_for_an_Active_Observer/DIJIT_A_Robotic_Head_for_an_Active_Observer.md",
+        "url": "/papers/12_Hardware_Design/DIJIT_A_Robotic_Head_for_an_Active_Observer/DIJIT_A_Robotic_Head_for_an_Active_Observer.html",
+        "dir": "DIJIT_A_Robotic_Head_for_an_Active_Observer",
+        "arxiv": "2512.07998",
+        "published_date_zh": "2025年12月8日（arXiv）",
+        "published_date_en": "Dec 8, 2025 (arXiv)",
+        "zhname": "DIJIT：为「主动观察者」打造的仿人双目机器人头——把人眼的转、聚、扭和脖子一起搬进硬件"
+      },
+      {
         "title": "Unitree H1 Humanoid Robot Whitepaper & Specifications",
         "path": "papers/12_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.md",
         "url": "/papers/12_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.html",
