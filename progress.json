@@ -41,16 +41,24 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 415,
-      "last_title": "DIJIT: A Robotic Head for an Active Observer",
-      "next_module": "13_Physics-Based_Animation"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 541,
+      "last_title": "Physics-Based Motion Tracking of Contact-Rich Interacting Characters",
+      "next_module": "14_Human_Motion"
     },
     "last_summary_index": 355,
     "last_summary_date": "2026-06-17",
     "last_summary_title": "LookOut: Real-World Humanoid Egocentric Navigation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-12",
+        "index": 541,
+        "title": "Physics-Based Motion Tracking of Contact-Rich Interacting Characters",
+        "folder": "papers/13_Physics-Based_Animation/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters",
+        "module": "13_Physics-Based_Animation",
+        "source": "截至当前未见公开仓库（论文/项目页未给出 GitHub 链接）"
+      },
       {
         "date": "2026-06-17",
         "index": 355,
@@ -1371,7 +1379,7 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes",
       "note_file": "Collision-Free_Humanoid_Traversal_in_Cluttered_Indoor_Scenes.md",
       "pdf_file": "Collision-Free.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -1911,7 +1919,7 @@
       "folder": "papers/02_Motion_Retargeting/OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc",
       "note_file": "OmniRetarget__Interaction-Preserving_Data_Generation_for_Humanoid_Whole-Body_Loc.md",
       "pdf_file": "OmniRetarget.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Motion Retargeting",
@@ -3699,6 +3707,106 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "人体动作分析与生成",
+      "title_cn": ""
+    },
+    {
+      "title": "HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation",
+      "folder": "papers/05_Locomotion/HoRD__Robust_Humanoid_Control_via_History-Conditioned_RL_and_Online_Distillation",
+      "note_file": "HoRD__Robust_Humanoid_Control_via_History-Conditioned_RL_and_Online_Distillation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Locomotion",
+      "title_cn": ""
+    },
+    {
+      "title": "DexterCap: An Affordable and Automated System for Capturing Dexterous Hand-Object Manipulation",
+      "folder": "papers/06_Manipulation/DexterCap__An_Affordable_and_Automated_System_for_Capturing_Dexterous_Hand-Object",
+      "note_file": "DexterCap__An_Affordable_and_Automated_System_for_Capturing_Dexterous_Hand-Object.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "DreamZero: World Action Models are Zero-shot Policies",
+      "folder": "papers/06_Manipulation/DreamZero_World_Action_Models_are_Zero-shot_Policies",
+      "note_file": "DreamZero_World_Action_Models_are_Zero-shot_Policies.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Development of an Intuitive GUI for Non-Expert Teleoperation of Humanoid Robots",
+      "folder": "papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots",
+      "note_file": "Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "LookOut: Real-World Humanoid Egocentric Navigation",
+      "folder": "papers/08_Navigation/LookOut__Real-World_Humanoid_Egocentric_Navigation",
+      "note_file": "LookOut__Real-World_Humanoid_Egocentric_Navigation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation",
+      "folder": "papers/09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation",
+      "note_file": "Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "State Estimation",
+      "title_cn": ""
+    },
+    {
+      "title": "HALO: Closing Sim-to-Real Gap for Heavy-loaded Humanoid Agile Motion Skills via Differentiable Simulation",
+      "folder": "papers/10_Sim-to-Real/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion",
+      "note_file": "HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Sim-to-Real",
+      "title_cn": ""
+    },
+    {
+      "title": "ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control",
+      "folder": "papers/11_Simulation_Benchmark/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine",
+      "note_file": "ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Simulation Benchmark",
+      "title_cn": ""
+    },
+    {
+      "title": "DIJIT: A Robotic Head for an Active Observer",
+      "folder": "papers/12_Hardware_Design/DIJIT_A_Robotic_Head_for_an_Active_Observer",
+      "note_file": "DIJIT_A_Robotic_Head_for_an_Active_Observer.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "硬件设计",
+      "title_cn": ""
+    },
+    {
+      "title": "Physics-Based Motion Tracking of Contact-Rich Interacting Characters",
+      "folder": "papers/13_Physics-Based_Animation/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters",
+      "note_file": "Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "物理动画",
       "title_cn": ""
     }
   ]

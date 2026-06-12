@@ -262,6 +262,7 @@
 | 540 | HALO: Closing Sim-to-Real Gap for Heavy-loaded Humanoid Agile Motion Skills via Differentiable Simulation | 10_Sim-to-Real | ✅ 已完成（2026-06-10） |
 | 408 | ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control | 11_Simulation_Benchmark | ✅ 已完成（2026-06-10） |
 | 415 | DIJIT: A Robotic Head for an Active Observer | 12_Hardware_Design | ✅ 已完成（2026-06-11） |
-| ? | （明日：13_Physics-Based_Animation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 13_Physics-Based_Animation | ⏭️ 下一篇候选 |
+| 541 | Physics-Based Motion Tracking of Contact-Rich Interacting Characters | 13_Physics-Based_Animation | ✅ 已完成（2026-06-12） |
+| ? | （明日：14_Human_Motion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 14_Human_Motion | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

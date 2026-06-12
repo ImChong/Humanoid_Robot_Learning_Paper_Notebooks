@@ -628,6 +628,7 @@
 | 528  | [ADD: Physics-Based Motion Imitation with Adversarial Differential Discriminators](https://arxiv.org/abs/2505.04961) | 2025.05 |  | ⏳ 待读 |
 | 529  | [TokenHSI: Unified Synthesis of Physical Human-Scene Interactions through Task Tokenization](https://arxiv.org/abs/2503.19901) | 2025.03 | 🌟 | ⏳ 待读 |
 | 530  | [PARC: Physics-based Augmentation with Reinforcement Learning for Character Controllers](https://michaelx.io/parc/index.html) | 2025 SIGGRAPH |  | ⏳ 待读 |
+| 541  | [Physics-Based Motion Tracking of Contact-Rich Interacting Characters](https://arxiv.org/abs/2604.07984) [笔记](13_Physics-Based_Animation/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters.md) | 2026-06-12 |     | ✅ 完成 |
 
 
 ### Human Motion Analysis and Synthesis（49篇）
