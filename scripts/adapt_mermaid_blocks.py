@@ -16,29 +16,36 @@ MERMAID_DIV_RE = re.compile(
 )
 
 
+_TIGHT_PIPE_RE = re.compile(r"([)\]}a-zA-Z0-9_·πφθλΣμσ])\|([({a-zA-Z0-9_·πφθλΣμσ])")
+_BRACKET_PATTERNS = [
+    ("[", "]", re.compile(r'\["([^"]*)"\]')),
+    ("(", ")", re.compile(r'\("([^"]*)"\)')),
+    ("{", "}", re.compile(r'\{"([^"]*)"\}')),
+]
+
+
 def escape_pipes_in_node_labels(text: str) -> str:
     """Escape | inside node labels; leave edge labels (-->|...|) untouched."""
+    # ⚡ Bolt Optimization: Fast path for the vast majority of markdown that doesn't
+    # contain double quotes inside mermaid blocks, avoiding regex compilation and execution.
+    if '"' not in text:
+        return text
 
     def fix_label_content(content: str) -> str:
         # Concatenation / stacking: keep readable without mermaid pipe syntax issues.
-        content = re.sub(r"\|\|", " ## ", content)
+        if "||" in content:
+            content = content.replace("||", " ## ")
         # Conditional bar: space-pipe-space or tight a|s style in policy notation.
-        content = re.sub(r"\s\|\s", " #124; ", content)
-        content = re.sub(
-            r"([)\]}a-zA-Z0-9_·πφθλΣμσ])(\|)([({a-zA-Z0-9_·πφθλΣμσ])",
-            r"\1#124;\3",
-            content,
-        )
+        if " | " in content:
+            content = content.replace(" | ", " #124; ")
+        if "|" in content:
+            content = _TIGHT_PIPE_RE.sub(r"\1#124;\2", content)
         return content
 
-    def repl_node(match: re.Match[str]) -> str:
-        return match.group(1) + fix_label_content(match.group(2)) + match.group(3)
-
     # ["..."], ("..."), {"..."}, subgraph titles ["..."]
-    for opener, closer in (("[", "]"), ("(", ")"), ("{", "}")):
-        pattern = re.compile(
-            re.escape(opener) + r'"([^"]*)"' + re.escape(closer)
-        )
+    for opener, closer, pattern in _BRACKET_PATTERNS:
+        if opener not in text:
+            continue
         text = pattern.sub(
             lambda m, o=opener, c=closer: o + '"' + fix_label_content(m.group(1)) + '"' + c,
             text,
