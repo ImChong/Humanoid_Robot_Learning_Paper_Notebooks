@@ -18,7 +18,6 @@ from prepare_pages import (  # noqa: E402
     _BASIC_INFO_SECTION_RE,
     _EMPTY_TABLE_ROW_RE,
     _LABEL_STARS_RE,
-    _NEXT_H2_RE,
     _PUBLISH_DATE_LABEL_RE,
     _extract_basic_info_section,
     extract_arxiv,
@@ -143,8 +142,9 @@ def _find_basic_info_bounds(content: str) -> tuple[int, int] | None:
     if not match:
         return None
     start = match.end()
-    next_heading = _NEXT_H2_RE.search(content, start)
-    end = next_heading.start() if next_heading else len(content)
+    end = content.find("\n## ", start)
+    if end == -1:
+        end = len(content)
     return start, end
 
 

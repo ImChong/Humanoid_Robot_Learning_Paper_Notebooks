@@ -164,7 +164,6 @@ _BASIC_INFO_SECTION_RE = re.compile(
     r"^##\s*📋\s*基本信息\s*$",
     re.MULTILINE,
 )
-_NEXT_H2_RE = re.compile(r"^##\s", re.MULTILINE)
 _PUBLISH_DATE_LABEL_RE = re.compile(r"发布时间|^时间$")
 _CODE_ROW_LABEL_RE = re.compile(
     r"(?:代码|源码|GitHub|官方代码|算法代码)",
@@ -188,16 +187,17 @@ _GITHUB_REPO_URL_RE = re.compile(
 def _extract_basic_info_section(content):
     """Return markdown under the ``## 📋 基本信息`` heading, or ``None``."""
     # ⚡ Bolt Optimization: Use fast `in` operator to short-circuit regex execution
-    # when the heading is absent, and scan for the next heading using the `pos`
-    # parameter (`start`) to avoid a massive O(N) string allocation for `content[start:]`.
+    # when the heading is absent, and scan for the next heading using `find` instead of
+    # `re.search` to avoid regex overhead for simple string prefix matching.
     if "基本信息" not in content:
         return None
     match = _BASIC_INFO_SECTION_RE.search(content)
     if not match:
         return None
     start = match.end()
-    next_heading = _NEXT_H2_RE.search(content, start)
-    end = next_heading.start() if next_heading else len(content)
+    end = content.find("\n## ", start)
+    if end == -1:
+        end = len(content)
     return content[start:end]
 
 
