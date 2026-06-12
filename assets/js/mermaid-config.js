@@ -175,8 +175,9 @@
           ADD_TAGS: ['semantics', 'annotation'],
           ADD_ATTR: ['xmlns', 'encoding'],
         });
-        foreignObjects.push({ attrs: attrs, inner: safeInner, id: id });
-        return '<foreignObject data-fo-placeholder="' + id + '"></foreignObject>';
+        foreignObjects.push({ inner: safeInner, id: id });
+        // Put attributes on the placeholder so DOMPurify cleans them natively!
+        return '<foreignObject data-fo-placeholder="' + id + '"' + attrs + '></foreignObject>';
       }
     );
 
@@ -189,10 +190,10 @@
     foreignObjects.forEach(function (fo) {
       sanitized = sanitized.replace(
         new RegExp(
-          '<foreignObject[^>]*data-fo-placeholder="' + fo.id + '"[^>]*></foreignObject>',
+          '(<foreignObject[^>]*data-fo-placeholder=["\']?' + fo.id + '["\']?[^>]*)></foreignObject>',
           'i'
         ),
-        '<foreignObject' + fo.attrs + '>' + fo.inner + '</foreignObject>'
+        '$1>' + fo.inner + '</foreignObject>'
       );
     });
 
