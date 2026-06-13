@@ -680,7 +680,7 @@
 | 517  | [Full-Order Sampling-Based MPC for Torque-Level Locomotion Control via Diffusion-Style Annealing](https://arxiv.org/abs/2409.15610)  | 2024.09 |     | ⏳ 待读 |
 | 518  | [Flow Matching Imitation Learning for Multi-Support Manipulation](https://arxiv.org/abs/2407.12381)                                  | 2024.07 |     | ⏳ 待读 |
 | 519  | [Predictive Sampling: Real-time Behaviour Synthesis with MuJoCo](https://arxiv.org/abs/2212.00541)                                   | 2022.12 |     | ⏳ 待读 |
-| 520  | Kimodo: Scaling Controllable Human Motion Generation | 2026.03 |  | ⏳ 待读 |
+| 520  | [Kimodo: Scaling Controllable Human Motion Generation](https://arxiv.org/abs/2603.15546) ✅ [笔记](14_Human_Motion/Kimodo__Scaling_Controllable_Human_Motion_Generation/Kimodo__Scaling_Controllable_Human_Motion_Generation.md) | 2026.03 |  | ✅ 完成 |
 | 521  | [HUMOTO: A 4D Dataset of Mocap Human Object Interactions](https://arxiv.org/abs/2504.10414) | 2025.04 |  | ⏳ 待读 |
 | 522  | [ClimbingCap: Multi-Modal Dataset and Method for Rock Climbing in World Coordinate](https://arxiv.org/abs/2503.21268) | 2025.03 |  | ⏳ 待读 |
 | 523  | [Example-based Motion Synthesis via Generative Motion Matching](https://arxiv.org/abs/2306.00378) | 2023.06 |  | ⏳ 待读 |
