@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "13_Physics-Based_Animation",
-      "last_index": 541,
-      "last_title": "Physics-Based Motion Tracking of Contact-Rich Interacting Characters",
-      "next_module": "14_Human_Motion"
+      "last_module": "14_Human_Motion",
+      "last_index": 520,
+      "last_title": "Kimodo: Scaling Controllable Human Motion Generation",
+      "next_module": "04_Loco-Manipulation_and_WBC"
     },
     "last_summary_index": 355,
     "last_summary_date": "2026-06-17",
@@ -839,6 +839,18 @@
         "arxiv": "2603.12185",
         "source_repo": "https://github.com/asu-iris/comfree_warp",
         "project_page": "https://irislab.tech/comfree-sim/"
+      },
+      {
+        "date": "2026-06-13",
+        "index": 520,
+        "title": "Kimodo: Scaling Controllable Human Motion Generation",
+        "module": "14_Human_Motion",
+        "category": "14_Human_Motion",
+        "note_path": "papers/14_Human_Motion/Kimodo__Scaling_Controllable_Human_Motion_Generation/Kimodo__Scaling_Controllable_Human_Motion_Generation.md",
+        "track": "module_rotation",
+        "arxiv": "2603.15546",
+        "source_repo": "https://github.com/nv-tlabs/kimodo",
+        "project_page": "https://research.nvidia.com/labs/sil/projects/kimodo/"
       }
     ],
     "last_completed_index": 373,
@@ -3807,6 +3819,16 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "物理动画",
+      "title_cn": ""
+    },
+    {
+      "title": "Kimodo: Scaling Controllable Human Motion Generation",
+      "folder": "papers/14_Human_Motion/Kimodo__Scaling_Controllable_Human_Motion_Generation",
+      "note_file": "Kimodo__Scaling_Controllable_Human_Motion_Generation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "人体动作生成",
       "title_cn": ""
     }
   ]
