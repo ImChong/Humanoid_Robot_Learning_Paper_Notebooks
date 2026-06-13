@@ -147,10 +147,33 @@ def extract_title(content):
         if end_idx != -1:
             start_idx = end_idx + 3
 
-    if content.find("#", start_idx) != -1:
-        match = _TITLE_RE.search(content, start_idx)
-        if match:
-            return match.group(1).strip()
+    # ⚡ Bolt Optimization: Replace re.search with str.find for simple string matching
+    if content.find("#", start_idx) == -1:
+        return None
+
+    search_idx = start_idx
+    while True:
+        if content.startswith("# ", search_idx):
+            idx = search_idx
+        else:
+            idx = content.find("\n# ", search_idx)
+            if idx != -1:
+                idx += 1
+
+        if idx == -1:
+            return None
+
+        end_line = content.find("\n", idx)
+        if end_line == -1:
+            title_text = content[idx + 2:].strip()
+        else:
+            title_text = content[idx + 2:end_line].strip()
+
+        if title_text:
+            return title_text
+
+        search_idx = idx + 2
+
     return None
 
 
@@ -191,6 +214,23 @@ def _extract_basic_info_section(content):
     # `re.search` to avoid regex overhead for simple string prefix matching.
     if "基本信息" not in content:
         return None
+
+    # Fast path to find the exact heading start
+    idx = content.find("## 📋 基本信息")
+    if idx != -1 and (idx == 0 or content[idx - 1] == '\n'):
+        line_end = content.find('\n', idx)
+        if line_end == -1:
+            line_end = len(content)
+
+        line = content[idx:line_end]
+        if line.strip() == "## 📋 基本信息":
+            start = line_end
+            end = content.find("\n## ", start)
+            if end == -1:
+                end = len(content)
+            return content[start:end]
+
+    # Fallback for weird spacing or custom titles containing "基本信息"
     match = _BASIC_INFO_SECTION_RE.search(content)
     if not match:
         return None
@@ -401,6 +441,10 @@ def extract_has_open_source(content):
     """True when the basic-info table links to this paper's open-source code on GitHub."""
     section = _extract_basic_info_section(content)
     if not section:
+        return False
+
+    # Short circuit: does the section even contain github.com?
+    if "github.com" not in section.lower():
         return False
 
     for line in section.split("\n"):

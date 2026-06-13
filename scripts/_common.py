@@ -45,7 +45,18 @@ def is_stub(content: str) -> bool:
 
     line_count = content.count("\n") + 1
     if line_count < STUB_MIN_LINES:
-        has_method = "方法" in content and bool(_METHOD_HEADING_RE.search(content))
+        has_method = False
+        if "方法" in content:
+            # Fast path check for common permutations
+            idx1 = content.find("## 🔧 方法")
+            idx2 = content.find("## 🛠️ 方法")
+            idx3 = content.find("## 方法")
+            if (idx1 != -1 and (idx1 == 0 or content[idx1 - 1] == '\n')) or \
+               (idx2 != -1 and (idx2 == 0 or content[idx2 - 1] == '\n')) or \
+               (idx3 != -1 and (idx3 == 0 or content[idx3 - 1] == '\n')):
+                has_method = True
+            else:
+                has_method = bool(_METHOD_HEADING_RE.search(content))
         if not has_method:
             return True
 
@@ -56,7 +67,17 @@ def stub_reason(content: str) -> str | None:
     """Human-readable reason this note is a stub, or None if it is not."""
     line_count = content.count("\n") + 1
     if line_count < STUB_MIN_LINES:
-        has_method = "方法" in content and bool(_METHOD_HEADING_RE.search(content))
+        has_method = False
+        if "方法" in content:
+            idx1 = content.find("## 🔧 方法")
+            idx2 = content.find("## 🛠️ 方法")
+            idx3 = content.find("## 方法")
+            if (idx1 != -1 and (idx1 == 0 or content[idx1 - 1] == '\n')) or \
+               (idx2 != -1 and (idx2 == 0 or content[idx2 - 1] == '\n')) or \
+               (idx3 != -1 and (idx3 == 0 or content[idx3 - 1] == '\n')):
+                has_method = True
+            else:
+                has_method = bool(_METHOD_HEADING_RE.search(content))
         if not has_method:
             return f"{line_count} lines, missing 方法详解"
 
