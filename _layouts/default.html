@@ -123,6 +123,7 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  {% include sponsor-dialog.html %}
 
   <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle Sidebar">
     <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
@@ -454,6 +455,7 @@
           }
         }
         window.renderRoadmapMermaid(mode);
+        document.dispatchEvent(new CustomEvent('cl-lang-changed', { detail: { mode: mode } }));
       }
 
       function toggleLang() {
@@ -552,6 +554,53 @@
         }
       }
     });
+  </script>
+  <script>
+    /* ─── Sponsor Dialog ───────────────────────────────────── */
+    (function() {
+      var toggle = document.getElementById('sponsor-toggle');
+      var dialog = document.getElementById('sponsor-dialog');
+      var qr = document.getElementById('sponsor-qr');
+      if (!toggle || !dialog) return;
+
+      var qrAlt = { en: 'WeChat payment QR code', zh: '微信收款码' };
+
+      function currentLang() {
+        return document.documentElement.getAttribute('data-lang-mode') === 'zh' ? 'zh' : 'en';
+      }
+
+      function updateQrAlt() {
+        if (!qr) return;
+        qr.alt = qrAlt[currentLang()];
+      }
+
+      function openDialog() {
+        updateQrAlt();
+        dialog.hidden = false;
+        document.body.classList.add('sponsor-dialog-open');
+        var closeBtn = dialog.querySelector('.sponsor-dialog__close');
+        if (closeBtn) closeBtn.focus();
+      }
+
+      function closeDialog() {
+        dialog.hidden = true;
+        document.body.classList.remove('sponsor-dialog-open');
+        toggle.focus();
+      }
+
+      toggle.addEventListener('click', openDialog);
+
+      dialog.addEventListener('click', function(e) {
+        if (e.target.closest('[data-sponsor-close]')) closeDialog();
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (!dialog.hidden && e.key === 'Escape') closeDialog();
+      });
+
+      updateQrAlt();
+      document.addEventListener('cl-lang-changed', updateQrAlt);
+    })();
   </script>
   <script>
     // Dark/Light mode
