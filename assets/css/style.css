@@ -153,6 +153,10 @@ html {
   line-height: 1;
   min-width: 36px;
   text-align: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .theme-toggle:hover {
   border-color: var(--link);
@@ -1297,19 +1301,22 @@ html[data-lang-mode="zh"] .footer-text-zh {
   border-radius: 6px;
   padding: 0.3rem 0.6rem;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1;
   color: #e2566a;
-  transition: border-color 0.3s ease, background 0.3s ease, transform 0.2s ease;
+  transition: border-color 0.3s ease, background 0.3s ease;
   user-select: none;
   min-width: 36px;
   text-align: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sponsor-toggle:hover {
   border-color: #e2566a;
   background: rgba(226, 86, 106, 0.12);
-  transform: scale(1.05);
 }
 
 body.sponsor-dialog-open {
