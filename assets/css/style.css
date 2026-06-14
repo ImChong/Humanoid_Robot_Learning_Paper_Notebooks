@@ -153,6 +153,10 @@ html {
   line-height: 1;
   min-width: 36px;
   text-align: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .theme-toggle:hover {
   border-color: var(--link);
@@ -1287,6 +1291,109 @@ html[data-lang-mode="zh"] .footer-text-zh {
   background: var(--link);
   color: #fff;
   border-color: var(--link);
+}
+
+/* ===== Sponsor ===== */
+.sponsor-toggle {
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+  color: #e2566a;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  user-select: none;
+  min-width: 36px;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-toggle:hover {
+  border-color: #e2566a;
+  background: rgba(226, 86, 106, 0.12);
+}
+
+body.sponsor-dialog-open {
+  overflow: hidden;
+}
+
+.sponsor-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.sponsor-dialog[hidden] {
+  display: none;
+}
+
+.sponsor-dialog__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.sponsor-dialog__panel {
+  position: relative;
+  width: min(100%, 320px);
+  padding: 1.5rem 1.25rem 1.25rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  box-shadow: 0 16px 48px var(--card-shadow);
+  text-align: center;
+}
+
+.sponsor-dialog__title {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.sponsor-dialog__hint {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.sponsor-dialog__qr {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin: 0 auto 1rem;
+  border-radius: 12px;
+}
+
+.sponsor-dialog__close {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.sponsor-dialog__close:hover {
+  border-color: var(--link);
+  color: var(--link);
 }
 
 /* ===== Responsive ===== */
