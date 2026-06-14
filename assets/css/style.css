@@ -1330,6 +1330,9 @@ html[data-lang-mode="zh"] .footer-text-zh {
   border-color: #e2566a;
   background: rgba(226, 86, 106, 0.12);
 }
+.sponsor-icon {
+  color: #e2566a;
+}
 
 body.sponsor-dialog-open {
   overflow: hidden;
