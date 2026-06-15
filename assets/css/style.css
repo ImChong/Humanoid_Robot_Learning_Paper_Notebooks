@@ -521,7 +521,44 @@ html {
   opacity: 1;
 }
 
-/* Show TOC only on wide screens */
+/* Sticky left TOC needs ~1440px viewport (960px container + 24px padding +
+   260px negative margin). Below that, use the drawer to avoid left-edge clipping. */
+@media (max-width: 1439px) {
+  .toc-sidebar {
+    position: fixed;
+    /* Match Robotics_Notebooks mobile drawer: gap below viewport top / notch */
+    top: calc(16px + env(safe-area-inset-top, 0px));
+    /* Stop above the floating sidebar toggle (24px + 48px) with breathing room */
+    bottom: calc(24px + 48px + 28px + env(safe-area-inset-bottom, 0px));
+    left: -280px;
+    width: 260px;
+    height: auto;
+    max-height: none;
+    background: var(--bg);
+    margin: 0;
+    padding: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+    border-radius: 0 16px 16px 0;
+    z-index: 1300;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    margin-left: 0;
+    float: none;
+  }
+  .toc-sidebar.open {
+    left: 0;
+  }
+  .sidebar-toggle {
+    display: flex;
+    z-index: 1350;
+  }
+  .sidebar-overlay {
+    z-index: 1250;
+  }
+}
+
 @media (max-width: 1200px) {
   html,
   body {
@@ -543,39 +580,6 @@ html {
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-x: clip;
-  }
-
-  .toc-sidebar {
-    position: fixed;
-    /* Match Robotics_Notebooks mobile drawer: gap below viewport top / notch */
-    top: calc(16px + env(safe-area-inset-top, 0px));
-    /* Stop above the floating sidebar toggle (24px + 48px) with breathing room */
-    bottom: calc(24px + 48px + 28px + env(safe-area-inset-bottom, 0px));
-    left: -280px;
-    width: 260px;
-    height: auto;
-    max-height: none;
-    background: var(--bg);
-    margin: 0;
-    padding: 20px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    box-shadow: 2px 0 12px rgba(0,0,0,0.15);
-    border-radius: 0 16px 16px 0;
-    z-index: 1300;
-    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: block; /* Overriding previous display: none */
-    margin-left: 0;
-  }
-  .toc-sidebar.open {
-    left: 0;
-  }
-  .sidebar-toggle {
-    display: flex;
-    z-index: 1350;
-  }
-  .sidebar-overlay {
-    z-index: 1250;
   }
 }
 
@@ -604,9 +608,9 @@ html {
   overflow-y: auto;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1439px) {
   .index-layout .toc-sidebar {
-    /* Mirror subpage mobile drawer; desktop float/height must not leak here */
+    /* Mirror subpage drawer; desktop float/height must not leak here */
     float: none;
     position: fixed;
     top: calc(16px + env(safe-area-inset-top, 0px));

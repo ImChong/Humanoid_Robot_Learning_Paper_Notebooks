@@ -133,7 +133,8 @@
     var headingArr = Array.from(headings);
     var sidebar = document.getElementById('toc-sidebar');
     var overlay = document.getElementById('sidebar-overlay');
-    var mobileQuery = window.matchMedia('(max-width: 1200px)');
+    /* Keep in sync with style.css TOC drawer breakpoint (sticky sidebar clips below 1440px). */
+    var mobileQuery = window.matchMedia('(max-width: 1439px)');
 
     function closeMobileSidebar() {
       if (sidebar) sidebar.classList.remove('open');
