@@ -1059,6 +1059,16 @@
     "display_name": "Locomotion",
     "papers": [
       {
+        "title": "CMR: Contractive Mapping Embeddings for Robust Humanoid Locomotion on Unstructured Terrains",
+        "path": "papers/05_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion.md",
+        "url": "/papers/05_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion.html",
+        "dir": "CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion",
+        "arxiv": "2602.03511",
+        "published_date_zh": "2026年2月3日（arXiv）",
+        "published_date_en": "Feb 3, 2026 (arXiv)",
+        "zhname": "CMR：把含噪观测映到「收缩」潜空间让扰动随时间衰减——对比学习保信息 + Lipschitz 约束控敏感度，作为辅助损失插进 PPO"
+      },
+      {
         "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
         "path": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md",
         "url": "/papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.html",
