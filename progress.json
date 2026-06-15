@@ -41,16 +41,24 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 194,
-      "last_title": "CMR: Contractive Mapping Embeddings for Robust Humanoid Locomotion on Unstructured Terrains",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": 277,
+      "last_title": "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot",
+      "next_module": "07_Teleoperation"
     },
-    "last_summary_index": 194,
+    "last_summary_index": 277,
     "last_summary_date": "2026-06-15",
-    "last_summary_title": "CMR: Contractive Mapping Embeddings for Robust Humanoid Locomotion on Unstructured Terrains",
+    "last_summary_title": "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-15",
+        "index": 277,
+        "title": "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot",
+        "folder": "papers/06_Manipulation/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot",
+        "module": "06_Manipulation",
+        "source": "https://github.com/AgibotTech/genie_sim"
+      },
       {
         "date": "2026-06-15",
         "index": 194,

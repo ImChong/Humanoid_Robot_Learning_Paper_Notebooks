@@ -959,6 +959,17 @@
         "zhname": "DexterCap：用密集「字符编码」标记贴片 + 三级检测识别 + 自动重建流水线，低成本采集严重自遮挡下的灵巧手-物交互，并发布 DexterHand 数据集"
       },
       {
+        "title": "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot",
+        "path": "papers/06_Manipulation/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot.md",
+        "url": "/papers/06_Manipulation/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot.html",
+        "dir": "Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot",
+        "arxiv": "2601.02078",
+        "has_open_source": true,
+        "published_date_zh": "2026年1月5日（arXiv，v2 修订 2026年4月28日）",
+        "published_date_en": "Jan 5, 2026 (arXiv, v2 revised Apr 28, 2026)",
+        "zhname": "Genie Sim 3.0：智元（AgiBot）面向人形机器人的高保真一体化仿真平台——自然语言驱动建场景、自动化评测、万小时合成数据与零样本 Sim-to-Real"
+      },
+      {
         "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
         "path": "papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
         "url": "/papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",
@@ -1059,16 +1070,6 @@
     "display_name": "Locomotion",
     "papers": [
       {
-        "title": "CMR: Contractive Mapping Embeddings for Robust Humanoid Locomotion on Unstructured Terrains",
-        "path": "papers/05_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion.md",
-        "url": "/papers/05_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion.html",
-        "dir": "CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion",
-        "arxiv": "2602.03511",
-        "published_date_zh": "2026年2月3日（arXiv）",
-        "published_date_en": "Feb 3, 2026 (arXiv)",
-        "zhname": "CMR：把含噪观测映到「收缩」潜空间让扰动随时间衰减——对比学习保信息 + Lipschitz 约束控敏感度，作为辅助损失插进 PPO"
-      },
-      {
         "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
         "path": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md",
         "url": "/papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.html",
@@ -1128,6 +1129,16 @@
         "published_date_zh": "2026年2月4日（arXiv）",
         "published_date_en": "Feb 4, 2026 (arXiv)",
         "zhname": "HoRD：教师用历史条件 RL 在线推断动力学上下文 + 在线蒸馏到基于稀疏 3D 关键点的 Transformer 学生策略，让单一策略零样本适配未见域与外部扰动"
+      },
+      {
+        "title": "CMR: Contractive Mapping Embeddings for Robust Humanoid Locomotion on Unstructured Terrains",
+        "path": "papers/05_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion.md",
+        "url": "/papers/05_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion/CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion.html",
+        "dir": "CMR__Contractive_Mapping_Embeddings_for_Robust_Humanoid_Locomotion",
+        "arxiv": "2602.03511",
+        "published_date_zh": "2026年2月3日（arXiv）",
+        "published_date_en": "Feb 3, 2026 (arXiv)",
+        "zhname": "CMR：把含噪观测映射到「收缩」潜空间，让扰动随时间自然衰减——对比学习保任务信息 + Lipschitz 约束控敏感度，作为辅助损失插进 PPO，提升非结构地形抗噪鲁棒性"
       },
       {
         "title": "Extreme Parkour with Legged Robots",
