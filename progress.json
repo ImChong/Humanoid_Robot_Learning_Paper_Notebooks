@@ -3874,6 +3874,26 @@
       "pdf_file": "",
       "route": "Locomotion",
       "title_cn": ""
+    },
+    {
+      "title": "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot",
+      "folder": "papers/06_Manipulation/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot",
+      "note_file": "Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Learning Versatile Humanoid Manipulation with Touch Dreaming",
+      "folder": "papers/06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming",
+      "note_file": "HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
     }
   ]
 }
