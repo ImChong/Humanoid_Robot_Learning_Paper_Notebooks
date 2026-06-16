@@ -1062,6 +1062,16 @@
         "zhname": "为非专家用户设计的人形机器人遥操作直观图形界面（面向 FIRA HuroCup 障碍赛）"
       },
       {
+        "title": "Stability-Aware Retargeting for Humanoid Multi-Contact Teleoperation",
+        "path": "papers/07_Teleoperation/Stability-Aware_Retargeting_for_Humanoid_Multi-Contact_Teleoperation/Stability-Aware_Retargeting_for_Humanoid_Multi-Contact_Teleoperation.md",
+        "url": "/papers/07_Teleoperation/Stability-Aware_Retargeting_for_Humanoid_Multi-Contact_Teleoperation/Stability-Aware_Retargeting_for_Humanoid_Multi-Contact_Teleoperation.html",
+        "dir": "Stability-Aware_Retargeting_for_Humanoid_Multi-Contact_Teleoperation",
+        "arxiv": "2510.04353",
+        "published_date_zh": "2025年10月5日（arXiv）",
+        "published_date_en": "Oct 5, 2025 (arXiv)",
+        "zhname": "面向多接触遥操作的稳定性感知重定向（用质心稳定裕度梯度实时改写操作员指令）"
+      },
+      {
         "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
         "path": "papers/07_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.md",
         "url": "/papers/07_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.html",
