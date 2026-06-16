@@ -422,6 +422,7 @@
 | 327  | [Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation](https://arxiv.org/abs/2503.24361) | 2025.03 |  | ⏳ 待读 |
 | 328  | Is imitation learning the route to humanoid robots? | - |  | ⏳ 待读 |
 | 526  | [Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids](https://toruowo.github.io/recipe/) | 2025.02 |  | ⏳ 待读 |
+| 542  | [Learning Versatile Humanoid Manipulation with Touch Dreaming](https://arxiv.org/abs/2604.13015) ✅ [笔记](06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.md) | 2026.04 | 2026-06-16 | ✅ 已总结 |
 
 
 ### Teleoperation（24篇）

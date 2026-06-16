@@ -883,6 +883,17 @@
     "display_name": "Manipulation",
     "papers": [
       {
+        "title": "Learning Versatile Humanoid Manipulation with Touch Dreaming",
+        "path": "papers/06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.md",
+        "url": "/papers/06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.html",
+        "dir": "HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming",
+        "arxiv": "2604.13015",
+        "has_open_source": true,
+        "published_date_zh": "2026年4月14日（arXiv，v2 修订 2026年4月27日）",
+        "published_date_en": "Apr 14, 2026 (arXiv, v2 revised Apr 27, 2026)",
+        "zhname": "HTD（Touch Dreaming）：让模仿学习的 Transformer「预想」未来触觉——把触觉作为核心模态与多视角视觉、本体感受融合，预测未来手指力与触觉潜变量，学到接触感知表示，攻克接触密集型人形操作"
+      },
+      {
         "title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
         "path": "papers/06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy.md",
         "url": "/papers/06_Manipulation/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy/HumDex_Humanoid_Dexterous_Manipulation_Made_Easy.html",
