@@ -1596,6 +1596,17 @@
         "zhname": "用「动作难度」给人形模仿学习评测立标尺：MDS + MD-AMASS + MID/DSJE"
       },
       {
+        "title": "Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation",
+        "path": "papers/11_Simulation_Benchmark/Humanoid_Everyday__Comprehensive_Robotic_Dataset_for_Open-World_Humanoid_Manipulation/Humanoid_Everyday__Comprehensive_Robotic_Dataset_for_Open-World_Humanoid_Manipulation.md",
+        "url": "/papers/11_Simulation_Benchmark/Humanoid_Everyday__Comprehensive_Robotic_Dataset_for_Open-World_Humanoid_Manipulation/Humanoid_Everyday__Comprehensive_Robotic_Dataset_for_Open-World_Humanoid_Manipulation.html",
+        "dir": "Humanoid_Everyday__Comprehensive_Robotic_Dataset_for_Open-World_Humanoid_Manipulation",
+        "arxiv": "2510.08807",
+        "has_open_source": true,
+        "published_date_zh": "2025年10月9日（arXiv）",
+        "published_date_en": "Oct 9, 2025 (arXiv)",
+        "zhname": "Humanoid Everyday：面向开放世界人形操作的大规模多模态数据集——Unitree G1/H1 实采 1.03 万条轨迹、300 万+ 帧、260 个任务 / 7 大类，RGB+深度+LiDAR+触觉+语言标注，配云端评测平台，全开源"
+      },
+      {
         "title": "Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report",
         "path": "papers/11_Simulation_Benchmark/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report.md",
         "url": "/papers/11_Simulation_Benchmark/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report/Generative_World_Modelling_for_Humanoids__1X_World_Model_Challenge_Technical_Report.html",

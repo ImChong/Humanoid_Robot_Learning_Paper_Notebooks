@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
-      "last_index": 544,
-      "last_title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
-      "next_module": "11_Simulation_Benchmark"
+      "last_module": "11_Simulation_Benchmark",
+      "last_index": 545,
+      "last_title": "Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation",
+      "next_module": "12_Hardware_Design"
     },
-    "last_summary_index": 544,
+    "last_summary_index": 545,
     "last_summary_date": "2026-06-17",
-    "last_summary_title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
+    "last_summary_title": "Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-17",
+        "index": 545,
+        "title": "Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation",
+        "folder": "papers/11_Simulation_Benchmark/Humanoid_Everyday__Comprehensive_Robotic_Dataset_for_Open-World_Humanoid_Manipulation",
+        "module": "11_Simulation_Benchmark",
+        "arxiv": "2510.08807",
+        "source": "physical-superintelligence-lab/Humanoid-Everyday · HF USC-GVL/humanoid-everyday"
+      },
       {
         "date": "2026-06-17",
         "index": 544,
@@ -3966,6 +3975,16 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "Sim-to-Real",
+      "title_cn": ""
+    },
+    {
+      "title": "Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation",
+      "folder": "papers/11_Simulation_Benchmark/Humanoid_Everyday__Comprehensive_Robotic_Dataset_for_Open-World_Humanoid_Manipulation",
+      "note_file": "Humanoid_Everyday__Comprehensive_Robotic_Dataset_for_Open-World_Humanoid_Manipulation.md",
+      "status": "done",
+      "arxiv": "2510.08807",
+      "pdf_file": "",
+      "route": "Simulation Benchmark",
       "title_cn": ""
     }
   ]
