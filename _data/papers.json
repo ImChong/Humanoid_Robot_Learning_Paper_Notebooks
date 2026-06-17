@@ -1233,6 +1233,17 @@
         "zhname": "在 360° 里思考：把人形视觉搜索做成「转头看路 + 转头找物」的两类显式任务"
       },
       {
+        "title": "Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3D Constrained Terrains",
+        "path": "papers/08_Navigation/Gallant__Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3D_Constrained_Terrains/Gallant__Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3D_Constrained_Terrains.md",
+        "url": "/papers/08_Navigation/Gallant__Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3D_Constrained_Terrains/Gallant__Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3D_Constrained_Terrains.html",
+        "dir": "Gallant__Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3D_Constrained_Terrains",
+        "arxiv": "2511.14625",
+        "has_open_source": true,
+        "published_date_zh": "2025年11月18日（arXiv）",
+        "published_date_en": "Nov 18, 2025 (arXiv)",
+        "zhname": "Gallant：把激光雷达体素化成 3D 占据栅格，用 z-分组 2D CNN 端到端学人形在「头顶/侧向/多层/窄道」全 3D 受限地形里的行走与局部导航"
+      },
+      {
         "title": "Quantum deep reinforcement learning for humanoid robot navigation task",
         "path": "papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.md",
         "url": "/papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.html",

@@ -41,16 +41,24 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 335,
-      "last_title": "Stability-Aware Retargeting for Humanoid Multi-Contact Teleoperation",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": 365,
+      "last_title": "Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3D Constrained Terrains",
+      "next_module": "09_State_Estimation"
     },
-    "last_summary_index": 335,
-    "last_summary_date": "2026-06-16",
-    "last_summary_title": "Stability-Aware Retargeting for Humanoid Multi-Contact Teleoperation",
+    "last_summary_index": 365,
+    "last_summary_date": "2026-06-17",
+    "last_summary_title": "Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3D Constrained Terrains",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-17",
+        "index": 365,
+        "title": "Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3D Constrained Terrains",
+        "folder": "papers/08_Navigation/Gallant__Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3D_Constrained_Terrains",
+        "module": "08_Navigation",
+        "source": "https://github.com/InternRobotics/Gallant"
+      },
       {
         "date": "2026-06-16",
         "index": 335,
