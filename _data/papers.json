@@ -1668,6 +1668,17 @@
         "zhname": "接触密集的多角色交互动作的物理跟踪——用渐进式网络让多个专家各管一类难度"
       },
       {
+        "title": "PhysMoDPO: Physically-Plausible Humanoid Motion with Preference Optimization",
+        "path": "papers/13_Physics-Based_Animation/PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization/PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization.md",
+        "url": "/papers/13_Physics-Based_Animation/PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization/PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization.html",
+        "dir": "PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization",
+        "arxiv": "2603.13228",
+        "has_open_source": true,
+        "published_date_zh": "2026年3月13日（arXiv，2026年3月16日修订）",
+        "published_date_en": "Mar 13, 2026 (arXiv, Mar 16, 2026 revised)",
+        "zhname": "PhysMoDPO：用偏好优化把文本生成的动作「磨」成物理可执行的人形动作"
+      },
+      {
         "title": "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control",
         "path": "papers/13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis/Iterative_Closed-Loop_Motion_Synthesis.md",
         "url": "/papers/13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis/Iterative_Closed-Loop_Motion_Synthesis.html",
