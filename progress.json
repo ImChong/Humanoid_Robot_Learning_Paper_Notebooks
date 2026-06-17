@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": "278",
-      "last_title": "Visual-tactile pretraining and online multitask learning for humanlike manipulation dexterity (Science Robotics 2026)",
-      "next_module": "07_Teleoperation"
+      "last_module": "07_Teleoperation",
+      "last_index": "—",
+      "last_title": "X-OP: Cross-Morphology Whole-Body Teleoperation via MPC Retargeting (arXiv:2606.07934)",
+      "next_module": "08_Navigation"
     },
     "last_summary_index": 546,
     "last_summary_date": "2026-06-17",
@@ -4055,6 +4055,16 @@
       "pdf_file": "",
       "route": "灵巧操作",
       "title_cn": "视触觉预训练 + 在线多任务学习：单目 RGB + 二值触觉让低成本 LEAP 手获得类人灵巧操作并跨任务泛化"
+    },
+    {
+      "title": "X-OP: Cross-Morphology Whole-Body Teleoperation via MPC Retargeting",
+      "folder": "papers/07_Teleoperation/X-OP__Cross-Morphology_Whole-Body_Teleoperation_via_MPC_Retargeting",
+      "note_file": "X-OP__Cross-Morphology_Whole-Body_Teleoperation_via_MPC_Retargeting.md",
+      "status": "done",
+      "arxiv": "2606.07934",
+      "pdf_file": "",
+      "route": "遥操作",
+      "title_cn": "单台 Apple Vision Pro 驱动、跨形态免重训的分层全身遥操作：MPC 重定向器兼顾操作者意图与动力学可行性"
     }
   ]
 }
