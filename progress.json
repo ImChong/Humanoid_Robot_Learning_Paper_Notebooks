@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "09_State_Estimation",
-      "last_index": 543,
-      "last_title": "Learning Contact Representation for Leg Odometry",
-      "next_module": "10_Sim-to-Real"
+      "last_module": "10_Sim-to-Real",
+      "last_index": 544,
+      "last_title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
+      "next_module": "11_Simulation_Benchmark"
     },
-    "last_summary_index": 543,
+    "last_summary_index": 544,
     "last_summary_date": "2026-06-17",
-    "last_summary_title": "Learning Contact Representation for Leg Odometry",
+    "last_summary_title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-17",
+        "index": 544,
+        "title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
+        "folder": "papers/10_Sim-to-Real/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection",
+        "module": "10_Sim-to-Real",
+        "arxiv": "2504.06585",
+        "source": "论文未公开代码"
+      },
       {
         "date": "2026-06-17",
         "index": 543,
@@ -3917,6 +3926,46 @@
       "arxiv": "",
       "pdf_file": "",
       "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Stability-Aware Retargeting for Humanoid Multi-Contact Teleoperation",
+      "folder": "papers/07_Teleoperation/Stability-Aware_Retargeting_for_Humanoid_Multi-Contact_Teleoperation",
+      "note_file": "Stability-Aware_Retargeting_for_Humanoid_Multi-Contact_Teleoperation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3D Constrained Terrains",
+      "folder": "papers/08_Navigation/Gallant__Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3D_Constrained_Terrains",
+      "note_file": "Gallant__Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3D_Constrained_Terrains.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "Learning Contact Representation for Leg Odometry",
+      "folder": "papers/09_State_Estimation/Learning_Contact_Representation_for_Leg_Odometry",
+      "note_file": "Learning_Contact_Representation_for_Leg_Odometry.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "State Estimation",
+      "title_cn": ""
+    },
+    {
+      "title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
+      "folder": "papers/10_Sim-to-Real/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection",
+      "note_file": "Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Sim-to-Real",
       "title_cn": ""
     }
   ]
