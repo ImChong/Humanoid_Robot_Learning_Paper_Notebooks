@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": "—",
-      "last_title": "MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation (arXiv:2606.09215)",
-      "next_module": "05_Locomotion"
+      "last_module": "05_Locomotion",
+      "last_index": "195",
+      "last_title": "RPL: Learning Robust Humanoid Perceptive Locomotion on Challenging Terrains (arXiv:2602.03002)",
+      "next_module": "06_Manipulation"
     },
     "last_summary_index": 546,
     "last_summary_date": "2026-06-17",
@@ -4035,6 +4035,16 @@
       "pdf_file": "",
       "route": "移动操作/WBC",
       "title_cn": "用视频世界模型的中间去噪特征实时驱动人形全身移动操作"
+    },
+    {
+      "title": "RPL: Learning Robust Humanoid Perceptive Locomotion on Challenging Terrains",
+      "folder": "papers/05_Locomotion/RPL__Learning_Robust_Humanoid_Perceptive_Locomotion_on_Challenging_Terrains",
+      "note_file": "RPL__Learning_Robust_Humanoid_Perceptive_Locomotion_on_Challenging_Terrains.md",
+      "status": "done",
+      "arxiv": "2602.03002",
+      "pdf_file": "",
+      "route": "行走运动",
+      "title_cn": "特权地形专家蒸馏成多深度相机 Transformer 学生，配 DFSV/RSM 做带负载感知行走"
     }
   ]
 }

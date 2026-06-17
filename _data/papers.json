@@ -1101,6 +1101,16 @@
     "display_name": "Locomotion",
     "papers": [
       {
+        "title": "RPL: Learning Robust Humanoid Perceptive Locomotion on Challenging Terrains",
+        "path": "papers/05_Locomotion/RPL__Learning_Robust_Humanoid_Perceptive_Locomotion_on_Challenging_Terrains/RPL__Learning_Robust_Humanoid_Perceptive_Locomotion_on_Challenging_Terrains.md",
+        "url": "/papers/05_Locomotion/RPL__Learning_Robust_Humanoid_Perceptive_Locomotion_on_Challenging_Terrains/RPL__Learning_Robust_Humanoid_Perceptive_Locomotion_on_Challenging_Terrains.html",
+        "dir": "RPL__Learning_Robust_Humanoid_Perceptive_Locomotion_on_Challenging_Terrains",
+        "arxiv": "2602.03002",
+        "published_date_zh": "2026年2月3日（arXiv）",
+        "published_date_en": "Feb 3, 2026 (arXiv)",
+        "zhname": "RPL：特权地形专家蒸馏成多深度相机 Transformer 学生，配 DFSV/RSM 鲁棒化做带负载感知行走"
+      },
+      {
         "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
         "path": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md",
         "url": "/papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.html",
