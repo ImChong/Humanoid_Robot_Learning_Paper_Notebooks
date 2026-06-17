@@ -346,14 +346,14 @@ title: "Home"
     cachedCategories.forEach(function(catCache) {
       catCache.subcategories.forEach(function(subcatCache) {
         subcatCache.items.forEach(function(itemCache) {
-          itemCache.el.style.removeProperty('display');
+          if (itemCache.el.style.display === 'none') itemCache.el.style.removeProperty('display');
         });
-        subcatCache.el.style.removeProperty('display');
+        if (subcatCache.el.style.display === 'none') subcatCache.el.style.removeProperty('display');
       });
       catCache.directItems.forEach(function(itemCache) {
-        itemCache.el.style.removeProperty('display');
+        if (itemCache.el.style.display === 'none') itemCache.el.style.removeProperty('display');
       });
-      catCache.el.style.removeProperty('display');
+      if (catCache.el.style.display === 'none') catCache.el.style.removeProperty('display');
     });
   }
 
@@ -370,7 +370,8 @@ title: "Home"
     }
 
     if (roadmapTocItem) {
-      roadmapTocItem.style.display = query === '' ? '' : 'none';
+      var targetRoadmapDisplay = query === '' ? '' : 'none';
+      if (roadmapTocItem.style.display !== targetRoadmapDisplay) roadmapTocItem.style.display = targetRoadmapDisplay;
     }
 
     cachedCategories.forEach(function(catCache) {
@@ -383,7 +384,8 @@ title: "Home"
 
         subcatCache.items.forEach(function(itemCache) {
           if (!isSearching || itemCache.text.indexOf(query) !== -1) {
-            itemCache.el.style.removeProperty('display');
+            // ⚡ Bolt Optimization: Strict diff-check to prevent layout thrashing
+            if (itemCache.el.style.display === 'none') itemCache.el.style.removeProperty('display');
             if (isSearching) {
               subcatHasMatch = true;
               subcatMatchCount++;
@@ -391,7 +393,8 @@ title: "Home"
               hasAnyMatch = true;
             }
           } else {
-            itemCache.el.style.display = 'none';
+            // ⚡ Bolt Optimization: Strict diff-check to prevent layout thrashing
+            if (itemCache.el.style.display !== 'none') itemCache.el.style.display = 'none';
           }
         });
 
@@ -413,14 +416,16 @@ title: "Home"
       var directMatchCount = 0;
       catCache.directItems.forEach(function(itemCache) {
         if (!isSearching || itemCache.text.indexOf(query) !== -1) {
-          itemCache.el.style.removeProperty('display');
+          // ⚡ Bolt Optimization: Strict diff-check to prevent layout thrashing
+          if (itemCache.el.style.display === 'none') itemCache.el.style.removeProperty('display');
           if (isSearching) {
             catHasMatch = true;
             hasAnyMatch = true;
             directMatchCount++;
           }
         } else {
-          itemCache.el.style.display = 'none';
+          // ⚡ Bolt Optimization: Strict diff-check to prevent layout thrashing
+          if (itemCache.el.style.display !== 'none') itemCache.el.style.display = 'none';
         }
       });
       if (isSearching) catTotalMatch += directMatchCount;
