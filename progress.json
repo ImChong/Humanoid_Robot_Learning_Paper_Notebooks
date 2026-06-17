@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 546,
-      "last_title": "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation",
-      "next_module": "13_Physics-Based_Animation"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": "—",
+      "last_title": "PhysMoDPO: Physically-Plausible Humanoid Motion with Preference Optimization (arXiv:2603.13228)",
+      "next_module": "14_Human_Motion"
     },
     "last_summary_index": 546,
     "last_summary_date": "2026-06-17",
@@ -4005,6 +4005,16 @@
       "pdf_file": "",
       "route": "Hardware Design",
       "title_cn": ""
+    },
+    {
+      "title": "PhysMoDPO: Physically-Plausible Humanoid Motion with Preference Optimization",
+      "folder": "papers/13_Physics-Based_Animation/PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization",
+      "note_file": "PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization.md",
+      "status": "done",
+      "arxiv": "2603.13228",
+      "pdf_file": "",
+      "route": "物理动画",
+      "title_cn": "用偏好优化把文本生成的动作磨成物理可执行的人形动作"
     }
   ]
 }
