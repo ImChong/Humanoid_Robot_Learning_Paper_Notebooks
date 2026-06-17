@@ -305,6 +305,34 @@ html {
   margin-bottom: 0.4rem;
 }
 
+.paper-list-toggle-item {
+  list-style: none;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.paper-list-toggle-btn {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 1rem;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.88rem;
+  color: var(--link);
+  background: transparent;
+  border: 1px solid var(--link);
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.paper-list-toggle-btn:hover {
+  background: var(--link);
+  color: var(--bg);
+}
+
+.paper-list.is-folded:not(.search-expanded) .paper-list-item-folded {
+  display: none;
+}
+
 .paper-card {
   display: flex;
   align-items: center;
