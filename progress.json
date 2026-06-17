@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "13_Physics-Based_Animation",
+      "last_module": "14_Human_Motion",
       "last_index": "—",
-      "last_title": "PhysMoDPO: Physically-Plausible Humanoid Motion with Preference Optimization (arXiv:2603.13228)",
-      "next_module": "14_Human_Motion"
+      "last_title": "ScaleMoGen: Autoregressive Next-Scale Prediction for Human Motion Generation (arXiv:2605.11704)",
+      "next_module": "04_Loco-Manipulation_and_WBC"
     },
     "last_summary_index": 546,
     "last_summary_date": "2026-06-17",
@@ -4015,6 +4015,16 @@
       "pdf_file": "",
       "route": "物理动画",
       "title_cn": "用偏好优化把文本生成的动作磨成物理可执行的人形动作"
+    },
+    {
+      "title": "ScaleMoGen: Autoregressive Next-Scale Prediction for Human Motion Generation",
+      "folder": "papers/14_Human_Motion/ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation",
+      "note_file": "ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation.md",
+      "status": "done",
+      "arxiv": "2605.11704",
+      "pdf_file": "",
+      "route": "人体动作",
+      "title_cn": "用下一尺度自回归把文本生成的人体动作做成由粗到细"
     }
   ]
 }
