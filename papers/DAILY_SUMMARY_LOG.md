@@ -283,6 +283,7 @@
 | — | EgoNav: Learning Humanoid Navigation from Human Data | 08_Navigation | ✅ 已完成（2026-06-17） |
 | — | Four Simple Proprioceptive Estimators for Legged Robots | 09_State_Estimation | ✅ 已完成（2026-06-17） |
 | 384 | Robot Trains Robot: Automatic Real-World Policy Adaptation and Learning for Humanoids | 10_Sim-to-Real | ✅ 已完成（2026-06-17） |
-| ? | （明日：11_Simulation_Benchmark 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 11_Simulation_Benchmark | ⏭️ 下一篇候选 |
+| — | Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot | 11_Simulation_Benchmark | ✅ 已完成（2026-06-17） |
+| ? | （明日：12_Hardware_Design 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 12_Hardware_Design | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

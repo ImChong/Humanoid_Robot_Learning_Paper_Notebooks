@@ -1668,6 +1668,17 @@
         "zhname": "MolmoSpaces：230k+ 室内场景 × 130k+ 物体 × 42M 抓取的全开源具身 AI 评测生态"
       },
       {
+        "title": "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot",
+        "path": "papers/11_Simulation_Benchmark/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot.md",
+        "url": "/papers/11_Simulation_Benchmark/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot.html",
+        "dir": "Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot",
+        "arxiv": "2601.02078",
+        "has_open_source": true,
+        "published_date_zh": "2026年1月5日（arXiv v1），2026年4月28日（v2 修订）",
+        "published_date_en": "Jan 5, 2026 (arXiv v1), Apr 28, 2026 (v2 revised)",
+        "zhname": "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台——用 LLM 从自然语言生成场景、双模式批量造数据、再用 VLM 自动评测，并开源 1 万+ 小时合成数据"
+      },
+      {
         "title": "Benchmarking Humanoid Imitation Learning with Motion Difficulty",
         "path": "papers/11_Simulation_Benchmark/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty.md",
         "url": "/papers/11_Simulation_Benchmark/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty/Benchmarking_Humanoid_Imitation_Learning_with_Motion_Difficulty.html",
