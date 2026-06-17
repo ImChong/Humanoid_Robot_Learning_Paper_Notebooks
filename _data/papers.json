@@ -1292,6 +1292,17 @@
     "display_name": "State Estimation",
     "papers": [
       {
+        "title": "Learning Contact Representation for Leg Odometry",
+        "path": "papers/09_State_Estimation/Learning_Contact_Representation_for_Leg_Odometry/Learning_Contact_Representation_for_Leg_Odometry.md",
+        "url": "/papers/09_State_Estimation/Learning_Contact_Representation_for_Leg_Odometry/Learning_Contact_Representation_for_Leg_Odometry.html",
+        "dir": "Learning_Contact_Representation_for_Leg_Odometry",
+        "arxiv": "2606.05501",
+        "has_open_source": true,
+        "published_date_zh": "2026年6月3日（arXiv）",
+        "published_date_en": "Jun 3, 2026 (arXiv)",
+        "zhname": "自监督学接触表征：不靠力传感器，仅用关节编码器把「支撑/摆动」分出来喂腿部里程计"
+      },
+      {
         "title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
         "path": "papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md",
         "url": "/papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.html",

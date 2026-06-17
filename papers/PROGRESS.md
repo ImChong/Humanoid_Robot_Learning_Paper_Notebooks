@@ -481,11 +481,12 @@
 | 367  | [NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance](https://arxiv.org/abs/2505.08712) | 2025.05 |  | ⏳ 待读 |
 
 
-### State Estimation（12篇）
+### State Estimation（13篇）
 
 
 | #   | 论文                                                                                                                                       | 日期      | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
+| 543  | [Learning Contact Representation for Leg Odometry](https://arxiv.org/abs/2606.05501) ✅ [笔记](09_State_Estimation/Learning_Contact_Representation_for_Leg_Odometry/Learning_Contact_Representation_for_Leg_Odometry.md) | 2026-06-03 |     | ✅ 已总结 |
 | 539  | [Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation](https://arxiv.org/abs/2510.16755) ✅ [笔记](09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.md) | 2025.10 |     | ✅ 已总结 |
 | 368  | [AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion](https://arxiv.org/abs/2511.18857) ✅ [笔记](09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md)                     | 2025.11 |     | ✅ 完成 |
 | 369  | [InEKFormer: A Hybrid State Estimator for Humanoid Robots](https://arxiv.org/abs/2511.16306) ✅ [笔记](09_State_Estimation/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots/InEKFormer__A_Hybrid_State_Estimator_for_Humanoid_Robots.md)                                             | 2025.11 |     | ✅ 完成 |
