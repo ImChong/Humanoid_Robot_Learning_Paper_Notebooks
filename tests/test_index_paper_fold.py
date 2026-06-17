@@ -23,7 +23,15 @@ def test_index_fold_search_expansion_hook():
     assert "has-paper-fold" in text
 
 
+def test_index_fold_toggle_follows_paper_list():
+    text = INDEX.read_text(encoding="utf-8")
+    assert "</ul>\n      {% if should_fold %}\n      <button type=\"button\" class=\"paper-list-toggle-btn\"" in text
+    assert "paper-list-toggle-item" not in text
+
+
 def test_style_hides_folded_items_when_collapsed():
     css = STYLE.read_text(encoding="utf-8")
     assert ".paper-list.is-folded:not(.search-expanded) .paper-list-item-folded" in css
     assert ".paper-list-toggle-btn" in css
+    assert "min-height: 44px" in css
+    assert ".index-main" in css

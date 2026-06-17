@@ -305,15 +305,12 @@ html {
   margin-bottom: 0.4rem;
 }
 
-.paper-list-toggle-item {
-  list-style: none;
-  margin: 0.2rem 0 0.6rem;
-}
-
 .paper-list-toggle-btn {
   display: block;
   width: 100%;
-  padding: 0.55rem 1rem;
+  min-height: 44px;
+  margin: 0.2rem 0 0.6rem;
+  padding: 0.65rem 1rem;
   font-family: 'Arial', 'Helvetica Neue', sans-serif;
   font-size: 0.88rem;
   color: var(--link);
@@ -322,6 +319,8 @@ html {
   border-radius: 6px;
   cursor: pointer;
   text-align: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .paper-list-toggle-btn:hover {
@@ -661,6 +660,11 @@ html {
   }
   .index-layout .toc-sidebar.open {
     left: 0;
+  }
+
+  /* Keep fold toggles above the floating sidebar FAB on narrow viewports. */
+  .index-main {
+    padding-bottom: calc(24px + 48px + 28px + env(safe-area-inset-bottom, 0px));
   }
 }
 
