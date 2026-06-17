@@ -17,10 +17,14 @@ def test_index_declares_fold_exempt_categories():
     assert "paper-list-toggle-btn" in text
 
 
-def test_index_fold_search_expansion_hook():
+def test_index_search_unfolds_folded_lists():
     text = INDEX.read_text(encoding="utf-8")
-    assert "search-expanded" in text
-    assert "has-paper-fold" in text
+    assert "setSearchFoldMode" in text
+    assert "index-search-active" in text
+    assert "foldStateBeforeSearch" in text
+    assert "resetAllItemDisplays" in text
+    assert "compositionend" in text
+    assert "search-expanded" not in text
 
 
 def test_index_fold_toggle_follows_paper_list():
@@ -31,7 +35,8 @@ def test_index_fold_toggle_follows_paper_list():
 
 def test_style_hides_folded_items_when_collapsed():
     css = STYLE.read_text(encoding="utf-8")
-    assert ".paper-list.is-folded:not(.search-expanded) .paper-list-item-folded" in css
+    assert ".paper-list.is-folded .paper-list-item-folded" in css
+    assert "body.index-search-active .paper-list-toggle-btn" in css
     assert ".paper-list-toggle-btn" in css
     assert "min-height: 44px" in css
     assert ".index-main" in css

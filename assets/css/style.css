@@ -328,7 +328,11 @@ html {
   color: var(--bg);
 }
 
-.paper-list.is-folded:not(.search-expanded) .paper-list-item-folded {
+.paper-list.is-folded .paper-list-item-folded {
+  display: none;
+}
+
+body.index-search-active .paper-list-toggle-btn {
   display: none;
 }
 

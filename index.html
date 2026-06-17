@@ -253,90 +253,209 @@ title: "Home"
   var roadmapTocItem = document.querySelector('.toc-item[data-toc-for="roadmap-title"]');
 
   var searchTimeout;
-  // ⚡ Bolt Optimization: Debounce search input to prevent rapid DOM updates on every keystroke
-  var foldedLists = document.querySelectorAll('.paper-list.has-paper-fold');
+  var FOLD_PREFIX = 'paper-fold:';
+  var foldLists = Array.from(document.querySelectorAll('.paper-list.has-paper-fold[data-fold-id]'));
+  var foldStateBeforeSearch = null;
 
-  searchInput.addEventListener('input', function() {
-    clearTimeout(searchTimeout);
-    searchTimeout = setTimeout(function() {
-      var query = searchInput.value.toLowerCase().trim();
-      var hasAnyMatch = false;
-      var isSearching = query !== '';
+  function getLang() {
+    return document.documentElement.getAttribute('data-lang-mode') === 'zh' ? 'zh' : 'en';
+  }
 
-      foldedLists.forEach(function(list) {
-        if (isSearching) {
-          list.classList.add('search-expanded');
-        } else {
-          list.classList.remove('search-expanded');
-        }
+  function updateToggleLabel(btn, expanded) {
+    var useZh = getLang() === 'zh';
+    if (expanded) {
+      btn.textContent = useZh ? btn.getAttribute('data-zh-expanded') : btn.getAttribute('data-en-expanded');
+    } else {
+      btn.textContent = useZh ? btn.getAttribute('data-zh') : btn.getAttribute('data-en');
+    }
+  }
+
+  function setFoldState(list, expanded, persist) {
+    var foldId = list.getAttribute('data-fold-id');
+    var btn = document.querySelector('.paper-list-toggle-btn[data-fold-id="' + foldId + '"]');
+    if (expanded) {
+      list.classList.remove('is-folded');
+    } else {
+      list.classList.add('is-folded');
+    }
+    if (btn) {
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      updateToggleLabel(btn, expanded);
+    }
+    if (persist && foldId) {
+      try {
+        localStorage.setItem(FOLD_PREFIX + foldId, expanded ? 'true' : 'false');
+      } catch (e) {}
+    }
+  }
+
+  foldLists.forEach(function(list) {
+    var foldId = list.getAttribute('data-fold-id');
+    var btn = document.querySelector('.paper-list-toggle-btn[data-fold-id="' + foldId + '"]');
+    if (!btn) return;
+
+    var saved = null;
+    try {
+      saved = localStorage.getItem(FOLD_PREFIX + foldId);
+    } catch (e) {}
+    if (saved === 'true') {
+      setFoldState(list, true, false);
+    } else {
+      updateToggleLabel(btn, false);
+    }
+
+    btn.addEventListener('click', function() {
+      var expanded = list.classList.contains('is-folded');
+      setFoldState(list, expanded, true);
+    });
+  });
+
+  document.addEventListener('cl-lang-changed', function() {
+    document.querySelectorAll('.paper-list-toggle-btn[data-fold-id]').forEach(function(btn) {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      updateToggleLabel(btn, expanded);
+    });
+  });
+
+  function setSearchFoldMode(active) {
+    if (active) {
+      if (foldStateBeforeSearch) return;
+      foldStateBeforeSearch = new Map();
+      foldLists.forEach(function(list) {
+        var id = list.getAttribute('data-fold-id');
+        foldStateBeforeSearch.set(id, list.classList.contains('is-folded'));
+        list.classList.remove('is-folded');
       });
-
-      if (roadmapTocItem) {
-        roadmapTocItem.style.display = query === '' ? '' : 'none';
+      document.body.classList.add('index-search-active');
+      return;
+    }
+    if (!foldStateBeforeSearch) return;
+    foldLists.forEach(function(list) {
+      var id = list.getAttribute('data-fold-id');
+      if (foldStateBeforeSearch.get(id)) {
+        list.classList.add('is-folded');
+      } else {
+        list.classList.remove('is-folded');
       }
+    });
+    foldStateBeforeSearch = null;
+    document.body.classList.remove('index-search-active');
+  }
 
-      cachedCategories.forEach(function(catCache) {
-        var catHasMatch = false;
-        var catTotalMatch = 0;
+  function resetAllItemDisplays() {
+    cachedCategories.forEach(function(catCache) {
+      catCache.subcategories.forEach(function(subcatCache) {
+        subcatCache.items.forEach(function(itemCache) {
+          itemCache.el.style.removeProperty('display');
+        });
+        subcatCache.el.style.removeProperty('display');
+      });
+      catCache.directItems.forEach(function(itemCache) {
+        itemCache.el.style.removeProperty('display');
+      });
+      catCache.el.style.removeProperty('display');
+    });
+  }
 
-        catCache.subcategories.forEach(function(subcatCache) {
-          var subcatHasMatch = false;
-          var subcatMatchCount = 0;
-          
-          subcatCache.items.forEach(function(itemCache) {
-            if (itemCache.text.indexOf(query) !== -1) {
-              if (itemCache.el.style.display !== '') itemCache.el.style.display = '';
+  function runSearch() {
+    if (!searchInput) return;
+    var query = searchInput.value.toLowerCase().trim();
+    var hasAnyMatch = false;
+    var isSearching = query !== '';
+
+    setSearchFoldMode(isSearching);
+
+    if (!isSearching) {
+      resetAllItemDisplays();
+    }
+
+    if (roadmapTocItem) {
+      roadmapTocItem.style.display = query === '' ? '' : 'none';
+    }
+
+    cachedCategories.forEach(function(catCache) {
+      var catHasMatch = false;
+      var catTotalMatch = 0;
+
+      catCache.subcategories.forEach(function(subcatCache) {
+        var subcatHasMatch = false;
+        var subcatMatchCount = 0;
+
+        subcatCache.items.forEach(function(itemCache) {
+          if (!isSearching || itemCache.text.indexOf(query) !== -1) {
+            itemCache.el.style.removeProperty('display');
+            if (isSearching) {
               subcatHasMatch = true;
               subcatMatchCount++;
               catHasMatch = true;
               hasAnyMatch = true;
-            } else {
-              if (itemCache.el.style.display !== 'none') itemCache.el.style.display = 'none';
             }
-          });
-          
-          var targetSubcatDisplay = subcatHasMatch || query === '' ? '' : 'none';
-          if (subcatCache.el.style.display !== targetSubcatDisplay) subcatCache.el.style.display = targetSubcatDisplay;
-          if (subcatCache.tocItem) {
-            if (subcatCache.tocItem.style.display !== targetSubcatDisplay) subcatCache.tocItem.style.display = targetSubcatDisplay;
+          } else {
+            itemCache.el.style.display = 'none';
+          }
+        });
+
+        var targetSubcatDisplay = subcatHasMatch || query === '' ? '' : 'none';
+        if (subcatCache.el.style.display !== targetSubcatDisplay) subcatCache.el.style.display = targetSubcatDisplay;
+        if (subcatCache.tocItem) {
+          if (subcatCache.tocItem.style.display !== targetSubcatDisplay) subcatCache.tocItem.style.display = targetSubcatDisplay;
+          if (isSearching) {
             var countEl = subcatCache.tocItem.querySelector('.toc-count');
             if (countEl) {
               var targetText = '(' + subcatMatchCount + ')';
               if (countEl.textContent !== targetText) countEl.textContent = targetText;
             }
           }
-          catTotalMatch += subcatMatchCount;
-        });
+        }
+        if (isSearching) catTotalMatch += subcatMatchCount;
+      });
 
-        var directMatchCount = 0;
-        catCache.directItems.forEach(function(itemCache) {
-          if (itemCache.text.indexOf(query) !== -1) {
-            if (itemCache.el.style.display !== '') itemCache.el.style.display = '';
+      var directMatchCount = 0;
+      catCache.directItems.forEach(function(itemCache) {
+        if (!isSearching || itemCache.text.indexOf(query) !== -1) {
+          itemCache.el.style.removeProperty('display');
+          if (isSearching) {
             catHasMatch = true;
             hasAnyMatch = true;
             directMatchCount++;
-          } else {
-            if (itemCache.el.style.display !== 'none') itemCache.el.style.display = 'none';
           }
-        });
-        catTotalMatch += directMatchCount;
+        } else {
+          itemCache.el.style.display = 'none';
+        }
+      });
+      if (isSearching) catTotalMatch += directMatchCount;
 
-        var targetCatDisplay = catHasMatch || query === '' ? '' : 'none';
-        if (catCache.el.style.display !== targetCatDisplay) catCache.el.style.display = targetCatDisplay;
-        if (catCache.tocItem) {
-          if (catCache.tocItem.style.display !== targetCatDisplay) catCache.tocItem.style.display = targetCatDisplay;
+      var targetCatDisplay = catHasMatch || query === '' ? '' : 'none';
+      if (catCache.el.style.display !== targetCatDisplay) catCache.el.style.display = targetCatDisplay;
+      if (catCache.tocItem) {
+        if (catCache.tocItem.style.display !== targetCatDisplay) catCache.tocItem.style.display = targetCatDisplay;
+        if (isSearching) {
           var countEl = catCache.tocItem.querySelector('.toc-count');
           if (countEl) {
             var targetText = '(' + catTotalMatch + ')';
             if (countEl.textContent !== targetText) countEl.textContent = targetText;
           }
         }
-      });
+      }
+    });
 
+    if (noResults) {
       var targetNoResultsDisplay = hasAnyMatch || query === '' ? 'none' : 'block';
       if (noResults.style.display !== targetNoResultsDisplay) noResults.style.display = targetNoResultsDisplay;
-    }, 150);
-  });
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      if (e.isComposing) return;
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(runSearch, 150);
+    });
+    searchInput.addEventListener('compositionend', function() {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(runSearch, 0);
+    });
+  }
 
   var sidebar = document.getElementById('toc-sidebar');
   if (!sidebar) return;
@@ -407,70 +526,5 @@ title: "Home"
     }
   });
   updateActive();
-})();
-
-(function() {
-  var FOLD_PREFIX = 'paper-fold:';
-  var lists = document.querySelectorAll('.paper-list.has-paper-fold[data-fold-id]');
-
-  function getLang() {
-    return document.documentElement.getAttribute('data-lang-mode') === 'zh' ? 'zh' : 'en';
-  }
-
-  function updateToggleLabel(btn, expanded) {
-    var useZh = getLang() === 'zh';
-    if (expanded) {
-      btn.textContent = useZh ? btn.getAttribute('data-zh-expanded') : btn.getAttribute('data-en-expanded');
-    } else {
-      btn.textContent = useZh ? btn.getAttribute('data-zh') : btn.getAttribute('data-en');
-    }
-  }
-
-  function setFoldState(list, expanded, persist) {
-    var foldId = list.getAttribute('data-fold-id');
-    var btn = document.querySelector('.paper-list-toggle-btn[data-fold-id="' + foldId + '"]');
-    if (expanded) {
-      list.classList.remove('is-folded');
-    } else {
-      list.classList.add('is-folded');
-    }
-    if (btn) {
-      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-      updateToggleLabel(btn, expanded);
-    }
-    if (persist && foldId) {
-      try {
-        localStorage.setItem(FOLD_PREFIX + foldId, expanded ? 'true' : 'false');
-      } catch (e) {}
-    }
-  }
-
-  lists.forEach(function(list) {
-    var foldId = list.getAttribute('data-fold-id');
-    var btn = document.querySelector('.paper-list-toggle-btn[data-fold-id="' + foldId + '"]');
-    if (!btn) return;
-
-    var saved = null;
-    try {
-      saved = localStorage.getItem(FOLD_PREFIX + foldId);
-    } catch (e) {}
-    if (saved === 'true') {
-      setFoldState(list, true, false);
-    } else {
-      updateToggleLabel(btn, false);
-    }
-
-    btn.addEventListener('click', function() {
-      var expanded = list.classList.contains('is-folded');
-      setFoldState(list, expanded, true);
-    });
-  });
-
-  document.addEventListener('cl-lang-changed', function() {
-    document.querySelectorAll('.paper-list-toggle-btn[data-fold-id]').forEach(function(btn) {
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      updateToggleLabel(btn, expanded);
-    });
-  });
 })();
 </script>
