@@ -281,6 +281,7 @@
 | 278 | Visual-tactile pretraining and online multitask learning for humanlike manipulation dexterity | 06_Manipulation | ✅ 已完成（2026-06-17） |
 | — | X-OP: Cross-Morphology Whole-Body Teleoperation via MPC Retargeting | 07_Teleoperation | ✅ 已完成（2026-06-17） |
 | — | EgoNav: Learning Humanoid Navigation from Human Data | 08_Navigation | ✅ 已完成（2026-06-17） |
-| ? | （明日：09_State_Estimation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 09_State_Estimation | ⏭️ 下一篇候选 |
+| — | Four Simple Proprioceptive Estimators for Legged Robots | 09_State_Estimation | ✅ 已完成（2026-06-17） |
+| ? | （明日：10_Sim-to-Real 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 10_Sim-to-Real | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

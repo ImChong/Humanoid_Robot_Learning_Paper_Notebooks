@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
+      "last_module": "09_State_Estimation",
       "last_index": "—",
-      "last_title": "EgoNav: Learning Humanoid Navigation from Human Data (arXiv:2604.00416)",
-      "next_module": "09_State_Estimation"
+      "last_title": "Four Simple Proprioceptive Estimators for Legged Robots (arXiv:2605.23100)",
+      "next_module": "10_Sim-to-Real"
     },
-    "last_summary_index": 546,
+    "last_summary_index": 547,
     "last_summary_date": "2026-06-17",
-    "last_summary_title": "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation",
+    "last_summary_title": "Four Simple Proprioceptive Estimators for Legged Robots",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-17",
+        "index": 547,
+        "title": "Four Simple Proprioceptive Estimators for Legged Robots",
+        "folder": "papers/09_State_Estimation/Four_Simple_Proprioceptive_Estimators_for_Legged_Robots",
+        "module": "09_State_Estimation",
+        "arxiv": "2605.23100",
+        "source": "borglab/gtsam (LeggedEstimatorReplayExample.cpp) · ChiyunNoh/GTSAM-Legged-Estimator-ROS2"
+      },
       {
         "date": "2026-06-17",
         "index": 546,
