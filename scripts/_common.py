@@ -202,6 +202,11 @@ def normalize_kramdown_math_pipes(content: str) -> tuple[str, bool]:
     Kramdown splits a prose line on ``|`` even when the delimiter appears inside
     inline math (e.g. ``$\\pi(a|o)$``), yielding a broken two-column table.
     """
+    # ⚡ Bolt Optimization: Fast substring pre-checks to short-circuit expensive O(N) splits
+    # on strings that definitely contain no math or no pipes.
+    if "|" not in content or "$" not in content:
+        return content, False
+
     lines = content.split("\n")
     in_fence = False
     changed = False
