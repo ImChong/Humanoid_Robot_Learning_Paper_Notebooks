@@ -893,6 +893,16 @@
     "display_name": "Manipulation",
     "papers": [
       {
+        "title": "Visual-tactile pretraining and online multitask learning for humanlike manipulation dexterity",
+        "path": "papers/06_Manipulation/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity.md",
+        "url": "/papers/06_Manipulation/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity.html",
+        "dir": "Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity",
+        "arxiv": "",
+        "published_date_zh": "2026年1月28日（Science Robotics）",
+        "published_date_en": "Jan 28, 2026 (Science Robotics)",
+        "zhname": "视触觉预训练 + 在线多任务学习：先从人类演示自监督学「视觉×触觉」融合表示，再用 RL + 在线模仿在仿真里一次学多技能，只靠单目图像 + 二值触觉，让低成本 LEAP 手获得类人灵巧操作并跨任务/物体/光照泛化"
+      },
+      {
         "title": "Learning Versatile Humanoid Manipulation with Touch Dreaming",
         "path": "papers/06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.md",
         "url": "/papers/06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.html",
