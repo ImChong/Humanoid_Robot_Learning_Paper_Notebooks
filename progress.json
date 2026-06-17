@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 545,
-      "last_title": "Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation",
-      "next_module": "12_Hardware_Design"
+      "last_module": "12_Hardware_Design",
+      "last_index": 546,
+      "last_title": "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation",
+      "next_module": "13_Physics-Based_Animation"
     },
-    "last_summary_index": 545,
+    "last_summary_index": 546,
     "last_summary_date": "2026-06-17",
-    "last_summary_title": "Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation",
+    "last_summary_title": "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-17",
+        "index": 546,
+        "title": "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation",
+        "folder": "papers/12_Hardware_Design/X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation",
+        "module": "12_Hardware_Design",
+        "arxiv": "2604.21541",
+        "source": "论文未公开代码/项目页"
+      },
       {
         "date": "2026-06-17",
         "index": 545,
@@ -3985,6 +3994,16 @@
       "arxiv": "2510.08807",
       "pdf_file": "",
       "route": "Simulation Benchmark",
+      "title_cn": ""
+    },
+    {
+      "title": "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation",
+      "folder": "papers/12_Hardware_Design/X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation",
+      "note_file": "X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "Hardware Design",
       "title_cn": ""
     }
   ]
