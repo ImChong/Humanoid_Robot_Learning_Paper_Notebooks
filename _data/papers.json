@@ -1750,6 +1750,17 @@
     "display_name": "Human Motion",
     "papers": [
       {
+        "title": "ScaleMoGen: Autoregressive Next-Scale Prediction for Human Motion Generation",
+        "path": "papers/14_Human_Motion/ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation/ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation.md",
+        "url": "/papers/14_Human_Motion/ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation/ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation.html",
+        "dir": "ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation",
+        "arxiv": "2605.11704",
+        "has_open_source": false,
+        "published_date_zh": "2026年5月12日（arXiv v1）",
+        "published_date_en": "May 12, 2026 (arXiv v1)",
+        "zhname": "ScaleMoGen：用「下一尺度」自回归把文本生成的人体动作做成由粗到细"
+      },
+      {
         "title": "Kimodo: Scaling Controllable Human Motion Generation",
         "path": "papers/14_Human_Motion/Kimodo__Scaling_Controllable_Human_Motion_Generation/Kimodo__Scaling_Controllable_Human_Motion_Generation.md",
         "url": "/papers/14_Human_Motion/Kimodo__Scaling_Controllable_Human_Motion_Generation/Kimodo__Scaling_Controllable_Human_Motion_Generation.html",
