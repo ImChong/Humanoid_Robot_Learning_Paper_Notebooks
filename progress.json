@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "14_Human_Motion",
+      "last_module": "04_Loco-Manipulation_and_WBC",
       "last_index": "—",
-      "last_title": "ScaleMoGen: Autoregressive Next-Scale Prediction for Human Motion Generation (arXiv:2605.11704)",
-      "next_module": "04_Loco-Manipulation_and_WBC"
+      "last_title": "MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation (arXiv:2606.09215)",
+      "next_module": "05_Locomotion"
     },
     "last_summary_index": 546,
     "last_summary_date": "2026-06-17",
@@ -4025,6 +4025,16 @@
       "pdf_file": "",
       "route": "人体动作",
       "title_cn": "用下一尺度自回归把文本生成的人体动作做成由粗到细"
+    },
+    {
+      "title": "MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation",
+      "folder": "papers/04_Loco-Manipulation_and_WBC/MotionWAM__Foundation_World_Action_Models_for_Real-Time_Humanoid_Loco-Mani",
+      "note_file": "MotionWAM__Foundation_World_Action_Models_for_Real-Time_Humanoid_Loco-Mani.md",
+      "status": "done",
+      "arxiv": "2606.09215",
+      "pdf_file": "",
+      "route": "移动操作/WBC",
+      "title_cn": "用视频世界模型的中间去噪特征实时驱动人形全身移动操作"
     }
   ]
 }
