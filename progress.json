@@ -41,10 +41,10 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": "195",
-      "last_title": "RPL: Learning Robust Humanoid Perceptive Locomotion on Challenging Terrains (arXiv:2602.03002)",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": "278",
+      "last_title": "Visual-tactile pretraining and online multitask learning for humanlike manipulation dexterity (Science Robotics 2026)",
+      "next_module": "07_Teleoperation"
     },
     "last_summary_index": 546,
     "last_summary_date": "2026-06-17",
@@ -4045,6 +4045,16 @@
       "pdf_file": "",
       "route": "行走运动",
       "title_cn": "特权地形专家蒸馏成多深度相机 Transformer 学生，配 DFSV/RSM 做带负载感知行走"
+    },
+    {
+      "title": "Visual-tactile pretraining and online multitask learning for humanlike manipulation dexterity",
+      "folder": "papers/06_Manipulation/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity",
+      "note_file": "Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "灵巧操作",
+      "title_cn": "视触觉预训练 + 在线多任务学习：单目 RGB + 二值触觉让低成本 LEAP 手获得类人灵巧操作并跨任务泛化"
     }
   ]
 }
