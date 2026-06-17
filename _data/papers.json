@@ -1507,6 +1507,17 @@
         "zhname": "PACE：用一套\"自下而上的物理参数辨识 + PMSM 能量模型\"，让一个 RL 策略在不做动力学域随机化的前提下迁移到 13 台不同的腿足机器人"
       },
       {
+        "title": "Robot Trains Robot: Automatic Real-World Policy Adaptation and Learning for Humanoids",
+        "path": "papers/10_Sim-to-Real/Robot_Trains_Robot_Automatic_Real-World_Policy_Adaptation_and_Learning/Robot_Trains_Robot_Automatic_Real-World_Policy_Adaptation_and_Learning.md",
+        "url": "/papers/10_Sim-to-Real/Robot_Trains_Robot_Automatic_Real-World_Policy_Adaptation_and_Learning/Robot_Trains_Robot_Automatic_Real-World_Policy_Adaptation_and_Learning.html",
+        "dir": "Robot_Trains_Robot_Automatic_Real-World_Policy_Adaptation_and_Learning",
+        "arxiv": "2508.12252",
+        "has_open_source": true,
+        "published_date_zh": "2025年8月17日（arXiv v1），CoRL 2025 录用",
+        "published_date_en": "Aug 17, 2025 (arXiv v1), CoRL 2025 录用",
+        "zhname": "机器人训练机器人：用机械臂老师在真实世界自动适配/从零训练人形策略（RTR）"
+      },
+      {
         "title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
         "path": "papers/10_Sim-to-Real/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection.md",
         "url": "/papers/10_Sim-to-Real/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection.html",
