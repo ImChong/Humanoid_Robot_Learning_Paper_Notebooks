@@ -41,16 +41,24 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 365,
-      "last_title": "Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3D Constrained Terrains",
-      "next_module": "09_State_Estimation"
+      "last_module": "09_State_Estimation",
+      "last_index": 543,
+      "last_title": "Learning Contact Representation for Leg Odometry",
+      "next_module": "10_Sim-to-Real"
     },
-    "last_summary_index": 365,
+    "last_summary_index": 543,
     "last_summary_date": "2026-06-17",
-    "last_summary_title": "Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3D Constrained Terrains",
+    "last_summary_title": "Learning Contact Representation for Leg Odometry",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-17",
+        "index": 543,
+        "title": "Learning Contact Representation for Leg Odometry",
+        "folder": "papers/09_State_Estimation/Learning_Contact_Representation_for_Leg_Odometry",
+        "module": "09_State_Estimation",
+        "source": "https://github.com/srge-erau/learning_contact_representation"
+      },
       {
         "date": "2026-06-17",
         "index": 365,
