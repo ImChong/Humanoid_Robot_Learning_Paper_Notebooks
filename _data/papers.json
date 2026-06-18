@@ -1548,6 +1548,16 @@
     "display_name": "Hardware Design",
     "papers": [
       {
+        "title": "DexLink Hand: A Compact, Affordable, 16-DOF Linkage-Driven Hand with Human-Like Dexterity",
+        "path": "papers/12_Hardware_Design/DexLink_Hand__Compact_Affordable_16-DOF_Linkage-Driven_Hand/DexLink_Hand__Compact_Affordable_16-DOF_Linkage-Driven_Hand.md",
+        "url": "/papers/12_Hardware_Design/DexLink_Hand__Compact_Affordable_16-DOF_Linkage-Driven_Hand/DexLink_Hand__Compact_Affordable_16-DOF_Linkage-Driven_Hand.html",
+        "dir": "DexLink_Hand__Compact_Affordable_16-DOF_Linkage-Driven_Hand",
+        "arxiv": "2606.17418",
+        "published_date_zh": "2026年6月16日（arXiv）",
+        "published_date_en": "Jun 16, 2026 (arXiv)",
+        "zhname": "DexLink Hand：用「连杆驱动」打破灵巧手「灵巧—紧凑—便宜」三角困境——16 个独立电机驱动 20 个关节、人手尺寸 320 g、整机 < 400 美元，靠蜗轮自锁实现被动承重（单指约 65 N、全手提 10 kg），拿到满分 Kapandji、复现全部 33 类 Feix 抓取"
+      },
+      {
         "title": "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation",
         "path": "papers/12_Hardware_Design/X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation/X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation.md",
         "url": "/papers/12_Hardware_Design/X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation/X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation.html",
