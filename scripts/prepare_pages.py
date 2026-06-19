@@ -255,6 +255,11 @@ def extract_published_date(content):
     if not section:
         return None
 
+    # ⚡ Bolt Optimization: Use fast native string scanning to completely
+    # bypass split('\n') when the table character is missing.
+    if "|" not in section:
+        return None
+
     for line in section.split("\n"):
         line = line.strip()
         if not line.startswith("|") or _EMPTY_TABLE_ROW_RE.match(line):
@@ -447,6 +452,11 @@ def extract_has_open_source(content):
     if "github.com" not in section.lower():
         return False
 
+    # ⚡ Bolt Optimization: Use fast native string scanning to completely
+    # bypass split('\n') when the table character is missing.
+    if "|" not in section:
+        return False
+
     for line in section.split("\n"):
         line = line.strip()
         if not line.startswith("|") or _EMPTY_TABLE_ROW_RE.match(line):
@@ -520,6 +530,11 @@ def parse_progress_order():
     # This captures the order they appear in README
     order = {}
     idx = 0
+
+    # ⚡ Bolt Optimization: Use fast native string scanning to completely
+    # bypass split('\n') when the table character is missing.
+    if "|" not in content:
+        return order
 
     for line in content.split("\n"):
         line = line.strip()
@@ -610,6 +625,11 @@ def parse_high_impact_h_order():
 
     by_name = {}
     by_arxiv = {}
+
+    # ⚡ Bolt Optimization: Use fast native string scanning to completely
+    # bypass split('\n') when the table character is missing.
+    if "|" not in content:
+        return by_name, by_arxiv
 
     for line in content.split("\n"):
         line = line.strip()

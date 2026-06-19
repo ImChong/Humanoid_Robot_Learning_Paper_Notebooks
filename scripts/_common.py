@@ -242,23 +242,36 @@ def normalize_paper_meta_blockquotes(content: str) -> tuple[str, bool]:
     if "\n>" not in content and not content.startswith(">"):
         return content, False
 
-    lines = content.split("\n")
-    h1_idx = next(
-        (i for i, line in enumerate(lines) if line.startswith("# ") and not line.startswith("## ")),
-        None,
-    )
-    if h1_idx is None:
+    # ⚡ Bolt Optimization: Use fast native string scanning instead of allocating
+    # an entire file line array with content.split("\n").
+    h1_idx_char = 0 if content.startswith("# ") else content.find("\n# ")
+    if h1_idx_char != 0 and h1_idx_char != -1:
+        h1_idx_char += 1
+
+    if h1_idx_char == -1:
         return content, False
 
-    end_idx = len(lines)
-    for i in range(h1_idx + 1, min(len(lines), h1_idx + 30)):
-        stripped = lines[i].strip()
-        if stripped == "---" or lines[i].startswith("## "):
-            end_idx = i
-            break
+    # Just need to extract the block between # and next ## or ---
+    # Original logic only looked ~30 lines ahead. We use a 2000 char window
+    # to approximate this bound and prevent scanning the entire document.
+    search_end = min(len(content), h1_idx_char + 2000)
+    next_h2 = content.find("\n## ", h1_idx_char, search_end)
+    next_sep = content.find("\n---", h1_idx_char, search_end)
+
+    end_char_idx = len(content)
+    if next_h2 != -1 and next_sep != -1:
+        end_char_idx = min(next_h2, next_sep)
+    elif next_h2 != -1:
+        end_char_idx = next_h2
+    elif next_sep != -1:
+        end_char_idx = next_sep
+
+    target_block = content[h1_idx_char:end_char_idx]
+    lines = target_block.split("\n")
 
     content_bq_indices: list[int] = []
-    for i in range(h1_idx + 1, end_idx):
+    # Skip the actual H1 line which is lines[0]
+    for i in range(1, len(lines)):
         if lines[i].startswith(">"):
             if lines[i].strip() != ">":
                 content_bq_indices.append(i)
@@ -289,7 +302,9 @@ def normalize_paper_meta_blockquotes(content: str) -> tuple[str, bool]:
 
     if not changed:
         return content, False
-    return "\n".join(new_lines), True
+
+    new_target_block = "\n".join(new_lines)
+    return content[:h1_idx_char] + new_target_block + content[end_char_idx:], True
 
 
 def iter_paper_md_files(papers_dir: str = PAPERS_DIR) -> Iterator[str]:
