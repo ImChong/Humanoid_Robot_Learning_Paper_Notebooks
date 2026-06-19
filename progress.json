@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 549,
-      "last_title": "DexLink Hand: A Compact, Affordable, 16-DOF Linkage-Driven Hand with Human-Like Dexterity (arXiv:2606.17418)",
-      "next_module": "13_Physics-Based_Animation"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 550,
+      "last_title": "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control (arXiv:2606.10340)",
+      "next_module": "14_Human_Motion"
     },
-    "last_summary_index": 549,
-    "last_summary_date": "2026-06-18",
-    "last_summary_title": "DexLink Hand: A Compact, Affordable, 16-DOF Linkage-Driven Hand with Human-Like Dexterity",
+    "last_summary_index": 550,
+    "last_summary_date": "2026-06-19",
+    "last_summary_title": "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-19",
+        "index": 550,
+        "title": "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control",
+        "folder": "papers/13_Physics-Based_Animation/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control",
+        "module": "13_Physics-Based_Animation",
+        "arxiv": "2606.10340",
+        "source": "Tsinghua-MARS-Lab/OMG · tsinghua-mars-lab.github.io/OMG"
+      },
       {
         "date": "2026-06-18",
         "index": 549,
@@ -955,7 +964,7 @@
         "project_page": "https://research.nvidia.com/labs/sil/projects/kimodo/"
       }
     ],
-    "last_completed_index": 373,
+    "last_completed_index": 550,
     "next_index": null
   },
   "papers": [
@@ -4133,6 +4142,17 @@
       "route": "Hardware Design",
       "title_cn": "DexLink Hand：紧凑、低成本、16 自由度连杆驱动拟人灵巧手",
       "done_date": "2026-06-18"
+    },
+    {
+      "title": "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control",
+      "folder": "papers/13_Physics-Based_Animation/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control",
+      "note_file": "OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control.md",
+      "status": "done",
+      "arxiv": "2606.10340",
+      "pdf_file": "",
+      "route": "Physics-Based Animation",
+      "title_cn": "OMG：面向人形通用控制的全模态动作生成",
+      "done_date": "2026-06-19"
     }
   ]
 }

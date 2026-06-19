@@ -286,6 +286,7 @@
 | 384 | Robot Trains Robot: Automatic Real-World Policy Adaptation and Learning for Humanoids | 10_Sim-to-Real | ✅ 已完成（2026-06-17） |
 | — | Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot | 11_Simulation_Benchmark | ✅ 已完成（2026-06-17） |
 | 549 | DexLink Hand: A Compact, Affordable, 16-DOF Linkage-Driven Hand with Human-Like Dexterity | 12_Hardware_Design | ✅ 已完成（2026-06-18） |
-| ? | （明日：13_Physics-Based_Animation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 13_Physics-Based_Animation | ⏭️ 下一篇候选 |
+| 550 | OMG: Omni-Modal Motion Generation for Generalist Humanoid Control | 13_Physics-Based_Animation | ✅ 已完成（2026-06-19） |
+| ? | （明日：14_Human_Motion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 14_Human_Motion | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

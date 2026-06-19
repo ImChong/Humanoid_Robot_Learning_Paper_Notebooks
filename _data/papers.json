@@ -1751,6 +1751,16 @@
     "display_name": "Physics-Based Animation",
     "papers": [
       {
+        "title": "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control",
+        "path": "papers/13_Physics-Based_Animation/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control.md",
+        "url": "/papers/13_Physics-Based_Animation/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control.html",
+        "dir": "OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control",
+        "arxiv": "2606.10340",
+        "published_date_zh": "2026年6月9日（arXiv）",
+        "published_date_en": "Jun 9, 2026 (arXiv)",
+        "zhname": "OMG：把语言/音频/人体动作统一成「大脑生成 + 小脑跟踪」的人形通用控制——扩散 Transformer 直接在动作空间生成全身轨迹，预训练物理跟踪器在 Unitree G1 上执行，配 1174 小时物理在环过滤的多模态数据，文本→动作 FID 6.03 / R@3 86.91%"
+      },
+      {
         "title": "Physics-Based Motion Tracking of Contact-Rich Interacting Characters",
         "path": "papers/13_Physics-Based_Animation/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters.md",
         "url": "/papers/13_Physics-Based_Animation/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters.html",
