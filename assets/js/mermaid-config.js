@@ -193,7 +193,9 @@
           '(<foreignObject[^>]*data-fo-placeholder=["\']?' + fo.id + '["\']?[^>]*)></foreignObject>',
           'i'
         ),
-        '$1>' + fo.inner + '</foreignObject>'
+        function(_match, startTag) {
+          return startTag + '>' + fo.inner + '</foreignObject>';
+        }
       );
     });
 
