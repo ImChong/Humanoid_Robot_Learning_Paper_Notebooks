@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 8
 title: "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot"
-zhname: "Genie Sim 3.0：智元（AgiBot）面向人形机器人的高保真一体化仿真平台——自然语言驱动建场景、自动化评测、万小时合成数据与零样本 Sim-to-Real"
+zhname: "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台"
 category: "Manipulation"
 ---
 

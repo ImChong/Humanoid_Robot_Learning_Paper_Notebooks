@@ -1,6 +1,7 @@
 <a href="{{ site.baseurl }}{{ include.paper.url | escape }}" class="paper-card">
   <span class="paper-card-text">
-    <span class="paper-title" data-en="{{ include.paper.title | escape }}" data-zh="{{ include.paper.zhname | escape }}">{{ include.paper.title | escape }}</span>
+    {% assign card_zh = include.paper.zh_title | default: include.paper.zhname %}
+    <span class="paper-title" data-en="{{ include.paper.title | escape }}" data-zh="{{ card_zh | escape }}">{{ include.paper.title | escape }}</span>
     {% if include.paper.published_date_zh or include.paper.published_date %}
       {% assign pub_zh = include.paper.published_date_zh | default: include.paper.published_date %}
       {% assign pub_en = include.paper.published_date_en | default: pub_zh %}

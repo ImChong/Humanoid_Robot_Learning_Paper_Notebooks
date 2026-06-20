@@ -136,6 +136,54 @@ def apply_sort_order_hint(entry, category_dir):
 
 _TITLE_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
 
+# Homepage cards should show Chinese paper titles, not one-line method summaries.
+_ZHNAME_DESC_REST_PREFIXES = (
+    "把",
+    "先为",
+    "教师",
+    "用密集",
+    "用可微",
+    "用一台",
+    "用 VLM",
+    "用 2D",
+    "用「",
+    "让模仿",
+    "用一套",
+    "一个「",
+    "把激光",
+)
+
+
+def is_zhname_description(zhname):
+    """Return True when *zhname* reads like a brief method summary, not a paper title."""
+    if not zhname:
+        return False
+    if len(zhname) > 65:
+        return True
+    if "——" in zhname:
+        return True
+    if zhname.startswith(("用 CNN", "视触觉预训练", "四个由浅入深", "把四款", "接触密集")):
+        return True
+    if len(zhname) > 50:
+        for sep in ("：", ":"):
+            if sep in zhname:
+                rest = zhname.split(sep, 1)[1]
+                if rest.startswith(_ZHNAME_DESC_REST_PREFIXES):
+                    return True
+    return False
+
+
+def resolve_zh_card_title(frontmatter_meta, existing_meta, zhname_value):
+    """Resolve the Chinese label for homepage paper cards."""
+    explicit = frontmatter_meta.get("zh_title") or existing_meta.get("zh_title")
+    if explicit:
+        return explicit
+    if not zhname_value:
+        return None
+    if is_zhname_description(zhname_value):
+        return None
+    return zhname_value
+
 
 def extract_title(content):
     """Extract title from first H1 heading."""
@@ -885,6 +933,17 @@ def process_papers():
                 # Otherwise restore zhname from existing data if available
                 elif existing_meta_for_paper.get("zhname"):
                     paper_entry["zhname"] = existing_meta_for_paper["zhname"]
+
+                zhname_value = paper_entry.get("zhname")
+                zh_card_title = resolve_zh_card_title(
+                    frontmatter_meta,
+                    existing_meta_for_paper,
+                    zhname_value,
+                )
+                if zh_card_title:
+                    paper_entry["zh_title"] = zh_card_title
+                elif existing_meta_for_paper.get("zh_title"):
+                    paper_entry["zh_title"] = existing_meta_for_paper["zh_title"]
 
                 papers.append(paper_entry)
 

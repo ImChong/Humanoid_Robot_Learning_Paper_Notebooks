@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 9
 title: "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot"
-zhname: "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台——用 LLM 从自然语言生成场景、双模式批量造数据、再用 VLM 自动评测，并开源 1 万+ 小时合成数据"
+zhname: "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台"
 category: "Simulation Benchmark"
 ---
 

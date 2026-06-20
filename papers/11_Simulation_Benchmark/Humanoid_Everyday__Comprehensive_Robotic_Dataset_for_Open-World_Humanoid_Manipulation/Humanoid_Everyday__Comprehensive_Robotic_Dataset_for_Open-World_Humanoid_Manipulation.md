@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 8
 title: "Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation"
-zhname: "Humanoid Everyday：面向开放世界人形操作的大规模多模态数据集——Unitree G1/H1 实采 1.03 万条轨迹、300 万+ 帧、260 个任务 / 7 大类，RGB+深度+LiDAR+触觉+语言标注，配云端评测平台，全开源"
+zhname: "Humanoid Everyday：开放世界人形操作综合数据集"
 category: "Simulation Benchmark"
 ---
 

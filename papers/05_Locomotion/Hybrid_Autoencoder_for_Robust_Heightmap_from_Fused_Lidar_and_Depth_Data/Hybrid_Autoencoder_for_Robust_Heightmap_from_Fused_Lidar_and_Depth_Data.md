@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 7
 title: "A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion"
-zhname: "用 CNN+GRU 混合自编码器把 LiDAR + 深度相机 + IMU 融成机器人坐标系下的鲁棒高度图，作为人形复杂地形行走的统一中间表征"
+zhname: "融合 LiDAR 与深度数据的鲁棒高度图混合自编码器（人形行走）"
 category: "Locomotion"
 ---
 

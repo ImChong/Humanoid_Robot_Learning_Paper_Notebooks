@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 5
 title: "An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems"
-zhname: "把四款主流商用 VIO（ARKit / ARCore / T265 / ZED 2）拉到统一实验台做一次硬核横评"
+zhname: "四款商用视觉-惯性里程计系统的实证评估"
 category: "State Estimation"
 ---
 

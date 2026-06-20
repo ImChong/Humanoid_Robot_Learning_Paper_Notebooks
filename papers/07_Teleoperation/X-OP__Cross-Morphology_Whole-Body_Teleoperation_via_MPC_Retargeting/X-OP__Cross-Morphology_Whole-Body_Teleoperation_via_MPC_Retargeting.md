@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 9
 title: "X-OP: Cross-Morphology Whole-Body Teleoperation via MPC Retargeting"
-zhname: "X-OP：用一台 Apple Vision Pro 驱动、跨机器人形态都不用重训的分层全身遥操作——上层 MPC（KMPPI）重定向器同时优化「贴合操作者意图」与「机器人动力学可行性」，下层直接复用现成低级控制器，配「每步重置仿真态」做状态同步 + LiDAR-SLAM 全局位姿纠漂；Unitree G1 与 RB-Y1 即插即用"
+zhname: "X-OP：基于 MPC 重定向的跨形态全身遥操作"
 category: "Teleoperation"
 ---
 

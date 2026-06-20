@@ -128,3 +128,30 @@ def test_apply_sort_order_hint_category_and_subcategories():
     newest_entry = {}
     prepare_pages.apply_sort_order_hint(newest_entry, "04_Loco-Manipulation_and_WBC")
     assert "新→旧" in newest_entry["sort_order_hint_zh"]
+
+
+def test_is_zhname_description_flags_method_summaries():
+    assert prepare_pages.is_zhname_description(
+        "CMR：把含噪观测映射到「收缩」潜空间，让扰动随时间自然衰减——对比学习保任务信息"
+    )
+    assert not prepare_pages.is_zhname_description(
+        "HOVER：面向人形机器人的多模态通用神经全身控制器"
+    )
+    assert not prepare_pages.is_zhname_description(
+        "FAST：通过预训练与快速适应实现通用人形机器人全身控制"
+    )
+
+
+def test_resolve_zh_card_title_prefers_explicit_zh_title():
+    meta = {"zh_title": "卡片标题", "zhname": "CMR：把含噪观测映射到潜空间——方法摘要"}
+    assert prepare_pages.resolve_zh_card_title(meta, {}, meta["zhname"]) == "卡片标题"
+
+
+def test_resolve_zh_card_title_uses_zhname_when_title_like():
+    zhname = "HOVER：面向人形机器人的多模态通用神经全身控制器"
+    assert prepare_pages.resolve_zh_card_title({"zhname": zhname}, {}, zhname) == zhname
+
+
+def test_resolve_zh_card_title_skips_description_zhname():
+    zhname = "CMR：把含噪观测映射到「收缩」潜空间，让扰动随时间自然衰减——对比学习保任务信息"
+    assert prepare_pages.resolve_zh_card_title({"zhname": zhname}, {}, zhname) is None
