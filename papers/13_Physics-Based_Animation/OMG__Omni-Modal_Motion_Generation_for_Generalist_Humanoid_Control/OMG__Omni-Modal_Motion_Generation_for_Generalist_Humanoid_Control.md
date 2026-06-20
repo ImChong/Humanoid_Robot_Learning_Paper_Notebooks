@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 9
 title: "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control"
-zhname: "OMG：把语言/音频/人体动作统一成「大脑生成 + 小脑跟踪」的人形通用控制——扩散 Transformer 生成全身轨迹，物理跟踪器执行"
+zhname: "OMG：通用人形控制的多模态运动生成"
 category: "物理动画"
 ---
 

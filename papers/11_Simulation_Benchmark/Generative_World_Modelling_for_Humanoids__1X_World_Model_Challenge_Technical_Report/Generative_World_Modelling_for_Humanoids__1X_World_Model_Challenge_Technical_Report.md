@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 6
 title: "Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report"
-zhname: "1X 世界模型挑战赛技术报告：Team Revontuli 用「视频生成大模型 + 状态条件」拿下采样赛道、用时空 Transformer 拿下压缩赛道双冠"
+zhname: "人形机器人生成式世界建模：1X 世界模型挑战赛技术报告"
 category: "Simulation Benchmark"
 ---
 

@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 7
 title: "ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control"
-zhname: "ComFree-Sim：一个「免互补约束」的解析接触物理引擎——把接触冲量写成闭式解、按接触对/摩擦锥面解耦后映射到 GPU，实现接触数量近线性扩展，并兼容 MuJoCo API"
+zhname: "ComFree-Sim：GPU 并行解析接触物理引擎"
 category: "Simulation Benchmark"
 ---
 

@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 10
 title: "CMR: Contractive Mapping Embeddings for Robust Humanoid Locomotion on Unstructured Terrains"
-zhname: "CMR：把含噪观测映射到「收缩」潜空间，让扰动随时间自然衰减——对比学习保任务信息 + Lipschitz 约束控敏感度，作为辅助损失插进 PPO，提升非结构地形抗噪鲁棒性"
+zhname: "CMR：非结构地形上的鲁棒人形行走收缩映射嵌入"
 category: "Locomotion"
 ---
 

@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 7
 title: "DexterCap: An Affordable and Automated System for Capturing Dexterous Hand-Object Manipulation"
-zhname: "DexterCap：用密集「字符编码」标记贴片 + 三级检测识别 + 自动重建流水线，低成本采集严重自遮挡下的灵巧手-物交互，并发布 DexterHand 数据集"
+zhname: "DexterCap：低成本自动化灵巧手-物交互数据采集系统"
 category: "Manipulation"
 ---
 

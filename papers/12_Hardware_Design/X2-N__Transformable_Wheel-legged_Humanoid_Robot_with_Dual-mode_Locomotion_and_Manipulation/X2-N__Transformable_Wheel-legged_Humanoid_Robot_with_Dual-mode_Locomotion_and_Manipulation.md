@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 7
 title: "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation"
-zhname: "X2-N：可形变轮足人形机器人——足式/轮足双形态一键互变（约 1 秒），靠「关节复用」省掉变形专用电机，21/17 DoF、约 28 kg / 1.1 m，RL 全身控制统一管轮足滑行、足式行走、形变与上肢操作"
+zhname: "X2-N：可形变轮足双形态人形机器人"
 category: "Hardware Design"
 ---
 

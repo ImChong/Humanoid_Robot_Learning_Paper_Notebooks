@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 9
 title: "Learning Versatile Humanoid Manipulation with Touch Dreaming"
-zhname: "HTD（Touch Dreaming）：让模仿学习的 Transformer「预想」未来触觉——把触觉作为核心模态与多视角视觉、本体感受融合，预测未来手指力与触觉潜变量，学到接触感知表示，攻克接触密集型人形操作"
+zhname: "HTD（Touch Dreaming）：触觉预想式通用人形操作学习"
 category: "Manipulation"
 ---
 

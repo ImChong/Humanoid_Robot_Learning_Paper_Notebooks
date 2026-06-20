@@ -11,7 +11,8 @@
         "has_open_source": true,
         "published_date_zh": "2017年7月20日（arXiv）",
         "published_date_en": "Jul 20, 2017 (arXiv)",
-        "zhname": "近端策略优化算法 (PPO)"
+        "zhname": "近端策略优化算法 (PPO)",
+        "zh_title": "近端策略优化算法 (PPO)"
       },
       {
         "title": "Advantage Weighted Regression (AWR)",
@@ -22,7 +23,8 @@
         "has_open_source": true,
         "published_date_zh": "2019年9月30日（arXiv）",
         "published_date_en": "Sep 30, 2019 (arXiv)",
-        "zhname": "优势加权回归 (AWR)"
+        "zhname": "优势加权回归 (AWR)",
+        "zh_title": "优势加权回归 (AWR)"
       },
       {
         "title": "DeepMimic: Example-Guided Deep RL of Physics-Based Character Skills",
@@ -33,7 +35,8 @@
         "has_open_source": true,
         "published_date_zh": "2018年4月8日（arXiv），SIGGRAPH 2018",
         "published_date_en": "Apr 8, 2018 (arXiv), SIGGRAPH 2018",
-        "zhname": "DeepMimic：基于示例引导的物理角色技能深度强化学习"
+        "zhname": "DeepMimic：基于示例引导的物理角色技能深度强化学习",
+        "zh_title": "DeepMimic：基于示例引导的物理角色技能深度强化学习"
       },
       {
         "title": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
@@ -44,7 +47,8 @@
         "has_open_source": true,
         "published_date_zh": "2021年4月5日（arXiv），SIGGRAPH 2021",
         "published_date_en": "Apr 5, 2021 (arXiv), SIGGRAPH 2021",
-        "zhname": "AMP：对抗运动先验的风格化物理角色控制"
+        "zhname": "AMP：对抗运动先验的风格化物理角色控制",
+        "zh_title": "AMP：对抗运动先验的风格化物理角色控制"
       },
       {
         "title": "PHC: Perpetual Humanoid Control for Real-time Simulated Avatars",
@@ -55,7 +59,8 @@
         "has_open_source": true,
         "published_date_zh": "2023年5月10日（arXiv），ICCV 2023",
         "published_date_en": "May 10, 2023 (arXiv), ICCV 2023",
-        "zhname": "PHC：实时仿真虚拟角色的持续人形控制"
+        "zhname": "PHC：实时仿真虚拟角色的持续人形控制",
+        "zh_title": "PHC：实时仿真虚拟角色的持续人形控制"
       },
       {
         "title": "ADD: Adversarial Disentanglement and Distillation",
@@ -66,7 +71,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年5月8日（arXiv），SIGGRAPH Asia 2025",
         "published_date_en": "May 8, 2025 (arXiv), SIGGRAPH Asia 2025",
-        "zhname": "ADD：对抗解耦与蒸馏"
+        "zhname": "ADD：对抗解耦与蒸馏",
+        "zh_title": "ADD：对抗解耦与蒸馏"
       },
       {
         "title": "ASE: Adversarial Skill Embeddings for Large-Scale Motion Control",
@@ -77,7 +83,8 @@
         "has_open_source": true,
         "published_date_zh": "2022年5月4日（arXiv），SIGGRAPH 2022（ACM TOG）",
         "published_date_en": "May 4, 2022 (arXiv), SIGGRAPH 2022 (ACM TOG)",
-        "zhname": "ASE：大规模运动控制的对抗技能嵌入"
+        "zhname": "ASE：大规模运动控制的对抗技能嵌入",
+        "zh_title": "ASE：大规模运动控制的对抗技能嵌入"
       },
       {
         "title": "CALM: Conditional Adversarial Latent Models for Directable Virtual Characters",
@@ -88,7 +95,8 @@
         "has_open_source": true,
         "published_date_zh": "2023年5月2日（arXiv），SIGGRAPH 2023",
         "published_date_en": "May 2, 2023 (arXiv), SIGGRAPH 2023",
-        "zhname": "CALM：面向可控虚拟角色的条件对抗潜变量模型"
+        "zhname": "CALM：面向可控虚拟角色的条件对抗潜变量模型",
+        "zh_title": "CALM：面向可控虚拟角色的条件对抗潜变量模型"
       },
       {
         "title": "PULSE: Universal Humanoid Motion Representations for Physics-Based Control",
@@ -99,7 +107,8 @@
         "has_open_source": true,
         "published_date_zh": "2023年10月（arXiv），2024年5月（ICLR）",
         "published_date_en": "Oct 2023 (arXiv), May 2024 (ICLR)",
-        "zhname": "PULSE：物理可行的通用潜在技能提取"
+        "zhname": "PULSE：物理可行的通用潜在技能提取",
+        "zh_title": "PULSE：物理可行的通用潜在技能提取"
       },
       {
         "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
@@ -110,7 +119,8 @@
         "has_open_source": true,
         "published_date_zh": "2023年3月（arXiv），RSS 2023",
         "published_date_en": "Mar 2023 (arXiv), RSS 2023",
-        "zhname": "Diffusion Policy：基于动作扩散的视觉运动策略学习"
+        "zhname": "Diffusion Policy：基于动作扩散的视觉运动策略学习",
+        "zh_title": "Diffusion Policy：基于动作扩散的视觉运动策略学习"
       },
       {
         "title": "BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion",
@@ -121,7 +131,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年8月（arXiv）",
         "published_date_en": "Aug 2025 (arXiv)",
-        "zhname": "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
+        "zhname": "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制",
+        "zh_title": "BeyondMimic：从运动跟踪到引导扩散的多功能人形控制"
       },
       {
         "title": "Understanding Domain Randomization for Sim-to-real Transfer",
@@ -131,7 +142,8 @@
         "arxiv": "2110.03239",
         "published_date_zh": "2021年10月（v1），2022年3月（v2）（arXiv）",
         "published_date_en": "Oct 2021 (v1), Mar 2022 (v2) (arXiv)",
-        "zhname": "理解域随机化在仿真到现实迁移中的作用"
+        "zhname": "理解域随机化在仿真到现实迁移中的作用",
+        "zh_title": "理解域随机化在仿真到现实迁移中的作用"
       },
       {
         "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
@@ -142,7 +154,8 @@
         "has_open_source": true,
         "published_date_zh": "2017年3月（arXiv）",
         "published_date_en": "Mar 2017 (arXiv)",
-        "zhname": "域随机化：从仿真到真实世界的深度神经网络迁移"
+        "zhname": "域随机化：从仿真到真实世界的深度神经网络迁移",
+        "zh_title": "域随机化：从仿真到真实世界的深度神经网络迁移"
       },
       {
         "title": "Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies (LCP)",
@@ -153,7 +166,8 @@
         "has_open_source": true,
         "published_date_zh": "2024年10月15日（arXiv）",
         "published_date_en": "Oct 15, 2024 (arXiv)",
-        "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
+        "zhname": "LCP：通过 Lipschitz 约束策略学习平滑人形运动",
+        "zh_title": "LCP：通过 Lipschitz 约束策略学习平滑人形运动"
       },
       {
         "title": "MimicKit: A Reinforcement Learning Framework for Motion Imitation and Control",
@@ -164,7 +178,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年10月15日初版；2026年1月18日 v4（arXiv）",
         "published_date_en": "Oct 15, 2025 initial release; v4 Jan 18, 2026 (arXiv)",
-        "zhname": "MimicKit：运动模仿与控制的强化学习框架"
+        "zhname": "MimicKit：运动模仿与控制的强化学习框架",
+        "zh_title": "MimicKit：运动模仿与控制的强化学习框架"
       }
     ],
     "subtitle": "Foundational RL theory and classic algorithms — essential prerequisites for understanding subsequent research",
@@ -185,7 +200,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年9月（arXiv）",
         "published_date_en": "Sep 2025 (arXiv)",
-        "zhname": "OmniRetarget：面向人形全身运动操作与场景交互的交互保持数据生成"
+        "zhname": "OmniRetarget：面向人形全身运动操作与场景交互的交互保持数据生成",
+        "zh_title": "OmniRetarget：面向人形全身运动操作与场景交互的交互保持数据生成"
       },
       {
         "title": "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking",
@@ -196,7 +212,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年10月（arXiv）",
         "published_date_en": "Oct 2025 (arXiv)",
-        "zhname": "Retargeting Matters：面向人形运动跟踪的通用动作重定向"
+        "zhname": "Retargeting Matters：面向人形运动跟踪的通用动作重定向",
+        "zh_title": "Retargeting Matters：面向人形运动跟踪的通用动作重定向"
       },
       {
         "title": "Make Tracking Easy: Neural Motion Retargeting for Humanoid Whole-body Control",
@@ -206,7 +223,8 @@
         "arxiv": "2603.22201v3",
         "published_date_zh": "2026年3月（arXiv）",
         "published_date_en": "Mar 2026 (arXiv)",
-        "zhname": "让跟踪变简单：面向人形全身控制的神经动作重定向（NMR）"
+        "zhname": "让跟踪变简单：面向人形全身控制的神经动作重定向（NMR）",
+        "zh_title": "让跟踪变简单：面向人形全身控制的神经动作重定向（NMR）"
       },
       {
         "title": "ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting",
@@ -216,7 +234,8 @@
         "arxiv": "2605.06593v1",
         "published_date_zh": "2026年5月（arXiv）",
         "published_date_en": "May 2026 (arXiv)",
-        "zhname": "ReActor：面向物理可行动作重定向的强化学习"
+        "zhname": "ReActor：面向物理可行动作重定向的强化学习",
+        "zh_title": "ReActor：面向物理可行动作重定向的强化学习"
       }
     ],
     "subtitle": "Bridging human motion data and humanoid policies — geometric IK, learned retargeting, and the engineering choices that determine downstream policy quality",
@@ -244,7 +263,8 @@
             "has_open_source": true,
             "published_date_zh": "2024年2月26日（arXiv），RSS 2024",
             "published_date_en": "Feb 26, 2024 (arXiv), RSS 2024",
-            "zhname": "人形机器人表现力全身控制"
+            "zhname": "人形机器人表现力全身控制",
+            "zh_title": "人形机器人表现力全身控制"
           },
           {
             "title": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
@@ -255,7 +275,8 @@
             "has_open_source": true,
             "published_date_zh": "2024年10月28日（arXiv），ICRA 2025",
             "published_date_en": "Oct 28, 2024 (arXiv), ICRA 2025",
-            "zhname": "HOVER：面向人形机器人的多模态通用神经全身控制器"
+            "zhname": "HOVER：面向人形机器人的多模态通用神经全身控制器",
+            "zh_title": "HOVER：面向人形机器人的多模态通用神经全身控制器"
           },
           {
             "title": "ExBody2: Advanced Expressive Humanoid Whole-Body Control",
@@ -265,7 +286,8 @@
             "arxiv": "2412.13196",
             "published_date_zh": "2024年12月17日（arXiv）",
             "published_date_en": "Dec 17, 2024 (arXiv)",
-            "zhname": "ExBody2：进阶的表达性人形全身控制"
+            "zhname": "ExBody2：进阶的表达性人形全身控制",
+            "zh_title": "ExBody2：进阶的表达性人形全身控制"
           },
           {
             "title": "UH-1: Learning from Massive Human Videos for Universal Humanoid Pose Control",
@@ -276,7 +298,8 @@
             "has_open_source": true,
             "published_date_zh": "2024年12月18日（arXiv）",
             "published_date_en": "Dec 18, 2024 (arXiv)",
-            "zhname": "UH-1：从海量互联网人类视频中学习通用人形姿态控制"
+            "zhname": "UH-1：从海量互联网人类视频中学习通用人形姿态控制",
+            "zh_title": "UH-1：从海量互联网人类视频中学习通用人形姿态控制"
           },
           {
             "title": "HugWBC: A Unified and General Humanoid Whole-Body Controller for Versatile Locomotion",
@@ -287,7 +310,8 @@
             "has_open_source": true,
             "published_date_zh": "2025年2月5日（arXiv），RSS 2025",
             "published_date_en": "Feb 5, 2025 (arXiv), RSS 2025",
-            "zhname": "HugWBC：面向多步态人形的统一通用全身控制器"
+            "zhname": "HugWBC：面向多步态人形的统一通用全身控制器",
+            "zh_title": "HugWBC：面向多步态人形的统一通用全身控制器"
           },
           {
             "title": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
@@ -298,7 +322,8 @@
             "has_open_source": true,
             "published_date_zh": "2025年11月11日（arXiv）",
             "published_date_en": "Nov 11, 2025 (arXiv)",
-            "zhname": "SONIC：用规模化运动跟踪打造自然的人形全身控制器"
+            "zhname": "SONIC：用规模化运动跟踪打造自然的人形全身控制器",
+            "zh_title": "SONIC：用规模化运动跟踪打造自然的人形全身控制器"
           }
         ],
         "zhname": "全身控制核心",
@@ -316,7 +341,8 @@
             "arxiv": "2406.08858",
             "published_date_zh": "2024年6月13日（arXiv）；CoRL 2024",
             "published_date_en": "Jun 13, 2024 (arXiv); CoRL 2024",
-            "zhname": "OmniH2O：通用灵巧的人到人形整体遥操与学习"
+            "zhname": "OmniH2O：通用灵巧的人到人形整体遥操与学习",
+            "zh_title": "OmniH2O：通用灵巧的人到人形整体遥操与学习"
           },
           {
             "title": "iDP3: Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies",
@@ -327,7 +353,8 @@
             "has_open_source": true,
             "published_date_zh": "2024年10月14日（arXiv），IROS 2025",
             "published_date_en": "Oct 14, 2024 (arXiv), IROS 2025",
-            "zhname": "iDP3：基于改进版 3D 扩散策略的可泛化人形操作"
+            "zhname": "iDP3：基于改进版 3D 扩散策略的可泛化人形操作",
+            "zh_title": "iDP3：基于改进版 3D 扩散策略的可泛化人形操作"
           },
           {
             "title": "HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit",
@@ -338,7 +365,8 @@
             "has_open_source": true,
             "published_date_zh": "2025年2月18日（arXiv），RSS 2025",
             "published_date_en": "Feb 18, 2025 (arXiv), RSS 2025",
-            "zhname": "HOMIE：同构外骨骼驾驶舱式人形遥操作系统"
+            "zhname": "HOMIE：同构外骨骼驾驶舱式人形遥操作系统",
+            "zh_title": "HOMIE：同构外骨骼驾驶舱式人形遥操作系统"
           }
         ],
         "zhname": "遥操作与模仿学习",
@@ -355,7 +383,8 @@
             "dir": "Learning_Quadrupedal_Locomotion_over_Challenging_Terrain",
             "published_date_zh": "2020年10月21日",
             "published_date_en": "Oct 21, 2020",
-            "zhname": "挑战地形下的四足运动学习（ANYmal 里程碑）"
+            "zhname": "挑战地形下的四足运动学习（ANYmal 里程碑）",
+            "zh_title": "挑战地形下的四足运动学习（ANYmal 里程碑）"
           },
           {
             "title": "Real-World Humanoid Locomotion with Reinforcement Learning",
@@ -365,7 +394,8 @@
             "arxiv": "2303.03381",
             "published_date_zh": "2023年3月（arXiv），2024 Science Robotics",
             "published_date_en": "Mar 2023 (arXiv), 2024 Science Robotics",
-            "zhname": "首个 RL 真实世界人形行走（Berkeley · Causal Transformer）"
+            "zhname": "首个 RL 真实世界人形行走（Berkeley · Causal Transformer）",
+            "zh_title": "首个 RL 真实世界人形行走（Berkeley · Causal Transformer）"
           },
           {
             "title": "Humanoid Locomotion as Next Token Prediction",
@@ -375,7 +405,8 @@
             "arxiv": "2402.19469",
             "published_date_zh": "2024年2月29日（arXiv）",
             "published_date_en": "Feb 29, 2024 (arXiv)",
-            "zhname": "人形行走即下一 token 预测（自回归传感运动轨迹 · Digit 实机）"
+            "zhname": "人形行走即下一 token 预测（自回归传感运动轨迹 · Digit 实机）",
+            "zh_title": "人形行走即下一 token 预测（自回归传感运动轨迹 · Digit 实机）"
           },
           {
             "title": "Humanoid Parkour Learning",
@@ -386,7 +417,8 @@
             "has_open_source": true,
             "published_date_zh": "2024年6月15日（arXiv）",
             "published_date_en": "Jun 15, 2024 (arXiv)",
-            "zhname": "人形跑酷：无动作先验的端到端视觉全身控制（Unitree H1）"
+            "zhname": "人形跑酷：无动作先验的端到端视觉全身控制（Unitree H1）",
+            "zh_title": "人形跑酷：无动作先验的端到端视觉全身控制（Unitree H1）"
           },
           {
             "title": "Learning Sim-to-Real Humanoid Locomotion in 15 Minutes",
@@ -397,7 +429,8 @@
             "has_open_source": true,
             "published_date_zh": "2025年12月1日（arXiv）",
             "published_date_en": "Dec 1, 2025 (arXiv)",
-            "zhname": "15 分钟人形 sim-to-real：FastSAC / FastTD3 大规模并行配方（Amazon FAR）"
+            "zhname": "15 分钟人形 sim-to-real：FastSAC / FastTD3 大规模并行配方（Amazon FAR）",
+            "zh_title": "15 分钟人形 sim-to-real：FastSAC / FastTD3 大规模并行配方（Amazon FAR）"
           },
           {
             "title": "ECO: Energy-Constrained Optimization with Reinforcement Learning for Humanoid Walking",
@@ -408,7 +441,8 @@
             "has_open_source": true,
             "published_date_zh": "2026年2月6日（arXiv）",
             "published_date_en": "Feb 6, 2026 (arXiv)",
-            "zhname": "ECO：把人形行走能耗写成显式约束的受限 RL（PPO-Lagrangian · BRUCE）"
+            "zhname": "ECO：把人形行走能耗写成显式约束的受限 RL（PPO-Lagrangian · BRUCE）",
+            "zh_title": "ECO：把人形行走能耗写成显式约束的受限 RL（PPO-Lagrangian · BRUCE）"
           }
         ],
         "zhname": "行走经典",
@@ -427,7 +461,8 @@
             "has_open_source": true,
             "published_date_zh": "2019年1月24日（arXiv）",
             "published_date_en": "Jan 24, 2019 (arXiv)",
-            "zhname": "ANYmal 敏捷运动技能学习（sim-to-real RL 奠基作）"
+            "zhname": "ANYmal 敏捷运动技能学习（sim-to-real RL 奠基作）",
+            "zh_title": "ANYmal 敏捷运动技能学习（sim-to-real RL 奠基作）"
           },
           {
             "title": "ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills",
@@ -438,7 +473,8 @@
             "has_open_source": true,
             "published_date_zh": "2025年2月3日（arXiv），Robotics: Science and Systems（RSS） 2025",
             "published_date_en": "Feb 3, 2025 (arXiv), Robotics: Science and Systems (RSS) 2025",
-            "zhname": "ASAP：用残差动作模型对齐仿真与真机动力学的人形敏捷全身技能"
+            "zhname": "ASAP：用残差动作模型对齐仿真与真机动力学的人形敏捷全身技能",
+            "zh_title": "ASAP：用残差动作模型对齐仿真与真机动力学的人形敏捷全身技能"
           },
           {
             "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
@@ -448,7 +484,8 @@
             "arxiv": "2503.14734",
             "published_date_zh": "2025年3月（arXiv）",
             "published_date_en": "Mar 2025 (arXiv)",
-            "zhname": "GR00T N1：面向通用人形机器人的开放基础模型"
+            "zhname": "GR00T N1：面向通用人形机器人的开放基础模型",
+            "zh_title": "GR00T N1：面向通用人形机器人的开放基础模型"
           },
           {
             "title": "Behavior Foundation Model for Humanoid Robots",
@@ -458,7 +495,8 @@
             "arxiv": "2509.13780",
             "published_date_zh": "2025年9月17日（arXiv）",
             "published_date_en": "Sep 17, 2025 (arXiv)",
-            "zhname": "BFM：面向人形全身控制的行为基础模型"
+            "zhname": "BFM：面向人形全身控制的行为基础模型",
+            "zh_title": "BFM：面向人形全身控制的行为基础模型"
           }
         ],
         "zhname": "仿真到现实与基座模型",
@@ -476,7 +514,8 @@
             "has_open_source": true,
             "published_date_zh": "2025年9月 research page；项目源自 Orbit / Isaac Gym 生态演进",
             "published_date_en": "Sep 2025 research page; evolved from the Orbit / Isaac Gym ecosystem",
-            "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
+            "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台",
+            "zh_title": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
           },
           {
             "title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
@@ -487,7 +526,8 @@
             "has_open_source": true,
             "published_date_zh": "2024年4月8日（arXiv）",
             "published_date_en": "Apr 8, 2024 (arXiv)",
-            "zhname": "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架"
+            "zhname": "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架",
+            "zh_title": "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架"
           },
           {
             "title": "ProtoMotions3: An Open-source Framework for Humanoid Simulation and Control",
@@ -498,7 +538,8 @@
             "has_open_source": true,
             "published_date_zh": "2025年12月2日（GitHub v3 发布）",
             "published_date_en": "Dec 2, 2025 (GitHub v3 release)",
-            "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架"
+            "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架",
+            "zh_title": "ProtoMotions3：面向人形仿真与控制的开源框架"
           },
           {
             "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
@@ -509,7 +550,8 @@
             "has_open_source": true,
             "published_date_zh": "2025年3月7日（arXiv），CoRL 2025",
             "published_date_en": "Mar 7, 2025 (arXiv), CoRL 2025",
-            "zhname": "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
+            "zhname": "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架",
+            "zh_title": "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
           }
         ],
         "zhname": "仿真平台与工具",
@@ -531,7 +573,8 @@
         "arxiv": "2606.09215",
         "published_date_zh": "2026年6月8日（arXiv）",
         "published_date_en": "Jun 8, 2026 (arXiv)",
-        "zhname": "MotionWAM：面向实时人形移动操作的基础世界动作模型"
+        "zhname": "MotionWAM：面向实时人形移动操作的基础世界动作模型",
+        "zh_title": "MotionWAM：面向实时人形移动操作的基础世界动作模型"
       },
       {
         "title": "SplitAdapter: Load-Aware Humanoid Loco-Manipulation via Factorized Adaptation",
@@ -541,7 +584,8 @@
         "arxiv": "2606.03297",
         "published_date_zh": "2026年6月",
         "published_date_en": "Jun 2026",
-        "zhname": "SplitAdapter：用「负载-动力学解耦」的因子化适配，让人形机器人稳稳搬动重物"
+        "zhname": "SplitAdapter：用「负载-动力学解耦」的因子化适配，让人形机器人稳稳搬动重物",
+        "zh_title": "SplitAdapter：用「负载-动力学解耦」的因子化适配，让人形机器人稳稳搬动重物"
       },
       {
         "title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
@@ -552,7 +596,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年3月（arXiv）",
         "published_date_en": "Mar 2026 (arXiv)",
-        "zhname": "LATENT：从不完美的人类动作数据中学习人形机器人网球运动技能"
+        "zhname": "LATENT：从不完美的人类动作数据中学习人形机器人网球运动技能",
+        "zh_title": "LATENT：从不完美的人类动作数据中学习人形机器人网球运动技能"
       },
       {
         "title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
@@ -563,7 +608,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年3月（arXiv）",
         "published_date_en": "Mar 2026 (arXiv)",
-        "zhname": "Ψ₀：迈向通用人形机器人 Loco-Manipulation 的开源基础模型"
+        "zhname": "Ψ₀：迈向通用人形机器人 Loco-Manipulation 的开源基础模型",
+        "zh_title": "Ψ₀：迈向通用人形机器人 Loco-Manipulation 的开源基础模型"
       },
       {
         "title": "SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual Reinforcement Learning",
@@ -574,7 +620,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年3月（arXiv）",
         "published_date_en": "Mar 2026 (arXiv)",
-        "zhname": "SteadyTray：用残差强化学习教人形机器人端着托盘稳稳走路"
+        "zhname": "SteadyTray：用残差强化学习教人形机器人端着托盘稳稳走路",
+        "zh_title": "SteadyTray：用残差强化学习教人形机器人端着托盘稳稳走路"
       },
       {
         "title": "ZeroWBC: Learning Natural Visuomotor Humanoid Control Directly from Human Egocentric Video",
@@ -584,7 +631,8 @@
         "arxiv": "2603.09170",
         "published_date_zh": "2026年3月（arXiv）",
         "published_date_en": "Mar 2026 (arXiv)",
-        "zhname": "ZeroWBC：直接从人类第一人称视频中学出\"零遥操作\"的人形视触运动控制"
+        "zhname": "ZeroWBC：直接从人类第一人称视频中学出\"零遥操作\"的人形视触运动控制",
+        "zh_title": "ZeroWBC：直接从人类第一人称视频中学出\"零遥操作\"的人形视触运动控制"
       },
       {
         "title": "Embedding Classical Balance Control Principles in Reinforcement Learning for Humanoid Recovery",
@@ -594,7 +642,8 @@
         "arxiv": "2603.08619",
         "published_date_zh": "2026年3月9日（arXiv）",
         "published_date_en": "Mar 9, 2026 (arXiv)",
-        "zhname": "将经典平衡控制原理嵌入强化学习：用于人形机器人跌倒恢复"
+        "zhname": "将经典平衡控制原理嵌入强化学习：用于人形机器人跌倒恢复",
+        "zh_title": "将经典平衡控制原理嵌入强化学习：用于人形机器人跌倒恢复"
       },
       {
         "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
@@ -604,7 +653,8 @@
         "arxiv": "2603.03279",
         "published_date_zh": "2026年3月3日（arXiv）",
         "published_date_en": "Mar 3, 2026 (arXiv)",
-        "zhname": "ULTRA：自主人形全身运动操作的统一多模态控制"
+        "zhname": "ULTRA：自主人形全身运动操作的统一多模态控制",
+        "zh_title": "ULTRA：自主人形全身运动操作的统一多模态控制"
       },
       {
         "title": "OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control",
@@ -614,7 +664,8 @@
         "arxiv": "2602.23843",
         "published_date_zh": "2026年2月27日（arXiv）",
         "published_date_en": "Feb 27, 2026 (arXiv)",
-        "zhname": "OmniXtreme：突破高动态人形控制的通用性壁垒"
+        "zhname": "OmniXtreme：突破高动态人形控制的通用性壁垒",
+        "zh_title": "OmniXtreme：突破高动态人形控制的通用性壁垒"
       },
       {
         "title": "LessMimic: Long-Horizon Humanoid Interaction with Unified Distance Field Representations",
@@ -624,7 +675,8 @@
         "arxiv": "2602.21723",
         "published_date_zh": "2026年2月25日（arXiv）",
         "published_date_en": "Feb 25, 2026 (arXiv)",
-        "zhname": "LessMimic：基于统一距离场表示的长时域人形交互"
+        "zhname": "LessMimic：基于统一距离场表示的长时域人形交互",
+        "zh_title": "LessMimic：基于统一距离场表示的长时域人形交互"
       },
       {
         "title": "HERO: Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
@@ -634,7 +686,8 @@
         "arxiv": "2602.16705",
         "published_date_zh": "2026年2月（arXiv）",
         "published_date_en": "Feb 2026 (arXiv)",
-        "zhname": "HERO：基于开放词汇视觉引导的人形机器人末端执行器控制"
+        "zhname": "HERO：基于开放词汇视觉引导的人形机器人末端执行器控制",
+        "zh_title": "HERO：基于开放词汇视觉引导的人形机器人末端执行器控制"
       },
       {
         "title": "VIGOR: Visual Goal-In-Context Inference for Unified Humanoid Fall Safety",
@@ -644,7 +697,8 @@
         "arxiv": "2602.16511",
         "published_date_zh": "2026年2月（arXiv）",
         "published_date_en": "Feb 2026 (arXiv)",
-        "zhname": "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理"
+        "zhname": "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理",
+        "zh_title": "VIGOR：面向统一的人形机器人跌落安全的视觉上下文目标推理"
       },
       {
         "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
@@ -654,7 +708,8 @@
         "arxiv": "2602.15827",
         "published_date_zh": "2026年2月17日（arXiv）",
         "published_date_en": "Feb 17, 2026 (arXiv)",
-        "zhname": "Perceptive Humanoid Parkour：通过动作匹配串联动态人类技能"
+        "zhname": "Perceptive Humanoid Parkour：通过动作匹配串联动态人类技能",
+        "zh_title": "Perceptive Humanoid Parkour：通过动作匹配串联动态人类技能"
       },
       {
         "title": "MeshMimic: Geometry-Aware Humanoid Motion Learning through 3D Scene Reconstruction",
@@ -664,7 +719,8 @@
         "arxiv": "2602.15733",
         "published_date_zh": "2026年2月17日（arXiv）",
         "published_date_en": "Feb 17, 2026 (arXiv)",
-        "zhname": "MeshMimic：通过三维场景重建实现几何感知的人形机器人运动学习"
+        "zhname": "MeshMimic：通过三维场景重建实现几何感知的人形机器人运动学习",
+        "zh_title": "MeshMimic：通过三维场景重建实现几何感知的人形机器人运动学习"
       },
       {
         "title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
@@ -675,7 +731,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月12日（arXiv）",
         "published_date_en": "Feb 12, 2026 (arXiv)",
-        "zhname": "FAST：通过预训练与快速适应实现通用人形机器人全身控制"
+        "zhname": "FAST：通过预训练与快速适应实现通用人形机器人全身控制",
+        "zh_title": "FAST：通过预训练与快速适应实现通用人形机器人全身控制"
       },
       {
         "title": "HAIC: Humanoid Agile Object Interaction Control via Dynamics-Aware World Model",
@@ -685,7 +742,8 @@
         "arxiv": "2602.11758",
         "published_date_zh": "2026年2月12日（arXiv）",
         "published_date_en": "Feb 12, 2026 (arXiv)",
-        "zhname": "HAIC：通过动力学感知世界模型实现人形机器人敏捷物体交互控制"
+        "zhname": "HAIC：通过动力学感知世界模型实现人形机器人敏捷物体交互控制",
+        "zh_title": "HAIC：通过动力学感知世界模型实现人形机器人敏捷物体交互控制"
       },
       {
         "title": "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
@@ -696,7 +754,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月10日（arXiv）",
         "published_date_en": "Feb 10, 2026 (arXiv)",
-        "zhname": "EgoHumanoid：利用免机器人第一视角示范解锁野外环境全身操作"
+        "zhname": "EgoHumanoid：利用免机器人第一视角示范解锁野外环境全身操作",
+        "zh_title": "EgoHumanoid：利用免机器人第一视角示范解锁野外环境全身操作"
       },
       {
         "title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
@@ -707,7 +766,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月9日（arXiv）",
         "published_date_en": "Feb 9, 2026 (arXiv)",
-        "zhname": "MOSAIC：通过快速残差自适应弥合通用人形运动跟踪与遥操作的仿真到真实差距"
+        "zhname": "MOSAIC：通过快速残差自适应弥合通用人形运动跟踪与遥操作的仿真到真实差距",
+        "zh_title": "MOSAIC：通过快速残差自适应弥合通用人形运动跟踪与遥操作的仿真到真实差距"
       },
       {
         "title": "Learning Human-Like Badminton Skills for Humanoid Robots",
@@ -717,7 +777,8 @@
         "arxiv": "2602.08370",
         "published_date_zh": "2026年2月9日（arXiv）",
         "published_date_en": "Feb 9, 2026 (arXiv)",
-        "zhname": "面向仿人机器人的类人羽毛球技能学习"
+        "zhname": "面向仿人机器人的类人羽毛球技能学习",
+        "zh_title": "面向仿人机器人的类人羽毛球技能学习"
       },
       {
         "title": "TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control",
@@ -728,7 +789,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月7日（arXiv）",
         "published_date_en": "Feb 7, 2026 (arXiv)",
-        "zhname": "TextOp：实时交互式文本驱动人形机器人动作生成与控制"
+        "zhname": "TextOp：实时交互式文本驱动人形机器人动作生成与控制",
+        "zh_title": "TextOp：实时交互式文本驱动人形机器人动作生成与控制"
       },
       {
         "title": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
@@ -738,7 +800,8 @@
         "arxiv": "2602.06643",
         "published_date_zh": "2026年2月6日（arXiv）",
         "published_date_en": "Feb 6, 2026 (arXiv)",
-        "zhname": "Humanoid Manipulation Interface: 基于无机器人演示的人形机器人全身操作"
+        "zhname": "Humanoid Manipulation Interface: 基于无机器人演示的人形机器人全身操作",
+        "zh_title": "Humanoid Manipulation Interface: 基于无机器人演示的人形机器人全身操作"
       },
       {
         "title": "HiWET: Hierarchical World-Frame End-Effector Tracking for Long-Horizon Humanoid Loco-Manipulation",
@@ -748,7 +811,8 @@
         "arxiv": "2602.06341",
         "published_date_zh": "2026年2月6日（arXiv）",
         "published_date_en": "Feb 6, 2026 (arXiv)",
-        "zhname": "HiWET：面向长时域人形机器人运动-操作的层级式世界坐标末端执行器跟踪"
+        "zhname": "HiWET：面向长时域人形机器人运动-操作的层级式世界坐标末端执行器跟踪",
+        "zh_title": "HiWET：面向长时域人形机器人运动-操作的层级式世界坐标末端执行器跟踪"
       },
       {
         "title": "Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework",
@@ -758,7 +822,8 @@
         "arxiv": "2602.05310",
         "published_date_zh": "2026年2月5日（arXiv）",
         "published_date_en": "Feb 5, 2026 (arXiv)",
-        "zhname": "面向仿人机器人足球技能的渐进式感知-动作学习框架"
+        "zhname": "面向仿人机器人足球技能的渐进式感知-动作学习框架",
+        "zh_title": "面向仿人机器人足球技能的渐进式感知-动作学习框架"
       },
       {
         "title": "PDF-HR: Pose Distance Fields for Humanoid Robots",
@@ -768,7 +833,8 @@
         "arxiv": "2602.04851",
         "published_date_zh": "2026年2月4日（arXiv）",
         "published_date_en": "Feb 4, 2026 (arXiv)",
-        "zhname": "PDF-HR：面向人形机器人的姿态距离场先验"
+        "zhname": "PDF-HR：面向人形机器人的姿态距离场先验",
+        "zh_title": "PDF-HR：面向人形机器人的姿态距离场先验"
       },
       {
         "title": "HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control",
@@ -779,7 +845,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月3日（arXiv）",
         "published_date_en": "Feb 3, 2026 (arXiv)",
-        "zhname": "HUSKY：基于物理感知全身控制的人形滑板系统"
+        "zhname": "HUSKY：基于物理感知全身控制的人形滑板系统",
+        "zh_title": "HUSKY：基于物理感知全身控制的人形滑板系统"
       },
       {
         "title": "Embodiment-Aware Generalist Specialist Distillation for Unified Humanoid Whole-Body Control",
@@ -789,7 +856,8 @@
         "arxiv": "2602.02960",
         "published_date_zh": "2026年2月3日（arXiv）",
         "published_date_en": "Feb 3, 2026 (arXiv)",
-        "zhname": "EAGLE：面向跨本体人形全身控制的泛化-专家迭代蒸馏"
+        "zhname": "EAGLE：面向跨本体人形全身控制的泛化-专家迭代蒸馏",
+        "zh_title": "EAGLE：面向跨本体人形全身控制的泛化-专家迭代蒸馏"
       },
       {
         "title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
@@ -800,7 +868,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月2日（arXiv）",
         "published_date_en": "Feb 2, 2026 (arXiv)",
-        "zhname": "HumanX：从人类视频学习敏捷且可泛化的人形交互技能"
+        "zhname": "HumanX：从人类视频学习敏捷且可泛化的人形交互技能",
+        "zh_title": "HumanX：从人类视频学习敏捷且可泛化的人形交互技能"
       },
       {
         "title": "TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour",
@@ -810,7 +879,8 @@
         "arxiv": "2602.02331",
         "published_date_zh": "2026年2月2日（arXiv）",
         "published_date_en": "Feb 2, 2026 (arXiv)",
-        "zhname": "TTT-Parkour：用快速测试时训练让人形跑酷适应未见地形"
+        "zhname": "TTT-Parkour：用快速测试时训练让人形跑酷适应未见地形",
+        "zh_title": "TTT-Parkour：用快速测试时训练让人形跑酷适应未见地形"
       },
       {
         "title": "ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control",
@@ -820,7 +890,8 @@
         "arxiv": "2602.00401",
         "published_date_zh": "2026年1月30日（arXiv）",
         "published_date_en": "Jan 30, 2026 (arXiv)",
-        "zhname": "ZEST：动捕 / 视频 / 动画一锅炖，跨形态零样本迁移到 Atlas、G1、Spot"
+        "zhname": "ZEST：动捕 / 视频 / 动画一锅炖，跨形态零样本迁移到 Atlas、G1、Spot",
+        "zh_title": "ZEST：动捕 / 视频 / 动画一锅炖，跨形态零样本迁移到 Atlas、G1、Spot"
       },
       {
         "title": "Robust and Generalized Humanoid Motion Tracking",
@@ -830,7 +901,8 @@
         "arxiv": "2601.23080",
         "published_date_zh": "2026年1月30日（arXiv）",
         "published_date_en": "Jan 30, 2026 (arXiv)",
-        "zhname": "鲁棒且通用的人形机器人动作跟踪：用动力学条件化的命令聚合抵御噪声参考"
+        "zhname": "鲁棒且通用的人形机器人动作跟踪：用动力学条件化的命令聚合抵御噪声参考",
+        "zh_title": "鲁棒且通用的人形机器人动作跟踪：用动力学条件化的命令聚合抵御噪声参考"
       },
       {
         "title": "RoboStriker: Hierarchical Decision-Making for Autonomous Humanoid Boxing",
@@ -840,7 +912,8 @@
         "arxiv": "2601.22517",
         "published_date_zh": "2026年1月30日（arXiv）",
         "published_date_en": "Jan 30, 2026 (arXiv)",
-        "zhname": "RoboStriker：用潜空间神经虚拟自博弈实现自主人形拳击对抗"
+        "zhname": "RoboStriker：用潜空间神经虚拟自博弈实现自主人形拳击对抗",
+        "zh_title": "RoboStriker：用潜空间神经虚拟自博弈实现自主人形拳击对抗"
       },
       {
         "title": "PILOT: A Perceptive Integrated Low-level Controller for Loco-manipulation over Unstructured Scenes",
@@ -850,7 +923,8 @@
         "arxiv": "2601.17440",
         "published_date_zh": "2026年1月24日（arXiv）",
         "published_date_en": "Jan 24, 2026 (arXiv)",
-        "zhname": "PILOT：在非结构化场景中实现感知-动作一体化的人形 Loco-Manipulation 底层控制器"
+        "zhname": "PILOT：在非结构化场景中实现感知-动作一体化的人形 Loco-Manipulation 底层控制器",
+        "zh_title": "PILOT：在非结构化场景中实现感知-动作一体化的人形 Loco-Manipulation 底层控制器"
       },
       {
         "title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
@@ -861,7 +935,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年1月22日（arXiv）",
         "published_date_en": "Jan 22, 2026 (arXiv)",
-        "zhname": "在杂乱室内场景中实现无碰撞人形穿越（Click-and-Traverse / CAT）"
+        "zhname": "在杂乱室内场景中实现无碰撞人形穿越（Click-and-Traverse / CAT）",
+        "zh_title": "在杂乱室内场景中实现无碰撞人形穿越（Click-and-Traverse / CAT）"
       },
       {
         "title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
@@ -871,7 +946,8 @@
         "arxiv": "2512.17183",
         "published_date_zh": "2025年12月19日（arXiv）",
         "published_date_en": "Dec 19, 2025 (arXiv)",
-        "zhname": "面向人形机器人的语义化伴语手势合成与实时控制"
+        "zhname": "面向人形机器人的语义化伴语手势合成与实时控制",
+        "zh_title": "面向人形机器人的语义化伴语手势合成与实时控制"
       },
       {
         "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
@@ -882,7 +958,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年11月6日（arXiv）",
         "published_date_en": "Nov 6, 2025 (arXiv)",
-        "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
+        "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习",
+        "zh_title": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
       }
     ],
     "zhname": "运动操作与全身控制",
@@ -901,7 +978,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年4月14日（arXiv，v2 修订 2026年4月27日）",
         "published_date_en": "Apr 14, 2026 (arXiv, v2 revised Apr 27, 2026)",
-        "zhname": "HTD（Touch Dreaming）：让模仿学习的 Transformer「预想」未来触觉——把触觉作为核心模态与多视角视觉、本体感受融合，预测未来手指力与触觉潜变量，学到接触感知表示，攻克接触密集型人形操作"
+        "zhname": "HTD（Touch Dreaming）：触觉预想式通用人形操作学习",
+        "zh_title": "HTD（Touch Dreaming）：触觉预想式通用人形操作学习"
       },
       {
         "title": "Visual-tactile pretraining and online multitask learning for humanlike manipulation dexterity",
@@ -911,7 +989,7 @@
         "arxiv": "2604.13015",
         "published_date_zh": "2026年1月28日（Science Robotics）",
         "published_date_en": "Jan 28, 2026 (Science Robotics)",
-        "zhname": "视触觉预训练 + 在线多任务学习：先从人类演示自监督学「视觉×触觉」融合表示，再用 RL + 在线模仿在仿真里一次学多技能，只靠单目图像 + 二值触觉，让低成本 LEAP 手获得类人灵巧操作并跨任务/物体/光照泛化"
+        "zhname": "视触觉预训练与在线多任务学习的人形灵巧操作"
       },
       {
         "title": "HumDex: Humanoid Dexterous Manipulation Made Easy",
@@ -922,7 +1000,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年3月12日（arXiv）",
         "published_date_en": "Mar 12, 2026 (arXiv)",
-        "zhname": "HumDex：让人形灵巧操作变简单（IMU 全身遥操作 + 学习式手部重定向）"
+        "zhname": "HumDex：让人形灵巧操作变简单（IMU 全身遥操作 + 学习式手部重定向）",
+        "zh_title": "HumDex：让人形灵巧操作变简单（IMU 全身遥操作 + 学习式手部重定向）"
       },
       {
         "title": "cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots",
@@ -933,7 +1012,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年3月5日（arXiv）",
         "published_date_en": "Mar 5, 2026 (arXiv)",
-        "zhname": "cuRoboV2：基于深度融合距离场的高自由度机器人动力学感知运动生成"
+        "zhname": "cuRoboV2：基于深度融合距离场的高自由度机器人动力学感知运动生成",
+        "zh_title": "cuRoboV2：基于深度融合距离场的高自由度机器人动力学感知运动生成"
       },
       {
         "title": "DreamZero: World Action Models are Zero-shot Policies",
@@ -944,7 +1024,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月17日（arXiv）",
         "published_date_en": "Feb 17, 2026 (arXiv)",
-        "zhname": "DreamZero：世界-动作模型即零样本策略"
+        "zhname": "DreamZero：世界-动作模型即零样本策略",
+        "zh_title": "DreamZero：世界-动作模型即零样本策略"
       },
       {
         "title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
@@ -955,7 +1036,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月6日（arXiv）",
         "published_date_en": "Feb 6, 2026 (arXiv)",
-        "zhname": "DreamDojo：从大规模人类视频中学到的通用机器人世界模型"
+        "zhname": "DreamDojo：从大规模人类视频中学到的通用机器人世界模型",
+        "zh_title": "DreamDojo：从大规模人类视频中学到的通用机器人世界模型"
       },
       {
         "title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
@@ -965,7 +1047,8 @@
         "arxiv": "2601.14874",
         "published_date_zh": "2026年1月21日（arXiv），HRI 2026 Companion · ACM DOI 10.1145/3776734.3794528",
         "published_date_en": "Jan 21, 2026 (arXiv), HRI 2026 Companion · ACM DOI 10.1145/3776734.3794528",
-        "zhname": "HumanoidVLM：用视觉语言模型 + RAG 检索为人形机器人挑选阻抗参数与抓取角"
+        "zhname": "HumanoidVLM：用视觉语言模型 + RAG 检索为人形机器人挑选阻抗参数与抓取角",
+        "zh_title": "HumanoidVLM：用视觉语言模型 + RAG 检索为人形机器人挑选阻抗参数与抓取角"
       },
       {
         "title": "Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation",
@@ -976,7 +1059,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年1月13日（arXiv）",
         "published_date_en": "Jan 13, 2026 (arXiv)",
-        "zhname": "RGMP-S：用 2D 几何先验做长程技能选择 + 递归脉冲网络稀疏示范下学动作"
+        "zhname": "RGMP-S：用 2D 几何先验做长程技能选择 + 递归脉冲网络稀疏示范下学动作",
+        "zh_title": "RGMP-S：用 2D 几何先验做长程技能选择 + 递归脉冲网络稀疏示范下学动作"
       },
       {
         "title": "DexterCap: An Affordable and Automated System for Capturing Dexterous Hand-Object Manipulation",
@@ -987,7 +1071,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年1月9日（arXiv）",
         "published_date_en": "Jan 9, 2026 (arXiv)",
-        "zhname": "DexterCap：用密集「字符编码」标记贴片 + 三级检测识别 + 自动重建流水线，低成本采集严重自遮挡下的灵巧手-物交互，并发布 DexterHand 数据集"
+        "zhname": "DexterCap：低成本自动化灵巧手-物交互数据采集系统",
+        "zh_title": "DexterCap：低成本自动化灵巧手-物交互数据采集系统"
       },
       {
         "title": "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot",
@@ -998,7 +1083,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年1月5日（arXiv，v2 修订 2026年4月28日）",
         "published_date_en": "Jan 5, 2026 (arXiv, v2 revised Apr 28, 2026)",
-        "zhname": "Genie Sim 3.0：智元（AgiBot）面向人形机器人的高保真一体化仿真平台——自然语言驱动建场景、自动化评测、万小时合成数据与零样本 Sim-to-Real"
+        "zhname": "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台",
+        "zh_title": "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台"
       },
       {
         "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
@@ -1009,7 +1095,8 @@
         "has_open_source": true,
         "published_date_zh": "2024年10月（arXiv）",
         "published_date_en": "Oct 2024 (arXiv)",
-        "zhname": "EgoMimic：通过第一视角视频扩展模仿学习"
+        "zhname": "EgoMimic：通过第一视角视频扩展模仿学习",
+        "zh_title": "EgoMimic：通过第一视角视频扩展模仿学习"
       }
     ],
     "zhname": "灵巧操作",
@@ -1027,7 +1114,8 @@
         "arxiv": "2606.07934",
         "published_date_zh": "2026年6月6日（arXiv）",
         "published_date_en": "Jun 6, 2026 (arXiv)",
-        "zhname": "X-OP：用一台 Apple Vision Pro 驱动、跨机器人形态都不用重训的分层全身遥操作——上层 MPC（KMPPI）重定向器同时优化「贴合操作者意图」与「机器人动力学可行性」，下层直接复用现成低级控制器，配「每步重置仿真态」做状态同步 + LiDAR-SLAM 全局位姿纠漂；Unitree G1 与 RB-Y1 即插即用"
+        "zhname": "X-OP：基于 MPC 重定向的跨形态全身遥操作",
+        "zh_title": "X-OP：基于 MPC 重定向的跨形态全身遥操作"
       },
       {
         "title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
@@ -1038,7 +1126,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月13日（arXiv）",
         "published_date_en": "Feb 13, 2026 (arXiv)",
-        "zhname": "CLOT：用闭环全局动作跟踪做长时序人形遥操作"
+        "zhname": "CLOT：用闭环全局动作跟踪做长时序人形遥操作",
+        "zh_title": "CLOT：用闭环全局动作跟踪做长时序人形遥操作"
       },
       {
         "title": "ExtremControl: Low-Latency Humanoid Teleoperation with Direct Extremity Control",
@@ -1049,7 +1138,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月11日（arXiv）",
         "published_date_en": "Feb 11, 2026 (arXiv)",
-        "zhname": "ExtremControl：用直接末端控制把人形遥操作的端到端延迟压到 50 ms"
+        "zhname": "ExtremControl：用直接末端控制把人形遥操作的端到端延迟压到 50 ms",
+        "zh_title": "ExtremControl：用直接末端控制把人形遥操作的端到端延迟压到 50 ms"
       },
       {
         "title": "TeleGate: Whole-Body Humanoid Teleoperation via Gated Expert Selection with Motion Prior",
@@ -1059,7 +1149,8 @@
         "arxiv": "2602.09628",
         "published_date_zh": "2026年2月10日（arXiv）",
         "published_date_en": "Feb 10, 2026 (arXiv)",
-        "zhname": "TeleGate：用门控专家选择 + 运动先验做全身人形遥操作"
+        "zhname": "TeleGate：用门控专家选择 + 运动先验做全身人形遥操作",
+        "zh_title": "TeleGate：用门控专家选择 + 运动先验做全身人形遥操作"
       },
       {
         "title": "SEW-Mimic: A Closed-Form Geometric Retargeting Solver for Upper Body Humanoid Robot Teleoperation",
@@ -1069,7 +1160,8 @@
         "arxiv": "2602.01632",
         "published_date_zh": "2026年2月2日（arXiv）",
         "published_date_en": "Feb 2, 2026 (arXiv)",
-        "zhname": "SEW-Mimic：用肩-肘-腕几何对齐给出有最优性保证的闭式上肢重定向解"
+        "zhname": "SEW-Mimic：用肩-肘-腕几何对齐给出有最优性保证的闭式上肢重定向解",
+        "zh_title": "SEW-Mimic：用肩-肘-腕几何对齐给出有最优性保证的闭式上肢重定向解"
       },
       {
         "title": "Learning Adaptive Neural Teleoperation for Humanoid Robots: From Inverse Kinematics to End-to-End Control",
@@ -1079,7 +1171,8 @@
         "arxiv": "2511.12390",
         "published_date_zh": "2025年11月15日（arXiv）",
         "published_date_en": "Nov 15, 2025 (arXiv)",
-        "zhname": "学习式神经遥操作：用 RL 端到端策略替换 IK+PD，让 VR 控制器直接驱动人形机器人"
+        "zhname": "学习式神经遥操作：用 RL 端到端策略替换 IK+PD，让 VR 控制器直接驱动人形机器人",
+        "zh_title": "学习式神经遥操作：用 RL 端到端策略替换 IK+PD，让 VR 控制器直接驱动人形机器人"
       },
       {
         "title": "Development of an Intuitive GUI for Non-Expert Teleoperation of Humanoid Robots",
@@ -1089,7 +1182,8 @@
         "arxiv": "2510.13594",
         "published_date_zh": "2025年10月15日（arXiv）",
         "published_date_en": "Oct 15, 2025 (arXiv)",
-        "zhname": "为非专家用户设计的人形机器人遥操作直观图形界面（面向 FIRA HuroCup 障碍赛）"
+        "zhname": "为非专家用户设计的人形机器人遥操作直观图形界面（面向 FIRA HuroCup 障碍赛）",
+        "zh_title": "为非专家用户设计的人形机器人遥操作直观图形界面（面向 FIRA HuroCup 障碍赛）"
       },
       {
         "title": "Stability-Aware Retargeting for Humanoid Multi-Contact Teleoperation",
@@ -1099,7 +1193,8 @@
         "arxiv": "2510.04353",
         "published_date_zh": "2025年10月5日（arXiv）",
         "published_date_en": "Oct 5, 2025 (arXiv)",
-        "zhname": "面向多接触遥操作的稳定性感知重定向（用质心稳定裕度梯度实时改写操作员指令）"
+        "zhname": "面向多接触遥操作的稳定性感知重定向（用质心稳定裕度梯度实时改写操作员指令）",
+        "zh_title": "面向多接触遥操作的稳定性感知重定向（用质心稳定裕度梯度实时改写操作员指令）"
       },
       {
         "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
@@ -1110,7 +1205,8 @@
         "has_open_source": true,
         "published_date_zh": "2024年6月（arXiv）",
         "published_date_en": "Jun 2024 (arXiv)",
-        "zhname": "HumanPlus：人形机器人对人类的影子跟随与模仿"
+        "zhname": "HumanPlus：人形机器人对人类的影子跟随与模仿",
+        "zh_title": "HumanPlus：人形机器人对人类的影子跟随与模仿"
       }
     ],
     "zhname": "遥操作",
@@ -1128,7 +1224,8 @@
         "arxiv": "2602.21666",
         "published_date_zh": "2026年2月25日（arXiv）",
         "published_date_en": "Feb 25, 2026 (arXiv)",
-        "zhname": "用生物力学定量度量人形步态：GDAF 框架与 28 速 G1 数据集"
+        "zhname": "用生物力学定量度量人形步态：GDAF 框架与 28 速 G1 数据集",
+        "zh_title": "用生物力学定量度量人形步态：GDAF 框架与 28 速 G1 数据集"
       },
       {
         "title": "APEX: Learning Adaptive High-Platform Traversal for Humanoid Robots",
@@ -1138,7 +1235,8 @@
         "arxiv": "2602.11143",
         "published_date_zh": "2026年2月11日（arXiv）",
         "published_date_en": "Feb 11, 2026 (arXiv)",
-        "zhname": "APEX：用棘轮式进度奖励学习「攀越式」高平台穿越的人形机器人技能"
+        "zhname": "APEX：用棘轮式进度奖励学习「攀越式」高平台穿越的人形机器人技能",
+        "zh_title": "APEX：用棘轮式进度奖励学习「攀越式」高平台穿越的人形机器人技能"
       },
       {
         "title": "Now You See That: Learning End-to-End Humanoid Locomotion from Raw Pixels",
@@ -1149,7 +1247,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月6日（arXiv）",
         "published_date_en": "Feb 6, 2026 (arXiv)",
-        "zhname": "Now You See That：高保真深度仿真 + 视觉感知行为蒸馏，让人形机器人从「原始像素」端到端学会复杂地形行走"
+        "zhname": "Now You See That：高保真深度仿真 + 视觉感知行为蒸馏，让人形机器人从「原始像素」端到端学会复杂地形行走",
+        "zh_title": "Now You See That：高保真深度仿真 + 视觉感知行为蒸馏，让人形机器人从「原始像素」端到端学会复杂地形行走"
       },
       {
         "title": "A Hybrid Autoencoder for Robust Heightmap Generation from Fused Lidar and Depth Data for Humanoid Robot Locomotion",
@@ -1159,7 +1258,8 @@
         "arxiv": "2602.05855",
         "published_date_zh": "2026年2月5日（arXiv），VDI Mechatronics Conference 2026",
         "published_date_en": "Feb 5, 2026 (arXiv), VDI Mechatronics Conference 2026",
-        "zhname": "用 CNN+GRU 混合自编码器把 LiDAR + 深度相机 + IMU 融成机器人坐标系下的鲁棒高度图，作为人形复杂地形行走的统一中间表征"
+        "zhname": "融合 LiDAR 与深度数据的鲁棒高度图混合自编码器（人形行走）",
+        "zh_title": "融合 LiDAR 与深度数据的鲁棒高度图混合自编码器（人形行走）"
       },
       {
         "title": "Scalable and General Whole-Body Control for Cross-Humanoid Locomotion (XHugWBC)",
@@ -1169,7 +1269,8 @@
         "arxiv": "2602.05791",
         "published_date_zh": "2026年2月5日（arXiv）",
         "published_date_en": "Feb 5, 2026 (arXiv)",
-        "zhname": "XHugWBC：跨本体随机化 + 语义对齐的观测/动作空间 + 形态-动力学感知策略，让一套全身控制策略零样本跑通 12 仿真 + 7 真机不同形态人形"
+        "zhname": "XHugWBC：跨形态人形行走的规模化通用全身控制",
+        "zh_title": "XHugWBC：跨形态人形行走的规模化通用全身控制"
       },
       {
         "title": "HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation",
@@ -1179,7 +1280,8 @@
         "arxiv": "2602.04412",
         "published_date_zh": "2026年2月4日（arXiv）",
         "published_date_en": "Feb 4, 2026 (arXiv)",
-        "zhname": "HoRD：教师用历史条件 RL 在线推断动力学上下文 + 在线蒸馏到基于稀疏 3D 关键点的 Transformer 学生策略，让单一策略零样本适配未见域与外部扰动"
+        "zhname": "HoRD：历史条件 RL 与在线蒸馏的鲁棒人形控制",
+        "zh_title": "HoRD：历史条件 RL 与在线蒸馏的鲁棒人形控制"
       },
       {
         "title": "CMR: Contractive Mapping Embeddings for Robust Humanoid Locomotion on Unstructured Terrains",
@@ -1189,7 +1291,8 @@
         "arxiv": "2602.03511",
         "published_date_zh": "2026年2月3日（arXiv）",
         "published_date_en": "Feb 3, 2026 (arXiv)",
-        "zhname": "CMR：把含噪观测映射到「收缩」潜空间，让扰动随时间自然衰减——对比学习保任务信息 + Lipschitz 约束控敏感度，作为辅助损失插进 PPO，提升非结构地形抗噪鲁棒性"
+        "zhname": "CMR：非结构地形上的鲁棒人形行走收缩映射嵌入",
+        "zh_title": "CMR：非结构地形上的鲁棒人形行走收缩映射嵌入"
       },
       {
         "title": "RPL: Learning Robust Humanoid Perceptive Locomotion on Challenging Terrains",
@@ -1199,7 +1302,8 @@
         "arxiv": "2602.03002",
         "published_date_zh": "2026年2月3日（arXiv）",
         "published_date_en": "Feb 3, 2026 (arXiv)",
-        "zhname": "RPL：先为每类地形训「特权高程图」专家，再蒸馏成一个吃多路深度相机的 Transformer 学生策略——配「随速度调节深度特征(DFSV)」与「随机侧向遮挡(RSM)」两招鲁棒化，Unitree G1 真机带 2kg 负载双向穿越斜坡/楼梯/踏脚石"
+        "zhname": "RPL：挑战性地形上的鲁棒人形感知行走",
+        "zh_title": "RPL：挑战性地形上的鲁棒人形感知行走"
       },
       {
         "title": "Extreme Parkour with Legged Robots",
@@ -1210,7 +1314,8 @@
         "has_open_source": true,
         "published_date_zh": "2023年9月（arXiv）",
         "published_date_en": "Sep 2023 (arXiv)",
-        "zhname": "足式机器人的极限跑酷"
+        "zhname": "足式机器人的极限跑酷",
+        "zh_title": "足式机器人的极限跑酷"
       },
       {
         "title": "ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots",
@@ -1220,7 +1325,8 @@
         "arxiv": "2306.14874",
         "published_date_zh": "2023年6月（arXiv）",
         "published_date_en": "Jun 2023 (arXiv)",
-        "zhname": "ANYmal 跑酷：足式机器人的敏捷导航学习"
+        "zhname": "ANYmal 跑酷：足式机器人的敏捷导航学习",
+        "zh_title": "ANYmal 跑酷：足式机器人的敏捷导航学习"
       },
       {
         "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
@@ -1231,7 +1337,8 @@
         "has_open_source": true,
         "published_date_zh": "2021年9月（arXiv）",
         "published_date_en": "Sep 2021 (arXiv)",
-        "zhname": "几分钟学会走路：大规模并行深度强化学习"
+        "zhname": "几分钟学会走路：大规模并行深度强化学习",
+        "zh_title": "几分钟学会走路：大规模并行深度强化学习"
       }
     ],
     "zhname": "行走运动",
@@ -1249,7 +1356,8 @@
         "arxiv": "2604.00416",
         "published_date_zh": "2026年4月1日（arXiv）",
         "published_date_en": "Apr 1, 2026 (arXiv)",
-        "zhname": "EgoNav：只用 5 小时人类行走数据学一个「具身无关」的导航先验，零样本上人形"
+        "zhname": "EgoNav：只用 5 小时人类行走数据学一个「具身无关」的导航先验，零样本上人形",
+        "zh_title": "EgoNav：只用 5 小时人类行走数据学一个「具身无关」的导航先验，零样本上人形"
       },
       {
         "title": "EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models",
@@ -1259,7 +1367,8 @@
         "arxiv": "2602.04515",
         "published_date_zh": "2026年2月4日（arXiv）",
         "published_date_en": "Feb 4, 2026 (arXiv)",
-        "zhname": "EgoActor：用 VLM 把任务规划落到人形机器人的空间感知第一视角动作上"
+        "zhname": "EgoActor：用 VLM 把任务规划落到人形机器人的空间感知第一视角动作上",
+        "zh_title": "EgoActor：用 VLM 把任务规划落到人形机器人的空间感知第一视角动作上"
       },
       {
         "title": "FocusNav: Spatial Selective Attention with Waypoint Guidance for Humanoid Local Navigation",
@@ -1269,7 +1378,8 @@
         "arxiv": "2601.12790",
         "published_date_zh": "2026年1月19日（arXiv）",
         "published_date_en": "Jan 19, 2026 (arXiv)",
-        "zhname": "FocusNav：用路径点引导的空间选择性注意力做人形局部导航"
+        "zhname": "FocusNav：用路径点引导的空间选择性注意力做人形局部导航",
+        "zh_title": "FocusNav：用路径点引导的空间选择性注意力做人形局部导航"
       },
       {
         "title": "Thinking in 360°: Humanoid Visual Search in the Wild",
@@ -1280,7 +1390,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年11月25日（arXiv）",
         "published_date_en": "Nov 25, 2025 (arXiv)",
-        "zhname": "在 360° 里思考：把人形视觉搜索做成「转头看路 + 转头找物」的两类显式任务"
+        "zhname": "在 360° 里思考：把人形视觉搜索做成「转头看路 + 转头找物」的两类显式任务",
+        "zh_title": "在 360° 里思考：把人形视觉搜索做成「转头看路 + 转头找物」的两类显式任务"
       },
       {
         "title": "Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3D Constrained Terrains",
@@ -1291,7 +1402,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年11月18日（arXiv）",
         "published_date_en": "Nov 18, 2025 (arXiv)",
-        "zhname": "Gallant：把激光雷达体素化成 3D 占据栅格，用 z-分组 2D CNN 端到端学人形在「头顶/侧向/多层/窄道」全 3D 受限地形里的行走与局部导航"
+        "zhname": "Gallant：3D 受限地形上的体素栅格人形行走与局部导航",
+        "zh_title": "Gallant：3D 受限地形上的体素栅格人形行走与局部导航"
       },
       {
         "title": "Quantum deep reinforcement learning for humanoid robot navigation task",
@@ -1301,7 +1413,8 @@
         "arxiv": "2509.11388",
         "published_date_zh": "2025年9月14日（arXiv）",
         "published_date_en": "Sep 14, 2025 (arXiv)",
-        "zhname": "量子深度强化学习做人形机器人导航：用变分量子 SAC 直接控制高维连续动作"
+        "zhname": "量子深度强化学习做人形机器人导航：用变分量子 SAC 直接控制高维连续动作",
+        "zh_title": "量子深度强化学习做人形机器人导航：用变分量子 SAC 直接控制高维连续动作"
       },
       {
         "title": "LookOut: Real-World Humanoid Egocentric Navigation",
@@ -1311,7 +1424,8 @@
         "arxiv": "2508.14466",
         "published_date_zh": "2025年8月20日（arXiv），ICCV 2025（CVF 开放获取）",
         "published_date_en": "Aug 20, 2025 (arXiv), ICCV 2025 (CVF open access)",
-        "zhname": "LookOut：从第一视角视频预测未来 6-DoF 头部位姿，学人类「转头看路 + 避障」的导航行为"
+        "zhname": "LookOut：从第一视角视频预测未来 6-DoF 头部位姿，学人类「转头看路 + 避障」的导航行为",
+        "zh_title": "LookOut：从第一视角视频预测未来 6-DoF 头部位姿，学人类「转头看路 + 避障」的导航行为"
       },
       {
         "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
@@ -1321,7 +1435,8 @@
         "arxiv": "2506.01046",
         "published_date_zh": "2025年6月1日（arXiv）",
         "published_date_en": "Jun 1, 2025 (arXiv)",
-        "zhname": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航"
+        "zhname": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航",
+        "zh_title": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航"
       },
       {
         "title": "NaVILA: Legged Robot Vision-Language-Action Model for Navigation",
@@ -1331,7 +1446,8 @@
         "arxiv": "2412.04453",
         "published_date_zh": "2024年12月（arXiv）",
         "published_date_en": "Dec 2024 (arXiv)",
-        "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
+        "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航",
+        "zh_title": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
       }
     ],
     "zhname": "导航",
@@ -1350,7 +1466,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年6月3日（arXiv）",
         "published_date_en": "Jun 3, 2026 (arXiv)",
-        "zhname": "自监督学接触表征：不靠力传感器，仅用关节编码器把「支撑/摆动」分出来喂里程计"
+        "zhname": "自监督学接触表征：不靠力传感器，仅用关节编码器把「支撑/摆动」分出来喂里程计",
+        "zh_title": "自监督学接触表征：不靠力传感器，仅用关节编码器把「支撑/摆动」分出来喂里程计"
       },
       {
         "title": "Four Simple Proprioceptive Estimators for Legged Robots",
@@ -1361,7 +1478,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年5月21日（arXiv）",
         "published_date_en": "May 21, 2026 (arXiv)",
-        "zhname": "四个由浅入深的本体感知估计器：从 InEKF 到「按接触事件建状态」的固定滞后平滑器，全部开源进 GTSAM"
+        "zhname": "足式机器人四种简易本体感知估计器",
+        "zh_title": "足式机器人四种简易本体感知估计器"
       },
       {
         "title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
@@ -1371,7 +1489,8 @@
         "arxiv": "2511.18857",
         "published_date_zh": "2025年11月24日（arXiv）",
         "published_date_en": "Nov 24, 2025 (arXiv)",
-        "zhname": "AutoOdom：用自回归式纯本体感知里程计撑住足式机器人的长程定位"
+        "zhname": "AutoOdom：用自回归式纯本体感知里程计撑住足式机器人的长程定位",
+        "zh_title": "AutoOdom：用自回归式纯本体感知里程计撑住足式机器人的长程定位"
       },
       {
         "title": "InEKFormer: A Hybrid State Estimator for Humanoid Robots",
@@ -1381,7 +1500,8 @@
         "arxiv": "2511.16306",
         "published_date_zh": "2025年11月20日（arXiv）",
         "published_date_en": "Nov 20, 2025 (arXiv)",
-        "zhname": "InEKFormer：用 InEKF + Transformer 的混合滤波替代手调噪声协方差"
+        "zhname": "InEKFormer：用 InEKF + Transformer 的混合滤波替代手调噪声协方差",
+        "zh_title": "InEKFormer：用 InEKF + Transformer 的混合滤波替代手调噪声协方差"
       },
       {
         "title": "Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation",
@@ -1391,7 +1511,8 @@
         "arxiv": "2510.16755",
         "published_date_zh": "2025年10月19日（arXiv）",
         "published_date_en": "Oct 19, 2025 (arXiv)",
-        "zhname": "自适应不变扩展卡尔曼滤波：让足式机器人状态估计自己调接触噪声"
+        "zhname": "自适应不变扩展卡尔曼滤波：让足式机器人状态估计自己调接触噪声",
+        "zh_title": "自适应不变扩展卡尔曼滤波：让足式机器人状态估计自己调接触噪声"
       },
       {
         "title": "Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation in Humanoid Robots",
@@ -1402,7 +1523,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年7月14日（arXiv）",
         "published_date_en": "Jul 14, 2025 (arXiv)",
-        "zhname": "PINN + UKF：让没有力矩传感器的人形机器人也能做精准全身力矩估计"
+        "zhname": "PINN + UKF：让没有力矩传感器的人形机器人也能做精准全身力矩估计",
+        "zh_title": "PINN + UKF：让没有力矩传感器的人形机器人也能做精准全身力矩估计"
       },
       {
         "title": "An Empirical Evaluation of Four Off-the-Shelf Proprietary Visual-Inertial Odometry Systems",
@@ -1412,7 +1534,8 @@
         "arxiv": "2207.06780",
         "published_date_zh": "2022年7月14日（arXiv）",
         "published_date_en": "Jul 14, 2022 (arXiv)",
-        "zhname": "把四款主流商用 VIO（ARKit / ARCore / T265 / ZED 2）拉到统一实验台做一次硬核横评"
+        "zhname": "四款商用视觉-惯性里程计系统的实证评估",
+        "zh_title": "四款商用视觉-惯性里程计系统的实证评估"
       },
       {
         "title": "Contact-Aided Invariant Extended Kalman Filtering for Legged Robot State Estimation",
@@ -1422,7 +1545,8 @@
         "arxiv": "1904.09251",
         "published_date_zh": "2018年6月（RSS 2018），2019年4月19日（arXiv）",
         "published_date_en": "Jun 2018 (RSS 2018), Apr 19, 2019 (arXiv)",
-        "zhname": "基于接触辅助的不变扩展卡尔曼滤波的足式机器人状态估计"
+        "zhname": "基于接触辅助的不变扩展卡尔曼滤波的足式机器人状态估计",
+        "zh_title": "基于接触辅助的不变扩展卡尔曼滤波的足式机器人状态估计"
       },
       {
         "title": "Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors",
@@ -1433,7 +1557,8 @@
         "has_open_source": true,
         "published_date_zh": "2017年12月15日（arXiv）",
         "published_date_en": "Dec 15, 2017 (arXiv)",
-        "zhname": "用「前向运动学因子 + 预积分接触因子」把足式机器人状态估计搬到因子图平滑上"
+        "zhname": "用「前向运动学因子 + 预积分接触因子」把足式机器人状态估计搬到因子图平滑上",
+        "zh_title": "用「前向运动学因子 + 预积分接触因子」把足式机器人状态估计搬到因子图平滑上"
       }
     ],
     "zhname": "状态估计",
@@ -1451,7 +1576,8 @@
         "arxiv": "2603.15084",
         "published_date_zh": "2026年3月16日（arXiv）",
         "published_date_en": "Mar 16, 2026 (arXiv)",
-        "zhname": "HALO：用可微仿真做两阶段系统辨识——先把名义机器人模型标准，再辨识未知负载的质量分布，让 RL 策略在负重条件下零样本迁移到真机"
+        "zhname": "HALO：可微仿真下的负重人形敏捷运动 Sim-to-Real",
+        "zh_title": "HALO：可微仿真下的负重人形敏捷运动 Sim-to-Real"
       },
       {
         "title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
@@ -1461,7 +1587,8 @@
         "arxiv": "2602.01515",
         "published_date_zh": "2026年2月2日（arXiv）",
         "published_date_en": "Feb 2, 2026 (arXiv)",
-        "zhname": "RAPT：给人形 sim-to-real 部署装一个 50 Hz 的「异常监控 + 自动归因」"
+        "zhname": "RAPT：给人形 sim-to-real 部署装一个 50 Hz 的「异常监控 + 自动归因」",
+        "zh_title": "RAPT：给人形 sim-to-real 部署装一个 50 Hz 的「异常监控 + 自动归因」"
       },
       {
         "title": "LIFT: Towards Bridging the Gap between Large-Scale Pretraining and Efficient Finetuning for Humanoid Control",
@@ -1472,7 +1599,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年1月29日（arXiv）",
         "published_date_en": "Jan 29, 2026 (arXiv)",
-        "zhname": "LIFT：用大批量 SAC 预训练 + 物理先验世界模型微调，把人形 sim-to-real 压到 1 小时"
+        "zhname": "LIFT：用大批量 SAC 预训练 + 物理先验世界模型微调，把人形 sim-to-real 压到 1 小时",
+        "zh_title": "LIFT：用大批量 SAC 预训练 + 物理先验世界模型微调，把人形 sim-to-real 压到 1 小时"
       },
       {
         "title": "PolySim: Bridging the Sim-to-Real Gap for Humanoid Control via Multi-Simulator Dynamics Randomization",
@@ -1483,7 +1611,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年10月2日（arXiv）",
         "published_date_en": "Oct 2, 2025 (arXiv)",
-        "zhname": "PolySim：把「域随机化」从参数维度推到「整套仿真器」维度"
+        "zhname": "PolySim：把「域随机化」从参数维度推到「整套仿真器」维度",
+        "zh_title": "PolySim：把「域随机化」从参数维度推到「整套仿真器」维度"
       },
       {
         "title": "Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion",
@@ -1493,7 +1622,8 @@
         "arxiv": "2509.12858",
         "published_date_zh": "2025年9月16日（arXiv）",
         "published_date_en": "Sep 16, 2025 (arXiv)",
-        "zhname": "对比表征学习：把仿真里的特权信息\"蒸\"进 actor 隐状态，再驱动一个自适应步态时钟"
+        "zhname": "对比表征学习：把仿真里的特权信息\"蒸\"进 actor 隐状态，再驱动一个自适应步态时钟",
+        "zh_title": "对比表征学习：把仿真里的特权信息\"蒸\"进 actor 隐状态，再驱动一个自适应步态时钟"
       },
       {
         "title": "Towards Bridging the Gap: Systematic Sim-to-Real Transfer for Diverse Legged Robots（PACE）",
@@ -1504,7 +1634,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年9月8日（arXiv）",
         "published_date_en": "Sep 8, 2025 (arXiv)",
-        "zhname": "PACE：用一套\"自下而上的物理参数辨识 + PMSM 能量模型\"，让一个 RL 策略在不做动力学域随机化的前提下迁移到 13 台不同的腿足机器人"
+        "zhname": "PACE：面向多样腿足机器人的系统化 Sim-to-Real 迁移",
+        "zh_title": "PACE：面向多样腿足机器人的系统化 Sim-to-Real 迁移"
       },
       {
         "title": "Robot Trains Robot: Automatic Real-World Policy Adaptation and Learning for Humanoids",
@@ -1515,7 +1646,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年8月17日（arXiv v1），CoRL 2025 录用",
         "published_date_en": "Aug 17, 2025 (arXiv v1), CoRL 2025 录用",
-        "zhname": "机器人训练机器人：用机械臂老师在真实世界自动适配/从零训练人形策略（RTR）"
+        "zhname": "机器人训练机器人：用机械臂老师在真实世界自动适配/从零训练人形策略（RTR）",
+        "zh_title": "机器人训练机器人：用机械臂老师在真实世界自动适配/从零训练人形策略（RTR）"
       },
       {
         "title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
@@ -1525,7 +1657,8 @@
         "arxiv": "2504.06585",
         "published_date_zh": "2025年4月9日（arXiv v1）",
         "published_date_en": "Apr 9, 2025 (arXiv v1)",
-        "zhname": "在关节力矩空间注入「状态相关随机扰动」，逼策略学会扛住域随机化覆盖不到的现实差"
+        "zhname": "在关节力矩空间注入「状态相关随机扰动」，逼策略学会扛住域随机化覆盖不到的现实差",
+        "zh_title": "在关节力矩空间注入「状态相关随机扰动」，逼策略学会扛住域随机化覆盖不到的现实差"
       },
       {
         "title": "RMA: Rapid Motor Adaptation for Legged Robots",
@@ -1535,7 +1668,8 @@
         "arxiv": "2107.04034",
         "published_date_zh": "2021年7月（arXiv）",
         "published_date_en": "Jul 2021 (arXiv)",
-        "zhname": "RMA：足式机器人的快速电机自适应"
+        "zhname": "RMA：足式机器人的快速电机自适应",
+        "zh_title": "RMA：足式机器人的快速电机自适应"
       }
     ],
     "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
@@ -1555,7 +1689,8 @@
         "arxiv": "2606.17418",
         "published_date_zh": "2026年6月16日（arXiv）",
         "published_date_en": "Jun 16, 2026 (arXiv)",
-        "zhname": "DexLink Hand：用「连杆驱动」打破灵巧手「灵巧—紧凑—便宜」三角困境——16 个独立电机驱动 20 个关节、人手尺寸 320 g、整机 < 400 美元，靠蜗轮自锁实现被动承重（单指约 65 N、全手提 10 kg），拿到满分 Kapandji、复现全部 33 类 Feix 抓取"
+        "zhname": "DexLink Hand：紧凑低价的 16-DoF 连杆驱动灵巧手",
+        "zh_title": "DexLink Hand：紧凑低价的 16-DoF 连杆驱动灵巧手"
       },
       {
         "title": "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation",
@@ -1565,7 +1700,8 @@
         "arxiv": "2604.21541",
         "published_date_zh": "2026年4月23日（arXiv）",
         "published_date_en": "Apr 23, 2026 (arXiv)",
-        "zhname": "X2-N：可形变轮足人形机器人——足式/轮足双形态一键互变（约 1 秒），靠「关节复用」省掉变形专用电机，21/17 DoF、约 28 kg / 1.1 m，RL 全身控制统一管轮足滑行、足式行走、形变与上肢操作"
+        "zhname": "X2-N：可形变轮足双形态人形机器人",
+        "zh_title": "X2-N：可形变轮足双形态人形机器人"
       },
       {
         "title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids",
@@ -1575,7 +1711,8 @@
         "arxiv": "2602.08518",
         "published_date_zh": "2026年2月9日（arXiv）",
         "published_date_en": "Feb 9, 2026 (arXiv)",
-        "zhname": "肌骨型人形机器人「肌肉」的特性、管理与利用：Kengoro 与 Musashi 上的实证研究"
+        "zhname": "肌骨型人形机器人「肌肉」的特性、管理与利用：Kengoro 与 Musashi 上的实证研究",
+        "zh_title": "肌骨型人形机器人「肌肉」的特性、管理与利用：Kengoro 与 Musashi 上的实证研究"
       },
       {
         "title": "Fauna Sprout: A lightweight, approachable, developer-ready humanoid robot",
@@ -1585,7 +1722,8 @@
         "arxiv": "2601.18963",
         "published_date_zh": "2026年1月26日（arXiv）",
         "published_date_en": "Jan 26, 2026 (arXiv)",
-        "zhname": "Fauna Sprout：一款轻量、亲和、开发者友好的人形机器人开发平台"
+        "zhname": "Fauna Sprout：一款轻量、亲和、开发者友好的人形机器人开发平台",
+        "zh_title": "Fauna Sprout：一款轻量、亲和、开发者友好的人形机器人开发平台"
       },
       {
         "title": "Antagonistic Bowden-Cable Actuation of a Lightweight Robotic Hand",
@@ -1595,7 +1733,8 @@
         "arxiv": "2512.24657",
         "published_date_zh": "2025年12月31日（arXiv）",
         "published_date_en": "Dec 31, 2025 (arXiv)",
-        "zhname": "拮抗式 Bowden 缆绳驱动的轻量化机器手：面向负载受限人形的灵巧操作"
+        "zhname": "拮抗式 Bowden 缆绳驱动的轻量化机器手：面向负载受限人形的灵巧操作",
+        "zh_title": "拮抗式 Bowden 缆绳驱动的轻量化机器手：面向负载受限人形的灵巧操作"
       },
       {
         "title": "Olaf: Bringing an Animated Character to Life in the Physical World",
@@ -1605,7 +1744,8 @@
         "arxiv": "2512.16705",
         "published_date_zh": "2025年12月18日（arXiv）",
         "published_date_en": "Dec 18, 2025 (arXiv)",
-        "zhname": "Olaf：把动画角色搬进物理世界——非常规角色形态下的硬件 + RL 一体化设计"
+        "zhname": "Olaf：把动画角色搬进物理世界——非常规角色形态下的硬件 + RL 一体化设计",
+        "zh_title": "Olaf：把动画角色搬进物理世界——非常规角色形态下的硬件 + RL 一体化设计"
       },
       {
         "title": "OSMO: Open-Source Tactile Glove for Human-to-Robot Skill Transfer",
@@ -1616,7 +1756,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年12月9日（arXiv）",
         "published_date_en": "Dec 9, 2025 (arXiv)",
-        "zhname": "OSMO：人机共用的开源触觉手套——把「接触力」从人手直接迁移到机器手"
+        "zhname": "OSMO：人机共用的开源触觉手套——把「接触力」从人手直接迁移到机器手",
+        "zh_title": "OSMO：人机共用的开源触觉手套——把「接触力」从人手直接迁移到机器手"
       },
       {
         "title": "DIJIT: A Robotic Head for an Active Observer",
@@ -1626,7 +1767,8 @@
         "arxiv": "2512.07998",
         "published_date_zh": "2025年12月8日（arXiv）",
         "published_date_en": "Dec 8, 2025 (arXiv)",
-        "zhname": "DIJIT：为「主动观察者」打造的仿人双目机器人头——把人眼的转、聚、扭和脖子一起搬进硬件"
+        "zhname": "DIJIT：为「主动观察者」打造的仿人双目机器人头——把人眼的转、聚、扭和脖子一起搬进硬件",
+        "zh_title": "DIJIT：为「主动观察者」打造的仿人双目机器人头——把人眼的转、聚、扭和脖子一起搬进硬件"
       },
       {
         "title": "Unitree H1 Humanoid Robot Whitepaper & Specifications",
@@ -1635,7 +1777,8 @@
         "dir": "Unitree_H1_Whitepaper",
         "published_date_zh": "2023年8月",
         "published_date_en": "Aug 2023",
-        "zhname": "Unitree H1 人形机器人白皮书与技术规格"
+        "zhname": "Unitree H1 人形机器人白皮书与技术规格",
+        "zh_title": "Unitree H1 人形机器人白皮书与技术规格"
       }
     ],
     "zhname": "硬件设计",
@@ -1654,7 +1797,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年3月12日（arXiv，2026年3月14日修订）",
         "published_date_en": "Mar 12, 2026 (arXiv, Mar 14, 2026 revised)",
-        "zhname": "ComFree-Sim：一个「免互补约束」的解析接触物理引擎——把接触冲量写成闭式解、按接触对/摩擦锥面解耦后映射到 GPU，实现接触数量近线性扩展，并兼容 MuJoCo API"
+        "zhname": "ComFree-Sim：GPU 并行解析接触物理引擎",
+        "zh_title": "ComFree-Sim：GPU 并行解析接触物理引擎"
       },
       {
         "title": "Towards Motion Turing Test: Evaluating Human-Likeness in Humanoid Robots",
@@ -1664,7 +1808,8 @@
         "arxiv": "2603.06181",
         "published_date_zh": "2026年3月6日（arXiv）",
         "published_date_en": "Mar 6, 2026 (arXiv)",
-        "zhname": "迈向动作图灵测试：评估人形机器人的「类人度」"
+        "zhname": "迈向动作图灵测试：评估人形机器人的「类人度」",
+        "zh_title": "迈向动作图灵测试：评估人形机器人的「类人度」"
       },
       {
         "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
@@ -1675,7 +1820,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月11日（arXiv）",
         "published_date_en": "Feb 11, 2026 (arXiv)",
-        "zhname": "MolmoSpaces：230k+ 室内场景 × 130k+ 物体 × 42M 抓取的全开源具身 AI 评测生态"
+        "zhname": "MolmoSpaces：230k+ 室内场景 × 130k+ 物体 × 42M 抓取的全开源具身 AI 评测生态",
+        "zh_title": "MolmoSpaces：230k+ 室内场景 × 130k+ 物体 × 42M 抓取的全开源具身 AI 评测生态"
       },
       {
         "title": "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot",
@@ -1686,7 +1832,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年1月5日（arXiv v1），2026年4月28日（v2 修订）",
         "published_date_en": "Jan 5, 2026 (arXiv v1), Apr 28, 2026 (v2 revised)",
-        "zhname": "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台——用 LLM 从自然语言生成场景、双模式批量造数据、再用 VLM 自动评测，并开源 1 万+ 小时合成数据"
+        "zhname": "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台",
+        "zh_title": "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台"
       },
       {
         "title": "Benchmarking Humanoid Imitation Learning with Motion Difficulty",
@@ -1696,7 +1843,8 @@
         "arxiv": "2512.07248",
         "published_date_zh": "2025年12月8日（arXiv）",
         "published_date_en": "Dec 8, 2025 (arXiv)",
-        "zhname": "用「动作难度」给人形模仿学习评测立标尺：MDS + MD-AMASS + MID/DSJE"
+        "zhname": "用「动作难度」给人形模仿学习评测立标尺：MDS + MD-AMASS + MID/DSJE",
+        "zh_title": "用「动作难度」给人形模仿学习评测立标尺：MDS + MD-AMASS + MID/DSJE"
       },
       {
         "title": "Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation",
@@ -1707,7 +1855,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年10月9日（arXiv）",
         "published_date_en": "Oct 9, 2025 (arXiv)",
-        "zhname": "Humanoid Everyday：面向开放世界人形操作的大规模多模态数据集——Unitree G1/H1 实采 1.03 万条轨迹、300 万+ 帧、260 个任务 / 7 大类，RGB+深度+LiDAR+触觉+语言标注，配云端评测平台，全开源"
+        "zhname": "Humanoid Everyday：开放世界人形操作综合数据集",
+        "zh_title": "Humanoid Everyday：开放世界人形操作综合数据集"
       },
       {
         "title": "Generative World Modelling for Humanoids: 1X World Model Challenge Technical Report",
@@ -1718,7 +1867,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年10月8日（arXiv）",
         "published_date_en": "Oct 8, 2025 (arXiv)",
-        "zhname": "1X 世界模型挑战赛技术报告：Team Revontuli 用「视频生成大模型 + 状态条件」拿下采样赛道、用时空 Transformer 拿下压缩赛道双冠"
+        "zhname": "人形机器人生成式世界建模：1X 世界模型挑战赛技术报告",
+        "zh_title": "人形机器人生成式世界建模：1X 世界模型挑战赛技术报告"
       },
       {
         "title": "GRUtopia: Dream General Robots in a City at Scale",
@@ -1729,7 +1879,8 @@
         "has_open_source": true,
         "published_date_zh": "2024年7月15日（arXiv）",
         "published_date_en": "Jul 15, 2024 (arXiv)",
-        "zhname": "GRUtopia：城市级交互式 3D 社会，给通用机器人造一座可训练的「乌托邦」"
+        "zhname": "GRUtopia：城市级交互式 3D 社会，给通用机器人造一座可训练的「乌托邦」",
+        "zh_title": "GRUtopia：城市级交互式 3D 社会，给通用机器人造一座可训练的「乌托邦」"
       },
       {
         "title": "HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation",
@@ -1740,7 +1891,8 @@
         "has_open_source": true,
         "published_date_zh": "2024年3月（arXiv）",
         "published_date_en": "Mar 2024 (arXiv)",
-        "zhname": "HumanoidBench：全身运动与操作的人形机器人仿真基准"
+        "zhname": "HumanoidBench：全身运动与操作的人形机器人仿真基准",
+        "zh_title": "HumanoidBench：全身运动与操作的人形机器人仿真基准"
       }
     ],
     "zhname": "仿真与基准",
@@ -1759,7 +1911,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年6月9日（arXiv）",
         "published_date_en": "Jun 9, 2026 (arXiv)",
-        "zhname": "OMG：把语言/音频/人体动作统一成「大脑生成 + 小脑跟踪」的人形通用控制——扩散 Transformer 生成全身轨迹，物理跟踪器执行"
+        "zhname": "OMG：通用人形控制的多模态运动生成",
+        "zh_title": "OMG：通用人形控制的多模态运动生成"
       },
       {
         "title": "Physics-Based Motion Tracking of Contact-Rich Interacting Characters",
@@ -1769,7 +1922,7 @@
         "arxiv": "2604.07984",
         "published_date_zh": "2026年4月9日（arXiv）· Eurographics 2026 / Computer Graphics Forum",
         "published_date_en": "Apr 9, 2026 (arXiv)· Eurographics 2026 / Computer Graphics Forum",
-        "zhname": "接触密集的多角色交互动作的物理跟踪——用渐进式网络让多个专家各管一类难度"
+        "zhname": "接触密集多角色交互动作的物理跟踪"
       },
       {
         "title": "PhysMoDPO: Physically-Plausible Humanoid Motion with Preference Optimization",
@@ -1780,7 +1933,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年3月13日（arXiv，2026年3月16日修订）",
         "published_date_en": "Mar 13, 2026 (arXiv, Mar 16, 2026 revised)",
-        "zhname": "PhysMoDPO：用偏好优化把文本生成的动作「磨」成物理可执行的人形动作"
+        "zhname": "PhysMoDPO：用偏好优化把文本生成的动作「磨」成物理可执行的人形动作",
+        "zh_title": "PhysMoDPO：用偏好优化把文本生成的动作「磨」成物理可执行的人形动作"
       },
       {
         "title": "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control",
@@ -1790,7 +1944,8 @@
         "arxiv": "2602.21599",
         "published_date_zh": "2026年2月25日（arXiv）",
         "published_date_en": "Feb 25, 2026 (arXiv)",
-        "zhname": "迭代闭环动作合成：扩展人形机器人控制能力的数据-策略协同进化框架"
+        "zhname": "迭代闭环动作合成：扩展人形机器人控制能力的数据-策略协同进化框架",
+        "zh_title": "迭代闭环动作合成：扩展人形机器人控制能力的数据-策略协同进化框架"
       },
       {
         "title": "CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives",
@@ -1801,7 +1956,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年12月16日（arXiv）",
         "published_date_en": "Dec 16, 2025 (arXiv)",
-        "zhname": "CRISP：用接触引导 + 平面基元从单目视频做 Real2Sim 的人–场景重建"
+        "zhname": "CRISP：用接触引导 + 平面基元从单目视频做 Real2Sim 的人–场景重建",
+        "zh_title": "CRISP：用接触引导 + 平面基元从单目视频做 Real2Sim 的人–场景重建"
       },
       {
         "title": "Mimic2DM: Generating and Mimicking 2D Motions for 3D Character Control",
@@ -1811,7 +1967,8 @@
         "arxiv": "2512.08500",
         "published_date_zh": "2025年12月9日（arXiv）",
         "published_date_en": "Dec 9, 2025 (arXiv)",
-        "zhname": "Mimic2DM：仅靠 2D 关键点轨迹学习物理仿真 3D 角色控制器"
+        "zhname": "Mimic2DM：仅靠 2D 关键点轨迹学习物理仿真 3D 角色控制器",
+        "zh_title": "Mimic2DM：仅靠 2D 关键点轨迹学习物理仿真 3D 角色控制器"
       },
       {
         "title": "PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction",
@@ -1822,7 +1979,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年10月2日（arXiv），SIGGRAPH Asia 2025（ACM DOI 10.1145/3757377.3763951）",
         "published_date_en": "Oct 2, 2025 (arXiv), SIGGRAPH Asia 2025 (ACM DOI 10.1145/3757377.3763951)",
-        "zhname": "PhysHMR：用视觉条件策略直接产出物理可行的人体动作重建"
+        "zhname": "PhysHMR：用视觉条件策略直接产出物理可行的人体动作重建",
+        "zh_title": "PhysHMR：用视觉条件策略直接产出物理可行的人体动作重建"
       },
       {
         "title": "Learning to Ball: Composing Policies for Long-Horizon Basketball Moves",
@@ -1833,7 +1991,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年9月26日（arXiv）",
         "published_date_en": "Sep 26, 2025 (arXiv)",
-        "zhname": "Learning to Ball：用「策略组合 + 高层软路由」拼出长程篮球连招"
+        "zhname": "Learning to Ball：用「策略组合 + 高层软路由」拼出长程篮球连招",
+        "zh_title": "Learning to Ball：用「策略组合 + 高层软路由」拼出长程篮球连招"
       },
       {
         "title": "Character Controllers using Motion VAEs",
@@ -1843,7 +2002,8 @@
         "arxiv": "2103.14274",
         "published_date_zh": "2020年7月（SIGGRAPH）",
         "published_date_en": "Jul 2020 (SIGGRAPH)",
-        "zhname": "基于运动 VAE 的角色控制器"
+        "zhname": "基于运动 VAE 的角色控制器",
+        "zh_title": "基于运动 VAE 的角色控制器"
       }
     ],
     "zhname": "物理动画",
@@ -1861,7 +2021,8 @@
         "arxiv": "2605.11704",
         "published_date_zh": "2026年5月12日（arXiv v1）",
         "published_date_en": "May 12, 2026 (arXiv v1)",
-        "zhname": "ScaleMoGen：用「下一尺度」自回归把文本生成的人体动作做成由粗到细"
+        "zhname": "ScaleMoGen：用「下一尺度」自回归把文本生成的人体动作做成由粗到细",
+        "zh_title": "ScaleMoGen：用「下一尺度」自回归把文本生成的人体动作做成由粗到细"
       },
       {
         "title": "Kimodo: Scaling Controllable Human Motion Generation",
@@ -1872,7 +2033,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年3月",
         "published_date_en": "Mar 2026",
-        "zhname": "Kimodo：用 700 小时光学动捕把「可控人体动作生成」扩大规模"
+        "zhname": "Kimodo：用 700 小时光学动捕把「可控人体动作生成」扩大规模",
+        "zh_title": "Kimodo：用 700 小时光学动捕把「可控人体动作生成」扩大规模"
       },
       {
         "title": "EmbodMocap: In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents",
@@ -1883,7 +2045,8 @@
         "has_open_source": true,
         "published_date_zh": "2026年2月26日（arXiv），CVPR 2026（仓库 README 标识）",
         "published_date_en": "Feb 26, 2026 (arXiv), CVPR 2026 (per repository README)",
-        "zhname": "EmbodMocap：双 iPhone 户外 4D 人-场景重建，给具身智能体喂数据"
+        "zhname": "EmbodMocap：双 iPhone 户外 4D 人-场景重建，给具身智能体喂数据",
+        "zh_title": "EmbodMocap：双 iPhone 户外 4D 人-场景重建，给具身智能体喂数据"
       },
       {
         "title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
@@ -1893,7 +2056,8 @@
         "arxiv": "2602.22209",
         "published_date_zh": "2026年2月（arXiv）",
         "published_date_en": "Feb 2026 (arXiv)",
-        "zhname": "WHOLE：用扩散先验把第一视角里的手和物体一起 lift 到世界坐标"
+        "zhname": "WHOLE：用扩散先验把第一视角里的手和物体一起 lift 到世界坐标",
+        "zh_title": "WHOLE：用扩散先验把第一视角里的手和物体一起 lift 到世界坐标"
       },
       {
         "title": "MAGNet: Diffusion Forcing for Multi-Agent Interaction Sequence Modeling",
@@ -1904,18 +2068,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年12月（v1）· 2026年3月（v2 修订）（arXiv）",
         "published_date_en": "Dec 2025 (v1)· Mar 2026 (v2 revised) (arXiv)",
-        "zhname": "MAGNet：用扩散强制把多人长时序交互装进一个自回归生成模型"
-      },
-      {
-        "title": "Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction",
-        "path": "papers/14_Human_Motion/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction.md",
-        "url": "/papers/14_Human_Motion/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction.html",
-        "dir": "Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction",
-        "arxiv": "2512.00960",
-        "has_open_source": true,
-        "published_date_zh": "2025年11月30日",
-        "published_date_en": "Nov 30, 2025",
-        "zhname": "用稀疏接触标注 + 优化求解从单目视频高效、可扩展地重建 4D 人-物交互动作"
+        "zhname": "MAGNet：用扩散强制把多人长时序交互装进一个自回归生成模型",
+        "zh_title": "MAGNet：用扩散强制把多人长时序交互装进一个自回归生成模型"
       },
       {
         "title": "Learned Motion Matching",
@@ -1926,7 +2080,8 @@
         "has_open_source": true,
         "published_date_zh": "2022年9月29日（arXiv），ACM SIGGRAPH 2020（ACM TOG, Vol. 39, No. 4, Article 53）",
         "published_date_en": "Sep 29, 2022 (arXiv), ACM SIGGRAPH 2020 (ACM TOG, Vol. 39, No. 4, Article 53)",
-        "zhname": "学习式动作匹配：用三张小网络替代海量动作数据库"
+        "zhname": "学习式动作匹配：用三张小网络替代海量动作数据库",
+        "zh_title": "学习式动作匹配：用三张小网络替代海量动作数据库"
       },
       {
         "title": "Generating Diverse and Natural 3D Human Motions from Textual Descriptions",
@@ -1937,7 +2092,8 @@
         "has_open_source": true,
         "published_date_zh": "2022年4月（arXiv）",
         "published_date_en": "Apr 2022 (arXiv)",
-        "zhname": "从文本描述生成多样化且自然的 3D 人体运动"
+        "zhname": "从文本描述生成多样化且自然的 3D 人体运动",
+        "zh_title": "从文本描述生成多样化且自然的 3D 人体运动"
       },
       {
         "title": "Control Operators for Interactive Character Animation",
@@ -1947,7 +2103,8 @@
         "has_open_source": true,
         "published_date_zh": "2025年12月（SIGGRAPH Asia 2025，香港 12.15–12.18）",
         "published_date_en": "Dec 2025 (SIGGRAPH Asia 2025, Hong Kong, Dec 15–18)",
-        "zhname": "控制算子：让非技术用户也能搭出自己的「学习型」角色控制器"
+        "zhname": "控制算子：让非技术用户也能搭出自己的「学习型」角色控制器",
+        "zh_title": "控制算子：让非技术用户也能搭出自己的「学习型」角色控制器"
       }
     ],
     "zhname": "人体动作分析与生成",

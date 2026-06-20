@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 9
 title: "HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation"
-zhname: "HoRD：教师用历史条件 RL 在线推断动力学上下文 + 在线蒸馏到基于稀疏 3D 关键点的 Transformer 学生策略，让单一策略零样本适配未见域与外部扰动"
+zhname: "HoRD：历史条件 RL 与在线蒸馏的鲁棒人形控制"
 category: "Locomotion"
 ---
 

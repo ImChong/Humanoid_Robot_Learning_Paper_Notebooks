@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 8
 title: "DexLink Hand: A Compact, Affordable, 16-DOF Linkage-Driven Hand with Human-Like Dexterity"
-zhname: "DexLink Hand：用「连杆驱动」打破灵巧手「灵巧—紧凑—便宜」三角困境——16 个独立电机驱动 20 个关节、人手尺寸 320 g、整机 < 400 美元，靠蜗轮自锁实现被动承重（单指约 65 N、全手提 10 kg），拿到满分 Kapandji、复现全部 33 类 Feix 抓取"
+zhname: "DexLink Hand：紧凑低价的 16-DoF 连杆驱动灵巧手"
 category: "Hardware Design"
 ---
 

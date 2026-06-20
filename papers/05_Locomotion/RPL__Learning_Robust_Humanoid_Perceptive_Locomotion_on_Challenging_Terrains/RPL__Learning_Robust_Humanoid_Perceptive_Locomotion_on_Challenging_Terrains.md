@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 11
 title: "RPL: Learning Robust Humanoid Perceptive Locomotion on Challenging Terrains"
-zhname: "RPL：先为每类地形训「特权高程图」专家，再蒸馏成一个吃多路深度相机的 Transformer 学生策略——配「随速度调节深度特征(DFSV)」与「随机侧向遮挡(RSM)」两招鲁棒化，Unitree G1 真机带 2kg 负载双向穿越斜坡/楼梯/踏脚石"
+zhname: "RPL：挑战性地形上的鲁棒人形感知行走"
 category: "Locomotion"
 ---
 

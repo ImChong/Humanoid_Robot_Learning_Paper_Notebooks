@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 7
 title: "HALO: Closing Sim-to-Real Gap for Heavy-loaded Humanoid Agile Motion Skills via Differentiable Simulation"
-zhname: "HALO：用可微仿真做两阶段系统辨识——先把名义机器人模型标准，再辨识未知负载的质量分布，让 RL 策略在负重条件下零样本迁移到真机"
+zhname: "HALO：可微仿真下的负重人形敏捷运动 Sim-to-Real"
 category: "Sim-to-Real"
 ---
 

@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 9
 title: "Four Simple Proprioceptive Estimators for Legged Robots"
-zhname: "四个由浅入深的本体感知估计器：从 InEKF 到「按接触事件建状态」的固定滞后平滑器，全部开源进 GTSAM"
+zhname: "足式机器人四种简易本体感知估计器"
 category: "State Estimation"
 ---
 
