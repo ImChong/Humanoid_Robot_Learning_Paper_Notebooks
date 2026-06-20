@@ -645,7 +645,7 @@
 | 479  | [Diffusion Forcing for Multi-Agent Interaction Sequence Modeling](https://arxiv.org/abs/2512.17900) ✅ [笔记](14_Human_Motion/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling/MAGNet__Diffusion_Forcing_for_Multi-Agent_Interaction_Sequence_Modeling.md) | 2026-06-01 |     | ✅ 完成 |
 | 480  | [Control Operators for Interactive Character Animation](https://dl.acm.org/doi/10.1145/3763319) [笔记](14_Human_Motion/Control_Operators_for_Interactive_Character_Animation/Control_Operators_for_Interactive_Character_Animation.md) | 2026-06-12 |     | ✅ 完成 |
 | 481  | Implicit Bézier Motion Model for Precise Spatial and Temporal Control                                                                | 2025.12 |     | ⏳ 待读 |
-| 482  | [Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction](https://arxiv.org/abs/2512.00960)                  | 2025.12 |     | ⏳ 待读 |
+| 482  | [Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction](https://arxiv.org/abs/2512.00960) ✅ [笔记](14_Human_Motion/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction.md)                  | 2025.12 |     | ✅ 完成 |
 | 483  | [Being-M0.5: A Real-Time Controllable Vision-Language-Motion Model](https://arxiv.org/abs/2508.07863)                                | 2025.08 |     | ⏳ 待读 |
 | 484  | Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data                                                              | 2025.07 |     | ⏳ 待读 |
 | 485  | [GENMO: A GENeralist Model for Human MOtion](https://arxiv.org/abs/2505.01425)                                                       | 2025.05 |     | ⏳ 待读 |

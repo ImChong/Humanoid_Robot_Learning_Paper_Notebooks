@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "13_Physics-Based_Animation",
-      "last_index": 550,
-      "last_title": "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control (arXiv:2606.10340)",
-      "next_module": "14_Human_Motion"
+      "last_module": "14_Human_Motion",
+      "last_index": 482,
+      "last_title": "Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction (arXiv:2512.00960)",
+      "next_module": "04_Loco-Manipulation_and_WBC"
     },
-    "last_summary_index": 550,
-    "last_summary_date": "2026-06-19",
-    "last_summary_title": "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control",
+    "last_summary_index": 482,
+    "last_summary_date": "2026-06-20",
+    "last_summary_title": "Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-20",
+        "index": 482,
+        "title": "Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction",
+        "folder": "papers/14_Human_Motion/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction",
+        "module": "14_Human_Motion",
+        "arxiv": "2512.00960",
+        "source": "wenboran2002/open4dhoi_code · wenboran2002.github.io/open4dhoi"
+      },
       {
         "date": "2026-06-19",
         "index": 550,
@@ -4153,6 +4162,16 @@
       "route": "Physics-Based Animation",
       "title_cn": "OMG：面向人形通用控制的全模态动作生成",
       "done_date": "2026-06-19"
+    },
+    {
+      "title": "Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction",
+      "folder": "papers/14_Human_Motion/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction",
+      "note_file": "Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction.md",
+      "status": "done",
+      "arxiv": "",
+      "pdf_file": "",
+      "route": "人物交互重建",
+      "title_cn": ""
     }
   ]
 }

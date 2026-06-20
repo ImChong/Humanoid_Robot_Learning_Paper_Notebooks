@@ -1756,9 +1756,10 @@
         "url": "/papers/13_Physics-Based_Animation/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control.html",
         "dir": "OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control",
         "arxiv": "2606.10340",
+        "has_open_source": true,
         "published_date_zh": "2026年6月9日（arXiv）",
         "published_date_en": "Jun 9, 2026 (arXiv)",
-        "zhname": "OMG：把语言/音频/人体动作统一成「大脑生成 + 小脑跟踪」的人形通用控制——扩散 Transformer 直接在动作空间生成全身轨迹，预训练物理跟踪器在 Unitree G1 上执行，配 1174 小时物理在环过滤的多模态数据，文本→动作 FID 6.03 / R@3 86.91%"
+        "zhname": "OMG：把语言/音频/人体动作统一成「大脑生成 + 小脑跟踪」的人形通用控制——扩散 Transformer 生成全身轨迹，物理跟踪器执行"
       },
       {
         "title": "Physics-Based Motion Tracking of Contact-Rich Interacting Characters",
@@ -1904,6 +1905,17 @@
         "published_date_zh": "2025年12月（v1）· 2026年3月（v2 修订）（arXiv）",
         "published_date_en": "Dec 2025 (v1)· Mar 2026 (v2 revised) (arXiv)",
         "zhname": "MAGNet：用扩散强制把多人长时序交互装进一个自回归生成模型"
+      },
+      {
+        "title": "Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction",
+        "path": "papers/14_Human_Motion/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction.md",
+        "url": "/papers/14_Human_Motion/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction.html",
+        "dir": "Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction",
+        "arxiv": "2512.00960",
+        "has_open_source": true,
+        "published_date_zh": "2025年11月30日",
+        "published_date_en": "Nov 30, 2025",
+        "zhname": "用稀疏接触标注 + 优化求解从单目视频高效、可扩展地重建 4D 人-物交互动作"
       },
       {
         "title": "Learned Motion Matching",
