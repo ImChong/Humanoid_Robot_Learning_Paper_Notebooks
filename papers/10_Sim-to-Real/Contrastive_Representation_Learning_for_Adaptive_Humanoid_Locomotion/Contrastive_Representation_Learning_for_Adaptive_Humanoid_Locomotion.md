@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 5
 title: "Contrastive Representation Learning for Robust Sim-to-Real Transfer of Adaptive Humanoid Locomotion"
-zhname: "对比表征学习：把仿真里的特权信息"蒸"进 actor 隐状态，再驱动一个自适应步态时钟"
+zhname: "对比表征学习：把仿真里的特权信息\"蒸\"进 actor 隐状态，再驱动一个自适应步态时钟"
 category: "Sim-to-Real"
 ---
 
