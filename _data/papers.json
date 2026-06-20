@@ -2072,6 +2072,18 @@
         "zh_title": "MAGNet：用扩散强制把多人长时序交互装进一个自回归生成模型"
       },
       {
+        "title": "Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction",
+        "path": "papers/14_Human_Motion/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction.md",
+        "url": "/papers/14_Human_Motion/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction.html",
+        "dir": "Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction",
+        "arxiv": "2512.00960",
+        "has_open_source": true,
+        "published_date_zh": "2025年11月30日",
+        "published_date_en": "Nov 30, 2025",
+        "zhname": "用稀疏接触标注 + 优化求解从单目视频高效、可扩展地重建 4D 人-物交互动作",
+        "zh_title": "用稀疏接触标注 + 优化求解从单目视频高效、可扩展地重建 4D 人-物交互动作"
+      },
+      {
         "title": "Learned Motion Matching",
         "path": "papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.md",
         "url": "/papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.html",
