@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 6
 title: "Towards Bridging the Gap: Systematic Sim-to-Real Transfer for Diverse Legged Robots"
-zhname: "PACE：用一套"自下而上的物理参数辨识 + PMSM 能量模型"，让一个 RL 策略在不做动力学域随机化的前提下迁移到 13 台不同的腿足机器人"
+zhname: "PACE：面向多样腿足机器人的系统化 Sim-to-Real 迁移"
 category: "Sim-to-Real"
 ---
 

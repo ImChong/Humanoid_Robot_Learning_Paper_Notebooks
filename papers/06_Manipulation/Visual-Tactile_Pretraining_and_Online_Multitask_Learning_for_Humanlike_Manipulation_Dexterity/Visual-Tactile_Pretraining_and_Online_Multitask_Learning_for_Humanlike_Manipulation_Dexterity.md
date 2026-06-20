@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 10
 title: "Visual-tactile pretraining and online multitask learning for humanlike manipulation dexterity"
-zhname: "视触觉预训练 + 在线多任务学习：先从人类演示自监督学「视觉×触觉」融合表示，再用 RL + 在线模仿在仿真里一次学多技能，只靠单目图像 + 二值触觉，让低成本 LEAP 手获得类人灵巧操作并跨任务/物体/光照泛化"
+zhname: "视触觉预训练与在线多任务学习的人形灵巧操作"
 category: "Manipulation"
 ---
 

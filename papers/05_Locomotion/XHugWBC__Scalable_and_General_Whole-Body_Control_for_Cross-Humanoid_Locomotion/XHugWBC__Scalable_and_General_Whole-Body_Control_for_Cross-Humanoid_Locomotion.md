@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 8
 title: "Scalable and General Whole-Body Control for Cross-Humanoid Locomotion"
-zhname: "XHugWBC：跨本体随机化 + 语义对齐的观测/动作空间 + 形态-动力学感知策略，让一套全身控制策略零样本跑通 12 仿真 + 7 真机不同形态人形"
+zhname: "XHugWBC：跨形态人形行走的规模化通用全身控制"
 category: "Locomotion"
 ---
 

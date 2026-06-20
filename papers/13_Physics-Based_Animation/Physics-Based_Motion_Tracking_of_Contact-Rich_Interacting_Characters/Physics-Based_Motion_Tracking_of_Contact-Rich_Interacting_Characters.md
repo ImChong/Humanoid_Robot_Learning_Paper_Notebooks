@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 7
 title: "Physics-Based Motion Tracking of Contact-Rich Interacting Characters"
-zhname: "接触密集的多角色交互动作的物理跟踪——用渐进式网络让多个专家各管一类难度"
+zhname: "接触密集多角色交互动作的物理跟踪"
 category: "物理动画"
 ---
 

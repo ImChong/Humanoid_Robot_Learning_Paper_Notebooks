@@ -2,7 +2,7 @@
 layout: paper
 paper_order: 8
 title: "Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3D Constrained Terrains"
-zhname: "Gallant：把激光雷达体素化成 3D 占据栅格，用 z-分组 2D CNN 端到端学人形在「头顶/侧向/多层/窄道」全 3D 受限地形里的行走与局部导航"
+zhname: "Gallant：3D 受限地形上的体素栅格人形行走与局部导航"
 category: "Navigation"
 ---
 
