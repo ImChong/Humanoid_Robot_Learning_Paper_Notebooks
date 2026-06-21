@@ -2930,6 +2930,72 @@
         "zh_title": "用稀疏接触标注 + 优化求解从单目视频高效、可扩展地重建 4D 人-物交互动作"
       },
       {
+        "title": "Being-M0.5: A Real-Time Controllable Vision-Language-Motion Model",
+        "path": "papers/14_Human_Motion/Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model/Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model.md",
+        "url": "/papers/14_Human_Motion/Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model/Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model.html",
+        "dir": "Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model",
+        "arxiv": "2508.07863",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "Being-M0.5：实时可控的视觉-语言-动作模型",
+        "zh_title": "Being-M0.5：实时可控的视觉-语言-动作模型"
+      },
+      {
+        "title": "PICO: Reconstructing 3D People In Contact with Objects",
+        "path": "papers/14_Human_Motion/PICO__Reconstructing_3D_People_In_Contact_with_Objects/PICO__Reconstructing_3D_People_In_Contact_with_Objects.md",
+        "url": "/papers/14_Human_Motion/PICO__Reconstructing_3D_People_In_Contact_with_Objects/PICO__Reconstructing_3D_People_In_Contact_with_Objects.html",
+        "dir": "PICO__Reconstructing_3D_People_In_Contact_with_Objects",
+        "arxiv": "2504.17695",
+        "published_date_zh": "2025年4月",
+        "published_date_en": "Apr 2025",
+        "zhname": "PICO：重建与物体接触的 3D 人体",
+        "zh_title": "PICO：重建与物体接触的 3D 人体"
+      },
+      {
+        "title": "FRAME: Floor-aligned Representation for Avatar Motion from Egocentric Video",
+        "path": "papers/14_Human_Motion/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video.md",
+        "url": "/papers/14_Human_Motion/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video.html",
+        "dir": "FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video",
+        "arxiv": "2503.23094",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "FRAME：面向第一视角视频化身动作的地面对齐表示",
+        "zh_title": "FRAME：面向第一视角视频化身动作的地面对齐表示"
+      },
+      {
+        "title": "ClimbingCap: Multi-Modal Dataset and Method for Rock Climbing in World Coordinate",
+        "path": "papers/14_Human_Motion/ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate/ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate.md",
+        "url": "/papers/14_Human_Motion/ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate/ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate.html",
+        "dir": "ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate",
+        "arxiv": "2503.21268",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "ClimbingCap：世界坐标系下攀岩的多模态数据集与方法",
+        "zh_title": "ClimbingCap：世界坐标系下攀岩的多模态数据集与方法"
+      },
+      {
+        "title": "PRIMAL: Physically Reactive and Interactive Motor Model for Avatar Learning",
+        "path": "papers/14_Human_Motion/PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning/PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning.md",
+        "url": "/papers/14_Human_Motion/PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning/PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning.html",
+        "dir": "PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning",
+        "arxiv": "2503.17544",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "PRIMAL：可物理反应与交互的化身运动模型",
+        "zh_title": "PRIMAL：可物理反应与交互的化身运动模型"
+      },
+      {
+        "title": "Scaling Large Motion Models with Million-Level Human Motions",
+        "path": "papers/14_Human_Motion/Scaling_Large_Motion_Models_with_Million-Level_Human_Motions/Scaling_Large_Motion_Models_with_Million-Level_Human_Motions.md",
+        "url": "/papers/14_Human_Motion/Scaling_Large_Motion_Models_with_Million-Level_Human_Motions/Scaling_Large_Motion_Models_with_Million-Level_Human_Motions.html",
+        "dir": "Scaling_Large_Motion_Models_with_Million-Level_Human_Motions",
+        "arxiv": "2410.03311",
+        "published_date_zh": "2024年10月",
+        "published_date_en": "Oct 2024",
+        "zhname": "用百万级人类动作扩展大型动作模型",
+        "zh_title": "用百万级人类动作扩展大型动作模型"
+      },
+      {
         "title": "Learned Motion Matching",
         "path": "papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.md",
         "url": "/papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.html",

@@ -4900,6 +4900,66 @@
       "pdf_file": "",
       "route": "Manipulation",
       "title_cn": ""
+    },
+    {
+      "title": "Being-M0.5: A Real-Time Controllable Vision-Language-Motion Model",
+      "folder": "papers/14_Human_Motion/Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model",
+      "note_file": "Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model.md",
+      "status": "done",
+      "arxiv": "2508.07863",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "ClimbingCap: Multi-Modal Dataset and Method for Rock Climbing in World Coordinate",
+      "folder": "papers/14_Human_Motion/ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate",
+      "note_file": "ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate.md",
+      "status": "done",
+      "arxiv": "2503.21268",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "FRAME: Floor-aligned Representation for Avatar Motion from Egocentric Video",
+      "folder": "papers/14_Human_Motion/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video",
+      "note_file": "FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video.md",
+      "status": "done",
+      "arxiv": "2503.23094",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "PICO: Reconstructing 3D People In Contact with Objects",
+      "folder": "papers/14_Human_Motion/PICO__Reconstructing_3D_People_In_Contact_with_Objects",
+      "note_file": "PICO__Reconstructing_3D_People_In_Contact_with_Objects.md",
+      "status": "done",
+      "arxiv": "2504.17695",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "PRIMAL: Physically Reactive and Interactive Motor Model for Avatar Learning",
+      "folder": "papers/14_Human_Motion/PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning",
+      "note_file": "PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning.md",
+      "status": "done",
+      "arxiv": "2503.17544",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "Scaling Large Motion Models with Million-Level Human Motions",
+      "folder": "papers/14_Human_Motion/Scaling_Large_Motion_Models_with_Million-Level_Human_Motions",
+      "note_file": "Scaling_Large_Motion_Models_with_Million-Level_Human_Motions.md",
+      "status": "done",
+      "arxiv": "2410.03311",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
     }
   ]
 }
