@@ -1582,6 +1582,73 @@
         "zh_title": "DreamGen：用视频世界模型解锁机器人学习的泛化"
       },
       {
+        "title": "EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video",
+        "path": "papers/06_Manipulation/EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video/EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video.md",
+        "url": "/papers/06_Manipulation/EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video/EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video.html",
+        "dir": "EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video",
+        "arxiv": "2505.11709",
+        "has_open_source": true,
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "EgoDex：从大规模第一视角视频学习灵巧操作",
+        "zh_title": "EgoDex：从大规模第一视角视频学习灵巧操作"
+      },
+      {
+        "title": "Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation",
+        "path": "papers/06_Manipulation/Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation/Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation.md",
+        "url": "/papers/06_Manipulation/Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation/Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation.html",
+        "dir": "Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation",
+        "arxiv": "2503.24361",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "Sim-and-Real 协同训练：基于视觉的机器人操作的简单配方",
+        "zh_title": "Sim-and-Real 协同训练：基于视觉的机器人操作的简单配方"
+      },
+      {
+        "title": "Humanoid Policy ~ Human Policy",
+        "path": "papers/06_Manipulation/Humanoid_Policy__Human_Policy/Humanoid_Policy__Human_Policy.md",
+        "url": "/papers/06_Manipulation/Humanoid_Policy__Human_Policy/Humanoid_Policy__Human_Policy.html",
+        "dir": "Humanoid_Policy__Human_Policy",
+        "arxiv": "2503.13441",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "Humanoid Policy ~ Human Policy：人形策略≈人类策略",
+        "zh_title": "Humanoid Policy ~ Human Policy：人形策略≈人类策略"
+      },
+      {
+        "title": "Humanoids in Hospitals: A Technical Study of Humanoid Robot Surrogates for Dexterous Medical Interventions",
+        "path": "papers/06_Manipulation/Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions/Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions.md",
+        "url": "/papers/06_Manipulation/Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions/Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions.html",
+        "dir": "Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions",
+        "arxiv": "2503.12725",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "Humanoids in Hospitals：人形机器人替身做灵巧医疗干预的技术研究",
+        "zh_title": "Humanoids in Hospitals：人形机器人替身做灵巧医疗干预的技术研究"
+      },
+      {
+        "title": "Unified Video Action Model",
+        "path": "papers/06_Manipulation/Unified_Video_Action_Model/Unified_Video_Action_Model.md",
+        "url": "/papers/06_Manipulation/Unified_Video_Action_Model/Unified_Video_Action_Model.html",
+        "dir": "Unified_Video_Action_Model",
+        "arxiv": "2503.00200",
+        "published_date_zh": "2025年2月",
+        "published_date_en": "Feb 2025",
+        "zhname": "Unified Video Action Model：统一视频-动作模型",
+        "zh_title": "Unified Video Action Model：统一视频-动作模型"
+      },
+      {
+        "title": "Dexterous Safe Control for Humanoids in Cluttered Environments via Projected Safe Set Algorithm",
+        "path": "papers/06_Manipulation/Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set/Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set.md",
+        "url": "/papers/06_Manipulation/Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set/Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set.html",
+        "dir": "Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set",
+        "arxiv": "2502.02858",
+        "published_date_zh": "2025年2月",
+        "published_date_en": "Feb 2025",
+        "zhname": "用投影安全集算法实现杂乱环境中人形的灵巧安全控制",
+        "zh_title": "用投影安全集算法实现杂乱环境中人形的灵巧安全控制"
+      },
+      {
         "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
         "path": "papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
         "url": "/papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",

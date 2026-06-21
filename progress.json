@@ -4750,6 +4750,66 @@
       "pdf_file": "",
       "route": "Manipulation",
       "title_cn": ""
+    },
+    {
+      "title": "Dexterous Safe Control for Humanoids in Cluttered Environments via Projected Safe Set Algorithm",
+      "folder": "papers/06_Manipulation/Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set",
+      "note_file": "Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set.md",
+      "status": "done",
+      "arxiv": "2502.02858",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video",
+      "folder": "papers/06_Manipulation/EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video",
+      "note_file": "EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video.md",
+      "status": "done",
+      "arxiv": "2505.11709",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Humanoid Policy ~ Human Policy",
+      "folder": "papers/06_Manipulation/Humanoid_Policy__Human_Policy",
+      "note_file": "Humanoid_Policy__Human_Policy.md",
+      "status": "done",
+      "arxiv": "2503.13441",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Humanoids in Hospitals: A Technical Study of Humanoid Robot Surrogates for Dexterous Medical Interventions",
+      "folder": "papers/06_Manipulation/Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions",
+      "note_file": "Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions.md",
+      "status": "done",
+      "arxiv": "2503.12725",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation",
+      "folder": "papers/06_Manipulation/Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation",
+      "note_file": "Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation.md",
+      "status": "done",
+      "arxiv": "2503.24361",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Unified Video Action Model",
+      "folder": "papers/06_Manipulation/Unified_Video_Action_Model",
+      "note_file": "Unified_Video_Action_Model.md",
+      "status": "done",
+      "arxiv": "2503.00200",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
     }
   ]
 }
