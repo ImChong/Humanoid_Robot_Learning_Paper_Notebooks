@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 196,
-      "last_title": "FastStair: Learning to Run Up Stairs with Humanoid Robots (arXiv:2601.10365)",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": 279,
+      "last_title": "SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot (arXiv:2511.23300)",
+      "next_module": "07_Teleoperation"
     },
-    "last_summary_index": 196,
-    "last_summary_date": "2026-06-21",
-    "last_summary_title": "FastStair: Learning to Run Up Stairs with Humanoid Robots",
+    "last_summary_index": 279,
+    "last_summary_date": "2026-06-22",
+    "last_summary_title": "SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-22",
+        "index": 279,
+        "title": "SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot",
+        "folder": "papers/06_Manipulation/SafeHumanoid__VLM-RAG-driven_Control_of_Upper_Body_Impedance",
+        "module": "06_Manipulation",
+        "arxiv": "2511.23300",
+        "source": "论文未公开代码/项目页（Skoltech ISR Lab）"
+      },
       {
         "date": "2026-06-21",
         "index": 196,

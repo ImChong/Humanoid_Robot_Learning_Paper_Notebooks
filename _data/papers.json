@@ -1099,6 +1099,17 @@
         "zh_title": "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台"
       },
       {
+        "title": "SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot",
+        "path": "papers/06_Manipulation/SafeHumanoid__VLM-RAG-driven_Control_of_Upper_Body_Impedance/SafeHumanoid__VLM-RAG-driven_Control_of_Upper_Body_Impedance.md",
+        "url": "/papers/06_Manipulation/SafeHumanoid__VLM-RAG-driven_Control_of_Upper_Body_Impedance/SafeHumanoid__VLM-RAG-driven_Control_of_Upper_Body_Impedance.html",
+        "dir": "SafeHumanoid__VLM-RAG-driven_Control_of_Upper_Body_Impedance",
+        "arxiv": "2511.23300",
+        "published_date_zh": "2025年11月28日（arXiv）",
+        "published_date_en": "Nov 28, 2025 (arXiv)",
+        "zhname": "SafeHumanoid：用 VLM-RAG 驱动人形上身阻抗控制",
+        "zh_title": "SafeHumanoid：用 VLM-RAG 驱动人形上身阻抗控制"
+      },
+      {
         "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
         "path": "papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
         "url": "/papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",
