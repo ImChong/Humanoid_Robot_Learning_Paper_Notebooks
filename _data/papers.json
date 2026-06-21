@@ -1384,6 +1384,72 @@
         "zh_title": "SafeHumanoid：用 VLM-RAG 驱动人形上身阻抗控制"
       },
       {
+        "title": "Dexterity from Smart Lenses: Multi-Fingered Robot Manipulation with In-the-Wild Human Demonstrations",
+        "path": "papers/06_Manipulation/Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos/Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos.md",
+        "url": "/papers/06_Manipulation/Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos/Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos.html",
+        "dir": "Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos",
+        "arxiv": "2511.16661",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "Dexterity from Smart Lenses：用智能眼镜的野外人类演示学多指操作",
+        "zh_title": "Dexterity from Smart Lenses：用智能眼镜的野外人类演示学多指操作"
+      },
+      {
+        "title": "In-N-On: Scaling Egocentric Manipulation with in-the-wild and on-task Data",
+        "path": "papers/06_Manipulation/In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data/In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data.md",
+        "url": "/papers/06_Manipulation/In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data/In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data.html",
+        "dir": "In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data",
+        "arxiv": "2511.15704",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "In-N-On：用「野外 + 任务对齐」数据规模化第一视角操作",
+        "zh_title": "In-N-On：用「野外 + 任务对齐」数据规模化第一视角操作"
+      },
+      {
+        "title": "Lightning Grasp: High Performance Procedural Grasp Synthesis with Contact Fields",
+        "path": "papers/06_Manipulation/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields.md",
+        "url": "/papers/06_Manipulation/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields.html",
+        "dir": "Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields",
+        "arxiv": "2511.07418",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "Lightning Grasp：用接触场做高性能程序化抓取合成",
+        "zh_title": "Lightning Grasp：用接触场做高性能程序化抓取合成"
+      },
+      {
+        "title": "EgoMI: Learning Active Vision and Whole-Body Manipulation from Egocentric Human Demonstrations",
+        "path": "papers/06_Manipulation/EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos/EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos.md",
+        "url": "/papers/06_Manipulation/EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos/EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos.html",
+        "dir": "EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos",
+        "arxiv": "2511.00153",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "EgoMI：从第一视角人类演示学习主动视觉与全身操作",
+        "zh_title": "EgoMI：从第一视角人类演示学习主动视觉与全身操作"
+      },
+      {
+        "title": "Endowing GPT-4 with a Humanoid Body: Building the Bridge Between Off-the-Shelf VLMs and the Physical World",
+        "path": "papers/06_Manipulation/Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World/Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World.md",
+        "url": "/papers/06_Manipulation/Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World/Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World.html",
+        "dir": "Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World",
+        "arxiv": "2511.00041",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "给 GPT-4 一具人形身体：在现成 VLM 与物理世界间架桥",
+        "zh_title": "给 GPT-4 一具人形身体：在现成 VLM 与物理世界间架桥"
+      },
+      {
+        "title": "A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation",
+        "path": "papers/06_Manipulation/A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation/A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation.md",
+        "url": "/papers/06_Manipulation/A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation/A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation.html",
+        "dir": "A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation",
+        "arxiv": "2510.25725",
+        "published_date_zh": "2025年10月",
+        "published_date_en": "Oct 2025",
+        "zhname": "面向接触丰富操作的人形视觉-触觉-动作数据集",
+        "zh_title": "面向接触丰富操作的人形视觉-触觉-动作数据集"
+      },
+      {
         "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
         "path": "papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
         "url": "/papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",

@@ -4570,6 +4570,66 @@
       "pdf_file": "",
       "route": "Simulation Benchmark",
       "title_cn": ""
+    },
+    {
+      "title": "A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation",
+      "folder": "papers/06_Manipulation/A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation",
+      "note_file": "A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation.md",
+      "status": "done",
+      "arxiv": "2510.25725",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Dexterity from Smart Lenses: Multi-Fingered Robot Manipulation with In-the-Wild Human Demonstrations",
+      "folder": "papers/06_Manipulation/Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos",
+      "note_file": "Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos.md",
+      "status": "done",
+      "arxiv": "2511.16661",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "EgoMI: Learning Active Vision and Whole-Body Manipulation from Egocentric Human Demonstrations",
+      "folder": "papers/06_Manipulation/EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos",
+      "note_file": "EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos.md",
+      "status": "done",
+      "arxiv": "2511.00153",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Endowing GPT-4 with a Humanoid Body: Building the Bridge Between Off-the-Shelf VLMs and the Physical World",
+      "folder": "papers/06_Manipulation/Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World",
+      "note_file": "Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World.md",
+      "status": "done",
+      "arxiv": "2511.00041",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "In-N-On: Scaling Egocentric Manipulation with in-the-wild and on-task Data",
+      "folder": "papers/06_Manipulation/In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data",
+      "note_file": "In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data.md",
+      "status": "done",
+      "arxiv": "2511.15704",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Lightning Grasp: High Performance Procedural Grasp Synthesis with Contact Fields",
+      "folder": "papers/06_Manipulation/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields",
+      "note_file": "Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields.md",
+      "status": "done",
+      "arxiv": "2511.07418",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
     }
   ]
 }
