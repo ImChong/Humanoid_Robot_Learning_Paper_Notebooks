@@ -1319,6 +1319,17 @@
         "zh_title": "RPL：挑战性地形上的鲁棒人形感知行走"
       },
       {
+        "title": "FastStair: Learning to Run Up Stairs with Humanoid Robots",
+        "path": "papers/05_Locomotion/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots.md",
+        "url": "/papers/05_Locomotion/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots.html",
+        "dir": "FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots",
+        "arxiv": "2601.10365",
+        "published_date_zh": "2026年1月15日（arXiv）",
+        "published_date_en": "Jan 15, 2026 (arXiv)",
+        "zhname": "FastStair：让人形机器人快速跑上楼梯",
+        "zh_title": "FastStair：让人形机器人快速跑上楼梯"
+      },
+      {
         "title": "Extreme Parkour with Legged Robots",
         "path": "papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.md",
         "url": "/papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.html",
