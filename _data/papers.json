@@ -1127,6 +1127,72 @@
         "zh_title": "Humanoid-LLA：用统一动作词表的大语言-动作模型以自由语言指挥人形"
       },
       {
+        "title": "Kinematics-Aware Multi-Policy Reinforcement Learning for Force-Capable Humanoid Loco-Manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Kinematics-Aware_Multi-Policy_RL_for_Force-Capable_Humanoid_Loco-Manipulation/Kinematics-Aware_Multi-Policy_RL_for_Force-Capable_Humanoid_Loco-Manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Kinematics-Aware_Multi-Policy_RL_for_Force-Capable_Humanoid_Loco-Manipulation/Kinematics-Aware_Multi-Policy_RL_for_Force-Capable_Humanoid_Loco-Manipulation.html",
+        "dir": "Kinematics-Aware_Multi-Policy_RL_for_Force-Capable_Humanoid_Loco-Manipulation",
+        "arxiv": "2511.21169",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "面向力交互的人形移动操作：运动学感知的多策略强化学习",
+        "zh_title": "面向力交互的人形移动操作：运动学感知的多策略强化学习"
+      },
+      {
+        "title": "SENTINEL: A Fully End-to-End Language-Action Model for Humanoid Whole Body Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Control/SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Control.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Control/SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Control.html",
+        "dir": "SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Control",
+        "arxiv": "2511.19236",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "SENTINEL：面向人形全身控制的全端到端语言-动作模型",
+        "zh_title": "SENTINEL：面向人形全身控制的全端到端语言-动作模型"
+      },
+      {
+        "title": "SafeFall: Learning Protective Control for Humanoid Robots",
+        "path": "papers/04_Loco-Manipulation_and_WBC/SafeFall__Learning_Protective_Control_for_Humanoid_Robots/SafeFall__Learning_Protective_Control_for_Humanoid_Robots.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/SafeFall__Learning_Protective_Control_for_Humanoid_Robots/SafeFall__Learning_Protective_Control_for_Humanoid_Robots.html",
+        "dir": "SafeFall__Learning_Protective_Control_for_Humanoid_Robots",
+        "arxiv": "2511.18509",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "SafeFall：为人形机器人学习护身保护控制",
+        "zh_title": "SafeFall：为人形机器人学习护身保护控制"
+      },
+      {
+        "title": "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data/Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data/Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data.html",
+        "dir": "Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data",
+        "arxiv": "2511.17373",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "敏捷遇上稳定：用异构数据实现多才多艺的人形控制",
+        "zh_title": "敏捷遇上稳定：用异构数据实现多才多艺的人形控制"
+      },
+      {
+        "title": "VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation/VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation/VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation.html",
+        "dir": "VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation",
+        "arxiv": "2511.15200",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "VIRAL：大规模视觉 Sim-to-Real 的人形移动操作",
+        "zh_title": "VIRAL：大规模视觉 Sim-to-Real 的人形移动操作"
+      },
+      {
+        "title": "HMC: Learning Heterogeneous Meta-Control for Contact-Rich Loco-Manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation/HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation/HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation.html",
+        "dir": "HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation",
+        "arxiv": "2511.14756",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "HMC：面向接触丰富移动操作的异构元控制学习",
+        "zh_title": "HMC：面向接触丰富移动操作的异构元控制学习"
+      },
+      {
         "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
         "path": "papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.html",
