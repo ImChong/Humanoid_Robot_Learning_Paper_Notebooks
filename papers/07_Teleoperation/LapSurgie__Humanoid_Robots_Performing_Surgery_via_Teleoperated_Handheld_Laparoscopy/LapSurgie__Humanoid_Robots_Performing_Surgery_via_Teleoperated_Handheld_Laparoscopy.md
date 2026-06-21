@@ -4,6 +4,7 @@ paper_order: 10
 title: "LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy"
 zhname: "LapSurgie：人形机器人经遥操作手持腹腔镜执行手术"
 category: "Teleoperation"
+arxiv: "2510.03529"
 ---
 
 # LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy

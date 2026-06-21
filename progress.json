@@ -4021,7 +4021,7 @@
     },
     {
       "title": "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot",
-      "folder": "papers/11_Simulation_Benchmark/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot",
+      "folder": "papers/06_Manipulation/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot",
       "note_file": "Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot.md",
       "status": "done",
       "arxiv": "",
@@ -4230,6 +4230,36 @@
       "pdf_file": "",
       "route": "移动操作/WBC",
       "title_cn": "用互补教师蒸馏打造任务空间人形全身控制器"
+    },
+    {
+      "title": "FastStair: Learning to Run Up Stairs with Humanoid Robots",
+      "folder": "papers/05_Locomotion/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots",
+      "note_file": "FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots.md",
+      "status": "done",
+      "arxiv": "2601.10365",
+      "pdf_file": "",
+      "route": "Locomotion",
+      "title_cn": ""
+    },
+    {
+      "title": "SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot",
+      "folder": "papers/06_Manipulation/SafeHumanoid__VLM-RAG-driven_Control_of_Upper_Body_Impedance",
+      "note_file": "SafeHumanoid__VLM-RAG-driven_Control_of_Upper_Body_Impedance.md",
+      "status": "done",
+      "arxiv": "2511.23300",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy",
+      "folder": "papers/07_Teleoperation/LapSurgie__Humanoid_Robots_Performing_Surgery_via_Teleoperated_Handheld_Laparoscopy",
+      "note_file": "LapSurgie__Humanoid_Robots_Performing_Surgery_via_Teleoperated_Handheld_Laparoscopy.md",
+      "status": "done",
+      "arxiv": "2510.03529",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
     }
   ]
 }

@@ -4,6 +4,7 @@ paper_order: 11
 title: "SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot"
 zhname: "SafeHumanoid：用 VLM-RAG 驱动人形上身阻抗控制"
 category: "Manipulation"
+arxiv: "2511.23300"
 ---
 
 # SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot
