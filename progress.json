@@ -4810,6 +4810,66 @@
       "pdf_file": "",
       "route": "Manipulation",
       "title_cn": ""
+    },
+    {
+      "title": "ARMADA: Augmented Reality for Robot Manipulation and Robot-Free Data Acquisition",
+      "folder": "papers/06_Manipulation/ARMADA__Augmented_Reality_for_Robot_Manipulation_and_Robot-Free_Data_Acquisition",
+      "note_file": "ARMADA__Augmented_Reality_for_Robot_Manipulation_and_Robot-Free_Data_Acquisition.md",
+      "status": "done",
+      "arxiv": "2412.10631",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "DexHub and DART: Towards Internet Scale Robot Data Collection",
+      "folder": "papers/06_Manipulation/DexHub_and_DART__Towards_Internet_Scale_Robot_Data_Collection",
+      "note_file": "DexHub_and_DART__Towards_Internet_Scale_Robot_Data_Collection.md",
+      "status": "done",
+      "arxiv": "2411.02214",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Learning to Look Around: Enhancing Teleoperation and Learning with a Human-like Actuated Neck",
+      "folder": "papers/06_Manipulation/Learning_to_Look_Around__Enhancing_Teleoperation_and_Learning",
+      "note_file": "Learning_to_Look_Around__Enhancing_Teleoperation_and_Learning.md",
+      "status": "done",
+      "arxiv": "2411.00704",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Learning to Look: Seeking Information for Decision Making via Policy Factorization",
+      "folder": "papers/06_Manipulation/Learning_to_Look__Seeking_Information_for_Decision_Making_via_Policy_Factorization",
+      "note_file": "Learning_to_Look__Seeking_Information_for_Decision_Making_via_Policy_Factorization.md",
+      "status": "done",
+      "arxiv": "2410.18964",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "MobileH2R: Learning Generalizable Human to Mobile Robot Handover Exclusively from Scalable and Diverse Synthetic Data",
+      "folder": "papers/06_Manipulation/MobileH2R__Learning_Generalizable_Human_to_Mobile_Robot_Handover_from_Synthetic_Data",
+      "note_file": "MobileH2R__Learning_Generalizable_Human_to_Mobile_Robot_Handover_from_Synthetic_Data.md",
+      "status": "done",
+      "arxiv": "2501.04595",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Object-Centric Dexterous Manipulation from Human Motion Data",
+      "folder": "papers/06_Manipulation/Object-Centric_Dexterous_Manipulation_from_Human_Motion_Data",
+      "note_file": "Object-Centric_Dexterous_Manipulation_from_Human_Motion_Data.md",
+      "status": "done",
+      "arxiv": "2411.04005",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
     }
   ]
 }
