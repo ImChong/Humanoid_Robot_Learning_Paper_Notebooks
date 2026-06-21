@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 279,
-      "last_title": "SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot (arXiv:2511.23300)",
-      "next_module": "07_Teleoperation"
+      "last_module": "07_Teleoperation",
+      "last_index": 336,
+      "last_title": "LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy (arXiv:2510.03529)",
+      "next_module": "08_Navigation"
     },
-    "last_summary_index": 279,
-    "last_summary_date": "2026-06-22",
-    "last_summary_title": "SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot",
+    "last_summary_index": 336,
+    "last_summary_date": "2026-06-23",
+    "last_summary_title": "LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-23",
+        "index": 336,
+        "title": "LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy",
+        "folder": "papers/07_Teleoperation/LapSurgie__Humanoid_Robots_Performing_Surgery_via_Teleoperated_Handheld_Laparoscopy",
+        "module": "07_Teleoperation",
+        "arxiv": "2510.03529",
+        "source": "未见公开仓库 · UCSD ARCLAB 项目页"
+      },
       {
         "date": "2026-06-22",
         "index": 279,
