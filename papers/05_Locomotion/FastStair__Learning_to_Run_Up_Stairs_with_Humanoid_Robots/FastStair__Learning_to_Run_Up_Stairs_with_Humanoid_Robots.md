@@ -4,6 +4,7 @@ paper_order: 12
 title: "FastStair: Learning to Run Up Stairs with Humanoid Robots"
 zhname: "FastStair：让人形机器人快速跑上楼梯"
 category: "Locomotion"
+arxiv: "2601.10365"
 ---
 
 # FastStair: Learning to Run Up Stairs with Humanoid Robots
