@@ -577,6 +577,40 @@
         "zh_title": "SplitAdapter：用「负载-动力学解耦」的因子化适配，让人形机器人稳稳搬动重物"
       },
       {
+        "title": "SUGAR: A Scalable Human-Video-Driven Generalizable Humanoid Loco-Manipulation Learning Framework",
+        "path": "papers/04_Loco-Manipulation_and_WBC/SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework/SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework/SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework.html",
+        "dir": "SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework",
+        "arxiv": "2605.20373",
+        "has_open_source": true,
+        "published_date_zh": "2026年5月",
+        "published_date_en": "May 2026",
+        "zhname": "SUGAR：基于人类视频的可扩展通用人形移动操作学习框架",
+        "zh_title": "SUGAR：基于人类视频的可扩展通用人形移动操作学习框架"
+      },
+      {
+        "title": "Heracles: Bridging Precise Tracking and Generative Synthesis for General Humanoid Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control/Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control/Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control.html",
+        "dir": "Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control",
+        "arxiv": "2603.27756",
+        "published_date_zh": "2026年3月",
+        "published_date_en": "Mar 2026",
+        "zhname": "Heracles：桥接精确跟踪与生成式合成的通用人形控制",
+        "zh_title": "Heracles：桥接精确跟踪与生成式合成的通用人形控制"
+      },
+      {
+        "title": "SafeFlow: Real-Time Text-Driven Humanoid Whole-Body Control via Physics-Guided Rectified Flow and Selective Safety Gating",
+        "path": "papers/04_Loco-Manipulation_and_WBC/SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow/SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow/SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow.html",
+        "dir": "SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow",
+        "arxiv": "2603.23983",
+        "published_date_zh": "2026年3月",
+        "published_date_en": "Mar 2026",
+        "zhname": "SafeFlow：物理引导整流流与安全门控的实时文本驱动人形全身控制",
+        "zh_title": "SafeFlow：物理引导整流流与安全门控的实时文本驱动人形全身控制"
+      },
+      {
         "title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
         "path": "papers/04_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.html",
@@ -712,6 +746,17 @@
         "zh_title": "MeshMimic：通过三维场景重建实现几何感知的人形机器人运动学习"
       },
       {
+        "title": "Humanoid Hanoi: Investigating Shared Whole-Body Control for Skill-Based Box Rearrangement",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement/Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement/Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement.html",
+        "dir": "Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement",
+        "arxiv": "2602.13850",
+        "published_date_zh": "2026年2月",
+        "published_date_en": "Feb 2026",
+        "zhname": "Humanoid Hanoi：面向技能化箱体重排的共享全身控制研究",
+        "zh_title": "Humanoid Hanoi：面向技能化箱体重排的共享全身控制研究"
+      },
+      {
         "title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
         "path": "papers/04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation.html",
@@ -780,6 +825,17 @@
         "published_date_en": "Feb 7, 2026 (arXiv)",
         "zhname": "TextOp：实时交互式文本驱动人形机器人动作生成与控制",
         "zh_title": "TextOp：实时交互式文本驱动人形机器人动作生成与控制"
+      },
+      {
+        "title": "DynaRetarget: Dynamically-Feasible Retargeting using Sampling-Based Trajectory Optimization",
+        "path": "papers/04_Loco-Manipulation_and_WBC/DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization/DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization/DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization.html",
+        "dir": "DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization",
+        "arxiv": "2602.06827",
+        "published_date_zh": "2026年2月",
+        "published_date_en": "Feb 2026",
+        "zhname": "DynaRetarget：基于采样轨迹优化的动力学可行运动重定向",
+        "zh_title": "DynaRetarget：基于采样轨迹优化的动力学可行运动重定向"
       },
       {
         "title": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
@@ -928,6 +984,83 @@
         "zh_title": "在杂乱室内场景中实现无碰撞人形穿越（Click-and-Traverse / CAT）"
       },
       {
+        "title": "FRoM-W1: Towards General Humanoid Whole-Body Control with Language Instructions",
+        "path": "papers/04_Loco-Manipulation_and_WBC/FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions/FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions/FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions.html",
+        "dir": "FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions",
+        "arxiv": "2601.12799",
+        "published_date_zh": "2026年1月",
+        "published_date_en": "Jan 2026",
+        "zhname": "FRoM-W1：面向语言指令的通用人形全身控制开源框架",
+        "zh_title": "FRoM-W1：面向语言指令的通用人形全身控制开源框架"
+      },
+      {
+        "title": "Learning Whole-Body Human-Humanoid Interaction from Human-Human Demonstrations",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations/Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations/Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations.html",
+        "dir": "Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations",
+        "arxiv": "2601.09518",
+        "published_date_zh": "2026年1月",
+        "published_date_en": "Jan 2026",
+        "zhname": "从人-人示范学习人-人形全身交互",
+        "zh_title": "从人-人示范学习人-人形全身交互"
+      },
+      {
+        "title": "Hiking in the Wild: A Scalable Perceptive Parkour Framework for Humanoids",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids/Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids/Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids.html",
+        "dir": "Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids",
+        "arxiv": "2601.07718",
+        "published_date_zh": "2026年1月",
+        "published_date_en": "Jan 2026",
+        "zhname": "Hiking in the Wild：可扩展的人形感知式跑酷框架",
+        "zh_title": "Hiking in the Wild：可扩展的人形感知式跑酷框架"
+      },
+      {
+        "title": "Deep Whole-body Parkour",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Deep_Whole-body_Parkour/Deep_Whole-body_Parkour.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Deep_Whole-body_Parkour/Deep_Whole-body_Parkour.html",
+        "dir": "Deep_Whole-body_Parkour",
+        "arxiv": "2601.07701",
+        "published_date_zh": "2026年1月",
+        "published_date_en": "Jan 2026",
+        "zhname": "Deep Whole-body Parkour：感知式通用全身运动控制",
+        "zh_title": "Deep Whole-body Parkour：感知式通用全身运动控制"
+      },
+      {
+        "title": "Coordinated Humanoid Manipulation with Choice Policies",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Coordinated_Humanoid_Manipulation_with_Choice_Policies/Coordinated_Humanoid_Manipulation_with_Choice_Policies.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Coordinated_Humanoid_Manipulation_with_Choice_Policies/Coordinated_Humanoid_Manipulation_with_Choice_Policies.html",
+        "dir": "Coordinated_Humanoid_Manipulation_with_Choice_Policies",
+        "arxiv": "2512.25072",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "Coordinated Humanoid Manipulation：用「选择策略」做协调全身操作",
+        "zh_title": "Coordinated Humanoid Manipulation：用「选择策略」做协调全身操作"
+      },
+      {
+        "title": "UniAct: Unified Motion Generation and Action Streaming for Humanoid Robots",
+        "path": "papers/04_Loco-Manipulation_and_WBC/UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots/UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots/UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots.html",
+        "dir": "UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots",
+        "arxiv": "2512.24321",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "UniAct：人形机器人的统一动作生成与流式执行",
+        "zh_title": "UniAct：人形机器人的统一动作生成与流式执行"
+      },
+      {
+        "title": "EGM: Efficiently Learning General Motion Tracking Policy for High Dynamic Humanoid Whole-Body Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/EGM__Efficiently_Learning_General_Motion_Tracking_for_High_Dynamic_Humanoid_WBC/EGM__Efficiently_Learning_General_Motion_Tracking_for_High_Dynamic_Humanoid_WBC.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/EGM__Efficiently_Learning_General_Motion_Tracking_for_High_Dynamic_Humanoid_WBC/EGM__Efficiently_Learning_General_Motion_Tracking_for_High_Dynamic_Humanoid_WBC.html",
+        "dir": "EGM__Efficiently_Learning_General_Motion_Tracking_for_High_Dynamic_Humanoid_WBC",
+        "arxiv": "2512.19043",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "EGM：高效学习高动态人形全身控制的通用动作跟踪策略",
+        "zh_title": "EGM：高效学习高动态人形全身控制的通用动作跟踪策略"
+      },
+      {
         "title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
         "path": "papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.html",
@@ -937,6 +1070,182 @@
         "published_date_en": "Dec 19, 2025 (arXiv)",
         "zhname": "面向人形机器人的语义化伴语手势合成与实时控制",
         "zh_title": "面向人形机器人的语义化伴语手势合成与实时控制"
+      },
+      {
+        "title": "CHIP: Adaptive Compliance for Humanoid Control through Hindsight Perturbation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation/CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation/CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation.html",
+        "dir": "CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation",
+        "arxiv": "2512.14689",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "CHIP：用「事后扰动」实现人形控制的自适应柔顺",
+        "zh_title": "CHIP：用「事后扰动」实现人形控制的自适应柔顺"
+      },
+      {
+        "title": "Learning Agile Striker Skills for Humanoid Soccer Robots from Noisy Sensory Input",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Input/Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Input.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Input/Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Input.html",
+        "dir": "Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Input",
+        "arxiv": "2512.06571",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "从含噪感知学习人形足球机器人的敏捷射门技能",
+        "zh_title": "从含噪感知学习人形足球机器人的敏捷射门技能"
+      },
+      {
+        "title": "Discovering Self-Protective Falling Policy for Humanoid Robot via Deep Reinforcement Learning",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_RL/Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_RL.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_RL/Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_RL.html",
+        "dir": "Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_RL",
+        "arxiv": "2512.01336",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "用深度强化学习发现人形机器人的自保护跌落策略",
+        "zh_title": "用深度强化学习发现人形机器人的自保护跌落策略"
+      },
+      {
+        "title": "Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer/Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer/Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer.html",
+        "dir": "Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer",
+        "arxiv": "2512.01061",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "为人形「像素到动作」策略迁移打开 Sim-to-Real 之门",
+        "zh_title": "为人形「像素到动作」策略迁移打开 Sim-to-Real 之门"
+      },
+      {
+        "title": "Commanding Humanoid by Free-form Language: A Large Language Action Model with Unified Motion Vocabulary",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Commanding_Humanoid_by_Free-form_Language__LLA_with_Unified_Motion_Vocabulary/Commanding_Humanoid_by_Free-form_Language__LLA_with_Unified_Motion_Vocabulary.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Commanding_Humanoid_by_Free-form_Language__LLA_with_Unified_Motion_Vocabulary/Commanding_Humanoid_by_Free-form_Language__LLA_with_Unified_Motion_Vocabulary.html",
+        "dir": "Commanding_Humanoid_by_Free-form_Language__LLA_with_Unified_Motion_Vocabulary",
+        "arxiv": "2511.22963",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "Humanoid-LLA：用统一动作词表的大语言-动作模型以自由语言指挥人形",
+        "zh_title": "Humanoid-LLA：用统一动作词表的大语言-动作模型以自由语言指挥人形"
+      },
+      {
+        "title": "Kinematics-Aware Multi-Policy Reinforcement Learning for Force-Capable Humanoid Loco-Manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Kinematics-Aware_Multi-Policy_RL_for_Force-Capable_Humanoid_Loco-Manipulation/Kinematics-Aware_Multi-Policy_RL_for_Force-Capable_Humanoid_Loco-Manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Kinematics-Aware_Multi-Policy_RL_for_Force-Capable_Humanoid_Loco-Manipulation/Kinematics-Aware_Multi-Policy_RL_for_Force-Capable_Humanoid_Loco-Manipulation.html",
+        "dir": "Kinematics-Aware_Multi-Policy_RL_for_Force-Capable_Humanoid_Loco-Manipulation",
+        "arxiv": "2511.21169",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "面向力交互的人形移动操作：运动学感知的多策略强化学习",
+        "zh_title": "面向力交互的人形移动操作：运动学感知的多策略强化学习"
+      },
+      {
+        "title": "SENTINEL: A Fully End-to-End Language-Action Model for Humanoid Whole Body Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Control/SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Control.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Control/SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Control.html",
+        "dir": "SENTINEL__A_Fully_End-to-End_Language-Action_Model_for_Humanoid_Whole_Body_Control",
+        "arxiv": "2511.19236",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "SENTINEL：面向人形全身控制的全端到端语言-动作模型",
+        "zh_title": "SENTINEL：面向人形全身控制的全端到端语言-动作模型"
+      },
+      {
+        "title": "SafeFall: Learning Protective Control for Humanoid Robots",
+        "path": "papers/04_Loco-Manipulation_and_WBC/SafeFall__Learning_Protective_Control_for_Humanoid_Robots/SafeFall__Learning_Protective_Control_for_Humanoid_Robots.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/SafeFall__Learning_Protective_Control_for_Humanoid_Robots/SafeFall__Learning_Protective_Control_for_Humanoid_Robots.html",
+        "dir": "SafeFall__Learning_Protective_Control_for_Humanoid_Robots",
+        "arxiv": "2511.18509",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "SafeFall：为人形机器人学习护身保护控制",
+        "zh_title": "SafeFall：为人形机器人学习护身保护控制"
+      },
+      {
+        "title": "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data/Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data/Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data.html",
+        "dir": "Agility_Meets_Stability__Versatile_Humanoid_Control_with_Heterogeneous_Data",
+        "arxiv": "2511.17373",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "敏捷遇上稳定：用异构数据实现多才多艺的人形控制",
+        "zh_title": "敏捷遇上稳定：用异构数据实现多才多艺的人形控制"
+      },
+      {
+        "title": "VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation/VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation/VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation.html",
+        "dir": "VIRAL__Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation",
+        "arxiv": "2511.15200",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "VIRAL：大规模视觉 Sim-to-Real 的人形移动操作",
+        "zh_title": "VIRAL：大规模视觉 Sim-to-Real 的人形移动操作"
+      },
+      {
+        "title": "HMC: Learning Heterogeneous Meta-Control for Contact-Rich Loco-Manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation/HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation/HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation.html",
+        "dir": "HMC__Learning_Heterogeneous_Meta-Control_for_Contact-Rich_Loco-Manipulation",
+        "arxiv": "2511.14756",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "HMC：面向接触丰富移动操作的异构元控制学习",
+        "zh_title": "HMC：面向接触丰富移动操作的异构元控制学习"
+      },
+      {
+        "title": "Humanoid Whole-Body Badminton via Multi-Stage Reinforcement Learning",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning/Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning/Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning.html",
+        "dir": "Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning",
+        "arxiv": "2511.11218",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "多阶段强化学习实现人形全身羽毛球",
+        "zh_title": "多阶段强化学习实现人形全身羽毛球"
+      },
+      {
+        "title": "Robot Crash Course: Learning Soft and Stylized Falling",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Robot_Crash_Course__Learning_Soft_and_Stylized_Falling/Robot_Crash_Course__Learning_Soft_and_Stylized_Falling.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Robot_Crash_Course__Learning_Soft_and_Stylized_Falling/Robot_Crash_Course__Learning_Soft_and_Stylized_Falling.html",
+        "dir": "Robot_Crash_Course__Learning_Soft_and_Stylized_Falling",
+        "arxiv": "2511.10635",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "Robot Crash Course：学习柔和且可指定姿态的跌倒",
+        "zh_title": "Robot Crash Course：学习柔和且可指定姿态的跌倒"
+      },
+      {
+        "title": "Unveiling the Impact of Data and Model Scaling on High-Level Control for Humanoid Robots",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoid/Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoid.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoid/Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoid.html",
+        "dir": "Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoid",
+        "arxiv": "2511.09241",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "揭示数据与模型规模对人形高层控制的影响",
+        "zh_title": "揭示数据与模型规模对人形高层控制的影响"
+      },
+      {
+        "title": "Unified Humanoid Fall-Safety Policy from a Few Demonstrations",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations/Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations/Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations.html",
+        "dir": "Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations",
+        "arxiv": "2511.07407",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "从少量示范学习统一的人形跌落安全策略",
+        "zh_title": "从少量示范学习统一的人形跌落安全策略"
+      },
+      {
+        "title": "Towards Adaptive Humanoid Control via Multi-Behavior Distillation and Reinforced Fine-Tuning",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced_Fine-Tuning/Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced_Fine-Tuning.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced_Fine-Tuning/Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced_Fine-Tuning.html",
+        "dir": "Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced_Fine-Tuning",
+        "arxiv": "2511.06371",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "AHC：用多行为蒸馏与强化微调迈向自适应人形控制",
+        "zh_title": "AHC：用多行为蒸馏与强化微调迈向自适应人形控制"
       },
       {
         "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
@@ -1295,6 +1604,17 @@
         "zh_title": "RPL：挑战性地形上的鲁棒人形感知行走"
       },
       {
+        "title": "Toward Reliable Sim-to-Real Predictability for MoE-based Robust Quadrupedal Locomotion",
+        "path": "papers/05_Locomotion/Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion/Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion.md",
+        "url": "/papers/05_Locomotion/Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion/Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion.html",
+        "dir": "Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion",
+        "arxiv": "2602.00678",
+        "published_date_zh": "2026年1月",
+        "published_date_en": "Jan 2026",
+        "zhname": "面向 MoE 鲁棒四足运动的可靠 Sim-to-Real 可预测性",
+        "zh_title": "面向 MoE 鲁棒四足运动的可靠 Sim-to-Real 可预测性"
+      },
+      {
         "title": "FastStair: Learning to Run Up Stairs with Humanoid Robots",
         "path": "papers/05_Locomotion/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots.md",
         "url": "/papers/05_Locomotion/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots.html",
@@ -1406,6 +1726,17 @@
         "zh_title": "Gallant：3D 受限地形上的体素栅格人形行走与局部导航"
       },
       {
+        "title": "Learning Social Navigation from Positive and Negative Demonstrations and Rule-Based Specifications",
+        "path": "papers/08_Navigation/Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications/Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications.md",
+        "url": "/papers/08_Navigation/Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications/Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications.html",
+        "dir": "Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications",
+        "arxiv": "2510.12215",
+        "published_date_zh": "2025年10月",
+        "published_date_en": "Oct 2025",
+        "zhname": "从正负示范与规则规范学习社交导航",
+        "zh_title": "从正负示范与规则规范学习社交导航"
+      },
+      {
         "title": "Quantum deep reinforcement learning for humanoid robot navigation task",
         "path": "papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.md",
         "url": "/papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.html",
@@ -1439,6 +1770,39 @@
         "zh_title": "INTENTION：用交互直觉与具身 VLM 推断人形机器人的动作倾向"
       },
       {
+        "title": "Hand-Eye Autonomous Delivery: Learning Humanoid Navigation, Locomotion and Reaching",
+        "path": "papers/08_Navigation/HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching/HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching.md",
+        "url": "/papers/08_Navigation/HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching/HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching.html",
+        "dir": "HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching",
+        "arxiv": "2508.03068",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "HEAD：学习人形导航、运动与触达的手眼自主递送",
+        "zh_title": "HEAD：学习人形导航、运动与触达的手眼自主递送"
+      },
+      {
+        "title": "Humanoid Occupancy: Enabling A Generalized Multimodal Occupancy Perception System on Humanoid Robots",
+        "path": "papers/08_Navigation/Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System/Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System.md",
+        "url": "/papers/08_Navigation/Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System/Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System.html",
+        "dir": "Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System",
+        "arxiv": "2507.20217",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "Humanoid Occupancy：面向人形机器人的通用多模态占据感知系统",
+        "zh_title": "Humanoid Occupancy：面向人形机器人的通用多模态占据感知系统"
+      },
+      {
+        "title": "Reinforcement Learning with Data Bootstrapping for Dynamic Subgoal Pursuit in Humanoid Robot Navigation",
+        "path": "papers/08_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation.md",
+        "url": "/papers/08_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation.html",
+        "dir": "RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation",
+        "arxiv": "2506.02206",
+        "published_date_zh": "2025年6月",
+        "published_date_en": "Jun 2025",
+        "zhname": "用数据自举的强化学习实现人形导航中的动态子目标追踪",
+        "zh_title": "用数据自举的强化学习实现人形导航中的动态子目标追踪"
+      },
+      {
         "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
         "path": "papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.md",
         "url": "/papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.html",
@@ -1448,6 +1812,17 @@
         "published_date_en": "Jun 1, 2025 (arXiv)",
         "zhname": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航",
         "zh_title": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航"
+      },
+      {
+        "title": "NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance",
+        "path": "papers/08_Navigation/NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy/NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy.md",
+        "url": "/papers/08_Navigation/NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy/NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy.html",
+        "dir": "NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy",
+        "arxiv": "2505.08712",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "NavDP：用特权信息引导学习 Sim-to-Real 导航扩散策略",
+        "zh_title": "NavDP：用特权信息引导学习 Sim-to-Real 导航扩散策略"
       },
       {
         "title": "NaVILA: Legged Robot Vision-Language-Action Model for Navigation",
@@ -1613,6 +1988,17 @@
         "published_date_en": "Aug 17, 2025 (arXiv v1), CoRL 2025 录用",
         "zhname": "机器人训练机器人：用机械臂老师在真实世界自动适配/从零训练人形策略（RTR）",
         "zh_title": "机器人训练机器人：用机械臂老师在真实世界自动适配/从零训练人形策略（RTR）"
+      },
+      {
+        "title": "DiffCoTune: Differentiable Co-Tuning for Cross-domain Robot Control",
+        "path": "papers/10_Sim-to-Real/DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control/DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control.md",
+        "url": "/papers/10_Sim-to-Real/DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control/DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control.html",
+        "dir": "DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control",
+        "arxiv": "2505.24068",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "DiffCoTune：面向跨域机器人控制的可微协同调参",
+        "zh_title": "DiffCoTune：面向跨域机器人控制的可微协同调参"
       },
       {
         "title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
@@ -1974,6 +2360,12 @@
       }
     ],
     "zhname": "人体动作分析与生成",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
+  },
+  "_archived": {
+    "display_name": " archived",
+    "papers": [],
     "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
     "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   }
