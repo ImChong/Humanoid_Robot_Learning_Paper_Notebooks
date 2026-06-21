@@ -577,6 +577,18 @@
         "zh_title": "MotionWAM：面向实时人形移动操作的基础世界动作模型"
       },
       {
+        "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+        "path": "papers/04_Loco-Manipulation_and_WBC/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers.html",
+        "dir": "HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers",
+        "arxiv": "2606.06493",
+        "has_open_source": true,
+        "published_date_zh": "2026年6月4日（arXiv v1）",
+        "published_date_en": "Jun 4, 2026 (arXiv v1)",
+        "zhname": "HANDOFF：用「互补教师蒸馏」打造任务空间人形全身控制器",
+        "zh_title": "HANDOFF：用「互补教师蒸馏」打造任务空间人形全身控制器"
+      },
+      {
         "title": "SplitAdapter: Load-Aware Humanoid Loco-Manipulation via Factorized Adaptation",
         "path": "papers/04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.html",
@@ -1623,7 +1635,7 @@
         "arxiv": "2509.12858",
         "published_date_zh": "2025年9月16日（arXiv）",
         "published_date_en": "Sep 16, 2025 (arXiv)",
-        "zhname": "对比表征学习：把仿真里的特权信息\"蒸\"进 actor 隐状态，再驱动一个自适应步态时钟",
+        "zhname": "对比表征学习：把仿真里的特权信息\\\"蒸\\\"进 actor 隐状态，再驱动一个自适应步态时钟",
         "zh_title": "对比表征学习：把仿真里的特权信息\"蒸\"进 actor 隐状态，再驱动一个自适应步态时钟"
       },
       {

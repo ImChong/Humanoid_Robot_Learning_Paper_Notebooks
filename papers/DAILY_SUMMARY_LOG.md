@@ -288,6 +288,7 @@
 | 549 | DexLink Hand: A Compact, Affordable, 16-DOF Linkage-Driven Hand with Human-Like Dexterity | 12_Hardware_Design | ✅ 已完成（2026-06-18） |
 | 550 | OMG: Omni-Modal Motion Generation for Generalist Humanoid Control | 13_Physics-Based_Animation | ✅ 已完成（2026-06-19） |
 | 482 | Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction | 14_Human_Motion | ✅ 已完成（2026-06-20） |
-| ? | （明日：04_Loco-Manipulation_and_WBC 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 04_Loco-Manipulation_and_WBC | ⏭️ 下一篇候选 |
+| 546 | HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers | 04_Loco-Manipulation_and_WBC | ✅ 已完成（2026-06-21） |
+| ? | （明日：05_Locomotion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 05_Locomotion | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

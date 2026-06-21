@@ -264,6 +264,7 @@
 | 532  | [ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting](https://arxiv.org/abs/2605.06593) | 2026.05 |  | ⏳ 待读 |
 | 533  | [SUGAR: A Scalable Human-Video-Driven Generalizable Humanoid Loco-Manipulation Learning Framework](https://arxiv.org/abs/2605.20373) | 2026.05 | 🌟 | ⏳ 待读 |
 | 534  | [SplitAdapter: Load-Aware Humanoid Loco-Manipulation via Factorized Adaptation](https://arxiv.org/abs/2606.03297) ✅ [笔记](04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.md) | 2026.06 | 2026-06-14 | ✅ 已总结 |
+| 546  | [HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers](https://arxiv.org/abs/2606.06493) ✅ [笔记](04_Loco-Manipulation_and_WBC/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers.md) | 2026.06 | 2026-06-21 | ✅ 已总结 |
 
 
 ### Locomotion（84篇）
