@@ -566,29 +566,6 @@
     "display_name": "Loco-Manipulation and WBC",
     "papers": [
       {
-        "title": "MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation",
-        "path": "papers/04_Loco-Manipulation_and_WBC/MotionWAM__Foundation_World_Action_Models_for_Real-Time_Humanoid_Loco-Mani/MotionWAM__Foundation_World_Action_Models_for_Real-Time_Humanoid_Loco-Mani.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/MotionWAM__Foundation_World_Action_Models_for_Real-Time_Humanoid_Loco-Mani/MotionWAM__Foundation_World_Action_Models_for_Real-Time_Humanoid_Loco-Mani.html",
-        "dir": "MotionWAM__Foundation_World_Action_Models_for_Real-Time_Humanoid_Loco-Mani",
-        "arxiv": "2606.09215",
-        "published_date_zh": "2026年6月8日（arXiv）",
-        "published_date_en": "Jun 8, 2026 (arXiv)",
-        "zhname": "MotionWAM：面向实时人形移动操作的基础世界动作模型",
-        "zh_title": "MotionWAM：面向实时人形移动操作的基础世界动作模型"
-      },
-      {
-        "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
-        "path": "papers/04_Loco-Manipulation_and_WBC/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers.md",
-        "url": "/papers/04_Loco-Manipulation_and_WBC/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers.html",
-        "dir": "HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers",
-        "arxiv": "2606.06493",
-        "has_open_source": true,
-        "published_date_zh": "2026年6月4日（arXiv v1）",
-        "published_date_en": "Jun 4, 2026 (arXiv v1)",
-        "zhname": "HANDOFF：用「互补教师蒸馏」打造任务空间人形全身控制器",
-        "zh_title": "HANDOFF：用「互补教师蒸馏」打造任务空间人形全身控制器"
-      },
-      {
         "title": "SplitAdapter: Load-Aware Humanoid Loco-Manipulation via Factorized Adaptation",
         "path": "papers/04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.html",
@@ -982,18 +959,6 @@
     "display_name": "Manipulation",
     "papers": [
       {
-        "title": "Learning Versatile Humanoid Manipulation with Touch Dreaming",
-        "path": "papers/06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.md",
-        "url": "/papers/06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.html",
-        "dir": "HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming",
-        "arxiv": "2604.13015",
-        "has_open_source": true,
-        "published_date_zh": "2026年4月14日（arXiv，v2 修订 2026年4月27日）",
-        "published_date_en": "Apr 14, 2026 (arXiv, v2 revised Apr 27, 2026)",
-        "zhname": "HTD（Touch Dreaming）：触觉预想式通用人形操作学习",
-        "zh_title": "HTD（Touch Dreaming）：触觉预想式通用人形操作学习"
-      },
-      {
         "title": "Visual-tactile pretraining and online multitask learning for humanlike manipulation dexterity",
         "path": "papers/06_Manipulation/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity.md",
         "url": "/papers/06_Manipulation/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity.html",
@@ -1129,17 +1094,6 @@
   "07_Teleoperation": {
     "display_name": "Teleoperation",
     "papers": [
-      {
-        "title": "X-OP: Cross-Morphology Whole-Body Teleoperation via MPC Retargeting",
-        "path": "papers/07_Teleoperation/X-OP__Cross-Morphology_Whole-Body_Teleoperation_via_MPC_Retargeting/X-OP__Cross-Morphology_Whole-Body_Teleoperation_via_MPC_Retargeting.md",
-        "url": "/papers/07_Teleoperation/X-OP__Cross-Morphology_Whole-Body_Teleoperation_via_MPC_Retargeting/X-OP__Cross-Morphology_Whole-Body_Teleoperation_via_MPC_Retargeting.html",
-        "dir": "X-OP__Cross-Morphology_Whole-Body_Teleoperation_via_MPC_Retargeting",
-        "arxiv": "2606.07934",
-        "published_date_zh": "2026年6月6日（arXiv）",
-        "published_date_en": "Jun 6, 2026 (arXiv)",
-        "zhname": "X-OP：基于 MPC 重定向的跨形态全身遥操作",
-        "zh_title": "X-OP：基于 MPC 重定向的跨形态全身遥操作"
-      },
       {
         "title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
         "path": "papers/07_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation.md",
@@ -1504,30 +1458,6 @@
     "display_name": "State Estimation",
     "papers": [
       {
-        "title": "Learning Contact Representation for Leg Odometry",
-        "path": "papers/09_State_Estimation/Learning_Contact_Representation_for_Leg_Odometry/Learning_Contact_Representation_for_Leg_Odometry.md",
-        "url": "/papers/09_State_Estimation/Learning_Contact_Representation_for_Leg_Odometry/Learning_Contact_Representation_for_Leg_Odometry.html",
-        "dir": "Learning_Contact_Representation_for_Leg_Odometry",
-        "arxiv": "2606.05501",
-        "has_open_source": true,
-        "published_date_zh": "2026年6月3日（arXiv）",
-        "published_date_en": "Jun 3, 2026 (arXiv)",
-        "zhname": "自监督学接触表征：不靠力传感器，仅用关节编码器把「支撑/摆动」分出来喂里程计",
-        "zh_title": "自监督学接触表征：不靠力传感器，仅用关节编码器把「支撑/摆动」分出来喂里程计"
-      },
-      {
-        "title": "Four Simple Proprioceptive Estimators for Legged Robots",
-        "path": "papers/09_State_Estimation/Four_Simple_Proprioceptive_Estimators_for_Legged_Robots/Four_Simple_Proprioceptive_Estimators_for_Legged_Robots.md",
-        "url": "/papers/09_State_Estimation/Four_Simple_Proprioceptive_Estimators_for_Legged_Robots/Four_Simple_Proprioceptive_Estimators_for_Legged_Robots.html",
-        "dir": "Four_Simple_Proprioceptive_Estimators_for_Legged_Robots",
-        "arxiv": "2605.23100",
-        "has_open_source": true,
-        "published_date_zh": "2026年5月21日（arXiv）",
-        "published_date_en": "May 21, 2026 (arXiv)",
-        "zhname": "足式机器人四种简易本体感知估计器",
-        "zh_title": "足式机器人四种简易本体感知估计器"
-      },
-      {
         "title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
         "path": "papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md",
         "url": "/papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.html",
@@ -1548,17 +1478,6 @@
         "published_date_en": "Nov 20, 2025 (arXiv)",
         "zhname": "InEKFormer：用 InEKF + Transformer 的混合滤波替代手调噪声协方差",
         "zh_title": "InEKFormer：用 InEKF + Transformer 的混合滤波替代手调噪声协方差"
-      },
-      {
-        "title": "Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation",
-        "path": "papers/09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.md",
-        "url": "/papers/09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.html",
-        "dir": "Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation",
-        "arxiv": "2510.16755",
-        "published_date_zh": "2025年10月19日（arXiv）",
-        "published_date_en": "Oct 19, 2025 (arXiv)",
-        "zhname": "自适应不变扩展卡尔曼滤波：让足式机器人状态估计自己调接触噪声",
-        "zh_title": "自适应不变扩展卡尔曼滤波：让足式机器人状态估计自己调接触噪声"
       },
       {
         "title": "Physics-Informed Neural Networks with Unscented Kalman Filter for Sensorless Joint Torque Estimation in Humanoid Robots",
@@ -1614,17 +1533,6 @@
   "10_Sim-to-Real": {
     "display_name": "Sim-to-Real",
     "papers": [
-      {
-        "title": "HALO: Closing Sim-to-Real Gap for Heavy-loaded Humanoid Agile Motion Skills via Differentiable Simulation",
-        "path": "papers/10_Sim-to-Real/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion.md",
-        "url": "/papers/10_Sim-to-Real/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion.html",
-        "dir": "HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion",
-        "arxiv": "2603.15084",
-        "published_date_zh": "2026年3月16日（arXiv）",
-        "published_date_en": "Mar 16, 2026 (arXiv)",
-        "zhname": "HALO：可微仿真下的负重人形敏捷运动 Sim-to-Real",
-        "zh_title": "HALO：可微仿真下的负重人形敏捷运动 Sim-to-Real"
-      },
       {
         "title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
         "path": "papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.md",
@@ -1705,17 +1613,6 @@
         "published_date_en": "Apr 9, 2025 (arXiv v1)",
         "zhname": "在关节力矩空间注入「状态相关随机扰动」，逼策略学会扛住域随机化覆盖不到的现实差",
         "zh_title": "在关节力矩空间注入「状态相关随机扰动」，逼策略学会扛住域随机化覆盖不到的现实差"
-      },
-      {
-        "title": "RMA: Rapid Motor Adaptation for Legged Robots",
-        "path": "papers/10_Sim-to-Real/RMA_Rapid_Motor_Adaptation/RMA_Rapid_Motor_Adaptation.md",
-        "url": "/papers/10_Sim-to-Real/RMA_Rapid_Motor_Adaptation/RMA_Rapid_Motor_Adaptation.html",
-        "dir": "RMA_Rapid_Motor_Adaptation",
-        "arxiv": "2107.04034",
-        "published_date_zh": "2021年7月（arXiv）",
-        "published_date_en": "Jul 2021 (arXiv)",
-        "zhname": "RMA：足式机器人的快速电机自适应",
-        "zh_title": "RMA：足式机器人的快速电机自适应"
       }
     ],
     "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
@@ -1727,28 +1624,6 @@
   "12_Hardware_Design": {
     "display_name": "Hardware Design",
     "papers": [
-      {
-        "title": "DexLink Hand: A Compact, Affordable, 16-DOF Linkage-Driven Hand with Human-Like Dexterity",
-        "path": "papers/12_Hardware_Design/DexLink_Hand__Compact_Affordable_16-DOF_Linkage-Driven_Hand/DexLink_Hand__Compact_Affordable_16-DOF_Linkage-Driven_Hand.md",
-        "url": "/papers/12_Hardware_Design/DexLink_Hand__Compact_Affordable_16-DOF_Linkage-Driven_Hand/DexLink_Hand__Compact_Affordable_16-DOF_Linkage-Driven_Hand.html",
-        "dir": "DexLink_Hand__Compact_Affordable_16-DOF_Linkage-Driven_Hand",
-        "arxiv": "2606.17418",
-        "published_date_zh": "2026年6月16日（arXiv）",
-        "published_date_en": "Jun 16, 2026 (arXiv)",
-        "zhname": "DexLink Hand：紧凑低价的 16-DoF 连杆驱动灵巧手",
-        "zh_title": "DexLink Hand：紧凑低价的 16-DoF 连杆驱动灵巧手"
-      },
-      {
-        "title": "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation",
-        "path": "papers/12_Hardware_Design/X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation/X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation.md",
-        "url": "/papers/12_Hardware_Design/X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation/X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation.html",
-        "dir": "X2-N__Transformable_Wheel-legged_Humanoid_Robot_with_Dual-mode_Locomotion_and_Manipulation",
-        "arxiv": "2604.21541",
-        "published_date_zh": "2026年4月23日（arXiv）",
-        "published_date_en": "Apr 23, 2026 (arXiv)",
-        "zhname": "X2-N：可形变轮足双形态人形机器人",
-        "zh_title": "X2-N：可形变轮足双形态人形机器人"
-      },
       {
         "title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids",
         "path": "papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md",
@@ -1815,16 +1690,6 @@
         "published_date_en": "Dec 8, 2025 (arXiv)",
         "zhname": "DIJIT：为「主动观察者」打造的仿人双目机器人头——把人眼的转、聚、扭和脖子一起搬进硬件",
         "zh_title": "DIJIT：为「主动观察者」打造的仿人双目机器人头——把人眼的转、聚、扭和脖子一起搬进硬件"
-      },
-      {
-        "title": "Unitree H1 Humanoid Robot Whitepaper & Specifications",
-        "path": "papers/12_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.md",
-        "url": "/papers/12_Hardware_Design/Unitree_H1_Whitepaper/Unitree_H1_Whitepaper.html",
-        "dir": "Unitree_H1_Whitepaper",
-        "published_date_zh": "2023年8月",
-        "published_date_en": "Aug 2023",
-        "zhname": "Unitree H1 人形机器人白皮书与技术规格",
-        "zh_title": "Unitree H1 人形机器人白皮书与技术规格"
       }
     ],
     "zhname": "硬件设计",
@@ -1868,18 +1733,6 @@
         "published_date_en": "Feb 11, 2026 (arXiv)",
         "zhname": "MolmoSpaces：230k+ 室内场景 × 130k+ 物体 × 42M 抓取的全开源具身 AI 评测生态",
         "zh_title": "MolmoSpaces：230k+ 室内场景 × 130k+ 物体 × 42M 抓取的全开源具身 AI 评测生态"
-      },
-      {
-        "title": "Genie Sim 3.0: A High-Fidelity Comprehensive Simulation Platform for Humanoid Robot",
-        "path": "papers/11_Simulation_Benchmark/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot.md",
-        "url": "/papers/11_Simulation_Benchmark/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot/Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot.html",
-        "dir": "Genie_Sim_3.0__A_High-Fidelity_Comprehensive_Simulation_Platform_for_Humanoid_Robot",
-        "arxiv": "2601.02078",
-        "has_open_source": true,
-        "published_date_zh": "2026年1月5日（arXiv v1），2026年4月28日（v2 修订）",
-        "published_date_en": "Jan 5, 2026 (arXiv v1), Apr 28, 2026 (v2 revised)",
-        "zhname": "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台",
-        "zh_title": "Genie Sim 3.0：面向人形机器人的高保真一体化仿真平台"
       },
       {
         "title": "Benchmarking Humanoid Imitation Learning with Motion Difficulty",
@@ -1949,40 +1802,6 @@
     "display_name": "Physics-Based Animation",
     "papers": [
       {
-        "title": "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control",
-        "path": "papers/13_Physics-Based_Animation/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control.md",
-        "url": "/papers/13_Physics-Based_Animation/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control/OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control.html",
-        "dir": "OMG__Omni-Modal_Motion_Generation_for_Generalist_Humanoid_Control",
-        "arxiv": "2606.10340",
-        "has_open_source": true,
-        "published_date_zh": "2026年6月9日（arXiv）",
-        "published_date_en": "Jun 9, 2026 (arXiv)",
-        "zhname": "OMG：通用人形控制的多模态运动生成",
-        "zh_title": "OMG：通用人形控制的多模态运动生成"
-      },
-      {
-        "title": "Physics-Based Motion Tracking of Contact-Rich Interacting Characters",
-        "path": "papers/13_Physics-Based_Animation/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters.md",
-        "url": "/papers/13_Physics-Based_Animation/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters/Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters.html",
-        "dir": "Physics-Based_Motion_Tracking_of_Contact-Rich_Interacting_Characters",
-        "arxiv": "2604.07984",
-        "published_date_zh": "2026年4月9日（arXiv）· Eurographics 2026 / Computer Graphics Forum",
-        "published_date_en": "Apr 9, 2026 (arXiv)· Eurographics 2026 / Computer Graphics Forum",
-        "zhname": "接触密集多角色交互动作的物理跟踪"
-      },
-      {
-        "title": "PhysMoDPO: Physically-Plausible Humanoid Motion with Preference Optimization",
-        "path": "papers/13_Physics-Based_Animation/PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization/PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization.md",
-        "url": "/papers/13_Physics-Based_Animation/PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization/PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization.html",
-        "dir": "PhysMoDPO__Physically-Plausible_Humanoid_Motion_with_Preference_Optimization",
-        "arxiv": "2603.13228",
-        "has_open_source": true,
-        "published_date_zh": "2026年3月13日（arXiv，2026年3月16日修订）",
-        "published_date_en": "Mar 13, 2026 (arXiv, Mar 16, 2026 revised)",
-        "zhname": "PhysMoDPO：用偏好优化把文本生成的动作「磨」成物理可执行的人形动作",
-        "zh_title": "PhysMoDPO：用偏好优化把文本生成的动作「磨」成物理可执行的人形动作"
-      },
-      {
         "title": "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control",
         "path": "papers/13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis/Iterative_Closed-Loop_Motion_Synthesis.md",
         "url": "/papers/13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis/Iterative_Closed-Loop_Motion_Synthesis.html",
@@ -2039,17 +1858,6 @@
         "published_date_en": "Sep 26, 2025 (arXiv)",
         "zhname": "Learning to Ball：用「策略组合 + 高层软路由」拼出长程篮球连招",
         "zh_title": "Learning to Ball：用「策略组合 + 高层软路由」拼出长程篮球连招"
-      },
-      {
-        "title": "Character Controllers using Motion VAEs",
-        "path": "papers/13_Physics-Based_Animation/MotionVAE/MotionVAE.md",
-        "url": "/papers/13_Physics-Based_Animation/MotionVAE/MotionVAE.html",
-        "dir": "MotionVAE",
-        "arxiv": "2103.14274",
-        "published_date_zh": "2020年7月（SIGGRAPH）",
-        "published_date_en": "Jul 2020 (SIGGRAPH)",
-        "zhname": "基于运动 VAE 的角色控制器",
-        "zh_title": "基于运动 VAE 的角色控制器"
       }
     ],
     "zhname": "物理动画",
@@ -2059,17 +1867,6 @@
   "14_Human_Motion": {
     "display_name": "Human Motion",
     "papers": [
-      {
-        "title": "ScaleMoGen: Autoregressive Next-Scale Prediction for Human Motion Generation",
-        "path": "papers/14_Human_Motion/ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation/ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation.md",
-        "url": "/papers/14_Human_Motion/ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation/ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation.html",
-        "dir": "ScaleMoGen__Autoregressive_Next-Scale_Prediction_for_Human_Motion_Generation",
-        "arxiv": "2605.11704",
-        "published_date_zh": "2026年5月12日（arXiv v1）",
-        "published_date_en": "May 12, 2026 (arXiv v1)",
-        "zhname": "ScaleMoGen：用「下一尺度」自回归把文本生成的人体动作做成由粗到细",
-        "zh_title": "ScaleMoGen：用「下一尺度」自回归把文本生成的人体动作做成由粗到细"
-      },
       {
         "title": "Kimodo: Scaling Controllable Human Motion Generation",
         "path": "papers/14_Human_Motion/Kimodo__Scaling_Controllable_Human_Motion_Generation/Kimodo__Scaling_Controllable_Human_Motion_Generation.md",
