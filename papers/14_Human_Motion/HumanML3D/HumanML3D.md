@@ -4,6 +4,7 @@ paper_order: 1
 title: "Generating Diverse and Natural 3D Human Motions from Textual Descriptions (HumanML3D)"
 category: "人类运动数据"
 zhname: "从文本描述生成多样化且自然的 3D 人体运动"
+arxiv: "2204.09419"
 ---
 
 # Generating Diverse and Natural 3D Human Motions from Textual Descriptions
