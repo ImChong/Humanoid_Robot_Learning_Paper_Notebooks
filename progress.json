@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 546,
-      "last_title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers (arXiv:2606.06493)",
-      "next_module": "05_Locomotion"
+      "last_module": "05_Locomotion",
+      "last_index": 196,
+      "last_title": "FastStair: Learning to Run Up Stairs with Humanoid Robots (arXiv:2601.10365)",
+      "next_module": "06_Manipulation"
     },
-    "last_summary_index": 546,
+    "last_summary_index": 196,
     "last_summary_date": "2026-06-21",
-    "last_summary_title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+    "last_summary_title": "FastStair: Learning to Run Up Stairs with Humanoid Robots",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-21",
+        "index": 196,
+        "title": "FastStair: Learning to Run Up Stairs with Humanoid Robots",
+        "folder": "papers/05_Locomotion/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots",
+        "module": "05_Locomotion",
+        "arxiv": "2601.10365",
+        "source": "npcliu.github.io/FastStair · youtu.be/SoLBK7VEGDo"
+      },
       {
         "date": "2026-06-20",
         "index": 482,
