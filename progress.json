@@ -4690,6 +4690,66 @@
       "pdf_file": "",
       "route": "Manipulation",
       "title_cn": ""
+    },
+    {
+      "title": "Being-H0: Vision-Language-Action Pretraining from Large-Scale Human Videos",
+      "folder": "papers/06_Manipulation/Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos",
+      "note_file": "Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos.md",
+      "status": "done",
+      "arxiv": "2507.15597",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "DreamGen: Unlocking Generalization in Robot Learning through Video World Models",
+      "folder": "papers/06_Manipulation/DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models",
+      "note_file": "DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models.md",
+      "status": "done",
+      "arxiv": "2505.12705",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "H-RDT: Human Manipulation Enhanced Bimanual Robotic Manipulation",
+      "folder": "papers/06_Manipulation/H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation",
+      "note_file": "H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation.md",
+      "status": "done",
+      "arxiv": "2507.23523",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Hierarchical Vision-Language Planning for Multi-Step Humanoid Manipulation",
+      "folder": "papers/06_Manipulation/Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation",
+      "note_file": "Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation.md",
+      "status": "done",
+      "arxiv": "2506.22827",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Robot Drummer: Learning Rhythmic Skills for Humanoid Drumming",
+      "folder": "papers/06_Manipulation/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming",
+      "note_file": "Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming.md",
+      "status": "done",
+      "arxiv": "2507.11498",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Vision in Action: Learning Active Perception from Human Demonstrations",
+      "folder": "papers/06_Manipulation/Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations",
+      "note_file": "Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations.md",
+      "status": "done",
+      "arxiv": "2506.15666",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
     }
   ]
 }

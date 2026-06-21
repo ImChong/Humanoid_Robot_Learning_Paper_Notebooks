@@ -1516,6 +1516,72 @@
         "zh_title": "TOP：面向人形稳定精确站立操作的时间优化策略"
       },
       {
+        "title": "H-RDT: Human Manipulation Enhanced Bimanual Robotic Manipulation",
+        "path": "papers/06_Manipulation/H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation/H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation.md",
+        "url": "/papers/06_Manipulation/H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation/H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation.html",
+        "dir": "H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation",
+        "arxiv": "2507.23523",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "H-RDT：用人类操作增强的双臂机器人操作",
+        "zh_title": "H-RDT：用人类操作增强的双臂机器人操作"
+      },
+      {
+        "title": "Being-H0: Vision-Language-Action Pretraining from Large-Scale Human Videos",
+        "path": "papers/06_Manipulation/Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos/Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos.md",
+        "url": "/papers/06_Manipulation/Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos/Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos.html",
+        "dir": "Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos",
+        "arxiv": "2507.15597",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "Being-H0：从大规模人类视频做视觉-语言-动作预训练",
+        "zh_title": "Being-H0：从大规模人类视频做视觉-语言-动作预训练"
+      },
+      {
+        "title": "Robot Drummer: Learning Rhythmic Skills for Humanoid Drumming",
+        "path": "papers/06_Manipulation/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming.md",
+        "url": "/papers/06_Manipulation/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming.html",
+        "dir": "Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming",
+        "arxiv": "2507.11498",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "Robot Drummer：为人形打鼓学习节奏技能",
+        "zh_title": "Robot Drummer：为人形打鼓学习节奏技能"
+      },
+      {
+        "title": "Hierarchical Vision-Language Planning for Multi-Step Humanoid Manipulation",
+        "path": "papers/06_Manipulation/Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation/Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation.md",
+        "url": "/papers/06_Manipulation/Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation/Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation.html",
+        "dir": "Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation",
+        "arxiv": "2506.22827",
+        "published_date_zh": "2025年6月",
+        "published_date_en": "Jun 2025",
+        "zhname": "面向多步人形操作的分层视觉-语言规划",
+        "zh_title": "面向多步人形操作的分层视觉-语言规划"
+      },
+      {
+        "title": "Vision in Action: Learning Active Perception from Human Demonstrations",
+        "path": "papers/06_Manipulation/Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations/Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations.md",
+        "url": "/papers/06_Manipulation/Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations/Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations.html",
+        "dir": "Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations",
+        "arxiv": "2506.15666",
+        "published_date_zh": "2025年6月",
+        "published_date_en": "Jun 2025",
+        "zhname": "Vision in Action：从人类演示学习主动感知",
+        "zh_title": "Vision in Action：从人类演示学习主动感知"
+      },
+      {
+        "title": "DreamGen: Unlocking Generalization in Robot Learning through Video World Models",
+        "path": "papers/06_Manipulation/DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models/DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models.md",
+        "url": "/papers/06_Manipulation/DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models/DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models.html",
+        "dir": "DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models",
+        "arxiv": "2505.12705",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "DreamGen：用视频世界模型解锁机器人学习的泛化",
+        "zh_title": "DreamGen：用视频世界模型解锁机器人学习的泛化"
+      },
+      {
         "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
         "path": "papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
         "url": "/papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",
