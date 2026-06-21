@@ -1220,6 +1220,17 @@
         "zh_title": "面向多接触遥操作的稳定性感知重定向（用质心稳定裕度梯度实时改写操作员指令）"
       },
       {
+        "title": "LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy",
+        "path": "papers/07_Teleoperation/LapSurgie__Humanoid_Robots_Performing_Surgery_via_Teleoperated_Handheld_Laparoscopy/LapSurgie__Humanoid_Robots_Performing_Surgery_via_Teleoperated_Handheld_Laparoscopy.md",
+        "url": "/papers/07_Teleoperation/LapSurgie__Humanoid_Robots_Performing_Surgery_via_Teleoperated_Handheld_Laparoscopy/LapSurgie__Humanoid_Robots_Performing_Surgery_via_Teleoperated_Handheld_Laparoscopy.html",
+        "dir": "LapSurgie__Humanoid_Robots_Performing_Surgery_via_Teleoperated_Handheld_Laparoscopy",
+        "arxiv": "2510.03529",
+        "published_date_zh": "2025年10月3日（arXiv v1；v2 2026年2月16日）",
+        "published_date_en": "Oct 3, 2025 (arXiv v1; v2 Feb 16, 2026)",
+        "zhname": "LapSurgie：人形机器人经遥操作手持腹腔镜执行手术",
+        "zh_title": "LapSurgie：人形机器人经遥操作手持腹腔镜执行手术"
+      },
+      {
         "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
         "path": "papers/07_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.md",
         "url": "/papers/07_Teleoperation/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans/HumanPlus_Humanoid_Shadowing_and_Imitation_from_Humans.html",
