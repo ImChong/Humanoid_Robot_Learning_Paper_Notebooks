@@ -1474,6 +1474,17 @@
         "zh_title": "LookOut：从第一视角视频预测未来 6-DoF 头部位姿，学人类「转头看路 + 避障」的导航行为"
       },
       {
+        "title": "INTENTION: Inferring Tendencies of Humanoid Robot Motion Through Interactive Intuition and Grounded VLM",
+        "path": "papers/08_Navigation/INTENTION__Inferring_Tendencies_of_Humanoid_Robot_Motion_Through_Interactive_Int/INTENTION__Inferring_Tendencies_of_Humanoid_Robot_Motion_Through_Interactive_Int.md",
+        "url": "/papers/08_Navigation/INTENTION__Inferring_Tendencies_of_Humanoid_Robot_Motion_Through_Interactive_Int/INTENTION__Inferring_Tendencies_of_Humanoid_Robot_Motion_Through_Interactive_Int.html",
+        "dir": "INTENTION__Inferring_Tendencies_of_Humanoid_Robot_Motion_Through_Interactive_Int",
+        "arxiv": "2508.04931",
+        "published_date_zh": "2025年8月6日（arXiv）",
+        "published_date_en": "Aug 6, 2025 (arXiv)",
+        "zhname": "INTENTION：用交互直觉与具身 VLM 推断人形机器人的动作倾向",
+        "zh_title": "INTENTION：用交互直觉与具身 VLM 推断人形机器人的动作倾向"
+      },
+      {
         "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
         "path": "papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.md",
         "url": "/papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.html",
