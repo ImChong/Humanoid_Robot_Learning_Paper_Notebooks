@@ -256,6 +256,7 @@
 | 180  | CLONE: Holistic Closed-Loop Whole-Body Teleoperation for Long-Horizon Humanoid Control                                                                           | 2025.06    |     | ⏳ 待读 |
 | 181  | [ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills](https://arxiv.org/abs/2502.01143) ✅ [笔记](03_High_Impact_Selection/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills/ASAP_Aligning_Simulation_and_Real-World_Physics_for_Agile_Humanoid_Skills.md) | 2025.02    |     | ✅ 已总结 |
 | 182  | VMP: Versatile Motion Priors for Robustly Tracking Motion on Physical Characters                                                                                 | 2024.08    |     | ⏳ 待读 |
+| 545  | [Learning Multi-Modal Whole-Body Control for Real-World Humanoid Robots](https://arxiv.org/abs/2408.07295) | 2024.08    |     | ⏳ 待读 |
 | 183  | Robot Motion Diffusion Model: Motion Generation for Robotic Characters                                                                                           | 2024.07    |     | ⏳ 待读 |
 | 184  | [website],Embodied Chain of Action Reasoning with Multi-Modal Foundation Model for Humanoid Loco-manipulation                                                    | 2025.04    |     | ⏳ 待读 |
 | 185  | [Heracles: Bridging Precise Tracking and Generative Synthesis for General Humanoid Control](https://arxiv.org/abs/2603.27756) | 2026.03 |  | ⏳ 待读 |
