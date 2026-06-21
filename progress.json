@@ -4310,6 +4310,76 @@
       "pdf_file": "",
       "route": "Loco-Manipulation and WBC",
       "title_cn": ""
+    },
+    {
+      "title": "Toward Reliable Sim-to-Real Predictability for MoE-based Robust Quadrupedal Locomotion",
+      "folder": "papers/05_Locomotion/Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion",
+      "note_file": "Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion.md",
+      "status": "done",
+      "arxiv": "2602.00678",
+      "pdf_file": "",
+      "route": "Locomotion",
+      "title_cn": ""
+    },
+    {
+      "title": "Hand-Eye Autonomous Delivery: Learning Humanoid Navigation, Locomotion and Reaching",
+      "folder": "papers/08_Navigation/HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching",
+      "note_file": "HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching.md",
+      "status": "done",
+      "arxiv": "2508.03068",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "Humanoid Occupancy: Enabling A Generalized Multimodal Occupancy Perception System on Humanoid Robots",
+      "folder": "papers/08_Navigation/Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System",
+      "note_file": "Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System.md",
+      "status": "done",
+      "arxiv": "2507.20217",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "Learning Social Navigation from Positive and Negative Demonstrations and Rule-Based Specifications",
+      "folder": "papers/08_Navigation/Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications",
+      "note_file": "Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications.md",
+      "status": "done",
+      "arxiv": "2510.12215",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance",
+      "folder": "papers/08_Navigation/NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy",
+      "note_file": "NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy.md",
+      "status": "done",
+      "arxiv": "2505.08712",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "Reinforcement Learning with Data Bootstrapping for Dynamic Subgoal Pursuit in Humanoid Robot Navigation",
+      "folder": "papers/08_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation",
+      "note_file": "RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation.md",
+      "status": "done",
+      "arxiv": "2506.02206",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "DiffCoTune: Differentiable Co-Tuning for Cross-domain Robot Control",
+      "folder": "papers/10_Sim-to-Real/DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control",
+      "note_file": "DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control.md",
+      "status": "done",
+      "arxiv": "2505.24068",
+      "pdf_file": "",
+      "route": "Sim-to-Real",
+      "title_cn": ""
     }
   ]
 }

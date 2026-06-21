@@ -1604,6 +1604,17 @@
         "zh_title": "RPL：挑战性地形上的鲁棒人形感知行走"
       },
       {
+        "title": "Toward Reliable Sim-to-Real Predictability for MoE-based Robust Quadrupedal Locomotion",
+        "path": "papers/05_Locomotion/Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion/Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion.md",
+        "url": "/papers/05_Locomotion/Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion/Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion.html",
+        "dir": "Toward_Reliable_Sim-to-Real_Predictability_for_MoE-based_Robust_Quadrupedal_Locomotion",
+        "arxiv": "2602.00678",
+        "published_date_zh": "2026年1月",
+        "published_date_en": "Jan 2026",
+        "zhname": "面向 MoE 鲁棒四足运动的可靠 Sim-to-Real 可预测性",
+        "zh_title": "面向 MoE 鲁棒四足运动的可靠 Sim-to-Real 可预测性"
+      },
+      {
         "title": "FastStair: Learning to Run Up Stairs with Humanoid Robots",
         "path": "papers/05_Locomotion/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots.md",
         "url": "/papers/05_Locomotion/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots/FastStair__Learning_to_Run_Up_Stairs_with_Humanoid_Robots.html",
@@ -1715,6 +1726,17 @@
         "zh_title": "Gallant：3D 受限地形上的体素栅格人形行走与局部导航"
       },
       {
+        "title": "Learning Social Navigation from Positive and Negative Demonstrations and Rule-Based Specifications",
+        "path": "papers/08_Navigation/Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications/Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications.md",
+        "url": "/papers/08_Navigation/Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications/Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications.html",
+        "dir": "Learning_Social_Navigation_from_Positive_and_Negative_Demonstrations_and_Rule-Based_Specifications",
+        "arxiv": "2510.12215",
+        "published_date_zh": "2025年10月",
+        "published_date_en": "Oct 2025",
+        "zhname": "从正负示范与规则规范学习社交导航",
+        "zh_title": "从正负示范与规则规范学习社交导航"
+      },
+      {
         "title": "Quantum deep reinforcement learning for humanoid robot navigation task",
         "path": "papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.md",
         "url": "/papers/08_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation/Quantum_Deep_RL_for_Humanoid_Robot_Navigation.html",
@@ -1748,6 +1770,39 @@
         "zh_title": "INTENTION：用交互直觉与具身 VLM 推断人形机器人的动作倾向"
       },
       {
+        "title": "Hand-Eye Autonomous Delivery: Learning Humanoid Navigation, Locomotion and Reaching",
+        "path": "papers/08_Navigation/HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching/HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching.md",
+        "url": "/papers/08_Navigation/HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching/HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching.html",
+        "dir": "HEAD__Hand-Eye_Autonomous_Delivery_Humanoid_Navigation_Locomotion_and_Reaching",
+        "arxiv": "2508.03068",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "HEAD：学习人形导航、运动与触达的手眼自主递送",
+        "zh_title": "HEAD：学习人形导航、运动与触达的手眼自主递送"
+      },
+      {
+        "title": "Humanoid Occupancy: Enabling A Generalized Multimodal Occupancy Perception System on Humanoid Robots",
+        "path": "papers/08_Navigation/Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System/Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System.md",
+        "url": "/papers/08_Navigation/Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System/Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System.html",
+        "dir": "Humanoid_Occupancy__Generalized_Multimodal_Occupancy_Perception_System",
+        "arxiv": "2507.20217",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "Humanoid Occupancy：面向人形机器人的通用多模态占据感知系统",
+        "zh_title": "Humanoid Occupancy：面向人形机器人的通用多模态占据感知系统"
+      },
+      {
+        "title": "Reinforcement Learning with Data Bootstrapping for Dynamic Subgoal Pursuit in Humanoid Robot Navigation",
+        "path": "papers/08_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation.md",
+        "url": "/papers/08_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation.html",
+        "dir": "RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation",
+        "arxiv": "2506.02206",
+        "published_date_zh": "2025年6月",
+        "published_date_en": "Jun 2025",
+        "zhname": "用数据自举的强化学习实现人形导航中的动态子目标追踪",
+        "zh_title": "用数据自举的强化学习实现人形导航中的动态子目标追踪"
+      },
+      {
         "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
         "path": "papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.md",
         "url": "/papers/08_Navigation/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain/STATE-NAV__Stability-Aware_Traversability_Estimation_for_Bipedal_Navigation_on_Rough_Terrain.html",
@@ -1757,6 +1812,17 @@
         "published_date_en": "Jun 1, 2025 (arXiv)",
         "zhname": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航",
         "zh_title": "STATE-NAV：用稳定性感知的可通过性估计做双足机器人粗糙地形导航"
+      },
+      {
+        "title": "NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance",
+        "path": "papers/08_Navigation/NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy/NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy.md",
+        "url": "/papers/08_Navigation/NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy/NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy.html",
+        "dir": "NavDP__Learning_Sim-to-Real_Navigation_Diffusion_Policy",
+        "arxiv": "2505.08712",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "NavDP：用特权信息引导学习 Sim-to-Real 导航扩散策略",
+        "zh_title": "NavDP：用特权信息引导学习 Sim-to-Real 导航扩散策略"
       },
       {
         "title": "NaVILA: Legged Robot Vision-Language-Action Model for Navigation",
@@ -1922,6 +1988,17 @@
         "published_date_en": "Aug 17, 2025 (arXiv v1), CoRL 2025 录用",
         "zhname": "机器人训练机器人：用机械臂老师在真实世界自动适配/从零训练人形策略（RTR）",
         "zh_title": "机器人训练机器人：用机械臂老师在真实世界自动适配/从零训练人形策略（RTR）"
+      },
+      {
+        "title": "DiffCoTune: Differentiable Co-Tuning for Cross-domain Robot Control",
+        "path": "papers/10_Sim-to-Real/DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control/DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control.md",
+        "url": "/papers/10_Sim-to-Real/DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control/DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control.html",
+        "dir": "DiffCoTune__Differentiable_Co-Tuning_for_Cross-domain_Robot_Control",
+        "arxiv": "2505.24068",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "DiffCoTune：面向跨域机器人控制的可微协同调参",
+        "zh_title": "DiffCoTune：面向跨域机器人控制的可微协同调参"
       },
       {
         "title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
