@@ -4630,6 +4630,66 @@
       "pdf_file": "",
       "route": "Manipulation",
       "title_cn": ""
+    },
+    {
+      "title": "EgoDemoGen: Egocentric Demonstration Generation for Viewpoint Generalization in Robotic Manipulation",
+      "folder": "papers/06_Manipulation/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization",
+      "note_file": "EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization.md",
+      "status": "done",
+      "arxiv": "2509.22578",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Masquerade: Learning from In-the-wild Human Videos using Data-Editing",
+      "folder": "papers/06_Manipulation/Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing",
+      "note_file": "Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing.md",
+      "status": "done",
+      "arxiv": "2508.09976",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "MimicDroid: In-Context Learning for Humanoid Robot Manipulation from Human Play Videos",
+      "folder": "papers/06_Manipulation/MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos",
+      "note_file": "MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos.md",
+      "status": "done",
+      "arxiv": "2509.09769",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Residual Off-Policy RL for Finetuning Behavior Cloning Policies",
+      "folder": "papers/06_Manipulation/Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies",
+      "note_file": "Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies.md",
+      "status": "done",
+      "arxiv": "2509.19301",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "TOP: Time Optimization Policy for Stable and Accurate Standing Manipulation with Humanoid Robots",
+      "folder": "papers/06_Manipulation/TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation",
+      "note_file": "TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation.md",
+      "status": "done",
+      "arxiv": "2508.00355",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Towards Proprioception-Aware Embodied Planning for Dual-Arm Humanoid Robots",
+      "folder": "papers/06_Manipulation/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots",
+      "note_file": "Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots.md",
+      "status": "done",
+      "arxiv": "2510.07882",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
     }
   ]
 }

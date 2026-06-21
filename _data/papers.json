@@ -1450,6 +1450,72 @@
         "zh_title": "面向接触丰富操作的人形视觉-触觉-动作数据集"
       },
       {
+        "title": "Towards Proprioception-Aware Embodied Planning for Dual-Arm Humanoid Robots",
+        "path": "papers/06_Manipulation/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots.md",
+        "url": "/papers/06_Manipulation/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots.html",
+        "dir": "Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots",
+        "arxiv": "2510.07882",
+        "published_date_zh": "2025年10月",
+        "published_date_en": "Oct 2025",
+        "zhname": "面向双臂人形的本体感受感知具身规划",
+        "zh_title": "面向双臂人形的本体感受感知具身规划"
+      },
+      {
+        "title": "EgoDemoGen: Egocentric Demonstration Generation for Viewpoint Generalization in Robotic Manipulation",
+        "path": "papers/06_Manipulation/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization.md",
+        "url": "/papers/06_Manipulation/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization.html",
+        "dir": "EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization",
+        "arxiv": "2509.22578",
+        "published_date_zh": "2025年9月",
+        "published_date_en": "Sep 2025",
+        "zhname": "EgoDemoGen：为操作视角泛化生成第一视角演示",
+        "zh_title": "EgoDemoGen：为操作视角泛化生成第一视角演示"
+      },
+      {
+        "title": "Residual Off-Policy RL for Finetuning Behavior Cloning Policies",
+        "path": "papers/06_Manipulation/Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies/Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies.md",
+        "url": "/papers/06_Manipulation/Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies/Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies.html",
+        "dir": "Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies",
+        "arxiv": "2509.19301",
+        "published_date_zh": "2025年9月",
+        "published_date_en": "Sep 2025",
+        "zhname": "用残差离策略 RL 微调行为克隆策略",
+        "zh_title": "用残差离策略 RL 微调行为克隆策略"
+      },
+      {
+        "title": "MimicDroid: In-Context Learning for Humanoid Robot Manipulation from Human Play Videos",
+        "path": "papers/06_Manipulation/MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos/MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos.md",
+        "url": "/papers/06_Manipulation/MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos/MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos.html",
+        "dir": "MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos",
+        "arxiv": "2509.09769",
+        "published_date_zh": "2025年9月",
+        "published_date_en": "Sep 2025",
+        "zhname": "MimicDroid：从人类玩耍视频做人形操作的上下文学习",
+        "zh_title": "MimicDroid：从人类玩耍视频做人形操作的上下文学习"
+      },
+      {
+        "title": "Masquerade: Learning from In-the-wild Human Videos using Data-Editing",
+        "path": "papers/06_Manipulation/Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing/Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing.md",
+        "url": "/papers/06_Manipulation/Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing/Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing.html",
+        "dir": "Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing",
+        "arxiv": "2508.09976",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "Masquerade：用数据编辑从野外人类视频学习",
+        "zh_title": "Masquerade：用数据编辑从野外人类视频学习"
+      },
+      {
+        "title": "TOP: Time Optimization Policy for Stable and Accurate Standing Manipulation with Humanoid Robots",
+        "path": "papers/06_Manipulation/TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation/TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation.md",
+        "url": "/papers/06_Manipulation/TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation/TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation.html",
+        "dir": "TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation",
+        "arxiv": "2508.00355",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "TOP：面向人形稳定精确站立操作的时间优化策略",
+        "zh_title": "TOP：面向人形稳定精确站立操作的时间优化策略"
+      },
+      {
         "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
         "path": "papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
         "url": "/papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",
