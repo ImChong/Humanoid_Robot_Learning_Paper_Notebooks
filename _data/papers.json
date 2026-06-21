@@ -1461,6 +1461,17 @@
         "zh_title": "学习式神经遥操作：用 RL 端到端策略替换 IK+PD，让 VR 控制器直接驱动人形机器人"
       },
       {
+        "title": "TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System",
+        "path": "papers/07_Teleoperation/TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System/TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System.md",
+        "url": "/papers/07_Teleoperation/TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System/TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System.html",
+        "dir": "TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System",
+        "arxiv": "2511.02832",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "TWIST2：可扩展、便携、整体式的人形数据采集系统",
+        "zh_title": "TWIST2：可扩展、便携、整体式的人形数据采集系统"
+      },
+      {
         "title": "Development of an Intuitive GUI for Non-Expert Teleoperation of Humanoid Robots",
         "path": "papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.md",
         "url": "/papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.html",
@@ -1492,6 +1503,127 @@
         "published_date_en": "Oct 3, 2025 (arXiv v1; v2 Feb 16, 2026)",
         "zhname": "LapSurgie：人形机器人经遥操作手持腹腔镜执行手术",
         "zh_title": "LapSurgie：人形机器人经遥操作手持腹腔镜执行手术"
+      },
+      {
+        "title": "Whole-Body Bilateral Teleoperation with Multi-Stage Object Parameter Estimation for Wheeled Humanoid Locomanipulation",
+        "path": "papers/07_Teleoperation/Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation/Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation.md",
+        "url": "/papers/07_Teleoperation/Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation/Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation.html",
+        "dir": "Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation",
+        "arxiv": "2508.09846",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "面向轮式人形移动操作的多阶段物体参数估计全身双边遥操作",
+        "zh_title": "面向轮式人形移动操作的多阶段物体参数估计全身双边遥操作"
+      },
+      {
+        "title": "CHILD: a Whole-Body Humanoid Teleoperation System",
+        "path": "papers/07_Teleoperation/CHILD__a_Whole-Body_Humanoid_Teleoperation_System/CHILD__a_Whole-Body_Humanoid_Teleoperation_System.md",
+        "url": "/papers/07_Teleoperation/CHILD__a_Whole-Body_Humanoid_Teleoperation_System/CHILD__a_Whole-Body_Humanoid_Teleoperation_System.html",
+        "dir": "CHILD__a_Whole-Body_Humanoid_Teleoperation_System",
+        "arxiv": "2508.00162",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "CHILD：全身人形遥操作系统",
+        "zh_title": "CHILD：全身人形遥操作系统"
+      },
+      {
+        "title": "Heavy lifting tasks via haptic teleoperation of a wheeled humanoid",
+        "path": "papers/07_Teleoperation/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid.md",
+        "url": "/papers/07_Teleoperation/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid.html",
+        "dir": "Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid",
+        "arxiv": "2505.19530",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "通过力触觉遥操作让轮式人形完成重物搬运",
+        "zh_title": "通过力触觉遥操作让轮式人形完成重物搬运"
+      },
+      {
+        "title": "TeleOpBench: A Simulator-Centric Benchmark for Dual-Arm Dexterous Teleoperation",
+        "path": "papers/07_Teleoperation/TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation/TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation.md",
+        "url": "/papers/07_Teleoperation/TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation/TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation.html",
+        "dir": "TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation",
+        "arxiv": "2505.12748",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "TeleOpBench：以仿真为中心的双臂灵巧遥操作基准",
+        "zh_title": "TeleOpBench：以仿真为中心的双臂灵巧遥操作基准"
+      },
+      {
+        "title": "Human-Robot Collaboration for the Remote Control of Mobile Humanoid Robots with Torso-Arm Coordination",
+        "path": "papers/07_Teleoperation/Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots/Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots.md",
+        "url": "/papers/07_Teleoperation/Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots/Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots.html",
+        "dir": "Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots",
+        "arxiv": "2505.05773",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "面向移动人形远程控制的人机协作躯干-手臂协调",
+        "zh_title": "面向移动人形远程控制的人机协作躯干-手臂协调"
+      },
+      {
+        "title": "TWIST: Teleoperated Whole-Body Imitation System",
+        "path": "papers/07_Teleoperation/TWIST__Teleoperated_Whole-Body_Imitation_System/TWIST__Teleoperated_Whole-Body_Imitation_System.md",
+        "url": "/papers/07_Teleoperation/TWIST__Teleoperated_Whole-Body_Imitation_System/TWIST__Teleoperated_Whole-Body_Imitation_System.html",
+        "dir": "TWIST__Teleoperated_Whole-Body_Imitation_System",
+        "arxiv": "2505.02833",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "TWIST：遥操作全身模仿系统",
+        "zh_title": "TWIST：遥操作全身模仿系统"
+      },
+      {
+        "title": "NuExo: A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots",
+        "path": "papers/07_Teleoperation/NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM/NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM.md",
+        "url": "/papers/07_Teleoperation/NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM/NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM.html",
+        "dir": "NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM",
+        "arxiv": "2503.10554",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "NuExo：覆盖全上肢活动范围的可穿戴外骨骼，用于户外数据采集与人形遥操作",
+        "zh_title": "NuExo：覆盖全上肢活动范围的可穿戴外骨骼，用于户外数据采集与人形遥操作"
+      },
+      {
+        "title": "Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control",
+        "path": "papers/07_Teleoperation/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control.md",
+        "url": "/papers/07_Teleoperation/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control.html",
+        "dir": "Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control",
+        "arxiv": "2412.07773",
+        "published_date_zh": "2024年12月",
+        "published_date_en": "Dec 2024",
+        "zhname": "Mobile-TeleVision：面向人形全身控制的预测式运动先验",
+        "zh_title": "Mobile-TeleVision：面向人形全身控制的预测式运动先验"
+      },
+      {
+        "title": "High-Speed and Impact Resilient Teleoperation of Humanoid Robots",
+        "path": "papers/07_Teleoperation/High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots/High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots.md",
+        "url": "/papers/07_Teleoperation/High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots/High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots.html",
+        "dir": "High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots",
+        "arxiv": "2409.04639",
+        "published_date_zh": "2024年9月",
+        "published_date_en": "Sep 2024",
+        "zhname": "人形机器人的高速且抗冲击遥操作",
+        "zh_title": "人形机器人的高速且抗冲击遥操作"
+      },
+      {
+        "title": "ACE: A Cross-Platform Visual-Exoskeletons System for Low-Cost Dexterous Teleoperation",
+        "path": "papers/07_Teleoperation/ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation/ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation.md",
+        "url": "/papers/07_Teleoperation/ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation/ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation.html",
+        "dir": "ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation",
+        "arxiv": "2408.11805",
+        "published_date_zh": "2024年8月",
+        "published_date_en": "Aug 2024",
+        "zhname": "ACE：面向低成本灵巧遥操作的跨平台视觉-外骨骼系统",
+        "zh_title": "ACE：面向低成本灵巧遥操作的跨平台视觉-外骨骼系统"
+      },
+      {
+        "title": "Bunny-VisionPro: Real-Time Bimanual Dexterous Teleoperation for Imitation Learning",
+        "path": "papers/07_Teleoperation/Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning/Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning.md",
+        "url": "/papers/07_Teleoperation/Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning/Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning.html",
+        "dir": "Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning",
+        "arxiv": "2407.03162",
+        "published_date_zh": "2024年7月",
+        "published_date_en": "Jul 2024",
+        "zhname": "Bunny-VisionPro：面向模仿学习的实时双手灵巧遥操作",
+        "zh_title": "Bunny-VisionPro：面向模仿学习的实时双手灵巧遥操作"
       },
       {
         "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",

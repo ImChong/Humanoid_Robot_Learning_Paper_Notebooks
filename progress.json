@@ -1928,10 +1928,10 @@
     {
       "title": "TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System",
       "arxiv": "TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/TWIST2__Scalable,_Portable,_and_Holistic_Humanoid_Data_Collection_System",
-      "note_file": "TWIST2__Scalable,_Portable,_and_Holistic_Humanoid_Data_Collection_System.md",
+      "folder": "papers/07_Teleoperation/TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System",
+      "note_file": "TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System.md",
       "pdf_file": "TWIST2.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -2636,10 +2636,10 @@
     {
       "title": "TWIST: Teleoperated Whole-Body Imitation System",
       "arxiv": "TWIST: Teleoperated Whole-Body Imitation System",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/TWIST__Teleoperated_Whole-Body_Imitation_System",
+      "folder": "papers/07_Teleoperation/TWIST__Teleoperated_Whole-Body_Imitation_System",
       "note_file": "TWIST__Teleoperated_Whole-Body_Imitation_System.md",
       "pdf_file": "TWIST.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -2852,10 +2852,10 @@
     {
       "title": "Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control",
       "arxiv": "Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control",
+      "folder": "papers/07_Teleoperation/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control",
       "note_file": "Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control.md",
       "pdf_file": "Mobile-TeleVision.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -4379,6 +4379,96 @@
       "arxiv": "2505.24068",
       "pdf_file": "",
       "route": "Sim-to-Real",
+      "title_cn": ""
+    },
+    {
+      "title": "ACE: A Cross-Platform Visual-Exoskeletons System for Low-Cost Dexterous Teleoperation",
+      "folder": "papers/07_Teleoperation/ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation",
+      "note_file": "ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation.md",
+      "status": "done",
+      "arxiv": "2408.11805",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "Bunny-VisionPro: Real-Time Bimanual Dexterous Teleoperation for Imitation Learning",
+      "folder": "papers/07_Teleoperation/Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning",
+      "note_file": "Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning.md",
+      "status": "done",
+      "arxiv": "2407.03162",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "CHILD: a Whole-Body Humanoid Teleoperation System",
+      "folder": "papers/07_Teleoperation/CHILD__a_Whole-Body_Humanoid_Teleoperation_System",
+      "note_file": "CHILD__a_Whole-Body_Humanoid_Teleoperation_System.md",
+      "status": "done",
+      "arxiv": "2508.00162",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "Heavy lifting tasks via haptic teleoperation of a wheeled humanoid",
+      "folder": "papers/07_Teleoperation/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid",
+      "note_file": "Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid.md",
+      "status": "done",
+      "arxiv": "2505.19530",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "High-Speed and Impact Resilient Teleoperation of Humanoid Robots",
+      "folder": "papers/07_Teleoperation/High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots",
+      "note_file": "High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots.md",
+      "status": "done",
+      "arxiv": "2409.04639",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "Human-Robot Collaboration for the Remote Control of Mobile Humanoid Robots with Torso-Arm Coordination",
+      "folder": "papers/07_Teleoperation/Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots",
+      "note_file": "Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots.md",
+      "status": "done",
+      "arxiv": "2505.05773",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "NuExo: A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots",
+      "folder": "papers/07_Teleoperation/NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM",
+      "note_file": "NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM.md",
+      "status": "done",
+      "arxiv": "2503.10554",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "TeleOpBench: A Simulator-Centric Benchmark for Dual-Arm Dexterous Teleoperation",
+      "folder": "papers/07_Teleoperation/TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation",
+      "note_file": "TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation.md",
+      "status": "done",
+      "arxiv": "2505.12748",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "Whole-Body Bilateral Teleoperation with Multi-Stage Object Parameter Estimation for Wheeled Humanoid Locomanipulation",
+      "folder": "papers/07_Teleoperation/Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation",
+      "note_file": "Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation.md",
+      "status": "done",
+      "arxiv": "2508.09846",
+      "pdf_file": "",
+      "route": "Teleoperation",
       "title_cn": ""
     }
   ]
