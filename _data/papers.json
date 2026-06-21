@@ -1193,6 +1193,61 @@
         "zh_title": "HMC：面向接触丰富移动操作的异构元控制学习"
       },
       {
+        "title": "Humanoid Whole-Body Badminton via Multi-Stage Reinforcement Learning",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning/Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning/Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning.html",
+        "dir": "Humanoid_Whole-Body_Badminton_via_Multi-Stage_Reinforcement_Learning",
+        "arxiv": "2511.11218",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "多阶段强化学习实现人形全身羽毛球",
+        "zh_title": "多阶段强化学习实现人形全身羽毛球"
+      },
+      {
+        "title": "Robot Crash Course: Learning Soft and Stylized Falling",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Robot_Crash_Course__Learning_Soft_and_Stylized_Falling/Robot_Crash_Course__Learning_Soft_and_Stylized_Falling.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Robot_Crash_Course__Learning_Soft_and_Stylized_Falling/Robot_Crash_Course__Learning_Soft_and_Stylized_Falling.html",
+        "dir": "Robot_Crash_Course__Learning_Soft_and_Stylized_Falling",
+        "arxiv": "2511.10635",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "Robot Crash Course：学习柔和且可指定姿态的跌倒",
+        "zh_title": "Robot Crash Course：学习柔和且可指定姿态的跌倒"
+      },
+      {
+        "title": "Unveiling the Impact of Data and Model Scaling on High-Level Control for Humanoid Robots",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoid/Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoid.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoid/Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoid.html",
+        "dir": "Unveiling_the_Impact_of_Data_and_Model_Scaling_on_High-Level_Control_for_Humanoid",
+        "arxiv": "2511.09241",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "揭示数据与模型规模对人形高层控制的影响",
+        "zh_title": "揭示数据与模型规模对人形高层控制的影响"
+      },
+      {
+        "title": "Unified Humanoid Fall-Safety Policy from a Few Demonstrations",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations/Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations/Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations.html",
+        "dir": "Unified_Humanoid_Fall-Safety_Policy_from_a_Few_Demonstrations",
+        "arxiv": "2511.07407",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "从少量示范学习统一的人形跌落安全策略",
+        "zh_title": "从少量示范学习统一的人形跌落安全策略"
+      },
+      {
+        "title": "Towards Adaptive Humanoid Control via Multi-Behavior Distillation and Reinforced Fine-Tuning",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced_Fine-Tuning/Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced_Fine-Tuning.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced_Fine-Tuning/Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced_Fine-Tuning.html",
+        "dir": "Towards_Adaptive_Humanoid_Control_via_Multi-Behavior_Distillation_and_Reinforced_Fine-Tuning",
+        "arxiv": "2511.06371",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "AHC：用多行为蒸馏与强化微调迈向自适应人形控制",
+        "zh_title": "AHC：用多行为蒸馏与强化微调迈向自适应人形控制"
+      },
+      {
         "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
         "path": "papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object/GentleHumanoid__Learning_Upper-body_Compliance_for_Contact-rich_Human_and_Object.html",
