@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 336,
-      "last_title": "LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy (arXiv:2510.03529)",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": 356,
+      "last_title": "INTENTION: Inferring Tendencies of Humanoid Robot Motion Through Interactive Intuition and Grounded VLM (arXiv:2508.04931)",
+      "next_module": "09_State_Estimation"
     },
-    "last_summary_index": 336,
-    "last_summary_date": "2026-06-23",
-    "last_summary_title": "LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy",
+    "last_summary_index": 356,
+    "last_summary_date": "2026-06-24",
+    "last_summary_title": "INTENTION: Inferring Tendencies of Humanoid Robot Motion Through Interactive Intuition and Grounded VLM",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-24",
+        "index": 356,
+        "title": "INTENTION: Inferring Tendencies of Humanoid Robot Motion Through Interactive Intuition and Grounded VLM",
+        "folder": "papers/08_Navigation/INTENTION__Inferring_Tendencies_of_Humanoid_Robot_Motion_Through_Interactive_Int",
+        "module": "08_Navigation",
+        "arxiv": "2508.04931",
+        "source": "未见公开仓库/项目页 · IIT (Tsagarakis 团队) · IEEE Humanoids"
+      },
       {
         "date": "2026-06-23",
         "index": 336,
