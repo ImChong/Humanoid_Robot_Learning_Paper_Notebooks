@@ -1050,6 +1050,17 @@
         "zh_title": "UniAct：人形机器人的统一动作生成与流式执行"
       },
       {
+        "title": "EGM: Efficiently Learning General Motion Tracking Policy for High Dynamic Humanoid Whole-Body Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/EGM__Efficiently_Learning_General_Motion_Tracking_for_High_Dynamic_Humanoid_WBC/EGM__Efficiently_Learning_General_Motion_Tracking_for_High_Dynamic_Humanoid_WBC.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/EGM__Efficiently_Learning_General_Motion_Tracking_for_High_Dynamic_Humanoid_WBC/EGM__Efficiently_Learning_General_Motion_Tracking_for_High_Dynamic_Humanoid_WBC.html",
+        "dir": "EGM__Efficiently_Learning_General_Motion_Tracking_for_High_Dynamic_Humanoid_WBC",
+        "arxiv": "2512.19043",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "EGM：高效学习高动态人形全身控制的通用动作跟踪策略",
+        "zh_title": "EGM：高效学习高动态人形全身控制的通用动作跟踪策略"
+      },
+      {
         "title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
         "path": "papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.html",
@@ -1059,6 +1070,61 @@
         "published_date_en": "Dec 19, 2025 (arXiv)",
         "zhname": "面向人形机器人的语义化伴语手势合成与实时控制",
         "zh_title": "面向人形机器人的语义化伴语手势合成与实时控制"
+      },
+      {
+        "title": "CHIP: Adaptive Compliance for Humanoid Control through Hindsight Perturbation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation/CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation/CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation.html",
+        "dir": "CHIP__Adaptive_Compliance_for_Humanoid_Control_through_Hindsight_Perturbation",
+        "arxiv": "2512.14689",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "CHIP：用「事后扰动」实现人形控制的自适应柔顺",
+        "zh_title": "CHIP：用「事后扰动」实现人形控制的自适应柔顺"
+      },
+      {
+        "title": "Learning Agile Striker Skills for Humanoid Soccer Robots from Noisy Sensory Input",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Input/Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Input.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Input/Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Input.html",
+        "dir": "Learning_Agile_Striker_Skills_for_Humanoid_Soccer_Robots_from_Noisy_Sensory_Input",
+        "arxiv": "2512.06571",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "从含噪感知学习人形足球机器人的敏捷射门技能",
+        "zh_title": "从含噪感知学习人形足球机器人的敏捷射门技能"
+      },
+      {
+        "title": "Discovering Self-Protective Falling Policy for Humanoid Robot via Deep Reinforcement Learning",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_RL/Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_RL.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_RL/Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_RL.html",
+        "dir": "Discovering_Self-Protective_Falling_Policy_for_Humanoid_Robot_via_Deep_RL",
+        "arxiv": "2512.01336",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "用深度强化学习发现人形机器人的自保护跌落策略",
+        "zh_title": "用深度强化学习发现人形机器人的自保护跌落策略"
+      },
+      {
+        "title": "Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer/Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer/Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer.html",
+        "dir": "Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer",
+        "arxiv": "2512.01061",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "为人形「像素到动作」策略迁移打开 Sim-to-Real 之门",
+        "zh_title": "为人形「像素到动作」策略迁移打开 Sim-to-Real 之门"
+      },
+      {
+        "title": "Commanding Humanoid by Free-form Language: A Large Language Action Model with Unified Motion Vocabulary",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Commanding_Humanoid_by_Free-form_Language__LLA_with_Unified_Motion_Vocabulary/Commanding_Humanoid_by_Free-form_Language__LLA_with_Unified_Motion_Vocabulary.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Commanding_Humanoid_by_Free-form_Language__LLA_with_Unified_Motion_Vocabulary/Commanding_Humanoid_by_Free-form_Language__LLA_with_Unified_Motion_Vocabulary.html",
+        "dir": "Commanding_Humanoid_by_Free-form_Language__LLA_with_Unified_Motion_Vocabulary",
+        "arxiv": "2511.22963",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "Humanoid-LLA：用统一动作词表的大语言-动作模型以自由语言指挥人形",
+        "zh_title": "Humanoid-LLA：用统一动作词表的大语言-动作模型以自由语言指挥人形"
       },
       {
         "title": "GentleHumanoid: Learning Upper-body Compliance for Contact-rich Human and Object Interaction",
