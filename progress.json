@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "14_Human_Motion",
-      "last_index": 482,
-      "last_title": "Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction (arXiv:2512.00960)",
-      "next_module": "04_Loco-Manipulation_and_WBC"
+      "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_index": 546,
+      "last_title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers (arXiv:2606.06493)",
+      "next_module": "05_Locomotion"
     },
-    "last_summary_index": 482,
-    "last_summary_date": "2026-06-20",
-    "last_summary_title": "Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction",
+    "last_summary_index": 546,
+    "last_summary_date": "2026-06-21",
+    "last_summary_title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
     "next_summary_index": null,
     "log": [
       {
@@ -971,6 +971,18 @@
         "arxiv": "2603.15546",
         "source_repo": "https://github.com/nv-tlabs/kimodo",
         "project_page": "https://research.nvidia.com/labs/sil/projects/kimodo/"
+      },
+      {
+        "date": "2026-06-21",
+        "index": 546,
+        "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+        "module": "04_Loco-Manipulation_and_WBC",
+        "category": "04_Loco-Manipulation_and_WBC",
+        "note_path": "papers/04_Loco-Manipulation_and_WBC/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers.md",
+        "track": "module_rotation",
+        "arxiv": "2606.06493",
+        "source_repo": "https://github.com/lzyang2000/HANDOFF",
+        "project_page": "https://lzyang2000.github.io/HANDOFF/"
       }
     ],
     "last_completed_index": 550,
@@ -4172,6 +4184,16 @@
       "pdf_file": "",
       "route": "人物交互重建",
       "title_cn": ""
+    },
+    {
+      "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+      "folder": "papers/04_Loco-Manipulation_and_WBC/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers",
+      "note_file": "HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers.md",
+      "status": "done",
+      "arxiv": "2606.06493",
+      "pdf_file": "",
+      "route": "移动操作/WBC",
+      "title_cn": "用互补教师蒸馏打造任务空间人形全身控制器"
     }
   ]
 }
