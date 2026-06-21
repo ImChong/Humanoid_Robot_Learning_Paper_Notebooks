@@ -4870,6 +4870,36 @@
       "pdf_file": "",
       "route": "Manipulation",
       "title_cn": ""
+    },
+    {
+      "title": "A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation",
+      "folder": "papers/06_Manipulation/A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models",
+      "note_file": "A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models.md",
+      "status": "done",
+      "arxiv": "2602.01067",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Learning Visuotactile Skills with Two Multifingered Hands",
+      "folder": "papers/06_Manipulation/Learning_Visuotactile_Skills_with_Two_Multifingered_Hands",
+      "note_file": "Learning_Visuotactile_Skills_with_Two_Multifingered_Hands.md",
+      "status": "done",
+      "arxiv": "2404.16823",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation",
+      "folder": "papers/06_Manipulation/OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation",
+      "note_file": "OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation.md",
+      "status": "done",
+      "arxiv": "2410.11792",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
     }
   ]
 }

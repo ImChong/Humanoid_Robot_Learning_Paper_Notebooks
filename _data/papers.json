@@ -1326,6 +1326,17 @@
         "zh_title": "DreamDojo：从大规模人类视频中学到的通用机器人世界模型"
       },
       {
+        "title": "A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation",
+        "path": "papers/06_Manipulation/A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models/A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models.md",
+        "url": "/papers/06_Manipulation/A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models/A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models.html",
+        "dir": "A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models",
+        "arxiv": "2602.01067",
+        "published_date_zh": "2026年2月",
+        "published_date_en": "Feb 2026",
+        "zhname": "面向机器人操作的大行为模型协同训练：数据模态与策略的系统研究",
+        "zh_title": "面向机器人操作的大行为模型协同训练：数据模态与策略的系统研究"
+      },
+      {
         "title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
         "path": "papers/06_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation.md",
         "url": "/papers/06_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation.html",
@@ -1725,6 +1736,28 @@
         "published_date_en": "Oct 2024",
         "zhname": "Learning to Look：用策略因子化为决策寻求信息",
         "zh_title": "Learning to Look：用策略因子化为决策寻求信息"
+      },
+      {
+        "title": "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation",
+        "path": "papers/06_Manipulation/OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation/OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation.md",
+        "url": "/papers/06_Manipulation/OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation/OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation.html",
+        "dir": "OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation",
+        "arxiv": "2410.11792",
+        "published_date_zh": "2024年10月",
+        "published_date_en": "Oct 2024",
+        "zhname": "OKAMI：通过单段视频模仿教人形机器人操作技能",
+        "zh_title": "OKAMI：通过单段视频模仿教人形机器人操作技能"
+      },
+      {
+        "title": "Learning Visuotactile Skills with Two Multifingered Hands",
+        "path": "papers/06_Manipulation/Learning_Visuotactile_Skills_with_Two_Multifingered_Hands/Learning_Visuotactile_Skills_with_Two_Multifingered_Hands.md",
+        "url": "/papers/06_Manipulation/Learning_Visuotactile_Skills_with_Two_Multifingered_Hands/Learning_Visuotactile_Skills_with_Two_Multifingered_Hands.html",
+        "dir": "Learning_Visuotactile_Skills_with_Two_Multifingered_Hands",
+        "arxiv": "2404.16823",
+        "published_date_zh": "2024年4月",
+        "published_date_en": "Apr 2024",
+        "zhname": "用两只多指手学习视触觉技能",
+        "zh_title": "用两只多指手学习视触觉技能"
       }
     ],
     "zhname": "灵巧操作",
