@@ -984,6 +984,72 @@
         "zh_title": "在杂乱室内场景中实现无碰撞人形穿越（Click-and-Traverse / CAT）"
       },
       {
+        "title": "FRoM-W1: Towards General Humanoid Whole-Body Control with Language Instructions",
+        "path": "papers/04_Loco-Manipulation_and_WBC/FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions/FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions/FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions.html",
+        "dir": "FRoM-W1__Towards_General_Humanoid_Whole-Body_Control_with_Language_Instructions",
+        "arxiv": "2601.12799",
+        "published_date_zh": "2026年1月",
+        "published_date_en": "Jan 2026",
+        "zhname": "FRoM-W1：面向语言指令的通用人形全身控制开源框架",
+        "zh_title": "FRoM-W1：面向语言指令的通用人形全身控制开源框架"
+      },
+      {
+        "title": "Learning Whole-Body Human-Humanoid Interaction from Human-Human Demonstrations",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations/Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations/Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations.html",
+        "dir": "Learning_Whole-Body_Human-Humanoid_Interaction_from_Human-Human_Demonstrations",
+        "arxiv": "2601.09518",
+        "published_date_zh": "2026年1月",
+        "published_date_en": "Jan 2026",
+        "zhname": "从人-人示范学习人-人形全身交互",
+        "zh_title": "从人-人示范学习人-人形全身交互"
+      },
+      {
+        "title": "Hiking in the Wild: A Scalable Perceptive Parkour Framework for Humanoids",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids/Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids/Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids.html",
+        "dir": "Hiking_in_the_Wild__A_Scalable_Perceptive_Parkour_Framework_for_Humanoids",
+        "arxiv": "2601.07718",
+        "published_date_zh": "2026年1月",
+        "published_date_en": "Jan 2026",
+        "zhname": "Hiking in the Wild：可扩展的人形感知式跑酷框架",
+        "zh_title": "Hiking in the Wild：可扩展的人形感知式跑酷框架"
+      },
+      {
+        "title": "Deep Whole-body Parkour",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Deep_Whole-body_Parkour/Deep_Whole-body_Parkour.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Deep_Whole-body_Parkour/Deep_Whole-body_Parkour.html",
+        "dir": "Deep_Whole-body_Parkour",
+        "arxiv": "2601.07701",
+        "published_date_zh": "2026年1月",
+        "published_date_en": "Jan 2026",
+        "zhname": "Deep Whole-body Parkour：感知式通用全身运动控制",
+        "zh_title": "Deep Whole-body Parkour：感知式通用全身运动控制"
+      },
+      {
+        "title": "Coordinated Humanoid Manipulation with Choice Policies",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Coordinated_Humanoid_Manipulation_with_Choice_Policies/Coordinated_Humanoid_Manipulation_with_Choice_Policies.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Coordinated_Humanoid_Manipulation_with_Choice_Policies/Coordinated_Humanoid_Manipulation_with_Choice_Policies.html",
+        "dir": "Coordinated_Humanoid_Manipulation_with_Choice_Policies",
+        "arxiv": "2512.25072",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "Coordinated Humanoid Manipulation：用「选择策略」做协调全身操作",
+        "zh_title": "Coordinated Humanoid Manipulation：用「选择策略」做协调全身操作"
+      },
+      {
+        "title": "UniAct: Unified Motion Generation and Action Streaming for Humanoid Robots",
+        "path": "papers/04_Loco-Manipulation_and_WBC/UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots/UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots/UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots.html",
+        "dir": "UniAct__Unified_Motion_Generation_and_Action_Streaming_for_Humanoid_Robots",
+        "arxiv": "2512.24321",
+        "published_date_zh": "2025年12月",
+        "published_date_en": "Dec 2025",
+        "zhname": "UniAct：人形机器人的统一动作生成与流式执行",
+        "zh_title": "UniAct：人形机器人的统一动作生成与流式执行"
+      },
+      {
         "title": "Semantic Co-Speech Gesture Synthesis and Real-Time Control for Humanoid Robots",
         "path": "papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots/Semantic_Co-Speech_Gesture_Synthesis_and_Real-Time_Control_for_Humanoid_Robots.html",
