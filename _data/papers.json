@@ -577,6 +577,40 @@
         "zh_title": "SplitAdapter：用「负载-动力学解耦」的因子化适配，让人形机器人稳稳搬动重物"
       },
       {
+        "title": "SUGAR: A Scalable Human-Video-Driven Generalizable Humanoid Loco-Manipulation Learning Framework",
+        "path": "papers/04_Loco-Manipulation_and_WBC/SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework/SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework/SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework.html",
+        "dir": "SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework",
+        "arxiv": "2605.20373",
+        "has_open_source": true,
+        "published_date_zh": "2026年5月",
+        "published_date_en": "May 2026",
+        "zhname": "SUGAR：基于人类视频的可扩展通用人形移动操作学习框架",
+        "zh_title": "SUGAR：基于人类视频的可扩展通用人形移动操作学习框架"
+      },
+      {
+        "title": "Heracles: Bridging Precise Tracking and Generative Synthesis for General Humanoid Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control/Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control/Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control.html",
+        "dir": "Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control",
+        "arxiv": "2603.27756",
+        "published_date_zh": "2026年3月",
+        "published_date_en": "Mar 2026",
+        "zhname": "Heracles：桥接精确跟踪与生成式合成的通用人形控制",
+        "zh_title": "Heracles：桥接精确跟踪与生成式合成的通用人形控制"
+      },
+      {
+        "title": "SafeFlow: Real-Time Text-Driven Humanoid Whole-Body Control via Physics-Guided Rectified Flow and Selective Safety Gating",
+        "path": "papers/04_Loco-Manipulation_and_WBC/SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow/SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow/SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow.html",
+        "dir": "SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow",
+        "arxiv": "2603.23983",
+        "published_date_zh": "2026年3月",
+        "published_date_en": "Mar 2026",
+        "zhname": "SafeFlow：物理引导整流流与安全门控的实时文本驱动人形全身控制",
+        "zh_title": "SafeFlow：物理引导整流流与安全门控的实时文本驱动人形全身控制"
+      },
+      {
         "title": "LATENT: Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data",
         "path": "papers/04_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat/LATENT__Learning_Athletic_Humanoid_Tennis_Skills_from_Imperfect_Human_Motion_Dat.html",
@@ -712,6 +746,17 @@
         "zh_title": "MeshMimic：通过三维场景重建实现几何感知的人形机器人运动学习"
       },
       {
+        "title": "Humanoid Hanoi: Investigating Shared Whole-Body Control for Skill-Based Box Rearrangement",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement/Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement/Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement.html",
+        "dir": "Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement",
+        "arxiv": "2602.13850",
+        "published_date_zh": "2026年2月",
+        "published_date_en": "Feb 2026",
+        "zhname": "Humanoid Hanoi：面向技能化箱体重排的共享全身控制研究",
+        "zh_title": "Humanoid Hanoi：面向技能化箱体重排的共享全身控制研究"
+      },
+      {
         "title": "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation",
         "path": "papers/04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation/General_Humanoid_Whole-Body_Control_via_Pretraining_and_Fast_Adaptation.html",
@@ -780,6 +825,17 @@
         "published_date_en": "Feb 7, 2026 (arXiv)",
         "zhname": "TextOp：实时交互式文本驱动人形机器人动作生成与控制",
         "zh_title": "TextOp：实时交互式文本驱动人形机器人动作生成与控制"
+      },
+      {
+        "title": "DynaRetarget: Dynamically-Feasible Retargeting using Sampling-Based Trajectory Optimization",
+        "path": "papers/04_Loco-Manipulation_and_WBC/DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization/DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization/DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization.html",
+        "dir": "DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization",
+        "arxiv": "2602.06827",
+        "published_date_zh": "2026年2月",
+        "published_date_en": "Feb 2026",
+        "zhname": "DynaRetarget：基于采样轨迹优化的动力学可行运动重定向",
+        "zh_title": "DynaRetarget：基于采样轨迹优化的动力学可行运动重定向"
       },
       {
         "title": "Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations",
@@ -1974,6 +2030,12 @@
       }
     ],
     "zhname": "人体动作分析与生成",
+    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
+    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
+  },
+  "_archived": {
+    "display_name": " archived",
+    "papers": [],
     "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
     "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   }

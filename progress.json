@@ -4260,6 +4260,56 @@
       "pdf_file": "",
       "route": "Teleoperation",
       "title_cn": ""
+    },
+    {
+      "title": "DynaRetarget: Dynamically-Feasible Retargeting using Sampling-Based Trajectory Optimization",
+      "folder": "papers/04_Loco-Manipulation_and_WBC/DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization",
+      "note_file": "DynaRetarget__Dynamically-Feasible_Retargeting_using_Sampling-Based_Trajectory_Optimization.md",
+      "status": "done",
+      "arxiv": "2602.06827",
+      "pdf_file": "",
+      "route": "Loco-Manipulation and WBC",
+      "title_cn": ""
+    },
+    {
+      "title": "Heracles: Bridging Precise Tracking and Generative Synthesis for General Humanoid Control",
+      "folder": "papers/04_Loco-Manipulation_and_WBC/Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control",
+      "note_file": "Heracles__Bridging_Precise_Tracking_and_Generative_Synthesis_for_General_Humanoid_Control.md",
+      "status": "done",
+      "arxiv": "2603.27756",
+      "pdf_file": "",
+      "route": "Loco-Manipulation and WBC",
+      "title_cn": ""
+    },
+    {
+      "title": "Humanoid Hanoi: Investigating Shared Whole-Body Control for Skill-Based Box Rearrangement",
+      "folder": "papers/04_Loco-Manipulation_and_WBC/Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement",
+      "note_file": "Humanoid_Hanoi__Investigating_Shared_Whole-Body_Control_for_Skill-Based_Box_Rearrangement.md",
+      "status": "done",
+      "arxiv": "2602.13850",
+      "pdf_file": "",
+      "route": "Loco-Manipulation and WBC",
+      "title_cn": ""
+    },
+    {
+      "title": "SUGAR: A Scalable Human-Video-Driven Generalizable Humanoid Loco-Manipulation Learning Framework",
+      "folder": "papers/04_Loco-Manipulation_and_WBC/SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework",
+      "note_file": "SUGAR__A_Scalable_Human-Video-Driven_Generalizable_Humanoid_Loco-Manipulation_Learning_Framework.md",
+      "status": "done",
+      "arxiv": "2605.20373",
+      "pdf_file": "",
+      "route": "Loco-Manipulation and WBC",
+      "title_cn": ""
+    },
+    {
+      "title": "SafeFlow: Real-Time Text-Driven Humanoid Whole-Body Control via Physics-Guided Rectified Flow and Selective Safety Gating",
+      "folder": "papers/04_Loco-Manipulation_and_WBC/SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow",
+      "note_file": "SafeFlow__Real-Time_Text-Driven_Humanoid_Whole-Body_Control_via_Physics-Guided_Rectified_Flow.md",
+      "status": "done",
+      "arxiv": "2603.23983",
+      "pdf_file": "",
+      "route": "Loco-Manipulation and WBC",
+      "title_cn": ""
     }
   ]
 }
