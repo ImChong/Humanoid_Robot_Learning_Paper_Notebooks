@@ -4960,6 +4960,66 @@
       "pdf_file": "",
       "route": "Human Motion",
       "title_cn": ""
+    },
+    {
+      "title": "Example-based Motion Synthesis via Generative Motion Matching",
+      "folder": "papers/14_Human_Motion/Example-based_Motion_Synthesis_via_Generative_Motion_Matching",
+      "note_file": "Example-based_Motion_Synthesis_via_Generative_Motion_Matching.md",
+      "status": "done",
+      "arxiv": "2306.00378",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "Flexible Motion In-betweening with Diffusion Models",
+      "folder": "papers/14_Human_Motion/Flexible_Motion_In-betweening_with_Diffusion_Models",
+      "note_file": "Flexible_Motion_In-betweening_with_Diffusion_Models.md",
+      "status": "done",
+      "arxiv": "2405.11126",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "Guided Motion Diffusion for Controllable Human Motion Synthesis",
+      "folder": "papers/14_Human_Motion/Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis",
+      "note_file": "Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis.md",
+      "status": "done",
+      "arxiv": "2305.12577",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "PhysDiff: Physics-Guided Human Motion Diffusion Model",
+      "folder": "papers/14_Human_Motion/PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model",
+      "note_file": "PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model.md",
+      "status": "done",
+      "arxiv": "2212.02500",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "TEDi: Temporally-Entangled Diffusion for Long-Term Motion Synthesis",
+      "folder": "papers/14_Human_Motion/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis",
+      "note_file": "TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis.md",
+      "status": "done",
+      "arxiv": "2307.15042",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "Taming Diffusion Probabilistic Models for Character Control",
+      "folder": "papers/14_Human_Motion/Taming_Diffusion_Probabilistic_Models_for_Character_Control",
+      "note_file": "Taming_Diffusion_Probabilistic_Models_for_Character_Control.md",
+      "status": "done",
+      "arxiv": "2404.15121",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
     }
   ]
 }

@@ -2996,6 +2996,72 @@
         "zh_title": "用百万级人类动作扩展大型动作模型"
       },
       {
+        "title": "Flexible Motion In-betweening with Diffusion Models",
+        "path": "papers/14_Human_Motion/Flexible_Motion_In-betweening_with_Diffusion_Models/Flexible_Motion_In-betweening_with_Diffusion_Models.md",
+        "url": "/papers/14_Human_Motion/Flexible_Motion_In-betweening_with_Diffusion_Models/Flexible_Motion_In-betweening_with_Diffusion_Models.html",
+        "dir": "Flexible_Motion_In-betweening_with_Diffusion_Models",
+        "arxiv": "2405.11126",
+        "published_date_zh": "2024年5月",
+        "published_date_en": "May 2024",
+        "zhname": "用扩散模型做灵活的动作中间帧补全",
+        "zh_title": "用扩散模型做灵活的动作中间帧补全"
+      },
+      {
+        "title": "Taming Diffusion Probabilistic Models for Character Control",
+        "path": "papers/14_Human_Motion/Taming_Diffusion_Probabilistic_Models_for_Character_Control/Taming_Diffusion_Probabilistic_Models_for_Character_Control.md",
+        "url": "/papers/14_Human_Motion/Taming_Diffusion_Probabilistic_Models_for_Character_Control/Taming_Diffusion_Probabilistic_Models_for_Character_Control.html",
+        "dir": "Taming_Diffusion_Probabilistic_Models_for_Character_Control",
+        "arxiv": "2404.15121",
+        "published_date_zh": "2024年4月",
+        "published_date_en": "Apr 2024",
+        "zhname": "驯服扩散概率模型以实现角色控制",
+        "zh_title": "驯服扩散概率模型以实现角色控制"
+      },
+      {
+        "title": "TEDi: Temporally-Entangled Diffusion for Long-Term Motion Synthesis",
+        "path": "papers/14_Human_Motion/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis.md",
+        "url": "/papers/14_Human_Motion/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis.html",
+        "dir": "TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis",
+        "arxiv": "2307.15042",
+        "published_date_zh": "2023年7月",
+        "published_date_en": "Jul 2023",
+        "zhname": "TEDi：时间纠缠扩散的长时程动作合成",
+        "zh_title": "TEDi：时间纠缠扩散的长时程动作合成"
+      },
+      {
+        "title": "Example-based Motion Synthesis via Generative Motion Matching",
+        "path": "papers/14_Human_Motion/Example-based_Motion_Synthesis_via_Generative_Motion_Matching/Example-based_Motion_Synthesis_via_Generative_Motion_Matching.md",
+        "url": "/papers/14_Human_Motion/Example-based_Motion_Synthesis_via_Generative_Motion_Matching/Example-based_Motion_Synthesis_via_Generative_Motion_Matching.html",
+        "dir": "Example-based_Motion_Synthesis_via_Generative_Motion_Matching",
+        "arxiv": "2306.00378",
+        "published_date_zh": "2023年6月",
+        "published_date_en": "Jun 2023",
+        "zhname": "GenMM：用生成式动作匹配做范例驱动的动作合成",
+        "zh_title": "GenMM：用生成式动作匹配做范例驱动的动作合成"
+      },
+      {
+        "title": "Guided Motion Diffusion for Controllable Human Motion Synthesis",
+        "path": "papers/14_Human_Motion/Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis/Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis.md",
+        "url": "/papers/14_Human_Motion/Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis/Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis.html",
+        "dir": "Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis",
+        "arxiv": "2305.12577",
+        "published_date_zh": "2023年5月",
+        "published_date_en": "May 2023",
+        "zhname": "GMD：用引导式动作扩散做可控的人体动作合成",
+        "zh_title": "GMD：用引导式动作扩散做可控的人体动作合成"
+      },
+      {
+        "title": "PhysDiff: Physics-Guided Human Motion Diffusion Model",
+        "path": "papers/14_Human_Motion/PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model/PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model.md",
+        "url": "/papers/14_Human_Motion/PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model/PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model.html",
+        "dir": "PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model",
+        "arxiv": "2212.02500",
+        "published_date_zh": "2022年12月",
+        "published_date_en": "Dec 2022",
+        "zhname": "PhysDiff：物理引导的人体动作扩散模型",
+        "zh_title": "PhysDiff：物理引导的人体动作扩散模型"
+      },
+      {
         "title": "Learned Motion Matching",
         "path": "papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.md",
         "url": "/papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.html",
