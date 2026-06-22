@@ -34,7 +34,7 @@ def count_notes() -> int:
 
     # 回退：按目录结构统计论文笔记
     excluded_names = {"PROGRESS.md"}
-    excluded_dirs = {"todos"}
+    excluded_dirs = {"todos", "_archived"}
     return sum(
         1
         for f in PAPERS_DIR.rglob("*.md")
