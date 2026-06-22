@@ -1326,6 +1326,17 @@
         "zh_title": "DreamDojo：从大规模人类视频中学到的通用机器人世界模型"
       },
       {
+        "title": "A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation",
+        "path": "papers/06_Manipulation/A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models/A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models.md",
+        "url": "/papers/06_Manipulation/A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models/A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models.html",
+        "dir": "A_Systematic_Study_of_Data_Modalities_and_Strategies_for_Co-training_Behavior_Models",
+        "arxiv": "2602.01067",
+        "published_date_zh": "2026年2月",
+        "published_date_en": "Feb 2026",
+        "zhname": "面向机器人操作的大行为模型协同训练：数据模态与策略的系统研究",
+        "zh_title": "面向机器人操作的大行为模型协同训练：数据模态与策略的系统研究"
+      },
+      {
         "title": "HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation",
         "path": "papers/06_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation.md",
         "url": "/papers/06_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation/HumanoidVLM_Vision-Language-Guided_Impedance_Control_for_Contact-Rich_Humanoid_Manipulation.html",
@@ -1384,6 +1395,326 @@
         "zh_title": "SafeHumanoid：用 VLM-RAG 驱动人形上身阻抗控制"
       },
       {
+        "title": "Dexterity from Smart Lenses: Multi-Fingered Robot Manipulation with In-the-Wild Human Demonstrations",
+        "path": "papers/06_Manipulation/Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos/Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos.md",
+        "url": "/papers/06_Manipulation/Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos/Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos.html",
+        "dir": "Dexterity_from_Smart_Lenses__Multi-Fingered_Manipulation_with_In-the-Wild_Human_Demos",
+        "arxiv": "2511.16661",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "Dexterity from Smart Lenses：用智能眼镜的野外人类演示学多指操作",
+        "zh_title": "Dexterity from Smart Lenses：用智能眼镜的野外人类演示学多指操作"
+      },
+      {
+        "title": "In-N-On: Scaling Egocentric Manipulation with in-the-wild and on-task Data",
+        "path": "papers/06_Manipulation/In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data/In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data.md",
+        "url": "/papers/06_Manipulation/In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data/In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data.html",
+        "dir": "In-N-On__Scaling_Egocentric_Manipulation_with_in-the-wild_and_on-task_Data",
+        "arxiv": "2511.15704",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "In-N-On：用「野外 + 任务对齐」数据规模化第一视角操作",
+        "zh_title": "In-N-On：用「野外 + 任务对齐」数据规模化第一视角操作"
+      },
+      {
+        "title": "Lightning Grasp: High Performance Procedural Grasp Synthesis with Contact Fields",
+        "path": "papers/06_Manipulation/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields.md",
+        "url": "/papers/06_Manipulation/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields.html",
+        "dir": "Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields",
+        "arxiv": "2511.07418",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "Lightning Grasp：用接触场做高性能程序化抓取合成",
+        "zh_title": "Lightning Grasp：用接触场做高性能程序化抓取合成"
+      },
+      {
+        "title": "EgoMI: Learning Active Vision and Whole-Body Manipulation from Egocentric Human Demonstrations",
+        "path": "papers/06_Manipulation/EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos/EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos.md",
+        "url": "/papers/06_Manipulation/EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos/EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos.html",
+        "dir": "EgoMI__Learning_Active_Vision_and_Whole-Body_Manipulation_from_Egocentric_Human_Demos",
+        "arxiv": "2511.00153",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "EgoMI：从第一视角人类演示学习主动视觉与全身操作",
+        "zh_title": "EgoMI：从第一视角人类演示学习主动视觉与全身操作"
+      },
+      {
+        "title": "Endowing GPT-4 with a Humanoid Body: Building the Bridge Between Off-the-Shelf VLMs and the Physical World",
+        "path": "papers/06_Manipulation/Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World/Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World.md",
+        "url": "/papers/06_Manipulation/Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World/Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World.html",
+        "dir": "Endowing_GPT-4_with_a_Humanoid_Body__Bridge_Between_VLMs_and_the_Physical_World",
+        "arxiv": "2511.00041",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "给 GPT-4 一具人形身体：在现成 VLM 与物理世界间架桥",
+        "zh_title": "给 GPT-4 一具人形身体：在现成 VLM 与物理世界间架桥"
+      },
+      {
+        "title": "A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation",
+        "path": "papers/06_Manipulation/A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation/A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation.md",
+        "url": "/papers/06_Manipulation/A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation/A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation.html",
+        "dir": "A_Humanoid_Visual-Tactile-Action_Dataset_for_Contact-Rich_Manipulation",
+        "arxiv": "2510.25725",
+        "published_date_zh": "2025年10月",
+        "published_date_en": "Oct 2025",
+        "zhname": "面向接触丰富操作的人形视觉-触觉-动作数据集",
+        "zh_title": "面向接触丰富操作的人形视觉-触觉-动作数据集"
+      },
+      {
+        "title": "Towards Proprioception-Aware Embodied Planning for Dual-Arm Humanoid Robots",
+        "path": "papers/06_Manipulation/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots.md",
+        "url": "/papers/06_Manipulation/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots.html",
+        "dir": "Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots",
+        "arxiv": "2510.07882",
+        "published_date_zh": "2025年10月",
+        "published_date_en": "Oct 2025",
+        "zhname": "面向双臂人形的本体感受感知具身规划",
+        "zh_title": "面向双臂人形的本体感受感知具身规划"
+      },
+      {
+        "title": "EgoDemoGen: Egocentric Demonstration Generation for Viewpoint Generalization in Robotic Manipulation",
+        "path": "papers/06_Manipulation/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization.md",
+        "url": "/papers/06_Manipulation/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization.html",
+        "dir": "EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization",
+        "arxiv": "2509.22578",
+        "published_date_zh": "2025年9月",
+        "published_date_en": "Sep 2025",
+        "zhname": "EgoDemoGen：为操作视角泛化生成第一视角演示",
+        "zh_title": "EgoDemoGen：为操作视角泛化生成第一视角演示"
+      },
+      {
+        "title": "Residual Off-Policy RL for Finetuning Behavior Cloning Policies",
+        "path": "papers/06_Manipulation/Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies/Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies.md",
+        "url": "/papers/06_Manipulation/Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies/Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies.html",
+        "dir": "Residual_Off-Policy_RL_for_Finetuning_Behavior_Cloning_Policies",
+        "arxiv": "2509.19301",
+        "published_date_zh": "2025年9月",
+        "published_date_en": "Sep 2025",
+        "zhname": "用残差离策略 RL 微调行为克隆策略",
+        "zh_title": "用残差离策略 RL 微调行为克隆策略"
+      },
+      {
+        "title": "MimicDroid: In-Context Learning for Humanoid Robot Manipulation from Human Play Videos",
+        "path": "papers/06_Manipulation/MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos/MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos.md",
+        "url": "/papers/06_Manipulation/MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos/MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos.html",
+        "dir": "MimicDroid__In-Context_Learning_for_Humanoid_Manipulation_from_Human_Play_Videos",
+        "arxiv": "2509.09769",
+        "published_date_zh": "2025年9月",
+        "published_date_en": "Sep 2025",
+        "zhname": "MimicDroid：从人类玩耍视频做人形操作的上下文学习",
+        "zh_title": "MimicDroid：从人类玩耍视频做人形操作的上下文学习"
+      },
+      {
+        "title": "Masquerade: Learning from In-the-wild Human Videos using Data-Editing",
+        "path": "papers/06_Manipulation/Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing/Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing.md",
+        "url": "/papers/06_Manipulation/Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing/Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing.html",
+        "dir": "Masquerade__Learning_from_In-the-wild_Human_Videos_using_Data-Editing",
+        "arxiv": "2508.09976",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "Masquerade：用数据编辑从野外人类视频学习",
+        "zh_title": "Masquerade：用数据编辑从野外人类视频学习"
+      },
+      {
+        "title": "TOP: Time Optimization Policy for Stable and Accurate Standing Manipulation with Humanoid Robots",
+        "path": "papers/06_Manipulation/TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation/TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation.md",
+        "url": "/papers/06_Manipulation/TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation/TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation.html",
+        "dir": "TOP__Time_Optimization_Policy_for_Stable_and_Accurate_Standing_Manipulation",
+        "arxiv": "2508.00355",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "TOP：面向人形稳定精确站立操作的时间优化策略",
+        "zh_title": "TOP：面向人形稳定精确站立操作的时间优化策略"
+      },
+      {
+        "title": "H-RDT: Human Manipulation Enhanced Bimanual Robotic Manipulation",
+        "path": "papers/06_Manipulation/H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation/H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation.md",
+        "url": "/papers/06_Manipulation/H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation/H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation.html",
+        "dir": "H-RDT__Human_Manipulation_Enhanced_Bimanual_Robotic_Manipulation",
+        "arxiv": "2507.23523",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "H-RDT：用人类操作增强的双臂机器人操作",
+        "zh_title": "H-RDT：用人类操作增强的双臂机器人操作"
+      },
+      {
+        "title": "Being-H0: Vision-Language-Action Pretraining from Large-Scale Human Videos",
+        "path": "papers/06_Manipulation/Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos/Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos.md",
+        "url": "/papers/06_Manipulation/Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos/Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos.html",
+        "dir": "Being-H0__Vision-Language-Action_Pretraining_from_Large-Scale_Human_Videos",
+        "arxiv": "2507.15597",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "Being-H0：从大规模人类视频做视觉-语言-动作预训练",
+        "zh_title": "Being-H0：从大规模人类视频做视觉-语言-动作预训练"
+      },
+      {
+        "title": "Robot Drummer: Learning Rhythmic Skills for Humanoid Drumming",
+        "path": "papers/06_Manipulation/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming.md",
+        "url": "/papers/06_Manipulation/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming.html",
+        "dir": "Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming",
+        "arxiv": "2507.11498",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "Robot Drummer：为人形打鼓学习节奏技能",
+        "zh_title": "Robot Drummer：为人形打鼓学习节奏技能"
+      },
+      {
+        "title": "Hierarchical Vision-Language Planning for Multi-Step Humanoid Manipulation",
+        "path": "papers/06_Manipulation/Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation/Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation.md",
+        "url": "/papers/06_Manipulation/Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation/Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation.html",
+        "dir": "Hierarchical_Vision-Language_Planning_for_Multi-Step_Humanoid_Manipulation",
+        "arxiv": "2506.22827",
+        "published_date_zh": "2025年6月",
+        "published_date_en": "Jun 2025",
+        "zhname": "面向多步人形操作的分层视觉-语言规划",
+        "zh_title": "面向多步人形操作的分层视觉-语言规划"
+      },
+      {
+        "title": "Vision in Action: Learning Active Perception from Human Demonstrations",
+        "path": "papers/06_Manipulation/Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations/Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations.md",
+        "url": "/papers/06_Manipulation/Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations/Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations.html",
+        "dir": "Vision_in_Action__Learning_Active_Perception_from_Human_Demonstrations",
+        "arxiv": "2506.15666",
+        "published_date_zh": "2025年6月",
+        "published_date_en": "Jun 2025",
+        "zhname": "Vision in Action：从人类演示学习主动感知",
+        "zh_title": "Vision in Action：从人类演示学习主动感知"
+      },
+      {
+        "title": "DreamGen: Unlocking Generalization in Robot Learning through Video World Models",
+        "path": "papers/06_Manipulation/DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models/DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models.md",
+        "url": "/papers/06_Manipulation/DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models/DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models.html",
+        "dir": "DreamGen__Unlocking_Generalization_in_Robot_Learning_through_Video_World_Models",
+        "arxiv": "2505.12705",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "DreamGen：用视频世界模型解锁机器人学习的泛化",
+        "zh_title": "DreamGen：用视频世界模型解锁机器人学习的泛化"
+      },
+      {
+        "title": "EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video",
+        "path": "papers/06_Manipulation/EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video/EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video.md",
+        "url": "/papers/06_Manipulation/EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video/EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video.html",
+        "dir": "EgoDex__Learning_Dexterous_Manipulation_from_Large-Scale_Egocentric_Video",
+        "arxiv": "2505.11709",
+        "has_open_source": true,
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "EgoDex：从大规模第一视角视频学习灵巧操作",
+        "zh_title": "EgoDex：从大规模第一视角视频学习灵巧操作"
+      },
+      {
+        "title": "Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation",
+        "path": "papers/06_Manipulation/Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation/Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation.md",
+        "url": "/papers/06_Manipulation/Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation/Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation.html",
+        "dir": "Sim-and-Real_Co-Training__A_Simple_Recipe_for_Vision-Based_Robotic_Manipulation",
+        "arxiv": "2503.24361",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "Sim-and-Real 协同训练：基于视觉的机器人操作的简单配方",
+        "zh_title": "Sim-and-Real 协同训练：基于视觉的机器人操作的简单配方"
+      },
+      {
+        "title": "Humanoid Policy ~ Human Policy",
+        "path": "papers/06_Manipulation/Humanoid_Policy__Human_Policy/Humanoid_Policy__Human_Policy.md",
+        "url": "/papers/06_Manipulation/Humanoid_Policy__Human_Policy/Humanoid_Policy__Human_Policy.html",
+        "dir": "Humanoid_Policy__Human_Policy",
+        "arxiv": "2503.13441",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "Humanoid Policy ~ Human Policy：人形策略≈人类策略",
+        "zh_title": "Humanoid Policy ~ Human Policy：人形策略≈人类策略"
+      },
+      {
+        "title": "Humanoids in Hospitals: A Technical Study of Humanoid Robot Surrogates for Dexterous Medical Interventions",
+        "path": "papers/06_Manipulation/Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions/Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions.md",
+        "url": "/papers/06_Manipulation/Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions/Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions.html",
+        "dir": "Humanoids_in_Hospitals__Humanoid_Surrogates_for_Dexterous_Medical_Interventions",
+        "arxiv": "2503.12725",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "Humanoids in Hospitals：人形机器人替身做灵巧医疗干预的技术研究",
+        "zh_title": "Humanoids in Hospitals：人形机器人替身做灵巧医疗干预的技术研究"
+      },
+      {
+        "title": "Unified Video Action Model",
+        "path": "papers/06_Manipulation/Unified_Video_Action_Model/Unified_Video_Action_Model.md",
+        "url": "/papers/06_Manipulation/Unified_Video_Action_Model/Unified_Video_Action_Model.html",
+        "dir": "Unified_Video_Action_Model",
+        "arxiv": "2503.00200",
+        "published_date_zh": "2025年2月",
+        "published_date_en": "Feb 2025",
+        "zhname": "Unified Video Action Model：统一视频-动作模型",
+        "zh_title": "Unified Video Action Model：统一视频-动作模型"
+      },
+      {
+        "title": "Dexterous Safe Control for Humanoids in Cluttered Environments via Projected Safe Set Algorithm",
+        "path": "papers/06_Manipulation/Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set/Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set.md",
+        "url": "/papers/06_Manipulation/Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set/Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set.html",
+        "dir": "Dexterous_Safe_Control_for_Humanoids_in_Cluttered_Environments_via_Projected_Safe_Set",
+        "arxiv": "2502.02858",
+        "published_date_zh": "2025年2月",
+        "published_date_en": "Feb 2025",
+        "zhname": "用投影安全集算法实现杂乱环境中人形的灵巧安全控制",
+        "zh_title": "用投影安全集算法实现杂乱环境中人形的灵巧安全控制"
+      },
+      {
+        "title": "MobileH2R: Learning Generalizable Human to Mobile Robot Handover Exclusively from Scalable and Diverse Synthetic Data",
+        "path": "papers/06_Manipulation/MobileH2R__Learning_Generalizable_Human_to_Mobile_Robot_Handover_from_Synthetic_Data/MobileH2R__Learning_Generalizable_Human_to_Mobile_Robot_Handover_from_Synthetic_Data.md",
+        "url": "/papers/06_Manipulation/MobileH2R__Learning_Generalizable_Human_to_Mobile_Robot_Handover_from_Synthetic_Data/MobileH2R__Learning_Generalizable_Human_to_Mobile_Robot_Handover_from_Synthetic_Data.html",
+        "dir": "MobileH2R__Learning_Generalizable_Human_to_Mobile_Robot_Handover_from_Synthetic_Data",
+        "arxiv": "2501.04595",
+        "published_date_zh": "2025年1月",
+        "published_date_en": "Jan 2025",
+        "zhname": "MobileH2R：仅用可扩展多样合成数据学习泛化的人到移动机器人递交",
+        "zh_title": "MobileH2R：仅用可扩展多样合成数据学习泛化的人到移动机器人递交"
+      },
+      {
+        "title": "ARMADA: Augmented Reality for Robot Manipulation and Robot-Free Data Acquisition",
+        "path": "papers/06_Manipulation/ARMADA__Augmented_Reality_for_Robot_Manipulation_and_Robot-Free_Data_Acquisition/ARMADA__Augmented_Reality_for_Robot_Manipulation_and_Robot-Free_Data_Acquisition.md",
+        "url": "/papers/06_Manipulation/ARMADA__Augmented_Reality_for_Robot_Manipulation_and_Robot-Free_Data_Acquisition/ARMADA__Augmented_Reality_for_Robot_Manipulation_and_Robot-Free_Data_Acquisition.html",
+        "dir": "ARMADA__Augmented_Reality_for_Robot_Manipulation_and_Robot-Free_Data_Acquisition",
+        "arxiv": "2412.10631",
+        "published_date_zh": "2024年12月",
+        "published_date_en": "Dec 2024",
+        "zhname": "ARMADA：用增强现实做机器人操作与无机器人数据采集",
+        "zh_title": "ARMADA：用增强现实做机器人操作与无机器人数据采集"
+      },
+      {
+        "title": "Object-Centric Dexterous Manipulation from Human Motion Data",
+        "path": "papers/06_Manipulation/Object-Centric_Dexterous_Manipulation_from_Human_Motion_Data/Object-Centric_Dexterous_Manipulation_from_Human_Motion_Data.md",
+        "url": "/papers/06_Manipulation/Object-Centric_Dexterous_Manipulation_from_Human_Motion_Data/Object-Centric_Dexterous_Manipulation_from_Human_Motion_Data.html",
+        "dir": "Object-Centric_Dexterous_Manipulation_from_Human_Motion_Data",
+        "arxiv": "2411.04005",
+        "published_date_zh": "2024年11月",
+        "published_date_en": "Nov 2024",
+        "zhname": "以物体为中心：从人类动作数据学习灵巧操作",
+        "zh_title": "以物体为中心：从人类动作数据学习灵巧操作"
+      },
+      {
+        "title": "DexHub and DART: Towards Internet Scale Robot Data Collection",
+        "path": "papers/06_Manipulation/DexHub_and_DART__Towards_Internet_Scale_Robot_Data_Collection/DexHub_and_DART__Towards_Internet_Scale_Robot_Data_Collection.md",
+        "url": "/papers/06_Manipulation/DexHub_and_DART__Towards_Internet_Scale_Robot_Data_Collection/DexHub_and_DART__Towards_Internet_Scale_Robot_Data_Collection.html",
+        "dir": "DexHub_and_DART__Towards_Internet_Scale_Robot_Data_Collection",
+        "arxiv": "2411.02214",
+        "published_date_zh": "2024年11月",
+        "published_date_en": "Nov 2024",
+        "zhname": "DexHub 与 DART：迈向互联网规模的机器人数据采集",
+        "zh_title": "DexHub 与 DART：迈向互联网规模的机器人数据采集"
+      },
+      {
+        "title": "Learning to Look Around: Enhancing Teleoperation and Learning with a Human-like Actuated Neck",
+        "path": "papers/06_Manipulation/Learning_to_Look_Around__Enhancing_Teleoperation_and_Learning/Learning_to_Look_Around__Enhancing_Teleoperation_and_Learning.md",
+        "url": "/papers/06_Manipulation/Learning_to_Look_Around__Enhancing_Teleoperation_and_Learning/Learning_to_Look_Around__Enhancing_Teleoperation_and_Learning.html",
+        "dir": "Learning_to_Look_Around__Enhancing_Teleoperation_and_Learning",
+        "arxiv": "2411.00704",
+        "published_date_zh": "2024年11月",
+        "published_date_en": "Nov 2024",
+        "zhname": "Learning to Look Around：用拟人可动颈增强遥操作与学习",
+        "zh_title": "Learning to Look Around：用拟人可动颈增强遥操作与学习"
+      },
+      {
         "title": "EgoMimic: Scaling Imitation Learning via Egocentric Video",
         "path": "papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.md",
         "url": "/papers/06_Manipulation/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video/EgoMimic_Scaling_Imitation_Learning_via_Egocentric_Video.html",
@@ -1394,6 +1725,39 @@
         "published_date_en": "Oct 2024 (arXiv)",
         "zhname": "EgoMimic：通过第一视角视频扩展模仿学习",
         "zh_title": "EgoMimic：通过第一视角视频扩展模仿学习"
+      },
+      {
+        "title": "Learning to Look: Seeking Information for Decision Making via Policy Factorization",
+        "path": "papers/06_Manipulation/Learning_to_Look__Seeking_Information_for_Decision_Making_via_Policy_Factorization/Learning_to_Look__Seeking_Information_for_Decision_Making_via_Policy_Factorization.md",
+        "url": "/papers/06_Manipulation/Learning_to_Look__Seeking_Information_for_Decision_Making_via_Policy_Factorization/Learning_to_Look__Seeking_Information_for_Decision_Making_via_Policy_Factorization.html",
+        "dir": "Learning_to_Look__Seeking_Information_for_Decision_Making_via_Policy_Factorization",
+        "arxiv": "2410.18964",
+        "published_date_zh": "2024年10月",
+        "published_date_en": "Oct 2024",
+        "zhname": "Learning to Look：用策略因子化为决策寻求信息",
+        "zh_title": "Learning to Look：用策略因子化为决策寻求信息"
+      },
+      {
+        "title": "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation",
+        "path": "papers/06_Manipulation/OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation/OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation.md",
+        "url": "/papers/06_Manipulation/OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation/OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation.html",
+        "dir": "OKAMI__Teaching_Humanoid_Robots_Manipulation_Skills_through_Single_Video_Imitation",
+        "arxiv": "2410.11792",
+        "published_date_zh": "2024年10月",
+        "published_date_en": "Oct 2024",
+        "zhname": "OKAMI：通过单段视频模仿教人形机器人操作技能",
+        "zh_title": "OKAMI：通过单段视频模仿教人形机器人操作技能"
+      },
+      {
+        "title": "Learning Visuotactile Skills with Two Multifingered Hands",
+        "path": "papers/06_Manipulation/Learning_Visuotactile_Skills_with_Two_Multifingered_Hands/Learning_Visuotactile_Skills_with_Two_Multifingered_Hands.md",
+        "url": "/papers/06_Manipulation/Learning_Visuotactile_Skills_with_Two_Multifingered_Hands/Learning_Visuotactile_Skills_with_Two_Multifingered_Hands.html",
+        "dir": "Learning_Visuotactile_Skills_with_Two_Multifingered_Hands",
+        "arxiv": "2404.16823",
+        "published_date_zh": "2024年4月",
+        "published_date_en": "Apr 2024",
+        "zhname": "用两只多指手学习视触觉技能",
+        "zh_title": "用两只多指手学习视触觉技能"
       }
     ],
     "zhname": "灵巧操作",
@@ -1461,6 +1825,17 @@
         "zh_title": "学习式神经遥操作：用 RL 端到端策略替换 IK+PD，让 VR 控制器直接驱动人形机器人"
       },
       {
+        "title": "TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System",
+        "path": "papers/07_Teleoperation/TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System/TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System.md",
+        "url": "/papers/07_Teleoperation/TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System/TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System.html",
+        "dir": "TWIST2__Scalable_Portable_and_Holistic_Humanoid_Data_Collection_System",
+        "arxiv": "2511.02832",
+        "published_date_zh": "2025年11月",
+        "published_date_en": "Nov 2025",
+        "zhname": "TWIST2：可扩展、便携、整体式的人形数据采集系统",
+        "zh_title": "TWIST2：可扩展、便携、整体式的人形数据采集系统"
+      },
+      {
         "title": "Development of an Intuitive GUI for Non-Expert Teleoperation of Humanoid Robots",
         "path": "papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.md",
         "url": "/papers/07_Teleoperation/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots/Intuitive_GUI_for_Non-Expert_Teleoperation_of_Humanoid_Robots.html",
@@ -1492,6 +1867,127 @@
         "published_date_en": "Oct 3, 2025 (arXiv v1; v2 Feb 16, 2026)",
         "zhname": "LapSurgie：人形机器人经遥操作手持腹腔镜执行手术",
         "zh_title": "LapSurgie：人形机器人经遥操作手持腹腔镜执行手术"
+      },
+      {
+        "title": "Whole-Body Bilateral Teleoperation with Multi-Stage Object Parameter Estimation for Wheeled Humanoid Locomanipulation",
+        "path": "papers/07_Teleoperation/Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation/Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation.md",
+        "url": "/papers/07_Teleoperation/Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation/Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation.html",
+        "dir": "Whole-Body_Bilateral_Teleoperation_with_Multi-Stage_Object_Parameter_Estimation",
+        "arxiv": "2508.09846",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "面向轮式人形移动操作的多阶段物体参数估计全身双边遥操作",
+        "zh_title": "面向轮式人形移动操作的多阶段物体参数估计全身双边遥操作"
+      },
+      {
+        "title": "CHILD: a Whole-Body Humanoid Teleoperation System",
+        "path": "papers/07_Teleoperation/CHILD__a_Whole-Body_Humanoid_Teleoperation_System/CHILD__a_Whole-Body_Humanoid_Teleoperation_System.md",
+        "url": "/papers/07_Teleoperation/CHILD__a_Whole-Body_Humanoid_Teleoperation_System/CHILD__a_Whole-Body_Humanoid_Teleoperation_System.html",
+        "dir": "CHILD__a_Whole-Body_Humanoid_Teleoperation_System",
+        "arxiv": "2508.00162",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "CHILD：全身人形遥操作系统",
+        "zh_title": "CHILD：全身人形遥操作系统"
+      },
+      {
+        "title": "Heavy lifting tasks via haptic teleoperation of a wheeled humanoid",
+        "path": "papers/07_Teleoperation/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid.md",
+        "url": "/papers/07_Teleoperation/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid.html",
+        "dir": "Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid",
+        "arxiv": "2505.19530",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "通过力触觉遥操作让轮式人形完成重物搬运",
+        "zh_title": "通过力触觉遥操作让轮式人形完成重物搬运"
+      },
+      {
+        "title": "TeleOpBench: A Simulator-Centric Benchmark for Dual-Arm Dexterous Teleoperation",
+        "path": "papers/07_Teleoperation/TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation/TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation.md",
+        "url": "/papers/07_Teleoperation/TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation/TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation.html",
+        "dir": "TeleOpBench__A_Simulator-Centric_Benchmark_for_Dual-Arm_Dexterous_Teleoperation",
+        "arxiv": "2505.12748",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "TeleOpBench：以仿真为中心的双臂灵巧遥操作基准",
+        "zh_title": "TeleOpBench：以仿真为中心的双臂灵巧遥操作基准"
+      },
+      {
+        "title": "Human-Robot Collaboration for the Remote Control of Mobile Humanoid Robots with Torso-Arm Coordination",
+        "path": "papers/07_Teleoperation/Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots/Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots.md",
+        "url": "/papers/07_Teleoperation/Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots/Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots.html",
+        "dir": "Human-Robot_Collaboration_for_Remote_Control_of_Mobile_Humanoid_Robots",
+        "arxiv": "2505.05773",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "面向移动人形远程控制的人机协作躯干-手臂协调",
+        "zh_title": "面向移动人形远程控制的人机协作躯干-手臂协调"
+      },
+      {
+        "title": "TWIST: Teleoperated Whole-Body Imitation System",
+        "path": "papers/07_Teleoperation/TWIST__Teleoperated_Whole-Body_Imitation_System/TWIST__Teleoperated_Whole-Body_Imitation_System.md",
+        "url": "/papers/07_Teleoperation/TWIST__Teleoperated_Whole-Body_Imitation_System/TWIST__Teleoperated_Whole-Body_Imitation_System.html",
+        "dir": "TWIST__Teleoperated_Whole-Body_Imitation_System",
+        "arxiv": "2505.02833",
+        "published_date_zh": "2025年5月",
+        "published_date_en": "May 2025",
+        "zhname": "TWIST：遥操作全身模仿系统",
+        "zh_title": "TWIST：遥操作全身模仿系统"
+      },
+      {
+        "title": "NuExo: A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots",
+        "path": "papers/07_Teleoperation/NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM/NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM.md",
+        "url": "/papers/07_Teleoperation/NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM/NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM.html",
+        "dir": "NuExo__A_Wearable_Exoskeleton_Covering_all_Upper_Limb_ROM",
+        "arxiv": "2503.10554",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "NuExo：覆盖全上肢活动范围的可穿戴外骨骼，用于户外数据采集与人形遥操作",
+        "zh_title": "NuExo：覆盖全上肢活动范围的可穿戴外骨骼，用于户外数据采集与人形遥操作"
+      },
+      {
+        "title": "Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control",
+        "path": "papers/07_Teleoperation/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control.md",
+        "url": "/papers/07_Teleoperation/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control/Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control.html",
+        "dir": "Mobile-TeleVision__Predictive_Motion_Priors_for_Humanoid_Whole-Body_Control",
+        "arxiv": "2412.07773",
+        "published_date_zh": "2024年12月",
+        "published_date_en": "Dec 2024",
+        "zhname": "Mobile-TeleVision：面向人形全身控制的预测式运动先验",
+        "zh_title": "Mobile-TeleVision：面向人形全身控制的预测式运动先验"
+      },
+      {
+        "title": "High-Speed and Impact Resilient Teleoperation of Humanoid Robots",
+        "path": "papers/07_Teleoperation/High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots/High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots.md",
+        "url": "/papers/07_Teleoperation/High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots/High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots.html",
+        "dir": "High-Speed_and_Impact_Resilient_Teleoperation_of_Humanoid_Robots",
+        "arxiv": "2409.04639",
+        "published_date_zh": "2024年9月",
+        "published_date_en": "Sep 2024",
+        "zhname": "人形机器人的高速且抗冲击遥操作",
+        "zh_title": "人形机器人的高速且抗冲击遥操作"
+      },
+      {
+        "title": "ACE: A Cross-Platform Visual-Exoskeletons System for Low-Cost Dexterous Teleoperation",
+        "path": "papers/07_Teleoperation/ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation/ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation.md",
+        "url": "/papers/07_Teleoperation/ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation/ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation.html",
+        "dir": "ACE__A_Cross-Platform_Visual-Exoskeletons_System_for_Low-Cost_Dexterous_Teleoperation",
+        "arxiv": "2408.11805",
+        "published_date_zh": "2024年8月",
+        "published_date_en": "Aug 2024",
+        "zhname": "ACE：面向低成本灵巧遥操作的跨平台视觉-外骨骼系统",
+        "zh_title": "ACE：面向低成本灵巧遥操作的跨平台视觉-外骨骼系统"
+      },
+      {
+        "title": "Bunny-VisionPro: Real-Time Bimanual Dexterous Teleoperation for Imitation Learning",
+        "path": "papers/07_Teleoperation/Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning/Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning.md",
+        "url": "/papers/07_Teleoperation/Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning/Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning.html",
+        "dir": "Bunny-VisionPro__Real-Time_Bimanual_Dexterous_Teleoperation_for_Imitation_Learning",
+        "arxiv": "2407.03162",
+        "published_date_zh": "2024年7月",
+        "published_date_en": "Jul 2024",
+        "zhname": "Bunny-VisionPro：面向模仿学习的实时双手灵巧遥操作",
+        "zh_title": "Bunny-VisionPro：面向模仿学习的实时双手灵巧遥操作"
       },
       {
         "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
@@ -2120,6 +2616,17 @@
         "zh_title": "迈向动作图灵测试：评估人形机器人的「类人度」"
       },
       {
+        "title": "RoboCasa365: A Large-Scale Simulation Framework for Training and Benchmarking Generalist Robots",
+        "path": "papers/11_Simulation_Benchmark/RoboCasa365__A_Large-Scale_Simulation_Framework_for_Training_and_Benchmarking_Generalist_Robots/RoboCasa365__A_Large-Scale_Simulation_Framework_for_Training_and_Benchmarking_Generalist_Robots.md",
+        "url": "/papers/11_Simulation_Benchmark/RoboCasa365__A_Large-Scale_Simulation_Framework_for_Training_and_Benchmarking_Generalist_Robots/RoboCasa365__A_Large-Scale_Simulation_Framework_for_Training_and_Benchmarking_Generalist_Robots.html",
+        "dir": "RoboCasa365__A_Large-Scale_Simulation_Framework_for_Training_and_Benchmarking_Generalist_Robots",
+        "arxiv": "2603.04356",
+        "published_date_zh": "2026年3月",
+        "published_date_en": "Mar 2026",
+        "zhname": "RoboCasa365：训练与评测通才机器人的大规模仿真框架",
+        "zh_title": "RoboCasa365：训练与评测通才机器人的大规模仿真框架"
+      },
+      {
         "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
         "path": "papers/11_Simulation_Benchmark/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation.md",
         "url": "/papers/11_Simulation_Benchmark/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation/MolmoSpaces__A_Large-Scale_Open_Ecosystem_for_Robot_Navigation_and_Manipulation.html",
@@ -2167,6 +2674,83 @@
         "zh_title": "人形机器人生成式世界建模：1X 世界模型挑战赛技术报告"
       },
       {
+        "title": "HumanoidGen: Data Generation for Bimanual Dexterous Manipulation via LLM Reasoning",
+        "path": "papers/11_Simulation_Benchmark/HumanoidGen__Data_Generation_for_Bimanual_Dexterous_Manipulation_via_LLM_Reasoning/HumanoidGen__Data_Generation_for_Bimanual_Dexterous_Manipulation_via_LLM_Reasoning.md",
+        "url": "/papers/11_Simulation_Benchmark/HumanoidGen__Data_Generation_for_Bimanual_Dexterous_Manipulation_via_LLM_Reasoning/HumanoidGen__Data_Generation_for_Bimanual_Dexterous_Manipulation_via_LLM_Reasoning.html",
+        "dir": "HumanoidGen__Data_Generation_for_Bimanual_Dexterous_Manipulation_via_LLM_Reasoning",
+        "arxiv": "2507.00833",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "HumanoidGen：用大模型推理为双手灵巧操作生成数据",
+        "zh_title": "HumanoidGen：用大模型推理为双手灵巧操作生成数据"
+      },
+      {
+        "title": "DualTHOR: A Dual-Arm Humanoid Simulation Platform for Contingency-Aware Planning",
+        "path": "papers/11_Simulation_Benchmark/DualTHOR__A_Dual-Arm_Humanoid_Simulation_Platform_for_Contingency-Aware_Planning/DualTHOR__A_Dual-Arm_Humanoid_Simulation_Platform_for_Contingency-Aware_Planning.md",
+        "url": "/papers/11_Simulation_Benchmark/DualTHOR__A_Dual-Arm_Humanoid_Simulation_Platform_for_Contingency-Aware_Planning/DualTHOR__A_Dual-Arm_Humanoid_Simulation_Platform_for_Contingency-Aware_Planning.html",
+        "dir": "DualTHOR__A_Dual-Arm_Humanoid_Simulation_Platform_for_Contingency-Aware_Planning",
+        "arxiv": "2506.16012",
+        "published_date_zh": "2025年6月",
+        "published_date_en": "Jun 2025",
+        "zhname": "DualTHOR：面向意外感知规划的双臂人形仿真平台",
+        "zh_title": "DualTHOR：面向意外感知规划的双臂人形仿真平台"
+      },
+      {
+        "title": "Learning with pyCub: A Simulation and Exercise Framework for Humanoid Robotics",
+        "path": "papers/11_Simulation_Benchmark/Learning_with_pyCub__A_Simulation_and_Exercise_Framework_for_Humanoid_Robotics/Learning_with_pyCub__A_Simulation_and_Exercise_Framework_for_Humanoid_Robotics.md",
+        "url": "/papers/11_Simulation_Benchmark/Learning_with_pyCub__A_Simulation_and_Exercise_Framework_for_Humanoid_Robotics/Learning_with_pyCub__A_Simulation_and_Exercise_Framework_for_Humanoid_Robotics.html",
+        "dir": "Learning_with_pyCub__A_Simulation_and_Exercise_Framework_for_Humanoid_Robotics",
+        "arxiv": "2506.01756",
+        "published_date_zh": "2025年6月",
+        "published_date_en": "Jun 2025",
+        "zhname": "Learning with pyCub：人形机器人学的仿真与练习框架",
+        "zh_title": "Learning with pyCub：人形机器人学的仿真与练习框架"
+      },
+      {
+        "title": "Humanoid World Models: Open World Foundation Models for Humanoid Robotics",
+        "path": "papers/11_Simulation_Benchmark/Humanoid_World_Models__Open_World_Foundation_Models_for_Humanoid_Robotics/Humanoid_World_Models__Open_World_Foundation_Models_for_Humanoid_Robotics.md",
+        "url": "/papers/11_Simulation_Benchmark/Humanoid_World_Models__Open_World_Foundation_Models_for_Humanoid_Robotics/Humanoid_World_Models__Open_World_Foundation_Models_for_Humanoid_Robotics.html",
+        "dir": "Humanoid_World_Models__Open_World_Foundation_Models_for_Humanoid_Robotics",
+        "arxiv": "2506.01182",
+        "published_date_zh": "2025年6月",
+        "published_date_en": "Jun 2025",
+        "zhname": "Humanoid World Models：面向人形机器人的开放世界基础模型",
+        "zh_title": "Humanoid World Models：面向人形机器人的开放世界基础模型"
+      },
+      {
+        "title": "Mimicking-Bench: A Benchmark for Generalizable Humanoid-Scene Interaction Learning via Human Mimicking",
+        "path": "papers/11_Simulation_Benchmark/Mimicking-Bench__A_Benchmark_for_Generalizable_Humanoid-Scene_Interaction_Learning/Mimicking-Bench__A_Benchmark_for_Generalizable_Humanoid-Scene_Interaction_Learning.md",
+        "url": "/papers/11_Simulation_Benchmark/Mimicking-Bench__A_Benchmark_for_Generalizable_Humanoid-Scene_Interaction_Learning/Mimicking-Bench__A_Benchmark_for_Generalizable_Humanoid-Scene_Interaction_Learning.html",
+        "dir": "Mimicking-Bench__A_Benchmark_for_Generalizable_Humanoid-Scene_Interaction_Learning",
+        "arxiv": "2412.17730",
+        "published_date_zh": "2024年12月",
+        "published_date_en": "Dec 2024",
+        "zhname": "Mimicking-Bench：经由模仿人类的可泛化人形-场景交互学习基准",
+        "zh_title": "Mimicking-Bench：经由模仿人类的可泛化人形-场景交互学习基准"
+      },
+      {
+        "title": "ManiSkill-HAB: A Benchmark for Low-Level Manipulation in Home Rearrangement Tasks",
+        "path": "papers/11_Simulation_Benchmark/ManiSkill-HAB__A_Benchmark_for_Low-Level_Manipulation_in_Home_Rearrangement_Tasks/ManiSkill-HAB__A_Benchmark_for_Low-Level_Manipulation_in_Home_Rearrangement_Tasks.md",
+        "url": "/papers/11_Simulation_Benchmark/ManiSkill-HAB__A_Benchmark_for_Low-Level_Manipulation_in_Home_Rearrangement_Tasks/ManiSkill-HAB__A_Benchmark_for_Low-Level_Manipulation_in_Home_Rearrangement_Tasks.html",
+        "dir": "ManiSkill-HAB__A_Benchmark_for_Low-Level_Manipulation_in_Home_Rearrangement_Tasks",
+        "arxiv": "2412.13211",
+        "published_date_zh": "2024年12月",
+        "published_date_en": "Dec 2024",
+        "zhname": "ManiSkill-HAB：家居重排任务中低层操作的基准",
+        "zh_title": "ManiSkill-HAB：家居重排任务中低层操作的基准"
+      },
+      {
+        "title": "DexMimicGen: Automated Data Generation for Bimanual Dexterous Manipulation via Imitation Learning",
+        "path": "papers/11_Simulation_Benchmark/DexMimicGen__Automated_Data_Generation_for_Bimanual_Dexterous_Manipulation/DexMimicGen__Automated_Data_Generation_for_Bimanual_Dexterous_Manipulation.md",
+        "url": "/papers/11_Simulation_Benchmark/DexMimicGen__Automated_Data_Generation_for_Bimanual_Dexterous_Manipulation/DexMimicGen__Automated_Data_Generation_for_Bimanual_Dexterous_Manipulation.html",
+        "dir": "DexMimicGen__Automated_Data_Generation_for_Bimanual_Dexterous_Manipulation",
+        "arxiv": "2410.24185",
+        "published_date_zh": "2024年10月",
+        "published_date_en": "Oct 2024",
+        "zhname": "DexMimicGen：经由模仿学习的双手灵巧操作自动数据生成",
+        "zh_title": "DexMimicGen：经由模仿学习的双手灵巧操作自动数据生成"
+      },
+      {
         "title": "GRUtopia: Dream General Robots in a City at Scale",
         "path": "papers/11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale/GRUtopia__Dream_General_Robots_in_a_City_at_Scale.md",
         "url": "/papers/11_Simulation_Benchmark/GRUtopia__Dream_General_Robots_in_a_City_at_Scale/GRUtopia__Dream_General_Robots_in_a_City_at_Scale.html",
@@ -2177,6 +2761,28 @@
         "published_date_en": "Jul 15, 2024 (arXiv)",
         "zhname": "GRUtopia：城市级交互式 3D 社会，给通用机器人造一座可训练的「乌托邦」",
         "zh_title": "GRUtopia：城市级交互式 3D 社会，给通用机器人造一座可训练的「乌托邦」"
+      },
+      {
+        "title": "BiGym: A Demo-Driven Mobile Bi-Manual Manipulation Benchmark",
+        "path": "papers/11_Simulation_Benchmark/BiGym__A_Demo-Driven_Mobile_Bi-Manual_Manipulation_Benchmark/BiGym__A_Demo-Driven_Mobile_Bi-Manual_Manipulation_Benchmark.md",
+        "url": "/papers/11_Simulation_Benchmark/BiGym__A_Demo-Driven_Mobile_Bi-Manual_Manipulation_Benchmark/BiGym__A_Demo-Driven_Mobile_Bi-Manual_Manipulation_Benchmark.html",
+        "dir": "BiGym__A_Demo-Driven_Mobile_Bi-Manual_Manipulation_Benchmark",
+        "arxiv": "2407.07788",
+        "published_date_zh": "2024年7月",
+        "published_date_en": "Jul 2024",
+        "zhname": "BiGym：演示驱动的移动双手操作基准",
+        "zh_title": "BiGym：演示驱动的移动双手操作基准"
+      },
+      {
+        "title": "RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots",
+        "path": "papers/11_Simulation_Benchmark/RoboCasa__Large-Scale_Simulation_of_Everyday_Tasks_for_Generalist_Robots/RoboCasa__Large-Scale_Simulation_of_Everyday_Tasks_for_Generalist_Robots.md",
+        "url": "/papers/11_Simulation_Benchmark/RoboCasa__Large-Scale_Simulation_of_Everyday_Tasks_for_Generalist_Robots/RoboCasa__Large-Scale_Simulation_of_Everyday_Tasks_for_Generalist_Robots.html",
+        "dir": "RoboCasa__Large-Scale_Simulation_of_Everyday_Tasks_for_Generalist_Robots",
+        "arxiv": "2406.02523",
+        "published_date_zh": "2024年6月",
+        "published_date_en": "Jun 2024",
+        "zhname": "RoboCasa：面向通才机器人的日常任务大规模仿真",
+        "zh_title": "RoboCasa：面向通才机器人的日常任务大规模仿真"
       },
       {
         "title": "HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation",
@@ -2255,6 +2861,16 @@
         "published_date_en": "Sep 26, 2025 (arXiv)",
         "zhname": "Learning to Ball：用「策略组合 + 高层软路由」拼出长程篮球连招",
         "zh_title": "Learning to Ball：用「策略组合 + 高层软路由」拼出长程篮球连招"
+      },
+      {
+        "title": "Spatial Relationship Preserving Character Motion Adaptation",
+        "path": "papers/13_Physics-Based_Animation/Spatial_Relationship_Preserving_Character_Motion_Adaptation/Spatial_Relationship_Preserving_Character_Motion_Adaptation.md",
+        "url": "/papers/13_Physics-Based_Animation/Spatial_Relationship_Preserving_Character_Motion_Adaptation/Spatial_Relationship_Preserving_Character_Motion_Adaptation.html",
+        "dir": "Spatial_Relationship_Preserving_Character_Motion_Adaptation",
+        "published_date_zh": "2010 年（SIGGRAPH 2010 / ACM TOG 29（4））",
+        "published_date_en": "2010 (SIGGRAPH 2010 / ACM TOG 29 (4))",
+        "zhname": "保持空间关系的角色运动适配",
+        "zh_title": "保持空间关系的角色运动适配"
       }
     ],
     "zhname": "物理动画",
@@ -2324,6 +2940,160 @@
         "zh_title": "用稀疏接触标注 + 优化求解从单目视频高效、可扩展地重建 4D 人-物交互动作"
       },
       {
+        "title": "Being-M0.5: A Real-Time Controllable Vision-Language-Motion Model",
+        "path": "papers/14_Human_Motion/Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model/Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model.md",
+        "url": "/papers/14_Human_Motion/Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model/Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model.html",
+        "dir": "Being-M0.5__A_Real-Time_Controllable_Vision-Language-Motion_Model",
+        "arxiv": "2508.07863",
+        "published_date_zh": "2025年8月",
+        "published_date_en": "Aug 2025",
+        "zhname": "Being-M0.5：实时可控的视觉-语言-动作模型",
+        "zh_title": "Being-M0.5：实时可控的视觉-语言-动作模型"
+      },
+      {
+        "title": "Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data",
+        "path": "papers/14_Human_Motion/Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data/Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data.md",
+        "url": "/papers/14_Human_Motion/Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data/Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data.html",
+        "dir": "Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data",
+        "arxiv": "2507.07095",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "Go to Zero：迈向百万级数据的零样本动作生成",
+        "zh_title": "Go to Zero：迈向百万级数据的零样本动作生成"
+      },
+      {
+        "title": "PICO: Reconstructing 3D People In Contact with Objects",
+        "path": "papers/14_Human_Motion/PICO__Reconstructing_3D_People_In_Contact_with_Objects/PICO__Reconstructing_3D_People_In_Contact_with_Objects.md",
+        "url": "/papers/14_Human_Motion/PICO__Reconstructing_3D_People_In_Contact_with_Objects/PICO__Reconstructing_3D_People_In_Contact_with_Objects.html",
+        "dir": "PICO__Reconstructing_3D_People_In_Contact_with_Objects",
+        "arxiv": "2504.17695",
+        "published_date_zh": "2025年4月",
+        "published_date_en": "Apr 2025",
+        "zhname": "PICO：重建与物体接触的 3D 人体",
+        "zh_title": "PICO：重建与物体接触的 3D 人体"
+      },
+      {
+        "title": "FRAME: Floor-aligned Representation for Avatar Motion from Egocentric Video",
+        "path": "papers/14_Human_Motion/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video.md",
+        "url": "/papers/14_Human_Motion/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video.html",
+        "dir": "FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video",
+        "arxiv": "2503.23094",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "FRAME：面向第一视角视频化身动作的地面对齐表示",
+        "zh_title": "FRAME：面向第一视角视频化身动作的地面对齐表示"
+      },
+      {
+        "title": "ClimbingCap: Multi-Modal Dataset and Method for Rock Climbing in World Coordinate",
+        "path": "papers/14_Human_Motion/ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate/ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate.md",
+        "url": "/papers/14_Human_Motion/ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate/ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate.html",
+        "dir": "ClimbingCap__Multi-Modal_Dataset_and_Method_for_Rock_Climbing_in_World_Coordinate",
+        "arxiv": "2503.21268",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "ClimbingCap：世界坐标系下攀岩的多模态数据集与方法",
+        "zh_title": "ClimbingCap：世界坐标系下攀岩的多模态数据集与方法"
+      },
+      {
+        "title": "PRIMAL: Physically Reactive and Interactive Motor Model for Avatar Learning",
+        "path": "papers/14_Human_Motion/PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning/PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning.md",
+        "url": "/papers/14_Human_Motion/PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning/PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning.html",
+        "dir": "PRIMAL__Physically_Reactive_and_Interactive_Motor_Model_for_Avatar_Learning",
+        "arxiv": "2503.17544",
+        "published_date_zh": "2025年3月",
+        "published_date_en": "Mar 2025",
+        "zhname": "PRIMAL：可物理反应与交互的化身运动模型",
+        "zh_title": "PRIMAL：可物理反应与交互的化身运动模型"
+      },
+      {
+        "title": "Scaling Large Motion Models with Million-Level Human Motions",
+        "path": "papers/14_Human_Motion/Scaling_Large_Motion_Models_with_Million-Level_Human_Motions/Scaling_Large_Motion_Models_with_Million-Level_Human_Motions.md",
+        "url": "/papers/14_Human_Motion/Scaling_Large_Motion_Models_with_Million-Level_Human_Motions/Scaling_Large_Motion_Models_with_Million-Level_Human_Motions.html",
+        "dir": "Scaling_Large_Motion_Models_with_Million-Level_Human_Motions",
+        "arxiv": "2410.03311",
+        "published_date_zh": "2024年10月",
+        "published_date_en": "Oct 2024",
+        "zhname": "用百万级人类动作扩展大型动作模型",
+        "zh_title": "用百万级人类动作扩展大型动作模型"
+      },
+      {
+        "title": "Flexible Motion In-betweening with Diffusion Models",
+        "path": "papers/14_Human_Motion/Flexible_Motion_In-betweening_with_Diffusion_Models/Flexible_Motion_In-betweening_with_Diffusion_Models.md",
+        "url": "/papers/14_Human_Motion/Flexible_Motion_In-betweening_with_Diffusion_Models/Flexible_Motion_In-betweening_with_Diffusion_Models.html",
+        "dir": "Flexible_Motion_In-betweening_with_Diffusion_Models",
+        "arxiv": "2405.11126",
+        "published_date_zh": "2024年5月",
+        "published_date_en": "May 2024",
+        "zhname": "用扩散模型做灵活的动作中间帧补全",
+        "zh_title": "用扩散模型做灵活的动作中间帧补全"
+      },
+      {
+        "title": "Taming Diffusion Probabilistic Models for Character Control",
+        "path": "papers/14_Human_Motion/Taming_Diffusion_Probabilistic_Models_for_Character_Control/Taming_Diffusion_Probabilistic_Models_for_Character_Control.md",
+        "url": "/papers/14_Human_Motion/Taming_Diffusion_Probabilistic_Models_for_Character_Control/Taming_Diffusion_Probabilistic_Models_for_Character_Control.html",
+        "dir": "Taming_Diffusion_Probabilistic_Models_for_Character_Control",
+        "arxiv": "2404.15121",
+        "published_date_zh": "2024年4月",
+        "published_date_en": "Apr 2024",
+        "zhname": "驯服扩散概率模型以实现角色控制",
+        "zh_title": "驯服扩散概率模型以实现角色控制"
+      },
+      {
+        "title": "EgoPoser: Robust Real-Time Egocentric Pose Estimation from Sparse and Intermittent Observations Everywhere",
+        "path": "papers/14_Human_Motion/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors.md",
+        "url": "/papers/14_Human_Motion/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors.html",
+        "dir": "EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors",
+        "arxiv": "2308.06493",
+        "published_date_zh": "2023年8月（ECCV 2024）",
+        "published_date_en": "Aug 2023 (ECCV 2024)",
+        "zhname": "EgoPoser：随处可用、面向稀疏且间歇观测的鲁棒实时第一视角姿态估计",
+        "zh_title": "EgoPoser：随处可用、面向稀疏且间歇观测的鲁棒实时第一视角姿态估计"
+      },
+      {
+        "title": "TEDi: Temporally-Entangled Diffusion for Long-Term Motion Synthesis",
+        "path": "papers/14_Human_Motion/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis.md",
+        "url": "/papers/14_Human_Motion/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis.html",
+        "dir": "TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis",
+        "arxiv": "2307.15042",
+        "published_date_zh": "2023年7月",
+        "published_date_en": "Jul 2023",
+        "zhname": "TEDi：时间纠缠扩散的长时程动作合成",
+        "zh_title": "TEDi：时间纠缠扩散的长时程动作合成"
+      },
+      {
+        "title": "Example-based Motion Synthesis via Generative Motion Matching",
+        "path": "papers/14_Human_Motion/Example-based_Motion_Synthesis_via_Generative_Motion_Matching/Example-based_Motion_Synthesis_via_Generative_Motion_Matching.md",
+        "url": "/papers/14_Human_Motion/Example-based_Motion_Synthesis_via_Generative_Motion_Matching/Example-based_Motion_Synthesis_via_Generative_Motion_Matching.html",
+        "dir": "Example-based_Motion_Synthesis_via_Generative_Motion_Matching",
+        "arxiv": "2306.00378",
+        "published_date_zh": "2023年6月",
+        "published_date_en": "Jun 2023",
+        "zhname": "GenMM：用生成式动作匹配做范例驱动的动作合成",
+        "zh_title": "GenMM：用生成式动作匹配做范例驱动的动作合成"
+      },
+      {
+        "title": "Guided Motion Diffusion for Controllable Human Motion Synthesis",
+        "path": "papers/14_Human_Motion/Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis/Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis.md",
+        "url": "/papers/14_Human_Motion/Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis/Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis.html",
+        "dir": "Guided_Motion_Diffusion_for_Controllable_Human_Motion_Synthesis",
+        "arxiv": "2305.12577",
+        "published_date_zh": "2023年5月",
+        "published_date_en": "May 2023",
+        "zhname": "GMD：用引导式动作扩散做可控的人体动作合成",
+        "zh_title": "GMD：用引导式动作扩散做可控的人体动作合成"
+      },
+      {
+        "title": "PhysDiff: Physics-Guided Human Motion Diffusion Model",
+        "path": "papers/14_Human_Motion/PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model/PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model.md",
+        "url": "/papers/14_Human_Motion/PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model/PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model.html",
+        "dir": "PhysDiff__Physics-Guided_Human_Motion_Diffusion_Model",
+        "arxiv": "2212.02500",
+        "published_date_zh": "2022年12月",
+        "published_date_en": "Dec 2022",
+        "zhname": "PhysDiff：物理引导的人体动作扩散模型",
+        "zh_title": "PhysDiff：物理引导的人体动作扩散模型"
+      },
+      {
         "title": "Learned Motion Matching",
         "path": "papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.md",
         "url": "/papers/14_Human_Motion/Learned_Motion_Matching/Learned_Motion_Matching.html",
@@ -2334,6 +3104,17 @@
         "published_date_en": "Sep 29, 2022 (arXiv), ACM SIGGRAPH 2020 (ACM TOG, Vol. 39, No. 4, Article 53)",
         "zhname": "学习式动作匹配：用三张小网络替代海量动作数据库",
         "zh_title": "学习式动作匹配：用三张小网络替代海量动作数据库"
+      },
+      {
+        "title": "AvatarPoser: Articulated Full-Body Pose Tracking from Sparse Motion Sensing",
+        "path": "papers/14_Human_Motion/AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing/AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing.md",
+        "url": "/papers/14_Human_Motion/AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing/AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing.html",
+        "dir": "AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing",
+        "arxiv": "2207.13784",
+        "published_date_zh": "2022年7月（ECCV 2022）",
+        "published_date_en": "Jul 2022 (ECCV 2022)",
+        "zhname": "AvatarPoser：从稀疏运动感知做关节化全身姿态跟踪",
+        "zh_title": "AvatarPoser：从稀疏运动感知做关节化全身姿态跟踪"
       },
       {
         "title": "Generating Diverse and Natural 3D Human Motions from Textual Descriptions",
@@ -2357,6 +3138,36 @@
         "published_date_en": "Dec 2025 (SIGGRAPH Asia 2025, Hong Kong, Dec 15–18)",
         "zhname": "控制算子：让非技术用户也能搭出自己的「学习型」角色控制器",
         "zh_title": "控制算子：让非技术用户也能搭出自己的「学习型」角色控制器"
+      },
+      {
+        "title": "Implicit Bézier Motion Model for Precise Spatial and Temporal Control",
+        "path": "papers/14_Human_Motion/Implicit_Bezier_Motion_Model_for_Precise_Spatial_and_Temporal_Control/Implicit_Bezier_Motion_Model_for_Precise_Spatial_and_Temporal_Control.md",
+        "url": "/papers/14_Human_Motion/Implicit_Bezier_Motion_Model_for_Precise_Spatial_and_Temporal_Control/Implicit_Bezier_Motion_Model_for_Precise_Spatial_and_Temporal_Control.html",
+        "dir": "Implicit_Bezier_Motion_Model_for_Precise_Spatial_and_Temporal_Control",
+        "published_date_zh": "2025年12月（SIGGRAPH MIG 2025）",
+        "published_date_en": "Dec 2025 (SIGGRAPH MIG 2025)",
+        "zhname": "隐式贝塞尔运动模型：精确的空间与时间控制",
+        "zh_title": "隐式贝塞尔运动模型：精确的空间与时间控制"
+      },
+      {
+        "title": "Climber Force and Motion Estimation from Video",
+        "path": "papers/14_Human_Motion/Climber_Force_and_Motion_Estimation_from_Video/Climber_Force_and_Motion_Estimation_from_Video.md",
+        "url": "/papers/14_Human_Motion/Climber_Force_and_Motion_Estimation_from_Video/Climber_Force_and_Motion_Estimation_from_Video.html",
+        "dir": "Climber_Force_and_Motion_Estimation_from_Video",
+        "published_date_zh": "2025年4月（arXiv，详见项目页）",
+        "published_date_en": "Apr 2025 (arXiv, 详见项目页)",
+        "zhname": "从视频估计攀岩者的受力与运动",
+        "zh_title": "从视频估计攀岩者的受力与运动"
+      },
+      {
+        "title": "MANIKIN: Biomechanically Accurate Neural Inverse Kinematics for Human Motion Estimation",
+        "path": "papers/14_Human_Motion/MANIKIN__Biomechanically_Accurate_Neural_Inverse_Kinematics_for_Human_Motion_Estimation/MANIKIN__Biomechanically_Accurate_Neural_Inverse_Kinematics_for_Human_Motion_Estimation.md",
+        "url": "/papers/14_Human_Motion/MANIKIN__Biomechanically_Accurate_Neural_Inverse_Kinematics_for_Human_Motion_Estimation/MANIKIN__Biomechanically_Accurate_Neural_Inverse_Kinematics_for_Human_Motion_Estimation.html",
+        "dir": "MANIKIN__Biomechanically_Accurate_Neural_Inverse_Kinematics_for_Human_Motion_Estimation",
+        "published_date_zh": "2024 年（ECCV 2024）",
+        "published_date_en": "2024 (ECCV 2024)",
+        "zhname": "MANIKIN：生物力学精确的神经逆运动学用于人体动作估计",
+        "zh_title": "MANIKIN：生物力学精确的神经逆运动学用于人体动作估计"
       }
     ],
     "zhname": "人体动作分析与生成",
