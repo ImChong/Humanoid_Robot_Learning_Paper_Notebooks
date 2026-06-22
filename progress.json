@@ -5020,6 +5020,36 @@
       "pdf_file": "",
       "route": "Human Motion",
       "title_cn": ""
+    },
+    {
+      "title": "AvatarPoser: Articulated Full-Body Pose Tracking from Sparse Motion Sensing",
+      "folder": "papers/14_Human_Motion/AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing",
+      "note_file": "AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing.md",
+      "status": "done",
+      "arxiv": "2207.13784",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "EgoPoser: Robust Real-Time Egocentric Pose Estimation from Sparse and Intermittent Observations Everywhere",
+      "folder": "papers/14_Human_Motion/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors",
+      "note_file": "EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors.md",
+      "status": "done",
+      "arxiv": "2308.06493",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data",
+      "folder": "papers/14_Human_Motion/Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data",
+      "note_file": "Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data.md",
+      "status": "done",
+      "arxiv": "2507.07095",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
     }
   ]
 }

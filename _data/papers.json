@@ -2941,6 +2941,17 @@
         "zh_title": "Being-M0.5：实时可控的视觉-语言-动作模型"
       },
       {
+        "title": "Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data",
+        "path": "papers/14_Human_Motion/Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data/Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data.md",
+        "url": "/papers/14_Human_Motion/Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data/Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data.html",
+        "dir": "Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data",
+        "arxiv": "2507.07095",
+        "published_date_zh": "2025年7月",
+        "published_date_en": "Jul 2025",
+        "zhname": "Go to Zero：迈向百万级数据的零样本动作生成",
+        "zh_title": "Go to Zero：迈向百万级数据的零样本动作生成"
+      },
+      {
         "title": "PICO: Reconstructing 3D People In Contact with Objects",
         "path": "papers/14_Human_Motion/PICO__Reconstructing_3D_People_In_Contact_with_Objects/PICO__Reconstructing_3D_People_In_Contact_with_Objects.md",
         "url": "/papers/14_Human_Motion/PICO__Reconstructing_3D_People_In_Contact_with_Objects/PICO__Reconstructing_3D_People_In_Contact_with_Objects.html",
@@ -3018,6 +3029,17 @@
         "zh_title": "驯服扩散概率模型以实现角色控制"
       },
       {
+        "title": "EgoPoser: Robust Real-Time Egocentric Pose Estimation from Sparse and Intermittent Observations Everywhere",
+        "path": "papers/14_Human_Motion/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors.md",
+        "url": "/papers/14_Human_Motion/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors.html",
+        "dir": "EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors",
+        "arxiv": "2308.06493",
+        "published_date_zh": "2023年8月（ECCV 2024）",
+        "published_date_en": "Aug 2023 (ECCV 2024)",
+        "zhname": "EgoPoser：随处可用、面向稀疏且间歇观测的鲁棒实时第一视角姿态估计",
+        "zh_title": "EgoPoser：随处可用、面向稀疏且间歇观测的鲁棒实时第一视角姿态估计"
+      },
+      {
         "title": "TEDi: Temporally-Entangled Diffusion for Long-Term Motion Synthesis",
         "path": "papers/14_Human_Motion/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis.md",
         "url": "/papers/14_Human_Motion/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis/TEDi__Temporally-Entangled_Diffusion_for_Long-Term_Motion_Synthesis.html",
@@ -3074,6 +3096,17 @@
         "zh_title": "学习式动作匹配：用三张小网络替代海量动作数据库"
       },
       {
+        "title": "AvatarPoser: Articulated Full-Body Pose Tracking from Sparse Motion Sensing",
+        "path": "papers/14_Human_Motion/AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing/AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing.md",
+        "url": "/papers/14_Human_Motion/AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing/AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing.html",
+        "dir": "AvatarPoser__Articulated_Full-Body_Pose_Tracking_from_Sparse_Motion_Sensing",
+        "arxiv": "2207.13784",
+        "published_date_zh": "2022年7月（ECCV 2022）",
+        "published_date_en": "Jul 2022 (ECCV 2022)",
+        "zhname": "AvatarPoser：从稀疏运动感知做关节化全身姿态跟踪",
+        "zh_title": "AvatarPoser：从稀疏运动感知做关节化全身姿态跟踪"
+      },
+      {
         "title": "Generating Diverse and Natural 3D Human Motions from Textual Descriptions",
         "path": "papers/14_Human_Motion/HumanML3D/HumanML3D.md",
         "url": "/papers/14_Human_Motion/HumanML3D/HumanML3D.html",
@@ -3095,6 +3128,36 @@
         "published_date_en": "Dec 2025 (SIGGRAPH Asia 2025, Hong Kong, Dec 15–18)",
         "zhname": "控制算子：让非技术用户也能搭出自己的「学习型」角色控制器",
         "zh_title": "控制算子：让非技术用户也能搭出自己的「学习型」角色控制器"
+      },
+      {
+        "title": "Implicit Bézier Motion Model for Precise Spatial and Temporal Control",
+        "path": "papers/14_Human_Motion/Implicit_Bezier_Motion_Model_for_Precise_Spatial_and_Temporal_Control/Implicit_Bezier_Motion_Model_for_Precise_Spatial_and_Temporal_Control.md",
+        "url": "/papers/14_Human_Motion/Implicit_Bezier_Motion_Model_for_Precise_Spatial_and_Temporal_Control/Implicit_Bezier_Motion_Model_for_Precise_Spatial_and_Temporal_Control.html",
+        "dir": "Implicit_Bezier_Motion_Model_for_Precise_Spatial_and_Temporal_Control",
+        "published_date_zh": "2025年12月（SIGGRAPH MIG 2025）",
+        "published_date_en": "Dec 2025 (SIGGRAPH MIG 2025)",
+        "zhname": "隐式贝塞尔运动模型：精确的空间与时间控制",
+        "zh_title": "隐式贝塞尔运动模型：精确的空间与时间控制"
+      },
+      {
+        "title": "Climber Force and Motion Estimation from Video",
+        "path": "papers/14_Human_Motion/Climber_Force_and_Motion_Estimation_from_Video/Climber_Force_and_Motion_Estimation_from_Video.md",
+        "url": "/papers/14_Human_Motion/Climber_Force_and_Motion_Estimation_from_Video/Climber_Force_and_Motion_Estimation_from_Video.html",
+        "dir": "Climber_Force_and_Motion_Estimation_from_Video",
+        "published_date_zh": "2025年4月（arXiv，详见项目页）",
+        "published_date_en": "Apr 2025 (arXiv, 详见项目页)",
+        "zhname": "从视频估计攀岩者的受力与运动",
+        "zh_title": "从视频估计攀岩者的受力与运动"
+      },
+      {
+        "title": "MANIKIN: Biomechanically Accurate Neural Inverse Kinematics for Human Motion Estimation",
+        "path": "papers/14_Human_Motion/MANIKIN__Biomechanically_Accurate_Neural_Inverse_Kinematics_for_Human_Motion_Estimation/MANIKIN__Biomechanically_Accurate_Neural_Inverse_Kinematics_for_Human_Motion_Estimation.md",
+        "url": "/papers/14_Human_Motion/MANIKIN__Biomechanically_Accurate_Neural_Inverse_Kinematics_for_Human_Motion_Estimation/MANIKIN__Biomechanically_Accurate_Neural_Inverse_Kinematics_for_Human_Motion_Estimation.html",
+        "dir": "MANIKIN__Biomechanically_Accurate_Neural_Inverse_Kinematics_for_Human_Motion_Estimation",
+        "published_date_zh": "2024 年（ECCV 2024）",
+        "published_date_en": "2024 (ECCV 2024)",
+        "zhname": "MANIKIN：生物力学精确的神经逆运动学用于人体动作估计",
+        "zh_title": "MANIKIN：生物力学精确的神经逆运动学用于人体动作估计"
       }
     ],
     "zhname": "人体动作分析与生成",
