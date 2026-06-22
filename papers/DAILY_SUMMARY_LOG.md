@@ -295,6 +295,7 @@
 | 196 | FastStair: Learning to Run Up Stairs with Humanoid Robots | 05_Locomotion | ✅ 已完成（2026-06-21） |
 | 279 | SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot | 06_Manipulation | ✅ 已完成（2026-06-22） |
 | 336 | LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy | 07_Teleoperation | ✅ 已完成（2026-06-23） |
-| ? | （下一篇：08_Navigation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 08_Navigation | ⏭️ 下一篇候选 |
+| 368 | LOVON: Legged Open-Vocabulary Object Navigator | 08_Navigation | ✅ 已完成（2026-06-24） |
+| ? | （下一篇：09_State_Estimation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 09_State_Estimation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

@@ -42,8 +42,8 @@
         "14_Human_Motion"
       ],
       "last_module": "08_Navigation",
-      "last_index": 356,
-      "last_title": "INTENTION: Inferring Tendencies of Humanoid Robot Motion Through Interactive Intuition and Grounded VLM (arXiv:2508.04931)",
+      "last_index": 368,
+      "last_title": "LOVON: Legged Open-Vocabulary Object Navigator (arXiv:2507.06747)",
       "next_module": "09_State_Estimation"
     },
     "last_summary_index": 356,
@@ -1019,9 +1019,21 @@
         "arxiv": "2606.06493",
         "source_repo": "https://github.com/lzyang2000/HANDOFF",
         "project_page": "https://lzyang2000.github.io/HANDOFF/"
+      },
+      {
+        "date": "2026-06-24",
+        "index": 368,
+        "title": "LOVON: Legged Open-Vocabulary Object Navigator",
+        "module": "08_Navigation",
+        "category": "08_Navigation",
+        "note_path": "papers/08_Navigation/LOVON__Legged_Open-Vocabulary_Object_Navigator/LOVON__Legged_Open-Vocabulary_Object_Navigator.md",
+        "track": "module_rotation",
+        "arxiv": "2507.06747",
+        "source_repo": "https://github.com/DaojiePENG/LOVON",
+        "project_page": "https://daojiepeng.github.io/LOVON/"
       }
     ],
-    "last_completed_index": 550,
+    "last_completed_index": 368,
     "next_index": null
   },
   "papers": [
