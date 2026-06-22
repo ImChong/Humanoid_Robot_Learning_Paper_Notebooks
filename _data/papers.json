@@ -2288,6 +2288,18 @@
         "zh_title": "Humanoid Occupancy：面向人形机器人的通用多模态占据感知系统"
       },
       {
+        "title": "LOVON: Legged Open-Vocabulary Object Navigator",
+        "path": "papers/08_Navigation/LOVON__Legged_Open-Vocabulary_Object_Navigator/LOVON__Legged_Open-Vocabulary_Object_Navigator.md",
+        "url": "/papers/08_Navigation/LOVON__Legged_Open-Vocabulary_Object_Navigator/LOVON__Legged_Open-Vocabulary_Object_Navigator.html",
+        "dir": "LOVON__Legged_Open-Vocabulary_Object_Navigator",
+        "arxiv": "2507.06747",
+        "has_open_source": true,
+        "published_date_zh": "2025年7月9日（arXiv）",
+        "published_date_en": "Jul 9, 2025 (arXiv)",
+        "zhname": "LOVON：足式机器人开放词汇目标导航器",
+        "zh_title": "LOVON：足式机器人开放词汇目标导航器"
+      },
+      {
         "title": "Reinforcement Learning with Data Bootstrapping for Dynamic Subgoal Pursuit in Humanoid Robot Navigation",
         "path": "papers/08_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation.md",
         "url": "/papers/08_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation/RL_with_Data_Bootstrapping_for_Dynamic_Subgoal_Pursuit_in_Humanoid_Navigation.html",

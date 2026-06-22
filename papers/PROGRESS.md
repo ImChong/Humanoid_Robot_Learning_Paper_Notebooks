@@ -481,6 +481,7 @@
 | 365  | [Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3D Constrained Terrains](https://arxiv.org/abs/2511.14625) ✅ [笔记](08_Navigation/Gallant__Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3D_Constrained_Terrains/Gallant__Voxel_Grid-based_Humanoid_Locomotion_and_Local-navigation_across_3D_Constrained_Terrains.md) | 2025-11-18 |  | ✅ 已总结 |
 | 366  | [Learning Social Navigation from Positive and Negative Demonstrations and Rule-Based Specifications](https://arxiv.org/abs/2508.06779) | 2025.08 |  | ⏳ 待读 |
 | 367  | [NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance](https://arxiv.org/abs/2505.08712) | 2025.05 |  | ⏳ 待读 |
+| 368  | [LOVON: Legged Open-Vocabulary Object Navigator](https://arxiv.org/abs/2507.06747) ✅ [笔记](08_Navigation/LOVON__Legged_Open-Vocabulary_Object_Navigator/LOVON__Legged_Open-Vocabulary_Object_Navigator.md) | 2025-07-09 |  | ✅ 已总结 |
 
 
 ### State Estimation（13篇）
