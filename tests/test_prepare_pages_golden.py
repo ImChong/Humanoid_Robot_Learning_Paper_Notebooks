@@ -50,6 +50,11 @@ def _build_fixture_repo(root: Path) -> None:
     (papers / "todos").mkdir(parents=True)
     (papers / "todos" / "TODO_v1.md").write_text("ignored", encoding="utf-8")
 
+    (papers / "_archived" / "02_Locomotion" / "ArchivedPaper").mkdir(parents=True)
+    (papers / "_archived" / "02_Locomotion" / "ArchivedPaper" / "ArchivedPaper.md").write_text(
+        _make_note_body("Archived Paper", 99), encoding="utf-8"
+    )
+
     (papers / "PROGRESS.md").write_text(
         "| # | 论文 | 状态 |\n|---|------|------|\n"
         "| 1 | Proximal Policy Optimization | ✅ |\n"
@@ -102,7 +107,7 @@ def test_process_papers_emits_index(fixture_repo):
 
     data = json.loads(papers_json.read_text(encoding="utf-8"))
     assert set(data.keys()) == {"01_Foundational_RL", "02_Locomotion"}, (
-        "todos directory must be skipped"
+        "todos and _archived directories must be skipped"
     )
 
     assert data["01_Foundational_RL"]["display_name"] == "Foundational RL"

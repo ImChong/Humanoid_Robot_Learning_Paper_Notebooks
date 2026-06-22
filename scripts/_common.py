@@ -18,7 +18,7 @@ from collections.abc import Iterator
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAPERS_DIR = os.path.join(BASE_DIR, "papers")
-SKIP_DIRS = {"todos"}
+SKIP_DIRS = {"todos", "_archived"}
 
 # A note is considered a stub when EITHER:
 #   1. it is short AND has no recognisable "方法" (method) section heading, OR

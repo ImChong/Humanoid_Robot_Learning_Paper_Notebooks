@@ -3185,11 +3185,5 @@
     "zhname": "人体动作分析与生成",
     "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
     "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
-  },
-  "_archived": {
-    "display_name": " archived",
-    "papers": [],
-    "sort_order_hint": "Paper tags ordered by arXiv date, newest first",
-    "sort_order_hint_zh": "论文标签按 arXiv 发表时间新→旧排列"
   }
 }
