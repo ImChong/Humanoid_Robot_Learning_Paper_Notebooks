@@ -24,7 +24,7 @@ category: "Loco-Manipulation and WBC"
 | PDF | [下载](https://arxiv.org/pdf/2602.11758) |
 | 项目主页 | [haic-humanoid.github.io](https://haic-humanoid.github.io/) |
 | **发布时间** | 2026-02-12 (arXiv) |
-| 源码 | 待官方释出（项目主页与 arXiv 截至 2026-04-29 暂未公开仓库链接） |
+| 源码 | [ldt29/HAIC](https://github.com/ldt29/HAIC)（已开源，官方实现；RSS 2026） |
 | 提交日期 | 2026-02-12 |
 
 **作者**：Dongting Li, Xingyu Chen, Qianyang Wu, Bo Chen, Sikai Wu, Hanyu Wu, Guoyao Zhang 等（共 13 位作者，详见 arXiv 页）。
@@ -114,6 +114,28 @@ HAIC 训练一个动力学预测器，从机器人本体感觉历史（关节位
 2. 与 LATENT、SteadyTray 等"物体相关"工作放在一起看：LATENT 偏运动数据质量与重定向，SteadyTray 偏托盘平衡的残差 RL，HAIC 偏物体高阶动力学预测与世界模型适配，三者覆盖了不同层次的"物体交互"问题。
 3. "动态占据图"这个抽象很关键。如果后续代码释出，重点关注两点：(a) 投影函数如何把数值预测转成空间分布；(b) 静态几何先验来自何处（机器人 URDF / 局部体素 / 上下文记忆）。
 4. 非对称微调在世界模型方法中很常见，但具体的不对称形式（更新频率？loss 权重？参数子集？）通常决定稳定性，复现时需要仔细对照。
+
+---
+
+## 🔬 源码解读
+
+> 官方代码已开源（RSS 2026）：[ldt29/HAIC](https://github.com/ldt29/HAIC)，基于 **Isaac Lab v2.3.2 + Isaac Sim v5.1.0** 构建，并在 [LeCAR-Lab 的 HDMI](https://github.com/LeCAR-Lab)（Learning Interactive Humanoid Whole-Body Control from Human Videos）框架之上扩展。README 明确对应本文（arXiv 2602.11758）。
+
+**目录结构**
+
+| 路径 | 内容 |
+|---|---|
+| `active_adaptation/` | 核心算法：环境、动力学感知世界模型、教师/学生训练实现，以及 G1 机器人与交互物体的 USD 资产 |
+| `cfg/` | 分层配置系统（任务 / 算法），如任务 `G1/haic/skateboard` |
+| `data/motion/g1/` | G1 动捕 / 参考运动数据 |
+| `scripts/` | `train.py`、`play.py` 训练与评估入口 |
+
+**实现要点**
+
+- 训练采用**教师-学生**两段式：先训特权教师（`ppo_haic_train`），再蒸馏到仅用本体感觉的学生（`ppo_haic_finetune`），对应论文的非对称微调思路——世界模型随学生策略探索持续适配。
+- 论文核心的"动力学预测器 + 动态占据图"落在 `active_adaptation/` 内：世界模型从本体感觉历史回归物体高阶状态，再投影到静态几何先验形成空间占据表示，作为策略观测。这恰好回答了阅读备注里关注的两个问题——投影函数与几何先验来源都在该模块中实现。
+- 任务以分层 config（`cfg/`）切换滑板 / 推车 / 抱箱等场景，策略可导出为 ONNX 用于部署；sim2sim（MuJoCo）部署在独立仓库 [Cybercal/HOIC-baseline](https://github.com/Cybercal/HOIC-baseline)。
+- 释出节奏：资产模块（2026-06-02）、核心训练框架（2026-06-08）、sim2sim 部署（2026-06-10）已陆续提交；部分安装/使用文档仍在补充，且未提供预训练 checkpoint（数据为仿真生成）。
 
 ---
 

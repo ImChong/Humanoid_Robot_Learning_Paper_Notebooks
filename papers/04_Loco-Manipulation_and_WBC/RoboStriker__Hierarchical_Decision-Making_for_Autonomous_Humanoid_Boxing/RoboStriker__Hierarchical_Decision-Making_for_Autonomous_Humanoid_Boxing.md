@@ -24,9 +24,9 @@ category: "Loco-Manipulation and WBC"
 | arXiv | [2601.22517](https://arxiv.org/abs/2601.22517) |
 | HTML | [arXiv HTML](https://arxiv.org/html/2601.22517v1) |
 | PDF | [arXiv PDF](https://arxiv.org/pdf/2601.22517) |
-| 项目主页 | 截至当前未见公开（搜索结果未发现独立项目页） |
+| 项目主页 | [yinkangning0124.github.io/RoboStriker](https://yinkangning0124.github.io/RoboStriker/) |
 | **发布时间** | 2026-01-30 (arXiv) |
-| 源码 | 截至当前未公开（作者主页 [yinkangning0124](https://github.com/yinkangning0124)） |
+| 源码 | [yinkangning0124/RoboStriker-Preview](https://github.com/yinkangning0124/RoboStriker-Preview)（已开源 · MIT；作者预览版） |
 | 相关源码（动作重定向） | [YanjieZe/GMR](https://github.com/YanjieZe/GMR)（论文采用的 General Motion Retargeting） |
 | 作者 | Kangning Yin, Zhe Cao, Wentao Dong, Weishuai Zeng, Tianyi Zhang, Qiang Zhang, Jingbo Wang, Jiangmiao Pang, Ming Zhou, Weinan Zhang |
 | 机构 | 上海交通大学、上海人工智能实验室（OpenRobotLab / Jiangmiao Pang） |
@@ -176,6 +176,28 @@ A：ASE / PULSE 等主要解决"如何把多种动作技能压成可复用 laten
 
 **Q：为什么要 behavioral warmup？**
 A：NFSP 在早期对手策略很差（还没学到打拳），如果直接进零和对抗，胜率信号几乎全是噪声，两个策略都学不到东西。warmup 用课程化的简单奖励（比如接近对手、出拳）先把基本行为种下去，再切到完整 NFSP 自博弈，能显著缩短磨合期。
+
+---
+
+## 🔬 源码解读
+
+> 官方代码已开源（作者预览版）：[yinkangning0124/RoboStriker-Preview](https://github.com/yinkangning0124/RoboStriker-Preview)（MIT），基于 **Isaac Lab v2.1.0 + Isaac Sim 4.5.0 + Python 3.10**，沿用 `rsl_rl` 强化学习工作流。仓库标题为 "RoboStriker Code"，三阶段架构与论文一致（README 未直接印 arXiv 号，但作者身份 + 完全一致的分阶段流水线 + 项目页链接可确认对应 2601.22517）。
+
+**目录结构**
+
+| 路径 | 内容 |
+|---|---|
+| `source/whole_body_tracking/` | 核心库：运动跟踪、潜空间、对抗环境 |
+| `scripts/rsl_rl/` | 入口：`train.py` / `play.py`，以及多智能体 `run_marl_env.py` / `play_selfplay.py` |
+| `logs/.../stage3/combat/` | 预训练的 Stage-3 combat checkpoint |
+| `pyproject.toml` `LICENCE` | 安装配置与 MIT 许可证 |
+
+**实现要点**
+
+- 三阶段命令逐一对应论文方法：**Stage 1** 单智能体运动跟踪（任务 `Tracking-Flat-G1-v0`）；**Stage 2** 蒸馏到潜空间（`Tracking-Flat-G1-v0-stage2-latent`）；**Stage 3** 在潜空间上做对抗——先 `sandbag warmup`（对应论文的 behavioral warmup），再切 `CombatSandbag-Stage3-SMPLOLYMPICRewards` 的 LS-NFSP 自博弈。
+- 每个阶段都暴露独立的 `train` 与 `play` 命令，多智能体自博弈用 `run_marl_env.py` / `play_selfplay.py` 驱动，体现"两玩家零和马尔可夫博弈"的训练循环。
+- 仓库内置 Stage-3 checkpoint，配合从 Google Drive 单独下载的 **motion 数据与资产**（放入 `whole_body_tracking/` 目录），即可直接跑通拳击对抗策略。
+- 作者注明这是初步预览版、仍在整理，后续会有更规范版本——复现时以当前 README 步骤为准。
 
 ---
 
