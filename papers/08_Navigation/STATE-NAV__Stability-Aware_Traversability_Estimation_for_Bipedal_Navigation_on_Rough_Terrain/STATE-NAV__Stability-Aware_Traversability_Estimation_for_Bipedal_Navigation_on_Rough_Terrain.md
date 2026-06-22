@@ -26,7 +26,7 @@ category: "Navigation"
 | PDF | [下载](https://arxiv.org/pdf/2506.01046) |
 | 项目主页 | [state-nav.github.io/statenav](https://state-nav.github.io/statenav/) |
 | **发布时间** | 2025-06-01 (arXiv) |
-| 源码 | 截至当前公开页面未见正式发布（以项目主页后续更新为准） |
+| 源码 | [yzwfromk/STATE-NAV](https://github.com/yzwfromk/STATE-NAV)（已开源，官方实现；ROS1/ROS2 + Docker） |
 | 出版 | IEEE RA-L 2025 |
 | 提交日期 | 2025-06 |
 
@@ -194,6 +194,29 @@ A：可以理解为**互补的三层**：
 
 **Q：从仿真训出来的 TravFormer 在真机上为什么有泛化基础？**
 A：核心在于**输入与标签的"内禀性"**：输入是局部几何（点云 / 高度图），标签是倾角统计量——这两者**对机器人型号、地形纹理的依赖都比较弱**，主要由几何与刚体动力学决定。再叠加 MPC 在线滚动，**模型即便不完全准确**，也能在每一步上做局部纠偏。
+
+---
+
+## 🔬 源码解读
+
+> 官方代码已开源：[yzwfromk/STATE-NAV](https://github.com/yzwfromk/STATE-NAV)（可从项目页 [state-nav.github.io/statenav](https://state-nav.github.io/statenav/) 的 "Code" 进入），README 对应 IEEE RA-L 2025 论文（DOI 10.1109/LRA.2025.3648502），自述为"首个面向人形/双足、覆盖多样粗糙地形的学习式可通过性估计与导航框架"。这是一个**面向部署的 ROS 集成栈**（同时支持 ROS1/ROS2 + Docker），而非纯训练仓库。
+
+**目录结构**
+
+| 路径 | 内容 |
+|---|---|
+| `ROS/` | ROS 集成节点（可通过性估计 + 规划） |
+| `statenav_global/` | 核心全局规划模块（TravRRT* 等） |
+| `executables/` | 可运行入口与配置 |
+| `launch/` | ROS launch 文件 |
+| `docker/` | 可复现容器环境 |
+| `images/` | 文档配图 |
+
+**实现要点**
+
+- 学习组件实现论文的 **TravFormer**——一个预测双足失稳风险（含不确定性）的 Transformer，对应"Body-to-Stance-Foot Angle 自监督信号 + 机器人专属的速度代价图"；下游接 **TravRRT\*** 风险敏感采样规划器，把"学到的速度图"转成可执行路径。
+- 复用 MIT 许可的 [elevation_mapping_cupy](https://github.com/leggedrobotics/elevation_mapping_cupy)（高度图）与 pypolo 等依赖；仓库顶层未单独声明 license，二次使用需向作者确认。
+- Docker + RViz 工具链表明这是一个**部署导向**的释出：可在真实/仿真双足机器人上复现粗糙地形导航管线，约 98% 代码为 Python。
 
 ---
 

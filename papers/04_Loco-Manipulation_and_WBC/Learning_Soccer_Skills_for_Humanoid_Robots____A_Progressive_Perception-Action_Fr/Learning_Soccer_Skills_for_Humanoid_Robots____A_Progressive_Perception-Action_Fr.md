@@ -24,7 +24,7 @@ category: "Loco-Manipulation and WBC"
 | PDF | [下载](https://arxiv.org/pdf/2602.05310) |
 | 项目主页 | [soccer-humanoid.github.io](https://soccer-humanoid.github.io/) |
 | **发布时间** | 2026-02-05 (arXiv) |
-| 源码 | 待官方释出 |
+| 源码 | [TeleHuman/HumanoidSoccer](https://github.com/TeleHuman/HumanoidSoccer)（已开源 · CC BY-NC 4.0；部分 PAiD 组件仍标注 TODO） |
 | 提交日期 | 2026-02-05 |
 
 **作者**：Jipeng Kong, Xinzhe Liu, Yuhang Lin, Jinrui Han, Sören Schwertfeger, Chenjia Bai, Xuelong Li
@@ -149,6 +149,29 @@ flowchart TB
 | **接触密集任务的 Sim-to-Real** | 接触动力学校准 + 物理引导噪声为短时高冲击任务提供了可借鉴的迁移流程 |
 | **运动技能积累** | 阶段 1 训练的"无感知运动库"可作为后续多任务策略的复用基础 |
 | **机器人足球** | 朝着人形机器人参加 RoboCup 等真实足球赛事更进了一步 |
+
+---
+
+## 🔬 源码解读
+
+> 官方实现已开源：[TeleHuman/HumanoidSoccer](https://github.com/TeleHuman/HumanoidSoccer)（CC BY-NC 4.0，禁止商用）。README 明确标注其为本文（arXiv 2602.05310）官方代码，基于 **Isaac Lab + RSL-RL** 训练栈构建。
+
+**目录结构**
+
+| 路径 | 内容 |
+|---|---|
+| `source/whole_body_tracking/soccer/` | 核心任务与环境定义（观测、奖励、踢球任务逻辑） |
+| `scripts/rsl_rl/` | 训练 / 推理入口（`train.py`、`play.py`） |
+| `exp/` | MuJoCo sim2sim 回放与评估代码 |
+| `motions/` | 已公开的踢球动捕数据集与标签 |
+| `ckp/` | 策略 checkpoint 存放目录 |
+| `shell/` | 训练/评估辅助脚本 |
+
+**实现要点**
+
+- 代码组织直接对应论文的渐进式三阶段流水线：`soccer/` 下的任务环境实现"运动跟踪 → 感知融合 → sim-to-real"的观测/奖励配置，`scripts/rsl_rl` 提供基于 RSL-RL 的 PPO 训练与播放入口，`exp/` 用 MuJoCo 做 sim2sim 验证以检查零样本迁移行为。
+- 动捕数据（`motions/`）随仓库一并释出，可直接复现阶段 1 的拟人踢球技能库；Isaac Lab 的任务注册机制让"运动跟踪策略"与"踢球任务策略"以不同 task 配置切换。
+- **注意**：当前为**部分释出**。README 的 TODO 列表显示 PAiD 专属组件——PAiD 训练代码、PAiD 动捕数据集、PAiD checkpoint 与对应 sim2sim、PAiD 域随机化代码——尚未提交，因此暂无法端到端复现论文最终的 91.3% 成功率配置，但基础运动跟踪与环境框架已可运行。
 
 ---
 
