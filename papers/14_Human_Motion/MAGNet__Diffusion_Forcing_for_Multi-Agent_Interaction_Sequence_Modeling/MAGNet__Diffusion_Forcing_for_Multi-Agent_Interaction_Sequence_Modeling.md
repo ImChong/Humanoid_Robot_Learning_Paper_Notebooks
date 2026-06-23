@@ -26,7 +26,7 @@ category: "人体动作生成"
 | HTML | [arxiv.org/html/2512.17900v2](https://arxiv.org/html/2512.17900v2) |
 | PDF | [arxiv.org/pdf/2512.17900](https://arxiv.org/pdf/2512.17900) |
 | 项目页 | [Berkeley · MAGNet 项目页](https://people.eecs.berkeley.edu/~vongani_maluleke/blogs/blog-magnet.html) |
-| 代码 | [Von31/MAGNet-code](https://github.com/Von31/MAGNet-code)（计划 2026-03-26 释出训练代码 + Google Drive 预训练权重） |
+| 代码 | [Von31/MAGNet-code](https://github.com/Von31/MAGNet-code)（✅ 已开源 · 训练/推理代码 + Google Drive 预训练 checkpoint，对应 v2 2026-03-26） |
 | 作者 | Vongani H. Maluleke, K. Horiuchi, L. Wilken, Evonne Ng, Jitendra Malik, Angjoo Kanazawa |
 | 机构 | UC Berkeley · Sony Group Corporation · Meta |
 
@@ -171,7 +171,7 @@ flowchart LR
 2. **单模型多任务**：joint generation / partner inpainting / partner prediction / motion control / in-betweening / turn-taking 仅靠**调噪声 schedule** 就能切换，不再一任务一模型；
 3. **从 dyadic 自然扩展到 polyadic**：通过 Embody3D 的 trio / quad 数据，在 2 人/3 人/4 人交互上都保持协调；
 4. **超长序列**：滑窗自回归把"已生成 token"当条件，可以**远超训练长度**（论文展示数百时间步连续生成）；
-5. **代码 + checkpoint 计划开源**（Von31/MAGNet-code，预计 2026-03-26 释出训练代码 + Google Drive 预训练权重）。
+5. **代码 + checkpoint 已开源**（[Von31/MAGNet-code](https://github.com/Von31/MAGNet-code)，含两阶段训练/推理代码 + 各数据集的 Google Drive 预训练权重，详见下方「源码解读」）。
 
 ---
 
@@ -225,6 +225,45 @@ A：滑窗自回归——把最近 K 帧的 token 当作 σ=0 的条件，下一
 
 **Q：和 InterDiff / InterGen 这类双人扩散相比，主要差距在哪？**
 A：InterDiff / InterGen 是**一次性扩散整段双人序列**，做不了 inpainting / prediction / 续写，群组也固定为 2 人。MAGNet 把"哪些 token 该被生成、哪些当条件"做成 σ schedule 的事，所以**单模型** = 多任务 + 任意人数 + 任意长度。
+
+---
+
+## 🔬 源码解读
+
+> 官方代码已开源：[Von31/MAGNet-code](https://github.com/Von31/MAGNet-code)（Conda + PyTorch，Python 3.12 / Linux / NVIDIA GPU）。仓库严格对应正文的**两阶段**设计——Stage 1 训练 Pose VQ-VAE，Stage 2 在交错 token 序列上训练 DFOT（Diffusion Forcing Transformer）；并把论文里"靠噪声 schedule 切换任务"的核心思想落成了**一套配置 + 多个推理脚本**。
+
+**目录结构**
+
+| 路径 | 内容 |
+|---|---|
+| `libs/model/vqvae/` | Pose VQ-VAE 模型（单人姿态 → 离散 token，对应 Stage 1） |
+| `libs/model/dfot/` | Diffusion Forcing Transformer 架构（多人交错 token 去噪，对应 Stage 2） |
+| `libs/train/vqvae_train.py` · `libs/train/dfot_train.py` | 两阶段训练入口 |
+| `libs/inference/vqvae_inference.py` · `libs/inference/dfot_inference.py` | 两阶段推理入口 |
+| `libs/utils/eval.py` | 评测指标（FID/多样性、关节位置/速度误差、人间相关性、滑步、穿模等） |
+| `configs/train/...` | 各数据集训练配置（如 `vqvae/dd100.yaml`） |
+| `scripts/` | `download_data_checkpoint.sh`（拉数据+权重）、`run_*_train.sh`、`run_dfot_inference.sh`、`run_visualizer.sh` |
+| `demo_inference.ipynb` | 交互式推理 demo |
+
+**复现路径（最小命令）**
+
+```bash
+git clone https://github.com/Von31/MAGNet-code.git && cd MAGNet-code
+conda env create -f environment.yml && conda activate mc
+bash scripts/download_data_checkpoint.sh          # 预处理数据 + VQ-VAE/DFOT 预训练权重
+bash scripts/run_vqvae_train.sh  [GPU] configs/train/vqvae/dd100.yaml   # Stage 1
+bash scripts/run_dfot_train.sh   [GPU] <dfot_cfg>                       # Stage 2（需在 cfg 填好 vqvae_model_path）
+bash scripts/run_dfot_inference.sh <cfg>                                # 推理：靠 cfg 选任务
+python -m libs.utils.eval --data_dir <out> --fps 30 --sample_num 10     # 评测
+bash scripts/run_visualizer.sh <out>                                    # Viser 浏览器端 3D 可视化
+```
+
+**实现要点（与正文对照）**
+
+- **两阶段解耦落地清晰**：`libs/model/vqvae`（Stage 1 离散化）与 `libs/model/dfot`（Stage 2 扩散去噪）各自独立，Stage 2 的配置里通过 `vqvae_model_path` 显式挂载已训练好的 codebook——正是正文"先把单人姿态压成 token，再在 token 上做 Diffusion Forcing"的工程映射。
+- **"一个模型多任务"靠 cfg 实现**：仓库不为每个任务单独训模型，而是用同一份 DFOT 权重 + 不同推理配置覆盖 **joint generation / partner prediction / partner inpainting / inbetweening / motion control / agentic turn-taking**——这与正文"任务 = 不同噪声 schedule"的设计完全一致，验证了核心卖点不是纸面声明。
+- **训练超参可核对**：脚本默认 batch size 至多 256、学习率 2e-4、最多 ~300k steps，与笔记前文记录的训练规模吻合；推理支持可变序列长度、自回归/整段去噪两种 schedule，以及 classifier-free guidance。
+- **权重与许可边界**：VQ-VAE 与 DFOT 在 DD100 / DuoBox / Embody3D（duo/trio/quad）/ Inter-X 上均提供 checkpoint（Google Drive，`download_data_checkpoint.sh` 可自动拉取）；README 注明**部分数据集因许可不允许再分发**而被省略，复现这些 split 需自行向原数据集申请——这是把它当作"人形交互数据生成器"前需要注意的合规点。
 
 ---
 
