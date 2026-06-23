@@ -2424,6 +2424,18 @@
         "published_date_en": "Dec 15, 2017 (arXiv)",
         "zhname": "用「前向运动学因子 + 预积分接触因子」把足式机器人状态估计搬到因子图平滑上",
         "zh_title": "用「前向运动学因子 + 预积分接触因子」把足式机器人状态估计搬到因子图平滑上"
+      },
+      {
+        "title": "The Invariant Extended Kalman Filter as a Stable Observer",
+        "path": "papers/09_State_Estimation/The_Invariant_Extended_Kalman_Filter_as_a_Stable_Observer/The_Invariant_Extended_Kalman_Filter_as_a_Stable_Observer.md",
+        "url": "/papers/09_State_Estimation/The_Invariant_Extended_Kalman_Filter_as_a_Stable_Observer/The_Invariant_Extended_Kalman_Filter_as_a_Stable_Observer.html",
+        "dir": "The_Invariant_Extended_Kalman_Filter_as_a_Stable_Observer",
+        "arxiv": "1410.1465",
+        "has_open_source": true,
+        "published_date_zh": "2014年10月6日（arXiv v1），2017 正式发表（IEEE TAC）",
+        "published_date_en": "Oct 6, 2014 (arXiv v1), 2017 正式发表 (IEEE TAC)",
+        "zhname": "不变扩展卡尔曼滤波作为稳定观测器",
+        "zh_title": "不变扩展卡尔曼滤波作为稳定观测器"
       }
     ],
     "zhname": "状态估计",

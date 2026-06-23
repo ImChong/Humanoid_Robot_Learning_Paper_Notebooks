@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 368,
-      "last_title": "LOVON: Legged Open-Vocabulary Object Navigator (arXiv:2507.06747)",
-      "next_module": "09_State_Estimation"
+      "last_module": "09_State_Estimation",
+      "last_index": 374,
+      "last_title": "The Invariant Extended Kalman Filter as a Stable Observer (arXiv:1410.1465)",
+      "next_module": "10_Sim-to-Real"
     },
-    "last_summary_index": 356,
-    "last_summary_date": "2026-06-24",
-    "last_summary_title": "INTENTION: Inferring Tendencies of Humanoid Robot Motion Through Interactive Intuition and Grounded VLM",
+    "last_summary_index": 374,
+    "last_summary_date": "2026-06-25",
+    "last_summary_title": "The Invariant Extended Kalman Filter as a Stable Observer",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-25",
+        "index": 374,
+        "title": "The Invariant Extended Kalman Filter as a Stable Observer",
+        "folder": "papers/09_State_Estimation/The_Invariant_Extended_Kalman_Filter_as_a_Stable_Observer",
+        "module": "09_State_Estimation",
+        "arxiv": "1410.1465",
+        "source": "理论论文无配套代码 · 工程实现参考 RossHartley/invariant-ekf · IEEE TAC 2017"
+      },
       {
         "date": "2026-06-24",
         "index": 356,
