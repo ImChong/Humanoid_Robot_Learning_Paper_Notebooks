@@ -83,7 +83,9 @@ def _extract_time_row(section: str) -> str | None:
         if label and _TIME_LABEL_RE.match(label):
             value = _table_value(line)
             if value:
-                return re.sub(r"\s+", " ", value).strip()
+                # ⚡ Bolt Optimization: Use split/join for whitespace squashing instead of re.sub
+                # to significantly reduce regex overhead.
+                return " ".join(value.split()).strip()
     return None
 
 
