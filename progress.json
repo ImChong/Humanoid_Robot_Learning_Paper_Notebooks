@@ -41,13 +41,13 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "09_State_Estimation",
-      "last_index": 374,
-      "last_title": "The Invariant Extended Kalman Filter as a Stable Observer (arXiv:1410.1465)",
-      "next_module": "10_Sim-to-Real"
+      "last_module": "10_Sim-to-Real",
+      "last_index": 551,
+      "last_title": "Simulator Adaptation for Sim-to-Real Learning of Legged Locomotion via Proprioceptive Distribution Matching (arXiv:2604.11090)",
+      "next_module": "11_Simulation_Benchmark"
     },
-    "last_summary_index": 374,
-    "last_summary_date": "2026-06-25",
+    "last_summary_index": 551,
+    "last_summary_date": "2026-06-26",
     "last_summary_title": "The Invariant Extended Kalman Filter as a Stable Observer",
     "next_summary_index": null,
     "log": [
