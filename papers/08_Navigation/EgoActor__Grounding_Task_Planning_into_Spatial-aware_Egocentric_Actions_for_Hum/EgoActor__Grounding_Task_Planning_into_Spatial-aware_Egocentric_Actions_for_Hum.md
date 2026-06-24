@@ -27,7 +27,8 @@ category: "Navigation"
 | 项目主页 | [baai-agents.github.io/EgoActor](https://baai-agents.github.io/EgoActor/) |
 | Hugging Face | [papers/2602.04515](https://huggingface.co/papers/2602.04515) |
 | **发布时间** | 2026-02-04 (arXiv) |
-| 源码 / 权重 | 待官方释出（论文声明开源代码、模型、数据与评测协议） |
+| 源码（官方）| ✅ 已开源：[BAAI-Agents/RoboNoid](https://github.com/BAAI-Agents/RoboNoid) → 子目录 [`papers/EgoActor/`](https://github.com/BAAI-Agents/RoboNoid/tree/main/papers/EgoActor)（截至 2026-06 已放出推理代码与预训练权重） |
+| 预训练权重 | [EgoActor-8b-Qwen3VL](https://huggingface.co/BAAI-Agents/EgoActor-8b-Qwen3VL) · [EgoActor-4b-Qwen3VL](https://huggingface.co/BAAI-Agents/EgoActor-4b-Qwen3VL) |
 | 提交日期 | 2026-02 |
 
 **机构**：北京智源人工智能研究院（BAAI）— `BAAI-Agents` 团队
@@ -200,6 +201,43 @@ flowchart TB
 | **导航不再只是移动** | 一次性把头部、姿态、操作、HRI 拉进同一个动作空间，覆盖"日常任务"完整闭环 |
 | **数据工程范式** | 用 **RGB-only + 空间 QA** 替代昂贵真机数据是可复用的训练秘方 |
 | **真机实时性** | 4B 模型 < 1 s 推理证明 VLM 路线已具备真机闭环可行性 |
+
+---
+
+## 🧰 官方源码分析
+
+> 📦 论文承诺的开源已落地：代码发布在 BAAI-Agents 的总项目仓库 **[RoboNoid](https://github.com/BAAI-Agents/RoboNoid)** 下的子目录 [`papers/EgoActor/`](https://github.com/BAAI-Agents/RoboNoid/tree/main/papers/EgoActor)（注意仓库**顶层** README 仍标 "Coming Soon"，但 EgoActor 子目录已是可运行代码 + 已发布权重）。README 内引用了本文标题与 `arXiv: 2602.04515`，可确认为官方实现。
+
+**仓库结构**：`papers/EgoActor/` 目录包含 4 个条目——`README.md`（用法与引用）、`sample_inference.py`（推理入口脚本）、`utils.py`（核心工具库）、`sample_inference_trace/`（示例第一视角观测序列，含当前帧 `000001.jpg` 与对应低分辨率历史帧 `_half.jpg`）。当前以**推理示例 + 预训练权重**为主，训练脚本与完整 benchmark/数据集尚未在该目录给出。
+
+**关键模块（`utils.py`，约 17.8 KB）**：
+
+| 函数 | 作用 |
+|---|---|
+| `format_data_sft_with_step_and_hist` | 构建带**历史观测帧 + 历史动作**的多帧 SFT 输入，对应论文"可带历史帧"的设计 |
+| `image_file_to_base64_url` / `convert_messages_for_vllm_api` | 把本地图像编码为 base64、组装成 vLLM 的多模态消息格式 |
+| `get_vllm_multimodal_response` | 向 vLLM 的 OpenAI 兼容接口发起多图视觉-语言请求 |
+| `parse_action` / `merge_turn_and_go_straight_action` | 把模型的自然语言输出**解析/合并为离散动作原语**（如 `turn_right`、`go_straight`、`sidestep_right` 及其幅度参数）——即笔记中"结构化动作 Token 解码 → 动作原语"那一步的具体实现 |
+
+`sample_inference.py` 则负责加载观测图像、拆分当前帧与历史帧、构建多帧输入并调用上述工具完成一次推理。
+
+**依赖与运行方式**：基于 **vLLM 0.11.0** 部署多图 VLM。
+
+```bash
+pip install vllm==0.11.0
+# 启动模型服务（model_name 填下载的权重路径/名）
+vllm serve [model_name] --host 127.0.0.1 --port 8000 \
+    --max_model_len 6400 --chat-template-content-format auto \
+    --limit-mm-per-prompt.image 15 --served-model-name "vlm_agent"
+# 运行示例推理
+python sample_inference.py
+```
+
+`--limit-mm-per-prompt.image 15` 对应"当前帧 + 多张历史帧"的多图输入上限，印证了论文的历史帧聚合做法。
+
+**提供的资产**：HuggingFace 上开源两个预训练模型——[`EgoActor-8b-Qwen3VL`](https://huggingface.co/BAAI-Agents/EgoActor-8b-Qwen3VL)（基于 Qwen3-VL，空间推理更强）与 [`EgoActor-4b-Qwen3VL`](https://huggingface.co/BAAI-Agents/EgoActor-4b-Qwen3VL)（轻量、主打亚秒级实时），与正文"4B/8B 双尺寸"完全对应。
+
+> 🔎 **源码印证笔记的要点**：① 动作以**离散原语 + 数值参数**形式由 `parse_action` 解出，证实了"结构化动作 Token"而非关节级连续动作；② 多图 + 历史动作输入坐实了"可带历史帧"的设计；③ 底座为 **Qwen3-VL**（笔记此前只写"通用 VLM"，源码进一步明确了具体底模）。
 
 ---
 
