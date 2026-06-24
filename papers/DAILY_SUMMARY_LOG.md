@@ -297,6 +297,8 @@
 | 279 | SafeHumanoid: VLM-RAG-driven Control of Upper Body Impedance for Humanoid Robot | 06_Manipulation | ✅ 已完成（2026-06-22） |
 | 336 | LapSurgie: Humanoid Robots Performing Surgery via Teleoperated Handheld Laparoscopy | 07_Teleoperation | ✅ 已完成（2026-06-23） |
 | 368 | LOVON: Legged Open-Vocabulary Object Navigator | 08_Navigation | ✅ 已完成（2026-06-24） |
-| ? | （下一篇：09_State_Estimation 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 09_State_Estimation | ⏭️ 下一篇候选 |
+| 374 | The Invariant Extended Kalman Filter as a Stable Observer (InEKF) | 09_State_Estimation | ✅ 已完成（2026-06-25） |
+| 551 | Simulator Adaptation for Sim-to-Real Learning of Legged Locomotion via Proprioceptive Distribution Matching | 10_Sim-to-Real | ✅ 已完成（2026-06-26） |
+| ? | （下一篇：11_Simulation_Benchmark 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 11_Simulation_Benchmark | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

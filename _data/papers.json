@@ -2446,6 +2446,17 @@
     "display_name": "Sim-to-Real",
     "papers": [
       {
+        "title": "Simulator Adaptation for Sim-to-Real Learning of Legged Locomotion via Proprioceptive Distribution Matching",
+        "path": "papers/10_Sim-to-Real/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching.md",
+        "url": "/papers/10_Sim-to-Real/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching.html",
+        "dir": "Simulator_Adaptation_via_Proprioceptive_Distribution_Matching",
+        "arxiv": "2604.11090",
+        "published_date_zh": "2026年4月13日（arXiv v1）",
+        "published_date_en": "Apr 13, 2026 (arXiv v1)",
+        "zhname": "用本体感知分布匹配做仿真器自适应的腿足 Sim-to-Real 方法",
+        "zh_title": "用本体感知分布匹配做仿真器自适应的腿足 Sim-to-Real 方法"
+      },
+      {
         "title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
         "path": "papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.md",
         "url": "/papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.html",

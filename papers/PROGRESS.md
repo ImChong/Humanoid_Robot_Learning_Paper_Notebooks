@@ -504,11 +504,12 @@
 | 378  | VINS-Fusion: An optimization-based multi-sensor state estimator | - |  | ⏳ 待读 |
 
 
-### Sim-to-Real（11篇）
+### Sim-to-Real（12篇）
 
 
 | #   | 论文                                                                                                                                             | 日期      | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
+| 551  | [Simulator Adaptation for Sim-to-Real Learning of Legged Locomotion via Proprioceptive Distribution Matching](https://arxiv.org/abs/2604.11090) ✅ [笔记](10_Sim-to-Real/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching.md) | 2026-04-13 |     | ✅ 已总结 |
 | 540  | [HALO: Closing Sim-to-Real Gap for Heavy-loaded Humanoid Agile Motion Skills via Differentiable Simulation](https://arxiv.org/abs/2603.15084) ✅ [笔记](10_Sim-to-Real/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion.md) | 2026.03 |     | ✅ 已总结 |
 | 379  | [RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots](https://arxiv.org/abs/2602.01515) | 2026.02 |     | ✅ 完成 |
 | 380  | [Towards Bridging the Gap between Large-Scale Pretraining and Efficient Finetuning for Humanoid Control](https://arxiv.org/abs/2601.21363)     | 2026-05-19 |     | ✅ 完成 |
