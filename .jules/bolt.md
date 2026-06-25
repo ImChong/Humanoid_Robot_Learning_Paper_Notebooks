@@ -107,3 +107,7 @@
 ## 2026-11-20 - Fast String Whitespace Squashing via split and join
 **Learning:** In Python, squashing multiple whitespace characters into single spaces using `re.sub(r"\s+", " ", text)` is incredibly slow due to the massive overhead of regular expression parsing and substitution.
 **Action:** When filtering out multiple consecutive whitespace characters or squashing whitespace, always rely on `" ".join(text.split())` instead. It performs the exact same operation with native C-optimized string split semantics and is over 5x faster.
+
+## 2026-11-20 - Fast Section Length Extraction via str.find vs splitlines
+**Learning:** In string-processing logic where a specific document section's length needs to be calculated based on regex headings (like in `check_roadmap_quality.py`), calling `splitlines()` on the entire document and iterating through lines to match a regex is highly inefficient. It forces an O(N) memory allocation and executes a regex match for every line.
+**Action:** When extracting or measuring a document section between two headers, replace `splitlines()` with `re.search()` to find the start, then use native `str.find("\n## ")` to find the end. Extract the section via slicing (`content[start:end]`) and calculate metrics on that slice. This avoids full-document string array allocations and drops regex invocations to one.
