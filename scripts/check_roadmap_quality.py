@@ -55,17 +55,23 @@ def load_roadmap_entries(path: str = ROADMAP_PATH) -> list[dict[str, str]]:
 
 
 def _section_chars(content: str, heading_re: re.Pattern[str]) -> int:
-    capturing = False
-    buf: list[str] = []
-    for line in content.splitlines():
-        if heading_re.match(line):
-            capturing = True
-            continue
-        if capturing and line.startswith("## "):
-            break
-        if capturing:
-            buf.append(line)
-    return len("".join(buf))
+    # ⚡ Bolt Optimization: Replace O(N) splitlines() and per-line regex matching
+    # with fast string indexing and slicing to reduce memory allocation and CPU overhead.
+    match = heading_re.search(content)
+    if not match:
+        return 0
+
+    start_idx = content.find("\n", match.end())
+    if start_idx == -1:
+        return 0
+    start_idx += 1
+
+    end_idx = content.find("\n## ", start_idx)
+    if end_idx == -1:
+        end_idx = len(content)
+
+    section = content[start_idx:end_idx]
+    return len(section) - section.count("\n") - section.count("\r")
 
 
 def _has_method_section(content: str) -> bool:
