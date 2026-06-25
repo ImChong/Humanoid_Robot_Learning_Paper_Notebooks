@@ -549,6 +549,7 @@
 | 407  | RoboCasa365: A Large-Scale Simulation Framework for Training and Benchmarking Generalist Robots                                            | -       |     | ⏳ 待读 |
 | 408  | [ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control](https://arxiv.org/abs/2603.12185) ✅ [笔记](11_Simulation_Benchmark/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine.md) | 2026.03 |  | ✅ 已总结 |
 | 409  | [Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation](https://arxiv.org/abs/2510.08807) ✅ [笔记](11_Simulation_Benchmark/Humanoid_Everyday__Comprehensive_Robotic_Dataset_for_Open-World_Humanoid_Manipulation/Humanoid_Everyday__Comprehensive_Robotic_Dataset_for_Open-World_Humanoid_Manipulation.md) | 2025.10 |  | ✅ 已总结 |
+| 552  | [GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors](https://arxiv.org/abs/2606.05160) ✅ [笔记](11_Simulation_Benchmark/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors.md) | 2026-06-03 |  | ✅ 已总结 |
 | 527  | [MuJoCo Playground](https://playground.mujoco.org/)                                                                                       | 2025.01 |     | ⏳ 待读 |
 
 
