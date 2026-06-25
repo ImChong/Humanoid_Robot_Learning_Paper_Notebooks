@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
-      "last_index": 551,
-      "last_title": "Simulator Adaptation for Sim-to-Real Learning of Legged Locomotion via Proprioceptive Distribution Matching (arXiv:2604.11090)",
-      "next_module": "11_Simulation_Benchmark"
+      "last_module": "11_Simulation_Benchmark",
+      "last_index": 552,
+      "last_title": "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors (arXiv:2606.05160)",
+      "next_module": "12_Hardware_Design"
     },
-    "last_summary_index": 551,
-    "last_summary_date": "2026-06-26",
-    "last_summary_title": "The Invariant Extended Kalman Filter as a Stable Observer",
+    "last_summary_index": 552,
+    "last_summary_date": "2026-06-25",
+    "last_summary_title": "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors",
     "next_summary_index": null,
     "log": [
       {
@@ -1040,6 +1040,18 @@
         "arxiv": "2507.06747",
         "source_repo": "https://github.com/DaojiePENG/LOVON",
         "project_page": "https://daojiepeng.github.io/LOVON/"
+      },
+      {
+        "date": "2026-06-25",
+        "index": 552,
+        "title": "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors",
+        "module": "11_Simulation_Benchmark",
+        "category": "11_Simulation_Benchmark",
+        "note_path": "papers/11_Simulation_Benchmark/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors.md",
+        "track": "module_rotation",
+        "arxiv": "2606.05160",
+        "source_repo": "https://github.com/NVlabs/GRAIL",
+        "project_page": "https://research.nvidia.com/labs/dair/grail/"
       }
     ],
     "last_completed_index": 368,
@@ -4591,6 +4603,16 @@
       "pdf_file": "",
       "route": "Simulation Benchmark",
       "title_cn": ""
+    },
+    {
+      "title": "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors",
+      "arxiv": "2606.05160",
+      "folder": "papers/11_Simulation_Benchmark/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors",
+      "note_file": "GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors.md",
+      "pdf_file": "",
+      "status": "done",
+      "route": "Simulation Benchmark",
+      "title_cn": "GRAIL：用 3D 资产与视频先验生成人形 Loco-Manipulation 数据"
     },
     {
       "title": "A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation",

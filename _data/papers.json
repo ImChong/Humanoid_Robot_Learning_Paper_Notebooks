@@ -2186,6 +2186,7 @@
         "url": "/papers/08_Navigation/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum/EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum.html",
         "dir": "EgoActor__Grounding_Task_Planning_into_Spatial-aware_Egocentric_Actions_for_Hum",
         "arxiv": "2602.04515",
+        "has_open_source": true,
         "published_date_zh": "2026年2月4日（arXiv）",
         "published_date_en": "Feb 4, 2026 (arXiv)",
         "zhname": "EgoActor：用 VLM 把任务规划落到人形机器人的空间感知第一视角动作上",
@@ -2633,6 +2634,18 @@
   "11_Simulation_Benchmark": {
     "display_name": "Simulation Benchmark",
     "papers": [
+      {
+        "title": "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors",
+        "path": "papers/11_Simulation_Benchmark/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors.md",
+        "url": "/papers/11_Simulation_Benchmark/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors.html",
+        "dir": "GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors",
+        "arxiv": "2606.05160",
+        "has_open_source": true,
+        "published_date_zh": "2026年6月3日（arXiv v1）",
+        "published_date_en": "Jun 3, 2026 (arXiv v1)",
+        "zhname": "GRAIL：用 3D 资产与视频先验生成人形 Loco-Manipulation 数据",
+        "zh_title": "GRAIL：用 3D 资产与视频先验生成人形 Loco-Manipulation 数据"
+      },
       {
         "title": "ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control",
         "path": "papers/11_Simulation_Benchmark/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine/ComFree-Sim__GPU-Parallelized_Analytical_Contact_Physics_Engine.md",
