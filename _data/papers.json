@@ -2625,6 +2625,18 @@
         "published_date_en": "Dec 8, 2025 (arXiv)",
         "zhname": "DIJIT：为「主动观察者」打造的仿人双目机器人头——把人眼的转、聚、扭和脖子一起搬进硬件",
         "zh_title": "DIJIT：为「主动观察者」打造的仿人双目机器人头——把人眼的转、聚、扭和脖子一起搬进硬件"
+      },
+      {
+        "title": "DecARt Leg: Design and Evaluation of a Novel Humanoid Robot Leg with Decoupled Actuation for Agile Locomotion",
+        "path": "papers/12_Hardware_Design/DecARt_Leg_Novel_Humanoid_Robot_Leg_with_Decoupled_Actuation/DecARt_Leg_Novel_Humanoid_Robot_Leg_with_Decoupled_Actuation.md",
+        "url": "/papers/12_Hardware_Design/DecARt_Leg_Novel_Humanoid_Robot_Leg_with_Decoupled_Actuation/DecARt_Leg_Novel_Humanoid_Robot_Leg_with_Decoupled_Actuation.html",
+        "dir": "DecARt_Leg_Novel_Humanoid_Robot_Leg_with_Decoupled_Actuation",
+        "arxiv": "2511.10021",
+        "has_open_source": true,
+        "published_date_zh": "2025年11月13日（arXiv）",
+        "published_date_en": "Nov 13, 2025 (arXiv)",
+        "zhname": "DecArt Leg：面向敏捷运动的解耦驱动新型人形机器人腿设计与评估",
+        "zh_title": "DecArt Leg：面向敏捷运动的解耦驱动新型人形机器人腿设计与评估"
       }
     ],
     "zhname": "硬件设计",
