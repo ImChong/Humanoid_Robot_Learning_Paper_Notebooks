@@ -2882,6 +2882,17 @@
         "zh_title": "迭代闭环动作合成：扩展人形机器人控制能力的数据-策略协同进化框架"
       },
       {
+        "title": "InterPrior: Scaling Generative Control for Physics-Based Human-Object Interactions",
+        "path": "papers/13_Physics-Based_Animation/InterPrior__Scaling_Generative_Control_for_Physics-Based_Human-Object_Inter/InterPrior__Scaling_Generative_Control_for_Physics-Based_Human-Object_Inter.md",
+        "url": "/papers/13_Physics-Based_Animation/InterPrior__Scaling_Generative_Control_for_Physics-Based_Human-Object_Inter/InterPrior__Scaling_Generative_Control_for_Physics-Based_Human-Object_Inter.html",
+        "dir": "InterPrior__Scaling_Generative_Control_for_Physics-Based_Human-Object_Inter",
+        "arxiv": "2602.06035",
+        "published_date_zh": "2026年2月5日（arXiv）",
+        "published_date_en": "Feb 5, 2026 (arXiv)",
+        "zhname": "InterPrior：可扩展的物理人–物交互生成式控制框架",
+        "zh_title": "InterPrior：可扩展的物理人–物交互生成式控制框架"
+      },
+      {
         "title": "CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives",
         "path": "papers/13_Physics-Based_Animation/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit.md",
         "url": "/papers/13_Physics-Based_Animation/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit/CRISP__Contact-Guided_Real2Sim_from_Monocular_Video_with_Planar_Scene_Primit.html",

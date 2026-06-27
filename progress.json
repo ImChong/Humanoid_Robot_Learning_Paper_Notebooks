@@ -41,16 +41,34 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 552,
-      "last_title": "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors (arXiv:2606.05160)",
-      "next_module": "12_Hardware_Design"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": "—",
+      "last_title": "InterPrior: Scaling Generative Control for Physics-Based Human-Object Interactions (arXiv:2602.06035)",
+      "next_module": "14_Human_Motion"
     },
-    "last_summary_index": 552,
-    "last_summary_date": "2026-06-25",
-    "last_summary_title": "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors",
+    "last_summary_index": "—",
+    "last_summary_date": "2026-06-27",
+    "last_summary_title": "InterPrior: Scaling Generative Control for Physics-Based Human-Object Interactions",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-06-27",
+        "index": "—",
+        "title": "InterPrior: Scaling Generative Control for Physics-Based Human-Object Interactions",
+        "folder": "papers/13_Physics-Based_Animation/InterPrior__Scaling_Generative_Control_for_Physics-Based_Human-Object_Inter",
+        "module": "13_Physics-Based_Animation",
+        "arxiv": "2602.06035",
+        "source": "未见官方代码 · 项目页 sirui-xu.github.io/InterPrior · UIUC + Amazon · 模块轮转（12_Hardware_Design → 13_Physics-Based_Animation）"
+      },
+      {
+        "date": "2026-06-26",
+        "index": "—",
+        "title": "DecARt Leg: Novel Humanoid Robot Leg with Decoupled Actuation",
+        "folder": "papers/12_Hardware_Design/DecARt_Leg_Novel_Humanoid_Robot_Leg_with_Decoupled_Actuation",
+        "module": "12_Hardware_Design",
+        "arxiv": "2511.10021",
+        "source": "未见官方代码 · FAST 敏捷度评测 · MIPT · 模块轮转（11_Simulation_Benchmark → 12_Hardware_Design）"
+      },
       {
         "date": "2026-06-25",
         "index": 374,
