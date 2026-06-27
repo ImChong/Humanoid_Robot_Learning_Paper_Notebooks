@@ -1,6 +1,6 @@
 ---
 layout: paper
-paper_order: 5
+paper_order: 6
 title: "PhysHMR: Learning Humanoid Control Policies from Vision for Physically Plausible Human Motion Reconstruction"
 zhname: "PhysHMR：用视觉条件策略直接产出物理可行的人体动作重建"
 category: "物理动画"

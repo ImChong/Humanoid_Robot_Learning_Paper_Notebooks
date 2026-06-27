@@ -1,6 +1,6 @@
 ---
 layout: paper
-paper_order: 3
+paper_order: 4
 title: "CRISP: Contact-Guided Real2Sim from Monocular Video with Planar Scene Primitives"
 zhname: "CRISP：用接触引导 + 平面基元从单目视频做 Real2Sim 的人–场景重建"
 category: "Physics-Based Animation"

@@ -1,6 +1,6 @@
 ---
 layout: paper
-paper_order: 6
+paper_order: 7
 title: "Learning to Ball: Composing Policies for Long-Horizon Basketball Moves"
 zhname: "Learning to Ball：用「策略组合 + 高层软路由」拼出长程篮球连招"
 category: "Physics-Based Animation"

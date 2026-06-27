@@ -1,6 +1,6 @@
 ---
 layout: paper
-paper_order: 4
+paper_order: 5
 title: "Mimic2DM: Learning to Control Physically-simulated 3D Characters via Generating and Mimicking 2D Motions"
 zhname: "Mimic2DM：仅靠 2D 关键点轨迹学习物理仿真 3D 角色控制器"
 category: "物理动画"
