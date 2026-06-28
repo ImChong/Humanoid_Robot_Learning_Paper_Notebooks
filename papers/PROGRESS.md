@@ -653,7 +653,7 @@
 | 482  | [Efficient and Scalable Monocular Human-Object Interaction Motion Reconstruction](https://arxiv.org/abs/2512.00960) ✅ [笔记](14_Human_Motion/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction/Efficient_and_Scalable_Monocular_Human-Object_Interaction_Motion_Reconstruction.md)                  | 2025.12 |     | ✅ 完成 |
 | 483  | [Being-M0.5: A Real-Time Controllable Vision-Language-Motion Model](https://arxiv.org/abs/2508.07863)                                | 2025.08 |     | ⏳ 待读 |
 | 484  | Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data                                                              | 2025.07 |     | ⏳ 待读 |
-| 485  | [GENMO: A GENeralist Model for Human MOtion](https://arxiv.org/abs/2505.01425)                                                       | 2025.05 |     | ⏳ 待读 |
+| 485  | [GENMO: A GENeralist Model for Human MOtion](https://arxiv.org/abs/2505.01425) ✅ [笔记](14_Human_Motion/GENMO__A_Generalist_Model_for_Human_Motion/GENMO__A_Generalist_Model_for_Human_Motion.md) | 2025.05 |     | ✅ 完成 |
 | 486  | [PICO: Reconstructing 3D People In Contact with Objects](https://arxiv.org/abs/2504.17695)                                           | 2025.04 |     | ⏳ 待读 |
 | 487  | Climber Force and Motion Estimation from Video                                                                                       | 2025.04 |     | ⏳ 待读 |
 | 488  | [FRAME: Floor-aligned Representation for Avatar Motion from Egocentric Video](https://arxiv.org/abs/2503.23094)                      | 2025.03 |     | ⏳ 待读 |

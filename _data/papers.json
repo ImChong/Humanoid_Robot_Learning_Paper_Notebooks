@@ -3040,6 +3040,17 @@
         "zh_title": "Go to Zero：迈向百万级数据的零样本动作生成"
       },
       {
+        "title": "GENMO: A Generalist Model for Human Motion",
+        "path": "papers/14_Human_Motion/GENMO__A_Generalist_Model_for_Human_Motion/GENMO__A_Generalist_Model_for_Human_Motion.md",
+        "url": "/papers/14_Human_Motion/GENMO__A_Generalist_Model_for_Human_Motion/GENMO__A_Generalist_Model_for_Human_Motion.html",
+        "dir": "GENMO__A_Generalist_Model_for_Human_Motion",
+        "arxiv": "2505.01425",
+        "published_date_zh": "2025年5月（arXiv v1：2025年5月2日）",
+        "published_date_en": "May 2025 (arXiv v1：May 2, 2025)",
+        "zhname": "GENMO：人类动作的通才模型",
+        "zh_title": "GENMO：把动作估计与生成统一进一个通才模型"
+      },
+      {
         "title": "PICO: Reconstructing 3D People In Contact with Objects",
         "path": "papers/14_Human_Motion/PICO__Reconstructing_3D_People_In_Contact_with_Objects/PICO__Reconstructing_3D_People_In_Contact_with_Objects.md",
         "url": "/papers/14_Human_Motion/PICO__Reconstructing_3D_People_In_Contact_with_Objects/PICO__Reconstructing_3D_People_In_Contact_with_Objects.html",
