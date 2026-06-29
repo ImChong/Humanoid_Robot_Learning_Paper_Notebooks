@@ -2,11 +2,12 @@
 layout: paper
 paper_order: 12
 title: "OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control"
+zhname: "OmniXtreme：突破高动态人形控制的通用性壁垒"
 category: "Loco-Manipulation and WBC"
 ---
 
 # OmniXtreme: Breaking the Generality Barrier in High-Dynamic Humanoid Control
-**突破高动态人形机器人控制的通用性瓶颈**
+**Flow Matching 蒸馏多专家为统一策略，再叠加执行器感知残差 RL 与功率安全正则，让单一策略在 G1 真机完成翻跟头、霹雳舞等极限全身动作**
 
 > 📅 阅读日期: 2026-03-08
 >
@@ -20,14 +21,19 @@ category: "Loco-Manipulation and WBC"
 |------|------|
 | **arXiv** | [2602.23843](https://arxiv.org/abs/2602.23843) |
 | **PDF** | [下载](https://arxiv.org/pdf/2602.23843) |
+| **项目主页** | [extreme-humanoid.github.io](https://extreme-humanoid.github.io/) |
+| **GitHub** | [Perkins729/OmniXtreme](https://github.com/Perkins729/OmniXtreme) |
+| **收录** | RSS 2026 |
 | **发布时间** | 2026年2月27日（arXiv） |
-| **机构** | BIGAI（北京通用人工智能研究院）、上交大、中科大、宇树科技 |
+| **机构** | BIGAI、BIGAI & 宇树联合实验室、上交大、中科大、宇树科技、华科、北理工 |
 | **实验平台** | Unitree G1 人形机器人 |
-| **部署硬件** | 机载 NVIDIA Jetson Orin NX |
-| **仿真器** | IsaacLab |
+| **部署硬件** | 机载 NVIDIA Jetson Orin NX（推理全 onboard、实时） |
+| **训练仿真器** | IsaacLab |
+| **Sim-to-Sim 验证** | MuJoCo 3.2.3（`deploy_mujoco.py`） |
 
-**作者**: Yunshen Wang\*, Shaohang Zhu\*, …  
-**通讯作者**: Baoxiong Jia, Siyuan Huang（BIGAI & 宇树科技联合实验室）
+**作者**: Yunshen Wang\*¹'²'³, Shaohang Zhu\*¹'²'⁴, Peiyuan Zhi¹'², Yuhan Li¹'²'⁶, Jiaxin Li¹'²'⁷, Yong-Lu Li³, Yuchen Xiao⁵, Xingxing Wang⁵, Baoxiong Jia†¹'², Siyuan Huang†¹'²  
+**机构编号**: ¹ BIGAI · ² BIGAI & Unitree 联合实验室 · ³ 上海交大 · ⁴ 中科大 · ⁵ 宇树科技 · ⁶ 华科 · ⁷ 北理工  
+**通讯作者**: Baoxiong Jia, Siyuan Huang
 
 ---
 
@@ -217,14 +223,78 @@ $$\tau_{\max,0} = \begin{cases} \tau_{y1}, & v \cdot \tau_{\text{in}} > 0 & \tex
 
 ---
 
+## 🎬 真机展示能力（统一策略）
+
+项目主页 [Behavior Gallery](https://extreme-humanoid.github.io/) 展示了**单一统一策略**在 G1 真机上完成的极限动作，包括但不限于：
+
+| 类别 | 代表动作 |
+|------|----------|
+| **Breaking / B-boy** | 连续后手翻、长段霹雳舞、Thomas flare、backspin |
+| **体操 / 特技** | Webster flip（连续 5 次）、侧手翻、空翻侧手翻、自行车踢 |
+| **武术 / 踢技** | Spinkick、butterfly kick |
+| **基础高动态** | 前滚翻、后滚翻、交替手枪深蹲、倒立行走 |
+| **补充 demo** | 攻击连招、俯卧撑、被击倒后恢复、滚翻-空翻组合 |
+
+> 项目主页强调：推理 pipeline **全 onboard、实时执行**，无需外部算力或遥操介入。
+
+---
+
+## 🧪 消融实验（项目主页）
+
+| 组件 | 作用 |
+|------|------|
+| **Power-Safety Regularization** | 显式惩罚过大负关节功率，防止高动态制动时能量吸收过载、触发过流保护 |
+| **Motor Characteristic Modeling** | 在仿真中建模真实电机转矩-速度包络（含反电动势），缩小 sim-to-real 差距 |
+
+两者共同构成「执行器感知后训练」的核心工程贡献；去掉任一项，真机高动态动作（尤其落地制动）成功率显著下降。
+
+---
+
 ## 🏗️ 工程复现要点
 
-### 仿真环境
-- **训练仿真器**: IsaacLab
-- **真机平台**: Unitree G1
-- **机载推理**: NVIDIA Jetson Orin NX
-- **数据集**: LAFAN1、AMASS、MimicKit、Reallusion 运动库
-- **重定向工具**: GMR
+### 官方开源状态（[GitHub README](https://github.com/Perkins729/OmniXtreme)）
+
+**已发布**：
+
+| 资源 | 说明 |
+|------|------|
+| 论文 & 演示视频 | 项目主页 + arXiv |
+| **Checkpoints** | `policy/` 目录：`base_policy_trt.onnx`、`residual_policy.onnx`、`fk_trt.onnx` |
+| **Sim-to-Sim 评估** | `deploy_mujoco.py` + `residual_policy.py` + `configs/` + `robots/` |
+| **运动数据子集** | [Google Drive](https://drive.google.com/file/d/1-LXEmUfW80BXYQ0tAZx341PzY8u14Z9Q/view?usp=sharing)，解压至 `policy/` |
+
+**计划中（Planned Releases）**：
+
+- Flow Matching 基策略训练与推理代码
+- 残差后训练与推理完整流水线
+- C++ 真机部署代码
+
+### 快速上手（Sim-to-Sim）
+
+```bash
+git clone https://github.com/Perkins729/OmniXtreme.git
+cd OmniXtreme
+conda create -n omnixtreme python=3.8
+conda activate omnixtreme
+conda install -c conda-forge cudnn=8
+pip install -r requirements.txt
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+# 下载 motion 数据至 policy/ 后：
+python deploy_mujoco.py
+```
+
+**依赖栈**（`requirements.txt`）：MuJoCo 3.2.3、PyTorch 2.4.1、ONNX Runtime GPU 1.18.1、TensorRT 8.5.2.2 等。
+
+### 仿真与部署
+
+| 环节 | 关键点 |
+|------|--------|
+| **训练仿真器** | IsaacLab |
+| **Sim-to-Sim** | MuJoCo 3.2.3，策略导出为 ONNX / TensorRT |
+| **真机平台** | Unitree G1 |
+| **机载推理** | Jetson Orin NX，base + residual 两路 ONNX 推理 |
+| **数据集** | LAFAN1、AMASS、MimicKit、Reallusion 运动库 |
+| **重定向工具** | [GMR](../../02_Motion_Retargeting/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking/Retargeting_Matters__General_Motion_Retargeting_for_Humanoid_Motion_Tracking.md) |
 
 ### 网络结构
 
@@ -232,7 +302,7 @@ $$\tau_{\max,0} = \begin{cases} \tau_{y1}, & v \cdot \tau_{\text{in}} > 0 & \tex
 |------|------|------|
 | **专家策略（Teacher）** | MLP [512, 256, 128]，Actor-Critic 分离 | PPO 训练，每运动一个 |
 | **流匹配策略（预训练）** | Transformer + flow head | 统一策略，DAgger 蒸馏 |
-| **残差策略（后训练）** | MLP，PPO 训练 | 输入包含 $a_{\text{flow}}$ |
+| **残差策略（后训练）** | MLP，PPO 训练 | 输入包含 $a_{\text{flow}}$；仓库提供 `residual_policy.onnx` |
 
 ### 训练流程
 1. **Per-expert PPO**：每个运动单独训专家策略，保守随机化
@@ -283,13 +353,18 @@ $$\tau_{\max,0} = \begin{cases} \tau_{y1}, & v \cdot \tau_{\text{in}} > 0 & \tex
 
 **A**：三个层面：1）**转矩-速度包络建模**——把真实执行器的非线性（反电动势、速度相关力矩损失）搬进仿真，让仿真中的物理行为更接近真机；2）**功率安全正则化**——训练中就惩罚真机上会触发保护的行为；3）**两阶段域随机化**——预训练保守保质量，后训练激进保鲁棒性，同时放宽终止阈值让策略能从大偏差中恢复。
 
-### Q7：这篇论文的局限性是什么？
+### Q7：官方代码开源到什么程度？能复现真机吗？
+
+**A**：截至 2026 年 6 月，[Perkins729/OmniXtreme](https://github.com/Perkins729/OmniXtreme) 已放出预训练 checkpoint（base + residual ONNX/TensorRT）、MuJoCo sim-to-sim 评估脚本 `deploy_mujoco.py` 和运动数据子集；**训练代码与 C++ 真机部署尚在 Planned Releases**。因此当前可直接在 MuJoCo 里验证统一策略的高动态跟踪效果，完整训练流水线和真机部署需等待后续释出。
+
+### Q8：这篇论文的局限性是什么？
 
 **A**：
 - 流匹配推理需要 5 步，对极端低延迟场景仍有挑战
 - 运动多样性受动捕数据集覆盖范围限制（需要 LAFAN1/AMASS 中有的动作）
 - 残差策略的修正幅度有上限，极端情况下（动作偏差过大）可能修正不回来
 - 实机实验以展示性动作为主，操作任务的泛化未系统评估
+- 训练代码尚未完全开源，社区暂无法从零复现完整两阶段流水线
 
 ---
 
@@ -300,6 +375,18 @@ $$\tau_{\max,0} = \begin{cases} \tau_{y1}, & v \cdot \tau_{\text{in}} > 0 & \tex
 - **HOVER** (2024): 多功能神经全身控制
 - **ExBody2** (2024): 表达性全身控制
 - **PHC** (2023): 物理人体控制的 RL 方法
+
+---
+
+## 📎 参考来源
+
+- arXiv 论文页：[https://arxiv.org/abs/2602.23843](https://arxiv.org/abs/2602.23843)
+- PDF：[https://arxiv.org/pdf/2602.23843](https://arxiv.org/pdf/2602.23843)
+- 项目主页：[https://extreme-humanoid.github.io/](https://extreme-humanoid.github.io/)
+- 官方源码：[https://github.com/Perkins729/OmniXtreme](https://github.com/Perkins729/OmniXtreme)
+- 运动数据子集：[Google Drive](https://drive.google.com/file/d/1-LXEmUfW80BXYQ0tAZx341PzY8u14Z9Q/view?usp=sharing)
+
+> 📝 **备注**：本笔记 2026-06-29 根据项目主页与 GitHub README 更新开源状态、RSS 2026 收录、真机展示清单与 Sim-to-Sim 复现流程。具体网络超参、loss 权重与训练步数以 arXiv PDF 为准；训练代码释出后需再核对 README。
 
 ---
 

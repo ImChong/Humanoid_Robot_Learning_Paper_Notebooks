@@ -685,6 +685,7 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control/OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control.html",
         "dir": "OmniXtreme_Breaking_the_Generality_Barrier_in_High-Dynamic_Humanoid_Control",
         "arxiv": "2602.23843",
+        "has_open_source": true,
         "published_date_zh": "2026年2月27日（arXiv）",
         "published_date_en": "Feb 27, 2026 (arXiv)",
         "zhname": "OmniXtreme：突破高动态人形控制的通用性壁垒",
@@ -1092,8 +1093,8 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contrastive/PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contrastive.html",
         "dir": "PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contrastive",
         "arxiv": "2512.13093",
-        "published_date_zh": "2025年12月",
-        "published_date_en": "Dec 2025",
+        "published_date_zh": "2025年12月（v1）/ 2026年3月（v2）",
+        "published_date_en": "Dec 2025 (v1)/ Mar 2026 (v2)",
         "zhname": "PvP：用「本体感知 ↔ 特权状态」对比学习，提升人形机器人 RL 的样本效率",
         "zh_title": "PvP：用「本体感知 ↔ 特权状态」对比学习，提升人形机器人 RL 的样本效率"
       },
