@@ -118,7 +118,9 @@ def _fetch_arxiv_dates(arxiv_ids: list[str]) -> dict[str, str]:
         req = urllib.request.Request(url, headers={"User-Agent": "HumanoidPaperNotes/1.0"})
         for attempt in range(4):
             try:
-                payload = urllib.request.urlopen(req, timeout=60).read()
+                # 🛡️ Sentinel: Prevent memory exhaustion (DoS) by bounding the API response size.
+                # Maximum 5MB is sufficient for 40 arXiv atom entries.
+                payload = urllib.request.urlopen(req, timeout=60).read(5242880)
                 break
             except urllib.error.URLError:
                 if attempt == 3:
