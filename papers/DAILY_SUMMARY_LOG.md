@@ -122,6 +122,7 @@
 | 2026-06-27 | — | [InterPrior: Scaling Generative Control for Physics-Based Human-Object Interactions](13_Physics-Based_Animation/InterPrior__Scaling_Generative_Control_for_Physics-Based_Human-Object_Inter/InterPrior__Scaling_Generative_Control_for_Physics-Based_Human-Object_Inter.md) | Physics-Based Animation / 物理人–物交互(HOI) · 意图驱动涌现式全身交互 / 三段式「模仿预训练蒸馏目标条件变分策略 → 物理扰动增广 → RL 微调固化通用运动先验」/ 只给高层 affordance/稀疏目标，让平衡·接触·操作从物理先验涌现 · 支持多物体·失败恢复·长程目标切换，项目页含 Unitree G1 sim-to-sim · Sirui Xu、Yu-Xiong Wang、Liangyan Gui 等 · UIUC + Amazon · 模块轮转轨（12_Hardware_Design → 13_Physics-Based_Animation） | 截至当前未见官方代码 · [项目页 sirui-xu.github.io/InterPrior](https://sirui-xu.github.io/InterPrior/) · [arXiv 2602.06035](https://arxiv.org/abs/2602.06035) |
 
 | 2026-06-28 | 485 | [GENMO: A Generalist Model for Human Motion](14_Human_Motion/GENMO__A_Generalist_Model_for_Human_Motion/GENMO__A_Generalist_Model_for_Human_Motion.md) | Human Motion / 通才动作模型 · 把动作估计重述为「受约束的生成」统一估计与生成 / 多模态(文本·音频·关键帧·视频)·变长·可分时段混合条件 / 估计引导训练用野外视频+2D 标注+文本撑大生成多样性、生成先验稳住遮挡下估计 · Jiefeng Li、Davis Rempe、Jan Kautz、Ye Yuan 等 · NVIDIA DAIR · 模块轮转（13_Physics-Based_Animation → 14_Human_Motion） | 截至当前未见公开训练代码 · [项目页 research.nvidia.com/labs/dair/genmo](https://research.nvidia.com/labs/dair/genmo/) · [arXiv 2505.01425](https://arxiv.org/abs/2505.01425) |
+| 2026-06-29 | 64 | [PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations](04_Loco-Manipulation_and_WBC/PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contrastive/PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contrastive.md) | Loco-Manipulation / WBC · 状态表征学习(SRL) · 样本效率 / 把「含特权信息的完整状态」当成「本体感知状态」的天然伪增强视图：对完整状态做零掩码得 (s, s̃) 正样本对，SimSiam 式负余弦相似度 + 停梯度防塌缩做对比学习，无需手工数据增强即可把特权信息结构注入本体表征 / 非对称 actor-critic（actor 看本体、critic 看特权）+ 间隔更新接 PPO；作用于策略编码器优于价值编码器 / 配套开源 SRL4Humanoid 统一模块化 SRL 评测框架（VAE/SPR/SimSiam/PvP）· LimX Oli 31-DoF 真机：速度跟踪收敛更快、动作模仿三指标最佳 · Mingqi Yuan、Tao Yu、Hua Chen、Wenjun Zeng 等 · HK PolyU + LimX Dynamics + EIT Ningbo · 模块轮转（14_Human_Motion → 04_Loco-Manipulation_and_WBC） | 宣称开源 SRL4Humanoid（截至当前未见公开仓库链接）· [arXiv 2512.13093](https://arxiv.org/abs/2512.13093) |
 
 > 备注：2026-04-25 当天首次推进时发现索引 15 (Ψ₀) 已有完整内容，依规则跳到索引 16 (SteadyTray) 完成补写，故同日产生两条记录。
 > 备注：2026-04-26 推进索引 17 (ZeroWBC)，arXiv 与项目主页临时不可访问，笔记基于 awesome-humanoid-robot-learning 列表与项目主页公开文字描述整理；后续待 PDF / 官方仓库释出后补充实验数值。
@@ -304,6 +305,10 @@
 | 374 | The Invariant Extended Kalman Filter as a Stable Observer (InEKF) | 09_State_Estimation | ✅ 已完成（2026-06-25） |
 | 551 | Simulator Adaptation for Sim-to-Real Learning of Legged Locomotion via Proprioceptive Distribution Matching | 10_Sim-to-Real | ✅ 已完成（2026-06-26） |
 | 552 | GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors | 11_Simulation_Benchmark | ✅ 已完成（2026-06-25） |
-| ? | （下一篇：12_Hardware_Design 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 12_Hardware_Design | ⏭️ 下一篇候选 |
+| — | DecARt Leg: Novel Humanoid Robot Leg with Decoupled Actuation | 12_Hardware_Design | ✅ 已完成（2026-06-26） |
+| — | InterPrior: Scaling Generative Control for Physics-Based Human-Object Interactions | 13_Physics-Based_Animation | ✅ 已完成（2026-06-27） |
+| 485 | GENMO: A Generalist Model for Human Motion | 14_Human_Motion | ✅ 已完成（2026-06-28） |
+| 64 | PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations | 04_Loco-Manipulation_and_WBC | ✅ 已完成（2026-06-29） |
+| ? | （下一篇：05_Locomotion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 05_Locomotion | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
