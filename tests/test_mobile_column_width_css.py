@@ -43,6 +43,19 @@ def test_mobile_code_block_grid_allows_internal_scroll():
     assert "min-width: 0" in block
 
 
+def test_mobile_table_wrapper_uses_paint_containment():
+    """Wide tables inside ``overflow-x: auto`` still inflated ``html.scrollWidth``
+    on iOS; ``contain: paint`` keeps scroll inside the wrapper."""
+    block = _block(".paper-body .table-wrapper {", "/* Rouge block wrapper")
+    assert "contain: inline-size paint" in block
+    assert "min-width: 0" in block
+
+
+def test_mobile_code_block_uses_paint_containment():
+    block = _block(".paper-body .code-block {", ".paper-body .table-wrapper")
+    assert "contain: inline-size paint" in block
+
+
 def test_mobile_container_chain_has_full_width():
     block = _block("@media (max-width: 1200px) {\n  html,")
     snippet = block[: block.index("/* Wider container")]

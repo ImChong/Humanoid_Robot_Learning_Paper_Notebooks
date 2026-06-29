@@ -1123,7 +1123,7 @@ body.mermaid-lightbox-open {
   border: 1px solid var(--border);
   background: var(--card-bg);
   -webkit-overflow-scrolling: touch;
-  contain: inline-size;
+  contain: inline-size paint;
 }
 
 .paper-body table {
@@ -1717,13 +1717,17 @@ body.sponsor-dialog-open {
     /* ``minmax(0, auto)`` lets the code column scroll inside the block instead
        of expanding the page width (grid default ``auto`` = max-content). */
     grid-template-columns: 3rem minmax(0, auto);
-    /* inline-size only: ``contain: strict`` collapses block height (~1 line) on
-       mobile and clips Python/bash samples inside DeepMimic-style notes. */
-    contain: inline-size;
+    /* ``contain: paint`` keeps wide tables from inflating the root scroll width on
+       iOS Safari (``inline-size`` alone still lets overflow widen the layout
+       viewport when the user pinch-zooms out). ``strict`` collapses height. */
+    contain: inline-size paint;
   }
 
   .paper-body .table-wrapper {
-    contain: inline-size;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    contain: inline-size paint;
   }
 
   /* Rouge block wrapper only (``div.highlighter-rouge``). Inline ``code.highlighter-rouge``
