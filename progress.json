@@ -41,16 +41,25 @@
     "13_Physics-Based_Animation",
     "14_Human_Motion"
    ],
-   "last_module": "14_Human_Motion",
-   "last_index": 485,
-   "last_title": "GENMO: A Generalist Model for Human Motion (arXiv:2505.01425)",
-   "next_module": "04_Loco-Manipulation_and_WBC"
+   "last_module": "04_Loco-Manipulation_and_WBC",
+   "last_index": 64,
+   "last_title": "PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations (arXiv:2512.13093)",
+   "next_module": "05_Locomotion"
   },
-  "last_summary_index": 485,
-  "last_summary_date": "2026-06-28",
-  "last_summary_title": "GENMO: A Generalist Model for Human Motion",
+  "last_summary_index": 64,
+  "last_summary_date": "2026-06-29",
+  "last_summary_title": "PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations",
   "next_summary_index": null,
   "log": [
+   {
+    "date": "2026-06-29",
+    "index": 64,
+    "title": "PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations",
+    "folder": "papers/04_Loco-Manipulation_and_WBC/PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contrastive",
+    "module": "04_Loco-Manipulation_and_WBC",
+    "arxiv": "2512.13093",
+    "source": "宣称开源 SRL4Humanoid（未见公开仓库链接）· LimX Oli 31-DoF 真机 · 模块轮转（14_Human_Motion → 04_Loco-Manipulation_and_WBC）"
+   },
    {
     "date": "2026-06-28",
     "index": 485,
@@ -1735,14 +1744,14 @@
   },
   {
    "title": "PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations",
-   "arxiv": "PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations",
-   "folder": "papers/04_Loco-Manipulation_and_WBC/PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contr",
-   "note_file": "PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contr.md",
-   "pdf_file": "PvP.pdf",
-   "status": "pending",
+   "arxiv": "2512.13093",
+   "folder": "papers/04_Loco-Manipulation_and_WBC/PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contrastive",
+   "note_file": "PvP__Data-Efficient_Humanoid_Robot_Learning_with_Proprioceptive-Privileged_Contrastive.md",
+   "pdf_file": "",
+   "status": "done",
    "start_date": null,
-   "done_date": null,
-   "route": "Loco-Manipulation",
+   "done_date": "2026-06-29",
+   "route": "Loco-Manipulation and WBC",
    "title_cn": ""
   },
   {
