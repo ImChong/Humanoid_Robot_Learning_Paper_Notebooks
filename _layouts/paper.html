@@ -56,4 +56,5 @@ layout: default
 }
 </script>
 
-<script src="{{ '/assets/js/paper.js' | relative_url }}" defer></script>
+{% assign paper_js = site.static_files | where: "path", "/assets/js/paper.js" | first %}
+<script src="{{ '/assets/js/paper.js' | relative_url }}{% if paper_js %}?v={{ paper_js.modified_time | date: '%s' }}{% endif %}" defer></script>

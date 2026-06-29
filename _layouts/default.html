@@ -31,7 +31,13 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {%- comment -%}
+    Cache-bust local assets with their last-modified time so a corrected
+    stylesheet/script actually reaches returning visitors instead of a stale
+    copy cached by URL. The query only changes when the file changes.
+  {%- endcomment -%}
+  {% assign style_css = site.static_files | where: "path", "/assets/css/style.css" | first %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}{% if style_css %}?v={{ style_css.modified_time | date: '%s' }}{% endif %}">
   <!-- KaTeX (pinned + SRI) -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
@@ -53,8 +59,10 @@
   <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"
           integrity="sha384-rbtjAdnIQE/aQJGEgXrVUlMibdfTSa4PQju4HDhN3sR2PmaKFzhEafuePsl9H/9I"
           crossorigin="anonymous"></script>
-  <script src="{{ '/assets/js/mermaid-config.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/mermaid-zoom.js' | relative_url }}" defer></script>
+  {% assign mermaid_config_js = site.static_files | where: "path", "/assets/js/mermaid-config.js" | first %}
+  <script src="{{ '/assets/js/mermaid-config.js' | relative_url }}{% if mermaid_config_js %}?v={{ mermaid_config_js.modified_time | date: '%s' }}{% endif %}"></script>
+  {% assign mermaid_zoom_js = site.static_files | where: "path", "/assets/js/mermaid-zoom.js" | first %}
+  <script src="{{ '/assets/js/mermaid-zoom.js' | relative_url }}{% if mermaid_zoom_js %}?v={{ mermaid_zoom_js.modified_time | date: '%s' }}{% endif %}" defer></script>
   <script>
     function initMermaid(theme) {
       if (typeof mermaid === 'undefined') return;
