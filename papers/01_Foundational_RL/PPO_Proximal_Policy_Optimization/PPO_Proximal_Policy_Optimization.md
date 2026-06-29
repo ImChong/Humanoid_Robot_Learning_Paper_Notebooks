@@ -38,11 +38,19 @@ PPO 通过一个简单的**裁剪机制**，让强化学习的策略更新既大
 | 缩写 | 全称 | 简单解释 |
 |------|------|----------|
 | **PPO** | Proximal Policy Optimization | 近端策略优化 |
+| **TRPO** | Trust Region Policy Optimization | 信任域策略优化，PPO 的前身，用 KL 约束控制更新步幅 |
 | **RL** | Reinforcement Learning | 强化学习 |
-| **GAE** | Generalized Advantage Estimation | 广义优势估计 |
-| **KL** | Kullback-Leibler Divergence | KL散度，衡量两个分布的差异 |
+| **TD** | Temporal Difference | 时序差分，用 bootstrap 估计价值/优势（如 $\delta_t = r + \gamma V(s') - V(s)$） |
+| **TD(λ)** | Temporal Difference with eligibility traces | TD-λ 回报递推，GAE 的计算基础 |
+| **GAE** | Generalized Advantage Estimation | 广义优势估计，在 TD 误差上叠加 $\lambda$ 平滑得到 $\hat{A}_t$ |
+| **IS** | Importance Sampling | 重要性采样，用旧策略数据通过概率比 $r_t$ 估计新策略表现 |
+| **CPI** | Conservative Policy Iteration | 保守策略迭代，PPO surrogate 目标 $L^{CPI}=r_t(\theta)\hat{A}_t$ 的来源 |
+| **KL** | Kullback-Leibler Divergence | KL 散度，衡量两个分布的差异（TRPO 硬约束 / PPO-Penalty 软惩罚） |
+| **Actor-Critic** | — | 策略网络（Actor）+ 价值网络（Critic）架构 |
+| **MLP** | Multi-Layer Perceptron | 多层感知机，策略/价值网络常用 backbone |
+| **MSE** | Mean Squared Error | 均方误差，Critic 拟合 TD(λ) 回报目标的损失 |
+| **A2C** | Advantage Actor-Critic | 优势 Actor-Critic，同步版 on-policy 基线算法 |
 | **MuJoCo** | Multi-Joint dynamics with Contact | 物理仿真引擎 |
-| **Actor-Critic** | — | 策略网络(actor)+价值网络(critic)架构 |
 
 ---
 
