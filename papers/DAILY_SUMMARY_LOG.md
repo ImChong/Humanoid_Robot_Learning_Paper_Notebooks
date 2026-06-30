@@ -309,6 +309,7 @@
 | — | InterPrior: Scaling Generative Control for Physics-Based Human-Object Interactions | 13_Physics-Based_Animation | ✅ 已完成（2026-06-27） |
 | 485 | GENMO: A Generalist Model for Human Motion | 14_Human_Motion | ✅ 已完成（2026-06-28） |
 | 64 | PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations | 04_Loco-Manipulation_and_WBC | ✅ 已完成（2026-06-29） |
-| ? | （下一篇：05_Locomotion 模块首个未完成论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 05_Locomotion | ⏭️ 下一篇候选 |
+| 197 | Walk the PLANC: Physics-Guided RL for Agile Humanoid Locomotion on Constrained Footholds | 05_Locomotion | ✅ 已完成（2026-06-30） |
+| ? | （下一篇：06_Manipulation 模块首个未完成且无笔记的论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 06_Manipulation | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

@@ -2139,6 +2139,17 @@
         "zh_title": "FastStair：让人形机器人快速跑上楼梯"
       },
       {
+        "title": "Walk the PLANC: Physics-Guided RL for Agile Humanoid Locomotion on Constrained Footholds",
+        "path": "papers/05_Locomotion/Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds/Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds.md",
+        "url": "/papers/05_Locomotion/Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds/Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds.html",
+        "dir": "Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds",
+        "arxiv": "2601.06286",
+        "published_date_zh": "2026年1月9日（arXiv）",
+        "published_date_en": "Jan 9, 2026 (arXiv)",
+        "zhname": "Walk the PLANC：受约束落脚点上的物理引导人形敏捷行走",
+        "zh_title": "Walk the PLANC：受约束落脚点上的物理引导人形敏捷行走"
+      },
+      {
         "title": "Extreme Parkour with Legged Robots",
         "path": "papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.md",
         "url": "/papers/05_Locomotion/Extreme_Parkour_with_Legged_Robots/Extreme_Parkour_with_Legged_Robots.html",
