@@ -40,6 +40,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          # Full history so inject_reading_dates.py can read each note's
+          # last-commit date; a shallow clone collapses every file to one date.
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v6
@@ -48,6 +52,9 @@ jobs:
 
       - name: Prepare pages (add front matter & generate index)
         run: python scripts/prepare_pages.py
+
+      - name: Inject git last-modified dates into 阅读日期 field
+        run: python scripts/inject_reading_dates.py
 
       - name: Install HTML sanitizer (post-build hardening)
         run: pip install -r requirements-site.txt
