@@ -41,16 +41,25 @@
     "13_Physics-Based_Animation",
     "14_Human_Motion"
    ],
-   "last_module": "04_Loco-Manipulation_and_WBC",
-   "last_index": 64,
-   "last_title": "PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations (arXiv:2512.13093)",
-   "next_module": "05_Locomotion"
+   "last_module": "05_Locomotion",
+   "last_index": 197,
+   "last_title": "Walk the PLANC: Physics-Guided RL for Agile Humanoid Locomotion on Constrained Footholds (arXiv:2601.06286)",
+   "next_module": "06_Manipulation"
   },
-  "last_summary_index": 64,
-  "last_summary_date": "2026-06-29",
-  "last_summary_title": "PvP: Data-Efficient Humanoid Robot Learning with Proprioceptive-Privileged Contrastive Representations",
+  "last_summary_index": 197,
+  "last_summary_date": "2026-06-30",
+  "last_summary_title": "Walk the PLANC: Physics-Guided RL for Agile Humanoid Locomotion on Constrained Footholds",
   "next_summary_index": null,
   "log": [
+   {
+    "date": "2026-06-30",
+    "index": 197,
+    "title": "Walk the PLANC: Physics-Guided RL for Agile Humanoid Locomotion on Constrained Footholds",
+    "folder": "papers/05_Locomotion/Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds",
+    "module": "05_Locomotion",
+    "arxiv": "2601.06286",
+    "source": "匿名仓库 anonymous.4open.science/r/robot_rl-E4FF（待正式开源）· 项目页 caltech-amber.github.io/planc · Unitree G1 21-DoF 真机 · 模块轮转（04_Loco-Manipulation_and_WBC → 05_Locomotion）"
+   },
    {
     "date": "2026-06-29",
     "index": 64,
