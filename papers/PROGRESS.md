@@ -389,7 +389,7 @@
 | 292  | [TOP: Time Optimization Policy for Stable and Accurate Standing Manipulation with Humanoid Robots](https://arxiv.org/abs/2508.00355)                      | 2025.08 |     | ⏳ 待读 |
 | 293  | [H-RDT: Human Manipulation Enhanced Bimanual Robotic Manipulation](https://arxiv.org/abs/2507.23523)                                                      | 2025.07 |     | ⏳ 待读 |
 | 294  | [Being-H0: Vision-Language-Action Pretraining from Large-Scale Human Videos](https://arxiv.org/abs/2507.15597)                                            | 2025.07 |     | ⏳ 待读 |
-| 295  | [EgoVLA: Learning Vision-Language-Action Models from Egocentric Human Videos](https://arxiv.org/abs/2507.12440)                                           | 2025.07 |     | ⏳ 待读 |
+| 295  | [EgoVLA: Learning Vision-Language-Action Models from Egocentric Human Videos](https://arxiv.org/abs/2507.12440) ✅ [笔记](06_Manipulation/EgoVLA__Learning_Vision-Language-Action_Models_from_Egocentric_Human_Videos/EgoVLA__Learning_Vision-Language-Action_Models_from_Egocentric_Human_Videos.md) | 2025.07 | 2026-07-01 | ✅ 已总结 |
 | 296  | [Robot Drummer: Learning Rhythmic Skills for Humanoid Drumming](https://arxiv.org/abs/2507.11498)                                                         | 2025.07 |     | ⏳ 待读 |
 | 297  | [Hierarchical Vision-Language Planning for Multi-Step Humanoid Manipulation](https://arxiv.org/abs/2506.22827)                                            | 2025.06 |     | ⏳ 待读 |
 | 298  | [Vision in Action: Learning Active Perception from Human Demonstrations](https://arxiv.org/abs/2506.15666)                                                | 2025.06 |     | ⏳ 待读 |

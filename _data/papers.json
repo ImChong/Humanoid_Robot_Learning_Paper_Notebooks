@@ -1565,6 +1565,18 @@
         "zh_title": "Being-H0：从大规模人类视频做视觉-语言-动作预训练"
       },
       {
+        "title": "EgoVLA: Learning Vision-Language-Action Models from Egocentric Human Videos",
+        "path": "papers/06_Manipulation/EgoVLA__Learning_Vision-Language-Action_Models_from_Egocentric_Human_Videos/EgoVLA__Learning_Vision-Language-Action_Models_from_Egocentric_Human_Videos.md",
+        "url": "/papers/06_Manipulation/EgoVLA__Learning_Vision-Language-Action_Models_from_Egocentric_Human_Videos/EgoVLA__Learning_Vision-Language-Action_Models_from_Egocentric_Human_Videos.html",
+        "dir": "EgoVLA__Learning_Vision-Language-Action_Models_from_Egocentric_Human_Videos",
+        "arxiv": "2507.12440",
+        "has_open_source": true,
+        "published_date_zh": "2025年7月16日（arXiv v1，v3 2025年7月18日）",
+        "published_date_en": "Jul 16, 2025 (arXiv v1, v3 Jul 18, 2025)",
+        "zhname": "EgoVLA：从第一视角人类视频学习视觉-语言-动作模型",
+        "zh_title": "EgoVLA：从第一视角人类视频学习视觉-语言-动作模型"
+      },
+      {
         "title": "Robot Drummer: Learning Rhythmic Skills for Humanoid Drumming",
         "path": "papers/06_Manipulation/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming.md",
         "url": "/papers/06_Manipulation/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming/Robot_Drummer__Learning_Rhythmic_Skills_for_Humanoid_Drumming.html",
