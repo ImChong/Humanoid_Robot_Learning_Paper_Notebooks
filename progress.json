@@ -41,10 +41,10 @@
     "13_Physics-Based_Animation",
     "14_Human_Motion"
    ],
-   "last_module": "05_Locomotion",
-   "last_index": 197,
-   "last_title": "Walk the PLANC: Physics-Guided RL for Agile Humanoid Locomotion on Constrained Footholds (arXiv:2601.06286)",
-   "next_module": "06_Manipulation"
+   "last_module": "06_Manipulation",
+   "last_index": 295,
+   "last_title": "EgoVLA: Learning Vision-Language-Action Models from Egocentric Human Videos (arXiv:2507.12440)",
+   "next_module": "07_Teleoperation"
   },
   "last_summary_index": 197,
   "last_summary_date": "2026-06-30",
@@ -5135,6 +5135,36 @@
    "note_file": "Go_to_Zero__Towards_Zero-shot_Motion_Generation_with_Million-scale_Data.md",
    "status": "done",
    "arxiv": "2507.07095",
+   "pdf_file": "",
+   "route": "Human Motion",
+   "title_cn": ""
+  },
+  {
+   "title": "Walk the PLANC: Physics-Guided RL for Agile Humanoid Locomotion on Constrained Footholds",
+   "folder": "papers/05_Locomotion/Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds",
+   "note_file": "Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds.md",
+   "status": "done",
+   "arxiv": "2601.06286",
+   "pdf_file": "",
+   "route": "Locomotion",
+   "title_cn": ""
+  },
+  {
+   "title": "EgoVLA: Learning Vision-Language-Action Models from Egocentric Human Videos",
+   "folder": "papers/06_Manipulation/EgoVLA__Learning_Vision-Language-Action_Models_from_Egocentric_Human_Videos",
+   "note_file": "EgoVLA__Learning_Vision-Language-Action_Models_from_Egocentric_Human_Videos.md",
+   "status": "done",
+   "arxiv": "2507.12440",
+   "pdf_file": "",
+   "route": "Manipulation",
+   "title_cn": ""
+  },
+  {
+   "title": "GENMO: A Generalist Model for Human Motion",
+   "folder": "papers/14_Human_Motion/GENMO__A_Generalist_Model_for_Human_Motion",
+   "note_file": "GENMO__A_Generalist_Model_for_Human_Motion.md",
+   "status": "done",
+   "arxiv": "2505.01425",
    "pdf_file": "",
    "route": "Human Motion",
    "title_cn": ""
