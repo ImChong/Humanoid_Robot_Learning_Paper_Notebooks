@@ -443,7 +443,7 @@
 | 337  | [Whole-Body Bilateral Teleoperation with Multi-Stage Object Parameter Estimation for Wheeled Humanoid Locomanipulation](https://arxiv.org/abs/2508.09846)      | 2025.08 |     | ⏳ 待读 |
 | 338  | [CHILD: a Whole-Body Humanoid Teleoperation System](https://arxiv.org/abs/2508.00162)                                                                          | 2025.08 |     | ⏳ 待读 |
 | 339  | CHILD: Controller for Humanoid Imitation and Live Demonstration a Whole-Body Humanoid Teleoperation System                                                     | 2025.08 |     | ⏳ 待读 |
-| 340  | [CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks](https://arxiv.org/abs/2506.08931)                                                | 2025.06 |     | ⏳ 待读 |
+| 340  | [CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks](https://arxiv.org/abs/2506.08931) ✅ [笔记](07_Teleoperation/CLONE__Closed-Loop_Whole-Body_Humanoid_Teleoperation_for_Long-Horizon_Tasks/CLONE__Closed-Loop_Whole-Body_Humanoid_Teleoperation_for_Long-Horizon_Tasks.md) | 2026-07-02 |     | ✅ 已总结 |
 | 341  | [Heavy lifting tasks via haptic teleoperation of a wheeled humanoid](https://arxiv.org/abs/2505.19530)                                                         | 2025.05 |     | ⏳ 待读 |
 | 342  | [TeleOpBench: A Simulator-Centric Benchmark for Dual-Arm Dexterous Teleoperation](https://arxiv.org/abs/2505.12748)                                            | 2025.05 |     | ⏳ 待读 |
 | 343  | [Human-Robot Collaboration for the Remote Control of Mobile Humanoid Robots](https://arxiv.org/abs/2505.05773)                                                 | 2025.05 |     | ⏳ 待读 |
