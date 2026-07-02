@@ -1919,6 +1919,18 @@
         "zh_title": "CHILD：全身人形遥操作系统"
       },
       {
+        "title": "CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks",
+        "path": "papers/07_Teleoperation/CLONE__Closed-Loop_Whole-Body_Humanoid_Teleoperation_for_Long-Horizon_Tasks/CLONE__Closed-Loop_Whole-Body_Humanoid_Teleoperation_for_Long-Horizon_Tasks.md",
+        "url": "/papers/07_Teleoperation/CLONE__Closed-Loop_Whole-Body_Humanoid_Teleoperation_for_Long-Horizon_Tasks/CLONE__Closed-Loop_Whole-Body_Humanoid_Teleoperation_for_Long-Horizon_Tasks.html",
+        "dir": "CLONE__Closed-Loop_Whole-Body_Humanoid_Teleoperation_for_Long-Horizon_Tasks",
+        "arxiv": "2506.08931",
+        "has_open_source": true,
+        "published_date_zh": "2025年6月10日（arXiv）",
+        "published_date_en": "Jun 10, 2025 (arXiv)",
+        "zhname": "CLONE：面向长时序任务的闭环全身人形遥操作",
+        "zh_title": "CLONE：面向长时序任务的闭环全身人形遥操作"
+      },
+      {
         "title": "Heavy lifting tasks via haptic teleoperation of a wheeled humanoid",
         "path": "papers/07_Teleoperation/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid.md",
         "url": "/papers/07_Teleoperation/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid/Heavy_Lifting_Tasks_via_Haptic_Teleoperation_of_a_Wheeled_Humanoid.html",
