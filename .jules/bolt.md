@@ -111,3 +111,7 @@
 ## 2026-11-20 - Fast Section Length Extraction via str.find vs splitlines
 **Learning:** In string-processing logic where a specific document section's length needs to be calculated based on regex headings (like in `check_roadmap_quality.py`), calling `splitlines()` on the entire document and iterating through lines to match a regex is highly inefficient. It forces an O(N) memory allocation and executes a regex match for every line.
 **Action:** When extracting or measuring a document section between two headers, replace `splitlines()` with `re.search()` to find the start, then use native `str.find("\n## ")` to find the end. Extract the section via slicing (`content[start:end]`) and calculate metrics on that slice. This avoids full-document string array allocations and drops regex invocations to one.
+
+## 2024-05-19 - Throttle High-Frequency Pointer Events
+**Learning:** Raw event listeners for `pointermove` and `wheel` that trigger DOM mutations (`style.transform`) can fire much faster than the display refresh rate (e.g., 1000Hz gaming mice vs 60Hz display). This forces the browser to calculate redundant layout and style changes, causing severe main thread blocking and micro-stutters during panning or zooming in lightboxes.
+**Action:** Always throttle continuous, high-frequency DOM style updates using a `requestAnimationFrame` flag to sync visual updates with the browser's native rendering cadence. For initial positioning where you *want* synchronous updates to prevent 1-frame flashes, provide an `immediate` bypass flag.

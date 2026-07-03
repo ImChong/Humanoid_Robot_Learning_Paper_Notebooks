@@ -22,6 +22,7 @@
     x: 0,
     y: 0,
   };
+  var transformTicking = false;
 
   function clampScale(scale) {
     return Math.min(MAX_SCALE, Math.max(MIN_SCALE, scale));
@@ -91,16 +92,34 @@
     return lightbox;
   }
 
-  function applyTransform() {
+  function applyTransform(immediate) {
     if (!stage) return;
-    stage.style.transform =
-      'translate(calc(-50% + ' +
-      state.x +
-      'px), calc(-50% + ' +
-      state.y +
-      'px)) scale(' +
-      state.scale +
-      ')';
+    if (immediate) {
+      stage.style.transform =
+        'translate(calc(-50% + ' +
+        state.x +
+        'px), calc(-50% + ' +
+        state.y +
+        'px)) scale(' +
+        state.scale +
+        ')';
+      return;
+    }
+    if (!transformTicking) {
+      window.requestAnimationFrame(function () {
+        if (!stage) return;
+        stage.style.transform =
+          'translate(calc(-50% + ' +
+          state.x +
+          'px), calc(-50% + ' +
+          state.y +
+          'px)) scale(' +
+          state.scale +
+          ')';
+        transformTicking = false;
+      });
+      transformTicking = true;
+    }
   }
 
   function measureSvg(svg) {
@@ -141,7 +160,7 @@
     state.scale = clampScale(fit);
     state.x = 0;
     state.y = 0;
-    applyTransform();
+    applyTransform(true);
   }
 
   /** Hide stage until fitToViewport runs — avoids scale(1) flash. */
