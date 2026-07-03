@@ -2217,6 +2217,17 @@
     "display_name": "Navigation",
     "papers": [
       {
+        "title": "GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains",
+        "path": "papers/08_Navigation/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid.md",
+        "url": "/papers/08_Navigation/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid.html",
+        "dir": "GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid",
+        "arxiv": "2606.10449",
+        "published_date_zh": "2026年6月9日（arXiv v1，v2 2026年6月13日）",
+        "published_date_en": "Jun 9, 2026 (arXiv v1, v2 Jun 13, 2026)",
+        "zhname": "GuideWalk：面向多样地形的人形机器人统一自主导航与运动策略",
+        "zh_title": "GuideWalk：面向多样地形的人形机器人统一自主导航与运动策略"
+      },
+      {
         "title": "EgoNav: Learning Humanoid Navigation from Human Data",
         "path": "papers/08_Navigation/EgoNav__Learning_Humanoid_Navigation_from_Human_Data/EgoNav__Learning_Humanoid_Navigation_from_Human_Data.md",
         "url": "/papers/08_Navigation/EgoNav__Learning_Humanoid_Navigation_from_Human_Data/EgoNav__Learning_Humanoid_Navigation_from_Human_Data.html",

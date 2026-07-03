@@ -458,7 +458,7 @@
 | 537  | [A Mobile Robot Hand-Arm Teleoperation System by Vision and IMU](https://arxiv.org/pdf/2003.05212) 🌟                                                          | IROS 2020 |     | ⏳ 待读 |
 
 
-### Navigation（18篇）
+### Navigation（19篇）
 
 
 | #   | 论文                                                                                                                                                         | 日期      | 🌟  | 状态   |
@@ -482,6 +482,7 @@
 | 366  | [Learning Social Navigation from Positive and Negative Demonstrations and Rule-Based Specifications](https://arxiv.org/abs/2508.06779) | 2025.08 |  | ⏳ 待读 |
 | 367  | [NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance](https://arxiv.org/abs/2505.08712) | 2025.05 |  | ⏳ 待读 |
 | 368  | [LOVON: Legged Open-Vocabulary Object Navigator](https://arxiv.org/abs/2507.06747) ✅ [笔记](08_Navigation/LOVON__Legged_Open-Vocabulary_Object_Navigator/LOVON__Legged_Open-Vocabulary_Object_Navigator.md) | 2025-07-09 |  | ✅ 已总结 |
+| 369  | [GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains](https://arxiv.org/abs/2606.10449) ✅ [笔记](08_Navigation/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid.md) | 2026-06-09 |  | ✅ 已总结 |
 
 
 ### State Estimation（13篇）
