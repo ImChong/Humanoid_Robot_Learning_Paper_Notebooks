@@ -1,0 +1,384 @@
+---
+layout: default
+title: "Update Log"
+---
+<div class="updates-page">
+  <div class="updates-header">
+    <h1 data-en="📅 Update Log" data-zh="📅 更新记录">📅 Update Log</h1>
+    <p class="updates-subtitle"
+       data-en="Daily timeline of paper notes added and maintained, built from the repository's commit history. Click a heatmap square to filter that day."
+       data-zh="论文笔记的每日新增与维护时间线，数据来自仓库提交历史。点击热力图方格可筛选当日更新。">Daily timeline of paper notes added and maintained, built from the repository's commit history. Click a heatmap square to filter that day.</p>
+  </div>
+
+  <div id="updates-app" class="updates-app">
+    <p class="empty-hint"
+       data-en="No update data available yet."
+       data-zh="暂无更新数据。">No update data available yet.</p>
+  </div>
+  <noscript>
+    <p class="empty-hint"
+       data-en="Enable JavaScript to view the update heatmap and timeline."
+       data-zh="启用 JavaScript 后可查看更新热力图与时间线。">Enable JavaScript to view the update heatmap and timeline.</p>
+  </noscript>
+</div>
+
+<script type="application/json" id="updates-data">{{ site.data.updates | jsonify | replace: '<', '\u003c' | replace: '>', '\u003e' | replace: '&', '\u0026' }}</script>
+
+<script>
+(function() {
+  var dataEl = document.getElementById('updates-data');
+  var mount = document.getElementById('updates-app');
+  if (!dataEl || !mount) return;
+
+  var data = null;
+  try {
+    data = JSON.parse(dataEl.textContent);
+  } catch (e) {
+    data = null;
+  }
+  if (!data || !Array.isArray(data.days) || !data.days.length) return;
+
+  var BASE = {{ site.baseurl | jsonify }} || '';
+  var DAY_MS = 24 * 60 * 60 * 1000;
+  // GitHub-style fixed one-year window: 53 week columns, newest week rightmost.
+  var WEEKS = 53;
+  var FOLD_SHOW = 12;
+  var FOLD_LIMIT = 14;
+
+  var notes = Array.isArray(data.notes) ? data.notes : [];
+  // Newest day first (the generator already emits this order; keep it stable).
+  var days = data.days.slice().sort(function(a, b) {
+    return a.d < b.d ? 1 : a.d > b.d ? -1 : 0;
+  });
+
+  var I18N = {
+    en: {
+      months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      weekdays: ['Mon', '', 'Wed', '', 'Fri', '', ''],
+      less: 'Less',
+      more: 'More',
+      legendHint: 'Click a square to filter that day',
+      added: 'added',
+      maintained: 'maintained',
+      addedBadge: 'new',
+      maintainedBadge: 'maint',
+      yearStat: function(total) { return '<strong>' + total + '</strong> note update' + (total === 1 ? '' : 's') + ' in the last year'; },
+      notesStat: function(n) { return '<strong>' + n + '</strong> notes'; },
+      daysStat: function(n) { return '<strong>' + n + '</strong> active days'; },
+      noUpdates: 'no updates',
+      clearFilter: 'Show all days',
+      filterLabel: function(dateText) { return 'Showing ' + dateText + ' only'; },
+      showMore: function(n) { return 'Show ' + n + ' more ▾'; },
+      timelineTitle: 'Timeline',
+      heatmapAria: 'Note update activity heatmap; one square per day',
+      cellAria: function(tip) { return tip + '. Click to filter the timeline to this day.'; },
+      formatDate: function(y, m, d) { return I18N.en.months[m - 1] + ' ' + d + ', ' + y; },
+      formatMonth: function(m) { return I18N.en.months[m - 1]; }
+    },
+    zh: {
+      months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+      weekdays: ['一', '', '三', '', '五', '', ''],
+      less: '少',
+      more: '多',
+      legendHint: '点击方格筛选当日更新',
+      added: '新增',
+      maintained: '维护',
+      addedBadge: '新增',
+      maintainedBadge: '维护',
+      yearStat: function(total) { return '过去一年 <strong>' + total + '</strong> 次笔记更新'; },
+      notesStat: function(n) { return '共 <strong>' + n + '</strong> 篇笔记'; },
+      daysStat: function(n) { return '<strong>' + n + '</strong> 个活跃日'; },
+      noUpdates: '无更新',
+      clearFilter: '显示全部日期',
+      filterLabel: function(dateText) { return '仅显示 ' + dateText; },
+      showMore: function(n) { return '展开其余 ' + n + ' 项 ▾'; },
+      timelineTitle: '时间线',
+      heatmapAria: '笔记更新活跃度热力图，每格代表一天',
+      cellAria: function(tip) { return tip + '，点击筛选当日时间线'; },
+      formatDate: function(y, m, d) { return y + '年' + m + '月' + d + '日'; },
+      formatMonth: function(m) { return I18N.zh.months[m - 1]; }
+    }
+  };
+
+  function getLang() {
+    return document.documentElement.getAttribute('data-lang-mode') === 'zh' ? 'zh' : 'en';
+  }
+
+  function escapeHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function parseDateMs(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso || ''));
+    if (!m) return null;
+    var ms = Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+    return isNaN(ms) ? null : ms;
+  }
+
+  function isoDate(ms) {
+    var d = new Date(ms);
+    var mm = String(d.getUTCMonth() + 1);
+    var dd = String(d.getUTCDate());
+    if (mm.length < 2) mm = '0' + mm;
+    if (dd.length < 2) dd = '0' + dd;
+    return d.getUTCFullYear() + '-' + mm + '-' + dd;
+  }
+
+  function formatDate(iso, lang) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+    if (!m) return iso;
+    return I18N[lang].formatDate(Number(m[1]), Number(m[2]), Number(m[3]));
+  }
+
+  // Per-day lookups + global stats.
+  var dayByDate = {};
+  var counts = [];
+  var maxMs = -Infinity;
+  days.forEach(function(day) {
+    var ms = parseDateMs(day.d);
+    if (ms === null) return;
+    dayByDate[day.d] = day;
+    counts.push(dayCount(day));
+    if (ms > maxMs) maxMs = ms;
+  });
+  if (!counts.length) return;
+
+  function dayCount(day) {
+    return (day.a ? day.a.length : 0) + (day.m ? day.m.length : 0);
+  }
+
+  // Quartile thresholds over non-zero day counts keep the level scale robust
+  // against outlier bulk-maintenance days (same approach as GitHub's graph).
+  var sortedCounts = counts.slice().sort(function(a, b) { return a - b; });
+  function pick(ratio) {
+    var idx = Math.min(sortedCounts.length - 1, Math.floor(ratio * sortedCounts.length));
+    return sortedCounts[idx];
+  }
+  var thresholds = [pick(0.25), pick(0.5), pick(0.75)];
+
+  function levelOf(count) {
+    if (!count) return 0;
+    if (count <= thresholds[0]) return 1;
+    if (count <= thresholds[1]) return 2;
+    if (count <= thresholds[2]) return 3;
+    return 4;
+  }
+
+  // Window ends at the later of today (viewer's local date) and the newest
+  // data day, so freshly generated data is always inside the grid.
+  var now = new Date();
+  var todayMs = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  var endMs = Math.max(todayMs, maxMs);
+  // getUTCDay(): 0 = Sunday → Monday-first row index is (day + 6) % 7.
+  var endWeekStartMs = endMs - ((new Date(endMs).getUTCDay() + 6) % 7) * DAY_MS;
+  var startMs = endWeekStartMs - (WEEKS - 1) * 7 * DAY_MS;
+
+  var yearTotal = 0;
+  days.forEach(function(day) {
+    var ms = parseDateMs(day.d);
+    if (ms !== null && ms >= startMs && ms <= endMs) yearTotal += dayCount(day);
+  });
+
+  function noteTitle(note, lang) {
+    if (!note) return '';
+    return lang === 'zh' ? (note.z || note.t) : note.t;
+  }
+
+  function noteCat(note, lang) {
+    if (!note) return '';
+    return lang === 'zh' ? (note.cz || note.c || '') : (note.c || '');
+  }
+
+  function cellTip(iso, day, lang) {
+    var t = I18N[lang];
+    if (!day) return iso + ' · ' + t.noUpdates;
+    var parts = [];
+    if (day.a && day.a.length) parts.push(day.a.length + ' ' + t.added);
+    if (day.m && day.m.length) parts.push(day.m.length + ' ' + t.maintained);
+    return iso + ' · ' + parts.join(' · ');
+  }
+
+  function statsHtml(lang) {
+    var t = I18N[lang];
+    return '<p class="updates-stats">' +
+      t.yearStat(yearTotal) + '<span class="updates-stats-sep">·</span>' +
+      t.notesStat(notes.length) + '<span class="updates-stats-sep">·</span>' +
+      t.daysStat(days.length) +
+      '</p>';
+  }
+
+  function heatmapHtml(lang, activeDate) {
+    var t = I18N[lang];
+    var cellsHtml = '';
+    var monthsHtml = '';
+    var prevMonth = -1;
+    var lastLabelWeek = -2;
+    var week = 0;
+
+    for (var weekMs = startMs; weekMs <= endWeekStartMs; weekMs += 7 * DAY_MS, week++) {
+      var month = new Date(weekMs).getUTCMonth();
+      var monthLabel = '';
+      if (month !== prevMonth) {
+        // Skip a label that would land within 2 columns of the previous one.
+        if (week - lastLabelWeek >= 2) {
+          monthLabel = t.formatMonth(month + 1);
+          lastLabelWeek = week;
+        }
+        prevMonth = month;
+      }
+      monthsHtml += '<span>' + monthLabel + '</span>';
+
+      for (var row = 0; row < 7; row++) {
+        var dayMs = weekMs + row * DAY_MS;
+        if (dayMs > endMs) {
+          cellsHtml += '<span class="updates-heatmap-cell is-pad" aria-hidden="true"></span>';
+          continue;
+        }
+        var iso = isoDate(dayMs);
+        var day = dayByDate[iso];
+        if (!day) {
+          cellsHtml += '<span class="updates-heatmap-cell" data-level="0" title="' +
+            escapeHtml(cellTip(iso, null, lang)) + '"></span>';
+          continue;
+        }
+        var tip = cellTip(iso, day, lang);
+        var isActive = activeDate === iso;
+        cellsHtml += '<button type="button" class="updates-heatmap-cell' + (isActive ? ' is-active' : '') +
+          '" data-level="' + levelOf(dayCount(day)) +
+          '" data-date="' + iso +
+          '" title="' + escapeHtml(tip) +
+          '" aria-pressed="' + (isActive ? 'true' : 'false') +
+          '" aria-label="' + escapeHtml(t.cellAria(tip)) + '"></button>';
+      }
+    }
+
+    var weekdaysHtml = '';
+    for (var w = 0; w < 7; w++) {
+      weekdaysHtml += '<span>' + t.weekdays[w] + '</span>';
+    }
+    var legendCells = '';
+    for (var lv = 0; lv <= 4; lv++) {
+      legendCells += '<span class="updates-heatmap-cell" data-level="' + lv + '"></span>';
+    }
+
+    return '<div class="updates-heatmap">' +
+      '<div class="updates-heatmap-scroll">' +
+      '<div class="updates-heatmap-inner">' +
+      '<div class="updates-heatmap-months" aria-hidden="true">' + monthsHtml + '</div>' +
+      '<div class="updates-heatmap-body">' +
+      '<div class="updates-heatmap-weekdays" aria-hidden="true">' + weekdaysHtml + '</div>' +
+      '<div class="updates-heatmap-grid" role="group" aria-label="' + escapeHtml(t.heatmapAria) + '">' +
+      cellsHtml +
+      '</div></div></div></div>' +
+      '<div class="updates-heatmap-legend">' +
+      '<span class="updates-heatmap-legend-hint">' + escapeHtml(t.legendHint) + '</span>' +
+      '<span>' + escapeHtml(t.less) + '</span>' + legendCells + '<span>' + escapeHtml(t.more) + '</span>' +
+      '</div></div>';
+  }
+
+  function itemHtml(idx, isAdded, lang, folded) {
+    var t = I18N[lang];
+    var note = notes[idx];
+    var title = noteTitle(note, lang);
+    var cat = noteCat(note, lang);
+    var badgeClass = isAdded ? 'updates-badge-added' : 'updates-badge-maint';
+    var badgeText = isAdded ? t.addedBadge : t.maintainedBadge;
+    var href = note && note.u ? BASE + note.u : '';
+    var titleHtml = href
+      ? '<a class="updates-item-link" href="' + escapeHtml(href) + '">' + escapeHtml(title) + '</a>'
+      : '<span class="updates-item-link">' + escapeHtml(title) + '</span>';
+    return '<li class="updates-item' + (folded ? ' updates-item-folded' : '') + '">' +
+      '<span class="updates-badge ' + badgeClass + '">' + escapeHtml(badgeText) + '</span>' +
+      titleHtml +
+      (cat ? '<span class="updates-item-cat">' + escapeHtml(cat) + '</span>' : '') +
+      '</li>';
+  }
+
+  function dayHtml(day, lang) {
+    var t = I18N[lang];
+    var added = day.a || [];
+    var maintained = day.m || [];
+    var metaParts = [];
+    if (added.length) metaParts.push(added.length + ' ' + t.added);
+    if (maintained.length) metaParts.push(maintained.length + ' ' + t.maintained);
+
+    var rows = [];
+    var i;
+    for (i = 0; i < added.length; i++) rows.push({ idx: added[i], isAdded: true });
+    for (i = 0; i < maintained.length; i++) rows.push({ idx: maintained[i], isAdded: false });
+
+    var fold = rows.length > FOLD_LIMIT;
+    var itemsHtml = '';
+    for (i = 0; i < rows.length; i++) {
+      itemsHtml += itemHtml(rows[i].idx, rows[i].isAdded, lang, fold && i >= FOLD_SHOW);
+    }
+
+    return '<section class="updates-day' + (fold ? ' is-folded' : '') + '">' +
+      '<h2 class="updates-day-date"><span class="updates-day-dot" aria-hidden="true"></span>' +
+      escapeHtml(formatDate(day.d, lang)) +
+      '<span class="updates-day-meta">' + escapeHtml(metaParts.join(' · ')) + '</span></h2>' +
+      '<ul class="updates-day-list">' + itemsHtml + '</ul>' +
+      (fold ? '<button type="button" class="updates-day-more">' + escapeHtml(t.showMore(rows.length - FOLD_SHOW)) + '</button>' : '') +
+      '</section>';
+  }
+
+  function timelineHtml(lang, activeDate) {
+    var t = I18N[lang];
+    var shown = activeDate && dayByDate[activeDate] ? [dayByDate[activeDate]] : days;
+    var filterBar = '';
+    if (activeDate && dayByDate[activeDate]) {
+      filterBar = '<p class="updates-filter-bar">' +
+        escapeHtml(t.filterLabel(formatDate(activeDate, lang))) +
+        ' <button type="button" class="updates-clear-filter">' + escapeHtml(t.clearFilter) + '</button></p>';
+    }
+    var daysHtml = '';
+    for (var i = 0; i < shown.length; i++) {
+      daysHtml += dayHtml(shown[i], lang);
+    }
+    return '<div class="updates-timeline">' +
+      '<h2 class="updates-timeline-title">📜 ' + escapeHtml(t.timelineTitle) + '</h2>' +
+      filterBar +
+      '<div class="updates-timeline-days">' + daysHtml + '</div>' +
+      '</div>';
+  }
+
+  var activeDate = '';
+
+  function render() {
+    var lang = getLang();
+    mount.innerHTML = statsHtml(lang) + heatmapHtml(lang, activeDate) + timelineHtml(lang, activeDate);
+    var scrollWrap = mount.querySelector('.updates-heatmap-scroll');
+    if (scrollWrap) scrollWrap.scrollLeft = scrollWrap.scrollWidth; // rest on newest week
+  }
+
+  mount.addEventListener('click', function(ev) {
+    var cell = ev.target.closest('button.updates-heatmap-cell');
+    if (cell) {
+      var date = cell.getAttribute('data-date') || '';
+      if (!date) return;
+      activeDate = date === activeDate ? '' : date;
+      render();
+      return;
+    }
+    if (ev.target.closest('.updates-clear-filter')) {
+      activeDate = '';
+      render();
+      return;
+    }
+    var moreBtn = ev.target.closest('.updates-day-more');
+    if (moreBtn) {
+      var section = moreBtn.closest('.updates-day');
+      if (section) section.classList.remove('is-folded');
+      moreBtn.parentNode.removeChild(moreBtn);
+    }
+  });
+
+  document.addEventListener('cl-lang-changed', render);
+  render();
+})();
+</script>

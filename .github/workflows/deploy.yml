@@ -56,6 +56,9 @@ jobs:
       - name: Inject git last-modified dates into 阅读日期 field
         run: python scripts/inject_reading_dates.py
 
+      - name: Generate update-log data from git history
+        run: python scripts/generate_updates_data.py
+
       - name: Install HTML sanitizer (post-build hardening)
         run: pip install -r requirements-site.txt
 

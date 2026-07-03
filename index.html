@@ -4,7 +4,6 @@ title: "Home"
 ---
 <div class="index-header">
   <h1 data-en="📚 Humanoid Robot Learning Paper Notebooks" data-zh="📚 人形机器人学习论文笔记">📚 Humanoid Robot Learning Paper Notebooks</h1>
-  <p data-en="Paper reading notes on humanoid robot reinforcement learning" data-zh="人形机器人强化学习论文阅读笔记">Paper reading notes on humanoid robot reinforcement learning</p>
   {% assign paper_count = 0 %}
   {% for cat in site.data.papers %}
     {% assign cat_papers_size = cat[1].papers | size %}
@@ -16,8 +15,17 @@ title: "Home"
       {% endfor %}
     {% endif %}
   {% endfor %}
-  <p class="subtitle" id="paper-count-label" data-en="Total: {{ paper_count | escape }} papers" data-zh="共 {{ paper_count | escape }} 篇笔记">Total: {{ paper_count | escape }} papers</p>
-  <p class="index-legend" data-en="⭐️ open-source code link in note" data-zh="⭐️ 笔记含开源源码链接">⭐️ open-source code link in note</p>
+  <p class="index-meta-chips">
+    <span class="index-chip" id="paper-count-label">
+      <span aria-hidden="true">📄</span>
+      <span data-en="{{ paper_count | escape }} papers" data-zh="共 {{ paper_count | escape }} 篇笔记">{{ paper_count | escape }} papers</span>
+    </span>
+    <a href="{{ '/updates.html' | relative_url }}" class="index-chip index-chip-link">
+      <span aria-hidden="true">📅</span>
+      <span data-en="Update Log" data-zh="更新记录">Update Log</span>
+      <span class="index-chip-arrow" aria-hidden="true">→</span>
+    </a>
+  </p>
 </div>
 
 <div class="index-layout">
@@ -61,6 +69,7 @@ title: "Home"
 
   <div class="index-main" id="index-main">
 
+    <p class="index-legend" data-en="⭐️ open-source code link in note" data-zh="⭐️ 笔记含开源源码链接">⭐️ open-source code link in note</p>
     <div class="search-container">
       <input type="text" id="paper-search" placeholder="Search by title or arXiv ID..." data-en-placeholder="Search by title or arXiv ID..." data-zh-placeholder="通过论文标题或 arXiv 编号搜索..." aria-label="Search papers" data-en-aria-label="Search papers" data-zh-aria-label="搜索论文">
     </div>
