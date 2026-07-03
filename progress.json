@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 340,
-      "last_title": "CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks (arXiv:2506.08931)",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": "—",
+      "last_title": "GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains (arXiv:2606.10449)",
+      "next_module": "09_State_Estimation"
     },
-    "last_summary_index": 340,
-    "last_summary_date": "2026-07-02",
-    "last_summary_title": "CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks",
+    "last_summary_index": "—",
+    "last_summary_date": "2026-07-03",
+    "last_summary_title": "GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-03",
+        "index": "—",
+        "title": "GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains",
+        "folder": "papers/08_Navigation/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid",
+        "module": "08_Navigation",
+        "arxiv": "2606.10449",
+        "source": "未见公开代码 · 项目页 guide-walk.github.io/GuideWalk · HIT + 乐聚机器人 Leju · Kuavo 28-DoF · 模块轮转（07_Teleoperation → 08_Navigation）"
+      },
       {
         "date": "2026-06-30",
         "index": 197,
@@ -5180,6 +5189,16 @@
       "pdf_file": "",
       "route": "Human Motion",
       "title_cn": ""
+    },
+    {
+      "title": "GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains",
+      "folder": "papers/08_Navigation/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid",
+      "note_file": "GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid.md",
+      "status": "done",
+      "arxiv": "2606.10449",
+      "pdf_file": "",
+      "route": "导航任务",
+      "title_cn": "把可通过性感知的导航规划与地形自适应运动控制用复合教师蒸馏成统一策略，再经 RL+行为克隆微调，在楼梯/斜坡/窄梁上既避障又稳步"
     }
   ]
 }
