@@ -18,6 +18,13 @@ title: "Home"
   {% endfor %}
   <p class="subtitle" id="paper-count-label" data-en="Total: {{ paper_count | escape }} papers" data-zh="共 {{ paper_count | escape }} 篇笔记">Total: {{ paper_count | escape }} papers</p>
   <p class="index-legend" data-en="⭐️ open-source code link in note" data-zh="⭐️ 笔记含开源源码链接">⭐️ open-source code link in note</p>
+  <p class="index-updates-link">
+    <a href="{{ '/updates.html' | relative_url }}" class="updates-entry-link">
+      <span aria-hidden="true">📅</span>
+      <span data-en="Update Log" data-zh="更新记录">Update Log</span>
+      <span class="updates-entry-arrow" aria-hidden="true">→</span>
+    </a>
+  </p>
 </div>
 
 <div class="index-layout">

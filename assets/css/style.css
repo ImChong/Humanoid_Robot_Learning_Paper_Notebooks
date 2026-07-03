@@ -1819,3 +1819,398 @@ body.sponsor-dialog-open {
     word-break: normal;
   }
 }
+
+/* ===== Update Log Page (updates.html) ===== */
+.updates-page {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.updates-header {
+  text-align: center;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.updates-header h1 {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.updates-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.updates-stats {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.8rem;
+}
+
+.updates-stats strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.updates-stats-sep {
+  margin: 0 0.5rem;
+  opacity: 0.6;
+}
+
+/* GitHub-style activity heatmap. Level colors follow the site accent of each
+   theme — dark: VS Code blue ending at --link/--link-hover; light: arXiv red
+   ending at --link/--link-hover. Both ramps pass the ordinal checks
+   (monotone lightness, adjacent ΔL ≥ 0.06, faintest step ≥ 2:1 vs surface). */
+.updates-heatmap {
+  --hm-cell-min: 9px; /* cell width floor: below it the container scrolls */
+  --hm-gap: 3px;
+  --hm-level-0: #2d2d2e;
+  --hm-level-1: #1d4f8c;
+  --hm-level-2: #2a6cb4;
+  --hm-level-3: #569cd6;
+  --hm-level-4: #9cdcfe;
+  --hm-cell-line: rgba(255, 255, 255, 0.06);
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 14px 10px;
+  margin-bottom: 1.6rem;
+}
+
+[data-theme="light"] .updates-heatmap {
+  --hm-level-0: #ebedf0;
+  --hm-level-1: #eba39c;
+  --hm-level-2: #d96b60;
+  --hm-level-3: #b31b1b;
+  --hm-level-4: #8b1515;
+  --hm-cell-line: rgba(27, 31, 36, 0.06);
+}
+
+.updates-heatmap-scroll {
+  overflow-x: auto;
+  padding: 2px;
+}
+
+/* Fluid width: 53 columns of minmax(floor, 1fr) share the row; on narrow
+   screens cells hit the floor, min-width kicks in and the wrapper scrolls
+   (anchored to the newest week via scrollLeft). */
+.updates-heatmap-inner {
+  min-width: max-content;
+}
+
+.updates-heatmap-months {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(var(--hm-cell-min), 1fr);
+  gap: var(--hm-gap);
+  margin-left: calc(26px + var(--hm-gap));
+  height: 18px;
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+}
+
+/* width:0 keeps labels out of the 1fr track sizing (equal-width fr tracks
+   would grow to the widest label); text overflows right from its column. */
+.updates-heatmap-months span {
+  white-space: nowrap;
+  width: 0;
+  overflow: visible;
+}
+
+.updates-heatmap-body {
+  display: flex;
+  gap: var(--hm-gap);
+}
+
+.updates-heatmap-weekdays {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  row-gap: var(--hm-gap);
+  align-items: center;
+  width: 26px;
+  font-size: 0.62rem;
+  color: var(--text-secondary);
+}
+
+.updates-heatmap-grid {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, auto);
+  grid-auto-columns: minmax(var(--hm-cell-min), 1fr);
+  gap: var(--hm-gap);
+}
+
+.updates-heatmap-cell {
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: var(--hm-level-0);
+  box-shadow: inset 0 0 0 1px var(--hm-cell-line);
+}
+
+.updates-heatmap-cell[data-level="1"] { background: var(--hm-level-1); }
+.updates-heatmap-cell[data-level="2"] { background: var(--hm-level-2); }
+.updates-heatmap-cell[data-level="3"] { background: var(--hm-level-3); }
+.updates-heatmap-cell[data-level="4"] { background: var(--hm-level-4); }
+
+.updates-heatmap-cell.is-pad {
+  visibility: hidden;
+}
+
+button.updates-heatmap-cell {
+  cursor: pointer;
+}
+
+button.updates-heatmap-cell:hover,
+button.updates-heatmap-cell:focus-visible {
+  outline: 1px solid var(--text-secondary);
+  outline-offset: 1px;
+}
+
+/* Selection ring uses the text color, not the accent: an accent-colored ring
+   is hard to tell apart on accent-colored cells. */
+button.updates-heatmap-cell.is-active {
+  outline: 2px solid var(--text);
+  outline-offset: 1px;
+}
+
+.updates-heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: var(--hm-gap);
+  margin-top: 8px;
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+}
+
+.updates-heatmap-legend .updates-heatmap-cell {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+.updates-heatmap-legend-hint {
+  margin-right: auto;
+}
+
+/* ── Timeline ── */
+.updates-timeline-title {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 1.25rem;
+  color: var(--text);
+  margin: 1.8rem 0 1rem;
+}
+
+.updates-filter-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.88rem;
+  color: var(--text);
+  margin: 0 0 1rem;
+}
+
+.updates-clear-filter {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  color: var(--link);
+  background: transparent;
+  border: 1px solid var(--link);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  cursor: pointer;
+}
+
+.updates-clear-filter:hover {
+  color: var(--link-hover);
+  border-color: var(--link-hover);
+}
+
+.updates-timeline-days {
+  position: relative;
+  padding-left: 18px;
+}
+
+.updates-timeline-days::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border);
+  border-radius: 1px;
+}
+
+.updates-day {
+  margin-bottom: 1.5rem;
+}
+
+.updates-day-date {
+  position: relative;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.updates-day-dot {
+  position: absolute;
+  left: -18px;
+  top: 0.42em;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--link);
+  box-shadow: 0 0 0 3px var(--bg);
+}
+
+.updates-day-meta {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-left: 0.55rem;
+}
+
+.updates-day-list {
+  list-style: none;
+  margin: 0.45rem 0 0;
+  padding: 0;
+}
+
+.updates-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  padding: 0.12rem 0;
+}
+
+.updates-day.is-folded .updates-item-folded {
+  display: none;
+}
+
+.updates-badge {
+  flex: none;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.66rem;
+  line-height: 1.5;
+  padding: 0 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  background: transparent;
+  white-space: nowrap;
+  transform: translateY(-1px);
+}
+
+.updates-badge-added {
+  color: var(--link);
+  border-color: var(--link);
+  background: rgba(86, 156, 214, 0.12);
+}
+
+[data-theme="light"] .updates-badge-added {
+  background: rgba(179, 27, 27, 0.06);
+}
+
+.updates-item-link {
+  color: var(--link);
+  text-decoration: none;
+  min-width: 0;
+}
+
+a.updates-item-link:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.updates-item-cat {
+  flex: none;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.updates-day-more {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.3rem 0.9rem;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  color: var(--link);
+  background: transparent;
+  border: 1px solid var(--link);
+  border-radius: 6px;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.updates-day-more:hover {
+  color: var(--link-hover);
+  border-color: var(--link-hover);
+}
+
+/* ── Homepage entry link ── */
+.index-header .index-updates-link {
+  margin: 0.7rem 0 0;
+}
+
+.updates-entry-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.26rem 0.95rem;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.84rem;
+  color: var(--link);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.updates-entry-link:hover {
+  color: var(--link-hover);
+  border-color: var(--link);
+}
+
+.updates-entry-arrow {
+  font-size: 0.8em;
+}
+
+@media (max-width: 600px) {
+  .updates-header h1 {
+    font-size: 1.4rem;
+  }
+  .updates-item {
+    flex-wrap: wrap;
+    row-gap: 0.1rem;
+  }
+  .updates-item-cat {
+    flex-basis: 100%;
+    padding-left: 0;
+  }
+}
