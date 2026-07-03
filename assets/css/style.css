@@ -187,7 +187,7 @@ html {
 .index-header {
   text-align: center;
   margin-bottom: 0.4rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.1rem;
   border-bottom: 2px solid var(--border);
 }
 
@@ -204,16 +204,51 @@ html {
   font-size: 1.05rem;
 }
 
-.index-header .subtitle {
-  font-size: 0.9rem;
-  margin-top: 0.3rem;
+/* Hero meta chips: note count + update-log entry on one row. */
+.index-meta-chips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.9rem 0 0;
 }
 
-.index-header .index-legend {
-  font-size: 0.78rem;
+.index-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.26rem 0.95rem;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+a.index-chip-link {
+  color: var(--link);
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+a.index-chip-link:hover {
+  color: var(--link-hover);
+  border-color: var(--link);
+}
+
+.index-chip-arrow {
+  font-size: 0.8em;
+}
+
+/* ⭐️ legend sits right above the paper list it annotates. */
+.index-main .index-legend {
+  font-size: 0.75rem;
   color: var(--text-secondary);
   opacity: 0.85;
-  margin: 0.35rem 0 0;
+  text-align: right;
+  margin: 0 0 0.35rem;
 }
 
 .paper-count {
@@ -2170,35 +2205,6 @@ a.updates-item-link:hover {
 .updates-day-more:hover {
   color: var(--link-hover);
   border-color: var(--link-hover);
-}
-
-/* ── Homepage entry link ── */
-.index-header .index-updates-link {
-  margin: 0.7rem 0 0;
-}
-
-.updates-entry-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.26rem 0.95rem;
-  font-family: 'Arial', 'Helvetica Neue', sans-serif;
-  font-size: 0.84rem;
-  color: var(--link);
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  text-decoration: none;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-.updates-entry-link:hover {
-  color: var(--link-hover);
-  border-color: var(--link);
-}
-
-.updates-entry-arrow {
-  font-size: 0.8em;
 }
 
 @media (max-width: 600px) {
