@@ -313,6 +313,7 @@
 | 295 | EgoVLA: Learning Vision-Language-Action Models from Egocentric Human Videos | 06_Manipulation | ✅ 已完成（2026-07-01） |
 | 340 | CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks | 07_Teleoperation | ✅ 已完成（2026-07-02） |
 | — | GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains | 08_Navigation | ✅ 已完成（2026-07-03） |
-| ? | （下一篇：09_State_Estimation 模块首个未完成且无笔记的论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 09_State_Estimation | ⏭️ 下一篇候选 |
+| 8 | [GAIT: Legged Robot Proprioceptive State Estimation with Attention over Inertial-Leg Tokens](09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.md) | State Estimation / 本体感知状态估计 / 惯性-腿部分词 / Perceiver IO 注意力 + IEKF · KAIST · Unitree Go1 | 截至当前未见公开发布（论文未给出 GitHub / 项目页链接） · [arXiv 2606.14160](https://arxiv.org/abs/2606.14160) |
+| ? | （下一篇：10_Sim-to-Real 模块首个未完成且无笔记的论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 10_Sim-to-Real | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。

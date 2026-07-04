@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": "—",
-      "last_title": "GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains (arXiv:2606.10449)",
-      "next_module": "09_State_Estimation"
+      "last_module": "09_State_Estimation",
+      "last_index": 8,
+      "last_title": "GAIT: Legged Robot Proprioceptive State Estimation with Attention over Inertial-Leg Tokens (arXiv:2606.14160)",
+      "next_module": "10_Sim-to-Real"
     },
-    "last_summary_index": "—",
-    "last_summary_date": "2026-07-03",
-    "last_summary_title": "GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains",
+    "last_summary_index": 8,
+    "last_summary_date": "2026-07-04",
+    "last_summary_title": "GAIT: Legged Robot Proprioceptive State Estimation with Attention over Inertial-Leg Tokens",
     "next_summary_index": null,
     "log": [
       {
@@ -4277,6 +4277,18 @@
       "pdf_file": "",
       "route": "State Estimation",
       "title_cn": ""
+    },
+    {
+      "title": "GAIT: Legged Robot Proprioceptive State Estimation with Attention over Inertial-Leg Tokens",
+      "arxiv": "2606.14160",
+      "folder": "papers/09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia",
+      "note_file": "GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.md",
+      "pdf_file": "",
+      "status": "done",
+      "start_date": "2026-07-04",
+      "done_date": "2026-07-04",
+      "route": "State Estimation",
+      "title_cn": "GAIT：用「惯性-腿部」分词与注意力做足式机器人本体感知状态估计"
     },
     {
       "title": "Robot Trains Robot: Automatic Real-World Policy Adaptation and Learning for Humanoids",
