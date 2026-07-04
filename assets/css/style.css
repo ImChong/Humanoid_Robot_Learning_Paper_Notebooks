@@ -2207,6 +2207,35 @@ a.updates-item-link:hover {
   border-color: var(--link-hover);
 }
 
+.updates-timeline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+  padding-left: 18px;
+}
+
+.updates-timeline-more-days,
+.updates-timeline-show-all {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  color: var(--link);
+  background: transparent;
+  border: 1px solid var(--link);
+  border-radius: 6px;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.updates-timeline-more-days:hover,
+.updates-timeline-show-all:hover {
+  color: var(--link-hover);
+  border-color: var(--link-hover);
+}
+
 @media (max-width: 600px) {
   .updates-header h1 {
     font-size: 1.4rem;
