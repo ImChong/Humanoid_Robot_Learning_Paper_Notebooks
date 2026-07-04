@@ -2417,6 +2417,17 @@
     "display_name": "State Estimation",
     "papers": [
       {
+        "title": "GAIT: Legged Robot Proprioceptive State Estimation with Attention over Inertial-Leg Tokens",
+        "path": "papers/09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.md",
+        "url": "/papers/09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.html",
+        "dir": "GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia",
+        "arxiv": "2606.14160",
+        "published_date_zh": "2026年6月12日（arXiv）",
+        "published_date_en": "Jun 12, 2026 (arXiv)",
+        "zhname": "GAIT：用「惯性-腿部」分词与注意力做足式机器人本体感知状态估计",
+        "zh_title": "GAIT：用「惯性-腿部」分词与注意力做足式机器人本体感知状态估计"
+      },
+      {
         "title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
         "path": "papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md",
         "url": "/papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.html",
