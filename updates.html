@@ -44,6 +44,8 @@ title: "Update Log"
   var WEEKS = 53;
   var FOLD_SHOW = 12;
   var FOLD_LIMIT = 14;
+  var TIMELINE_WINDOW_DAYS = 30;
+  var TIMELINE_WINDOW_STEP = 30;
 
   var notes = Array.isArray(data.notes) ? data.notes : [];
   // Newest day first (the generator already emits this order; keep it stable).
@@ -69,6 +71,9 @@ title: "Update Log"
       clearFilter: 'Show all days',
       filterLabel: function(dateText) { return 'Showing ' + dateText + ' only'; },
       showMore: function(n) { return 'Show ' + n + ' more ▾'; },
+      expandMoreDays: 'Expand 30 more days',
+      expandAll: 'Show all records',
+      timelineActionsAria: 'Expand more update records',
       timelineTitle: 'Timeline',
       heatmapAria: 'Note update activity heatmap; one square per day',
       cellAria: function(tip) { return tip + '. Click to filter the timeline to this day.'; },
@@ -92,6 +97,9 @@ title: "Update Log"
       clearFilter: '显示全部日期',
       filterLabel: function(dateText) { return '仅显示 ' + dateText; },
       showMore: function(n) { return '展开其余 ' + n + ' 项 ▾'; },
+      expandMoreDays: '再展开 30 天',
+      expandAll: '展开全部记录',
+      timelineActionsAria: '展开更多更新记录',
       timelineTitle: '时间线',
       heatmapAria: '笔记更新活跃度热力图，每格代表一天',
       cellAria: function(tip) { return tip + '，点击筛选当日时间线'; },
@@ -327,9 +335,40 @@ title: "Update Log"
       '</section>';
   }
 
-  function timelineHtml(lang, activeDate) {
+  function subtractCalendarDays(dateStr, offsetDays) {
+    var parts = String(dateStr || '').split('-');
+    if (parts.length !== 3) return dateStr;
+    var d = new Date(Date.UTC(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2])));
+    d.setUTCDate(d.getUTCDate() - offsetDays);
+    return d.toISOString().slice(0, 10);
+  }
+
+  function filterDaysByWindow(allDays, windowDays, showAll) {
+    if (!allDays.length || showAll) return allDays.slice();
+    var newest = allDays[0].d;
+    if (!newest) return allDays.slice();
+    var cutoff = subtractCalendarDays(newest, Math.max(windowDays - 1, 0));
+    var filtered = [];
+    for (var i = 0; i < allDays.length; i++) {
+      if (allDays[i].d >= cutoff) filtered.push(allDays[i]);
+    }
+    return filtered;
+  }
+
+  function timelineActionsHtml(lang, visibleDays, showAll) {
+    if (!days.length || showAll || visibleDays.length >= days.length) return '';
     var t = I18N[lang];
-    var shown = activeDate && dayByDate[activeDate] ? [dayByDate[activeDate]] : days;
+    return '<div class="updates-timeline-actions" role="group" aria-label="' + escapeHtml(t.timelineActionsAria) + '">' +
+      '<button type="button" class="updates-timeline-more-days">' + escapeHtml(t.expandMoreDays) + '</button>' +
+      '<button type="button" class="updates-timeline-show-all">' + escapeHtml(t.expandAll) + '</button>' +
+      '</div>';
+  }
+
+  function timelineHtml(lang, activeDate, windowDays, showAll) {
+    var t = I18N[lang];
+    var shown = activeDate && dayByDate[activeDate]
+      ? [dayByDate[activeDate]]
+      : filterDaysByWindow(days, windowDays, showAll);
     var filterBar = '';
     if (activeDate && dayByDate[activeDate]) {
       filterBar = '<p class="updates-filter-bar">' +
@@ -340,18 +379,23 @@ title: "Update Log"
     for (var i = 0; i < shown.length; i++) {
       daysHtml += dayHtml(shown[i], lang);
     }
+    var actionsHtml = activeDate ? '' : timelineActionsHtml(lang, shown, showAll);
     return '<div class="updates-timeline">' +
       '<h2 class="updates-timeline-title">📜 ' + escapeHtml(t.timelineTitle) + '</h2>' +
       filterBar +
       '<div class="updates-timeline-days">' + daysHtml + '</div>' +
+      actionsHtml +
       '</div>';
   }
 
   var activeDate = '';
+  var currentWindowDays = TIMELINE_WINDOW_DAYS;
+  var timelineShowAll = false;
 
   function render() {
     var lang = getLang();
-    mount.innerHTML = statsHtml(lang) + heatmapHtml(lang, activeDate) + timelineHtml(lang, activeDate);
+    mount.innerHTML = statsHtml(lang) + heatmapHtml(lang, activeDate) +
+      timelineHtml(lang, activeDate, currentWindowDays, timelineShowAll);
     var scrollWrap = mount.querySelector('.updates-heatmap-scroll');
     if (scrollWrap) scrollWrap.scrollLeft = scrollWrap.scrollWidth; // rest on newest week
   }
@@ -375,6 +419,16 @@ title: "Update Log"
       var section = moreBtn.closest('.updates-day');
       if (section) section.classList.remove('is-folded');
       moreBtn.parentNode.removeChild(moreBtn);
+      return;
+    }
+    if (ev.target.closest('button.updates-timeline-more-days')) {
+      if (!timelineShowAll) currentWindowDays += TIMELINE_WINDOW_STEP;
+      render();
+      return;
+    }
+    if (ev.target.closest('button.updates-timeline-show-all')) {
+      timelineShowAll = true;
+      render();
     }
   });
 
