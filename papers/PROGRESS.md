@@ -89,7 +89,7 @@
 | 20   | [Gait-Conditioned RL with Multi-Phase Curriculum for Humanoid Locomotion](https://arxiv.org/abs/2505.20619) | 2025.05 |  | ⏳ 待读 |
 | 21   | [Distillation-PPO: A Novel Two-Stage RL Framework for Humanoid Robot Perceptive Locomotion](https://arxiv.org/abs/2503.08299) | 2025.03 |  | ⏳ 待读 |
 | 22   | Adapting Humanoid Locomotion over Challenging Terrain via Two-Phase Training | 2024.10 |  | ⏳ 待读 |
-| 23   | [Sampling-Based System Identification with Active Exploration for Legged Robot Sim2Real Learning](https://arxiv.org/abs/2505.14266) | 2025.05 |  | ⏳ 待读 |
+| 23   | [Sampling-Based System Identification with Active Exploration for Legged Robot Sim2Real Learning](https://arxiv.org/abs/2505.14266) ✅ [笔记](10_Sim-to-Real/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration.md) | 2025.05 |  | ✅ 已总结 |
 
 
 ### Loco-Manipulation and Whole-Body-Control
@@ -520,6 +520,7 @@
 | 383  | [Towards bridging the gap: Systematic sim-to-real transfer for diverse legged robots](https://arxiv.org/abs/2509.06342) ✅ [笔记](10_Sim-to-Real/PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots/PACE_Systematic_Sim-to-Real_Transfer_for_Diverse_Legged_Robots.md) | 2026-06-08 |     | ✅ 已总结 |
 | 384  | [Robot Trains Robot: Automatic Real-World Policy Adaptation and Learning for Humanoids](https://arxiv.org/abs/2508.12252) ✅ [笔记](10_Sim-to-Real/Robot_Trains_Robot_Automatic_Real-World_Policy_Adaptation_and_Learning/Robot_Trains_Robot_Automatic_Real-World_Policy_Adaptation_and_Learning.md) | 2025.08 |     | ✅ 已总结 |
 | 385  | [DiffCoTune: Differentiable Co-Tuning for Cross-domain Robot Control](https://arxiv.org/abs/2505.24068)                                        | 2025.05 |     | ⏳ 待读 |
+| 385a | [Sampling-Based System Identification with Active Exploration for Legged Robot Sim2Real Learning](https://arxiv.org/abs/2505.14266) ✅ [笔记](10_Sim-to-Real/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration.md) | 2025.05 | 🌟 | ✅ 已总结 |
 | 386  | [Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection](https://arxiv.org/abs/2504.06585) ✅ [笔记](10_Sim-to-Real/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection.md) | 2025.04 |     | ✅ 已总结 |
 | 387  | [Bridging the Sim-to-Real Gap for Athletic Loco-Manipulation](https://arxiv.org/abs/2502.10894)                                                | 2025.02 |     | ⏳ 待读 |
 | 388  | [Learning Agile and Dynamic Motor Skills for Legged Robots](https://arxiv.org/abs/1901.08652)                                                  | 2019.01 |     | ⏳ 待读 |
