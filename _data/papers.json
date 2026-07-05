@@ -2608,6 +2608,18 @@
         "zh_title": "DiffCoTune：面向跨域机器人控制的可微协同调参"
       },
       {
+        "title": "Sampling-Based System Identification with Active Exploration for Legged Robot Sim2Real Learning",
+        "path": "papers/10_Sim-to-Real/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration.md",
+        "url": "/papers/10_Sim-to-Real/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration.html",
+        "dir": "SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration",
+        "arxiv": "2505.14266",
+        "has_open_source": true,
+        "published_date_zh": "2025年5月20日（arXiv）",
+        "published_date_en": "May 20, 2025 (arXiv)",
+        "zhname": "SPI-Active：面向腿足机器人 Sim2Real 的主动探索采样式系统辨识",
+        "zh_title": "SPI-Active：面向腿足机器人 Sim2Real 的主动探索采样式系统辨识"
+      },
+      {
         "title": "Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection",
         "path": "papers/10_Sim-to-Real/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection.md",
         "url": "/papers/10_Sim-to-Real/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection.html",

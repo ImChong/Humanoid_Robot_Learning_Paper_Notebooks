@@ -314,6 +314,7 @@
 | 340 | CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks | 07_Teleoperation | ✅ 已完成（2026-07-02） |
 | — | GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains | 08_Navigation | ✅ 已完成（2026-07-03） |
 | 8 | [GAIT: Legged Robot Proprioceptive State Estimation with Attention over Inertial-Leg Tokens](09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.md) | State Estimation / 本体感知状态估计 / 惯性-腿部分词 / Perceiver IO 注意力 + IEKF · KAIST · Unitree Go1 | 截至当前未见公开发布（论文未给出 GitHub / 项目页链接） · [arXiv 2606.14160](https://arxiv.org/abs/2606.14160) |
-| ? | （下一篇：10_Sim-to-Real 模块首个未完成且无笔记的论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 10_Sim-to-Real | ⏭️ 下一篇候选 |
+| 385a | [SPI-Active: Sampling-Based System Identification with Active Exploration for Legged Robot Sim2Real Learning](10_Sim-to-Real/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration.md) | Sim-to-Real / 系统辨识 · 主动探索 / 采样式辨识(SPI, CMA-ES)量准质量-惯量与电机扭矩 + 最大化 Fisher 信息(D-最优)优化探索指令采高信息量数据 · CMU LeCAR Lab · Unitree Go2(+33%负载)/G1 · 跳跃·速度·姿态跟踪较基线 ↑42–63% · 模块轮转（09_State_Estimation → 10_Sim-to-Real） | 🌟 [github.com/LeCAR-Lab/SPI-Active](https://github.com/LeCAR-Lab/SPI-Active) · [项目页](https://lecar-lab.github.io/spi-active_/) · [arXiv 2505.14266](https://arxiv.org/abs/2505.14266) · CoRL 2025 |
+| ? | （下一篇：11_Simulation_Benchmark 模块首个未完成且无笔记的论文；按 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 04 顺序循环） | 11_Simulation_Benchmark | ⏭️ 下一篇候选 |
 
 > 实际推进时会按当天轮转到的模块在 `papers` 列表中扫描，跳过已有内容的笔记。
