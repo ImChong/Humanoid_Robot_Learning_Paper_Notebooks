@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
-      "last_index": 6,
-      "last_title": "SPI-Active: Sampling-Based System Identification with Active Exploration for Legged Robot Sim2Real Learning (arXiv:2505.14266)",
-      "next_module": "11_Simulation_Benchmark"
+      "last_module": "11_Simulation_Benchmark",
+      "last_index": 10,
+      "last_title": "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation (arXiv:2606.08278)",
+      "next_module": "12_Hardware_Design"
     },
-    "last_summary_index": 6,
-    "last_summary_date": "2026-07-05",
-    "last_summary_title": "SPI-Active: Sampling-Based System Identification with Active Exploration for Legged Robot Sim2Real Learning (arXiv:2505.14266)",
+    "last_summary_index": 10,
+    "last_summary_date": "2026-07-06",
+    "last_summary_title": "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation (arXiv:2606.08278)",
     "next_summary_index": null,
     "log": [
       {
@@ -1130,6 +1130,18 @@
         "arxiv": "2505.14266",
         "source_repo": "https://github.com/LeCAR-Lab/SPI-Active",
         "project_page": "https://lecar-lab.github.io/spi-active_/"
+      },
+      {
+        "date": "2026-07-06",
+        "index": "553",
+        "title": "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation",
+        "module": "11_Simulation_Benchmark",
+        "category": "11_Simulation_Benchmark",
+        "note_path": "papers/11_Simulation_Benchmark/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation.md",
+        "track": "module_rotation",
+        "arxiv": "2606.08278",
+        "source_repo": "https://github.com/physical-superintelligence-lab/SIMPLE",
+        "project_page": "https://psi-lab.ai/SIMPLE/"
       }
     ],
     "last_completed_index": 368,
