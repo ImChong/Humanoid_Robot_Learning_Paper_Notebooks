@@ -12,9 +12,11 @@ def test_index_declares_fold_exempt_categories():
     assert "01_Foundational_RL" in text
     assert "02_Motion_Retargeting" in text
     assert "03_High_Impact_Selection" in text
-    assert "fold_limit = 10" in text
+    assert "fold_limit = 5" in text
     assert "paper-list-item-folded" in text
-    assert "paper-list-toggle-btn" in text
+    assert "paper-list-more-btn" in text
+    assert "paper-list-all-btn" in text
+    assert "paper-list-toggle-group" in text
 
 
 def test_index_search_unfolds_folded_lists():
@@ -25,18 +27,20 @@ def test_index_search_unfolds_folded_lists():
     assert "resetAllItemDisplays" in text
     assert "compositionend" in text
     assert "search-expanded" not in text
+    assert "applyVisibleCount" in text
 
 
 def test_index_fold_toggle_follows_paper_list():
     text = INDEX.read_text(encoding="utf-8")
-    assert "</ul>\n      {% if should_fold %}\n      <button type=\"button\" class=\"paper-list-toggle-btn\"" in text
+    assert "</ul>\n      {% if should_fold %}\n      <div class=\"paper-list-toggle-group\"" in text
     assert "paper-list-toggle-item" not in text
 
 
 def test_style_hides_folded_items_when_collapsed():
     css = STYLE.read_text(encoding="utf-8")
     assert ".paper-list.is-folded .paper-list-item-folded" in css
-    assert "body.index-search-active .paper-list-toggle-btn" in css
+    assert "body.index-search-active .paper-list-toggle-group" in css
+    assert ".paper-list-toggle-group" in css
     assert ".paper-list-toggle-btn" in css
     assert "min-height: 44px" in css
     assert ".index-main" in css

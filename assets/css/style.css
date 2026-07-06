@@ -358,6 +358,17 @@ a.index-chip-link:hover {
   -webkit-tap-highlight-color: transparent;
 }
 
+.paper-list-toggle-group {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.paper-list-toggle-group .paper-list-toggle-btn {
+  flex: 1;
+  margin: 0;
+}
+
 .paper-list-toggle-btn:hover {
   background: var(--link);
   color: var(--bg);
@@ -367,7 +378,7 @@ a.index-chip-link:hover {
   display: none;
 }
 
-body.index-search-active .paper-list-toggle-btn {
+body.index-search-active .paper-list-toggle-group {
   display: none;
 }
 
