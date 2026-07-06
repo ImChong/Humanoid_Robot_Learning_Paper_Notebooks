@@ -12,7 +12,7 @@ def test_index_declares_fold_exempt_categories():
     assert "01_Foundational_RL" in text
     assert "02_Motion_Retargeting" in text
     assert "03_High_Impact_Selection" in text
-    assert "fold_limit = 10" in text
+    assert "fold_limit = 5" in text
     assert "paper-list-item-folded" in text
     assert "paper-list-toggle-btn" in text
 
