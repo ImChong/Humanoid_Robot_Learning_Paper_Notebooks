@@ -724,9 +724,17 @@ body.index-search-active .paper-list-toggle-group {
     left: 0;
   }
 
-  /* Keep fold toggles above the floating sidebar FAB on narrow viewports. */
-  .index-main {
-    padding-bottom: calc(24px + 48px + 28px + env(safe-area-inset-bottom, 0px));
+  /* FAB scroll clearance belongs after the footer, not between content and footer. */
+  body:has(.index-layout) {
+    padding-bottom: calc(24px + 48px + 12px + env(safe-area-inset-bottom, 0px));
+  }
+
+  body:has(.index-layout) .site-footer {
+    margin-top: 0.5rem;
+  }
+
+  body:has(.index-layout) .category-section:last-child {
+    margin-bottom: 1rem;
   }
 }
 

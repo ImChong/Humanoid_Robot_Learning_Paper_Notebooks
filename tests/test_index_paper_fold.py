@@ -44,4 +44,5 @@ def test_style_hides_folded_items_when_collapsed():
     assert ".paper-list-toggle-group" in css
     assert ".paper-list-toggle-btn" in css
     assert "min-height: 44px" in css
-    assert ".index-main" in css
+    assert "body:has(.index-layout)" in css
+    assert ".index-main {\n    padding-bottom:" not in css
