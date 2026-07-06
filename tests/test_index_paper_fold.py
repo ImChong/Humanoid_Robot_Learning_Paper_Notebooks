@@ -16,6 +16,7 @@ def test_index_declares_fold_exempt_categories():
     assert "paper-list-item-folded" in text
     assert "paper-list-more-btn" in text
     assert "paper-list-all-btn" in text
+    assert "paper-list-collapse-btn" in text
     assert "paper-list-toggle-group" in text
 
 

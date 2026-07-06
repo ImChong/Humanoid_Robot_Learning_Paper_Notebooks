@@ -182,6 +182,10 @@ title: "Home"
         <button type="button" class="paper-list-toggle-btn paper-list-all-btn" data-fold-id="cat-{{ forloop.index }}-papers"
           data-en="Show all {{ fold_hidden }} notes ▾"
           data-zh="展开全部 {{ fold_hidden }} 篇 ▾">Show all {{ fold_hidden }} notes ▾</button>
+        <button type="button" class="paper-list-toggle-btn paper-list-collapse-btn" data-fold-id="cat-{{ forloop.index }}-papers"
+          data-en="Collapse to {{ fold_limit }} ▴"
+          data-zh="收起到 {{ fold_limit }} 篇 ▴"
+          hidden>Collapse to {{ fold_limit }} ▴</button>
       </div>
       {% endif %}
       {% else %}
@@ -285,9 +289,10 @@ title: "Home"
     return document.querySelector('.paper-list-toggle-group[data-fold-id="' + foldId + '"]');
   }
 
-  function updateFoldLabels(group, hiddenCount, step) {
+  function updateFoldLabels(group, hiddenCount, step, initial) {
     var moreBtn = group.querySelector('.paper-list-more-btn');
     var allBtn = group.querySelector('.paper-list-all-btn');
+    var collapseBtn = group.querySelector('.paper-list-collapse-btn');
     var useZh = getLang() === 'zh';
     var moreCount = Math.min(step, hiddenCount);
     if (moreBtn) {
@@ -300,6 +305,11 @@ title: "Home"
         ? '展开全部 ' + hiddenCount + ' 篇 ▾'
         : 'Show all ' + hiddenCount + ' notes ▾';
     }
+    if (collapseBtn) {
+      collapseBtn.textContent = useZh
+        ? '收起到 ' + initial + ' 篇 ▴'
+        : 'Collapse to ' + initial + ' ▴';
+    }
   }
 
   function updateFoldUI(list, persist) {
@@ -307,21 +317,32 @@ title: "Home"
     var group = getFoldGroup(foldId);
     var hiddenCount = getFoldedItems(list).length;
     var step = parseInt(list.getAttribute('data-fold-step') || '5', 10);
+    var initial = parseInt(list.getAttribute('data-fold-initial') || '5', 10);
+    var visibleCount = getVisibleCount(list);
+    var expandedBeyondDefault = visibleCount > initial;
 
     if (hiddenCount === 0) {
       list.classList.remove('is-folded');
-      if (group) group.style.display = 'none';
     } else {
       list.classList.add('is-folded');
-      if (group) {
-        group.style.display = '';
-        updateFoldLabels(group, hiddenCount, step);
-      }
     }
+
+    if (!group) return;
+
+    var moreBtn = group.querySelector('.paper-list-more-btn');
+    var allBtn = group.querySelector('.paper-list-all-btn');
+    var collapseBtn = group.querySelector('.paper-list-collapse-btn');
+
+    group.style.display = '';
+    if (moreBtn) moreBtn.hidden = hiddenCount === 0;
+    if (allBtn) allBtn.hidden = hiddenCount === 0;
+    if (collapseBtn) collapseBtn.hidden = !expandedBeyondDefault;
+
+    updateFoldLabels(group, hiddenCount, step, initial);
 
     if (persist && foldId) {
       try {
-        localStorage.setItem(FOLD_PREFIX + foldId, String(getVisibleCount(list)));
+        localStorage.setItem(FOLD_PREFIX + foldId, String(visibleCount));
       } catch (e) {}
     }
   }
@@ -358,6 +379,7 @@ title: "Home"
 
     var moreBtn = group.querySelector('.paper-list-more-btn');
     var allBtn = group.querySelector('.paper-list-all-btn');
+    var collapseBtn = group.querySelector('.paper-list-collapse-btn');
     if (moreBtn) {
       moreBtn.addEventListener('click', function() {
         var step = parseInt(list.getAttribute('data-fold-step') || '5', 10);
@@ -369,15 +391,22 @@ title: "Home"
         applyVisibleCount(list, list.querySelectorAll('li[data-search]').length, true);
       });
     }
+    if (collapseBtn) {
+      collapseBtn.addEventListener('click', function() {
+        var initial = parseInt(list.getAttribute('data-fold-initial') || '5', 10);
+        applyVisibleCount(list, initial, true);
+      });
+    }
   });
 
   document.addEventListener('cl-lang-changed', function() {
     foldLists.forEach(function(list) {
       var foldId = list.getAttribute('data-fold-id');
       var group = getFoldGroup(foldId);
-      if (!group || group.style.display === 'none') return;
+      if (!group) return;
       var step = parseInt(list.getAttribute('data-fold-step') || '5', 10);
-      updateFoldLabels(group, getFoldedItems(list).length, step);
+      var initial = parseInt(list.getAttribute('data-fold-initial') || '5', 10);
+      updateFoldLabels(group, getFoldedItems(list).length, step, initial);
     });
   });
 
