@@ -360,6 +360,7 @@ a.index-chip-link:hover {
 
 .paper-list-toggle-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin: 0.2rem 0 0.6rem;
 }
