@@ -724,17 +724,18 @@ body.index-search-active .paper-list-toggle-group {
     left: 0;
   }
 
-  /* FAB scroll clearance belongs after the footer, not between content and footer. */
-  body:has(.index-layout) {
-    padding-bottom: calc(24px + 48px + 12px + env(safe-area-inset-bottom, 0px));
-  }
-
   body:has(.index-layout) .site-footer {
     margin-top: 0.5rem;
+    padding: 10px 0 12px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
   }
 
   body:has(.index-layout) .category-section:last-child {
     margin-bottom: 1rem;
+  }
+
+  body:has(.index-layout) .container {
+    padding-bottom: 0.5rem;
   }
 }
 
