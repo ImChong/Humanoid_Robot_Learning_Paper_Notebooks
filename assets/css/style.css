@@ -2237,7 +2237,9 @@ a.updates-item-link:hover {
 }
 
 .updates-timeline-more-days,
-.updates-timeline-show-all {
+.updates-timeline-show-all,
+.updates-timeline-collapse,
+.updates-timeline-back-to-top {
   display: inline-block;
   padding: 0.3rem 0.9rem;
   font-family: 'Arial', 'Helvetica Neue', sans-serif;
@@ -2252,7 +2254,9 @@ a.updates-item-link:hover {
 }
 
 .updates-timeline-more-days:hover,
-.updates-timeline-show-all:hover {
+.updates-timeline-show-all:hover,
+.updates-timeline-collapse:hover,
+.updates-timeline-back-to-top:hover {
   color: var(--link-hover);
   border-color: var(--link-hover);
 }

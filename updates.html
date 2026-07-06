@@ -73,7 +73,9 @@ title: "Update Log"
       showMore: function(n) { return 'Show ' + n + ' more ▾'; },
       expandMoreDays: 'Expand 30 more days',
       expandAll: 'Show all records',
-      timelineActionsAria: 'Expand more update records',
+      collapseTo30Days: 'Collapse to 30 days ▴',
+      backToTop: '↑ Back to top',
+      timelineActionsAria: 'Timeline actions',
       timelineTitle: 'Timeline',
       heatmapAria: 'Note update activity heatmap; one square per day',
       cellAria: function(tip) { return tip + '. Click to filter the timeline to this day.'; },
@@ -99,7 +101,9 @@ title: "Update Log"
       showMore: function(n) { return '展开其余 ' + n + ' 项 ▾'; },
       expandMoreDays: '再展开 30 天',
       expandAll: '展开全部记录',
-      timelineActionsAria: '展开更多更新记录',
+      collapseTo30Days: '收起至 30 天 ▴',
+      backToTop: '↑ 回到顶部',
+      timelineActionsAria: '时间线操作',
       timelineTitle: '时间线',
       heatmapAria: '笔记更新活跃度热力图，每格代表一天',
       cellAria: function(tip) { return tip + '，点击筛选当日时间线'; },
@@ -355,13 +359,27 @@ title: "Update Log"
     return filtered;
   }
 
-  function timelineActionsHtml(lang, visibleDays, showAll) {
-    if (!days.length || showAll || visibleDays.length >= days.length) return '';
+  function isTimelineExpanded(windowDays, showAll) {
+    return showAll || windowDays > TIMELINE_WINDOW_DAYS;
+  }
+
+  function timelineActionsHtml(lang, visibleDays, windowDays, showAll) {
+    if (!days.length) return '';
+    var expanded = isTimelineExpanded(windowDays, showAll);
+    var hasMore = !showAll && visibleDays.length < days.length;
+    if (!expanded && !hasMore) return '';
     var t = I18N[lang];
+    var buttons = '';
+    if (hasMore) {
+      buttons += '<button type="button" class="updates-timeline-more-days">' + escapeHtml(t.expandMoreDays) + '</button>' +
+        '<button type="button" class="updates-timeline-show-all">' + escapeHtml(t.expandAll) + '</button>';
+    }
+    if (expanded) {
+      buttons += '<button type="button" class="updates-timeline-collapse">' + escapeHtml(t.collapseTo30Days) + '</button>' +
+        '<button type="button" class="updates-timeline-back-to-top">' + escapeHtml(t.backToTop) + '</button>';
+    }
     return '<div class="updates-timeline-actions" role="group" aria-label="' + escapeHtml(t.timelineActionsAria) + '">' +
-      '<button type="button" class="updates-timeline-more-days">' + escapeHtml(t.expandMoreDays) + '</button>' +
-      '<button type="button" class="updates-timeline-show-all">' + escapeHtml(t.expandAll) + '</button>' +
-      '</div>';
+      buttons + '</div>';
   }
 
   function timelineHtml(lang, activeDate, windowDays, showAll) {
@@ -379,7 +397,7 @@ title: "Update Log"
     for (var i = 0; i < shown.length; i++) {
       daysHtml += dayHtml(shown[i], lang);
     }
-    var actionsHtml = activeDate ? '' : timelineActionsHtml(lang, shown, showAll);
+    var actionsHtml = activeDate ? '' : timelineActionsHtml(lang, shown, windowDays, showAll);
     return '<div class="updates-timeline">' +
       '<h2 class="updates-timeline-title">📜 ' + escapeHtml(t.timelineTitle) + '</h2>' +
       filterBar +
@@ -429,6 +447,16 @@ title: "Update Log"
     if (ev.target.closest('button.updates-timeline-show-all')) {
       timelineShowAll = true;
       render();
+      return;
+    }
+    if (ev.target.closest('button.updates-timeline-collapse')) {
+      currentWindowDays = TIMELINE_WINDOW_DAYS;
+      timelineShowAll = false;
+      render();
+      return;
+    }
+    if (ev.target.closest('button.updates-timeline-back-to-top')) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   });
 
