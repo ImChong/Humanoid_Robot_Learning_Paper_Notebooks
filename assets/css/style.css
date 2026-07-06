@@ -2231,9 +2231,20 @@ a.updates-item-link:hover {
 .updates-timeline-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 10px;
   margin-top: 18px;
   padding-left: 18px;
+}
+
+.updates-timeline-actions-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.updates-timeline-back-to-top {
+  margin-left: auto;
 }
 
 .updates-timeline-more-days,

@@ -28,7 +28,14 @@ def test_updates_timeline_collapse_resets_window():
     assert "window.scrollTo({ top: 0, behavior: 'smooth' })" in text
 
 
-def test_style_includes_new_timeline_action_buttons():
+def test_updates_timeline_back_to_top_always_rendered():
+    text = UPDATES.read_text(encoding="utf-8")
+    assert "updates-timeline-actions-left" in text
+    assert "updates-timeline-back-to-top" in text
+    assert "activeDate ? '' : timelineActionsHtml" not in text
+
+
+def test_style_back_to_top_right_aligned():
     css = STYLE.read_text(encoding="utf-8")
-    assert ".updates-timeline-collapse" in css
     assert ".updates-timeline-back-to-top" in css
+    assert "margin-left: auto" in css

@@ -363,23 +363,25 @@ title: "Update Log"
     return showAll || windowDays > TIMELINE_WINDOW_DAYS;
   }
 
-  function timelineActionsHtml(lang, visibleDays, windowDays, showAll) {
+  function timelineActionsHtml(lang, visibleDays, windowDays, showAll, activeDate) {
     if (!days.length) return '';
-    var expanded = isTimelineExpanded(windowDays, showAll);
-    var hasMore = !showAll && visibleDays.length < days.length;
-    if (!expanded && !hasMore) return '';
+    var expanded = !activeDate && isTimelineExpanded(windowDays, showAll);
+    var hasMore = !activeDate && !showAll && visibleDays.length < days.length;
     var t = I18N[lang];
-    var buttons = '';
-    if (hasMore) {
-      buttons += '<button type="button" class="updates-timeline-more-days">' + escapeHtml(t.expandMoreDays) + '</button>' +
-        '<button type="button" class="updates-timeline-show-all">' + escapeHtml(t.expandAll) + '</button>';
-    }
-    if (expanded) {
-      buttons += '<button type="button" class="updates-timeline-collapse">' + escapeHtml(t.collapseTo30Days) + '</button>' +
-        '<button type="button" class="updates-timeline-back-to-top">' + escapeHtml(t.backToTop) + '</button>';
+    var leftButtons = '';
+    if (!activeDate) {
+      if (hasMore) {
+        leftButtons += '<button type="button" class="updates-timeline-more-days">' + escapeHtml(t.expandMoreDays) + '</button>' +
+          '<button type="button" class="updates-timeline-show-all">' + escapeHtml(t.expandAll) + '</button>';
+      }
+      if (expanded) {
+        leftButtons += '<button type="button" class="updates-timeline-collapse">' + escapeHtml(t.collapseTo30Days) + '</button>';
+      }
     }
     return '<div class="updates-timeline-actions" role="group" aria-label="' + escapeHtml(t.timelineActionsAria) + '">' +
-      buttons + '</div>';
+      (leftButtons ? '<div class="updates-timeline-actions-left">' + leftButtons + '</div>' : '') +
+      '<button type="button" class="updates-timeline-back-to-top">' + escapeHtml(t.backToTop) + '</button>' +
+      '</div>';
   }
 
   function timelineHtml(lang, activeDate, windowDays, showAll) {
@@ -397,7 +399,7 @@ title: "Update Log"
     for (var i = 0; i < shown.length; i++) {
       daysHtml += dayHtml(shown[i], lang);
     }
-    var actionsHtml = activeDate ? '' : timelineActionsHtml(lang, shown, windowDays, showAll);
+    var actionsHtml = timelineActionsHtml(lang, shown, windowDays, showAll, activeDate);
     return '<div class="updates-timeline">' +
       '<h2 class="updates-timeline-title">📜 ' + escapeHtml(t.timelineTitle) + '</h2>' +
       filterBar +
