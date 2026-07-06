@@ -2728,6 +2728,18 @@
     "display_name": "Simulation Benchmark",
     "papers": [
       {
+        "title": "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation",
+        "path": "papers/11_Simulation_Benchmark/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation.md",
+        "url": "/papers/11_Simulation_Benchmark/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation.html",
+        "dir": "SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation",
+        "arxiv": "2606.08278",
+        "has_open_source": true,
+        "published_date_zh": "2026年6月6日（arXiv）",
+        "published_date_en": "Jun 6, 2026 (arXiv)",
+        "zhname": "SIMPLE：面向人形机器人全身移动操作的仿真策略学习与评测平台",
+        "zh_title": "SIMPLE：面向人形机器人全身移动操作的仿真策略学习与评测平台"
+      },
+      {
         "title": "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors",
         "path": "papers/11_Simulation_Benchmark/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors.md",
         "url": "/papers/11_Simulation_Benchmark/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors/GRAIL__Generating_Humanoid_Loco-Manipulation_from_3D_Assets_and_Video_Priors.html",
