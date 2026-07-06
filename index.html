@@ -167,7 +167,7 @@ title: "Home"
           {% assign fold_hidden = cat_data.papers.size | minus: fold_limit %}
         {% endif %}
       {% endunless %}
-      <ul class="paper-list{% if should_fold %} has-paper-fold is-folded{% endif %}"{% if should_fold %} data-fold-id="cat-{{ forloop.index }}-papers"{% endif %}>
+      <ul class="paper-list{% if should_fold %} has-paper-fold is-folded{% endif %}"{% if should_fold %} data-fold-id="cat-{{ forloop.index }}-papers" data-fold-step="{{ fold_limit }}" data-fold-initial="{{ fold_limit }}"{% endif %}>
         {% for paper in cat_data.papers %}
         <li{% if should_fold and forloop.index > fold_limit %} class="paper-list-item-folded"{% endif %} data-search="{{ paper.title | escape }} {{ paper.zhname | escape }} {{ paper.arxiv | escape }}">
           {% include paper-card.html paper=paper %}
@@ -175,11 +175,14 @@ title: "Home"
         {% endfor %}
       </ul>
       {% if should_fold %}
-      <button type="button" class="paper-list-toggle-btn" data-fold-id="cat-{{ forloop.index }}-papers" aria-expanded="false"
-        data-en="Show {{ fold_hidden }} older notes ▾"
-        data-zh="展开其余 {{ fold_hidden }} 篇笔记 ▾"
-        data-en-expanded="Hide older notes ▴"
-        data-zh-expanded="收起较早笔记 ▴">Show {{ fold_hidden }} older notes ▾</button>
+      <div class="paper-list-toggle-group" data-fold-id="cat-{{ forloop.index }}-papers">
+        <button type="button" class="paper-list-toggle-btn paper-list-more-btn" data-fold-id="cat-{{ forloop.index }}-papers"
+          data-en="Show {{ fold_limit }} more ▾"
+          data-zh="再展开 {{ fold_limit }} 篇 ▾">Show {{ fold_limit }} more ▾</button>
+        <button type="button" class="paper-list-toggle-btn paper-list-all-btn" data-fold-id="cat-{{ forloop.index }}-papers"
+          data-en="Show all {{ fold_hidden }} notes ▾"
+          data-zh="展开全部 {{ fold_hidden }} 篇 ▾">Show all {{ fold_hidden }} notes ▾</button>
+      </div>
       {% endif %}
       {% else %}
       <p class="empty-hint" data-en="No notes yet, stay tuned..." data-zh="暂无笔记，敬请期待...">No notes yet, stay tuned...</p>
@@ -270,59 +273,111 @@ title: "Home"
     return document.documentElement.getAttribute('data-lang-mode') === 'zh' ? 'zh' : 'en';
   }
 
-  function updateToggleLabel(btn, expanded) {
+  function getFoldedItems(list) {
+    return Array.from(list.querySelectorAll('li.paper-list-item-folded'));
+  }
+
+  function getVisibleCount(list) {
+    return list.querySelectorAll('li[data-search]').length - getFoldedItems(list).length;
+  }
+
+  function getFoldGroup(foldId) {
+    return document.querySelector('.paper-list-toggle-group[data-fold-id="' + foldId + '"]');
+  }
+
+  function updateFoldLabels(group, hiddenCount, step) {
+    var moreBtn = group.querySelector('.paper-list-more-btn');
+    var allBtn = group.querySelector('.paper-list-all-btn');
     var useZh = getLang() === 'zh';
-    if (expanded) {
-      btn.textContent = useZh ? btn.getAttribute('data-zh-expanded') : btn.getAttribute('data-en-expanded');
-    } else {
-      btn.textContent = useZh ? btn.getAttribute('data-zh') : btn.getAttribute('data-en');
+    var moreCount = Math.min(step, hiddenCount);
+    if (moreBtn) {
+      moreBtn.textContent = useZh
+        ? '再展开 ' + moreCount + ' 篇 ▾'
+        : 'Show ' + moreCount + ' more ▾';
+    }
+    if (allBtn) {
+      allBtn.textContent = useZh
+        ? '展开全部 ' + hiddenCount + ' 篇 ▾'
+        : 'Show all ' + hiddenCount + ' notes ▾';
     }
   }
 
-  function setFoldState(list, expanded, persist) {
+  function updateFoldUI(list, persist) {
     var foldId = list.getAttribute('data-fold-id');
-    var btn = document.querySelector('.paper-list-toggle-btn[data-fold-id="' + foldId + '"]');
-    if (expanded) {
+    var group = getFoldGroup(foldId);
+    var hiddenCount = getFoldedItems(list).length;
+    var step = parseInt(list.getAttribute('data-fold-step') || '5', 10);
+
+    if (hiddenCount === 0) {
       list.classList.remove('is-folded');
+      if (group) group.style.display = 'none';
     } else {
       list.classList.add('is-folded');
+      if (group) {
+        group.style.display = '';
+        updateFoldLabels(group, hiddenCount, step);
+      }
     }
-    if (btn) {
-      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-      updateToggleLabel(btn, expanded);
-    }
+
     if (persist && foldId) {
       try {
-        localStorage.setItem(FOLD_PREFIX + foldId, expanded ? 'true' : 'false');
+        localStorage.setItem(FOLD_PREFIX + foldId, String(getVisibleCount(list)));
       } catch (e) {}
     }
   }
 
+  function applyVisibleCount(list, targetVisible, persist) {
+    var items = Array.from(list.querySelectorAll('li[data-search]'));
+    var initial = parseInt(list.getAttribute('data-fold-initial') || '5', 10);
+    var target = Math.max(initial, Math.min(items.length, targetVisible));
+    items.forEach(function(li, idx) {
+      if (idx < target) li.classList.remove('paper-list-item-folded');
+      else li.classList.add('paper-list-item-folded');
+    });
+    updateFoldUI(list, persist);
+  }
+
   foldLists.forEach(function(list) {
     var foldId = list.getAttribute('data-fold-id');
-    var btn = document.querySelector('.paper-list-toggle-btn[data-fold-id="' + foldId + '"]');
-    if (!btn) return;
+    var group = getFoldGroup(foldId);
+    if (!group) return;
 
     var saved = null;
     try {
       saved = localStorage.getItem(FOLD_PREFIX + foldId);
     } catch (e) {}
     if (saved === 'true') {
-      setFoldState(list, true, false);
+      applyVisibleCount(list, list.querySelectorAll('li[data-search]').length, false);
+    } else if (saved && saved !== 'false') {
+      var target = parseInt(saved, 10);
+      if (!isNaN(target)) applyVisibleCount(list, target, false);
+      else updateFoldUI(list, false);
     } else {
-      updateToggleLabel(btn, false);
+      updateFoldUI(list, false);
     }
 
-    btn.addEventListener('click', function() {
-      var expanded = list.classList.contains('is-folded');
-      setFoldState(list, expanded, true);
-    });
+    var moreBtn = group.querySelector('.paper-list-more-btn');
+    var allBtn = group.querySelector('.paper-list-all-btn');
+    if (moreBtn) {
+      moreBtn.addEventListener('click', function() {
+        var step = parseInt(list.getAttribute('data-fold-step') || '5', 10);
+        applyVisibleCount(list, getVisibleCount(list) + step, true);
+      });
+    }
+    if (allBtn) {
+      allBtn.addEventListener('click', function() {
+        applyVisibleCount(list, list.querySelectorAll('li[data-search]').length, true);
+      });
+    }
   });
 
   document.addEventListener('cl-lang-changed', function() {
-    document.querySelectorAll('.paper-list-toggle-btn[data-fold-id]').forEach(function(btn) {
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      updateToggleLabel(btn, expanded);
+    foldLists.forEach(function(list) {
+      var foldId = list.getAttribute('data-fold-id');
+      var group = getFoldGroup(foldId);
+      if (!group || group.style.display === 'none') return;
+      var step = parseInt(list.getAttribute('data-fold-step') || '5', 10);
+      updateFoldLabels(group, getFoldedItems(list).length, step);
     });
   });
 
@@ -332,7 +387,7 @@ title: "Home"
       foldStateBeforeSearch = new Map();
       foldLists.forEach(function(list) {
         var id = list.getAttribute('data-fold-id');
-        foldStateBeforeSearch.set(id, list.classList.contains('is-folded'));
+        foldStateBeforeSearch.set(id, getVisibleCount(list));
         list.classList.remove('is-folded');
       });
       document.body.classList.add('index-search-active');
@@ -341,11 +396,7 @@ title: "Home"
     if (!foldStateBeforeSearch) return;
     foldLists.forEach(function(list) {
       var id = list.getAttribute('data-fold-id');
-      if (foldStateBeforeSearch.get(id)) {
-        list.classList.add('is-folded');
-      } else {
-        list.classList.remove('is-folded');
-      }
+      applyVisibleCount(list, foldStateBeforeSearch.get(id), false);
     });
     foldStateBeforeSearch = null;
     document.body.classList.remove('index-search-active');
