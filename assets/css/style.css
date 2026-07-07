@@ -1954,17 +1954,17 @@ body.sponsor-dialog-open {
   padding: 2px;
 }
 
-/* Fluid width: 53 columns of minmax(floor, 1fr) share the row; on narrow
-   screens cells hit the floor, min-width kicks in and the wrapper scrolls
-   (anchored to the newest week via scrollLeft). */
+/* Fluid width: exactly 53 week columns share the row; on narrow screens cells
+   hit the floor, min-width kicks in and the wrapper scrolls (anchored to the
+   newest week via scrollLeft). */
 .updates-heatmap-inner {
   min-width: max-content;
+  max-width: 100%;
 }
 
 .updates-heatmap-months {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(var(--hm-cell-min), 1fr);
+  grid-template-columns: repeat(53, minmax(var(--hm-cell-min), 1fr));
   gap: var(--hm-gap);
   margin-left: calc(26px + var(--hm-gap));
   height: 18px;
@@ -2000,8 +2000,8 @@ body.sponsor-dialog-open {
   min-width: 0;
   display: grid;
   grid-auto-flow: column;
+  grid-template-columns: repeat(53, minmax(var(--hm-cell-min), 1fr));
   grid-template-rows: repeat(7, auto);
-  grid-auto-columns: minmax(var(--hm-cell-min), 1fr);
   gap: var(--hm-gap);
 }
 

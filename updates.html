@@ -40,7 +40,8 @@ title: "Update Log"
 
   var BASE = {{ site.baseurl | jsonify }} || '';
   var DAY_MS = 24 * 60 * 60 * 1000;
-  // GitHub-style fixed one-year window: 53 week columns, newest week rightmost.
+  // GitHub-style sliding window: exactly 53 week columns; as new days appear on
+  // the right, the same number of days drop off the left (never grow from min date).
   var WEEKS = 53;
   var FOLD_SHOW = 12;
   var FOLD_LIMIT = 14;
@@ -181,19 +182,23 @@ title: "Update Log"
     return 4;
   }
 
-  // Window ends at the later of today (viewer's local date) and the newest
-  // data day, so freshly generated data is always inside the grid.
+  function mondayWeekStartMs(ms) {
+    // getUTCDay(): 0 = Sunday → Monday-first row index is (day + 6) % 7.
+    return ms - ((new Date(ms).getUTCDay() + 6) % 7) * DAY_MS;
+  }
+
+  // Right edge = later of viewer-local today and newest data day; left edge is
+  // always exactly WEEKS columns earlier (sliding window, not earliest commit).
   var now = new Date();
   var todayMs = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
-  var endMs = Math.max(todayMs, maxMs);
-  // getUTCDay(): 0 = Sunday → Monday-first row index is (day + 6) % 7.
-  var endWeekStartMs = endMs - ((new Date(endMs).getUTCDay() + 6) % 7) * DAY_MS;
-  var startMs = endWeekStartMs - (WEEKS - 1) * 7 * DAY_MS;
+  var heatmapEndMs = Math.max(todayMs, maxMs);
+  var heatmapLastWeekStartMs = mondayWeekStartMs(heatmapEndMs);
+  var heatmapStartMs = heatmapLastWeekStartMs - (WEEKS - 1) * 7 * DAY_MS;
 
   var yearTotal = 0;
   days.forEach(function(day) {
     var ms = parseDateMs(day.d);
-    if (ms !== null && ms >= startMs && ms <= endMs) yearTotal += dayCount(day);
+    if (ms !== null && ms >= heatmapStartMs && ms <= heatmapEndMs) yearTotal += dayCount(day);
   });
 
   function noteTitle(note, lang) {
@@ -230,9 +235,8 @@ title: "Update Log"
     var monthsHtml = '';
     var prevMonth = -1;
     var lastLabelWeek = -2;
-    var week = 0;
-
-    for (var weekMs = startMs; weekMs <= endWeekStartMs; weekMs += 7 * DAY_MS, week++) {
+    for (var week = 0; week < WEEKS; week++) {
+      var weekMs = heatmapStartMs + week * 7 * DAY_MS;
       var month = new Date(weekMs).getUTCMonth();
       var monthLabel = '';
       if (month !== prevMonth) {
@@ -247,7 +251,7 @@ title: "Update Log"
 
       for (var row = 0; row < 7; row++) {
         var dayMs = weekMs + row * DAY_MS;
-        if (dayMs > endMs) {
+        if (dayMs > heatmapEndMs) {
           cellsHtml += '<span class="updates-heatmap-cell is-pad" aria-hidden="true"></span>';
           continue;
         }
@@ -284,7 +288,7 @@ title: "Update Log"
       '<div class="updates-heatmap-months" aria-hidden="true">' + monthsHtml + '</div>' +
       '<div class="updates-heatmap-body">' +
       '<div class="updates-heatmap-weekdays" aria-hidden="true">' + weekdaysHtml + '</div>' +
-      '<div class="updates-heatmap-grid" role="group" aria-label="' + escapeHtml(t.heatmapAria) + '">' +
+      '<div class="updates-heatmap-grid" data-weeks="' + WEEKS + '" role="group" aria-label="' + escapeHtml(t.heatmapAria) + '">' +
       cellsHtml +
       '</div></div></div></div>' +
       '<div class="updates-heatmap-legend">' +
