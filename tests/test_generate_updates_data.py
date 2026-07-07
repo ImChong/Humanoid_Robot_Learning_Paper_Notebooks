@@ -167,6 +167,37 @@ def test_load_note_meta_indexes_top_level_and_subcategory_papers(tmp_path):
     assert "z" not in meta[NOTE_B]
 
 
+def test_load_note_meta_includes_open_source_flag(tmp_path):
+    papers_json = tmp_path / "papers.json"
+    papers_json.write_text(
+        json.dumps(
+            {
+                "01_Foundational_RL": {
+                    "display_name": "Foundational RL",
+                    "papers": [
+                        {
+                            "title": "PPO",
+                            "path": NOTE_A,
+                            "url": "/papers/01_Foundational_RL/PPO/PPO.html",
+                            "has_open_source": True,
+                        },
+                        {
+                            "title": "HOMIE",
+                            "path": NOTE_B,
+                            "url": "/papers/05_Locomotion/HOMIE/HOMIE.html",
+                        },
+                    ],
+                }
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    meta = load_note_meta(str(papers_json))
+    assert meta[NOTE_A]["o"] is True
+    assert "o" not in meta[NOTE_B]
+
+
 def test_load_note_meta_missing_file_returns_empty(tmp_path):
     assert load_note_meta(str(tmp_path / "missing.json")) == {}
 

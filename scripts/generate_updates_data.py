@@ -19,7 +19,7 @@ Output schema (keys kept short — the JSON is embedded into the page)::
       "generated": "2026-07-03",          # build date (UTC)
       "notes": [                           # one entry per current note
         {"t": "Title", "z": "中文标题", "u": "/papers/...html",
-         "c": "Locomotion", "cz": "行走运动"},
+         "c": "Locomotion", "cz": "行走运动", "o": true},
         ...
       ],
       "days": [                            # newest first; indices into notes
@@ -166,6 +166,8 @@ def load_note_meta(papers_json_path: str = PAPERS_JSON_PATH) -> dict[str, dict]:
                 entry["c"] = cat_en
             if cat_zh:
                 entry["cz"] = cat_zh
+            if paper.get("has_open_source"):
+                entry["o"] = True
             meta[path] = entry
     return meta
 

@@ -308,9 +308,13 @@ title: "Update Log"
     var titleHtml = href
       ? '<a class="updates-item-link" href="' + escapeHtml(href) + '">' + escapeHtml(title) + '</a>'
       : '<span class="updates-item-link">' + escapeHtml(title) + '</span>';
+    var openSourceHtml = note && note.o
+      ? '<span class="updates-item-opensource" aria-label="笔记含开源源码链接" title="⭐️ 笔记含开源源码链接">⭐️</span>'
+      : '';
     return '<li class="updates-item' + (folded ? ' updates-item-folded' : '') + '">' +
       '<span class="updates-badge ' + badgeClass + '">' + escapeHtml(badgeText) + '</span>' +
       titleHtml +
+      openSourceHtml +
       (cat ? '<span class="updates-item-cat">' + escapeHtml(cat) + '</span>' : '') +
       '</li>';
   }
