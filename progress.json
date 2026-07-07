@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 10,
-      "last_title": "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation (arXiv:2606.08278)",
-      "next_module": "12_Hardware_Design"
+      "last_module": "12_Hardware_Design",
+      "last_index": 11,
+      "last_title": "Human-Level Actuation for Humanoids (arXiv:2511.06796)",
+      "next_module": "13_Physics-Based_Animation"
     },
-    "last_summary_index": 10,
-    "last_summary_date": "2026-07-06",
-    "last_summary_title": "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation (arXiv:2606.08278)",
+    "last_summary_index": 11,
+    "last_summary_date": "2026-07-07",
+    "last_summary_title": "Human-Level Actuation for Humanoids (arXiv:2511.06796)",
     "next_summary_index": null,
     "log": [
       {
@@ -1142,6 +1142,18 @@
         "arxiv": "2606.08278",
         "source_repo": "https://github.com/physical-superintelligence-lab/SIMPLE",
         "project_page": "https://psi-lab.ai/SIMPLE/"
+      },
+      {
+        "date": "2026-07-07",
+        "index": "417",
+        "title": "Human-Level Actuation for Humanoids",
+        "module": "12_Hardware_Design",
+        "category": "12_Hardware_Design",
+        "note_path": "papers/12_Hardware_Design/Human-Level_Actuation_for_Humanoids/Human-Level_Actuation_for_Humanoids.md",
+        "track": "module_rotation",
+        "arxiv": "2511.06796",
+        "source_repo": null,
+        "project_page": null
       }
     ],
     "last_completed_index": 368,

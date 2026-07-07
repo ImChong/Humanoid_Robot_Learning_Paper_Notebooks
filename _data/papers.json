@@ -2718,6 +2718,17 @@
         "published_date_en": "Nov 13, 2025 (arXiv)",
         "zhname": "DecArt Leg：面向敏捷运动的解耦驱动新型人形机器人腿设计与评估",
         "zh_title": "DecArt Leg：面向敏捷运动的解耦驱动新型人形机器人腿设计与评估"
+      },
+      {
+        "title": "Human-Level Actuation for Humanoids",
+        "path": "papers/12_Hardware_Design/Human-Level_Actuation_for_Humanoids/Human-Level_Actuation_for_Humanoids.md",
+        "url": "/papers/12_Hardware_Design/Human-Level_Actuation_for_Humanoids/Human-Level_Actuation_for_Humanoids.html",
+        "dir": "Human-Level_Actuation_for_Humanoids",
+        "arxiv": "2511.06796",
+        "published_date_zh": "2025年11月10日（arXiv）",
+        "published_date_en": "Nov 10, 2025 (arXiv)",
+        "zhname": "Human-Level Actuation for Humanoids：人形关节驱动器的「人级」量化评测框架",
+        "zh_title": "Human-Level Actuation for Humanoids：人形关节驱动器的「人级」量化评测框架"
       }
     ],
     "zhname": "硬件设计",
