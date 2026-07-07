@@ -135,7 +135,7 @@
   Diffusion Policy (2023) → BeyondMimic (2025)
        ↓
 ④ 【全身控制 WBC】        ← 把技能 / 扩散策略落到整机关节
-  Expressive WBC (2024) → HOVER (2024) / HugWBC (2025) / ExBody2 (2024)
+  Expressive WBC (2024) → HOVER (2024) / HugWBC (2025) / ExBody2 (2024) / SONIC (2025)
        ↓
    ┌── 从 WBC / 扩散分出多条上行支线，最终都汇聚到 ⑨ ──┐
    │
