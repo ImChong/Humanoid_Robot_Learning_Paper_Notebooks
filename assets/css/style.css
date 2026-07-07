@@ -2199,6 +2199,11 @@ a.updates-item-link:hover {
   text-decoration: underline;
 }
 
+.updates-item-opensource {
+  flex: none;
+  line-height: 1;
+}
+
 .updates-item-cat {
   flex: none;
   font-family: 'Arial', 'Helvetica Neue', sans-serif;
