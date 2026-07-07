@@ -110,6 +110,30 @@ def test_sort_papers_by_arxiv_oldest_first():
     assert [p["title"] for p in papers] == ["old", "new"]
 
 
+def test_sort_papers_by_published_date_uses_shown_date():
+    """Displayed date wins over arXiv id: no-arXiv and release-dated notes
+    sort by the date printed on the card, not by arXiv-id position."""
+    papers = [
+        # No arXiv id, dated ~Sep 2025 — must NOT sort first.
+        {"title": "platform", "published_date_zh": "2025年9月 research page"},
+        {"title": "old", "arxiv": "2404.05695", "published_date_zh": "2024年4月8日（arXiv）"},
+        # arXiv 2409 (Sep 2024) but dated by a Dec 2025 release — must sort last.
+        {"title": "release", "arxiv": "2409.14393", "published_date_zh": "2025年12月2日（GitHub v3 发布）"},
+        {"title": "mid", "arxiv": "2503.05652", "published_date_zh": "2025年3月7日（arXiv）"},
+    ]
+    prepare_pages.sort_papers_by_published_date(papers)
+    assert [p["title"] for p in papers] == ["old", "mid", "platform", "release"]
+
+
+def test_published_date_sort_key_falls_back_to_arxiv():
+    """When no ``published_date_zh`` is present, fall back to the arXiv id."""
+    assert prepare_pages._published_date_sort_key({"arxiv": "2404.05695"}) == (2024, 4, 0)
+    assert prepare_pages._published_date_sort_key(
+        {"published_date_zh": "2020年10月21日"}
+    ) == (2020, 10, 21)
+    assert prepare_pages._published_date_sort_key({}) == (-1, -1, -1)
+
+
 def test_category_sort_policy_constants():
     """Only foundational RL keeps PROGRESS order; motion retargeting & high impact are oldest-first."""
     assert prepare_pages.CATEGORIES_PROGRESS_ORDER == frozenset({"01_Foundational_RL"})
@@ -123,7 +147,7 @@ def test_apply_sort_order_hint_category_and_subcategories():
     entry = {"subcategories": [{"name": "Whole-Body Control Core", "papers": []}]}
     prepare_pages.apply_sort_order_hint(entry, "03_High_Impact_Selection")
     assert "旧→新" in entry["sort_order_hint_zh"]
-    assert entry["subcategories"][0]["sort_order_hint_zh"].startswith("论文标签按 arXiv")
+    assert entry["subcategories"][0]["sort_order_hint_zh"].startswith("论文标签按发表时间")
 
     newest_entry = {}
     prepare_pages.apply_sort_order_hint(newest_entry, "04_Loco-Manipulation_and_WBC")

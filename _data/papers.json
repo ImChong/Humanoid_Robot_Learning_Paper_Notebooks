@@ -327,8 +327,8 @@
           }
         ],
         "zhname": "全身控制核心",
-        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
-        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
+        "sort_order_hint": "Paper tags ordered by publication date, oldest first",
+        "sort_order_hint_zh": "论文标签按发表时间旧→新排列"
       },
       {
         "name": "Teleoperation & Imitation Learning",
@@ -370,8 +370,8 @@
           }
         ],
         "zhname": "遥操作与模仿学习",
-        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
-        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
+        "sort_order_hint": "Paper tags ordered by publication date, oldest first",
+        "sort_order_hint_zh": "论文标签按发表时间旧→新排列"
       },
       {
         "name": "Locomotion Classics",
@@ -446,8 +446,8 @@
           }
         ],
         "zhname": "行走经典",
-        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
-        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
+        "sort_order_hint": "Paper tags ordered by publication date, oldest first",
+        "sort_order_hint_zh": "论文标签按发表时间旧→新排列"
       },
       {
         "name": "Sim-to-Real & Foundation Model",
@@ -500,23 +500,12 @@
           }
         ],
         "zhname": "仿真到现实与基座模型",
-        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
-        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
+        "sort_order_hint": "Paper tags ordered by publication date, oldest first",
+        "sort_order_hint_zh": "论文标签按发表时间旧→新排列"
       },
       {
         "name": "Simulation Platform & Tools",
         "papers": [
-          {
-            "title": "Isaac Lab: Unified GPU Simulation Platform for Robot Learning",
-            "path": "papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.md",
-            "url": "/papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.html",
-            "dir": "Isaac_Lab_GPU_Simulation",
-            "has_open_source": true,
-            "published_date_zh": "2025年9月 research page；项目源自 Orbit / Isaac Gym 生态演进",
-            "published_date_en": "Sep 2025 research page; evolved from the Orbit / Isaac Gym ecosystem",
-            "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台",
-            "zh_title": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
-          },
           {
             "title": "Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer",
             "path": "papers/03_High_Impact_Selection/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer/Humanoid-Gym_Zero-Shot_Sim2Real_Transfer.md",
@@ -530,18 +519,6 @@
             "zh_title": "Humanoid-Gym：面向人形机器人零样本 Sim2Real 的 RL 框架"
           },
           {
-            "title": "ProtoMotions3: An Open-source Framework for Humanoid Simulation and Control",
-            "path": "papers/03_High_Impact_Selection/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control.md",
-            "url": "/papers/03_High_Impact_Selection/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control.html",
-            "dir": "ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control",
-            "arxiv": "2409.14393",
-            "has_open_source": true,
-            "published_date_zh": "2025年12月2日（GitHub v3 发布）",
-            "published_date_en": "Dec 2, 2025 (GitHub v3 release)",
-            "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架",
-            "zh_title": "ProtoMotions3：面向人形仿真与控制的开源框架"
-          },
-          {
             "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
             "path": "papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.md",
             "url": "/papers/03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.html",
@@ -552,15 +529,38 @@
             "published_date_en": "Mar 7, 2025 (arXiv), CoRL 2025",
             "zhname": "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架",
             "zh_title": "BEHAVIOR Robot Suite：面向日常家务的实机全身操作框架"
+          },
+          {
+            "title": "Isaac Lab: Unified GPU Simulation Platform for Robot Learning",
+            "path": "papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.md",
+            "url": "/papers/03_High_Impact_Selection/Isaac_Lab_GPU_Simulation/Isaac_Lab_GPU_Simulation.html",
+            "dir": "Isaac_Lab_GPU_Simulation",
+            "has_open_source": true,
+            "published_date_zh": "2025年9月 research page；项目源自 Orbit / Isaac Gym 生态演进",
+            "published_date_en": "Sep 2025 research page; evolved from the Orbit / Isaac Gym ecosystem",
+            "zhname": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台",
+            "zh_title": "Isaac Lab：面向机器人学习的 GPU 仿真统一平台"
+          },
+          {
+            "title": "ProtoMotions3: An Open-source Framework for Humanoid Simulation and Control",
+            "path": "papers/03_High_Impact_Selection/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control.md",
+            "url": "/papers/03_High_Impact_Selection/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control/ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control.html",
+            "dir": "ProtoMotions3_Open-source_Framework_for_Humanoid_Simulation_and_Control",
+            "arxiv": "2409.14393",
+            "has_open_source": true,
+            "published_date_zh": "2025年12月2日（GitHub v3 发布）",
+            "published_date_en": "Dec 2, 2025 (GitHub v3 release)",
+            "zhname": "ProtoMotions3：面向人形仿真与控制的开源框架",
+            "zh_title": "ProtoMotions3：面向人形仿真与控制的开源框架"
           }
         ],
         "zhname": "仿真平台与工具",
-        "sort_order_hint": "Paper tags ordered by arXiv date, oldest first",
-        "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列"
+        "sort_order_hint": "Paper tags ordered by publication date, oldest first",
+        "sort_order_hint_zh": "论文标签按发表时间旧→新排列"
       }
     ],
-    "sort_order_hint": "Paper tags ordered by arXiv date, oldest first (same within subcategories)",
-    "sort_order_hint_zh": "论文标签按 arXiv 发表时间旧→新排列（各子模块同理）"
+    "sort_order_hint": "Paper tags ordered by publication date, oldest first (same within subcategories)",
+    "sort_order_hint_zh": "论文标签按发表时间旧→新排列（各子模块同理）"
   },
   "04_Loco-Manipulation_and_WBC": {
     "display_name": "Loco-Manipulation and WBC",

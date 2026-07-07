@@ -81,6 +81,8 @@ _MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 _MD_CHARS_RE = re.compile(r"[*_`\[\]]")
 _CATEGORY_PREFIX_RE = re.compile(r"^\d+_")
 _ARXIV_ID_PARTS_RE = re.compile(r"^(\d{2})(\d{2})\.(\d{4,5})(?:v\d+)?$")
+# Matches the "YYYY年M月[D日]" prefix of a curated ``published_date_zh`` value.
+_PUBLISHED_DATE_ZH_RE = re.compile(r"(\d{4})\s*年\s*(\d{1,2})\s*月(?:\s*(\d{1,2})\s*日)?")
 _ARXIV_VERSION_SUFFIX_RE = re.compile(r"v\d+$")
 _ARXIV_FALLBACK_RE = re.compile(r"arxiv", re.IGNORECASE)
 _ARXIV_PATTERNS = [
@@ -107,8 +109,8 @@ CATEGORY_SORT_ORDER_HINT = {
         "zh": "论文标签按 arXiv 发表时间旧→新排列",
     },
     "03_High_Impact_Selection": {
-        "en": "Paper tags ordered by arXiv date, oldest first (same within subcategories)",
-        "zh": "论文标签按 arXiv 发表时间旧→新排列（各子模块同理）",
+        "en": "Paper tags ordered by publication date, oldest first (same within subcategories)",
+        "zh": "论文标签按发表时间旧→新排列（各子模块同理）",
     },
 }
 
@@ -118,8 +120,8 @@ DEFAULT_SORT_ORDER_HINT = {
 }
 
 _SUBCATEGORY_SORT_ORDER_HINT = {
-    "en": "Paper tags ordered by arXiv date, oldest first",
-    "zh": "论文标签按 arXiv 发表时间旧→新排列",
+    "en": "Paper tags ordered by publication date, oldest first",
+    "zh": "论文标签按发表时间旧→新排列",
 }
 
 
@@ -657,6 +659,38 @@ def sort_papers_by_arxiv(papers, *, newest_first: bool):
     )
 
 
+def _published_date_sort_key(paper):
+    """Return an oldest-first ``(year, month, day)`` key from the shown date.
+
+    Prefers the human-curated ``published_date_zh`` so notes without an arXiv id
+    (e.g. a simulation platform) and notes dated by a later release than their
+    arXiv preprint (e.g. a GitHub version tag) sort by the date printed on the
+    card. Falls back to the arXiv id, then to a sentinel that sorts first.
+    """
+    m = _PUBLISHED_DATE_ZH_RE.search(paper.get("published_date_zh") or "")
+    if m:
+        return (int(m.group(1)), int(m.group(2)), int(m.group(3) or 0))
+    yy, mm, _seq = _arxiv_sort_key(paper.get("arxiv"))
+    if (yy, mm) != (-1, -1):
+        return (2000 + yy, mm, 0)
+    return (-1, -1, -1)
+
+
+def sort_papers_by_published_date(papers):
+    """Sort papers oldest-first by displayed publication date (arXiv fallback).
+
+    Used for high-impact subcategories so the visible dates read strictly
+    old→new, which pure arXiv-id sorting cannot guarantee for entries whose
+    shown date differs from (or lacks) an arXiv id.
+    """
+    papers.sort(
+        key=lambda p: (
+            _published_date_sort_key(p),
+            _order_tiebreaker(p, newest_first=False),
+        )
+    )
+
+
 def parse_high_impact_h_order():
     """Parse PROGRESS.md rows whose first column is ``H1``…``H23``.
 
@@ -997,7 +1031,7 @@ def process_papers():
             entry["papers"] = ungrouped
             if category_dir in CATEGORIES_ARXIV_OLDEST_FIRST:
                 for sc in entry["subcategories"]:
-                    sort_papers_by_arxiv(sc["papers"], newest_first=False)
+                    sort_papers_by_published_date(sc["papers"])
 
         apply_sort_order_hint(entry, category_dir)
 
