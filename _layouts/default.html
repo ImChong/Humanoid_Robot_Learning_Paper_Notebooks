@@ -204,6 +204,7 @@
     end
     subgraph SG_Data ["Data and Retargeting"]
         DataNode(["AMASS / HumanML3D<br/><span class='roadmap-node-year'>2019 / 2022</span>"]) --> Target(["Motion Retargeting<br/><span class='roadmap-node-year'>2025</span>"])
+        Target --> OmniRetarget(["OmniRetarget<br/><span class='roadmap-node-year'>2025</span>"])
     end
     subgraph SG_Style ["2 · Imitation and Style"]
         DM --> AMP(["AMP<br/><span class='roadmap-node-year'>2021</span>"])
@@ -244,6 +245,7 @@
     end
     Target -.-> DM
     Target -.-> AMP
+    OmniRetarget -.-> HOMIE
     PHC --> ASE
     PULSE --> DP
     PULSE --> EWBC
@@ -270,6 +272,7 @@
     end
     subgraph SG_Data ["数据与重定向"]
         DataNode(["AMASS / HumanML3D<br/><span class='roadmap-node-year'>2019 / 2022</span>"]) --> Target(["动作重定向<br/><span class='roadmap-node-year'>2025</span>"])
+        Target --> OmniRetarget(["OmniRetarget<br/><span class='roadmap-node-year'>2025</span>"])
     end
     subgraph SG_Style ["2 · 模仿与风格"]
         DM --> AMP(["AMP<br/><span class='roadmap-node-year'>2021</span>"])
@@ -310,6 +313,7 @@
     end
     Target -.-> DM
     Target -.-> AMP
+    OmniRetarget -.-> HOMIE
     PHC --> ASE
     PULSE --> DP
     PULSE --> EWBC
