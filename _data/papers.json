@@ -3045,6 +3045,17 @@
         "zh_title": "Learning to Ball：用「策略组合 + 高层软路由」拼出长程篮球连招"
       },
       {
+        "title": "RobotDancing: Residual-Action Reinforcement Learning Enables Robust Long-Horizon Humanoid Motion Tracking",
+        "path": "papers/13_Physics-Based_Animation/RobotDancing__Residual-Action_RL_Enables_Robust_Long-Horizon_Motion_Tracking/RobotDancing__Residual-Action_RL_Enables_Robust_Long-Horizon_Motion_Tracking.md",
+        "url": "/papers/13_Physics-Based_Animation/RobotDancing__Residual-Action_RL_Enables_Robust_Long-Horizon_Motion_Tracking/RobotDancing__Residual-Action_RL_Enables_Robust_Long-Horizon_Motion_Tracking.html",
+        "dir": "RobotDancing__Residual-Action_RL_Enables_Robust_Long-Horizon_Motion_Tracking",
+        "arxiv": "2509.20717",
+        "published_date_zh": "2025年9月25日（arXiv）",
+        "published_date_en": "Sep 25, 2025 (arXiv)",
+        "zhname": "RobotDancing：残差动作强化学习实现鲁棒的长时程人形动作追踪",
+        "zh_title": "RobotDancing：残差动作强化学习实现鲁棒的长时程人形动作追踪"
+      },
+      {
         "title": "Spatial Relationship Preserving Character Motion Adaptation",
         "path": "papers/13_Physics-Based_Animation/Spatial_Relationship_Preserving_Character_Motion_Adaptation/Spatial_Relationship_Preserving_Character_Motion_Adaptation.md",
         "url": "/papers/13_Physics-Based_Animation/Spatial_Relationship_Preserving_Character_Motion_Adaptation/Spatial_Relationship_Preserving_Character_Motion_Adaptation.html",

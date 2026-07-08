@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 11,
-      "last_title": "Human-Level Actuation for Humanoids (arXiv:2511.06796)",
-      "next_module": "13_Physics-Based_Animation"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 12,
+      "last_title": "RobotDancing: Residual-Action RL Enables Robust Long-Horizon Humanoid Motion Tracking (arXiv:2509.20717)",
+      "next_module": "14_Human_Motion"
     },
-    "last_summary_index": 11,
-    "last_summary_date": "2026-07-07",
-    "last_summary_title": "Human-Level Actuation for Humanoids (arXiv:2511.06796)",
+    "last_summary_index": 12,
+    "last_summary_date": "2026-07-08",
+    "last_summary_title": "RobotDancing: Residual-Action RL Enables Robust Long-Horizon Humanoid Motion Tracking",
     "next_summary_index": null,
     "log": [
       {
@@ -1154,6 +1154,15 @@
         "arxiv": "2511.06796",
         "source_repo": null,
         "project_page": null
+      },
+      {
+        "date": "2026-07-08",
+        "index": 554,
+        "title": "RobotDancing: Residual-Action Reinforcement Learning Enables Robust Long-Horizon Humanoid Motion Tracking",
+        "folder": "papers/13_Physics-Based_Animation/RobotDancing__Residual-Action_RL_Enables_Robust_Long-Horizon_Motion_Tracking",
+        "module": "13_Physics-Based_Animation",
+        "arxiv": "2509.20717",
+        "source": "论文未公开代码/项目页 · 残差动作 RL(q^tar=q^ref+a) 显式补偿模型-实机差异 · 仅髋/膝 pitch 选择性残差化(全局位置误差↓15.7%) · 单阶段非对称 PPO(MuJoCo·50Hz) · Orin NX 零样本部署 · LAFAN1 全 8 段舞蹈在 Unitree G1 跑通并迁移 H1/H1-2 · TUM 等 · 模块轮转（12_Hardware_Design → 13_Physics-Based_Animation）"
       }
     ],
     "last_completed_index": 368,
