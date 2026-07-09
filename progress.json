@@ -41,14 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "13_Physics-Based_Animation",
-      "last_index": 12,
-      "last_title": "RobotDancing: Residual-Action RL Enables Robust Long-Horizon Humanoid Motion Tracking (arXiv:2509.20717)",
-      "next_module": "14_Human_Motion"
+      "last_module": "14_Human_Motion",
+      "last_index": 13,
+      "last_title": "HUMOTO: A 4D Dataset of Mocap Human Object Interactions (arXiv:2504.10414)",
+      "next_module": "04_Loco-Manipulation_and_WBC"
     },
-    "last_summary_index": 12,
-    "last_summary_date": "2026-07-08",
-    "last_summary_title": "RobotDancing: Residual-Action RL Enables Robust Long-Horizon Humanoid Motion Tracking",
+    "last_summary_index": 13,
+    "last_summary_date": "2026-07-09",
+    "last_summary_title": "HUMOTO: A 4D Dataset of Mocap Human Object Interactions",
     "next_summary_index": null,
     "log": [
       {
@@ -1163,6 +1163,17 @@
         "module": "13_Physics-Based_Animation",
         "arxiv": "2509.20717",
         "source": "论文未公开代码/项目页 · 残差动作 RL(q^tar=q^ref+a) 显式补偿模型-实机差异 · 仅髋/膝 pitch 选择性残差化(全局位置误差↓15.7%) · 单阶段非对称 PPO(MuJoCo·50Hz) · Orin NX 零样本部署 · LAFAN1 全 8 段舞蹈在 Unitree G1 跑通并迁移 H1/H1-2 · TUM 等 · 模块轮转（12_Hardware_Design → 13_Physics-Based_Animation）"
+      },
+      {
+        "date": "2026-07-09",
+        "index": 521,
+        "title": "HUMOTO: A 4D Dataset of Mocap Human Object Interactions",
+        "folder": "papers/14_Human_Motion/HUMOTO__A_4D_Dataset_of_Mocap_Human_Object_Interactions",
+        "module": "14_Human_Motion",
+        "arxiv": "2504.10414",
+        "source_repo": "https://github.com/Jiaxin-Lu/humoto",
+        "project_page": "https://jiaxin-lu.github.io/humoto/",
+        "source": "🌟 开源 · LLM 场景编剧(目的性任务脚本)+抗遮挡动捕多相机录制+专业清洗去脚滑穿模 · 735 段·~7875s@30fps·63 精确物体网格·72 铰接人体部件(Mixamo 兼容) · 面向动作生成/姿态估计/机器人仿真/2D 编辑多任务基准 · UT Austin × Adobe Research · ICCV 2025 · 模块轮转（13_Physics-Based_Animation → 14_Human_Motion）"
       }
     ],
     "last_completed_index": 368,
