@@ -3177,6 +3177,18 @@
         "zh_title": "PICO：重建与物体接触的 3D 人体"
       },
       {
+        "title": "HUMOTO: A 4D Dataset of Mocap Human Object Interactions",
+        "path": "papers/14_Human_Motion/HUMOTO__A_4D_Dataset_of_Mocap_Human_Object_Interactions/HUMOTO__A_4D_Dataset_of_Mocap_Human_Object_Interactions.md",
+        "url": "/papers/14_Human_Motion/HUMOTO__A_4D_Dataset_of_Mocap_Human_Object_Interactions/HUMOTO__A_4D_Dataset_of_Mocap_Human_Object_Interactions.html",
+        "dir": "HUMOTO__A_4D_Dataset_of_Mocap_Human_Object_Interactions",
+        "arxiv": "2504.10414",
+        "has_open_source": true,
+        "published_date_zh": "2025年4月（arXiv v1：2025年4月14日；v2：2025年10月15日）· ICCV 2025",
+        "published_date_en": "Apr 2025 (arXiv v1：Apr 14, 2025; v2：Oct 15, 2025)· ICCV 2025",
+        "zhname": "HUMOTO：人-物交互动作捕捉 4D 数据集",
+        "zh_title": "HUMOTO：人-物交互动作捕捉 4D 数据集"
+      },
+      {
         "title": "FRAME: Floor-aligned Representation for Avatar Motion from Egocentric Video",
         "path": "papers/14_Human_Motion/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video.md",
         "url": "/papers/14_Human_Motion/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video/FRAME__Floor-aligned_Representation_for_Avatar_Motion_from_Egocentric_Video.html",
