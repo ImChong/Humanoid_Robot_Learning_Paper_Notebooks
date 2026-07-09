@@ -427,7 +427,7 @@
 | 542  | [Learning Versatile Humanoid Manipulation with Touch Dreaming](https://arxiv.org/abs/2604.13015) ✅ [笔记](06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.md) | 2026.04 | 2026-06-16 | ✅ 已总结 |
 
 
-### Teleoperation（24篇）
+### Teleoperation（25篇）
 
 
 | #   | 论文                                                                                                                                                             | 日期      | 🌟  | 状态   |
@@ -456,6 +456,7 @@
 | 535  | [EgoPoser: Robust Real-Time Egocentric Pose Estimation from Sparse and Intermittent Observations Everywhere](https://arxiv.org/pdf/2308.06493) 🌟              | ECCV 2024 |     | ⏳ 待读 |
 | 536  | [AvatarPoser: Articulated Full-Body Pose Tracking from Sparse Motion Sensing](https://arxiv.org/abs/2207.13784) 🌟                                             | ECCV 2022 |     | ⏳ 待读 |
 | 537  | [A Mobile Robot Hand-Arm Teleoperation System by Vision and IMU](https://arxiv.org/pdf/2003.05212) 🌟                                                          | IROS 2020 |     | ⏳ 待读 |
+| 555  | [Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking](https://arxiv.org/abs/2606.03985) 🌟                                                   | 2026.06 |     | ⏳ 待读 |
 
 
 ### Navigation（19篇）
