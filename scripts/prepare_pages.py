@@ -375,6 +375,7 @@ _PUBLISH_DATE_ZH_BARE_ARXIV_RE = re.compile(r"(?<=[年月日])\s+arXiv(?=[，；
 _CJK_GAP_RE = re.compile(r"(?<=[一-鿿])\s+(?=[一-鿿])")
 _LATIN_BEFORE_CJK_RE = re.compile(r"(?<=[0-9A-Za-z])(?=[一-鿿])")
 _CJK_BEFORE_LATIN_RE = re.compile(r"(?<=[一-鿿])(?=[0-9A-Za-z])")
+_ZH_PUNC_RE = re.compile(r"[（）,;]")
 
 
 def _month_name(month: int, *, short: bool = False) -> str:
@@ -437,22 +438,35 @@ def _zh_top_level_punctuation(text):
     Separators inside parentheses (e.g. ``（ACM TOG, Vol. 39）``) belong to
     embedded English content and are left untouched.
     """
+    if "," not in text and ";" not in text:
+        return text
+
     out = []
     depth = 0
-    i = 0
-    while i < len(text):
-        ch = text[i]
+    last_idx = 0
+
+    for match in _ZH_PUNC_RE.finditer(text):
+        idx = match.start()
+        ch = match.group(0)
+
         if ch == "（":
+            if depth == 0:
+                out.append(text[last_idx:idx])
+                last_idx = idx
             depth += 1
         elif ch == "）":
             depth = max(0, depth - 1)
-        if depth == 0 and ch in ",;":
+            if depth == 0:
+                out.append(text[last_idx:idx + 1])
+                last_idx = idx + 1
+        elif depth == 0:
+            out.append(text[last_idx:idx])
             out.append("，" if ch == "," else "；")
-            if i + 1 < len(text) and text[i + 1] == " ":
-                i += 1
-        else:
-            out.append(ch)
-        i += 1
+            last_idx = idx + 1
+            if last_idx < len(text) and text[last_idx] == " ":
+                last_idx += 1
+
+    out.append(text[last_idx:])
     return "".join(out)
 
 
