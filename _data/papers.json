@@ -566,6 +566,17 @@
     "display_name": "Loco-Manipulation and WBC",
     "papers": [
       {
+        "title": "Athena-WBC: Capability-Aligned Policy Experts for Long-Tail Humanoid Whole-Body Control",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Athena-WBC__Capability-Aligned_Policy_Experts_for_Long-Tail_Humanoid_Whole-Body_Control/Athena-WBC__Capability-Aligned_Policy_Experts_for_Long-Tail_Humanoid_Whole-Body_Control.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Athena-WBC__Capability-Aligned_Policy_Experts_for_Long-Tail_Humanoid_Whole-Body_Control/Athena-WBC__Capability-Aligned_Policy_Experts_for_Long-Tail_Humanoid_Whole-Body_Control.html",
+        "dir": "Athena-WBC__Capability-Aligned_Policy_Experts_for_Long-Tail_Humanoid_Whole-Body_Control",
+        "arxiv": "2607.04837",
+        "published_date_zh": "2026年7月",
+        "published_date_en": "Jul 2026",
+        "zhname": "Athena-WBC：用「能力对齐」的动态/平衡专家攻克人形全身控制的长尾动作",
+        "zh_title": "Athena-WBC：用「能力对齐」的动态/平衡专家攻克人形全身控制的长尾动作"
+      },
+      {
         "title": "SplitAdapter: Load-Aware Humanoid Loco-Manipulation via Factorized Adaptation",
         "path": "papers/04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.html",
