@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_module": "05_Locomotion",
       "last_index": 0,
-      "last_title": "Athena-WBC: Capability-Aligned Policy Experts for Long-Tail Humanoid Whole-Body Control (arXiv:2607.04837)",
-      "next_module": "05_Locomotion"
+      "last_title": "TACT-ful: Multi-Channel Terrain Affordance and Compliance Training for Payload-Robust Perceptive Humanoid Locomotion (arXiv:2606.20645)",
+      "next_module": "06_Manipulation"
     },
     "last_summary_index": 0,
-    "last_summary_date": "2026-07-10",
-    "last_summary_title": "Athena-WBC: Capability-Aligned Policy Experts for Long-Tail Humanoid Whole-Body Control",
+    "last_summary_date": "2026-07-11",
+    "last_summary_title": "TACT-ful: Multi-Channel Terrain Affordance and Compliance Training for Payload-Robust Perceptive Humanoid Locomotion",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-11",
+        "index": 557,
+        "title": "TACT-ful: Multi-Channel Terrain Affordance and Compliance Training for Payload-Robust Perceptive Humanoid Locomotion",
+        "folder": "papers/05_Locomotion/TACT-ful__Multi-Channel_Terrain_Affordance_and_Compliance_for_Payload-Robust_Locomotion",
+        "module": "05_Locomotion",
+        "arxiv": "2606.20645",
+        "source": "🌟 项目页 fai-rl-tech.github.io/tact-locomotion · 四通道地形代价(平整/陡峭/速度感知高度可行性/前进爬升)联动 GPU 并行 DCM 落脚规划器与密集可供性奖励 · 贝塞尔摆动 + 切线导向落脚朝向跨台阶 · 虚拟力矩注入训下肢隐式阻抗、无力传感器扛 ~15kg 负载 · 非对称 PPO 单次端到端(无师生蒸馏) + 域随机化零样本上真机 · 台阶阶高 0.20m 达 1.0m/s、标准地形成功率 70%(↑17pt) · VinRobotics×VinUniversity×TU Darmstadt · 模块轮转（04_Loco-Manipulation_and_WBC → 05_Locomotion）"
+      },
       {
         "date": "2026-07-10",
         "index": 556,
