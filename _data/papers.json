@@ -2061,6 +2061,17 @@
     "display_name": "Locomotion",
     "papers": [
       {
+        "title": "TACT-ful: Multi-Channel Terrain Affordance and Compliance Training for Payload-Robust Perceptive Humanoid Locomotion",
+        "path": "papers/05_Locomotion/TACT-ful__Multi-Channel_Terrain_Affordance_and_Compliance_for_Payload-Robust_Locomotion/TACT-ful__Multi-Channel_Terrain_Affordance_and_Compliance_for_Payload-Robust_Locomotion.md",
+        "url": "/papers/05_Locomotion/TACT-ful__Multi-Channel_Terrain_Affordance_and_Compliance_for_Payload-Robust_Locomotion/TACT-ful__Multi-Channel_Terrain_Affordance_and_Compliance_for_Payload-Robust_Locomotion.html",
+        "dir": "TACT-ful__Multi-Channel_Terrain_Affordance_and_Compliance_for_Payload-Robust_Locomotion",
+        "arxiv": "2606.20645",
+        "published_date_zh": "2026年6月",
+        "published_date_en": "Jun 2026",
+        "zhname": "TACT-ful：多通道地形可供性 + 负载柔顺训练的感知型人形行走",
+        "zh_title": "TACT-ful：多通道地形可供性 + 负载柔顺训练的感知型人形行走"
+      },
+      {
         "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
         "path": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md",
         "url": "/papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.html",
