@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 0,
-      "last_title": "TACT-ful: Multi-Channel Terrain Affordance and Compliance Training for Payload-Robust Perceptive Humanoid Locomotion (arXiv:2606.20645)",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": 282,
+      "last_title": "RGMP: Recurrent Geometric-prior Multimodal Policy for Generalizable Humanoid Robot Manipulation (arXiv:2511.09141)",
+      "next_module": "07_Teleoperation"
     },
-    "last_summary_index": 0,
-    "last_summary_date": "2026-07-11",
-    "last_summary_title": "TACT-ful: Multi-Channel Terrain Affordance and Compliance Training for Payload-Robust Perceptive Humanoid Locomotion",
+    "last_summary_index": 282,
+    "last_summary_date": "2026-07-12",
+    "last_summary_title": "RGMP: Recurrent Geometric-prior Multimodal Policy for Generalizable Humanoid Robot Manipulation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-12",
+        "index": 282,
+        "title": "RGMP: Recurrent Geometric-prior Multimodal Policy for Generalizable Humanoid Robot Manipulation",
+        "folder": "papers/06_Manipulation/RGMP__Recurrent_Geometric-prior_Multimodal_Policy_for_Generalizable_Humanoid_Manipulation",
+        "module": "06_Manipulation",
+        "arxiv": "2511.09141",
+        "source": "🌟 xtli12/RGMP · 两段式可泛化人形操作：上层几何先验技能选择器(GSS)给 Qwen-VL 挂低秩几何适配器 + YOLOv8n-seg 抽物体几何 + 20 条规则从技能库选参数化技能(区分抓 vs 捏)；下层自适应递归高斯网络(ARGN)——递归空间建模逐 patch 建全局空间记忆 + 自适应衰减 ADM 防记忆消失/放大关键 patch + 6 高斯 GMM 拟合 6-DoF 多簇动作 + RoPE 方向编码 · 仅 40 条演示达 0.98、未见物体平均 87%(Diffusion Policy 0.70)、省 5× 数据 · 人形上肢 + 桌面双臂 + ManiSkill2 · 武汉大学 · AAAI 2026 · 模块轮转（05_Locomotion → 06_Manipulation）"
+      },
       {
         "date": "2026-07-11",
         "index": 557,

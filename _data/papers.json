@@ -1444,6 +1444,18 @@
         "zh_title": "In-N-On：用「野外 + 任务对齐」数据规模化第一视角操作"
       },
       {
+        "title": "RGMP: Recurrent Geometric-prior Multimodal Policy for Generalizable Humanoid Robot Manipulation",
+        "path": "papers/06_Manipulation/RGMP__Recurrent_Geometric-prior_Multimodal_Policy_for_Generalizable_Humanoid_Manipulation/RGMP__Recurrent_Geometric-prior_Multimodal_Policy_for_Generalizable_Humanoid_Manipulation.md",
+        "url": "/papers/06_Manipulation/RGMP__Recurrent_Geometric-prior_Multimodal_Policy_for_Generalizable_Humanoid_Manipulation/RGMP__Recurrent_Geometric-prior_Multimodal_Policy_for_Generalizable_Humanoid_Manipulation.html",
+        "dir": "RGMP__Recurrent_Geometric-prior_Multimodal_Policy_for_Generalizable_Humanoid_Manipulation",
+        "arxiv": "2511.09141",
+        "has_open_source": true,
+        "published_date_zh": "2025年11月（v1）· 2025年12月修订（v2）· AAAI 2026",
+        "published_date_en": "Nov 2025 (v1)· Dec 2025 revised (v2)· AAAI 2026",
+        "zhname": "RGMP：面向可泛化人形操作的递归几何先验多模态策略",
+        "zh_title": "RGMP：面向可泛化人形操作的递归几何先验多模态策略"
+      },
+      {
         "title": "Lightning Grasp: High Performance Procedural Grasp Synthesis with Contact Fields",
         "path": "papers/06_Manipulation/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields.md",
         "url": "/papers/06_Manipulation/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields/Lightning_Grasp__High_Performance_Procedural_Grasp_Synthesis_with_Contact_Fields.html",
