@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 282,
-      "last_title": "RGMP: Recurrent Geometric-prior Multimodal Policy for Generalizable Humanoid Robot Manipulation (arXiv:2511.09141)",
-      "next_module": "07_Teleoperation"
+      "last_module": "07_Teleoperation",
+      "last_index": 283,
+      "last_title": "HEFT: Heavy-Payload Full-size Humanoid Teleoperation with Privileged Motion Guidance and Windowed Payload Curriculum (arXiv:2607.02332)",
+      "next_module": "08_Navigation"
     },
-    "last_summary_index": 282,
-    "last_summary_date": "2026-07-12",
-    "last_summary_title": "RGMP: Recurrent Geometric-prior Multimodal Policy for Generalizable Humanoid Robot Manipulation",
+    "last_summary_index": 283,
+    "last_summary_date": "2026-07-13",
+    "last_summary_title": "HEFT: Heavy-Payload Full-size Humanoid Teleoperation with Privileged Motion Guidance and Windowed Payload Curriculum",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-13",
+        "index": 283,
+        "title": "HEFT: Heavy-Payload Full-size Humanoid Teleoperation with Privileged Motion Guidance and Windowed Payload Curriculum",
+        "folder": "papers/07_Teleoperation/HEFT__Heavy-Payload_Full-size_Humanoid_Teleoperation_with_Privileged_Motion_Guidance",
+        "module": "07_Teleoperation",
+        "arxiv": "2607.02332",
+        "source": "175cm/65kg 全尺寸人形 L7 · 重载遥操作：PMG 特权动作引导（非对称 actor-critic，actor 看带噪 VR、critic/奖励用 RoHM 重建的干净参考）抗追踪器噪声；WPC 窗口化负载课程（5s 窗口由专家标负载上限、按进度渐进加载）实现分段自适应重载 · teacher-student + adapter 蒸馏、PPO · VR 根误差 0.544m(TWIST2 0.99m)、25kg 90%/30kg 75% 成功率(TWIST2+FC 35%/29%) · 真机 24kg 壶铃行走下蹲/10kg 非对称搬运 · 截至当前未见公开代码 · 模块轮转（06_Manipulation → 07_Teleoperation）"
+      },
       {
         "date": "2026-07-12",
         "index": 282,
@@ -1203,7 +1212,7 @@
         "source": "🌟 开源 · LLM 场景编剧(目的性任务脚本)+抗遮挡动捕多相机录制+专业清洗去脚滑穿模 · 735 段·~7875s@30fps·63 精确物体网格·72 铰接人体部件(Mixamo 兼容) · 面向动作生成/姿态估计/机器人仿真/2D 编辑多任务基准 · UT Austin × Adobe Research · ICCV 2025 · 模块轮转（13_Physics-Based_Animation → 14_Human_Motion）"
       }
     ],
-    "last_completed_index": 368,
+    "last_completed_index": 283,
     "next_index": null
   },
   "papers": [
@@ -5294,6 +5303,18 @@
       "pdf_file": "",
       "route": "导航任务",
       "title_cn": "把可通过性感知的导航规划与地形自适应运动控制用复合教师蒸馏成统一策略，再经 RL+行为克隆微调，在楼梯/斜坡/窄梁上既避障又稳步"
+    },
+    {
+      "title": "HEFT: Heavy-Payload Full-size Humanoid Teleoperation with Privileged Motion Guidance and Windowed Payload Curriculum",
+      "arxiv": "2607.02332",
+      "folder": "papers/07_Teleoperation/HEFT__Heavy-Payload_Full-size_Humanoid_Teleoperation_with_Privileged_Motion_Guidance",
+      "note_file": "HEFT__Heavy-Payload_Full-size_Humanoid_Teleoperation_with_Privileged_Motion_Guidance.md",
+      "pdf_file": "",
+      "status": "done",
+      "start_date": "2026-07-13",
+      "done_date": "2026-07-13",
+      "route": "Teleoperation",
+      "title_cn": "HEFT：面向重载全尺寸人形的全身遥操作"
     }
   ]
 }
