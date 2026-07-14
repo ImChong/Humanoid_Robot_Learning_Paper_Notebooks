@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 283,
-      "last_title": "HEFT: Heavy-Payload Full-size Humanoid Teleoperation with Privileged Motion Guidance and Windowed Payload Curriculum (arXiv:2607.02332)",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": 284,
+      "last_title": "DA-Nav: Direction-Aware City-Scale Vision-Language Navigation (arXiv:2607.11638)",
+      "next_module": "09_State_Estimation"
     },
-    "last_summary_index": 283,
-    "last_summary_date": "2026-07-13",
-    "last_summary_title": "HEFT: Heavy-Payload Full-size Humanoid Teleoperation with Privileged Motion Guidance and Windowed Payload Curriculum",
+    "last_summary_index": 284,
+    "last_summary_date": "2026-07-14",
+    "last_summary_title": "DA-Nav: Direction-Aware City-Scale Vision-Language Navigation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-14",
+        "index": 284,
+        "title": "DA-Nav: Direction-Aware City-Scale Vision-Language Navigation",
+        "folder": "papers/08_Navigation/DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation",
+        "module": "08_Navigation",
+        "arxiv": "2607.11638",
+        "source": "四足/人形零样本 · 城市级户外视觉-语言导航：直接用商用导航工具(Google Maps)的方向提示(FWD/LEFT/RIGHT/STOP)当稀疏监督，把导航重述为第一视角图像平面上的离散网格定位；三步 CoT 推理(状态评估→动作预测→目标网格)+ ReDA 数据集(158k 专家帧+128k 恢复帧、主动扰动注入 OOD)+ 三态 FSM(Stable/Drifting/Recovering)对抗长程漂移 · 骨干 Qwen2.5-VL-7B+LoRA · CARLA 56.16% 成功率/SPL 58.66/纠偏 98.15%(ViNT 23.54%)、真机 46.7%(ViNT 16.7%) · 截至当前未见公开代码/数据 · 模块轮转（07_Teleoperation → 08_Navigation）"
+      },
       {
         "date": "2026-07-13",
         "index": 283,
@@ -1212,7 +1221,7 @@
         "source": "🌟 开源 · LLM 场景编剧(目的性任务脚本)+抗遮挡动捕多相机录制+专业清洗去脚滑穿模 · 735 段·~7875s@30fps·63 精确物体网格·72 铰接人体部件(Mixamo 兼容) · 面向动作生成/姿态估计/机器人仿真/2D 编辑多任务基准 · UT Austin × Adobe Research · ICCV 2025 · 模块轮转（13_Physics-Based_Animation → 14_Human_Motion）"
       }
     ],
-    "last_completed_index": 283,
+    "last_completed_index": 284,
     "next_index": null
   },
   "papers": [
@@ -5315,6 +5324,18 @@
       "done_date": "2026-07-13",
       "route": "Teleoperation",
       "title_cn": "HEFT：面向重载全尺寸人形的全身遥操作"
+    },
+    {
+      "title": "DA-Nav: Direction-Aware City-Scale Vision-Language Navigation",
+      "arxiv": "2607.11638",
+      "folder": "papers/08_Navigation/DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation",
+      "note_file": "DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation.md",
+      "pdf_file": "",
+      "status": "done",
+      "start_date": "2026-07-14",
+      "done_date": "2026-07-14",
+      "route": "Navigation",
+      "title_cn": "DA-Nav：方向感知的城市级视觉-语言导航"
     }
   ]
 }

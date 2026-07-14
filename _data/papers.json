@@ -2262,6 +2262,17 @@
     "display_name": "Navigation",
     "papers": [
       {
+        "title": "DA-Nav: Direction-Aware City-Scale Vision-Language Navigation",
+        "path": "papers/08_Navigation/DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation/DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation.md",
+        "url": "/papers/08_Navigation/DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation/DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation.html",
+        "dir": "DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation",
+        "arxiv": "2607.11638",
+        "published_date_zh": "2026年7月13日（arXiv v1）",
+        "published_date_en": "Jul 13, 2026 (arXiv v1)",
+        "zhname": "DA-Nav：方向感知的城市级视觉-语言导航",
+        "zh_title": "DA-Nav：方向感知的城市级视觉-语言导航"
+      },
+      {
         "title": "GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains",
         "path": "papers/08_Navigation/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid.md",
         "url": "/papers/08_Navigation/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid.html",
