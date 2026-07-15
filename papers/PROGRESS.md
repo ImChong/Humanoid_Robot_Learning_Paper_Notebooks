@@ -488,7 +488,7 @@
 | 369  | [GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains](https://arxiv.org/abs/2606.10449) ✅ [笔记](08_Navigation/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid.md) | 2026-06-09 |  | ✅ 已总结 |
 
 
-### State Estimation（13篇）
+### State Estimation（14篇）
 
 
 | #   | 论文                                                                                                                                       | 日期      | 🌟  | 状态   |
@@ -503,6 +503,7 @@
 | 373  | [Legged Robot State-Estimation Through Combined Forward Kinematic and Preintegrated Contact Factors](https://arxiv.org/abs/1712.05873) ✅ [笔记](09_State_Estimation/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors/Legged_Robot_State-Estimation_via_Forward_Kinematic_and_Preintegrated_Contact_Factors.md)   | 2017.05 |     | ✅ 完成 |
 | 374  | [The invariant extended Kalman filter as a stable observer](https://arxiv.org/abs/1410.1465) ✅ [笔记](09_State_Estimation/The_Invariant_Extended_Kalman_Filter_as_a_Stable_Observer/The_Invariant_Extended_Kalman_Filter_as_a_Stable_Observer.md) | 2014.10 | 2026-06-25 | ✅ 已总结 |
 | —    | [GAIT: Legged Robot Proprioceptive State Estimation with Attention over Inertial-Leg Tokens](https://arxiv.org/abs/2606.14160) ✅ [笔记](09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.md) | 2026.06 | 2026-07-04 | ✅ 已总结 |
+| 285  | [Proprioceptive Invariant State Estimation for Humanoid Robots on Non-Inertial Ground](https://arxiv.org/abs/2606.19512) ✅ [笔记](09_State_Estimation/Proprioceptive_Invariant_State_Estimation_for_Humanoid_Robots_on_Non-Inertial_Ground/Proprioceptive_Invariant_State_Estimation_for_Humanoid_Robots_on_Non-Inertial_Ground.md) | 2026-06-17 | 2026-07-15 | ✅ 已总结 |
 | 375  | GTSAM: Factor graphs for Sensor Fusion in Robotics                                                                                       | -       |     | ⏳ 待读 |
 | 376  | Kimera: an Open-Source Library for Real-Time Metric-Semantic Localization and Mapping                                                    | -       |     | ⏳ 待读 |
 | 377  | ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM                                                | -       |     | ⏳ 待读 |

@@ -2473,6 +2473,17 @@
     "display_name": "State Estimation",
     "papers": [
       {
+        "title": "Proprioceptive Invariant State Estimation for Humanoid Robots on Non-Inertial Ground",
+        "path": "papers/09_State_Estimation/Proprioceptive_Invariant_State_Estimation_for_Humanoid_Robots_on_Non-Inertial_Ground/Proprioceptive_Invariant_State_Estimation_for_Humanoid_Robots_on_Non-Inertial_Ground.md",
+        "url": "/papers/09_State_Estimation/Proprioceptive_Invariant_State_Estimation_for_Humanoid_Robots_on_Non-Inertial_Ground/Proprioceptive_Invariant_State_Estimation_for_Humanoid_Robots_on_Non-Inertial_Ground.html",
+        "dir": "Proprioceptive_Invariant_State_Estimation_for_Humanoid_Robots_on_Non-Inertial_Ground",
+        "arxiv": "2606.19512",
+        "published_date_zh": "2026年6月17日（arXiv v1）",
+        "published_date_en": "Jun 17, 2026 (arXiv v1)",
+        "zhname": "非惯性地面上人形机器人的本体感知不变状态估计",
+        "zh_title": "非惯性地面上人形机器人的本体感知不变状态估计"
+      },
+      {
         "title": "GAIT: Legged Robot Proprioceptive State Estimation with Attention over Inertial-Leg Tokens",
         "path": "papers/09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.md",
         "url": "/papers/09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.html",

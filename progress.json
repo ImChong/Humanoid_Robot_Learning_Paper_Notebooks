@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 284,
-      "last_title": "DA-Nav: Direction-Aware City-Scale Vision-Language Navigation (arXiv:2607.11638)",
-      "next_module": "09_State_Estimation"
+      "last_module": "09_State_Estimation",
+      "last_index": 285,
+      "last_title": "Proprioceptive Invariant State Estimation for Humanoid Robots on Non-Inertial Ground (arXiv:2606.19512)",
+      "next_module": "10_Sim-to-Real"
     },
-    "last_summary_index": 284,
-    "last_summary_date": "2026-07-14",
-    "last_summary_title": "DA-Nav: Direction-Aware City-Scale Vision-Language Navigation",
+    "last_summary_index": 285,
+    "last_summary_date": "2026-07-15",
+    "last_summary_title": "Proprioceptive Invariant State Estimation for Humanoid Robots on Non-Inertial Ground",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-15",
+        "index": 285,
+        "title": "Proprioceptive Invariant State Estimation for Humanoid Robots on Non-Inertial Ground",
+        "folder": "papers/09_State_Estimation/Proprioceptive_Invariant_State_Estimation_for_Humanoid_Robots_on_Non-Inertial_Ground",
+        "module": "09_State_Estimation",
+        "arxiv": "2606.19512",
+        "source": "Agility Digit 人形 · 非惯性(运动)地面上纯本体感知状态估计：不给地面装任何外部传感器，靠足底 IMU + 支撑足零滑移反推地面加速度/角速度当作 InEKF 已知输入，估机身相对运动地面的位置与速度；过程模型含地面诱导非线性、测量模型保持右不变(式11)→误差动态与轨迹解耦、大初始误差快速收敛；可观性分析(机身速度始终可观、位置随地面旋转轴部分→全可观、姿态靠3个非共线躯干IMU恢复) · Motek M-Gait 摇摆(4cm/5-6s)+俯仰(4°/6-8s) · 收敛+96%、位置误差-80%、旋转地面行走<9cm(初始误差1m)、<3ms/周期 · 作者 Falak Mandali/Zijian He/Yan Gu · 截至当前未见公开代码 · 模块轮转（08_Navigation → 09_State_Estimation）"
+      },
       {
         "date": "2026-07-14",
         "index": 284,
@@ -1221,7 +1230,7 @@
         "source": "🌟 开源 · LLM 场景编剧(目的性任务脚本)+抗遮挡动捕多相机录制+专业清洗去脚滑穿模 · 735 段·~7875s@30fps·63 精确物体网格·72 铰接人体部件(Mixamo 兼容) · 面向动作生成/姿态估计/机器人仿真/2D 编辑多任务基准 · UT Austin × Adobe Research · ICCV 2025 · 模块轮转（13_Physics-Based_Animation → 14_Human_Motion）"
       }
     ],
-    "last_completed_index": 284,
+    "last_completed_index": 285,
     "next_index": null
   },
   "papers": [
@@ -5336,6 +5345,18 @@
       "done_date": "2026-07-14",
       "route": "Navigation",
       "title_cn": "DA-Nav：方向感知的城市级视觉-语言导航"
+    },
+    {
+      "title": "Proprioceptive Invariant State Estimation for Humanoid Robots on Non-Inertial Ground",
+      "arxiv": "2606.19512",
+      "folder": "papers/09_State_Estimation/Proprioceptive_Invariant_State_Estimation_for_Humanoid_Robots_on_Non-Inertial_Ground",
+      "note_file": "Proprioceptive_Invariant_State_Estimation_for_Humanoid_Robots_on_Non-Inertial_Ground.md",
+      "pdf_file": "",
+      "status": "done",
+      "start_date": "2026-07-15",
+      "done_date": "2026-07-15",
+      "route": "State Estimation",
+      "title_cn": "非惯性地面上人形机器人的本体感知不变状态估计"
     }
   ]
 }
