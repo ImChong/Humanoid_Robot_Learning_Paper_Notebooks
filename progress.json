@@ -41,16 +41,25 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "09_State_Estimation",
-      "last_index": 285,
-      "last_title": "Proprioceptive Invariant State Estimation for Humanoid Robots on Non-Inertial Ground (arXiv:2606.19512)",
-      "next_module": "10_Sim-to-Real"
+      "last_module": "10_Sim-to-Real",
+      "last_index": null,
+      "last_title": "FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control (arXiv:2606.28476)",
+      "next_module": "11_Simulation_Benchmark"
     },
-    "last_summary_index": 285,
-    "last_summary_date": "2026-07-15",
-    "last_summary_title": "Proprioceptive Invariant State Estimation for Humanoid Robots on Non-Inertial Ground",
+    "last_summary_index": null,
+    "last_summary_date": "2026-07-16",
+    "last_summary_title": "FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-16",
+        "index": "—",
+        "title": "FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control",
+        "folder": "papers/10_Sim-to-Real/FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control",
+        "module": "10_Sim-to-Real",
+        "arxiv": "2606.28476",
+        "source": "CMU LeCAR Lab(Guanya Shi 等) · Unitree G1(29DoF)/Booster T1(23DoF) · 少样本域自适应：把策略因式分解为 Planner(预测未来 K 步本体感知轨迹)+IDM(逆动力学把未来翻成动作)，洞察域偏移主要落执行层，故部署到新域冻结 Planner、只用约 2 分钟目标域 rollout「观测-动作」配对监督微调 IDM，免最优演示/免重训 · 三阶段：特权 oracle→DAgger 蒸馏出只用本体感知的 Planner-IDM 学生→目标域少样本对齐 · 域偏移含负载(1-6kg 非对称)/地形(斜坡·软垫·沙)/执行器(PD·力矩噪声·延迟)/仿真器(IsaacSim→MuJoCo·真机) · G1 斜坡 80%(零样本 20%)、T1 拉篮 100%、行走+负载误差-27.4%、sim2sim-24.7% · 暂未开源(项目页 lecar-lab.github.io/FADA-humanoid) · 模块轮转（09_State_Estimation → 10_Sim-to-Real）"
+      },
       {
         "date": "2026-07-15",
         "index": 285,
@@ -1230,7 +1239,7 @@
         "source": "🌟 开源 · LLM 场景编剧(目的性任务脚本)+抗遮挡动捕多相机录制+专业清洗去脚滑穿模 · 735 段·~7875s@30fps·63 精确物体网格·72 铰接人体部件(Mixamo 兼容) · 面向动作生成/姿态估计/机器人仿真/2D 编辑多任务基准 · UT Austin × Adobe Research · ICCV 2025 · 模块轮转（13_Physics-Based_Animation → 14_Human_Motion）"
       }
     ],
-    "last_completed_index": 285,
+    "last_completed_index": null,
     "next_index": null
   },
   "papers": [
@@ -5357,6 +5366,18 @@
       "done_date": "2026-07-15",
       "route": "State Estimation",
       "title_cn": "非惯性地面上人形机器人的本体感知不变状态估计"
+    },
+    {
+      "title": "FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control",
+      "arxiv": "2606.28476",
+      "folder": "papers/10_Sim-to-Real/FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control",
+      "note_file": "FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control.md",
+      "pdf_file": "",
+      "status": "done",
+      "start_date": "2026-07-16",
+      "done_date": "2026-07-16",
+      "route": "Sim-to-Real",
+      "title_cn": "FADA：用动力学对齐实现少样本域自适应的人形控制"
     }
   ]
 }
