@@ -2583,6 +2583,17 @@
     "display_name": "Sim-to-Real",
     "papers": [
       {
+        "title": "FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control",
+        "path": "papers/10_Sim-to-Real/FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control/FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control.md",
+        "url": "/papers/10_Sim-to-Real/FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control/FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control.html",
+        "dir": "FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control",
+        "arxiv": "2606.28476",
+        "published_date_zh": "2026年6月26日（arXiv v1）",
+        "published_date_en": "Jun 26, 2026 (arXiv v1)",
+        "zhname": "FADA：用动力学对齐实现少样本域自适应的人形控制",
+        "zh_title": "FADA：用动力学对齐实现少样本域自适应的人形控制"
+      },
+      {
         "title": "Simulator Adaptation for Sim-to-Real Learning of Legged Locomotion via Proprioceptive Distribution Matching",
         "path": "papers/10_Sim-to-Real/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching.md",
         "url": "/papers/10_Sim-to-Real/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching.html",
