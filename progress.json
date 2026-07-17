@@ -41,16 +41,28 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
+      "last_module": "11_Simulation_Benchmark",
       "last_index": null,
-      "last_title": "FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control (arXiv:2606.28476)",
-      "next_module": "11_Simulation_Benchmark"
+      "last_title": "ThorArena: Benchmarking Humanoid Physical Interaction with Human Motion-Force Demonstrations (arXiv:2607.06052)",
+      "next_module": "12_Hardware_Design"
     },
     "last_summary_index": null,
-    "last_summary_date": "2026-07-16",
-    "last_summary_title": "FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control",
+    "last_summary_date": "2026-07-17",
+    "last_summary_title": "ThorArena: Benchmarking Humanoid Physical Interaction with Human Motion-Force Demonstrations",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-17",
+        "index": "—",
+        "title": "ThorArena: Benchmarking Humanoid Physical Interaction with Human Motion-Force Demonstrations",
+        "folder": "papers/11_Simulation_Benchmark/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations",
+        "module": "11_Simulation_Benchmark",
+        "category": "11_Simulation_Benchmark",
+        "note_path": "papers/11_Simulation_Benchmark/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations.md",
+        "track": "module_rotation",
+        "arxiv": "2607.06052",
+        "source": "BAAI×TU Munich(Alois Knoll 组) · 力感知人形交互基准：现有人形运动数据集只记运动学、漏掉同步交互力，「无力评测」看不出策略在推拉搬举等接触密集任务下的力致失稳 · 采集运动+双手力同步真人示范(PICO 4 Ultra 头显+体感追踪器测运动、双手力传感器配 3D 打印挂钩测力，6 任务×60=360 段) · 6 类任务(擦桌/放下/抬起/拉椅/推椅/协同搬运) · 力感知指标 FATS=100·exp(−E/σ)·s(σ=0.15m，耦合跟踪误差与回合存活)+鲁棒比 ρ=E_low/E_high+功率开销 η=P_high/P_low · 统一「仿真回放录制交互力」协议给标准评测接口 · 在 Thor2/TWIST2/GMT/SONIC 上评测：无力时相近、加真实力后差距显著暴露、Thor2 最鲁棒 · 截至当前未见公开代码/项目页 · 模块轮转（10_Sim-to-Real → 11_Simulation_Benchmark）"
+      },
       {
         "date": "2026-07-16",
         "index": "—",
@@ -5378,6 +5390,18 @@
       "done_date": "2026-07-16",
       "route": "Sim-to-Real",
       "title_cn": "FADA：用动力学对齐实现少样本域自适应的人形控制"
+    },
+    {
+      "title": "ThorArena: Benchmarking Humanoid Physical Interaction with Human Motion-Force Demonstrations",
+      "arxiv": "2607.06052",
+      "folder": "papers/11_Simulation_Benchmark/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations",
+      "note_file": "ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations.md",
+      "pdf_file": "",
+      "status": "done",
+      "start_date": "2026-07-17",
+      "done_date": "2026-07-17",
+      "route": "Simulation Benchmark",
+      "title_cn": "ThorArena：面向人形物理交互的运动-力示范基准"
     }
   ]
 }

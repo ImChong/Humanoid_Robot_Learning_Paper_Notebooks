@@ -2817,6 +2817,17 @@
     "display_name": "Simulation Benchmark",
     "papers": [
       {
+        "title": "ThorArena: Benchmarking Humanoid Physical Interaction with Human Motion-Force Demonstrations",
+        "path": "papers/11_Simulation_Benchmark/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations.md",
+        "url": "/papers/11_Simulation_Benchmark/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations.html",
+        "dir": "ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations",
+        "arxiv": "2607.06052",
+        "published_date_zh": "2026年7月7日（arXiv）",
+        "published_date_en": "Jul 7, 2026 (arXiv)",
+        "zhname": "ThorArena：面向人形物理交互的运动-力示范基准",
+        "zh_title": "ThorArena：面向人形物理交互的运动-力示范基准"
+      },
+      {
         "title": "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation",
         "path": "papers/11_Simulation_Benchmark/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation.md",
         "url": "/papers/11_Simulation_Benchmark/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation.html",
