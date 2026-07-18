@@ -2719,6 +2719,17 @@
     "display_name": "Hardware Design",
     "papers": [
       {
+        "title": "MCR-Bionic Hand: Anatomical Structural Priors for Dexterous Manipulation",
+        "path": "papers/12_Hardware_Design/MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation/MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation.md",
+        "url": "/papers/12_Hardware_Design/MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation/MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation.html",
+        "dir": "MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation",
+        "arxiv": "2606.13601",
+        "published_date_zh": "2026年6月11日（arXiv）",
+        "published_date_en": "Jun 11, 2026 (arXiv)",
+        "zhname": "MCR-Bionic Hand：面向灵巧操作的解剖学结构先验仿生手",
+        "zh_title": "MCR-Bionic Hand：面向灵巧操作的解剖学结构先验仿生手"
+      },
+      {
         "title": "Characteristics, Management, and Utilization of Muscles in Musculoskeletal Humanoids",
         "path": "papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.md",
         "url": "/papers/12_Hardware_Design/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids/Characteristics_Management_and_Utilization_of_Muscles_in_Musculoskeletal_Humanoids.html",
