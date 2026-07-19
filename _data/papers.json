@@ -3075,6 +3075,17 @@
     "display_name": "Physics-Based Animation",
     "papers": [
       {
+        "title": "BFMTrack: Latent Sequence Optimization for Physics-Based Motion Tracking with Behavioral Foundation Models",
+        "path": "papers/13_Physics-Based_Animation/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking.md",
+        "url": "/papers/13_Physics-Based_Animation/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking.html",
+        "dir": "BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking",
+        "arxiv": "2606.25056",
+        "published_date_zh": "2026年6月23日（arXiv v1）",
+        "published_date_en": "Jun 23, 2026 (arXiv v1)",
+        "zhname": "BFMTrack：用潜空间序列优化让行为基础模型做物理动作追踪",
+        "zh_title": "BFMTrack：用潜空间序列优化让行为基础模型做物理动作追踪"
+      },
+      {
         "title": "Iterative Closed-Loop Motion Synthesis for Scaling the Capabilities of Humanoid Control",
         "path": "papers/13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis/Iterative_Closed-Loop_Motion_Synthesis.md",
         "url": "/papers/13_Physics-Based_Animation/Iterative_Closed-Loop_Motion_Synthesis/Iterative_Closed-Loop_Motion_Synthesis.html",
