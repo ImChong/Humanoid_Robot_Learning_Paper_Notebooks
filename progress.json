@@ -41,16 +41,28 @@
     "13_Physics-Based_Animation",
     "14_Human_Motion"
    ],
-   "last_module": "12_Hardware_Design",
+   "last_module": "13_Physics-Based_Animation",
    "last_index": null,
-   "last_title": "MCR-Bionic Hand: Anatomical Structural Priors for Dexterous Manipulation (arXiv:2606.13601)",
-   "next_module": "13_Physics-Based_Animation"
+   "last_title": "BFMTrack: Latent Sequence Optimization for Physics-Based Motion Tracking with Behavioral Foundation Models (arXiv:2606.25056)",
+   "next_module": "14_Human_Motion"
   },
   "last_summary_index": null,
-  "last_summary_date": "2026-07-18",
-  "last_summary_title": "MCR-Bionic Hand: Anatomical Structural Priors for Dexterous Manipulation",
+  "last_summary_date": "2026-07-19",
+  "last_summary_title": "BFMTrack: Latent Sequence Optimization for Physics-Based Motion Tracking with Behavioral Foundation Models",
   "next_summary_index": null,
   "log": [
+   {
+    "date": "2026-07-19",
+    "index": "—",
+    "title": "BFMTrack: Latent Sequence Optimization for Physics-Based Motion Tracking with Behavioral Foundation Models",
+    "folder": "papers/13_Physics-Based_Animation/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking",
+    "module": "13_Physics-Based_Animation",
+    "category": "13_Physics-Based_Animation",
+    "note_path": "papers/13_Physics-Based_Animation/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking.md",
+    "track": "module_rotation",
+    "arxiv": "2606.25056",
+    "source": "Disney Research 苏黎世(Thomas Rupf, Agon Serifi, Ruben Grandia, Espen Knoop, Moritz Bächer 等) · 冻结行为基础模型(FB-CPR)、只在潜空间优化一条随时间变化的潜序列 {z_t} 做物理动作追踪、无需奖励工程 · 潜空间序列优化 LSO：backward map B 提供初始化 μ_t=B(g_t) 与余弦相似度追踪奖励，REINFORCE+leave-one-out 基线策略梯度在 Isaac Sim 滚动更新 · 关键把逐帧白噪声换成时间相关有色噪声(PSD∝1/f^β，pink noise β=1 精度-平滑最优)保证序列平滑 · 三场景:稠密追踪 990 段 AMASS(SMPL 69DoF/Lima 20DoF)、稀疏关键帧(DoG 显著性抽帧+SLERP 插值+零中间奖励)、Lima 双足真机跑/跳舞/摔倒恢复 sim-to-real · 稠密 MPJPE 3.4cm vs 滑动窗基线 4.7cm · 局限:离线优化(RTX5090 数分钟)非实时、FB-CPR 依赖大动作库 · 截至写入未见公开代码/项目页 · 模块轮转（13_Physics-Based_Animation → 14_Human_Motion）"
+   },
    {
     "date": "2026-07-18",
     "index": "—",
