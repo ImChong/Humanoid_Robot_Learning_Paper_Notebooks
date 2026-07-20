@@ -402,6 +402,43 @@ ADD 更偏“目标跟踪驱动器”。
 
 ADD 在 MimicKit 里已经有官方实现，而且实现很清楚：**它就是在 AMPAgent 基础上，把判别器输入从“动作片段本身”改成了“参考与当前的差值”。**
 
+### 源码类图：ADD 对 AMP 的最小增量
+
+先看静态结构（接着 AMP 笔记的类图往下长）。`ADDModel` 几乎是空的——网络结构与 AMP 完全一致，全部改动都在 **Agent 侧的数据流**：判别器喂什么、正负样本怎么造：
+
+<div class="mermaid">
+classDiagram
+    class AMPAgent {
+        amp_agent.py
+        #_compute_disc_loss() 真样本=mocap
+    }
+    class ADDAgent {
+        add_agent.py
+        #_build_pos_diff() 正样本=全0差向量
+        #_record_data_post_step() 记录diff
+        #_compute_rewards() 奖励全靠判别器
+        #_compute_disc_loss() 负样本=当前diff+replay
+    }
+    class AMPModel {
+        amp_model.py
+        +eval_disc(disc_obs)
+    }
+    class ADDModel {
+        add_model.py 仅改输入维度
+    }
+    class DiffNormalizer {
+        diff_normalizer.py
+        位置/角度/速度分量纲归一化
+    }
+    AMPAgent <|-- ADDAgent : 继承
+    AMPModel <|-- ADDModel : 继承
+    ADDAgent o-- ADDModel : _model
+    ADDAgent o-- DiffNormalizer : 归一化差向量
+</div>
+
+- 对照 AMP 类图看增量：判别器输入从 $(s_t, s_{t+1})$ 状态对变成 `tar_disc_obs − disc_obs` 差向量；真样本从 mocap 片段变成**固定的全 0 张量**。
+- `DiffNormalizer` 是 ADD 专属的辅助类——差向量里位置（米）、角度（弧度）、速度量纲不同，必须分量归一化后判别器才学得动。
+
 ### 源码运行时序图
 
 以第 8 节的训练命令 `python mimickit/run.py --mode train --agent_config add_*_agent.yaml` 为入口。`ADDAgent` 继承 `AMPAgent`，时序骨架与 AMP 一致，但**判别器的输入与正负样本构造完全不同**：

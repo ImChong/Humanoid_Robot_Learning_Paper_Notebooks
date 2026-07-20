@@ -367,6 +367,23 @@ class FSMScheduler:
         return action
 ```
 
+FSM 本身就是一个状态机，拿 `HumanoidStrikeFSM`（走向目标并攻击）画出来最直观——注意**每个状态里 latent z 的来源不同**，这正是 CALM 分层设计的价值：
+
+<div class="mermaid">
+stateDiagram-v2
+    state "direction_locomotion：HLC 选方向 latent，走向目标" as WALK
+    state "fixed_skill：用 E(攻击动作) 的 latent，执行攻击" as STRIKE
+    state "fixed_skill：用 E(庆祝动作) 的 latent" as WIN
+    [*] --> WALK
+    WALK --> WALK : 距目标 > 攻击范围
+    WALK --> STRIKE : 进入攻击范围
+    STRIKE --> WALK : 目标未倒，重新接近
+    STRIKE --> WIN : 目标倒下
+    WIN --> [*]
+</div>
+
+> 🔑 状态切换条件（距离、目标状态）是**手写的**，但每个状态内的动作全部由预训练策略生成——FSM 只负责"什么时候换 z"，动作质量由 LLC 保证。整个阶段三**零训练**。
+
 ### 5. 训练命令（NVIDIA 官方）
 
 ```bash

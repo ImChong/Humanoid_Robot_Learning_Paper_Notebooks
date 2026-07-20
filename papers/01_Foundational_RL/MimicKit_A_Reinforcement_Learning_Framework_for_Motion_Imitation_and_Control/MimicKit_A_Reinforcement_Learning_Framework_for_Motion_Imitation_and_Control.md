@@ -92,6 +92,22 @@ MimicKit 官方仓库明确提供多个常用方法的实现入口：
 
 因此，MimicKit 本身也可以当成“物理角色控制论文谱系”的代码索引：从 DeepMimic 的 tracking reward，到 AMP/ASE 的 adversarial reward，再到 ADD 的差异判别。
 
+把这条谱系按时间摊开（都是本模块里有笔记的论文），每一步解决的都是上一步暴露的问题：
+
+<div class="mermaid">
+timeline
+    title 运动模仿方法谱系（模块 01 论文，均收录于 MimicKit 或其思想源头）
+    2017 : PPO — 通用 on-policy 优化骨架
+    2018 : DeepMimic — 手写模仿奖励 + RSI/ET，单 clip 精确跟踪
+    2019 : AWR — 加权回归式策略更新，另一条优化路线
+    2021 : AMP — 判别器替代手写奖励，学风格不逐帧
+    2022 : ASE — 技能压进 latent 空间，一个策略多技能
+    2023 : CALM — 条件判别器 + 高层选 latent，技能可定向
+    2024 : LCP — 梯度惩罚做动作平滑，sim-to-real 落地
+    2025 : ADD — 判别器吃「差异」，兼得跟踪精度与免调参
+         : MimicKit — 把整条谱系收进一个统一框架
+</div>
+
 ### 3. 框架设计偏轻量
 
 论文摘要强调的是 lightweight、modular、configurable，而不是一个巨大的闭环机器人系统。
@@ -370,6 +386,70 @@ MimicKit 这篇论文的“源码对照”就是官方仓库本身：
 2. 再看 `deepmimic_env.py`，把 reference motion reward 跑通。
 3. 然后看 `amp_agent.py`，理解 discriminator reward 如何接进 PPO。
 4. 最后看 `ase_agent.py` / `add_agent.py`，比较 latent skill 和差异判别的变化点。
+
+### 源码类图：整个框架的"家谱"
+
+这张图把 `mimickit/learning/` 与 `mimickit/envs/` 两条继承树画在一起——**继承树就是论文谱系树**，每篇论文的笔记里都有对应子树的放大版：
+
+<div class="mermaid">
+classDiagram
+    class BaseAgent {
+        base_agent.py 训练骨架
+        +train_model() #_rollout_train()
+    }
+    class PPOAgent {
+        ppo_agent.py PPO笔记
+        PPO-Clip 更新
+    }
+    class AWRAgent {
+        awr_agent.py AWR笔记
+        指数加权回归
+    }
+    class AMPAgent {
+        amp_agent.py AMP笔记
+        +判别器分支
+    }
+    class ASEAgent {
+        ase_agent.py ASE笔记
+        +latent z +Encoder
+    }
+    class ADDAgent {
+        add_agent.py ADD笔记
+        判别器吃差异对
+    }
+    class LCPAgent {
+        lcp_agent.py LCP笔记
+        +梯度惩罚项
+    }
+    class BaseEnv {
+        envs/base_env.py
+    }
+    class CharEnv {
+        char_env.py 经SimEnv
+    }
+    class DeepMimicEnv {
+        deepmimic_env.py DeepMimic笔记
+        RSI ET 手写5项奖励
+    }
+    class AMPEnv {
+        amp_env.py
+        提供disc_obs
+    }
+    BaseAgent <|-- PPOAgent
+    BaseAgent <|-- AWRAgent
+    PPOAgent <|-- AMPAgent
+    PPOAgent <|-- LCPAgent
+    AMPAgent <|-- ASEAgent
+    AMPAgent <|-- ADDAgent
+    BaseEnv <|-- CharEnv
+    CharEnv <|-- DeepMimicEnv
+    CharEnv <|-- AMPEnv
+    PPOAgent ..> DeepMimicEnv : DeepMimic组合
+    AMPAgent ..> AMPEnv : AMP组合
+</div>
+
+- 竖着看是**继承**（算法演进），横着的虚线是**组合**（哪个算法配哪个环境）——DeepMimic 的特殊之处一眼可见：它是唯一"Agent 零改动、只做环境"的论文。
+- 每个类框里标注了对应的笔记，可以把这张图当模块 01 源码阅读的**总目录**。
 
 ### 源码运行时序图
 

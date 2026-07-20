@@ -498,6 +498,36 @@ $$
 
 以下代码块对应 [MimicKit](https://github.com/xbpeng/MimicKit) 中 LCP 的实现，与上述讲解的各模块一一对应。
 
+### 源码类图：LCP 是最薄的一层
+
+先看静态结构（接着 PPO 笔记的类图往下长）。整个 MimicKit 里 LCP 是**改动最小**的算法——`lcp_agent.py` 全文不到 50 行，`LCPModel` 只是改名，真正的新东西只有一个方法：
+
+<div class="mermaid">
+classDiagram
+    class PPOAgent {
+        ppo_agent.py
+        #_compute_actor_loss() PPO-Clip
+    }
+    class LCPAgent {
+        lcp_agent.py 不到50行
+        #_load_params() 读入lcp_weight
+        #_compute_actor_loss() 加一项GP
+        #_compute_lcp_loss() ‖∇ₒ log π‖²
+    }
+    class PPOModel {
+        ppo_model.py
+    }
+    class LCPModel {
+        lcp_model.py 纯继承 零改动
+    }
+    PPOAgent <|-- LCPAgent : 继承
+    PPOModel <|-- LCPModel : 继承
+    LCPAgent o-- LCPModel : _model
+</div>
+
+- 这张图本身就是论文卖点的证明：**平滑性约束不需要新网络、不需要新奖励项**，一个对观测的梯度惩罚就够——所以类图上只多了 `_compute_lcp_loss()` 一个成员。
+- 对照 AMP/ASE 的类图看：同样继承 `PPOAgent`，AMP 加了一整个判别器分支，LCP 只加了一项 loss——继承树上的"层厚"直接反映论文改动量。
+
 ### 源码运行时序图
 
 以第 7 节的训练命令 `python mimickit/run.py --mode train --agent_config lcp_g1_agent.yaml` 为入口。`LCPAgent` 继承 `PPOAgent`，整条训练时序与 PPO 完全一致，**唯一的差别发生在 Actor 更新这一步**——多算一次对观测的梯度惩罚：

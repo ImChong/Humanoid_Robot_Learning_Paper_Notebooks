@@ -430,6 +430,44 @@ ASE 在 MimicKit 里的实现非常适合拿来学，因为它把论文里的三
 2. encoder 从行为片段预测 latent  
 3. diversity loss 保证不同 latent 真对应不同动作
 
+### 源码类图：ASE = AMP + latent 管理 + Encoder
+
+先看静态结构（接着 AMP 笔记的类图往下长）。继承链 `PPOAgent → AMPAgent → ASEAgent` 本身就是论文谱系，ASE 这层的所有新增成员都围绕 **latent z** 展开：
+
+<div class="mermaid">
+classDiagram
+    class AMPAgent {
+        amp_agent.py
+        #_compute_disc_loss() 判别器
+    }
+    class ASEAgent {
+        ase_agent.py
+        #_update_latents() 到期重采样z
+        #_sample_latents(n) 单位球均匀采样
+        #_compute_rewards() 0.5·disc+0.5·enc
+        #_compute_enc_loss(batch) 余弦对齐
+        #_compute_diversity_loss() 防latent塌缩
+    }
+    class AMPModel {
+        amp_model.py
+        +eval_disc(disc_obs)
+    }
+    class ASEModel {
+        ase_model.py
+        +eval_actor(obs, z) 多了z输入
+        +eval_critic(obs, z) 多了z输入
+        +eval_enc(enc_obs) 恢复ẑ
+        #_build_latent_space()
+    }
+    AMPAgent <|-- ASEAgent : 继承
+    AMPModel <|-- ASEModel : 继承
+    ASEAgent o-- ASEModel : _model
+    ASEAgent o-- LatentBuf : 每个env当前的z
+</div>
+
+- 对照 AMP 类图看增量：**Model 侧**的 `eval_actor` / `eval_critic` 签名从 `(obs)` 变成 `(obs, z)`——latent 是策略输入的一等公民；再加一个 `eval_enc()` 头。
+- **Agent 侧**新增的五个方法正好对应论文三件事：latent 管理（`_update_latents` / `_sample_latents`）、编码器目标（`_compute_enc_loss`）、多样性正则（`_compute_diversity_loss`）。
+
 ### 源码运行时序图
 
 以 `python mimickit/run.py --mode train --agent_config ase_*_agent.yaml` 为入口。`ASEAgent` 在 AMP 的骨架上再叠一层 **latent 管理 + Encoder**，一轮训练要同时更新 4 套参数（Actor / Critic / Disc / Enc）：

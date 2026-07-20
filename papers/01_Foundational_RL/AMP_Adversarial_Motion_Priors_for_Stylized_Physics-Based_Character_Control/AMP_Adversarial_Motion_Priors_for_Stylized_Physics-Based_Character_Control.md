@@ -548,6 +548,52 @@ AMP 是从"精确模仿"到"风格学习"的关键转折点：
 
 下面按 **PPO 笔记同样的模式**，把 AMP 在 MimicKit 中对应的实现模块对上。说明一下：你当前 workspace 里没有直接放 MimicKit 源码仓，但 `Robotics_Notebooks/Train/MimicKit` 里已经整理过对应代码结构和关键片段，所以这里按那套整理结果做源码映射。
 
+### 源码类图：AMP = PPO + 判别器分支
+
+先看静态结构（接着 PPO 笔记的类图往下长）。AMP 在 Agent 和 Model 两条继承链上各加一层，所有新增成员都围绕**判别器**展开；后续 ASE / ADD 又会从 `AMPAgent` 再往下长：
+
+<div class="mermaid">
+classDiagram
+    class PPOAgent {
+        ppo_agent.py
+        #_compute_actor_loss() PPO-Clip
+        #_compute_critic_loss() MSE
+    }
+    class AMPAgent {
+        amp_agent.py
+        #_build_train_data() 风格奖励替换
+        #_update_model() 增加判别器更新
+        #_compute_disc_loss(batch) 真假二分类+GP
+        #_compute_disc_acc() 判别器准确率
+    }
+    class PPOModel {
+        ppo_model.py
+        +eval_actor(obs)
+        +eval_critic(obs)
+    }
+    class AMPModel {
+        amp_model.py
+        +eval_disc(disc_obs) 判别器打分
+        +get_disc_logit_weights() 用于GP正则
+        #_build_disc(config, env)
+    }
+    class ASEAgent {
+        ase_agent.py 下一篇
+    }
+    class ADDAgent {
+        add_agent.py ADD笔记
+    }
+    PPOAgent <|-- AMPAgent : 继承
+    PPOModel <|-- AMPModel : 继承
+    AMPAgent o-- AMPModel : _model
+    AMPAgent <|-- ASEAgent
+    AMPAgent <|-- ADDAgent
+    AMPAgent ..> MotionLib : 采样真样本 demo
+</div>
+
+- 对照 PPO 类图看增量就够了：**Agent 侧**多了 `_compute_disc_loss()`（真假二分类 + gradient penalty），**Model 侧**多了 `eval_disc()`（第三个网络头）。
+- `ASEAgent`、`ADDAgent` 都继承 `AMPAgent`——这条继承链本身就是论文谱系：PPO → AMP → ASE / ADD。
+
 ### 源码运行时序图
 
 以 `python mimickit/run.py --mode train --agent_config amp_*_agent.yaml` 为入口。AMP 复用 PPO 的训练骨架（`AMPAgent` 继承 `PPOAgent`），额外多出**判别器奖励替换**与**判别器更新**两处：

@@ -284,6 +284,46 @@ AWR 本身在人形机器人控制中不是最常用的算法（PPO 用得更多
 
 以下代码块对应 [MimicKit](https://github.com/xbpeng/MimicKit) 中 AWR 的实现，与上述讲解的各模块一一对应。
 
+### 源码类图：AWR 与 PPO 平行的另一条分支
+
+先看静态结构。和 AMP/ASE 不同，`AWRAgent` **不继承 PPOAgent**，而是与它平行、直接挂在 `BaseAgent` 下——因为 AWR 的 Actor 更新是加权回归，跟 PPO 的概率比裁剪完全是两套逻辑：
+
+<div class="mermaid">
+classDiagram
+    class BaseAgent {
+        base_agent.py 抽象基类
+        +train_model(max_samples)
+        #_rollout_train(num_steps)
+    }
+    class PPOAgent {
+        ppo_agent.py PPO笔记
+        #_compute_actor_loss() 概率比+Clip
+    }
+    class AWRAgent {
+        awr_agent.py
+        #_build_train_data() 优势→指数权重w
+        #_compute_actor_loss() −mean(w·logπ)
+        #_compute_critic_loss() MSE
+        #_get_exp_prob() 探索概率调度
+    }
+    class BaseModel {
+        base_model.py
+    }
+    class AWRModel {
+        awr_model.py
+        +eval_actor(obs)
+        +eval_critic(obs)
+    }
+    BaseAgent <|-- PPOAgent : 平行分支
+    BaseAgent <|-- AWRAgent : 平行分支
+    BaseModel <|-- AWRModel
+    AWRAgent o-- AWRModel : _model
+    AWRAgent o-- ExperienceBuffer : 可复用旧数据
+</div>
+
+- 继承关系直接反映算法关系：AMP/ASE/LCP 都长在 `PPOAgent` 下面（on-policy 家族），AWR 独立成枝——它的 buffer 可以保留旧数据（off-policy 倾向），Actor loss 是监督式的加权最大似然。
+- 读源码抓两处就够：`_build_train_data()` 里的 `w = clamp(exp(Â/β))`，和 `_compute_actor_loss()` 里的加权回归。
+
 ### 源码运行时序图
 
 以 `python mimickit/run.py --mode train` 为入口（agent 配置换成 `*_awr_agent.yaml`），训练时序与 PPO 共享同一骨架，差别集中在 **`_build_train_data()` 里算指数权重、Actor 用加权回归更新**：
