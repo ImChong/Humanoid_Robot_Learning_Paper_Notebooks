@@ -3366,6 +3366,18 @@
         "zh_title": "驯服扩散概率模型以实现角色控制"
       },
       {
+        "title": "OmniControl: Control Any Joint at Any Time for Human Motion Generation",
+        "path": "papers/14_Human_Motion/OmniControl__Control_Any_Joint_at_Any_Time_for_Human_Motion_Generation/OmniControl__Control_Any_Joint_at_Any_Time_for_Human_Motion_Generation.md",
+        "url": "/papers/14_Human_Motion/OmniControl__Control_Any_Joint_at_Any_Time_for_Human_Motion_Generation/OmniControl__Control_Any_Joint_at_Any_Time_for_Human_Motion_Generation.html",
+        "dir": "OmniControl__Control_Any_Joint_at_Any_Time_for_Human_Motion_Generation",
+        "arxiv": "2310.08580",
+        "has_open_source": true,
+        "published_date_zh": "2023年10月（ICLR 2024）",
+        "published_date_en": "Oct 2023 (ICLR 2024)",
+        "zhname": "OmniControl：任意关节、任意时刻可控的人体动作生成",
+        "zh_title": "OmniControl：任意关节、任意时刻可控的人体动作生成"
+      },
+      {
         "title": "EgoPoser: Robust Real-Time Egocentric Pose Estimation from Sparse and Intermittent Observations Everywhere",
         "path": "papers/14_Human_Motion/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors.md",
         "url": "/papers/14_Human_Motion/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors/EgoPoser__Robust_Real-Time_Egocentric_Pose_Estimation_from_Sparse_Sensors.html",
