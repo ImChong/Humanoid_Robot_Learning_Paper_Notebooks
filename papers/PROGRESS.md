@@ -671,7 +671,7 @@
 | 490  | [Scaling Large Motion Models with Million-Level Human Motions](https://arxiv.org/abs/2410.03311)                                     | 2024.10 |     | ⏳ 待读 |
 | 491  | [Flexible Motion In-betweening with Diffusion Models](https://arxiv.org/abs/2405.11126)                                              | 2024.05 |     | ⏳ 待读 |
 | 492  | [Taming Diffusion Probabilistic Models for Character Control](https://arxiv.org/abs/2404.15121)                                      | 2024.04 |     | ⏳ 待读 |
-| 493  | [OmniControl: Control Any Joint at Any Time for Human Motion Generation](https://arxiv.org/abs/2310.08580)                           | 2023.10 |     | ⏳ 待读 |
+| 493  | [OmniControl: Control Any Joint at Any Time for Human Motion Generation](https://arxiv.org/abs/2310.08580) ✅ [笔记](14_Human_Motion/OmniControl__Control_Any_Joint_at_Any_Time_for_Human_Motion_Generation/OmniControl__Control_Any_Joint_at_Any_Time_for_Human_Motion_Generation.md) | 2026-07-20 | 🌟 | ✅ 完成 |
 | 494  | [TEDi: Temporally-Entangled Diffusion for Long-Term Motion Synthesis](https://arxiv.org/abs/2307.15042)                              | 2023.07 |     | ⏳ 待读 |
 | 495  | [Guided Motion Diffusion for Controllable Human Motion Synthesis](https://arxiv.org/abs/2305.12577)                                  | 2023.05 |     | ⏳ 待读 |
 | 496  | [PhysDiff: Physics-Guided Human Motion Diffusion Model](https://arxiv.org/abs/2212.02500)                                            | 2022.12 |     | ⏳ 待读 |
