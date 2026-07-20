@@ -368,6 +368,48 @@ flowchart TB
 
 以下代码块对应 [MimicKit](https://github.com/xbpeng/MimicKit) 中 PPO 的实现，与上述讲解的各模块一一对应。
 
+### 源码运行时序图
+
+以 `python mimickit/run.py --mode train` 为入口，一次完整训练的调用时序如下（方法名对应 MimicKit 真实源码）：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as run.py
+    participant AG as PPOAgent<br/>(ppo_agent.py)
+    participant M as PPOModel<br/>(Actor + Critic)
+    participant E as Env + Isaac Gym<br/>(N 个并行环境)
+    participant B as ExperienceBuffer
+    U->>R: python mimickit/run.py --mode train --env_config ... --agent_config ...
+    R->>E: build_env()：按 engine/env 配置创建并行仿真
+    R->>AG: build_agent()：agent_name "PPO" → PPOAgent
+    R->>AG: train_model(max_samples)
+    loop 每轮迭代 _train_iter()
+        loop rollout：_rollout_train(steps_per_iter=32)
+            AG->>M: eval_actor(norm_obs) → 动作分布
+            M-->>AG: 采样 a_t 并记录 log π_old(a_t)
+            AG->>E: _step_env(a_t)
+            E-->>AG: obs、reward、done
+            AG->>B: record(obs, action, reward, done, logp)
+        end
+        AG->>AG: _build_train_data()：compute_td_lambda_return() 逆序算 TD(λ) 回报与优势 Â
+        loop Critic 更新（critic_epochs=2）
+            AG->>B: sample(batch) 随机抽 mini-batch
+            AG->>M: eval_critic(obs) → _compute_critic_loss()：MSE(V, tar_val)
+        end
+        loop Actor 更新（actor_epochs=5）
+            AG->>B: sample(batch)
+            AG->>M: eval_actor(obs) → _compute_actor_loss()：r_t=exp(logp-logp_old)，Clip [0.8, 1.2]
+        end
+        AG->>AG: 更新归一化器，π_old ← π_θ，进入下一轮
+    end
+    R->>AG: 周期性 test_model() 评估 + 保存 checkpoint
+</div>
+
+- ①–③ 是一次性初始化：`run.py` 先按配置构建并行环境，再按 `agent_name` 构建 PPOAgent。
+- ⑤–⑨ 对应上文「第 1 步：收集经验」，⑩ 对应「第 2 步：计算优势」，⑪–⑭ 对应「第 3 步：PPO 裁剪更新」——MimicKit 里 Critic 与 Actor 分开各跑各的 epoch。
+
 ### 1. Actor-Critic 网络结构（PPOModel）
 
 ```python

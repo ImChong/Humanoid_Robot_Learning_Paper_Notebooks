@@ -430,6 +430,49 @@ ASE 在 MimicKit 里的实现非常适合拿来学，因为它把论文里的三
 2. encoder 从行为片段预测 latent  
 3. diversity loss 保证不同 latent 真对应不同动作
 
+### 源码运行时序图
+
+以 `python mimickit/run.py --mode train --agent_config ase_*_agent.yaml` 为入口。`ASEAgent` 在 AMP 的骨架上再叠一层 **latent 管理 + Encoder**，一轮训练要同时更新 4 套参数（Actor / Critic / Disc / Enc）：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as run.py
+    participant AG as ASEAgent<br/>(ase_agent.py)
+    participant M as ASEModel<br/>(Actor + Critic + Disc + Enc)
+    participant E as Env + Isaac Gym
+    participant D as 动作数据集<br/>(多段 mocap)
+    U->>R: python mimickit/run.py --mode train ...
+    R->>E: build_env()
+    R->>AG: build_agent()：agent_name "ASE" → ASEAgent
+    R->>AG: train_model(max_samples)
+    loop 每轮迭代 _train_iter()
+        loop rollout：_rollout_train(steps_per_iter)
+            AG->>AG: _update_latents()：到期的环境重采样 z（每 0~5 s）
+            AG->>AG: _sample_latents(n)：z = normalize(N(0, I))，单位球均匀
+            AG->>M: eval_actor(obs, z) → 采样 a_t（z 是策略输入的一等公民）
+            AG->>E: _step_env(a_t)
+            E-->>AG: obs、done，并记录 disc/enc 观测 (s_t, s_t+1)
+        end
+        AG->>M: eval_disc(disc_obs) → r_disc = −log(1−D)
+        AG->>M: eval_enc(enc_obs) → ẑ，r_enc = z · ẑ（余弦对齐）
+        AG->>AG: 合成 r = 0.5·r_disc + 0.5·r_enc（task 权重默认 0）→ GAE
+        loop mini-batch 更新 _update_model()
+            AG->>D: 采样参考片段（判别器真样本）
+            AG->>M: Disc 更新：真/假二分类 + grad penalty
+            AG->>M: Enc 更新：最大化 z · E(enc_obs)（_calc_enc_error）
+            AG->>M: Critic 更新：MSE；Actor 更新：PPO-Clip
+            AG->>M: Diversity loss：重采样 new_z，惩罚"z 差很远但动作差不多"
+        end
+    end
+    R->>AG: 周期性 test_model() + 保存 checkpoint
+</div>
+
+- ⑤–⑥ 对应下面第 3 节：latent 不是固定的，训练中定期重采样以覆盖更多技能模式。
+- ⑩–⑫ 对应第 4 节：奖励 = 判别器的"自然度" + 编码器的"技能可识别度"各占一半。
+- ⑭–⑯ 是 4 套参数（Disc / Enc / Critic / Actor）各自更新；⑰ 对应第 6 节的 diversity loss，防止 latent collapse。
+
 ### 1. Actor / Critic 都显式接收 latent z
 
 ```python

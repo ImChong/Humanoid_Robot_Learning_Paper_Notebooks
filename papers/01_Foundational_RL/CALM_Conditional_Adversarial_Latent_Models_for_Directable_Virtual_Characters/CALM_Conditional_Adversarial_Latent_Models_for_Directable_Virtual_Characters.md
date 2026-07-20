@@ -245,6 +245,56 @@ flowchart LR
 
 > CALM 官方代码是独立仓库 [NVlabs/CALM](https://github.com/NVlabs/CALM)，基于 IsaacGym 实现，不在 MimicKit 里。以下对照参考 NVIDIA 官方实现的核心机制。
 
+### 源码运行时序图
+
+官方仓库统一入口是 `calm/run.py`（内部走 rl_games 的 Runner），第 5 节的三条命令分别对应三个阶段。三阶段在时序上是**串行**的：先训 LLC（encoder + 低层策略 + 条件判别器），再冻结 LLC 训 HLC，最后 FSM 推理不再训练：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as calm/run.py<br/>(rl_games Runner)
+    participant HLC as 高层策略 HLC
+    participant ENC as MotionEncoder E(m)
+    participant LLC as 低层策略 LLC
+    participant DISC as 条件判别器 D
+    participant S as IsaacGym<br/>并行仿真
+    Note over U,S: 阶段一：训练 LLC（--task HumanoidAMPGetup + calm_humanoid.yaml）
+    U->>R: python calm/run.py --task HumanoidAMPGetup --motion_file dataset_*.yaml
+    loop 每轮 rollout + 更新
+        R->>ENC: 采样参考 motion clip m → z = E(m)
+        R->>LLC: eval_actor(s, z) → 动作 a_t
+        LLC->>S: 仿真一步，收集 (s_t, s_t+1)
+        R->>DISC: D(s_t, s_t+1 ‖ z)：真 = 数据集片段，假 = rollout
+        DISC-->>R: 条件风格奖励 r_disc
+        R->>R: PPO 更新 LLC + Encoder + Disc
+    end
+    Note over U,S: 阶段二：训练 HLC（--task HumanoidHeadingConditioned + --llc_checkpoint）
+    U->>R: python calm/run.py --llc_checkpoint calm_llc_*.pth（LLC/Encoder 冻结）
+    loop 每轮 rollout + 更新
+        R->>HLC: HLC(state, goal) → 选 latent ẑ（归一化到单位球）
+        R->>ENC: 目标技能 latent z_target = E(m_target)
+        R->>LLC: 冻结的 LLC 用 ẑ 解码动作 → 仿真
+        R->>R: 方向奖励 cos(ẑ, z_target) + 任务奖励 → PPO 只更新 HLC
+    end
+    Note over U,S: 阶段三：FSM 推理（--task HumanoidStrikeFSM --test，不训练）
+    U->>R: python calm/run.py --test --llc_checkpoint ... --checkpoint hlc.pth
+    loop 每个控制步
+        R->>R: FSMScheduler.step()：按状态机选模式
+        alt direction_locomotion 模式
+            R->>HLC: HLC 选方向 latent z
+        else fixed_skill 模式
+            R->>ENC: 用参考动作的 latent z = E(fixed_motion)
+        end
+        R->>LLC: llc.decode(state, z) → 动作
+        LLC->>S: 执行，进入下一状态
+    end
+</div>
+
+- 阶段一对应第 1 节代码：encoder 把 motion clip 压成 latent，判别器**以 z 为条件**，逼 LLC "给定 z 就复现对应技能"。
+- 阶段二对应第 2、3 节：HLC 学的不是动作而是"选哪个 latent"，方向奖励就是余弦相似度。
+- 阶段三对应第 4 节 `FSMScheduler`：预训练好的 HLC/LLC 当积木拼，FSM 只做调度，零训练。
+
 ### 1. 低层策略的 Latent 输入
 
 ```python

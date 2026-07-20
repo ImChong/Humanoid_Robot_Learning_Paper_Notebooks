@@ -548,6 +548,49 @@ AMP 是从"精确模仿"到"风格学习"的关键转折点：
 
 下面按 **PPO 笔记同样的模式**，把 AMP 在 MimicKit 中对应的实现模块对上。说明一下：你当前 workspace 里没有直接放 MimicKit 源码仓，但 `Robotics_Notebooks/Train/MimicKit` 里已经整理过对应代码结构和关键片段，所以这里按那套整理结果做源码映射。
 
+### 源码运行时序图
+
+以 `python mimickit/run.py --mode train --agent_config amp_*_agent.yaml` 为入口。AMP 复用 PPO 的训练骨架（`AMPAgent` 继承 `PPOAgent`），额外多出**判别器奖励替换**与**判别器更新**两处：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as run.py
+    participant AG as AMPAgent<br/>(amp_agent.py)
+    participant M as AMPModel<br/>(Actor + Critic + Disc)
+    participant E as Env + Isaac Gym
+    participant D as 参考动作库<br/>(mocap demo)
+    participant B as ExperienceBuffer
+    U->>R: python mimickit/run.py --mode train ...
+    R->>E: build_env()
+    R->>AG: build_agent()：agent_name "AMP" → AMPAgent
+    R->>AG: train_model(max_samples)
+    loop 每轮迭代 _train_iter()
+        loop rollout：_rollout_train(steps_per_iter)
+            AG->>M: eval_actor(obs) → 采样 a_t（obs 不含未来参考帧）
+            AG->>E: _step_env(a_t)
+            E-->>AG: obs、task reward、done
+            AG->>B: record(...)，同时记录 disc_obs 状态对 (s_t, s_t+1)
+        end
+        AG->>M: eval_disc(disc_obs) → 判别器打分策略样本
+        AG->>AG: 风格奖励 r_disc = −log(1 − D)，合成 r = w_task·r_task + w_disc·r_disc
+        AG->>AG: _build_train_data()：用合成奖励算 TD(λ) 回报 + GAE 优势
+        loop mini-batch 更新 _update_model()
+            AG->>B: sample(batch)：策略样本（假样本）
+            AG->>D: 采样参考动作片段 disc_obs_demo（真样本）
+            AG->>M: _compute_disc_loss()：真/假二分类 + gradient penalty
+            AG->>M: _compute_critic_loss() + _compute_actor_loss()（PPO-Clip）
+            AG->>AG: total = actor + w_critic·critic + w_disc·disc，三条计算图各自回传
+        end
+    end
+    R->>AG: 周期性 test_model() + 保存 checkpoint
+</div>
+
+- ⑤–⑧ 与 PPO 相同，但 rollout 时额外把 (s_t, s_{t+1}) 状态对存成 `disc_obs`。
+- ⑨–⑩ 是 AMP 的核心改动：奖励不再来自环境手写公式，而是判别器打分换算的风格奖励（详见上文「风格奖励」小节）。
+- ⑫–⑯ 对应下面第 1、2 节代码：判别器拿"参考数据 = 真、策略 rollout = 假"做二分类，与 PPO 的 actor/critic loss 相加后一次 backward，但三套网络的梯度互不串扰（见第 4 节）。
+
 ### 1. AMP 总 loss = PPO loss + Discriminator loss
 
 ```python

@@ -393,6 +393,54 @@ error = torch.sum(
 return torch.exp(-error.mean(-1) / std**2)
 ```
 
+### 源码运行时序图
+
+已开源的跟踪管线（[whole_body_tracking](https://github.com/HybridRobotics/whole_body_tracking)，Isaac Lab + rsl_rl 栈）从动作预处理到真机部署的完整时序如下：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant PRE as csv_to_npz.py /<br/>WandB Registry
+    participant TR as scripts/rsl_rl/train.py
+    participant E as ManagerBasedRLEnv<br/>(Isaac Lab, 4096 并行)
+    participant MC as MotionCommand<br/>(commands.py)
+    participant RN as rsl_rl<br/>OnPolicyRunner (PPO)
+    participant DEP as motion_tracking_controller<br/>(真机)
+    Note over U,RN: 数据准备：retarget 后的 CSV → 带运动学量的 NPZ
+    U->>PRE: python scripts/csv_to_npz.py --input_file dance.csv --input_fps 30
+    PRE->>PRE: 前向运动学补全 body_pos/quat/vel → 上传 WandB registry
+    Note over U,RN: 训练：统一 MDP 跟踪（--task=Tracking-Flat-G1-v0）
+    U->>TR: python scripts/rsl_rl/train.py --task=... --registry_name ...
+    TR->>MC: MotionLoader 从 registry 拉取 NPZ 参考动作
+    TR->>RN: 构建 OnPolicyRunner，进入训练循环
+    loop 每轮迭代
+        loop rollout（每个仿真步）
+            E->>MC: _update_command()：yaw 对齐 + 高度锚定 → body_*_relative_w
+            E-->>RN: obs（单步观测，无历史）
+            RN->>E: 策略动作 a_t
+            E->>E: rewards.py：锚定/相对体位姿、速度指数奖励
+            E->>E: events.py：关节零位 / 质心 CoM 域随机化
+            alt episode 结束
+                E->>MC: _adaptive_sampling()：按 bin 失败率 + 指数核卷积重采样起点
+            end
+        end
+        RN->>RN: PPO 更新（GAE + Clip）
+    end
+    Note over U,DEP: 部署：导出 ONNX → sim-to-real
+    U->>TR: python scripts/rsl_rl/play.py --wandb_path ... 回放并导出策略
+    U->>DEP: MotionOnnxPolicy 加载 ONNX
+    loop 真机控制循环
+        DEP->>DEP: MotionTrackingController：状态估计 → 观测拼装
+        DEP->>DEP: ONNX 推理 → 关节目标 → PD 控制
+    end
+</div>
+
+- ①–② 对应表中「参考动作加载」：CSV 只有关节角，`csv_to_npz.py` 用前向运动学补出各 body 位姿/速度并托管到 WandB registry。
+- ⑥ 是锚定跟踪的落点（`_update_command()`），⑨–⑩ 对应表中跟踪奖励与 DR，⑪ 的自适应采样让难片段被更多练到。
+- ⑬–⑯ 是表中「真机部署」仓库：训练与部署共享同一套观测/动作约定，策略以 ONNX 形式上真机。
+- 扩散蒸馏与 test-time guidance 部分**尚未开源**，不在此图内。
+
 ### MimicKit 关系
 
 > ❌ MimicKit 未集成 BeyondMimic。概念上 `rewards.py` 沿用 DeepMimic 式指数跟踪奖励，`events.py` 做 DR，与 MimicKit `deepmimic_env.py` 思路相近，但工程栈为 **Isaac Lab** 而非 MimicKit。

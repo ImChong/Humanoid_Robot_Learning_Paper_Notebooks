@@ -498,6 +498,46 @@ $$
 
 以下代码块对应 [MimicKit](https://github.com/xbpeng/MimicKit) 中 LCP 的实现，与上述讲解的各模块一一对应。
 
+### 源码运行时序图
+
+以第 7 节的训练命令 `python mimickit/run.py --mode train --agent_config lcp_g1_agent.yaml` 为入口。`LCPAgent` 继承 `PPOAgent`，整条训练时序与 PPO 完全一致，**唯一的差别发生在 Actor 更新这一步**——多算一次对观测的梯度惩罚：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as run.py
+    participant AG as LCPAgent<br/>(lcp_agent.py)
+    participant M as LCPModel<br/>(= PPOModel 结构)
+    participant E as Env + Isaac Gym<br/>(4096 并行)
+    U->>R: python mimickit/run.py --mode train --agent_config lcp_g1_agent.yaml
+    R->>E: build_env()（deepmimic_g1_env.yaml，DeepMimic 式跟踪任务）
+    R->>AG: build_agent()：agent_name "LCP" → LCPAgent（读入 lcp_weight）
+    R->>AG: train_model(max_samples)
+    loop 每轮迭代 _train_iter()
+        loop rollout：_rollout_train(steps_per_iter)
+            AG->>M: eval_actor(obs) → 采样 a_t
+            AG->>E: _step_env(a_t)
+            E-->>AG: obs、reward、done → 存入 buffer
+        end
+        AG->>AG: _build_train_data()：TD(λ) 回报 + GAE 优势
+        loop Critic 更新（critic_epochs）
+            AG->>M: _compute_critic_loss()：MSE（与 PPO 相同）
+        end
+        loop Actor 更新（actor_epochs）
+            AG->>M: super()._compute_actor_loss()：标准 PPO-Clip loss
+            AG->>M: _compute_lcp_loss()：norm_obs.requires_grad_(True) → log_prob
+            M-->>AG: autograd.grad(a_logp, norm_obs, create_graph=True) → ‖∇ₒ log π‖²
+            AG->>AG: actor_loss += lcp_weight × lcp_loss（λ_gp = 0.002）
+            AG->>M: SGD 一步更新（二阶梯度经 create_graph 回传）
+        end
+    end
+    R->>AG: 周期性 test_model() + 保存 checkpoint
+</div>
+
+- ⑤–⑨ 与 PPO 完全相同：LCP 不改 rollout、不改奖励、不改网络结构。
+- ⑪–⑭ 是 LCP 的全部增量（对应下面第 3、4 节）：在 PPO actor loss 之外，对 `log π(a|o)` 关于观测求梯度、取范数平方作为 Lipschitz 惩罚，再按 `lcp_weight` 加权合入——`create_graph=True` 让这个"梯度的梯度"能继续反向传播到策略参数。
+
 ### 1. LCP Agent（LCP 作为 PPO 的 wrapper）
 
 ```python

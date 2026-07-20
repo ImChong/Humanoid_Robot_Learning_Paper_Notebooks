@@ -402,6 +402,48 @@ ADD 更偏“目标跟踪驱动器”。
 
 ADD 在 MimicKit 里已经有官方实现，而且实现很清楚：**它就是在 AMPAgent 基础上，把判别器输入从“动作片段本身”改成了“参考与当前的差值”。**
 
+### 源码运行时序图
+
+以第 8 节的训练命令 `python mimickit/run.py --mode train --agent_config add_*_agent.yaml` 为入口。`ADDAgent` 继承 `AMPAgent`，时序骨架与 AMP 一致，但**判别器的输入与正负样本构造完全不同**：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as run.py
+    participant AG as ADDAgent<br/>(add_agent.py)
+    participant M as ADDModel<br/>(Actor + Critic + Diff Disc)
+    participant E as Env + Isaac Gym
+    participant ML as 参考动作<br/>(单段 clip)
+    U->>R: python mimickit/run.py --mode train ...
+    R->>E: build_env()
+    R->>AG: build_agent()：agent_name "ADD" → ADDAgent
+    AG->>AG: 初始化 _pos_diff = 全 0 张量（唯一的正样本）
+    R->>AG: train_model(max_samples)
+    loop 每轮迭代 _train_iter()
+        loop rollout：_rollout_train(steps_per_iter)
+            AG->>M: eval_actor(obs) → a_t（obs 含前瞻参考帧，DeepMimic 式相位对齐）
+            AG->>E: _step_env(a_t)
+            E->>ML: 取当前参考帧 ref_t
+            E-->>AG: obs、done（pose termination：偏离参考 > 1.0 m 终止）
+            AG->>AG: 记录差异对 diff = tar_disc_obs − disc_obs
+        end
+        AG->>AG: DiffNormalizer 归一化 diff（位置/角度/速度量纲不同）
+        AG->>M: eval_disc(norm_diff) → r_disc（disc_reward_weight=1.0，奖励全靠判别器）
+        AG->>AG: _build_train_data()：GAE 优势
+        loop mini-batch 更新 _update_model()
+            AG->>M: Disc 更新：正样本 = 零差向量 _pos_diff，负样本 = 当前差异 + replay 差异
+            AG->>M: grad penalty=2 + logit 正则，稳定判别器
+            AG->>M: Critic MSE + Actor PPO-Clip 更新
+        end
+    end
+    R->>AG: 周期性 test_model() + 保存 checkpoint
+</div>
+
+- ④ 是 ADD 最特别的一步：正样本在初始化时就固定为全 0 张量（"误差为零"），对应下面第 2 节。
+- ⑥ 和 ⑨ 保留了 DeepMimic 的相位对齐与 pose termination；⑩–⑫ 里奖励不再手写，判别器吃"参考与当前的差"直接给分（对应第 3、4、5 节）。
+- ⑭–⑮ 对应第 2、7 节：负样本是新旧 rollout 的差异向量，配 replay buffer、gradient penalty 与 logit 正则。
+
 ### 1. ADDAgent 继承自 AMPAgent
 
 ```python
