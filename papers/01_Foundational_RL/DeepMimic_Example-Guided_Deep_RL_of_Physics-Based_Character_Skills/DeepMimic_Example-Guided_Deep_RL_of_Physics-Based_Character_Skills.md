@@ -237,6 +237,28 @@ def sample_time(self, motion_ids, truncate_time=None):
 - **ET** 在失败时快速终止 → 不浪费时间
 - 两者结合：智能体能高效地在各个阶段反复练习，快速迭代
 
+用状态机把一个 episode 的完整生命周期串起来（终止标志对应 MimicKit `base_env.py` 的 `DoneFlags`）：
+
+<div class="mermaid">
+stateDiagram-v2
+    state "RSI 初始化：随机采样参考相位 t₀" as RSI
+    state "跟踪参考动作：π 输出 PD 目标" as TRACK
+    state "FAIL：非脚触地 / 姿态偏离 > 阈值" as FAIL
+    state "SUCC：非循环动作播完" as SUCC
+    state "TIME：循环动作走满 20s" as TIME
+    [*] --> RSI
+    RSI --> TRACK
+    TRACK --> TRACK : 每步算模仿奖励 r_I
+    TRACK --> FAIL : ET 提前终止
+    TRACK --> SUCC : motion_end
+    TRACK --> TIME : timeout
+    FAIL --> RSI : reset（换一个随机相位）
+    SUCC --> RSI : reset
+    TIME --> RSI : reset
+</div>
+
+> 🔑 注意 FAIL 之后不是"回到起点"，而是**重新随机采样相位**——这就是 RSI 和 ET 的配合点：失败得越快，重开得越快，各阶段被练到的次数就越多。
+
 <div class="mermaid">
 flowchart TB
     subgraph noET["无 ET"]
@@ -554,7 +576,60 @@ class KinCharModel():
 
 ## 📁 MimicKit 源码运行时序图
 
-DeepMimic 在 [MimicKit](https://github.com/xbpeng/MimicKit) 中由 `deepmimic_env.py`（RSI / 拼观测 / 5 项奖励 / pose termination）+ `ppo_agent.py`（PPO 更新骨架）组合实现。以 `python mimickit/run.py --mode train` 为入口，一次完整训练的调用时序如下：
+DeepMimic 在 [MimicKit](https://github.com/xbpeng/MimicKit) 中由 `deepmimic_env.py`（RSI / 拼观测 / 5 项奖励 / pose termination）+ `ppo_agent.py`（PPO 更新骨架）组合实现。
+
+### 源码类图：DeepMimic = 环境侧创新
+
+先看静态结构。和 PPO 笔记的类图对照着看会发现一件有意思的事：**DeepMimic 在 MimicKit 里没有自己的 Agent 类**——算法侧直接复用 `PPOAgent`，论文的全部创新（RSI、ET、模仿奖励）都落在**环境继承链**的 `DeepMimicEnv` 里：
+
+<div class="mermaid">
+classDiagram
+    class BaseEnv {
+        envs/base_env.py 抽象基类
+        DoneFlags NULL FAIL SUCC TIME
+    }
+    class SimEnv {
+        sim_env.py
+        物理引擎步进
+    }
+    class CharEnv {
+        char_env.py
+        角色加载 接触检测
+    }
+    class DeepMimicEnv {
+        deepmimic_env.py
+        #_ref_state_init(env_ids) RSI
+        #_compute_obs() 拼前瞻参考帧
+        +compute_reward() 5项指数奖励
+        +compute_done() ET判定
+    }
+    class MotionLib {
+        anim/motion_lib.py
+        +sample_time() 随机采样相位
+        +calc_motion_frame() SLERP插值
+    }
+    class KinCharModel {
+        anim/kin_char_model.py
+        +forward_kinematics()
+    }
+    class PPOAgent {
+        learning/ppo_agent.py
+        直接复用 零改动
+    }
+    BaseEnv <|-- SimEnv
+    SimEnv <|-- CharEnv
+    CharEnv <|-- DeepMimicEnv
+    DeepMimicEnv o-- MotionLib : _motion_lib
+    MotionLib o-- KinCharModel : _kin_char_model
+    PPOAgent ..> DeepMimicEnv : _step_env()
+</div>
+
+- 这个"算法不动、只换环境"的结构是 MimicKit 的通用套路：想读懂一篇模仿学习论文的实现，优先去 `envs/` 找它的环境类，`learning/` 里往往只是复用。
+- 后续 AMP 会同时动两边：环境侧加 `AMPEnv`（提供鉴别器观测），算法侧加 `AMPAgent`（训练鉴别器）。
+
+### 源码运行时序图
+
+以 `python mimickit/run.py --mode train` 为入口，一次完整训练的调用时序如下：
 
 <div class="mermaid">
 sequenceDiagram

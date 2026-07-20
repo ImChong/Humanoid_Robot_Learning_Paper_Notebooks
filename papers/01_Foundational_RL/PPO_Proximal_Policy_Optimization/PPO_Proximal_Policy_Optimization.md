@@ -178,6 +178,28 @@ t=48:  s₄₈ = [重新站立...],  继续收集到 t=63                       
 > - **速度快**：GPU 向量化计算，32个环境几乎和1个一样快（如 Isaac Gym）
 > - **覆盖更广**：同时有的环境在站立，有的在行走，有的刚摔倒重置
 
+#### Episode 生命周期（状态图）
+
+单个环境里，一个 episode 从初始化到终止的完整状态流转如下。先记住 done 在哪里发生，下一步就能明白 GAE 为什么要"在 done 边界截断"：
+
+<div class="mermaid">
+stateDiagram-v2
+    direction LR
+    state "初始化：站立姿态" as INIT
+    state "交互中：s_t → a_t → r_t" as RUN
+    state "FAIL：摔倒" as FAIL
+    state "TIME：走满 1000 步" as TIME
+    [*] --> INIT
+    INIT --> RUN
+    RUN --> RUN : 每步记录 (s, a, r, logp)
+    RUN --> FAIL : 质心高度低于 0.8m
+    RUN --> TIME : 达到步数上限
+    FAIL --> INIT : 自动 reset，开启新轨迹
+    TIME --> INIT : 自动 reset
+</div>
+
+> 💡 done（FAIL / TIME）就是**轨迹边界**：上面 t=47 摔倒后 t=48 重新站立，两段属于不同轨迹。GAE 逆序递推到边界必须停下，不能把下一条轨迹的信息传过来——这就是第 2 步里"done 边界截断"的含义。
+
 ### 第 2 步：计算优势（GAE）
 
 #### 为什么要算优势？
@@ -283,6 +305,16 @@ flowchart TB
 
 $\lambda$ 从 0 调到 1，对"即将摔倒"的敏感度从**完全无视**升到**完全计入**；$0.95$ 是"看得见、又别被单条轨迹噪声带太偏"的折中。
 
+同一段"3 步后摔倒"的轨迹，三个 λ 算出的 Â₀ 画在一起，差距一目了然：
+
+<div class="mermaid">
+xychart-beta
+    title "同一条摔倒轨迹：不同 λ 下的 Â₀"
+    x-axis ["λ=0 一步TD", "λ=0.95 实用值", "λ=1 蒙特卡洛"]
+    y-axis "Â₀（优势估计）" -70 --> 10
+    bar [0.5, -49.3, -58.6]
+</div>
+
 > 💡 实战还会把 $\hat{A}$ 按 batch **减均值除标准差再截断**（配置 `norm_adv_clip: 4.0`），所以进裁剪公式的是"相对大小"，绝对量级不重要。
 
 结果：站稳时 $\hat{A}_t > 0$（好动作），摔倒前 $\hat{A}_t \ll 0$（差动作）。
@@ -331,6 +363,16 @@ for epoch in range(10):                                  # 同一批 2048 个样
 | **步态优化** | 800-2000 | ~3000 | 步态流畅，速度提升 |
 | **收敛** | 2000+ | ~5000+ | 高效稳定的行走步态 |
 
+把这张表画成学习曲线，能直观看到 PPO 的典型形态——前期爬升慢（在学"不摔倒"），中期陡增（学会走后回报快速兑现），后期平台（收敛）：
+
+<div class="mermaid">
+xychart-beta
+    title "Humanoid-v4 训练学习曲线（示意）"
+    x-axis "迭代次数" [0, 100, 300, 800, 2000, 3000]
+    y-axis "平均回报" 0 --> 5500
+    line [30, 50, 200, 1000, 3000, 5000]
+</div>
+
 ### 完整流程图
 
 <div class="mermaid">
@@ -367,6 +409,53 @@ flowchart TB
 ## 📁 MimicKit 源码对照
 
 以下代码块对应 [MimicKit](https://github.com/xbpeng/MimicKit) 中 PPO 的实现，与上述讲解的各模块一一对应。
+
+### 源码类图：PPO 在 MimicKit 中的位置
+
+先看静态结构。MimicKit 的所有算法都挂在 `BaseAgent` 的训练骨架下，PPO 是其中一条分支；后续论文（AMP、ASE、LCP……）的 Agent 都**继承自 PPOAgent**，所以这张图也是整个模块 01 源码的"地基"：
+
+<div class="mermaid">
+classDiagram
+    class BaseAgent {
+        base_agent.py 抽象基类
+        +train_model(max_samples)
+        #_train_iter() 一轮迭代
+        #_rollout_train(num_steps) 收集经验
+        #_build_train_data() 算训练目标
+        #_update_model() 参数更新
+        #_decide_action(obs, info)
+    }
+    class PPOAgent {
+        ppo_agent.py
+        #_build_train_data() TD(λ)回报+优势
+        #_update_model() 先Critic后Actor
+        #_compute_critic_loss(batch) MSE
+        #_compute_actor_loss(batch) PPO-Clip
+    }
+    class BaseModel {
+        base_model.py
+        #_build_action_distribution()
+    }
+    class PPOModel {
+        ppo_model.py
+        +eval_actor(obs) 动作分布
+        +eval_critic(obs) V(s)
+        #_build_actor() #_build_critic()
+    }
+    class ExperienceBuffer {
+        experience_buffer.py
+        +record(name, data)
+        +sample(n) 随机mini-batch
+    }
+    BaseAgent <|-- PPOAgent : 继承
+    BaseModel <|-- PPOModel : 继承
+    PPOAgent o-- PPOModel : _model
+    PPOAgent o-- ExperienceBuffer : _exp_buffer
+    PPOAgent ..> Env : _step_env()
+</div>
+
+- 读代码时按这个分工找：**采样循环**在 `BaseAgent`（`_rollout_train`），**PPO 特有的东西**全在 `PPOAgent` 的四个覆写方法里，**网络前向**在 `PPOModel`。
+- 后续笔记的类图会在这张图基础上"往下长"：AMPAgent 继承 PPOAgent 加鉴别器，ASEAgent 再继承 AMPAgent 加编码器。
 
 ### 源码运行时序图
 

@@ -337,6 +337,16 @@ flowchart LR
 | 速度跟踪误差（仿真） | 步行 **12.14%**，跑步 **13.65%** |
 | 长跑 | 跑道连续 **50 m+** |
 
+用户研究（N=77）的偏好对比画成图，差距更直观——动作越动态（跑步），BeyondMimic 的自然性优势越大：
+
+<div class="mermaid">
+xychart-beta
+    title "自然性用户偏好（%）：BeyondMimic vs Unitree 原生"
+    x-axis ["整体 BeyondMimic", "整体 Unitree", "跑步 BeyondMimic", "跑步 Unitree"]
+    y-axis "偏好比例（%）" 0 --> 100
+    bar [70.8, 29.2, 84.7, 15.3]
+</div>
+
 ### 扩散控制（阶段 2）
 
 | 任务 | 设置 | 指标 |
