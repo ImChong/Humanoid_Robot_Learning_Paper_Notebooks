@@ -354,6 +354,52 @@ self._terminate_buf[is_recovery] = 0
 
 PHC 没有收进 MimicKit，但官方仓库已经公开，而且代码结构和论文是一一对得上的。下面给你一个“论文概念 ↔ 代码实现”的对照表。
 
+### 源码运行时序图
+
+官方仓库 [ZhengyiLuo/PHC](https://github.com/ZhengyiLuo/PHC) 的统一入口是 `phc/run_hydra.py`（Hydra 配置 + rl_games 训练器 + IsaacGym）。训练分两个大阶段：先渐进式训练 primitive（PNN 列网络 + 硬负例挖掘），再冻结 primitive 训练 composer（MCP）：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as run_hydra.py<br/>(rl_games 训练器)
+    participant E as HumanoidIm 环境<br/>(humanoid_im.py)
+    participant P as PNN primitives<br/>(amp_network_pnn_builder.py)
+    participant C as Composer<br/>(amp_network_mcp_builder.py)
+    participant S as IsaacGym 仿真
+    Note over U,S: 阶段一：渐进训练 primitives（learning=im_pnn_big env=env_im_pnn）
+    U->>R: python phc/run_hydra.py learning=im_pnn_big env=env_im_pnn env.motion_file=AMASS
+    R->>P: freeze_pnn(training_prim)：冻结旧列，只训当前列 P(k)
+    loop 每轮 rollout + PPO 更新
+        E->>E: 采样参考动作（训练 P(0) 用全量，P(k) 用上一列的失败序列 = 硬负例）
+        E-->>R: obs = 当前状态 + 目标参考帧
+        R->>P: 当前列 P(k) 前向 → 动作 a_t
+        P->>S: 仿真一步
+        E-->>R: imitation reward = w·exp(−k·误差)（pos/rot/vel/ang_vel 四项）
+        R->>P: PPO 更新当前列（旧列梯度冻结，防遗忘）
+    end
+    R->>R: 评估全数据集 → 收集失败序列 → 新增一列 P(k+1)，重复阶段一
+    Note over U,S: 阶段二：训练 composer（learning=im_mcp_big env=env_im_getup_mcp，含 getup 恢复）
+    U->>R: python phc/run_hydra.py learning=im_mcp_big env=env_im_getup_mcp env.models=[Humanoid.pth]
+    R->>P: 加载并冻结全部 primitives
+    loop 每轮 rollout + PPO 更新
+        alt 正常 episode（标准参考 init）
+            E->>E: 从参考轨迹初始化
+        else recovery episode（recoveryEpisodeProb=0.5, fallInitProb=0.3）
+            E->>E: 从离线生成的摔倒状态库初始化
+            E->>E: recovery 90 步内强制 reset_buf=0（不许 reset，必须自己爬起）
+        end
+        R->>P: pnn(curr_obs) → 每个 primitive 各出一份动作
+        R->>C: composer(obs) → softmax 权重 w
+        C-->>R: 最终动作 = Σ wᵢ · aᵢ（humanoid_im_mcp.py 加权求和）
+        R->>S: 仿真一步 → imitation reward → PPO 只更新 composer
+    end
+    Note over U,S: 评估：learning=im_mcp test=True im_eval=True → AMASS 全量成功率/G-MPJPE
+</div>
+
+- 阶段一对应第 1 节：`numCols` 个 primitive 逐列训练，硬负例（上一列跟不上的序列）驱动新列专攻难动作。
+- 阶段二对应第 2、3、5 节：composer 输出权重做动作融合；getup 环境混入"从摔倒状态开始 + 恢复窗口禁止 reset"的 episode，这就是 perpetual 的训练机制。
+
 ### 1. Progressive Primitive（PNN 列网络）
 
 ```python

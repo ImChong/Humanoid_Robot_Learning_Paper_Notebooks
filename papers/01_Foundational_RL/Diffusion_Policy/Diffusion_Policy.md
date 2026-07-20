@@ -118,6 +118,49 @@ Diffusion Policy **不在 MimicKit 内**；官方实现为 [columbia-ai-robotics
 | 训练工作区 | `diffusion_policy/workspace/` | 各 benchmark 的训练脚本与配置 |
 | 推理与 RHC | workspace 内 rollout 逻辑 | 预测 $H$ 步、执行前 $k$ 步、滑动重规划 |
 
+### 源码运行时序图
+
+官方仓库训练入口是 `train.py`（Hydra 按 `--config-name` 实例化对应 Workspace），评估入口是 `eval.py`。训练与推理（RHC 滚动执行）的时序如下：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant T as train.py / eval.py<br/>(Hydra)
+    participant W as Workspace<br/>(TrainDiffusionUnetImageWorkspace)
+    participant DL as ReplayBuffer +<br/>SequenceSampler
+    participant P as DiffusionUnetImagePolicy<br/>(视觉编码器 + ConditionalUnet1D)
+    participant ER as EnvRunner<br/>(仿真/真机环境)
+    Note over U,ER: 训练（train.py --config-name=image_pusht_diffusion_policy_cnn.yaml）
+    U->>T: python train.py --config-name=... training.seed=42
+    T->>W: hydra 实例化 Workspace → workspace.run()
+    loop 每个 epoch
+        W->>DL: 采样 batch：obs 序列 + 长度 H 的动作 chunk A₀
+        W->>P: 视觉编码器提取 obs 特征（FiLM 条件）
+        W->>P: 随机采样扩散步 k，加噪 A₀ → A_k
+        P-->>W: ConditionalUnet1D 预测噪声 ε̂ → MSE(ε̂, ε) 反向传播
+        W->>W: EMA 更新影子权重
+        W->>ER: 定期 env_runner.run()：整段 rollout 评估成功率
+        W->>W: save_checkpoint()
+    end
+    Note over U,ER: 推理 / RHC 滚动执行（eval.py --checkpoint ...）
+    U->>T: python eval.py --checkpoint ... --output_dir ...
+    T->>ER: 加载 EMA 权重 → env_runner.run()
+    loop 每个控制周期
+        ER-->>P: 最近 n_obs_steps=2 帧观测
+        P->>P: 从高斯噪声初始化动作 chunk A_K
+        loop DDIM 去噪 ~10 步
+            P->>P: ε̂ = UNet(A_k, k, obs 特征) → A_(k−1)
+        end
+        P-->>ER: 干净动作序列 A₀（H=16 步）
+        ER->>ER: 只执行前 8 步（action horizon）
+        ER-->>P: 新观测 → 滑动窗口重新预测
+    end
+</div>
+
+- 训练阶段的核心就是 ⑤–⑥：不回归动作本身，而是学"从加噪 chunk 里预测噪声"；EMA（⑦）是复现成功率的关键工程细节。
+- 推理阶段对应上文 RHC 流程图：⑬–⑮ 用 DDIM 把训练时的百步扩散压到 ~10 步，⑯–⑰ 只执行 chunk 前段就滑动重规划，兼顾平滑与反应速度。
+
 ### MimicKit 关系
 
 > ❌ MimicKit 面向物理仿真 RL 与运动模仿（PPO/AMP/ASE 等），**未集成视觉-运动扩散策略**。MimicKit 仓库中有 `mimickit/learning/tinymdm/` 子目录，属于另一套运动扩散实验，**不是** Columbia Diffusion Policy 实现。

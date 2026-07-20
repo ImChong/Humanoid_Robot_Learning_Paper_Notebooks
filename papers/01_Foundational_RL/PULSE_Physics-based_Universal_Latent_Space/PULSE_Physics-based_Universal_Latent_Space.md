@@ -123,6 +123,47 @@ PULSE **不在 MimicKit 内**，官方实现为独立仓库 [ZhengyiLuo/PULSE](h
 
 训练入口见仓库 `scripts/` 与 `phc/data/cfg/env/env_pulse_*.yaml`。
 
+### 源码运行时序图
+
+PULSE 复用 PHC 的代码栈，统一入口同样是 `phc/run_hydra.py`。README 给出的两条核心命令分别对应 **VIB 蒸馏**（阶段 2）和**下游任务训练**（阶段 3）；阶段 1 的模仿器直接使用训练好的 PHC 模型（`env.models=[phc_3, phc_comp_3]`）：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as run_hydra.py
+    participant T as PHC 教师模仿器<br/>(冻结, humanoid_im)
+    participant ENC as Encoder q(z|s, ref)
+    participant PRI as 先验 p(z|s)<br/>(ar_prior.py)
+    participant DEC as Decoder 低层策略
+    participant S as IsaacGym 仿真
+    Note over U,S: 阶段 2：VIB 蒸馏（env.task=HumanoidImDistillGetup env=env_im_vae learning=im_z_fit）
+    U->>R: python phc/run_hydra.py env.task=HumanoidImDistillGetup env.models=[PHC 权重] env.motion_file=AMASS
+    R->>T: 加载并冻结 PHC 教师（含 getup 恢复能力）
+    loop 在线蒸馏（DAgger 式）
+        S-->>ENC: 当前状态 s + 参考帧 ref
+        ENC->>ENC: 采样 z ~ q(z|s, ref)（32 维）
+        ENC->>DEC: z + s → 学生动作 a_student
+        R->>T: 同一状态问教师 → a_teacher
+        R->>R: 蒸馏损失 ‖a_student − a_teacher‖ + KL(q(z|s,ref) ‖ p(z|s))
+        R->>PRI: 先验同步学习"当前状态下合理的 z 分布"
+        DEC->>S: 学生动作驱动仿真，滚动收集新状态
+    end
+    Note over U,S: 阶段 3：下游任务（env.task=Humanoid*Z env=env_pulse_amp learning=pulse_z_task）
+    U->>R: python phc/run_hydra.py env.task=HumanoidSpeedZ env.models=[pulse_vae 权重]
+    R->>DEC: 冻结 Decoder + 先验，只训高层策略
+    loop 每轮 rollout + PPO 更新
+        S-->>R: 任务观测（目标速度 / 击打目标等）
+        R->>PRI: 高层策略在 p(z|s) 基础上输出残差 → 得到 z
+        PRI->>DEC: z + s → 动作
+        DEC->>S: 仿真一步 → 任务奖励
+        R->>R: PPO 只更新高层策略（32 维 z 空间，收敛远快于原始动作空间）
+    end
+</div>
+
+- 阶段 2 对应表中 `humanoid_im_distill.py` + `ar_prior.py`：**教师出动作、学生带信息瓶颈地模仿**，KL 项把 latent 压向"本体感受先验"，保证长序列滚动不发散。
+- 阶段 3 对应 `amp_network_z_builder.py` + `pulse_z_task.yaml`：下游只在 32 维潜空间里探索，物理可行性由冻结的 Decoder 保底。
+
 ### MimicKit 关系
 
 > ❌ MimicKit 仅覆盖 ASE（`ase_agent.py`）等对抗潜空间方法，**未实现 PULSE 的 VIB 蒸馏与 proprioceptive prior**。读 PULSE 请直接用官方仓库；读 ASE 对照可用 MimicKit `docs/README_ASE.md`。

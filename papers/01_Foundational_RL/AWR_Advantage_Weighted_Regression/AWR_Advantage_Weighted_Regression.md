@@ -284,6 +284,46 @@ AWR 本身在人形机器人控制中不是最常用的算法（PPO 用得更多
 
 以下代码块对应 [MimicKit](https://github.com/xbpeng/MimicKit) 中 AWR 的实现，与上述讲解的各模块一一对应。
 
+### 源码运行时序图
+
+以 `python mimickit/run.py --mode train` 为入口（agent 配置换成 `*_awr_agent.yaml`），训练时序与 PPO 共享同一骨架，差别集中在 **`_build_train_data()` 里算指数权重、Actor 用加权回归更新**：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as run.py
+    participant AG as AWRAgent<br/>(awr_agent.py)
+    participant M as AWRModel<br/>(Actor + Critic)
+    participant E as Env + Isaac Gym
+    participant B as ExperienceBuffer
+    U->>R: python mimickit/run.py --mode train --agent_config ..._awr_agent.yaml
+    R->>E: build_env()
+    R->>AG: build_agent()：agent_name "AWR" → AWRAgent
+    R->>AG: train_model(max_samples)
+    loop 每轮迭代 _train_iter()
+        loop rollout：_rollout_train(steps_per_iter)
+            AG->>M: eval_actor(norm_obs) → 采样 a_t
+            AG->>E: _step_env(a_t)
+            E-->>AG: obs、reward、done
+            AG->>B: record(obs, action, reward, done)
+        end
+        AG->>M: eval_critic(obs) → 估计 V(s)
+        AG->>AG: _build_train_data()：adv = R − V → 归一化 → w = clamp(exp(Â/β), max=20)
+        loop Critic 更新（critic_epochs=2）
+            AG->>B: sample(batch)
+            AG->>M: _compute_critic_loss()：MSE(V, TD-λ 回报)
+        end
+        loop Actor 更新（actor_epochs=5）
+            AG->>B: sample(batch)
+            AG->>M: _compute_actor_loss()：−mean(w · log π(a|s)) 加权最大似然
+        end
+    end
+    R->>AG: 周期性 test_model() + 保存 checkpoint
+</div>
+
+对比 PPO 的时序：rollout 和 Critic 更新完全一致；差别在 ⑩ 处提前把优势换算成指数权重 `w`，⑭ 处 Actor 不再算概率比和 Clip，而是做一次加权监督回归。
+
 ### 1. 核心：指数优势权重计算（`_build_train_data`）
 
 ```python

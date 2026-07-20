@@ -552,6 +552,48 @@ class KinCharModel():
 
 ---
 
+## 📁 MimicKit 源码运行时序图
+
+DeepMimic 在 [MimicKit](https://github.com/xbpeng/MimicKit) 中由 `deepmimic_env.py`（RSI / 拼观测 / 5 项奖励 / pose termination）+ `ppo_agent.py`（PPO 更新骨架）组合实现。以 `python mimickit/run.py --mode train` 为入口，一次完整训练的调用时序如下：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as run.py
+    participant AG as PPOAgent<br/>(ppo_agent.py)
+    participant E as DeepMimicEnv<br/>(deepmimic_env.py)
+    participant ML as MotionLib 参考动作<br/>(kin_char_model.py)
+    participant S as Isaac Gym 仿真<br/>(4096 并行)
+    U->>R: python mimickit/run.py --mode train --env_config deepmimic_*_env.yaml
+    R->>E: build_env()：加载角色模型 + 参考动作 clip
+    E->>ML: 载入 mocap 帧，forward_kinematics() 预计算各 body 世界坐标
+    R->>AG: build_agent() → train_model(max_samples)
+    loop 每轮迭代 _train_iter()
+        loop rollout：_rollout_train(steps_per_iter=32)
+            AG->>E: reset 已终止的环境
+            E->>ML: RSI：随机采样相位 t₀，取参考帧 q̂(t₀)
+            E->>S: 把角色初始化到参考姿态
+            AG->>E: _step_env(a_t)（a_t 来自 Actor 采样）
+            E->>ML: 取前瞻参考帧 ref(t+1, t+2, t+3)
+            E-->>AG: obs = s_t ++ 前瞻参考帧
+            E->>ML: 取当前参考帧 q̂(t)
+            E-->>AG: reward = Σ wᵢ·exp(−αᵢ‖xᵢ − x̂ᵢ‖²)（pose/vel/root_pose/root_vel/key_pos 5 项）
+            E-->>AG: done（pose termination：任一 body 偏离参考 > 1.0 m 或摔倒）
+        end
+        AG->>AG: _build_train_data()：TD(λ) 回报 + GAE 优势
+        AG->>AG: _update_model()：Critic MSE（2 epoch）→ Actor PPO-Clip（5 epoch）
+    end
+    R->>AG: 周期性 test_model() + 保存 checkpoint
+</div>
+
+- ⑤–⑦ 就是上文「RSI」：每次 reset 都从参考动作的随机相位开始，各片段独立练习。
+- ⑨–⑫ 对应「模仿奖励」：环境每步都向 MotionLib 要参考帧——前瞻帧拼进观测（告诉策略"下一步该长什么样"），当前帧用来算 5 项指数奖励。
+- ⑬ 是 Early Termination：失败立刻截断，不浪费 rollout 配额。
+- ⑭–⑮ 是标准 PPO 更新，与 PPO 笔记的时序图完全一致。
+
+---
+
 ## 🤖 DeepMimic 对人形机器人领域的意义
 
 DeepMimic 是**运动模仿学习**的开山之作，几乎所有后续的机器人动作模仿工作都建立在它的框架之上：

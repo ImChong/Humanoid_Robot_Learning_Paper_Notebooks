@@ -371,6 +371,48 @@ MimicKit 这篇论文的“源码对照”就是官方仓库本身：
 3. 然后看 `amp_agent.py`，理解 discriminator reward 如何接进 PPO。
 4. 最后看 `ase_agent.py` / `add_agent.py`，比较 latent skill 和差异判别的变化点。
 
+### 源码运行时序图
+
+MimicKit 的统一入口是 `mimickit/run.py`：engine / env / agent 三份 yaml 决定"哪个仿真后端 + 哪个任务 + 哪个算法"。**所有算法共享同一条训练时序**，DeepMimic / AMP / ASE / ADD 的差异全部收敛在"奖励从哪来"和"更新哪些网络"两个挂钩点上：
+
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant R as run.py
+    participant EB as env_builder /<br/>agent_builder
+    participant AG as Agent<br/>(PPO/AWR/AMP/ASE/ADD)
+    participant E as Env<br/>(deepmimic_env.py 等)
+    participant ML as MotionLib<br/>(动作数据)
+    participant S as Isaac Gym 等<br/>物理后端
+    U->>R: python mimickit/run.py --mode train --engine_config ... --env_config ... --agent_config ...
+    R->>EB: build_env() + build_agent()：按 yaml 组装
+    EB->>E: 创建并行环境，加载角色 + 动作数据
+    E->>ML: 载入 motion clip / dataset
+    R->>AG: train_model(max_samples)
+    loop 每轮迭代 _train_iter()
+        loop rollout：_rollout_train(steps_per_iter)
+            AG->>AG: _decide_action(obs)：Actor 采样（ASE 会额外拼 latent z）
+            AG->>E: _step_env(a_t)
+            E->>S: 物理仿真一步
+            E->>ML: 查参考帧（拼观测 / 算 tracking reward / 判 termination）
+            E-->>AG: obs、reward、done → buffer.record(...)
+        end
+        alt DeepMimic / 纯 PPO / AWR
+            AG->>AG: 直接用 env 的手写 reward
+        else AMP / ADD
+            AG->>AG: 判别器打分替换/合成 reward（ADD 吃差异对）
+        else ASE
+            AG->>AG: disc reward + encoder reward + diversity
+        end
+        AG->>AG: _build_train_data()：TD(λ) 回报 + GAE 优势
+        AG->>AG: _update_model()：Critic → Actor（AMP/ASE/ADD 再加 Disc/Enc 更新）
+    end
+    R->>AG: 周期性 test_model() + 保存 checkpoint（--mode test 则只跑 _rollout_test）
+</div>
+
+这张图就是上文「四种算法在 G1 walk 上的流程对比」的时间轴版本：四张流程图里变化的节点（reward 来源、latent、判别器），在时序上只落在 ⑪–⑬（奖励从哪来）和 ⑮（更新哪些网络）两处挂钩点；框架的价值正是把其余公共骨架冻结下来。
+
 ---
 
 ## 🎤 面试高频问题 & 参考回答
