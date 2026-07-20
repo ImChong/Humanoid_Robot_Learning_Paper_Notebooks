@@ -72,3 +72,38 @@ def test_sanitize_mermaid_svg_keeps_foreign_object():
     assert "sanitizeMermaidSvg" in text
     assert "foreignObject" in text
     assert "USE_PROFILES" in text
+
+
+def test_read_mermaid_block_source_restores_br_tag_not_newline():
+    """sequenceDiagram participant aliases use <br/>; converting to \\n breaks parse."""
+    text = CONFIG_JS.read_text(encoding="utf-8")
+    assert "readMermaidBlockSource" in text
+    assert "createTextNode('<br/>')" in text
+    assert "createTextNode('\\n')" not in text
+    # Regression note must stay so future edits don't reintroduce \\n.
+    assert "sequenceDiagram" in text
+
+
+def test_foundational_rl_sequence_diagrams_use_br_in_participants():
+    """PR #387 sequence diagrams rely on <br/> in participant aliases surviving the site pipeline."""
+    import re
+
+    seq_files = list(
+        (ROOT / "papers" / "01_Foundational_RL").rglob("*.md")
+    )
+    found = 0
+    for path in seq_files:
+        text = path.read_text(encoding="utf-8")
+        for block in re.findall(
+            r'<div class="mermaid"[^>]*>(.*?)</div>', text, re.DOTALL
+        ):
+            if not block.lstrip().startswith("sequenceDiagram"):
+                continue
+            found += 1
+            assert "<br" in block, f"{path.name}: sequence diagram missing <br> aliases"
+            # No raw newline mid-participant (would already be broken in source)
+            for line in block.splitlines():
+                stripped = line.strip()
+                if stripped.startswith("participant ") and "<br" in stripped:
+                    assert stripped.count("<br") >= 1
+    assert found >= 10, f"expected ≥10 sequence diagrams from PR #387, found {found}"

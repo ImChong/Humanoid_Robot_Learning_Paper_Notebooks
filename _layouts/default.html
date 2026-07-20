@@ -78,7 +78,7 @@
       mermaid.initialize(config);
       window.roadmapMermaidConfigured = true;
       
-      // 1. Snapshot source once (keep <br> as newlines); re-render from snapshot on theme changes.
+      // 1. Snapshot source once (restore <br> as literal <br/>); re-render from snapshot on theme changes.
       document.querySelectorAll('.mermaid:not(#roadmap-mermaid)').forEach(function(el) {
         var readSource =
           typeof window.readMermaidBlockSource === 'function'
