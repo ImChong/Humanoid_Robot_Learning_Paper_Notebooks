@@ -920,6 +920,14 @@ body.mermaid-lightbox-open {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
 
+@media (min-width: 1201px) {
+  .mermaid-lightbox__panel {
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 2rem);
+    padding: 0.6rem 0.85rem 0.85rem;
+  }
+}
+
 .mermaid-lightbox__close {
   position: absolute;
   top: 0.45rem;
