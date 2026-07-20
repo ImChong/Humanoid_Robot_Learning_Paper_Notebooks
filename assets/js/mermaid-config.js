@@ -134,14 +134,21 @@
   window.MERMAID_RENDER_SCALE = MERMAID_RENDER_SCALE;
   window.MERMAID_LIGHTBOX_SCALE = MERMAID_LIGHTBOX_SCALE;
 
-  /** Preserve <br> line breaks when snapshotting Mermaid source from built HTML. */
+  /**
+   * Preserve <br> line breaks when snapshotting Mermaid source from built HTML.
+   *
+   * Jekyll emits author-written `<br/>` as real <br> DOM nodes. We must restore
+   * the literal `<br/>` tag (not a newline): flowcharts accept either form inside
+   * quoted labels, but sequenceDiagram `participant … as Alias<br/>…` becomes a
+   * hard parse error if the break is turned into a line split.
+   */
   window.readMermaidBlockSource = function (el) {
     if (!el) return '';
     var stored = el.getAttribute('data-original-code');
     if (stored) return stored;
     var clone = el.cloneNode(true);
     clone.querySelectorAll('br').forEach(function (br) {
-      br.replaceWith(document.createTextNode('\n'));
+      br.replaceWith(document.createTextNode('<br/>'));
     });
     return clone.textContent.trim();
   };
