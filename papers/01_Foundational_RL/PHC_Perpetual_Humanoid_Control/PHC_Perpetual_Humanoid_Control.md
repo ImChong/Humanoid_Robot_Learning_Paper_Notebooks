@@ -348,6 +348,23 @@ self._terminate_buf[is_recovery] = 0
 
 这就是 PHC 真正“perpetual”的地方：不是口头上说永续，而是训练机制上就不允许你靠 reset 逃避失败。
 
+把运行时的模式切换画成状态机，“永续”的含义就非常直白——DeepMimic 摔倒只能 reset，PHC 摔倒后多了一条**自己爬起来接回轨迹**的回路：
+
+<div class="mermaid">
+stateDiagram-v2
+    state "模仿模式：精确跟踪全身参考姿态" as IM
+    state "恢复模式：只追根节点位置（r_point）" as REC
+    state "recovery 窗口（90 步）：reset_buf 强制为 0" as WIN
+    [*] --> IM
+    IM --> REC : 摔倒 / 偏离参考 2~5m
+    REC --> WIN : 进入恢复窗口，禁止 reset
+    WIN --> WIN : Pᶠ 主导：翻身 → 起身 → 走向目标
+    WIN --> IM : 根节点距参考 < 0.5m，切回模仿
+    IM --> IM : composer 混合 P¹…P³ 持续跟踪
+</div>
+
+> 🔑 对照 DeepMimic 笔记的 episode 状态机看：DeepMimic 的 FAIL 是**终态**（只能 reset 重来），PHC 把 FAIL 变成了**中间态**（恢复模式），这正是论文标题里 “Perpetual” 的机制来源。
+
 ---
 
 ## 📁 PHC 源码对照
