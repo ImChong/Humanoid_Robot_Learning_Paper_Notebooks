@@ -63,6 +63,8 @@
   <script src="{{ '/assets/js/mermaid-config.js' | relative_url }}{% if mermaid_config_js %}?v={{ mermaid_config_js.modified_time | date: '%s' }}{% endif %}"></script>
   {% assign mermaid_zoom_js = site.static_files | where: "path", "/assets/js/mermaid-zoom.js" | first %}
   <script src="{{ '/assets/js/mermaid-zoom.js' | relative_url }}{% if mermaid_zoom_js %}?v={{ mermaid_zoom_js.modified_time | date: '%s' }}{% endif %}" defer></script>
+  {% assign updates_emoji_js = site.static_files | where: "path", "/assets/js/updates-emoji.js" | first %}
+  <script src="{{ '/assets/js/updates-emoji.js' | relative_url }}{% if updates_emoji_js %}?v={{ updates_emoji_js.modified_time | date: '%s' }}{% endif %}" defer></script>
   <script>
     function initMermaid(theme) {
       if (typeof mermaid === 'undefined') return;
