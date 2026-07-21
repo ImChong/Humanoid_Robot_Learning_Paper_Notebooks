@@ -266,6 +266,7 @@
 | 534  | [SplitAdapter: Load-Aware Humanoid Loco-Manipulation via Factorized Adaptation](https://arxiv.org/abs/2606.03297) ✅ [笔记](04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.md) | 2026.06 | 2026-06-14 | ✅ 已总结 |
 | 546  | [HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers](https://arxiv.org/abs/2606.06493) ✅ [笔记](04_Loco-Manipulation_and_WBC/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers/HANDOFF__Humanoid_Agentic_Task-Space_Whole-Body_Control_via_Distilled_Teachers.md) | 2026.06 | 2026-06-21 | ✅ 已总结 |
 | 556  | [Athena-WBC: Capability-Aligned Policy Experts for Long-Tail Humanoid Whole-Body Control](https://arxiv.org/abs/2607.04837) ✅ [笔记](04_Loco-Manipulation_and_WBC/Athena-WBC__Capability-Aligned_Policy_Experts_for_Long-Tail_Humanoid_Whole-Body_Control/Athena-WBC__Capability-Aligned_Policy_Experts_for_Long-Tail_Humanoid_Whole-Body_Control.md) | 2026-07-10 | 2026-07-10 | ✅ 已总结 |
+| 558  | [CWI: Composite Humanoid Whole-Body Imitation System for Loco-manipulation](https://arxiv.org/abs/2606.27676) ✅ [笔记](04_Loco-Manipulation_and_WBC/CWI__Composite_Humanoid_Whole-Body_Imitation_System_for_Loco-manipulation/CWI__Composite_Humanoid_Whole-Body_Imitation_System_for_Loco-manipulation.md) | 2026.06 | 2026-07-21 | ✅ 已总结 |
 
 
 ### Locomotion（84篇）
