@@ -577,6 +577,17 @@
         "zh_title": "Athena-WBC：用「能力对齐」的动态/平衡专家攻克人形全身控制的长尾动作"
       },
       {
+        "title": "CWI: Composite Humanoid Whole-Body Imitation System for Loco-manipulation",
+        "path": "papers/04_Loco-Manipulation_and_WBC/CWI__Composite_Humanoid_Whole-Body_Imitation_System_for_Loco-manipulation/CWI__Composite_Humanoid_Whole-Body_Imitation_System_for_Loco-manipulation.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/CWI__Composite_Humanoid_Whole-Body_Imitation_System_for_Loco-manipulation/CWI__Composite_Humanoid_Whole-Body_Imitation_System_for_Loco-manipulation.html",
+        "dir": "CWI__Composite_Humanoid_Whole-Body_Imitation_System_for_Loco-manipulation",
+        "arxiv": "2606.27676",
+        "published_date_zh": "2026年6月",
+        "published_date_en": "Jun 2026",
+        "zhname": "CWI：面向移动操作的人形复合式全身模仿系统",
+        "zh_title": "CWI：面向移动操作的人形复合式全身模仿系统"
+      },
+      {
         "title": "SplitAdapter: Load-Aware Humanoid Loco-Manipulation via Factorized Adaptation",
         "path": "papers/04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.html",
