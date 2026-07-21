@@ -273,7 +273,7 @@ flowchart TB
 δ₄ = -10 + 0(done) - 20 = -30.0    # done，不加 γV(s₅)
 ```
 
-**② 逆序递推 GAE** $\hat{A}_t = \delta_t + 0.9405\,\hat{A}_{t+1}$（从最后一步往前推，即源码里 `for i in reversed(...)`）：
+**② 逆序递推 GAE** $\hat{A}\_t = \delta_t + 0.9405\,\hat{A}\_{t+1}$（从最后一步往前推，即源码里 `for i in reversed(...)`）：
 
 ```
 Â₄ = -30.0
