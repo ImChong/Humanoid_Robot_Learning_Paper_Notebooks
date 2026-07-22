@@ -2095,6 +2095,17 @@
     "display_name": "Locomotion",
     "papers": [
       {
+        "title": "HumoSlope: Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains",
+        "path": "papers/05_Locomotion/HumoSlope__Physics-Guided_Biomechanical_Gait_Adaptation_on_Extreme_Sloped_Terrains/HumoSlope__Physics-Guided_Biomechanical_Gait_Adaptation_on_Extreme_Sloped_Terrains.md",
+        "url": "/papers/05_Locomotion/HumoSlope__Physics-Guided_Biomechanical_Gait_Adaptation_on_Extreme_Sloped_Terrains/HumoSlope__Physics-Guided_Biomechanical_Gait_Adaptation_on_Extreme_Sloped_Terrains.html",
+        "dir": "HumoSlope__Physics-Guided_Biomechanical_Gait_Adaptation_on_Extreme_Sloped_Terrains",
+        "arxiv": "2607.07830",
+        "published_date_zh": "2026年7月（arXiv v1：2026年7月8日）",
+        "published_date_en": "Jul 2026 (arXiv v1：Jul 8, 2026)",
+        "zhname": "HumoSlope：极端坡地上的人形物理引导生物力学步态自适应",
+        "zh_title": "HumoSlope：极端坡地上的人形物理引导生物力学步态自适应"
+      },
+      {
         "title": "TACT-ful: Multi-Channel Terrain Affordance and Compliance Training for Payload-Robust Perceptive Humanoid Locomotion",
         "path": "papers/05_Locomotion/TACT-ful__Multi-Channel_Terrain_Affordance_and_Compliance_for_Payload-Robust_Locomotion/TACT-ful__Multi-Channel_Terrain_Affordance_and_Compliance_for_Payload-Robust_Locomotion.md",
         "url": "/papers/05_Locomotion/TACT-ful__Multi-Channel_Terrain_Affordance_and_Compliance_for_Payload-Robust_Locomotion/TACT-ful__Multi-Channel_Terrain_Affordance_and_Compliance_for_Payload-Robust_Locomotion.html",

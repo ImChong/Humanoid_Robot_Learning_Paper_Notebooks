@@ -41,16 +41,26 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 0,
-      "last_title": "CWI: Composite Humanoid Whole-Body Imitation System for Loco-manipulation (arXiv:2606.27676)",
-      "next_module": "05_Locomotion"
+      "last_module": "05_Locomotion",
+      "last_index": 1,
+      "last_title": "HumoSlope: Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains (arXiv:2607.07830)",
+      "next_module": "06_Manipulation"
     },
-    "last_summary_index": 0,
-    "last_summary_date": "2026-07-21",
-    "last_summary_title": "CWI: Composite Humanoid Whole-Body Imitation System for Loco-manipulation",
+    "last_summary_index": 1,
+    "last_summary_date": "2026-07-22",
+    "last_summary_title": "HumoSlope: Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-22",
+        "index": 559,
+        "title": "HumoSlope: Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains",
+        "folder": "papers/05_Locomotion/HumoSlope__Physics-Guided_Biomechanical_Gait_Adaptation_on_Extreme_Sloped_Terrains",
+        "module": "05_Locomotion",
+        "arxiv": "2607.07830",
+        "project_page": "",
+        "source": "论文未见公开代码/项目页 · NTU × A*STAR · 两阶段 PPO：阶段 I 贴合局部斜面的 ZMP 正则(比力射线∩支撑平面, r=exp(-d_zmp/σ))立斜坡平衡先验；阶段 II 生物力学坡地步态适配器 BSGA 用 5 维坡度描述子门控软奖励(质心高度 h·cos|θ|+坡度偏置缓解 Groucho 蹲走 · 上坡髋推进/下坡膝制动 · 摆动腿髋pitch参考) · actor 仅本体感知(部署零外感)、critic 特权观测(真实线速度+49点高程+PCA描述子) · 域随机化零样本上真机 · 仿真 30° 成功率 77.1%(URL/FastTD3/Gallant 均 0%)、真机 Unitree G1 盲走草坡 32.1°(62.7%坡度)并泛化湿滑/波浪/平地 · 消融去 ZMP→55.6%、去 BSGA→0% · 模块轮转（04_Loco-Manipulation_and_WBC → 05_Locomotion）"
+      },
       {
         "date": "2026-07-21",
         "index": 558,
