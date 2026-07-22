@@ -105,7 +105,7 @@ flowchart TD
     end
 
     subgraph S2["② 生物力学坡地步态适配器 BSGA"]
-      DESC["🧭 坡度描述子门控"] --> COM["📏 质心高度调制<br/>h_tgt=h·cos|θ|+坡度偏置"]
+      DESC["🧭 坡度描述子门控"] --> COM["📏 质心高度调制<br/>h_tgt=h·cos&#124;θ&#124;+坡度偏置"]
       DESC --> BIO["🦵 上坡髋推进 / 下坡膝制动"]
       DESC --> SWING["🦿 摆动腿髋pitch参考(随坡角)"]
     end
