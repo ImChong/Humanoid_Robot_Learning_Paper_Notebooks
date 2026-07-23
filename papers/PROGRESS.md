@@ -385,7 +385,7 @@
 | 284  | [EgoMI: Learning Active Vision and Whole-Body Manipulation from Egocentric Human Demonstrations](https://arxiv.org/abs/2511.00153)                        | 2025.11 |     | ⏳ 待读 |
 | 285  | [Endowing GPT-4 with a Humanoid Body: Building the Bridge Between Off-the-Shelf VLMs and the Physical World](https://arxiv.org/abs/2511.00041)            | 2025.11 |     | ⏳ 待读 |
 | 286  | [Towards Proprioception-Aware Embodied Planning for Dual-Arm Humanoid Robots](https://arxiv.org/abs/2510.07882)                                           | 2025.10 |     | ⏳ 待读 |
-| 287  | ActiveUMI: Robotic Manipulation with Active Perception from Robot‑Free Human Demonstrations                                                               | 2025.10 |     | ⏳ 待读 |
+| 287  | [ActiveUMI: Robotic Manipulation with Active Perception from Robot‑Free Human Demonstrations](https://arxiv.org/abs/2510.01607) ✅ [笔记](06_Manipulation/ActiveUMI__Robotic_Manipulation_with_Active_Perception_from_Robot-Free_Human_Demonstrations/ActiveUMI__Robotic_Manipulation_with_Active_Perception_from_Robot-Free_Human_Demonstrations.md) | 2025.10 | 2026-07-23 | ✅ 已总结 |
 | 288  | [EgoDemoGen: Novel Egocentric Demonstration Generation Enables Viewpoint-Robust Manipulation](https://arxiv.org/abs/2509.22578)                           | 2025.09 |     | ⏳ 待读 |
 | 289  | [Residual Off-Policy RL for Finetuning Behavior Cloning Policies](https://arxiv.org/abs/2509.19301)                                                       | 2025.09 |     | ⏳ 待读 |
 | 290  | [MimicDroid: In-Context Learning for Humanoid Robot Manipulation from Human Play Videos](https://arxiv.org/abs/2509.09769)                                | 2025.09 |     | ⏳ 待读 |

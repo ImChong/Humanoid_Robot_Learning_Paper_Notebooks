@@ -41,16 +41,26 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 1,
-      "last_title": "HumoSlope: Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains (arXiv:2607.07830)",
-      "next_module": "06_Manipulation"
+      "last_module": "06_Manipulation",
+      "last_index": 2,
+      "last_title": "ActiveUMI: Robotic Manipulation with Active Perception from Robot-Free Human Demonstrations (arXiv:2510.01607)",
+      "next_module": "07_Teleoperation"
     },
-    "last_summary_index": 1,
-    "last_summary_date": "2026-07-22",
-    "last_summary_title": "HumoSlope: Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains",
+    "last_summary_index": 2,
+    "last_summary_date": "2026-07-23",
+    "last_summary_title": "ActiveUMI: Robotic Manipulation with Active Perception from Robot-Free Human Demonstrations",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-23",
+        "index": 287,
+        "title": "ActiveUMI: Robotic Manipulation with Active Perception from Robot-Free Human Demonstrations",
+        "folder": "papers/06_Manipulation/ActiveUMI__Robotic_Manipulation_with_Active_Perception_from_Robot-Free_Human_Demonstrations",
+        "module": "06_Manipulation",
+        "arxiv": "2510.01607",
+        "project_page": "https://activeumi.github.io/",
+        "source": "论文未见公开代码（有项目页 activeumi.github.io） · 上海大学 × 美的 Midea × Stanford · 便携 VR 遥操作套件 + 镜像机器人末端的传感手柄，用精确位姿对齐 + 高效标定打通人-机器人运动学、免真实机器人野外采数据；核心用头显记录操作者「有意的头部转动」学「视觉注意力 ↔ 操作」关联、执行时主动调整视线；沉浸式 3D 渲染 + 可穿戴计算机保移动性/数据质量；仅 ActiveUMI 数据训练在 6 双臂任务分布内 70%、新物体/新环境 56% · UMI 主动感知进化 · 模块轮转（05_Locomotion → 06_Manipulation）"
+      },
       {
         "date": "2026-07-22",
         "index": 559,
@@ -5458,6 +5468,56 @@
       "done_date": "2026-07-17",
       "route": "Simulation Benchmark",
       "title_cn": "ThorArena：面向人形物理交互的运动-力示范基准"
+    },
+    {
+      "title": "ActiveUMI: Robotic Manipulation with Active Perception from Robot-Free Human Demonstrations",
+      "folder": "papers/06_Manipulation/ActiveUMI__Robotic_Manipulation_with_Active_Perception_from_Robot-Free_Human_Demonstrations",
+      "note_file": "ActiveUMI__Robotic_Manipulation_with_Active_Perception_from_Robot-Free_Human_Demonstrations.md",
+      "status": "done",
+      "arxiv": "2510.01607",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "RGMP: Recurrent Geometric-prior Multimodal Policy for Generalizable Humanoid Robot Manipulation",
+      "folder": "papers/06_Manipulation/RGMP__Recurrent_Geometric-prior_Multimodal_Policy_for_Generalizable_Humanoid_Manipulation",
+      "note_file": "RGMP__Recurrent_Geometric-prior_Multimodal_Policy_for_Generalizable_Humanoid_Manipulation.md",
+      "status": "done",
+      "arxiv": "2511.09141",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "MCR-Bionic Hand: Anatomical Structural Priors for Dexterous Manipulation",
+      "folder": "papers/12_Hardware_Design/MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation",
+      "note_file": "MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation.md",
+      "status": "done",
+      "arxiv": "2606.13601",
+      "pdf_file": "",
+      "route": "硬件设计",
+      "title_cn": ""
+    },
+    {
+      "title": "HUMOTO: A 4D Dataset of Mocap Human Object Interactions",
+      "folder": "papers/14_Human_Motion/HUMOTO__A_4D_Dataset_of_Mocap_Human_Object_Interactions",
+      "note_file": "HUMOTO__A_4D_Dataset_of_Mocap_Human_Object_Interactions.md",
+      "status": "done",
+      "arxiv": "2504.10414",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "OmniControl: Control Any Joint at Any Time for Human Motion Generation",
+      "folder": "papers/14_Human_Motion/OmniControl__Control_Any_Joint_at_Any_Time_for_Human_Motion_Generation",
+      "note_file": "OmniControl__Control_Any_Joint_at_Any_Time_for_Human_Motion_Generation.md",
+      "status": "done",
+      "arxiv": "2310.08580",
+      "pdf_file": "",
+      "route": "Human Motion",
+      "title_cn": ""
     }
   ]
 }
