@@ -1522,6 +1522,17 @@
         "zh_title": "面向双臂人形的本体感受感知具身规划"
       },
       {
+        "title": "ActiveUMI: Robotic Manipulation with Active Perception from Robot-Free Human Demonstrations",
+        "path": "papers/06_Manipulation/ActiveUMI__Robotic_Manipulation_with_Active_Perception_from_Robot-Free_Human_Demonstrations/ActiveUMI__Robotic_Manipulation_with_Active_Perception_from_Robot-Free_Human_Demonstrations.md",
+        "url": "/papers/06_Manipulation/ActiveUMI__Robotic_Manipulation_with_Active_Perception_from_Robot-Free_Human_Demonstrations/ActiveUMI__Robotic_Manipulation_with_Active_Perception_from_Robot-Free_Human_Demonstrations.html",
+        "dir": "ActiveUMI__Robotic_Manipulation_with_Active_Perception_from_Robot-Free_Human_Demonstrations",
+        "arxiv": "2510.01607",
+        "published_date_zh": "2025年10月",
+        "published_date_en": "Oct 2025",
+        "zhname": "从无机器人的人类演示中学带主动感知的机器人操作",
+        "zh_title": "从无机器人的人类演示中学带主动感知的机器人操作"
+      },
+      {
         "title": "EgoDemoGen: Egocentric Demonstration Generation for Viewpoint Generalization in Robotic Manipulation",
         "path": "papers/06_Manipulation/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization.md",
         "url": "/papers/06_Manipulation/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization/EgoDemoGen__Egocentric_Demonstration_Generation_for_Viewpoint_Generalization.html",
