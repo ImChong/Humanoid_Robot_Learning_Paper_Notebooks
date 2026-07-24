@@ -455,7 +455,7 @@
 | 535  | [EgoPoser: Robust Real-Time Egocentric Pose Estimation from Sparse and Intermittent Observations Everywhere](https://arxiv.org/pdf/2308.06493) 🌟              | ECCV 2024 |     | ⏳ 待读 |
 | 536  | [AvatarPoser: Articulated Full-Body Pose Tracking from Sparse Motion Sensing](https://arxiv.org/abs/2207.13784) 🌟                                             | ECCV 2022 |     | ⏳ 待读 |
 | 537  | [A Mobile Robot Hand-Arm Teleoperation System by Vision and IMU](https://arxiv.org/pdf/2003.05212) 🌟                                                          | IROS 2020 |     | ⏳ 待读 |
-| 555  | [Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking](https://arxiv.org/abs/2606.03985) 🌟                                                   | 2026.06 |     | ⏳ 待读 |
+| 555  | [Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking](https://arxiv.org/abs/2606.03985) 🌟 ✅ [笔记](07_Teleoperation/Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking/Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking.md) | 2026.06 | 2026-07-24 | ✅ 已总结 |
 
 
 ### Navigation（19篇）

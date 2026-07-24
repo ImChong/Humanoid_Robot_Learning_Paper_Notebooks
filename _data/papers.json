@@ -1852,6 +1852,17 @@
         "zh_title": "HEFT：面向重载全尺寸人形的全身遥操作"
       },
       {
+        "title": "Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking",
+        "path": "papers/07_Teleoperation/Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking/Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking.md",
+        "url": "/papers/07_Teleoperation/Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking/Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking.html",
+        "dir": "Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking",
+        "arxiv": "2606.03985",
+        "published_date_zh": "2026年6月（arXiv）",
+        "published_date_en": "Jun 2026 (arXiv)",
+        "zhname": "Humanoid-GPT：用数据与结构的规模化实现零样本动作跟踪",
+        "zh_title": "Humanoid-GPT：用数据与结构的规模化实现零样本动作跟踪"
+      },
+      {
         "title": "CLOT: Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation",
         "path": "papers/07_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation.md",
         "url": "/papers/07_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation/CLOT__Closed-Loop_Global_Motion_Tracking_for_Whole-Body_Humanoid_Teleoperation.html",
