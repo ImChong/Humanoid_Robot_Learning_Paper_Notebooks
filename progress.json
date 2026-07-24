@@ -41,16 +41,27 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 2,
-      "last_title": "ActiveUMI: Robotic Manipulation with Active Perception from Robot-Free Human Demonstrations (arXiv:2510.01607)",
-      "next_module": "07_Teleoperation"
+      "last_module": "07_Teleoperation",
+      "last_index": 1,
+      "last_title": "Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking (arXiv:2606.03985)",
+      "next_module": "08_Navigation"
     },
-    "last_summary_index": 2,
-    "last_summary_date": "2026-07-23",
-    "last_summary_title": "ActiveUMI: Robotic Manipulation with Active Perception from Robot-Free Human Demonstrations",
+    "last_summary_index": 555,
+    "last_summary_date": "2026-07-24",
+    "last_summary_title": "Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-24",
+        "index": 555,
+        "title": "Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking",
+        "folder": "papers/07_Teleoperation/Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking",
+        "module": "07_Teleoperation",
+        "arxiv": "2606.03985",
+        "project_page": "https://qizekun.github.io/Humanoid-GPT/",
+        "code": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+        "source": "🌟 GalaxyGeneralRobotics/Humanoid-GPT（已放出推理/部署代码+预训练权重，训练码与2B语料暂未释出） · CVPR 2026 · 把动作跟踪当作类 GPT 序列建模：token=本体状态++参考姿态、历史32帧过12层因果注意力、自回归输出各关节 PD 目标；数据规模化=统一到 G1 29DoF 的20亿帧重定向语料(AMASS/LAFAN1/Motion-X++/PHUMA/MotionMillion+自采，滤除物体交互，时间弯曲增广~5×)；结构规模化=HME 谐波聚类~300簇多样性均衡→PPO 训~384个专家→DAgger 蒸馏成单一通才；打破敏捷 vs 泛化取舍，仿真成功率92.58%(vs 88.27%)、MPKPE 40.99mm，实机 Unitree-G1 零样本跟未见舞蹈，ONNX→TensorRT<1.5ms·50Hz，可作在线 MoCap 重定向遥操作底座 · 模块轮转（06_Manipulation → 07_Teleoperation）"
+      },
       {
         "date": "2026-07-23",
         "index": 287,
@@ -1317,7 +1328,7 @@
         "source": "🌟 开源 · LLM 场景编剧(目的性任务脚本)+抗遮挡动捕多相机录制+专业清洗去脚滑穿模 · 735 段·~7875s@30fps·63 精确物体网格·72 铰接人体部件(Mixamo 兼容) · 面向动作生成/姿态估计/机器人仿真/2D 编辑多任务基准 · UT Austin × Adobe Research · ICCV 2025 · 模块轮转（13_Physics-Based_Animation → 14_Human_Motion）"
       }
     ],
-    "last_completed_index": null,
+    "last_completed_index": 555,
     "next_index": null
   },
   "papers": [
@@ -5517,6 +5528,16 @@
       "arxiv": "2310.08580",
       "pdf_file": "",
       "route": "Human Motion",
+      "title_cn": ""
+    },
+    {
+      "title": "Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking",
+      "folder": "papers/07_Teleoperation/Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking",
+      "note_file": "Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking.md",
+      "status": "done",
+      "arxiv": "2606.03985",
+      "pdf_file": "",
+      "route": "Teleoperation",
       "title_cn": ""
     }
   ]
