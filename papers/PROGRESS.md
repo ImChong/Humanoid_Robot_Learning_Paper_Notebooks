@@ -474,7 +474,7 @@
 | 358  | [Humanoid Occupancy: Enabling A Generalized Multimodal Occupancy Perception System on Humanoid Robots](https://arxiv.org/abs/2507.20217)                    | 2025.07 |     | ⏳ 待读 |
 | 359  | LOVON: Legged Open-Vocabulary Object Navigator                                                                                                             | 2025.07 |     | ⏳ 待读 |
 | 360  | [RL with Data Bootstrapping for Dynamic Subgoal Pursuit in Humanoid Robot Navigation](https://arxiv.org/abs/2506.02206)                                    | 2025.06 |     | ⏳ 待读 |
-| 361  | [HumanoidPano: Hybrid Spherical Panoramic-LiDAR Cross-Modal Perception for Humanoid Robots](https://arxiv.org/abs/2503.09010)                              | 2025.03 |     | ⏳ 待读 |
+| 361  | [HumanoidPano: Hybrid Spherical Panoramic-LiDAR Cross-Modal Perception for Humanoid Robots](https://arxiv.org/abs/2503.09010) ✅ [笔记](08_Navigation/HumanoidPano__Hybrid_Spherical_Panoramic-LiDAR_Cross-Modal_Perception/HumanoidPano__Hybrid_Spherical_Panoramic-LiDAR_Cross-Modal_Perception.md) | 2025.03 |     | ✅ 已总结 |
 | 362  | [NaVILA: Legged Robot Vision-Language-Action Model for Navigation](https://arxiv.org/abs/2412.04453)                                                       | 2024.12 |     | ⏳ 待读 |
 | 363  | [ARMOR: Egocentric Perception for Humanoid Robot Collision Avoidance and Motion Planning](https://arxiv.org/abs/2412.00396)                                | 2024.12 |     | ⏳ 待读 |
 | 364  | [NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration](https://arxiv.org/abs/2310.07896)                                                   | 2023.10 |     | ⏳ 待读 |
