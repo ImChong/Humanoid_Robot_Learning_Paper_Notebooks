@@ -41,10 +41,11 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 1,
-      "last_title": "Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking (arXiv:2606.03985)",
-      "next_module": "08_Navigation"
+      "last_module": "08_Navigation",
+      "last_index": 0,
+      "last_title": "HumanoidPano: Hybrid Spherical Panoramic-LiDAR Cross-Modal Perception for Humanoid Robots (arXiv:2503.09010)",
+      "next_module": "09_State_Estimation",
+      "last_completed_date": "2026-07-25"
     },
     "last_summary_index": 555,
     "last_summary_date": "2026-07-24",
