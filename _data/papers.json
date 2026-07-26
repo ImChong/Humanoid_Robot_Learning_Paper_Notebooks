@@ -2617,6 +2617,18 @@
         "zh_title": "用本体感知分布匹配做仿真器自适应的腿足 Sim-to-Real 方法"
       },
       {
+        "title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
+        "path": "papers/10_Sim-to-Real/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking.md",
+        "url": "/papers/10_Sim-to-Real/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking.html",
+        "dir": "MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking",
+        "arxiv": "2602.08594",
+        "has_open_source": true,
+        "published_date_zh": "2026年2月9日（arXiv v1）· 2026年2月11日（v2）",
+        "published_date_en": "Feb 9, 2026 (arXiv v1)· Feb 11, 2026 (v2)",
+        "zhname": "MOSAIC：用快速残差自适应弥合通用人形动作跟踪与遥操作的 Sim-to-Real 鸿沟",
+        "zh_title": "MOSAIC：通过快速残差自适应弥合通用人形运动跟踪与遥操作的仿真到真实差距"
+      },
+      {
         "title": "RAPT: Model-Predictive Out-of-Distribution Detection and Failure Diagnosis for Sim-to-Real Humanoid Robots",
         "path": "papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.md",
         "url": "/papers/10_Sim-to-Real/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_/RAPT__Model-Predictive_Out-of-Distribution_Detection_and_Failure_Diagnosis_for_.html",
