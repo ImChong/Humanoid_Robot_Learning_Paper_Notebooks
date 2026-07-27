@@ -41,16 +41,16 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
+      "last_module": "11_Simulation_Benchmark",
       "last_index": 0,
-      "last_title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation (arXiv:2602.08594)",
-      "next_module": "11_Simulation_Benchmark",
-      "last_completed_date": "2026-07-26",
-      "note": "09_State_Estimation 模块上游论文已全部收录完毕，本日轮转跳转至 10_Sim-to-Real 推进 MOSAIC"
+      "last_title": "Labimus: A Simulation and Benchmark for Humanoid Dexterous Manipulation in Chemical Laboratory (arXiv:2606.31037)",
+      "next_module": "12_Hardware_Design",
+      "last_completed_date": "2026-07-27",
+      "note": "11_Simulation_Benchmark 模块推进最新且无笔记的 Labimus (arXiv:2606.31037)，模块轮转 10 → 11；下一篇轮转至 12_Hardware_Design"
     },
-    "last_summary_index": 39,
-    "last_summary_date": "2026-07-26",
-    "last_summary_title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
+    "last_summary_index": 560,
+    "last_summary_date": "2026-07-27",
+    "last_summary_title": "Labimus: A Simulation and Benchmark for Humanoid Dexterous Manipulation in Chemical Laboratory",
     "next_summary_index": null,
     "log": [
       {

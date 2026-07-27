@@ -2863,6 +2863,17 @@
         "zh_title": "ThorArena：面向人形物理交互的运动-力示范基准"
       },
       {
+        "title": "Labimus: A Simulation and Benchmark for Humanoid Dexterous Manipulation in Chemical Laboratory",
+        "path": "papers/11_Simulation_Benchmark/Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab/Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab.md",
+        "url": "/papers/11_Simulation_Benchmark/Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab/Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab.html",
+        "dir": "Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab",
+        "arxiv": "2606.31037",
+        "published_date_zh": "2026年6月30日（arXiv v1）/ 2026年7月1日（v2）",
+        "published_date_en": "Jun 30, 2026 (arXiv v1)/ Jul 1, 2026 (v2)",
+        "zhname": "Labimus：面向化学实验室人形灵巧操作的仿真与基准",
+        "zh_title": "Labimus：面向化学实验室人形灵巧操作的仿真与基准"
+      },
+      {
         "title": "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation",
         "path": "papers/11_Simulation_Benchmark/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation.md",
         "url": "/papers/11_Simulation_Benchmark/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation.html",
