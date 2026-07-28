@@ -2842,6 +2842,17 @@
         "published_date_en": "Nov 10, 2025 (arXiv)",
         "zhname": "Human-Level Actuation for Humanoids：人形关节驱动器的「人级」量化评测框架",
         "zh_title": "Human-Level Actuation for Humanoids：人形关节驱动器的「人级」量化评测框架"
+      },
+      {
+        "title": "Toward Humanoid Brain-Body Co-design: Joint Optimization of Control and Morphology for Fall Recovery",
+        "path": "papers/12_Hardware_Design/RoboCraft_Humanoid_Brain-Body_Co-design_for_Fall_Recovery/RoboCraft_Humanoid_Brain-Body_Co-design_for_Fall_Recovery.md",
+        "url": "/papers/12_Hardware_Design/RoboCraft_Humanoid_Brain-Body_Co-design_for_Fall_Recovery/RoboCraft_Humanoid_Brain-Body_Co-design_for_Fall_Recovery.html",
+        "dir": "RoboCraft_Humanoid_Brain-Body_Co-design_for_Fall_Recovery",
+        "arxiv": "2510.22336",
+        "published_date_zh": "2025年10月25日（arXiv v1）；2025年11月5日（v2）",
+        "published_date_en": "Oct 25, 2025 (arXiv v1); Nov 5, 2025 (v2)",
+        "zhname": "RoboCraft：面向摔倒恢复的人形机器人脑-体协同设计",
+        "zh_title": "RoboCraft：面向摔倒恢复的人形机器人脑-体协同设计"
       }
     ],
     "zhname": "硬件设计",

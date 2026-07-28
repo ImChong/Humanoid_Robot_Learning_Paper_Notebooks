@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
+      "last_module": "12_Hardware_Design",
       "last_index": 0,
-      "last_title": "Labimus: A Simulation and Benchmark for Humanoid Dexterous Manipulation in Chemical Laboratory (arXiv:2606.31037)",
-      "next_module": "12_Hardware_Design",
-      "last_completed_date": "2026-07-27",
-      "note": "11_Simulation_Benchmark 模块推进最新且无笔记的 Labimus (arXiv:2606.31037)，模块轮转 10 → 11；下一篇轮转至 12_Hardware_Design"
+      "last_title": "Toward Humanoid Brain-Body Co-design: Joint Optimization of Control and Morphology for Fall Recovery (arXiv:2510.22336)",
+      "next_module": "13_Physics-Based_Animation",
+      "last_completed_date": "2026-07-28",
+      "note": "12_Hardware_Design 模块推进最新且无笔记的 RoboCraft 脑-体协同设计 (arXiv:2510.22336)，模块轮转 11 → 12；下一篇轮转至 13_Physics-Based_Animation"
     },
     "last_summary_index": 560,
     "last_summary_date": "2026-07-27",
