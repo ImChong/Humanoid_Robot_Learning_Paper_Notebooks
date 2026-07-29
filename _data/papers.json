@@ -3221,6 +3221,17 @@
         "published_date_en": "2010 (SIGGRAPH 2010 / ACM TOG 29 (4))",
         "zhname": "保持空间关系的角色运动适配",
         "zh_title": "保持空间关系的角色运动适配"
+      },
+      {
+        "title": "FARM: Frame-Accelerated Augmentation and Residual Mixture-of-Experts for Physics-Based High-Dynamic Humanoid Control",
+        "path": "papers/13_Physics-Based_Animation/FARM__Frame-Accelerated_Augmentation_and_Residual_MoE_for_High-Dynamic_Humanoid/FARM__Frame-Accelerated_Augmentation_and_Residual_MoE_for_High-Dynamic_Humanoid.md",
+        "url": "/papers/13_Physics-Based_Animation/FARM__Frame-Accelerated_Augmentation_and_Residual_MoE_for_High-Dynamic_Humanoid/FARM__Frame-Accelerated_Augmentation_and_Residual_MoE_for_High-Dynamic_Humanoid.html",
+        "dir": "FARM__Frame-Accelerated_Augmentation_and_Residual_MoE_for_High-Dynamic_Humanoid",
+        "arxiv": "2508.19926",
+        "published_date_zh": "2025年8月27日（arXiv v1）；AAAI 2026（Oral）",
+        "published_date_en": "Aug 27, 2025 (arXiv v1); AAAI 2026 (Oral)",
+        "zhname": "FARM：帧加速增广 + 残差混合专家，攻克高动态人形动作控制",
+        "zh_title": "FARM：帧加速增广 + 残差混合专家，攻克高动态人形动作控制"
       }
     ],
     "zhname": "物理动画",

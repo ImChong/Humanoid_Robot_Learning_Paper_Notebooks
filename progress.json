@@ -41,18 +41,29 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 0,
-      "last_title": "Toward Humanoid Brain-Body Co-design: Joint Optimization of Control and Morphology for Fall Recovery (arXiv:2510.22336)",
-      "next_module": "13_Physics-Based_Animation",
-      "last_completed_date": "2026-07-28",
-      "note": "12_Hardware_Design 模块推进最新且无笔记的 RoboCraft 脑-体协同设计 (arXiv:2510.22336)，模块轮转 11 → 12；下一篇轮转至 13_Physics-Based_Animation"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 471,
+      "last_title": "FARM: Frame-Accelerated Augmentation and Residual Mixture-of-Experts for Physics-Based High-Dynamic Humanoid Control (arXiv:2508.19926)",
+      "next_module": "14_Human_Motion",
+      "last_completed_date": "2026-07-29",
+      "note": "13_Physics-Based_Animation 模块推进最新且无笔记的 FARM 帧加速增广+残差 MoE 高动态控制 (arXiv:2508.19926, AAAI 2026 Oral)，模块轮转 12 → 13；下一篇轮转至 14_Human_Motion"
     },
-    "last_summary_index": 560,
-    "last_summary_date": "2026-07-27",
-    "last_summary_title": "Labimus: A Simulation and Benchmark for Humanoid Dexterous Manipulation in Chemical Laboratory",
+    "last_summary_index": 471,
+    "last_summary_date": "2026-07-29",
+    "last_summary_title": "FARM: Frame-Accelerated Augmentation and Residual Mixture-of-Experts for Physics-Based High-Dynamic Humanoid Control",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-29",
+        "index": 471,
+        "title": "FARM: Frame-Accelerated Augmentation and Residual Mixture-of-Experts for Physics-Based High-Dynamic Humanoid Control",
+        "folder": "papers/13_Physics-Based_Animation/FARM__Frame-Accelerated_Augmentation_and_Residual_MoE_for_High-Dynamic_Humanoid",
+        "module": "13_Physics-Based_Animation",
+        "arxiv": "2508.19926",
+        "project_page": "https://github.com/Colin-Jing/FARM",
+        "code": "https://github.com/Colin-Jing/FARM",
+        "source": "🌟 Colin-Jing/FARM（含训练/评测代码，基于 ProtoMotions；数据因版权需另下） · AAAI 2026 Oral · HKUST(GZ) 等 · 攻高动态人形物理动作追踪：① 帧加速增广把动作 1.0–1.5× 重采样拉大帧间姿态间隔=零成本合成高速位姿突变+1.25× 跑基座 tracker 筛困难片段；② 冻结可靠基座控制器保低动态基本盘；③ 残差混合专家(SAR 速度感知路由分低/中/高三档分诊 + DEA 动态专家分配按强度激活 0~N 专家叠残差) · Isaac Lab + SMPL·PD 控制 · 自建 HDHM 数据集(~3593 段清洗过的高动态动作，取材 AIST++/EMDB/Motion-X 武术+文本/视频合成) · 相对基线失败率 −42.8%、全局 MPJPE −14.6%，低动态几乎无损 · 模块轮转（12_Hardware_Design → 13_Physics-Based_Animation）"
+      },
       {
         "date": "2026-07-24",
         "index": 555,
