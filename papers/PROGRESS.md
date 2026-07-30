@@ -701,6 +701,7 @@
 | 522  | [ClimbingCap: Multi-Modal Dataset and Method for Rock Climbing in World Coordinate](https://arxiv.org/abs/2503.21268) | 2025.03 |  | ⏳ 待读 |
 | 523  | [Example-based Motion Synthesis via Generative Motion Matching](https://arxiv.org/abs/2306.00378) | 2023.06 |  | ⏳ 待读 |
 | 538  | [MANIKIN: Biomechanically Accurate Neural Inverse Kinematics for Human Motion Estimation](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00194.pdf) | ECCV 2024 |  | ⏳ 待读 |
+| 563  | [ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation](https://arxiv.org/abs/2607.08741) ✅ [笔记](14_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion.md) | 2026-07-09 | 🌟 | ✅ 已总结 |
 
 
 ### Archived（自发现，待上游收录）

@@ -41,18 +41,29 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "13_Physics-Based_Animation",
-      "last_index": 471,
-      "last_title": "FARM: Frame-Accelerated Augmentation and Residual Mixture-of-Experts for Physics-Based High-Dynamic Humanoid Control (arXiv:2508.19926)",
-      "next_module": "14_Human_Motion",
-      "last_completed_date": "2026-07-29",
-      "note": "13_Physics-Based_Animation 模块推进最新且无笔记的 FARM 帧加速增广+残差 MoE 高动态控制 (arXiv:2508.19926, AAAI 2026 Oral)，模块轮转 12 → 13；下一篇轮转至 14_Human_Motion"
+      "last_module": "14_Human_Motion",
+      "last_index": 563,
+      "last_title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation (arXiv:2607.08741)",
+      "next_module": "04_Loco-Manipulation_and_WBC",
+      "last_completed_date": "2026-07-30",
+      "note": "14_Human_Motion 模块推进最新且无笔记的 ARDY 自回归扩散+混合表征可交互动作生成 (arXiv:2607.08741, SIGGRAPH 2026)，模块轮转 13 → 14；下一篇轮转回 04_Loco-Manipulation_and_WBC"
     },
-    "last_summary_index": 471,
-    "last_summary_date": "2026-07-29",
-    "last_summary_title": "FARM: Frame-Accelerated Augmentation and Residual Mixture-of-Experts for Physics-Based High-Dynamic Humanoid Control",
+    "last_summary_index": 563,
+    "last_summary_date": "2026-07-30",
+    "last_summary_title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-07-30",
+        "index": 563,
+        "title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+        "folder": "papers/14_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion",
+        "module": "14_Human_Motion",
+        "arxiv": "2607.08741",
+        "project_page": "https://research.nvidia.com/labs/sil/projects/ardy/",
+        "code": "https://github.com/nv-tlabs/ardy",
+        "source": "🌟 nv-tlabs/ardy（推理/交互 Demo/生成脚本+预训练权重，代码 Apache-2.0，模型 NVIDIA Open Model Agreement） · SIGGRAPH 2026 · NVIDIA × ETH Zürich · 弥合「离线可控但慢 vs 在线快但难控」：① 混合表征——显式根特征保精确轨迹/朝向控制 + 隐式身体嵌入保高效自然生成；② 两阶段自回归 Transformer 去噪器——可变历史上下文 + 条件于灵活长时程运动学约束(根路径/航点·全身关键帧·稀疏关节)，训练时从真值采样文本+约束使模型原生学会可控生成，支持在线文本切换与长时程目标；③ 4 步扩散把单段延迟压到 ~33ms 实现实时交互(鼠标/键盘/路径跟随/关键帧) · HumanML3D(FID+Top-3 R-precision) + 大规模商用 Bones Rigplay 动捕(150+ 人·统一 27 关节骨架)评测 · 模块轮转（13_Physics-Based_Animation → 14_Human_Motion）"
+      },
       {
         "date": "2026-07-29",
         "index": 471,
