@@ -3564,6 +3564,17 @@
         "published_date_en": "2024 (ECCV 2024)",
         "zhname": "MANIKIN：生物力学精确的神经逆运动学用于人体动作估计",
         "zh_title": "MANIKIN：生物力学精确的神经逆运动学用于人体动作估计"
+      },
+      {
+        "title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+        "path": "papers/14_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion.md",
+        "url": "/papers/14_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion.html",
+        "dir": "ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion",
+        "arxiv": "2607.08741",
+        "published_date_zh": "2026年7月9日（arXiv v1）；SIGGRAPH 2026",
+        "published_date_en": "Jul 9, 2026 (arXiv v1); SIGGRAPH 2026",
+        "zhname": "ARDY：自回归扩散 + 混合表征，做可实时交互的人体动作生成",
+        "zh_title": "ARDY：自回归扩散 + 混合表征，做可实时交互的人体动作生成"
       }
     ],
     "zhname": "人体动作分析与生成",
