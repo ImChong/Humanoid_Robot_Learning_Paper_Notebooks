@@ -143,7 +143,7 @@
 | 67   | [Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer](https://arxiv.org/abs/2512.01061)                                                    | 2025.12    |     | ⏳ 待读 |
 | 68   | [Commanding Humanoid by Free-form Language: A Large Language Action Model with Unified Motion Vocabulary](https://arxiv.org/abs/2511.22963)                      | 2025.11    |     | ⏳ 待读 |
 | 69   | [Kinematics-Aware Multi-Policy Reinforcement Learning for Force-Capable Humanoid Loco-Manipulation](https://arxiv.org/abs/2511.21169)                            | 2025.11    |     | ⏳ 待读 |
-| 70   | [HAFO: A Force-Adaptive Control Framework for Humanoid Robots in Intense Interaction Environments](https://arxiv.org/abs/2511.20275)                             | 2025.11    |     | ⏳ 待读 |
+| 70   | [HAFO: A Force-Adaptive Control Framework for Humanoid Robots in Intense Interaction Environments](https://arxiv.org/abs/2511.20275) ✅ [笔记](04_Loco-Manipulation_and_WBC/HAFO__A_Force-Adaptive_Control_Framework_for_Humanoid_Robots_in_Intense_Interact/HAFO__A_Force-Adaptive_Control_Framework_for_Humanoid_Robots_in_Intense_Interact.md) | 2025.11    | 2026-07-31 | ✅ 已总结 |
 | 71   | [SENTINEL: A Fully End-to-End Language-Action Model for Humanoid Whole Body Control](https://arxiv.org/abs/2511.19236)                                           | 2025.11    |     | ⏳ 待读 |
 | 72   | [SafeFall: Learning Protective Control for Humanoid Robots](https://arxiv.org/abs/2511.18509)                                                                    | 2025.11    |     | ⏳ 待读 |
 | 73   | [Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data](https://arxiv.org/abs/2511.17373)                                                  | 2025.11    |     | ⏳ 待读 |
