@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "14_Human_Motion",
-      "last_index": 563,
-      "last_title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation (arXiv:2607.08741)",
-      "next_module": "04_Loco-Manipulation_and_WBC",
-      "last_completed_date": "2026-07-30",
-      "note": "14_Human_Motion 模块推进最新且无笔记的 ARDY 自回归扩散+混合表征可交互动作生成 (arXiv:2607.08741, SIGGRAPH 2026)，模块轮转 13 → 14；下一篇轮转回 04_Loco-Manipulation_and_WBC"
+      "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_index": 70,
+      "last_title": "HAFO: A Force-Adaptive Control Framework for Humanoid Robots in Intense Interaction Environments (arXiv:2511.20275)",
+      "next_module": "05_Locomotion",
+      "last_completed_date": "2026-07-31",
+      "note": "04_Loco-Manipulation_and_WBC 模块推进最新且无笔记的 HAFO 力自适应全身控制 (arXiv:2511.20275)——双智能体 RL + 弹簧-阻尼外力建模 + 受约束残差动作 + 非对称 Actor-Critic，模块轮转 14 → 04；下一篇轮转到 05_Locomotion。代码尚未开源(Coming Soon)，故未附源码运行时序图"
     },
     "last_summary_index": 563,
     "last_summary_date": "2026-07-30",
