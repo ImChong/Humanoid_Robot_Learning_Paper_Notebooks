@@ -81,7 +81,7 @@
 | H22 | [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](https://arxiv.org/abs/2403.10506) | Sim | 标准 benchmark       |
 | H23 | [BEHAVIOR Robot Suite: Real-World Whole-Body Manipulation for Everyday Tasks](https://arxiv.org/abs/2503.05652) 🌟 ✅ [笔记](03_High_Impact_Selection/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation/BEHAVIOR_Robot_Suite_Streamlining_Real-World_Whole-Body_Manipulation.md) | Sim | 真实世界全身操作 benchmark |
 | 14   | [Toward Reliable Sim-to-Real Predictability for MoE-based Robust Quadrupedal Locomotion](https://arxiv.org/abs/2602.00678) | 2026.02 |  | ⏳ 待读 |
-| 15   | [AME-2: Agile and Generalized Legged Locomotion via Attention-Based Neural Map Encoding](https://arxiv.org/abs/2601.08485) | 2026.01 |  | ⏳ 待读 |
+| 15   | [AME-2: Agile and Generalized Legged Locomotion via Attention-Based Neural Map Encoding](https://arxiv.org/abs/2601.08485) ✅ [笔记](05_Locomotion/AME-2__Agile_and_Generalized_Legged_Locomotion_via_Attention-Based_Neural_Map_Encoding/AME-2__Agile_and_Generalized_Legged_Locomotion_via_Attention-Based_Neural_Map_Encoding.md) | 2026.01 | 2026-08-01 | ✅ 已总结 |
 | 16   | [Gait-Adaptive Perceptive Humanoid Locomotion with Real-Time Under-Base Terrain Reconstruction](https://arxiv.org/abs/2512.07464) | 2025.12 |  | ⏳ 待读 |
 | 17   | [Reference-Free Sampling-Based Model Predictive Control](https://arxiv.org/abs/2511.19204) | 2025.11 |  | ⏳ 待读 |
 | 18   | [Learning a Vision-Based Footstep Planner for Hierarchical Walking Control](https://arxiv.org/abs/2510.12215) | 2025.10 |  | ⏳ 待读 |
