@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 70,
-      "last_title": "HAFO: A Force-Adaptive Control Framework for Humanoid Robots in Intense Interaction Environments (arXiv:2511.20275)",
-      "next_module": "05_Locomotion",
-      "last_completed_date": "2026-07-31",
-      "note": "04_Loco-Manipulation_and_WBC 模块推进最新且无笔记的 HAFO 力自适应全身控制 (arXiv:2511.20275)——双智能体 RL + 弹簧-阻尼外力建模 + 受约束残差动作 + 非对称 Actor-Critic，模块轮转 14 → 04；下一篇轮转到 05_Locomotion。代码尚未开源(Coming Soon)，故未附源码运行时序图"
+      "last_module": "05_Locomotion",
+      "last_index": 15,
+      "last_title": "AME-2: Agile and Generalized Legged Locomotion via Attention-Based Neural Map Encoding (arXiv:2601.08485)",
+      "next_module": "06_Manipulation",
+      "last_completed_date": "2026-08-01",
+      "note": "05_Locomotion 模块推进最新且无笔记的 AME-2 (arXiv:2601.08485, ETH RSL)——注意力地图编码器(局部+全局特征加权) + 学习式概率建图(贝叶斯 U-Net 出高程+不确定度, 概率赢者通吃融合)，未见地形泛化 51.2%→95.2%，四足 ANYmal-D/双足 TRON1 通用零样本上真机，模块轮转 04 → 05；下一篇轮转到 06_Manipulation。截至当前未见官方开源，故未附源码运行时序图"
     },
     "last_summary_index": 563,
     "last_summary_date": "2026-07-30",

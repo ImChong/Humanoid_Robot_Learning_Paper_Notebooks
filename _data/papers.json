@@ -2220,6 +2220,17 @@
         "zh_title": "FastStair：让人形机器人快速跑上楼梯"
       },
       {
+        "title": "AME-2: Agile and Generalized Legged Locomotion via Attention-Based Neural Map Encoding",
+        "path": "papers/05_Locomotion/AME-2__Agile_and_Generalized_Legged_Locomotion_via_Attention-Based_Neural_Map_Encoding/AME-2__Agile_and_Generalized_Legged_Locomotion_via_Attention-Based_Neural_Map_Encoding.md",
+        "url": "/papers/05_Locomotion/AME-2__Agile_and_Generalized_Legged_Locomotion_via_Attention-Based_Neural_Map_Encoding/AME-2__Agile_and_Generalized_Legged_Locomotion_via_Attention-Based_Neural_Map_Encoding.html",
+        "dir": "AME-2__Agile_and_Generalized_Legged_Locomotion_via_Attention-Based_Neural_Map_Encoding",
+        "arxiv": "2601.08485",
+        "published_date_zh": "2026年1月13日（arXiv v1），v2 2026年3月24日",
+        "published_date_en": "Jan 13, 2026 (arXiv v1), v2 Mar 24, 2026",
+        "zhname": "AME-2：基于注意力的神经地图编码实现敏捷且泛化的足式运动",
+        "zh_title": "AME-2：基于注意力的神经地图编码实现敏捷且泛化的足式运动"
+      },
+      {
         "title": "Walk the PLANC: Physics-Guided RL for Agile Humanoid Locomotion on Constrained Footholds",
         "path": "papers/05_Locomotion/Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds/Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds.md",
         "url": "/papers/05_Locomotion/Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds/Walk_the_PLANC__Physics-Guided_RL_for_Agile_Humanoid_Locomotion_on_Constrained_Footholds.html",
