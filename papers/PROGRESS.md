@@ -417,7 +417,7 @@
 | 321  | [DexCap: Scalable and Portable Mocap Data Collection System for Dexterous Manipulation](https://arxiv.org/abs/2403.07788)                                 | 2024.03 |     | ⏳ 待读 |
 | 322  | [DreamZero: World Action Models are Zero-shot Policies](https://arxiv.org/abs/2602.15922) ✅ [笔记](06_Manipulation/DreamZero_World_Action_Models_are_Zero-shot_Policies/DreamZero_World_Action_Models_are_Zero-shot_Policies.md) | 2026.02 |     | ✅ 完成 |
 | 323  | A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation                                         | -       |     | ⏳ 待读 |
-| 324  | Learning to Grasp Anything by Playing with Random Toys                                                                                                    | -       |     | ⏳ 待读 |
+| 324  | [Learning to Grasp Anything by Playing with Random Toys](https://arxiv.org/abs/2510.12866) ✅ [笔记](06_Manipulation/LEGO__Learning_to_Grasp_Anything_by_Playing_with_Random_Toys/LEGO__Learning_to_Grasp_Anything_by_Playing_with_Random_Toys.md) | 2025.10 | 2026-08-02 | ✅ 已总结 |
 | 325  | [A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation](https://arxiv.org/abs/2510.25725) | 2025.10 |  | ⏳ 待读 |
 | 326  | Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation | 2025.10 |  | ⏳ 待读 |
 | 327  | [Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation](https://arxiv.org/abs/2503.24361) | 2025.03 |  | ⏳ 待读 |

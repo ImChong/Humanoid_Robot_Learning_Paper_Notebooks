@@ -1500,6 +1500,17 @@
         "zh_title": "面向接触丰富操作的人形视觉-触觉-动作数据集"
       },
       {
+        "title": "Learning to Grasp Anything by Playing with Random Toys",
+        "path": "papers/06_Manipulation/LEGO__Learning_to_Grasp_Anything_by_Playing_with_Random_Toys/LEGO__Learning_to_Grasp_Anything_by_Playing_with_Random_Toys.md",
+        "url": "/papers/06_Manipulation/LEGO__Learning_to_Grasp_Anything_by_Playing_with_Random_Toys/LEGO__Learning_to_Grasp_Anything_by_Playing_with_Random_Toys.html",
+        "dir": "LEGO__Learning_to_Grasp_Anything_by_Playing_with_Random_Toys",
+        "arxiv": "2510.12866",
+        "published_date_zh": "2025年10月14日（arXiv v1）· 2026年4月5日修订（v2）· ICLR 2026",
+        "published_date_en": "Oct 14, 2025 (arXiv v1)· Apr 5, 2026 revised (v2)· ICLR 2026",
+        "zhname": "LEGO：通过玩随机拼装玩具学会抓取任意物体",
+        "zh_title": "LEGO：通过玩随机拼装玩具学会抓取任意物体"
+      },
+      {
         "title": "Towards Proprioception-Aware Embodied Planning for Dual-Arm Humanoid Robots",
         "path": "papers/06_Manipulation/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots.md",
         "url": "/papers/06_Manipulation/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots/Towards_Proprioception-Aware_Embodied_Planning_for_Dual-Arm_Humanoid_Robots.html",
