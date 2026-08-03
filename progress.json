@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 324,
-      "last_title": "Learning to Grasp Anything by Playing with Random Toys (LEGO, arXiv:2510.12866)",
-      "next_module": "07_Teleoperation",
-      "last_completed_date": "2026-08-02",
-      "note": "06_Manipulation 模块推进最新且无笔记的 LEGO (arXiv:2510.12866, UC Berkeley×Sapienza×Panasonic, ICLR 2026)——只用球/长方体/圆柱/圆环四基元随机拼装的抽象玩具(3D 打印 250 个)训练，靠 Detection Pooling 物体中心表征(SAM 2 掩码 + ViT 注意力隔离物体↔背景 patch + 物体 token 均值池化)逼模型只学目标几何而非物体身份；ViT-L(MVP)+ViT-Base 策略、1500 条 Franka 遥操作玩具演示做 BC、ManiSkill/SAPIEN 仿真；未见真实物体零样本 YCB Franka 66.67%、Unitree H1-2 人形灵巧手 50.77%，胜过用更多数据的大型 VLM。模块轮转 05 → 06；code/权重/数据集随项目页 lego-grasp.github.io 释出，已附源码运行时序图。下一篇轮转到 07_Teleoperation。"
+      "last_module": "07_Teleoperation",
+      "last_index": null,
+      "last_title": "Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning (arXiv:2607.20399)",
+      "next_module": "08_Navigation",
+      "last_completed_date": "2026-08-03",
+      "note": "07_Teleoperation 模块推进最新发表且无笔记的《Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning》(arXiv:2607.20399, Humanoids 2025)——面向缺乏仿生结构、DYNAMIXEL 舵机无精确力矩接口的小型人形，把全身远程移动操作拆成上下半身解耦：上半身用 VIVE Pro 2 头显/手柄经多目标 IK(避关节限位/自碰撞)映射手臂、由数据驱动的 200Hz PD 力矩控制器(堵转扭矩近似电流↔力矩、低增益增柔顺)驱动；下半身用 RL 策略(观测=角速度+投影重力+关节位置×9 步历史→330×1、奖励=速度跟踪/步态同步/抬脚/平滑、域随机化+单摆辨识执行器)自主平衡、按触控板速度行走且与手臂动作解耦；VR180 相机 H.265 回传~100ms。ROBOTIS OP3(20 DoF·XM430)上行走 0.45m/s(不受手臂影响)、端到端延迟 220ms、手臂跟踪 MAE 8.76–10.58%、边走~5m 边搬 40g 方块。模块轮转 06 → 07；论文未见公开代码/项目页，故未附源码运行时序图。下一篇轮转到 08_Navigation。"
     },
     "last_summary_index": 563,
     "last_summary_date": "2026-07-30",
