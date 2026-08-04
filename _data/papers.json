@@ -2519,6 +2519,17 @@
         "published_date_en": "Dec 2024 (arXiv)",
         "zhname": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航",
         "zh_title": "NaVILA：基于视觉 - 语言 - 动作模型的足式机器人导航"
+      },
+      {
+        "title": "ARMOR: Egocentric Perception for Humanoid Robot Collision Avoidance and Motion Planning",
+        "path": "papers/08_Navigation/ARMOR__Egocentric_Perception_for_Humanoid_Robot_Collision_Avoidance/ARMOR__Egocentric_Perception_for_Humanoid_Robot_Collision_Avoidance.md",
+        "url": "/papers/08_Navigation/ARMOR__Egocentric_Perception_for_Humanoid_Robot_Collision_Avoidance/ARMOR__Egocentric_Perception_for_Humanoid_Robot_Collision_Avoidance.html",
+        "dir": "ARMOR__Egocentric_Perception_for_Humanoid_Robot_Collision_Avoidance",
+        "arxiv": "2412.00396",
+        "published_date_zh": "2024年11月30日（arXiv v1）",
+        "published_date_en": "Nov 30, 2024 (arXiv v1)",
+        "zhname": "ARMOR：面向人形机器人碰撞规避与运动规划的第一视角感知",
+        "zh_title": "ARMOR：面向人形机器人碰撞规避与运动规划的第一视角感知"
       }
     ],
     "zhname": "导航",

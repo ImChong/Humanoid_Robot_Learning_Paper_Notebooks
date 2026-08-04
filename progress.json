@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": null,
-      "last_title": "Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning (arXiv:2607.20399)",
-      "next_module": "08_Navigation",
-      "last_completed_date": "2026-08-03",
-      "note": "07_Teleoperation 模块推进最新发表且无笔记的《Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning》(arXiv:2607.20399, Humanoids 2025)——面向缺乏仿生结构、DYNAMIXEL 舵机无精确力矩接口的小型人形，把全身远程移动操作拆成上下半身解耦：上半身用 VIVE Pro 2 头显/手柄经多目标 IK(避关节限位/自碰撞)映射手臂、由数据驱动的 200Hz PD 力矩控制器(堵转扭矩近似电流↔力矩、低增益增柔顺)驱动；下半身用 RL 策略(观测=角速度+投影重力+关节位置×9 步历史→330×1、奖励=速度跟踪/步态同步/抬脚/平滑、域随机化+单摆辨识执行器)自主平衡、按触控板速度行走且与手臂动作解耦；VR180 相机 H.265 回传~100ms。ROBOTIS OP3(20 DoF·XM430)上行走 0.45m/s(不受手臂影响)、端到端延迟 220ms、手臂跟踪 MAE 8.76–10.58%、边走~5m 边搬 40g 方块。模块轮转 06 → 07；论文未见公开代码/项目页，故未附源码运行时序图。下一篇轮转到 08_Navigation。"
+      "last_module": "08_Navigation",
+      "last_index": 363,
+      "last_title": "ARMOR: Egocentric Perception for Humanoid Robot Collision Avoidance and Motion Planning (arXiv:2412.00396)",
+      "next_module": "09_State_Estimation",
+      "last_completed_date": "2026-08-04",
+      "note": "08_Navigation 模块推进最新发表且无笔记的《ARMOR: Egocentric Perception for Humanoid Robot Collision Avoidance and Motion Planning》(arXiv:2412.00396, Daehwa Kim(CMU)×Apple)——破解人形避障「自身遮挡、头戴/外置相机 FoV 有限」的感知瓶颈，软硬一体：硬件把感知铺到身体，双臂贴 40 颗微型 ToF 激光雷达(SparkFun VL53L5CX，每臂 20 颗·8×8·15Hz·63°FoV，4 颗/XIAO ESP32S3 经 I2C→Jetson Xavier NX→无线回传 RTX4090)做全向低遮挡第一视角深度；软件用 ARMOR-Policy(编码器-解码器 Transformer·ACT 变体·~84M)把避障运动规划学成前馈——输入当前+目标关节角(28 维/两臂 14DoF)+40 路各过单通道 ResNet18(512 维)的深度特征+风格潜变量 z，输出动作分块 k×14 未来关节轨迹，推理时采样多轨迹按 SDF 最小化选优；训练用 AMASS 重定向 Fourier GR1 合成 311,922 条/86.6h 轨迹(避障/急停/无碰撞三策略)。vs 头戴/外置稠密相机碰撞−63.7%·成功率+78.7%，vs cuRobo 碰撞−31.6%·成功率+16.9%·延迟 240ms(26× 更快，cuRobo 64% 样本找不到解)。模块轮转 07 → 08；论文声明将公开源码/硬件/3D CAD、截至当前未见公开代码仓库，故未附源码运行时序图（含 Apple ML Research 项目页）。下一篇轮转到 09_State_Estimation。"
     },
     "last_summary_index": 563,
     "last_summary_date": "2026-07-30",
