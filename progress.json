@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 363,
-      "last_title": "ARMOR: Egocentric Perception for Humanoid Robot Collision Avoidance and Motion Planning (arXiv:2412.00396)",
-      "next_module": "09_State_Estimation",
-      "last_completed_date": "2026-08-04",
-      "note": "08_Navigation 模块推进最新发表且无笔记的《ARMOR: Egocentric Perception for Humanoid Robot Collision Avoidance and Motion Planning》(arXiv:2412.00396, Daehwa Kim(CMU)×Apple)——破解人形避障「自身遮挡、头戴/外置相机 FoV 有限」的感知瓶颈，软硬一体：硬件把感知铺到身体，双臂贴 40 颗微型 ToF 激光雷达(SparkFun VL53L5CX，每臂 20 颗·8×8·15Hz·63°FoV，4 颗/XIAO ESP32S3 经 I2C→Jetson Xavier NX→无线回传 RTX4090)做全向低遮挡第一视角深度；软件用 ARMOR-Policy(编码器-解码器 Transformer·ACT 变体·~84M)把避障运动规划学成前馈——输入当前+目标关节角(28 维/两臂 14DoF)+40 路各过单通道 ResNet18(512 维)的深度特征+风格潜变量 z，输出动作分块 k×14 未来关节轨迹，推理时采样多轨迹按 SDF 最小化选优；训练用 AMASS 重定向 Fourier GR1 合成 311,922 条/86.6h 轨迹(避障/急停/无碰撞三策略)。vs 头戴/外置稠密相机碰撞−63.7%·成功率+78.7%，vs cuRobo 碰撞−31.6%·成功率+16.9%·延迟 240ms(26× 更快，cuRobo 64% 样本找不到解)。模块轮转 07 → 08；论文声明将公开源码/硬件/3D CAD、截至当前未见公开代码仓库，故未附源码运行时序图（含 Apple ML Research 项目页）。下一篇轮转到 09_State_Estimation。"
+      "last_module": "09_State_Estimation",
+      "last_index": null,
+      "last_title": "OCELOT: Odometry and Contact Estimation for Legged Robots (arXiv:2605.21863)",
+      "next_module": "10_Sim-to-Real",
+      "last_completed_date": "2026-08-05",
+      "note": "09_State_Estimation 模块推进最新发表且无笔记的《OCELOT: Odometry and Contact Estimation for Legged Robots》(arXiv:2605.21863, Emre Girgin×Cagri Kilic·Embry-Riddle Aeronautical University)——只用机身 IMU+关节编码器+足底力传感器(均 500Hz)做纯本体感知腿部里程计，骨架是 15 维误差状态 ESEKF(位置/速度/姿态+IMU bias)，IMU 预测、静止支撑脚零速度更新；核心贡献是双路并行接触检测+不确定度量化：每只脚同时跑①力驱动 GMM-FSM(双成分高斯混合自动分摆动/支撑+FSM 去抖→q_FSM 判是否受力)与②运动学 GLRT(仅机身 IMU+运动学、免足端 IMU→q_GLRT 判是否真静止)，相乘融合 q=q_FSM×q_GLRT，据此自适应放大打滑脚测量噪声 σ=σ_base/max(q,ε) 实现软性剔除打滑而非硬阈值。Unitree Go2·29 段 2.4km 多地形数据集(水泥/瓷砖/草地/碎石/岩石)。ATE：水泥 12.019m(Hartley 50.785/Bloesch 81.450)、草地 1.385m、岩石 6.857m；碎石地形 1.273m 反超 VINS-Fusion 2.274/OpenVINS 4.393。含整体流程 mermaid + 基于开源仓库 srge-erau/leg_odometry_uncertainty(run_ekf.py/parameters.py/analysis.py 离线回放)的源码运行时序图。模块轮转 08 → 09；下一篇轮转到 10_Sim-to-Real。"
     },
     "last_summary_index": 563,
     "last_summary_date": "2026-07-30",
