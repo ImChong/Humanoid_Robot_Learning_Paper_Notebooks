@@ -2551,6 +2551,17 @@
         "zh_title": "非惯性地面上人形机器人的本体感知不变状态估计"
       },
       {
+        "title": "OCELOT: Odometry and Contact Estimation for Legged Robots",
+        "path": "papers/09_State_Estimation/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots.md",
+        "url": "/papers/09_State_Estimation/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots.html",
+        "dir": "OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots",
+        "arxiv": "2605.21863",
+        "published_date_zh": "2026年5月21日（arXiv）",
+        "published_date_en": "May 21, 2026 (arXiv)",
+        "zhname": "OCELOT：面向足式机器人的纯本体感知腿部里程计与接触估计",
+        "zh_title": "OCELOT：面向足式机器人的纯本体感知腿部里程计与接触估计"
+      },
+      {
         "title": "GAIT: Legged Robot Proprioceptive State Estimation with Attention over Inertial-Leg Tokens",
         "path": "papers/09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.md",
         "url": "/papers/09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.html",
