@@ -2551,17 +2551,6 @@
         "zh_title": "非惯性地面上人形机器人的本体感知不变状态估计"
       },
       {
-        "title": "OCELOT: Odometry and Contact Estimation for Legged Robots",
-        "path": "papers/09_State_Estimation/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots.md",
-        "url": "/papers/09_State_Estimation/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots.html",
-        "dir": "OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots",
-        "arxiv": "2605.21863",
-        "published_date_zh": "2026年5月21日（arXiv）",
-        "published_date_en": "May 21, 2026 (arXiv)",
-        "zhname": "OCELOT：面向足式机器人的纯本体感知腿部里程计与接触估计",
-        "zh_title": "OCELOT：面向足式机器人的纯本体感知腿部里程计与接触估计"
-      },
-      {
         "title": "GAIT: Legged Robot Proprioceptive State Estimation with Attention over Inertial-Leg Tokens",
         "path": "papers/09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.md",
         "url": "/papers/09_State_Estimation/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia/GAIT__Legged_Robot_Proprioceptive_State_Estimation_with_Attention_over_Inertia.html",
@@ -2571,6 +2560,18 @@
         "published_date_en": "Jun 12, 2026 (arXiv)",
         "zhname": "GAIT：用「惯性-腿部」分词与注意力做足式机器人本体感知状态估计",
         "zh_title": "GAIT：用「惯性-腿部」分词与注意力做足式机器人本体感知状态估计"
+      },
+      {
+        "title": "OCELOT: Odometry and Contact Estimation for Legged Robots",
+        "path": "papers/09_State_Estimation/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots.md",
+        "url": "/papers/09_State_Estimation/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots.html",
+        "dir": "OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots",
+        "arxiv": "2605.21863",
+        "has_open_source": true,
+        "published_date_zh": "2026年5月21日（arXiv）",
+        "published_date_en": "May 21, 2026 (arXiv)",
+        "zhname": "OCELOT：面向足式机器人的纯本体感知腿部里程计与接触估计",
+        "zh_title": "OCELOT：面向足式机器人的纯本体感知腿部里程计与接触估计"
       },
       {
         "title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
@@ -2660,6 +2661,17 @@
   "10_Sim-to-Real": {
     "display_name": "Sim-to-Real",
     "papers": [
+      {
+        "title": "Actuator Reality Shaping for Zero-Shot Sim-to-Real Robot Learning",
+        "path": "papers/10_Sim-to-Real/Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning/Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning.md",
+        "url": "/papers/10_Sim-to-Real/Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning/Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning.html",
+        "dir": "Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning",
+        "arxiv": "2607.02205",
+        "published_date_zh": "2026年7月2日（arXiv v1）/ 2026年7月7日（v2）",
+        "published_date_en": "Jul 2, 2026 (arXiv v1)/ Jul 7, 2026 (v2)",
+        "zhname": "执行器现实塑形：面向零样本 Sim-to-Real 的机器人学习",
+        "zh_title": "执行器现实塑形：面向零样本 Sim-to-Real 的机器人学习"
+      },
       {
         "title": "FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control",
         "path": "papers/10_Sim-to-Real/FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control/FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control.md",

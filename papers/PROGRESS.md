@@ -508,11 +508,12 @@
 | 378  | VINS-Fusion: An optimization-based multi-sensor state estimator | - |  | ⏳ 待读 |
 
 
-### Sim-to-Real（13篇）
+### Sim-to-Real（14篇）
 
 
 | #   | 论文                                                                                                                                             | 日期      | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
+| —    | [Actuator Reality Shaping for Zero-Shot Sim-to-Real Robot Learning](https://arxiv.org/abs/2607.02205) ✅ [笔记](10_Sim-to-Real/Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning/Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning.md) | 2026-07-02 | 2026-08-06 | ✅ 已总结 |
 | —    | [FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control](https://arxiv.org/abs/2606.28476) ✅ [笔记](10_Sim-to-Real/FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control/FADA__Few-Shot_Domain_Adaptation_via_Dynamics_Alignment_for_Humanoid_Control.md) | 2026-06-26 |     | ✅ 已总结 |
 | 551  | [Simulator Adaptation for Sim-to-Real Learning of Legged Locomotion via Proprioceptive Distribution Matching](https://arxiv.org/abs/2604.11090) ✅ [笔记](10_Sim-to-Real/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching/Simulator_Adaptation_via_Proprioceptive_Distribution_Matching.md) | 2026-04-13 |     | ✅ 已总结 |
 | 540  | [HALO: Closing Sim-to-Real Gap for Heavy-loaded Humanoid Agile Motion Skills via Differentiable Simulation](https://arxiv.org/abs/2603.15084) ✅ [笔记](10_Sim-to-Real/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion/HALO_Closing_Sim-to-Real_Gap_for_Heavy-loaded_Humanoid_Agile_Motion.md) | 2026.03 |     | ✅ 已总结 |
