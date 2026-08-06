@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "09_State_Estimation",
+      "last_module": "10_Sim-to-Real",
       "last_index": null,
-      "last_title": "OCELOT: Odometry and Contact Estimation for Legged Robots (arXiv:2605.21863)",
-      "next_module": "10_Sim-to-Real",
-      "last_completed_date": "2026-08-05",
-      "note": "09_State_Estimation 模块推进最新发表且无笔记的《OCELOT: Odometry and Contact Estimation for Legged Robots》(arXiv:2605.21863, Emre Girgin×Cagri Kilic·Embry-Riddle Aeronautical University)——只用机身 IMU+关节编码器+足底力传感器(均 500Hz)做纯本体感知腿部里程计，骨架是 15 维误差状态 ESEKF(位置/速度/姿态+IMU bias)，IMU 预测、静止支撑脚零速度更新；核心贡献是双路并行接触检测+不确定度量化：每只脚同时跑①力驱动 GMM-FSM(双成分高斯混合自动分摆动/支撑+FSM 去抖→q_FSM 判是否受力)与②运动学 GLRT(仅机身 IMU+运动学、免足端 IMU→q_GLRT 判是否真静止)，相乘融合 q=q_FSM×q_GLRT，据此自适应放大打滑脚测量噪声 σ=σ_base/max(q,ε) 实现软性剔除打滑而非硬阈值。Unitree Go2·29 段 2.4km 多地形数据集(水泥/瓷砖/草地/碎石/岩石)。ATE：水泥 12.019m(Hartley 50.785/Bloesch 81.450)、草地 1.385m、岩石 6.857m；碎石地形 1.273m 反超 VINS-Fusion 2.274/OpenVINS 4.393。含整体流程 mermaid + 基于开源仓库 srge-erau/leg_odometry_uncertainty(run_ekf.py/parameters.py/analysis.py 离线回放)的源码运行时序图。模块轮转 08 → 09；下一篇轮转到 10_Sim-to-Real。"
+      "last_title": "Actuator Reality Shaping for Zero-Shot Sim-to-Real Robot Learning (arXiv:2607.02205)",
+      "next_module": "11_Simulation_Benchmark",
+      "last_completed_date": "2026-08-06",
+      "note": "10_Sim-to-Real 模块推进最新发表且无笔记的《Actuator Reality Shaping for Zero-Shot Sim-to-Real Robot Learning》(arXiv:2607.02205, Satoshi Yamamori、Koji Ishihara、Jun Morimoto 等·京都大学/ATR)——反转 sim-to-real 思路：不「改仿真去逼近硬件」，而是「塑形硬件去逼近仿真」。给每个关节套一层「二自由度(2-DoF)前馈-反馈控制器 + 扰动观测器(DOB)」低级驱动，把真实电机的闭环响应逼成仿真假设的理想二阶 PD 弹簧-阻尼参考模型 I_sim·θ̈=K_p(θ̄−θ)−D·θ̇+f；前馈路径 F(s) 定标称动态、反馈路径 K(s)(PID) 独立抗扰，DOB 把摩擦/外力/惯量-阻尼失配当集总扰动估出抵消，使闭环 y≈F·r 与失配无关，为 RL 提供标准化执行器接口。策略只针对理想模型用 PPO(IsaacSim)训练即可零样本上真机，无需任务级微调/学执行器网络；换硬件只重设计低级驱动、不重训策略。四平台验证：单关节 YM070(位置误差 1.8e-3 rad，较 PID 级联↓96.3%、较简单 PD↓94.5%)、7-DoF 臂「8 字」到达(末端误差 1.3e-3 m，↓96.5%/↓72%)、轮足 Moonbot 零样本爬坡、人形(PH54 501.9:1，BeyondMimic 策略零样本迈稳步)；DOB 在 2-DoF 上再贡献约 50% 误差下降；对照学习式基线 ASAP(Delta-Action)需真机采数且训练不稳定。含整体流程 mermaid 图；论文未开源代码(仅项目页视频)故未附源码运行时序图。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 09 → 10；下一篇轮转到 11_Simulation_Benchmark。"
     },
     "last_summary_index": 563,
     "last_summary_date": "2026-07-30",
