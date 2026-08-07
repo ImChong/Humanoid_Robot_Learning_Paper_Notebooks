@@ -530,7 +530,7 @@
 | 388  | [Learning Agile and Dynamic Motor Skills for Legged Robots](https://arxiv.org/abs/1901.08652)                                                  | 2019.01 |     | ⏳ 待读 |
 
 
-### Simulation Benchmark（22篇）
+### Simulation Benchmark（23篇）
 
 
 | #   | 论文                                                                                                                                         | 日期      | 🌟  | 状态   |
@@ -560,6 +560,7 @@
 | 553  | [SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation](https://arxiv.org/abs/2606.08278) ✅ [笔记](11_Simulation_Benchmark/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation/SIMPLE__Simulation-Based_Policy_Learning_and_Evaluation_for_Humanoid_Loco-manipulation.md) | 2026-06-06 | 🌟 | ✅ 已总结 |
 | 527  | [MuJoCo Playground](https://playground.mujoco.org/)                                                                                       | 2025.01 |     | ⏳ 待读 |
 | 560  | [Labimus: A Simulation and Benchmark for Humanoid Dexterous Manipulation in Chemical Laboratory](https://arxiv.org/abs/2606.31037) ✅ [笔记](11_Simulation_Benchmark/Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab/Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab.md) | 2026-06-30 |     | ✅ 已总结 |
+| 564  | [RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies](https://arxiv.org/abs/2607.04434) ✅ [笔记](11_Simulation_Benchmark/RoboDojo__A_Unified_Sim-and-Real_Benchmark_for_Generalist_Manipulation_Policies/RoboDojo__A_Unified_Sim-and-Real_Benchmark_for_Generalist_Manipulation_Policies.md) | 2026-07 | 🌟 | ✅ 已总结 |
 
 
 ### Hardware Design（38篇）

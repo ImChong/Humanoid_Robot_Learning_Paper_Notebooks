@@ -41,16 +41,16 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
-      "last_index": null,
-      "last_title": "Actuator Reality Shaping for Zero-Shot Sim-to-Real Robot Learning (arXiv:2607.02205)",
-      "next_module": "11_Simulation_Benchmark",
-      "last_completed_date": "2026-08-06",
-      "note": "10_Sim-to-Real 模块推进最新发表且无笔记的《Actuator Reality Shaping for Zero-Shot Sim-to-Real Robot Learning》(arXiv:2607.02205, Satoshi Yamamori、Koji Ishihara、Jun Morimoto 等·京都大学/ATR)——反转 sim-to-real 思路：不「改仿真去逼近硬件」，而是「塑形硬件去逼近仿真」。给每个关节套一层「二自由度(2-DoF)前馈-反馈控制器 + 扰动观测器(DOB)」低级驱动，把真实电机的闭环响应逼成仿真假设的理想二阶 PD 弹簧-阻尼参考模型 I_sim·θ̈=K_p(θ̄−θ)−D·θ̇+f；前馈路径 F(s) 定标称动态、反馈路径 K(s)(PID) 独立抗扰，DOB 把摩擦/外力/惯量-阻尼失配当集总扰动估出抵消，使闭环 y≈F·r 与失配无关，为 RL 提供标准化执行器接口。策略只针对理想模型用 PPO(IsaacSim)训练即可零样本上真机，无需任务级微调/学执行器网络；换硬件只重设计低级驱动、不重训策略。四平台验证：单关节 YM070(位置误差 1.8e-3 rad，较 PID 级联↓96.3%、较简单 PD↓94.5%)、7-DoF 臂「8 字」到达(末端误差 1.3e-3 m，↓96.5%/↓72%)、轮足 Moonbot 零样本爬坡、人形(PH54 501.9:1，BeyondMimic 策略零样本迈稳步)；DOB 在 2-DoF 上再贡献约 50% 误差下降；对照学习式基线 ASAP(Delta-Action)需真机采数且训练不稳定。含整体流程 mermaid 图；论文未开源代码(仅项目页视频)故未附源码运行时序图。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 09 → 10；下一篇轮转到 11_Simulation_Benchmark。"
+      "last_module": "11_Simulation_Benchmark",
+      "last_index": 564,
+      "last_title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies (arXiv:2607.04434)",
+      "next_module": "12_Hardware_Design",
+      "last_completed_date": "2026-08-07",
+      "note": "11_Simulation_Benchmark 模块推进最新发表且无笔记的《RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies》(arXiv:2607.04434, MMLab@HKU×UC Berkeley×清华×北大×Stanford×MIT 等 44+ 作者)——统一「仿真+真机」评测通用操作策略：42 仿真任务(Isaac Sim)按泛化/记忆/长时程/精度/开放语义五能力维度组织 + 18 真机任务经 RoboDojo-RealEval 标准化并支持云端远程与三人双盲打分；异构并行仿真(各环境独立采样场景)保多样性；XPolicyLab 统一 30 策略接口做「一次接入·处处评测」并配公开排行榜。结论扎心：仿真最强 8.80%/真机最强 12.8% vs 人类 76%/100%，场景随机化性能掉 67–100%、开放语义仅 1.67%。含整体流程 mermaid + 源码运行时序图(仓库 RoboDojo-Benchmark/RoboDojo 开源)。模块轮转 10 → 11，下一篇轮转到 12_Hardware_Design。"
     },
-    "last_summary_index": 563,
-    "last_summary_date": "2026-07-30",
-    "last_summary_title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+    "last_summary_index": 564,
+    "last_summary_date": "2026-08-07",
+    "last_summary_title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies",
     "next_summary_index": null,
     "log": [
       {
@@ -1350,9 +1350,20 @@
         "source_repo": "https://github.com/Jiaxin-Lu/humoto",
         "project_page": "https://jiaxin-lu.github.io/humoto/",
         "source": "🌟 开源 · LLM 场景编剧(目的性任务脚本)+抗遮挡动捕多相机录制+专业清洗去脚滑穿模 · 735 段·~7875s@30fps·63 精确物体网格·72 铰接人体部件(Mixamo 兼容) · 面向动作生成/姿态估计/机器人仿真/2D 编辑多任务基准 · UT Austin × Adobe Research · ICCV 2025 · 模块轮转（13_Physics-Based_Animation → 14_Human_Motion）"
+      },
+      {
+        "date": "2026-08-07",
+        "index": 564,
+        "title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies",
+        "folder": "papers/11_Simulation_Benchmark/RoboDojo__A_Unified_Sim-and-Real_Benchmark_for_Generalist_Manipulation_Policies",
+        "module": "11_Simulation_Benchmark",
+        "arxiv": "2607.04434",
+        "source_repo": "https://github.com/RoboDojo-Benchmark/RoboDojo",
+        "project_page": "https://robodojo-benchmark.com/",
+        "source": "🌟 开源 · 统一「仿真+真机」评测通用操作策略 · 42 仿真任务(Isaac Sim)按泛化/记忆/长时程/精度/开放语义五维度组织 + 18 真机任务经 RoboDojo-RealEval 标准化(云端远程+三人双盲) · 异构并行仿真保多样性 · XPolicyLab 统一 30 策略接口一次接入处处评测 + 公开排行榜 · 仿真最强 8.80%/真机最强 12.8% vs 人类 76%/100% · MMLab@HKU 等 44+ 作者 · 含整体流程 mermaid + 源码运行时序图"
       }
     ],
-    "last_completed_index": 555,
+    "last_completed_index": 564,
     "next_index": null
   },
   "papers": [
