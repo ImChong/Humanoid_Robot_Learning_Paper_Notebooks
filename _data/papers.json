@@ -2952,6 +2952,18 @@
         "zh_title": "ThorArena：面向人形物理交互的运动-力示范基准"
       },
       {
+        "title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies",
+        "path": "papers/11_Simulation_Benchmark/RoboDojo__A_Unified_Sim-and-Real_Benchmark_for_Generalist_Manipulation_Policies/RoboDojo__A_Unified_Sim-and-Real_Benchmark_for_Generalist_Manipulation_Policies.md",
+        "url": "/papers/11_Simulation_Benchmark/RoboDojo__A_Unified_Sim-and-Real_Benchmark_for_Generalist_Manipulation_Policies/RoboDojo__A_Unified_Sim-and-Real_Benchmark_for_Generalist_Manipulation_Policies.html",
+        "dir": "RoboDojo__A_Unified_Sim-and-Real_Benchmark_for_Generalist_Manipulation_Policies",
+        "arxiv": "2607.04434",
+        "has_open_source": true,
+        "published_date_zh": "2026年7月（arXiv）",
+        "published_date_en": "Jul 2026 (arXiv)",
+        "zhname": "RoboDojo：统一「仿真+真机」评测通用机器人操作策略的基准",
+        "zh_title": "RoboDojo：统一「仿真+真机」评测通用机器人操作策略的基准"
+      },
+      {
         "title": "Labimus: A Simulation and Benchmark for Humanoid Dexterous Manipulation in Chemical Laboratory",
         "path": "papers/11_Simulation_Benchmark/Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab/Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab.md",
         "url": "/papers/11_Simulation_Benchmark/Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab/Labimus__A_Simulation_and_Benchmark_for_Humanoid_Dexterous_Manipulation_in_Chemical_Lab.html",
