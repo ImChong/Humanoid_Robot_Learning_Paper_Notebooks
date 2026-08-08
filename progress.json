@@ -41,16 +41,16 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 564,
-      "last_title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies (arXiv:2607.04434)",
-      "next_module": "12_Hardware_Design",
-      "last_completed_date": "2026-08-07",
-      "note": "11_Simulation_Benchmark 模块推进最新发表且无笔记的《RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies》(arXiv:2607.04434, MMLab@HKU×UC Berkeley×清华×北大×Stanford×MIT 等 44+ 作者)——统一「仿真+真机」评测通用操作策略：42 仿真任务(Isaac Sim)按泛化/记忆/长时程/精度/开放语义五能力维度组织 + 18 真机任务经 RoboDojo-RealEval 标准化并支持云端远程与三人双盲打分；异构并行仿真(各环境独立采样场景)保多样性；XPolicyLab 统一 30 策略接口做「一次接入·处处评测」并配公开排行榜。结论扎心：仿真最强 8.80%/真机最强 12.8% vs 人类 76%/100%，场景随机化性能掉 67–100%、开放语义仅 1.67%。含整体流程 mermaid + 源码运行时序图(仓库 RoboDojo-Benchmark/RoboDojo 开源)。模块轮转 10 → 11，下一篇轮转到 12_Hardware_Design。"
+      "last_module": "12_Hardware_Design",
+      "last_index": 565,
+      "last_title": "MIDAS Hand: Modular low-Impedance Direct-drive Anthropomorphic Sensing Hand (arXiv:2607.14487)",
+      "next_module": "13_Physics-Based_Animation",
+      "last_completed_date": "2026-08-08",
+      "note": "12_Hardware_Design 模块推进最新发表且有开源代码的《MIDAS Hand: Modular low-Impedance Direct-drive Anthropomorphic Sensing Hand》(arXiv:2607.14487, Alvin Zhu、Dennis Hong 等·UCLA RoMeLa)——用「直驱(direct-drive)+低反驱扭矩+分布式触觉」造一只人手尺寸、3D 打印、BoM<3000 美元、<3 小时可装、软硬件全开源(CC BY 4.0)的仿人灵巧手。16 DoF(13 主动)、283 个三轴触觉 taxel(四指 [Fx,Fy,Fz])、700g；关节直驱牺牲力密度换极低反驱扭矩，配 current-based 位置控制(模式5, 位置+电流限扭)让手接触时顺从让位、适配接触丰富操作且更安全。开源四件套：midas_hand_api(Dynamixel Protocol2.0/4Mbps)、midas_hand_mujoco 仿真、midas_hand_retargeter 重定向、midas_hand_teleop(MediaPipe 视觉→重定向→API，硬件端 50Hz 插值命令环)。含整体流程 mermaid + 源码运行时序图(midas-hand-org 开源)。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 11 → 12，下一篇轮转到 13_Physics-Based_Animation。"
     },
-    "last_summary_index": 564,
-    "last_summary_date": "2026-08-07",
-    "last_summary_title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies",
+    "last_summary_index": 565,
+    "last_summary_date": "2026-08-08",
+    "last_summary_title": "MIDAS Hand: Modular low-Impedance Direct-drive Anthropomorphic Sensing Hand",
     "next_summary_index": null,
     "log": [
       {
@@ -1361,9 +1361,20 @@
         "source_repo": "https://github.com/RoboDojo-Benchmark/RoboDojo",
         "project_page": "https://robodojo-benchmark.com/",
         "source": "🌟 开源 · 统一「仿真+真机」评测通用操作策略 · 42 仿真任务(Isaac Sim)按泛化/记忆/长时程/精度/开放语义五维度组织 + 18 真机任务经 RoboDojo-RealEval 标准化(云端远程+三人双盲) · 异构并行仿真保多样性 · XPolicyLab 统一 30 策略接口一次接入处处评测 + 公开排行榜 · 仿真最强 8.80%/真机最强 12.8% vs 人类 76%/100% · MMLab@HKU 等 44+ 作者 · 含整体流程 mermaid + 源码运行时序图"
+      },
+      {
+        "date": "2026-08-08",
+        "index": 565,
+        "title": "MIDAS Hand: Modular low-Impedance Direct-drive Anthropomorphic Sensing Hand",
+        "folder": "papers/12_Hardware_Design/MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand",
+        "module": "12_Hardware_Design",
+        "arxiv": "2607.14487",
+        "source_repo": "https://github.com/midas-hand-org",
+        "project_page": "https://midas-hand.com",
+        "source": "🌟 开源(CC BY 4.0) · 直驱+低反驱扭矩+分布式触觉的仿人灵巧手 · 16 DoF(13 主动)/283 三轴 taxel/700g/BoM<3000美元/3D打印<3h装配 · current-based 位置控制(模式5)接触顺从 · 开源四件套 api/mujoco/retargeter/teleop(MediaPipe→重定向→API,50Hz) · UCLA RoMeLa(Dennis Hong) · 含整体流程 mermaid + 源码运行时序图 · 模块轮转（11_Simulation_Benchmark → 12_Hardware_Design）"
       }
     ],
-    "last_completed_index": 564,
+    "last_completed_index": 565,
     "next_index": null
   },
   "papers": [

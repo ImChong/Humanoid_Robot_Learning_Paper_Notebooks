@@ -2821,6 +2821,17 @@
     "display_name": "Hardware Design",
     "papers": [
       {
+        "title": "MIDAS Hand: Modular low-Impedance Direct-drive Anthropomorphic Sensing Hand",
+        "path": "papers/12_Hardware_Design/MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand/MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand.md",
+        "url": "/papers/12_Hardware_Design/MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand/MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand.html",
+        "dir": "MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand",
+        "arxiv": "2607.14487",
+        "published_date_zh": "2026年7月16日（arXiv v1）",
+        "published_date_en": "Jul 16, 2026 (arXiv v1)",
+        "zhname": "MIDAS Hand：模块化低阻抗直驱仿人触觉灵巧手",
+        "zh_title": "MIDAS Hand：模块化低阻抗直驱仿人触觉灵巧手"
+      },
+      {
         "title": "MCR-Bionic Hand: Anatomical Structural Priors for Dexterous Manipulation",
         "path": "papers/12_Hardware_Design/MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation/MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation.md",
         "url": "/papers/12_Hardware_Design/MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation/MCR-Bionic_Hand__Anatomical_Structural_Priors_for_Dexterous_Manipulation.html",
