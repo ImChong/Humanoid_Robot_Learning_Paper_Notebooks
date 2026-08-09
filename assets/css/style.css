@@ -1379,6 +1379,18 @@ html.ios .paper-body .mermaid foreignObject .edgeLabel > div {
   margin: 0;
 }
 
+.footer-author-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-author-link:hover {
+  color: var(--link);
+  border-bottom-color: var(--link);
+}
+
 .footer-text-zh {
   display: none;
 }
