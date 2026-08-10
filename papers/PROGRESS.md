@@ -706,6 +706,7 @@
 | 523  | [Example-based Motion Synthesis via Generative Motion Matching](https://arxiv.org/abs/2306.00378) | 2023.06 |  | ⏳ 待读 |
 | 538  | [MANIKIN: Biomechanically Accurate Neural Inverse Kinematics for Human Motion Estimation](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00194.pdf) | ECCV 2024 |  | ⏳ 待读 |
 | 563  | [ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation](https://arxiv.org/abs/2607.08741) ✅ [笔记](14_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion.md) | 2026-07-09 | 🌟 | ✅ 已总结 |
+| 566  | [MoGeFlow: Flowing Through Motion Codebook Geometry for Text-to-Motion Generation](https://arxiv.org/abs/2606.11656) ✅ [笔记](14_Human_Motion/MoGeFlow__Flowing_Through_Motion_Codebook_Geometry_for_Text-to-Motion_Generation/MoGeFlow__Flowing_Through_Motion_Codebook_Geometry_for_Text-to-Motion_Generation.md) | 2026-06-25 | 🌟 | ✅ 已总结 |
 
 
 ### Archived（自发现，待上游收录）

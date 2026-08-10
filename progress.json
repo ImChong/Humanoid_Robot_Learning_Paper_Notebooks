@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 565,
-      "last_title": "MIDAS Hand: Modular low-Impedance Direct-drive Anthropomorphic Sensing Hand (arXiv:2607.14487)",
-      "next_module": "13_Physics-Based_Animation",
-      "last_completed_date": "2026-08-08",
-      "note": "12_Hardware_Design 模块推进最新发表且有开源代码的《MIDAS Hand: Modular low-Impedance Direct-drive Anthropomorphic Sensing Hand》(arXiv:2607.14487, Alvin Zhu、Dennis Hong 等·UCLA RoMeLa)——用「直驱(direct-drive)+低反驱扭矩+分布式触觉」造一只人手尺寸、3D 打印、BoM<3000 美元、<3 小时可装、软硬件全开源(CC BY 4.0)的仿人灵巧手。16 DoF(13 主动)、283 个三轴触觉 taxel(四指 [Fx,Fy,Fz])、700g；关节直驱牺牲力密度换极低反驱扭矩，配 current-based 位置控制(模式5, 位置+电流限扭)让手接触时顺从让位、适配接触丰富操作且更安全。开源四件套：midas_hand_api(Dynamixel Protocol2.0/4Mbps)、midas_hand_mujoco 仿真、midas_hand_retargeter 重定向、midas_hand_teleop(MediaPipe 视觉→重定向→API，硬件端 50Hz 插值命令环)。含整体流程 mermaid + 源码运行时序图(midas-hand-org 开源)。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 11 → 12，下一篇轮转到 13_Physics-Based_Animation。"
+      "last_module": "14_Human_Motion",
+      "last_index": 566,
+      "last_title": "MoGeFlow: Flowing Through Motion Codebook Geometry for Text-to-Motion Generation (arXiv:2606.11656)",
+      "next_module": "04_Loco-Manipulation_and_WBC",
+      "last_completed_date": "2026-08-10",
+      "note": "14_Human_Motion 模块推进最新发表且开源的《MoGeFlow: Flowing Through Motion Codebook Geometry for Text-to-Motion Generation》(arXiv:2606.11656, Pengcheng Fang 等·University of Southampton × Nanjing University × MOGO AI)——抓住「运动 VQ 码本并非无序标签、而是携带局部运动学几何(码距与运动原型距离 Spearman 0.821)」这一观察：① PartVQ 按数据驱动关节分组(根/上臂/腿/颈/头六组)各建码本，把一帧动作表示成分组结构化连续嵌入；② 文本条件流匹配(整流路径)把高斯噪声连续搬运到结构化运动码帧、文本经条件模块注入 Transformer 各层；③ ODE 采样终态最近邻投影回冻结码本合法条目再解码，兼得离散分词的稳与连续生成的顺。HumanML3D R-Precision Top-1 0.592/MM-Dist 2.599、KIT-ML FID 0.723、MotionMillion FID 28.1 取竞争力/SOTA。含整体框架 mermaid + 源码运行时序图(PengchengFang-cs/MoGeFlow, MIT)。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 13_Physics-Based_Animation → 14_Human_Motion，下一篇轮转回 04_Loco-Manipulation_and_WBC。（说明：上一篇 SimGenHOI(13) 于 2026-08-09 提交时未同步本 module_rotation 块，本次一并校正。）"
     },
     "last_summary_index": 565,
     "last_summary_date": "2026-08-08",
@@ -5585,6 +5585,18 @@
       "pdf_file": "",
       "route": "Teleoperation",
       "title_cn": ""
+    },
+    {
+      "title": "MoGeFlow: Flowing Through Motion Codebook Geometry for Text-to-Motion Generation",
+      "arxiv": "2606.11656",
+      "folder": "papers/14_Human_Motion/MoGeFlow__Flowing_Through_Motion_Codebook_Geometry_for_Text-to-Motion_Generation",
+      "note_file": "MoGeFlow__Flowing_Through_Motion_Codebook_Geometry_for_Text-to-Motion_Generation.md",
+      "pdf_file": "",
+      "status": "done",
+      "start_date": "2026-08-10",
+      "done_date": "2026-08-10",
+      "route": "Human Motion",
+      "title_cn": "MoGeFlow：在运动码本几何上做流匹配的文本到动作生成"
     }
   ]
 }
