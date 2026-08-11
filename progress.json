@@ -41,18 +41,29 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "14_Human_Motion",
-      "last_index": 566,
-      "last_title": "MoGeFlow: Flowing Through Motion Codebook Geometry for Text-to-Motion Generation (arXiv:2606.11656)",
-      "next_module": "04_Loco-Manipulation_and_WBC",
-      "last_completed_date": "2026-08-10",
-      "note": "14_Human_Motion 模块推进最新发表且开源的《MoGeFlow: Flowing Through Motion Codebook Geometry for Text-to-Motion Generation》(arXiv:2606.11656, Pengcheng Fang 等·University of Southampton × Nanjing University × MOGO AI)——抓住「运动 VQ 码本并非无序标签、而是携带局部运动学几何(码距与运动原型距离 Spearman 0.821)」这一观察：① PartVQ 按数据驱动关节分组(根/上臂/腿/颈/头六组)各建码本，把一帧动作表示成分组结构化连续嵌入；② 文本条件流匹配(整流路径)把高斯噪声连续搬运到结构化运动码帧、文本经条件模块注入 Transformer 各层；③ ODE 采样终态最近邻投影回冻结码本合法条目再解码，兼得离散分词的稳与连续生成的顺。HumanML3D R-Precision Top-1 0.592/MM-Dist 2.599、KIT-ML FID 0.723、MotionMillion FID 28.1 取竞争力/SOTA。含整体框架 mermaid + 源码运行时序图(PengchengFang-cs/MoGeFlow, MIT)。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 13_Physics-Based_Animation → 14_Human_Motion，下一篇轮转回 04_Loco-Manipulation_and_WBC。（说明：上一篇 SimGenHOI(13) 于 2026-08-09 提交时未同步本 module_rotation 块，本次一并校正。）"
+      "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_index": 83,
+      "last_title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning (arXiv:2511.04131)",
+      "next_module": "05_Locomotion",
+      "last_completed_date": "2026-08-11",
+      "note": "04_Loco-Manipulation_and_WBC 模块推进最新发表且开源的《BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning》(arXiv:2511.04131, Yitang Li 等·CMU LeCAR Lab × Meta FAIR·ICLR 2026)——破解「一个任务训一套策略」：① 预训练不用任务奖励，用无监督 RL 的 Forward-Backward(前向 F(s,a,z)+后向 B(s))表征把动作/目标/奖励统一嵌进平滑可解释隐空间 z，任意奖励的 Q_z=Fᵀz；② 训练一次得到可提示单策略 π(·|z)，切换 z 即零样本做动作追踪(z=ΣλⁿB(s))/目标到达(z=B(s_g))/奖励优化(z=ΣB(s)r(s))，并支持 few-shot 仿真搜索；③ 奖励塑形+域随机化+历史相关非对称 Actor-Critic 弥合无监督 RL 的 sim-to-real 鸿沟，Unitree G1 真机跳舞/拳击/行走、抗推拉踢鲁棒恢复且涌现跑步。含整体框架 mermaid + 源码运行时序图(LeCAR-Lab/BFM-Zero, CC BY-NC 4.0)。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 14_Human_Motion → 04_Loco-Manipulation_and_WBC，下一篇轮转到 05_Locomotion。"
     },
-    "last_summary_index": 565,
-    "last_summary_date": "2026-08-08",
-    "last_summary_title": "MIDAS Hand: Modular low-Impedance Direct-drive Anthropomorphic Sensing Hand",
+    "last_summary_index": 83,
+    "last_summary_date": "2026-08-11",
+    "last_summary_title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-08-11",
+        "index": 83,
+        "title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",
+        "folder": "papers/04_Loco-Manipulation_and_WBC/BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control",
+        "module": "04_Loco-Manipulation_and_WBC",
+        "arxiv": "2511.04131",
+        "project_page": "https://lecar-lab.github.io/BFM-Zero/",
+        "code": "https://github.com/LeCAR-Lab/BFM-Zero",
+        "source": "🌟 LeCAR-Lab/BFM-Zero（预训练权重 + 部署代码，deploy 分支，CC BY-NC 4.0） · ICLR 2026 · CMU LeCAR Lab × Meta FAIR · 破解「一个任务训一套策略」：① 预训练不用任务奖励，用无监督 RL 的 Forward-Backward(前向 F(s,a,z)+后向 B(s))表征把动作/目标/奖励统一嵌进平滑可解释隐空间 z，任意奖励 Q_z=Fᵀz；② 训练一次得到可提示单策略 π(·|z)，切换 z 即零样本做动作追踪(z=ΣλⁿB(s))/目标到达(z=B(s_g))/奖励优化(z=ΣB(s)r(s))，并支持 few-shot 仿真搜索；③ 奖励塑形+域随机化+历史相关非对称 Actor-Critic 弥合无监督 RL 的 sim-to-real · Unitree G1 真机跳舞/拳击/行走、抗推拉踢鲁棒恢复且涌现跑步 · 模块轮转（14_Human_Motion → 04_Loco-Manipulation_and_WBC）"
+      },
       {
         "date": "2026-07-30",
         "index": 563,

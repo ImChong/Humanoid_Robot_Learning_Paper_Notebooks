@@ -1285,6 +1285,18 @@
         "published_date_en": "Nov 6, 2025 (arXiv)",
         "zhname": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习",
         "zh_title": "GentleHumanoid：面向密集接触人机与物体交互的上半身柔顺学习"
+      },
+      {
+        "title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",
+        "path": "papers/04_Loco-Manipulation_and_WBC/BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control/BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control/BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control.html",
+        "dir": "BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control",
+        "arxiv": "2511.04131",
+        "has_open_source": true,
+        "published_date_zh": "2025年11月6日（arXiv v1）",
+        "published_date_en": "Nov 6, 2025 (arXiv v1)",
+        "zhname": "BFM-Zero：用无监督 RL 的前向-后向表征打造可提示的人形全身控制行为基础模型",
+        "zh_title": "BFM-Zero：用无监督 RL 的前向-后向表征打造可提示的人形全身控制行为基础模型"
       }
     ],
     "zhname": "运动操作与全身控制",
