@@ -41,18 +41,29 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 83,
-      "last_title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning (arXiv:2511.04131)",
-      "next_module": "05_Locomotion",
-      "last_completed_date": "2026-08-11",
-      "note": "04_Loco-Manipulation_and_WBC 模块推进最新发表且开源的《BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning》(arXiv:2511.04131, Yitang Li 等·CMU LeCAR Lab × Meta FAIR·ICLR 2026)——破解「一个任务训一套策略」：① 预训练不用任务奖励，用无监督 RL 的 Forward-Backward(前向 F(s,a,z)+后向 B(s))表征把动作/目标/奖励统一嵌进平滑可解释隐空间 z，任意奖励的 Q_z=Fᵀz；② 训练一次得到可提示单策略 π(·|z)，切换 z 即零样本做动作追踪(z=ΣλⁿB(s))/目标到达(z=B(s_g))/奖励优化(z=ΣB(s)r(s))，并支持 few-shot 仿真搜索；③ 奖励塑形+域随机化+历史相关非对称 Actor-Critic 弥合无监督 RL 的 sim-to-real 鸿沟，Unitree G1 真机跳舞/拳击/行走、抗推拉踢鲁棒恢复且涌现跑步。含整体框架 mermaid + 源码运行时序图(LeCAR-Lab/BFM-Zero, CC BY-NC 4.0)。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 14_Human_Motion → 04_Loco-Manipulation_and_WBC，下一篇轮转到 05_Locomotion。"
+      "last_module": "05_Locomotion",
+      "last_index": 198,
+      "last_title": "SKATER: Synthesized Kinematics for Advanced Traversing Efficiency on a Humanoid Robot via Roller Skate Swizzles (arXiv:2601.04948)",
+      "next_module": "06_Manipulation",
+      "last_completed_date": "2026-08-12",
+      "note": "05_Locomotion 模块推进最新发表且尚无笔记的《SKATER: Synthesized Kinematics for Advanced Traversing Efficiency on a Humanoid Robot via Roller Skate Swizzles》(arXiv:2601.04948, Junchi Gu、Shiwu Zhang 等)——给 25-DoF 人形(38kg/140cm)每足装一排 4 个 62mm 被动轮，用深度 RL 学「葫芦步 swizzle」连续滑行：① 硬件把聚氨酯被动轮直接集成进脚以保力传递精度、不干涉踝关节；② PPO+IsaacLab(4096 并行)+多阶段课程，22 项奖励不写死步态时序让节能滑行自发涌现，actor 用本体感知+4 帧历史、critic 拿真实线速度/踝间距/踝朝向特权信息；③ 域随机化(摩擦0.1-0.8/质量/质心/增益)弥合 sim-to-real。相比双足行走冲击强度 -75.86%(10231→2469 N/s)、CoT -63.34%、髋/踝 pitch 关节能耗 -95.39%/-92.29%，瓷砖/橡胶/碎石三类摩擦地面 100% 通行。含整体框架 mermaid；论文暂无公开源码故不含源码时序图。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 04_Loco-Manipulation_and_WBC → 05_Locomotion，下一篇轮转到 06_Manipulation。"
     },
-    "last_summary_index": 83,
-    "last_summary_date": "2026-08-11",
-    "last_summary_title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",
+    "last_summary_index": 198,
+    "last_summary_date": "2026-08-12",
+    "last_summary_title": "SKATER: Synthesized Kinematics for Advanced Traversing Efficiency on a Humanoid Robot via Roller Skate Swizzles",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-08-12",
+        "index": 198,
+        "title": "SKATER: Synthesized Kinematics for Advanced Traversing Efficiency on a Humanoid Robot via Roller Skate Swizzles",
+        "folder": "papers/05_Locomotion/SKATER__Synthesized_Kinematics_for_Advanced_Traversing_Efficiency_via_Roller_Skate_Swizzles",
+        "module": "05_Locomotion",
+        "arxiv": "2601.04948",
+        "project_page": "",
+        "code": "",
+        "source": "截至当前未见公开代码/项目页 · Junchi Gu、Shiwu Zhang 等 · 给 25-DoF 人形(38kg/140cm)每足装一排 4 个 62mm 被动轮，用深度 RL(PPO+IsaacLab 4096 并行+多阶段课程+域随机化)学「葫芦步 swizzle」连续滑行；22 项奖励不写死步态时序让节能滑行自发涌现，actor 用本体感知+4 帧历史、critic 拿真实线速度/踝间距/踝朝向特权信息 · 相比双足行走冲击强度 -75.86%(10231→2469 N/s)、CoT -63.34%、髋/踝 pitch 关节能耗 -95.39%/-92.29%，瓷砖/橡胶/碎石三类摩擦地面 100% 通行 · 模块轮转（04_Loco-Manipulation_and_WBC → 05_Locomotion）"
+      },
       {
         "date": "2026-08-11",
         "index": 83,
