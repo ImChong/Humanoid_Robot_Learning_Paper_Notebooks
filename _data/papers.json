@@ -1295,7 +1295,7 @@
         "has_open_source": true,
         "published_date_zh": "2025年11月6日（arXiv v1）",
         "published_date_en": "Nov 6, 2025 (arXiv v1)",
-        "zhname": "BFM-Zero：用无监督 RL 的前向-后向表征打造可提示的人形全身控制行为基础模型",
+        "zhname": "BFM-Zero：用无监督强化学习的前向-后向表征打造「可提示」的人形全身控制行为基础模型",
         "zh_title": "BFM-Zero：用无监督 RL 的前向-后向表征打造可提示的人形全身控制行为基础模型"
       }
     ],
@@ -2274,6 +2274,17 @@
         "published_date_en": "Jan 9, 2026 (arXiv)",
         "zhname": "Walk the PLANC：受约束落脚点上的物理引导人形敏捷行走",
         "zh_title": "Walk the PLANC：受约束落脚点上的物理引导人形敏捷行走"
+      },
+      {
+        "title": "SKATER: Synthesized Kinematics for Advanced Traversing Efficiency on a Humanoid Robot via Roller Skate Swizzles",
+        "path": "papers/05_Locomotion/SKATER__Synthesized_Kinematics_for_Advanced_Traversing_Efficiency_via_Roller_Skate_Swizzles/SKATER__Synthesized_Kinematics_for_Advanced_Traversing_Efficiency_via_Roller_Skate_Swizzles.md",
+        "url": "/papers/05_Locomotion/SKATER__Synthesized_Kinematics_for_Advanced_Traversing_Efficiency_via_Roller_Skate_Swizzles/SKATER__Synthesized_Kinematics_for_Advanced_Traversing_Efficiency_via_Roller_Skate_Swizzles.html",
+        "dir": "SKATER__Synthesized_Kinematics_for_Advanced_Traversing_Efficiency_via_Roller_Skate_Swizzles",
+        "arxiv": "2601.04948",
+        "published_date_zh": "2026年1月8日（arXiv v1）",
+        "published_date_en": "Jan 8, 2026 (arXiv v1)",
+        "zhname": "SKATER：用轮滑「葫芦步」实现高效通行的人形机器人",
+        "zh_title": "SKATER：用轮滑「葫芦步」实现高效通行的人形机器人"
       },
       {
         "title": "Extreme Parkour with Legged Robots",
