@@ -41,18 +41,29 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 198,
-      "last_title": "SKATER: Synthesized Kinematics for Advanced Traversing Efficiency on a Humanoid Robot via Roller Skate Swizzles (arXiv:2601.04948)",
-      "next_module": "06_Manipulation",
-      "last_completed_date": "2026-08-12",
-      "note": "05_Locomotion 模块推进最新发表且尚无笔记的《SKATER: Synthesized Kinematics for Advanced Traversing Efficiency on a Humanoid Robot via Roller Skate Swizzles》(arXiv:2601.04948, Junchi Gu、Shiwu Zhang 等)——给 25-DoF 人形(38kg/140cm)每足装一排 4 个 62mm 被动轮，用深度 RL 学「葫芦步 swizzle」连续滑行：① 硬件把聚氨酯被动轮直接集成进脚以保力传递精度、不干涉踝关节；② PPO+IsaacLab(4096 并行)+多阶段课程，22 项奖励不写死步态时序让节能滑行自发涌现，actor 用本体感知+4 帧历史、critic 拿真实线速度/踝间距/踝朝向特权信息；③ 域随机化(摩擦0.1-0.8/质量/质心/增益)弥合 sim-to-real。相比双足行走冲击强度 -75.86%(10231→2469 N/s)、CoT -63.34%、髋/踝 pitch 关节能耗 -95.39%/-92.29%，瓷砖/橡胶/碎石三类摩擦地面 100% 通行。含整体框架 mermaid；论文暂无公开源码故不含源码时序图。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 04_Loco-Manipulation_and_WBC → 05_Locomotion，下一篇轮转到 06_Manipulation。"
+      "last_module": "06_Manipulation",
+      "last_index": 567,
+      "last_title": "RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation (arXiv:2606.31836)",
+      "next_module": "07_Teleoperation",
+      "last_completed_date": "2026-08-13",
+      "note": "06_Manipulation 模块推进最新发表且尚无笔记的《RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation》(arXiv:2606.31836, Xinyi Wang、Tao Chen 等, IEEE RA-L)——在公开可得的 Unitree G1(双臂+双灵巧手)上遥操作采集大规模灵巧「视觉-触觉-动作」数据集：6k 轨迹 / 19 任务 / 23 技能 / 22 物体；① 每条轨迹同记多视角 RGB-D(RealSense D435i 头/三视角+腕部)、指尖触觉(法向+切向接触力方向+自电容近距感知, 100Hz DDS→30Hz)、关节状态与语义标注；② 软硬件结合的多相机同步系统做到毫秒级对齐；③ 4 配置(桌距 5/15cm × 白/绿网格背景)增强鲁棒；④ 在 ACT/Diffusion Policy/GR00T N1.5 三方法上给基准，4 任务(取梨/翻页/插书/拧瓶盖)×10 试验平均成功率 3/3/6·10，VLA 因大规模预训练泛化最好但少见任务仍缺数据。含数据集构建与评测流程 mermaid；数据集声明将很快开源、当前未见公开仓库故不含源码时序图。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 05_Locomotion → 06_Manipulation，下一篇轮转到 07_Teleoperation。"
     },
-    "last_summary_index": 198,
-    "last_summary_date": "2026-08-12",
-    "last_summary_title": "SKATER: Synthesized Kinematics for Advanced Traversing Efficiency on a Humanoid Robot via Roller Skate Swizzles",
+    "last_summary_index": 567,
+    "last_summary_date": "2026-08-13",
+    "last_summary_title": "RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-08-13",
+        "index": 567,
+        "title": "RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation",
+        "folder": "papers/06_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation",
+        "module": "06_Manipulation",
+        "arxiv": "2606.31836",
+        "project_page": "",
+        "code": "",
+        "source": "数据集声明「将很快开源」，截至当前未见公开仓库/项目页 · Xinyi Wang、Tao Chen 等 · IEEE RA-L · Unitree G1(双臂+双灵巧手)遥操作采集 6k 轨迹 / 19 任务 / 23 技能 / 22 物体，含多视角 RGB-D、指尖法向+切向接触力与自电容近距感知触觉、语义标注 · 软硬件毫秒级多相机同步(触觉/手关节 100Hz DDS→30Hz) · 4 配置(桌距 5/15cm × 白/绿网格) · ACT/DP/GR00T N1.5 基准，4 任务×10 平均成功率 3/3/6·10 · 模块轮转（05_Locomotion → 06_Manipulation）"
+      },
       {
         "date": "2026-08-12",
         "index": 198,
@@ -5619,6 +5630,16 @@
       "done_date": "2026-08-10",
       "route": "Human Motion",
       "title_cn": "MoGeFlow：在运动码本几何上做流匹配的文本到动作生成"
+    },
+    {
+      "title": "RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation",
+      "folder": "papers/06_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation",
+      "note_file": "RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation.md",
+      "status": "done",
+      "arxiv": "2606.31836",
+      "pdf_file": "",
+      "route": "操作任务",
+      "title_cn": "RoboTacDex：面向人形操作的灵巧视觉-触觉-动作数据集"
     }
   ]
 }
