@@ -1307,6 +1307,17 @@
     "display_name": "Manipulation",
     "papers": [
       {
+        "title": "RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation",
+        "path": "papers/06_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation.md",
+        "url": "/papers/06_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation.html",
+        "dir": "RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation",
+        "arxiv": "2606.31836",
+        "published_date_zh": "2026年6月（IEEE RA-L 投稿）",
+        "published_date_en": "Jun 2026 (IEEE RA-L 投稿)",
+        "zhname": "RoboTacDex：面向人形操作的灵巧视觉-触觉-动作数据集",
+        "zh_title": "RoboTacDex：面向人形操作的灵巧视觉-触觉-动作数据集"
+      },
+      {
         "title": "Visual-tactile pretraining and online multitask learning for humanlike manipulation dexterity",
         "path": "papers/06_Manipulation/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity.md",
         "url": "/papers/06_Manipulation/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity/Visual-Tactile_Pretraining_and_Online_Multitask_Learning_for_Humanlike_Manipulation_Dexterity.html",

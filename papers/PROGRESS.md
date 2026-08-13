@@ -359,7 +359,7 @@
 | 525  | [Benchmarking Potential Based Rewards for Learning Humanoid Locomotion](https://arxiv.org/abs/2307.10142)                                                      | 2023.07 |     | ⏳ 待读 |
 
 
-### Manipulation（58篇）
+### Manipulation（59篇）
 
 
 | #   | 论文                                                                                                                                                        | 日期      | 🌟  | 状态   |
@@ -424,6 +424,7 @@
 | 328  | Is imitation learning the route to humanoid robots? | - |  | ⏳ 待读 |
 | 526  | [Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids](https://toruowo.github.io/recipe/) | 2025.02 |  | ⏳ 待读 |
 | 542  | [Learning Versatile Humanoid Manipulation with Touch Dreaming](https://arxiv.org/abs/2604.13015) ✅ [笔记](06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.md) | 2026.04 | 2026-06-16 | ✅ 已总结 |
+| 567  | [RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation](https://arxiv.org/abs/2606.31836) ✅ [笔记](06_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation.md) | 2026.06 | 2026-08-13 | ✅ 已总结 |
 
 
 ### Teleoperation（25篇）
