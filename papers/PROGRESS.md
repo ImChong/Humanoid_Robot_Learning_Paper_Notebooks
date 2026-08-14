@@ -427,7 +427,7 @@
 | 567  | [RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation](https://arxiv.org/abs/2606.31836) ✅ [笔记](06_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation.md) | 2026.06 | 2026-08-13 | ✅ 已总结 |
 
 
-### Teleoperation（25篇）
+### Teleoperation（26篇）
 
 
 | #   | 论文                                                                                                                                                             | 日期      | 🌟  | 状态   |
@@ -457,6 +457,7 @@
 | 536  | [AvatarPoser: Articulated Full-Body Pose Tracking from Sparse Motion Sensing](https://arxiv.org/abs/2207.13784) 🌟                                             | ECCV 2022 |     | ⏳ 待读 |
 | 537  | [A Mobile Robot Hand-Arm Teleoperation System by Vision and IMU](https://arxiv.org/pdf/2003.05212) 🌟                                                          | IROS 2020 |     | ⏳ 待读 |
 | 555  | [Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking](https://arxiv.org/abs/2606.03985) 🌟 ✅ [笔记](07_Teleoperation/Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking/Humanoid-GPT__Scaling_Data_and_Structure_for_Zero-Shot_Motion_Tracking.md) | 2026.06 | 2026-07-24 | ✅ 已总结 |
+| 568  | [Teleopit: A Full-Embodiment Humanoid Teleoperation System](https://arxiv.org/abs/2608.01834) 🌟 ✅ [笔记](07_Teleoperation/Teleopit__A_Full-Embodiment_Humanoid_Teleoperation_System/Teleopit__A_Full-Embodiment_Humanoid_Teleoperation_System.md) | 2026.08 | 2026-08-14 | ✅ 已总结 |
 
 
 ### Navigation（19篇）
