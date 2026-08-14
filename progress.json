@@ -41,18 +41,29 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 567,
-      "last_title": "RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation (arXiv:2606.31836)",
-      "next_module": "07_Teleoperation",
-      "last_completed_date": "2026-08-13",
-      "note": "06_Manipulation 模块推进最新发表且尚无笔记的《RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation》(arXiv:2606.31836, Xinyi Wang、Tao Chen 等, IEEE RA-L)——在公开可得的 Unitree G1(双臂+双灵巧手)上遥操作采集大规模灵巧「视觉-触觉-动作」数据集：6k 轨迹 / 19 任务 / 23 技能 / 22 物体；① 每条轨迹同记多视角 RGB-D(RealSense D435i 头/三视角+腕部)、指尖触觉(法向+切向接触力方向+自电容近距感知, 100Hz DDS→30Hz)、关节状态与语义标注；② 软硬件结合的多相机同步系统做到毫秒级对齐；③ 4 配置(桌距 5/15cm × 白/绿网格背景)增强鲁棒；④ 在 ACT/Diffusion Policy/GR00T N1.5 三方法上给基准，4 任务(取梨/翻页/插书/拧瓶盖)×10 试验平均成功率 3/3/6·10，VLA 因大规模预训练泛化最好但少见任务仍缺数据。含数据集构建与评测流程 mermaid；数据集声明将很快开源、当前未见公开仓库故不含源码时序图。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 05_Locomotion → 06_Manipulation，下一篇轮转到 07_Teleoperation。"
+      "last_module": "07_Teleoperation",
+      "last_index": 568,
+      "last_title": "Teleopit: A Full-Embodiment Humanoid Teleoperation System (arXiv:2608.01834)",
+      "next_module": "08_Navigation",
+      "last_completed_date": "2026-08-14",
+      "note": "07_Teleoperation 模块推进最新发表且尚无笔记的《Teleopit: A Full-Embodiment Humanoid Teleoperation System》(arXiv:2608.01834, Bingqian Wu、Xiangru Huang 等, 西湖大学)——用单副 Meta PICO 头显同时驱动人形的身体、灵巧手与主动视觉，做「全体感」遥操作采数：① 全身运动跟踪器 PPO+mjlab(8×A800/65536 并行/约50h) 输出 29 维关节目标(50Hz→PD 200Hz)、跟踪 14 身体链接，靠历史编码(H=10 时序卷积)与失败感知回退采样(rewind)提升难转移状态鲁棒——mocap 91.7%、live PICO 100%(优于 TWIST2/SONIC/HoloMotion)；② 优化式手部重定向以归一化指向+指尖距离+拇指对掌三目标经 SLSQP(60Hz,1.5-8.5ms)求解，换手只需语义链接映射、免调参覆盖 Dex5/Inspire/LinkerHand L20·L6/Rohand/Sharpa 六款手；③ 约 500 元 2-DoF 偏航-俯仰主动头做视点控制；④ 采 96 条演示训 ACT/GR00T N1.7 达 90.0%/95.0% 取放瓶成功率。含整体流程 mermaid + 源码运行时序图(5 仓库全链路开源：Teleopit/somehand/OpenNeck/pico-bridge/lerobot-teleopit)。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 06_Manipulation → 07_Teleoperation，下一篇轮转到 08_Navigation。"
     },
-    "last_summary_index": 567,
-    "last_summary_date": "2026-08-13",
-    "last_summary_title": "RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation",
+    "last_summary_index": 568,
+    "last_summary_date": "2026-08-14",
+    "last_summary_title": "Teleopit: A Full-Embodiment Humanoid Teleoperation System",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-08-14",
+        "index": 568,
+        "title": "Teleopit: A Full-Embodiment Humanoid Teleoperation System",
+        "folder": "papers/07_Teleoperation/Teleopit__A_Full-Embodiment_Humanoid_Teleoperation_System",
+        "module": "07_Teleoperation",
+        "arxiv": "2608.01834",
+        "project_page": "https://botrunner64.github.io/teleopit-page",
+        "code": "https://github.com/BotRunner64/Teleopit",
+        "source": "🌟 全链路开源 5 仓库：[Teleopit](https://github.com/BotRunner64/Teleopit)(全身控制/mjlab+PPO) · [somehand](https://github.com/BotRunner64/somehand)(手部重定向) · [OpenNeck](https://github.com/BotRunner64/OpenNeck)(2-DoF 主动头) · [pico-bridge](https://github.com/BotRunner64/pico-bridge)(PICO 接口) · [lerobot-teleopit](https://github.com/BotRunner64/lerobot-teleopit)(模仿学习) · 西湖大学 · 单副 PICO 驱动身体+6 款灵巧手+主动视觉，历史编码+失败感知回退采样，mocap 91.7%/live PICO 100%，96 演示训 ACT/GR00T N1.7 达 90%/95% · 含源码运行时序图 · 模块轮转（06_Manipulation → 07_Teleoperation）"
+      },
       {
         "date": "2026-08-13",
         "index": 567,
@@ -5640,6 +5651,16 @@
       "pdf_file": "",
       "route": "操作任务",
       "title_cn": "RoboTacDex：面向人形操作的灵巧视觉-触觉-动作数据集"
+    },
+    {
+      "title": "Teleopit: A Full-Embodiment Humanoid Teleoperation System",
+      "folder": "papers/07_Teleoperation/Teleopit__A_Full-Embodiment_Humanoid_Teleoperation_System",
+      "note_file": "Teleopit__A_Full-Embodiment_Humanoid_Teleoperation_System.md",
+      "status": "done",
+      "arxiv": "2608.01834",
+      "pdf_file": "",
+      "route": "遥操作",
+      "title_cn": "Teleopit：用一副 VR 头显统管身-手-头的全体感人形遥操作系统"
     }
   ]
 }

@@ -1864,6 +1864,18 @@
     "display_name": "Teleoperation",
     "papers": [
       {
+        "title": "Teleopit: A Full-Embodiment Humanoid Teleoperation System",
+        "path": "papers/07_Teleoperation/Teleopit__A_Full-Embodiment_Humanoid_Teleoperation_System/Teleopit__A_Full-Embodiment_Humanoid_Teleoperation_System.md",
+        "url": "/papers/07_Teleoperation/Teleopit__A_Full-Embodiment_Humanoid_Teleoperation_System/Teleopit__A_Full-Embodiment_Humanoid_Teleoperation_System.html",
+        "dir": "Teleopit__A_Full-Embodiment_Humanoid_Teleoperation_System",
+        "arxiv": "2608.01834",
+        "has_open_source": true,
+        "published_date_zh": "2026年8月3日（arXiv）",
+        "published_date_en": "Aug 3, 2026 (arXiv)",
+        "zhname": "Teleopit：用一副 VR 头显统管身-手-头的全体感人形遥操作系统",
+        "zh_title": "Teleopit：用一副 VR 头显统管身-手-头的全体感人形遥操作系统"
+      },
+      {
         "title": "Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning",
         "path": "papers/07_Teleoperation/Miniature_Humanoid_Tele-Loco-Manipulation_using_VR_and_RL/Miniature_Humanoid_Tele-Loco-Manipulation_using_VR_and_RL.md",
         "url": "/papers/07_Teleoperation/Miniature_Humanoid_Tele-Loco-Manipulation_using_VR_and_RL/Miniature_Humanoid_Tele-Loco-Manipulation_using_VR_and_RL.html",
