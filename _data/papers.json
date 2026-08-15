@@ -2576,6 +2576,18 @@
         "published_date_en": "Nov 30, 2024 (arXiv v1)",
         "zhname": "ARMOR：面向人形机器人碰撞规避与运动规划的第一视角感知",
         "zh_title": "ARMOR：面向人形机器人碰撞规避与运动规划的第一视角感知"
+      },
+      {
+        "title": "NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration",
+        "path": "papers/08_Navigation/NoMaD__Goal_Masked_Diffusion_Policies_for_Navigation_and_Exploration/NoMaD__Goal_Masked_Diffusion_Policies_for_Navigation_and_Exploration.md",
+        "url": "/papers/08_Navigation/NoMaD__Goal_Masked_Diffusion_Policies_for_Navigation_and_Exploration/NoMaD__Goal_Masked_Diffusion_Policies_for_Navigation_and_Exploration.html",
+        "dir": "NoMaD__Goal_Masked_Diffusion_Policies_for_Navigation_and_Exploration",
+        "arxiv": "2310.07896",
+        "has_open_source": true,
+        "published_date_zh": "2023年10月11日（arXiv v1） · ICRA 2024",
+        "published_date_en": "Oct 11, 2023 (arXiv v1) · ICRA 2024",
+        "zhname": "NoMaD：面向导航与探索的目标掩码扩散策略",
+        "zh_title": "NoMaD：面向导航与探索的目标掩码扩散策略"
       }
     ],
     "zhname": "导航",
