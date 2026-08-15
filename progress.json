@@ -41,18 +41,29 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "07_Teleoperation",
-      "last_index": 568,
-      "last_title": "Teleopit: A Full-Embodiment Humanoid Teleoperation System (arXiv:2608.01834)",
-      "next_module": "08_Navigation",
-      "last_completed_date": "2026-08-14",
-      "note": "07_Teleoperation 模块推进最新发表且尚无笔记的《Teleopit: A Full-Embodiment Humanoid Teleoperation System》(arXiv:2608.01834, Bingqian Wu、Xiangru Huang 等, 西湖大学)——用单副 Meta PICO 头显同时驱动人形的身体、灵巧手与主动视觉，做「全体感」遥操作采数：① 全身运动跟踪器 PPO+mjlab(8×A800/65536 并行/约50h) 输出 29 维关节目标(50Hz→PD 200Hz)、跟踪 14 身体链接，靠历史编码(H=10 时序卷积)与失败感知回退采样(rewind)提升难转移状态鲁棒——mocap 91.7%、live PICO 100%(优于 TWIST2/SONIC/HoloMotion)；② 优化式手部重定向以归一化指向+指尖距离+拇指对掌三目标经 SLSQP(60Hz,1.5-8.5ms)求解，换手只需语义链接映射、免调参覆盖 Dex5/Inspire/LinkerHand L20·L6/Rohand/Sharpa 六款手；③ 约 500 元 2-DoF 偏航-俯仰主动头做视点控制；④ 采 96 条演示训 ACT/GR00T N1.7 达 90.0%/95.0% 取放瓶成功率。含整体流程 mermaid + 源码运行时序图(5 仓库全链路开源：Teleopit/somehand/OpenNeck/pico-bridge/lerobot-teleopit)。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 06_Manipulation → 07_Teleoperation，下一篇轮转到 08_Navigation。"
+      "last_module": "08_Navigation",
+      "last_index": 569,
+      "last_title": "NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration (arXiv:2310.07896)",
+      "next_module": "09_State_Estimation",
+      "last_completed_date": "2026-08-15",
+      "note": "08_Navigation 模块最新发表论文均已有笔记，按「跳过已有内容取下一篇」补齐模块内唯一尚无笔记的白名单论文《NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration》(arXiv:2310.07896, Ajay Sridhar、Dhruv Shah、Catherine Glossop、Sergey Levine, UC Berkeley, ICRA 2024)——用「一张策略」同时做定向导航与自主探索：① 在 ViNT 视觉导航 Transformer 骨干上引入「目标掩码 goal masking」二值开关，m=0 保留目标 token 做图像目标定向导航、m=1 屏蔽目标做无目标探索，同一套权重拨开关即切换，免去两套模型/额外子目标生成器；② 动作端用条件扩散策略(DDPM+1D 卷积 U-Net)从噪声去噪采样未来动作序列，天然表达岔路口多模态、避免回归取平均撞墙；③ 另配时间距离头预测到目标步数、在拓扑图 topomap 中选下一子目标节点串联长程导航；相比 ViNT+独立图像子目标扩散基线模型更小却导航更好、碰撞更低。含整体流程 mermaid + 源码运行时序图(基于官方 robodhruv/visualnav-transformer 部署脚本 navigate.py/explore.py/pd_controller.py 与 ROS 话题)。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json，模块轮转 07_Teleoperation → 08_Navigation，下一篇轮转到 09_State_Estimation。"
     },
-    "last_summary_index": 568,
-    "last_summary_date": "2026-08-14",
-    "last_summary_title": "Teleopit: A Full-Embodiment Humanoid Teleoperation System",
+    "last_summary_index": 569,
+    "last_summary_date": "2026-08-15",
+    "last_summary_title": "NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-08-15",
+        "index": 569,
+        "title": "NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration",
+        "folder": "papers/08_Navigation/NoMaD__Goal_Masked_Diffusion_Policies_for_Navigation_and_Exploration",
+        "module": "08_Navigation",
+        "arxiv": "2310.07896",
+        "project_page": "https://general-navigation-models.github.io/nomad/",
+        "code": "https://github.com/robodhruv/visualnav-transformer",
+        "source": "🌟 全链路开源 [robodhruv/visualnav-transformer](https://github.com/robodhruv/visualnav-transformer)（GNM/ViNT/NoMaD 统一训练+部署代码与预训练权重）· UC Berkeley · ICRA 2024 · 目标掩码统一定向导航与无目标探索、扩散策略生成多模态动作、时间距离头+拓扑图做长程导航 · 含源码运行时序图 · 模块轮转（07_Teleoperation → 08_Navigation）"
+      },
       {
         "date": "2026-08-14",
         "index": 568,
@@ -5661,6 +5672,16 @@
       "pdf_file": "",
       "route": "遥操作",
       "title_cn": "Teleopit：用一副 VR 头显统管身-手-头的全体感人形遥操作系统"
+    },
+    {
+      "title": "NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration",
+      "folder": "papers/08_Navigation/NoMaD__Goal_Masked_Diffusion_Policies_for_Navigation_and_Exploration",
+      "note_file": "NoMaD__Goal_Masked_Diffusion_Policies_for_Navigation_and_Exploration.md",
+      "status": "done",
+      "arxiv": "2310.07896",
+      "pdf_file": "",
+      "route": "导航",
+      "title_cn": "NoMaD：面向导航与探索的目标掩码扩散策略"
     }
   ]
 }
