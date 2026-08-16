@@ -487,11 +487,12 @@
 | 369  | [GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains](https://arxiv.org/abs/2606.10449) ✅ [笔记](08_Navigation/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid/GuideWalk__Learning_Unified_Autonomous_Navigation_and_Locomotion_for_Humanoid.md) | 2026-06-09 |  | ✅ 已总结 |
 
 
-### State Estimation（15篇）
+### State Estimation（16篇）
 
 
 | #   | 论文                                                                                                                                       | 日期      | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
+| —    | [Iterated Invariant EKF for Quadruped Robot Odometry](https://arxiv.org/abs/2604.15449) ✅ [笔记](09_State_Estimation/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry.md) | 2026-04-16 | 2026-08-16 | ✅ 已总结 |
 | —    | [OCELOT: Odometry and Contact Estimation for Legged Robots](https://arxiv.org/abs/2605.21863) ✅ [笔记](09_State_Estimation/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots.md) | 2026-05-21 | 2026-08-05 | ✅ 已总结 |
 | 543  | [Learning Contact Representation for Leg Odometry](https://arxiv.org/abs/2606.05501) ✅ [笔记](09_State_Estimation/Learning_Contact_Representation_for_Leg_Odometry/Learning_Contact_Representation_for_Leg_Odometry.md) | 2026-06-03 |     | ✅ 已总结 |
 | 539  | [Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation](https://arxiv.org/abs/2510.16755) ✅ [笔记](09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.md) | 2025.10 |     | ✅ 已总结 |
