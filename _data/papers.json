@@ -2632,6 +2632,17 @@
         "zh_title": "OCELOT：面向足式机器人的纯本体感知腿部里程计与接触估计"
       },
       {
+        "title": "Iterated Invariant EKF for Quadruped Robot Odometry",
+        "path": "papers/09_State_Estimation/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry.md",
+        "url": "/papers/09_State_Estimation/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry.html",
+        "dir": "Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry",
+        "arxiv": "2604.15449",
+        "published_date_zh": "2026年4月16日（arXiv v1）",
+        "published_date_en": "Apr 16, 2026 (arXiv v1)",
+        "zhname": "IterIEKF：面向四足机器人里程计的迭代不变扩展卡尔曼滤波",
+        "zh_title": "IterIEKF：面向四足机器人里程计的迭代不变扩展卡尔曼滤波"
+      },
+      {
         "title": "AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion",
         "path": "papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md",
         "url": "/papers/09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.html",
