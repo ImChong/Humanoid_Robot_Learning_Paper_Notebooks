@@ -2731,6 +2731,17 @@
     "display_name": "Sim-to-Real",
     "papers": [
       {
+        "title": "Bridging the Sim-to-Real Gap in Parallel-Link Leg Mechanisms via Simulator-Side Dynamics Normalization",
+        "path": "papers/10_Sim-to-Real/Bridging_the_Sim-to-Real_Gap_in_Parallel-Link_Leg_Mechanisms/Bridging_the_Sim-to-Real_Gap_in_Parallel-Link_Leg_Mechanisms.md",
+        "url": "/papers/10_Sim-to-Real/Bridging_the_Sim-to-Real_Gap_in_Parallel-Link_Leg_Mechanisms/Bridging_the_Sim-to-Real_Gap_in_Parallel-Link_Leg_Mechanisms.html",
+        "dir": "Bridging_the_Sim-to-Real_Gap_in_Parallel-Link_Leg_Mechanisms",
+        "arxiv": "2608.01697",
+        "published_date_zh": "2026年8月3日（arXiv v1）/ 2026年8月6日（v2）",
+        "published_date_en": "Aug 3, 2026 (arXiv v1)/ Aug 6, 2026 (v2)",
+        "zhname": "S3N：面向并联腿机构 Sim-to-Real 的仿真侧动力学归一化",
+        "zh_title": "S3N：面向并联腿机构 Sim-to-Real 的仿真侧动力学归一化"
+      },
+      {
         "title": "Actuator Reality Shaping for Zero-Shot Sim-to-Real Robot Learning",
         "path": "papers/10_Sim-to-Real/Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning/Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning.md",
         "url": "/papers/10_Sim-to-Real/Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning/Actuator_Reality_Shaping_for_Zero-Shot_Sim-to-Real_Robot_Learning.html",
