@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "09_State_Estimation",
-      "last_index": 570,
-      "last_title": "Iterated Invariant EKF for Quadruped Robot Odometry (arXiv:2604.15449)",
-      "next_module": "10_Sim-to-Real",
-      "last_completed_date": "2026-08-16",
-      "note": "09_State_Estimation 模块已有笔记覆盖至 2026-06（OCELOT/GAIT/Proprioceptive Invariant 等），按「取模块最新发表且尚无笔记的论文」补齐《Iterated Invariant EKF for Quadruped Robot Odometry》(arXiv:2604.15449, 2026-04-16, Hilton M. S. Santana、João C. V. Soares、Silvère Bonnabel、Claudio Semini 等, PUC-Rio × IIT DLS Lab × Mines Paris)——在不变扩展卡尔曼滤波(IEKF)的更新步引入高斯-牛顿迭代(IterIEKF)：① 状态嵌入 SE₂(3)(姿态 R/速度 v/位置 p)、右不变误差使误差动力学与状态无关，保留不变滤波一致性优势；② IMU 做 SE₂(3) 传播预测；③ 更新步写成 MAP 优化、用高斯-牛顿反复重线性化逼近后验模态，而非单次线性化；④ 更新仅用本体感知——触地足世界系速度≈0 的接触约束(类 ZUPT)平均映射得基座速度伪测量，避开难标定的腿部位置协方差。MuJoCo+Quadruped-PyMPC 仿真与真机数据集上，收敛时间/速度/重力方向误差最多降约 60%、俯仰角误差降约 12%，优于 IEKF、SO(3)-EKF 及其迭代版。项目页 Legged-IterIEKF 标注 Code coming soon 暂未开源，含整体流程 mermaid + 算法运行时序图。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md，模块轮转 08_Navigation → 09_State_Estimation，下一篇轮转到 10_Sim-to-Real。"
+      "last_module": "10_Sim-to-Real",
+      "last_index": 571,
+      "last_title": "Bridging the Sim-to-Real Gap in Parallel-Link Leg Mechanisms via Simulator-Side Dynamics Normalization (arXiv:2608.01697)",
+      "next_module": "11_Simulation_Benchmark",
+      "last_completed_date": "2026-08-17",
+      "note": "10_Sim-to-Real 模块已有 14 篇笔记（Actuator Reality Shaping/FADA/PolySim/HALO/RAPT 等），按「取模块最新发表且尚无笔记的论文」补齐《Bridging the Sim-to-Real Gap in Parallel-Link Leg Mechanisms via Simulator-Side Dynamics Normalization》(arXiv:2608.01697, 2026-08-03 v1/2026-08-06 v2, Jinsong Hong、Jangho Kim、Jihwan Lee、Sehoon Oh (DGIST) × Donghyun Kim (UMass Amherst))：针对「并联连杆腿被近似为串联树代理」的工程简化，指出传统雅可比映射只保运动学、丢了①执行器惯量/阻尼并→串变换后的非对角耦合项 ②连杆自身惯量，导致关节加速度/GRF/机体运动失配。提出 S3N(Simulator-Side System Normalization)：不改真机、不加闭链约束、保持树形拓扑，用辨识出的硬件参数把串联仿真器等效动力学补回并联真机水平——S3N-Act 以动能不变坐标变换补执行器耦合力矩、S3N-Full 再以腿级频响(FRF)辨识总惯量减执行器贡献后补连杆残余惯量。训练用归一化仿真器、部署真机端零补偿。并联腿四足实测:2-DoF 关节位置/力矩误差降约 80%、俯仰站立 GRF 误差降 62–65%、圆周步态速度差距 17.3%→9.9%。截至记录日未见公开代码/项目页，含整体流程 mermaid（无源码运行时序图）。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md，模块轮转 09_State_Estimation → 10_Sim-to-Real，下一篇轮转到 11_Simulation_Benchmark。"
     },
     "last_summary_index": 569,
     "last_summary_date": "2026-08-15",
@@ -5692,6 +5692,18 @@
       "pdf_file": "",
       "route": "State Estimation",
       "title_cn": "IterIEKF：面向四足机器人里程计的迭代不变扩展卡尔曼滤波"
+    },
+    {
+      "title": "Bridging the Sim-to-Real Gap in Parallel-Link Leg Mechanisms via Simulator-Side Dynamics Normalization",
+      "arxiv": "2608.01697",
+      "folder": "papers/10_Sim-to-Real/Bridging_the_Sim-to-Real_Gap_in_Parallel-Link_Leg_Mechanisms",
+      "note_file": "Bridging_the_Sim-to-Real_Gap_in_Parallel-Link_Leg_Mechanisms.md",
+      "pdf_file": "",
+      "status": "done",
+      "start_date": "2026-08-17",
+      "done_date": "2026-08-17",
+      "route": "Sim-to-Real",
+      "title_cn": "S3N：面向并联腿机构 Sim-to-Real 的仿真侧动力学归一化"
     }
   ]
 }
