@@ -3215,6 +3215,18 @@
         "zh_title": "Humanoid World Models：面向人形机器人的开放世界基础模型"
       },
       {
+        "title": "MuJoCo Playground: An Open-Source Framework for GPU-Accelerated Robot Learning and Sim-to-Real Transfer",
+        "path": "papers/11_Simulation_Benchmark/MuJoCo_Playground__An_Open-Source_Framework_for_GPU-Accelerated_Robot_Learning/MuJoCo_Playground__An_Open-Source_Framework_for_GPU-Accelerated_Robot_Learning.md",
+        "url": "/papers/11_Simulation_Benchmark/MuJoCo_Playground__An_Open-Source_Framework_for_GPU-Accelerated_Robot_Learning/MuJoCo_Playground__An_Open-Source_Framework_for_GPU-Accelerated_Robot_Learning.html",
+        "dir": "MuJoCo_Playground__An_Open-Source_Framework_for_GPU-Accelerated_Robot_Learning",
+        "arxiv": "2502.08844",
+        "has_open_source": true,
+        "published_date_zh": "2025年1月15日（技术报告）/ 2025年2月12日（arXiv v1）",
+        "published_date_en": "Jan 15, 2025 (技术报告)/ Feb 12, 2025 (arXiv v1)",
+        "zhname": "MuJoCo Playground：面向机器人学习与仿真到真实迁移的 GPU 加速开源框架",
+        "zh_title": "MuJoCo Playground：面向机器人学习与仿真到真实迁移的 GPU 加速开源框架"
+      },
+      {
         "title": "Mimicking-Bench: A Benchmark for Generalizable Humanoid-Scene Interaction Learning via Human Mimicking",
         "path": "papers/11_Simulation_Benchmark/Mimicking-Bench__A_Benchmark_for_Generalizable_Humanoid-Scene_Interaction_Learning/Mimicking-Bench__A_Benchmark_for_Generalizable_Humanoid-Scene_Interaction_Learning.md",
         "url": "/papers/11_Simulation_Benchmark/Mimicking-Bench__A_Benchmark_for_Generalizable_Humanoid-Scene_Interaction_Learning/Mimicking-Bench__A_Benchmark_for_Generalizable_Humanoid-Scene_Interaction_Learning.html",

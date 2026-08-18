@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "10_Sim-to-Real",
-      "last_index": 571,
-      "last_title": "Bridging the Sim-to-Real Gap in Parallel-Link Leg Mechanisms via Simulator-Side Dynamics Normalization (arXiv:2608.01697)",
-      "next_module": "11_Simulation_Benchmark",
-      "last_completed_date": "2026-08-17",
-      "note": "10_Sim-to-Real 模块已有 14 篇笔记（Actuator Reality Shaping/FADA/PolySim/HALO/RAPT 等），按「取模块最新发表且尚无笔记的论文」补齐《Bridging the Sim-to-Real Gap in Parallel-Link Leg Mechanisms via Simulator-Side Dynamics Normalization》(arXiv:2608.01697, 2026-08-03 v1/2026-08-06 v2, Jinsong Hong、Jangho Kim、Jihwan Lee、Sehoon Oh (DGIST) × Donghyun Kim (UMass Amherst))：针对「并联连杆腿被近似为串联树代理」的工程简化，指出传统雅可比映射只保运动学、丢了①执行器惯量/阻尼并→串变换后的非对角耦合项 ②连杆自身惯量，导致关节加速度/GRF/机体运动失配。提出 S3N(Simulator-Side System Normalization)：不改真机、不加闭链约束、保持树形拓扑，用辨识出的硬件参数把串联仿真器等效动力学补回并联真机水平——S3N-Act 以动能不变坐标变换补执行器耦合力矩、S3N-Full 再以腿级频响(FRF)辨识总惯量减执行器贡献后补连杆残余惯量。训练用归一化仿真器、部署真机端零补偿。并联腿四足实测:2-DoF 关节位置/力矩误差降约 80%、俯仰站立 GRF 误差降 62–65%、圆周步态速度差距 17.3%→9.9%。截至记录日未见公开代码/项目页，含整体流程 mermaid（无源码运行时序图）。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md，模块轮转 09_State_Estimation → 10_Sim-to-Real，下一篇轮转到 11_Simulation_Benchmark。"
+      "last_module": "11_Simulation_Benchmark",
+      "last_index": 527,
+      "last_title": "MuJoCo Playground: An Open-Source Framework for GPU-Accelerated Robot Learning and Sim-to-Real Transfer (arXiv:2502.08844)",
+      "next_module": "12_Hardware_Design",
+      "last_completed_date": "2026-08-18",
+      "note": "11_Simulation_Benchmark 模块 papers.json 内 23 篇均已有笔记，按「取模块最新发表且尚无笔记、且在上游 awesome-humanoid-robot-learning 白名单内的论文」补齐上游 Simulation Benchmark 区仍缺的《MuJoCo Playground》(arXiv:2502.08844, 2025-01-15 技术报告/2025-02-12 arXiv v1, Kevin Zakka、Yuval Tassa、Pieter Abbeel 等, UC Berkeley × Google DeepMind × U Toronto × U Cambridge)：基于 MJX(MuJoCo on JAX) 的全开源 GPU 并行机器人学习框架，把 DM Control 经典控制 + 足式运动(四足/双足人形) + 灵巧操作统一进单一仿真栈，三大套件 dm_control_suite/locomotion/manipulation 按模块级函数注册、首次访问自动下载 Menagerie 资产；训练支持 JAX/Brax PPO(train_jax_ppo.py) 与 RSL-RL PPO，CLI --env_name 切任务；接入 Madrona 批渲染器让像素输入策略也能单卡大规模并行训练、免蒸馏；单卡分钟级训好并零样本迁真机(状态与像素皆可)，覆盖四足摇杆/倒立/摔倒恢复、Booster T1 双足、视觉抓取、Leap Hand 手内重定向、ALOHA 插销等。🌟 全链路开源 google-deepmind/mujoco_playground + 项目页 playground.mujoco.org，笔记含整体流程 mermaid + 源码运行时序图。同步 DAILY_SUMMARY_LOG.md / _data/papers.json / PROGRESS.md（第 527 号条目由「待读」改为「已总结」并补笔记链接）。模块轮转 10_Sim-to-Real → 11_Simulation_Benchmark，下一篇轮转到 12_Hardware_Design。"
     },
     "last_summary_index": 569,
     "last_summary_date": "2026-08-15",
