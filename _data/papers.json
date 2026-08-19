@@ -2901,6 +2901,18 @@
     "display_name": "Hardware Design",
     "papers": [
       {
+        "title": "Handroid: Bridging Dexterous Hand and Humanoid",
+        "path": "papers/12_Hardware_Design/Handroid__Bridging_Dexterous_Hand_and_Humanoid/Handroid__Bridging_Dexterous_Hand_and_Humanoid.md",
+        "url": "/papers/12_Hardware_Design/Handroid__Bridging_Dexterous_Hand_and_Humanoid/Handroid__Bridging_Dexterous_Hand_and_Humanoid.html",
+        "dir": "Handroid__Bridging_Dexterous_Hand_and_Humanoid",
+        "arxiv": "2607.16187",
+        "has_open_source": true,
+        "published_date_zh": "2026年7月17日（arXiv v1）",
+        "published_date_en": "Jul 17, 2026 (arXiv v1)",
+        "zhname": "Handroid：贯通灵巧手与人形机器人的双形态可重构平台",
+        "zh_title": "Handroid：贯通灵巧手与人形机器人的双形态可重构平台"
+      },
+      {
         "title": "MIDAS Hand: Modular low-Impedance Direct-drive Anthropomorphic Sensing Hand",
         "path": "papers/12_Hardware_Design/MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand/MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand.md",
         "url": "/papers/12_Hardware_Design/MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand/MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand.html",
