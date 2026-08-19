@@ -41,18 +41,29 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 527,
-      "last_title": "MuJoCo Playground: An Open-Source Framework for GPU-Accelerated Robot Learning and Sim-to-Real Transfer (arXiv:2502.08844)",
-      "next_module": "12_Hardware_Design",
-      "last_completed_date": "2026-08-18",
-      "note": "11_Simulation_Benchmark 模块 papers.json 内 23 篇均已有笔记，按「取模块最新发表且尚无笔记、且在上游 awesome-humanoid-robot-learning 白名单内的论文」补齐上游 Simulation Benchmark 区仍缺的《MuJoCo Playground》(arXiv:2502.08844, 2025-01-15 技术报告/2025-02-12 arXiv v1, Kevin Zakka、Yuval Tassa、Pieter Abbeel 等, UC Berkeley × Google DeepMind × U Toronto × U Cambridge)：基于 MJX(MuJoCo on JAX) 的全开源 GPU 并行机器人学习框架，把 DM Control 经典控制 + 足式运动(四足/双足人形) + 灵巧操作统一进单一仿真栈，三大套件 dm_control_suite/locomotion/manipulation 按模块级函数注册、首次访问自动下载 Menagerie 资产；训练支持 JAX/Brax PPO(train_jax_ppo.py) 与 RSL-RL PPO，CLI --env_name 切任务；接入 Madrona 批渲染器让像素输入策略也能单卡大规模并行训练、免蒸馏；单卡分钟级训好并零样本迁真机(状态与像素皆可)，覆盖四足摇杆/倒立/摔倒恢复、Booster T1 双足、视觉抓取、Leap Hand 手内重定向、ALOHA 插销等。🌟 全链路开源 google-deepmind/mujoco_playground + 项目页 playground.mujoco.org，笔记含整体流程 mermaid + 源码运行时序图。同步 DAILY_SUMMARY_LOG.md / _data/papers.json / PROGRESS.md（第 527 号条目由「待读」改为「已总结」并补笔记链接）。模块轮转 10_Sim-to-Real → 11_Simulation_Benchmark，下一篇轮转到 12_Hardware_Design。"
+      "last_module": "12_Hardware_Design",
+      "last_index": 572,
+      "last_title": "Handroid: Bridging Dexterous Hand and Humanoid (arXiv:2607.16187)",
+      "next_module": "13_Physics-Based_Animation",
+      "last_completed_date": "2026-08-19",
+      "note": "12_Hardware_Design 模块推进最新发表且尚无笔记的《Handroid: Bridging Dexterous Hand and Humanoid》(arXiv:2607.16187, 2026-07-17, Ruogu Li、Chenyang Ma、Sikai Li、Yunchao Yao、Haochen Shi、C. Karen Liu、Shuran Song、Mingyu Ding 等)——桌面尺度、可重构、全开源的双形态机器人：把「躯干—四肢」和「手掌—手指」都抽象成从紧凑中心结构分叉的关节链，于是同一批机电模块可在「20-DoF 灵巧手」与「25-DoF 桌面人形」两种形态间物理重装（关节 9/26 齿条-齿轮棱柱副切换），整机 27-DoF、0.33m/2.05kg；① 自研 40×80mm 主板 ESP32-S3 经 TTL 总线驱动三型 Dynamixel(XC330/XM430/2XC430)，主板+指尖/足端 IMU 本体感知，140W PD 供电，电磁法兰(~180N)与外部机械臂(Franka)快速对接/脱离；② 统一控制/学习栈跨两形态共享传感·仿真·部署接口——遥操作(VisionPro 手追+AnyTeleop 重定向 >20Hz)、抓取(Diffusion Policy+PointNet++ 点云)、手内操作(PPO@IsaacLab 学方块重定向+域随机化)、运动(ZMP 步态+Mink IK / 无参考速度 RL / Viser 关键帧编辑)；③ 统一 MuJoCo 仿真做 sim-to-real。实验：遥操作抓取 10 物体平均成功率 72%、仿真身体位置跟踪误差 0.0019m、速度跟踪误差 0.052m/s，长程任务串联「形态重构→脱离 Franka→避障→推箱→重对接→灵巧取放」。含整体流程 mermaid + 系统运行时序图（官方代码仓库标 Coming Soon 尚未完整释出，CAD/BOM 已开源，故时序图依论文描述绘制）。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json（Hardware Design 39→40 篇，新增索引 572），模块轮转 11_Simulation_Benchmark → 12_Hardware_Design，下一篇轮转到 13_Physics-Based_Animation。"
     },
-    "last_summary_index": 569,
-    "last_summary_date": "2026-08-15",
-    "last_summary_title": "NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration",
+    "last_summary_index": 572,
+    "last_summary_date": "2026-08-19",
+    "last_summary_title": "Handroid: Bridging Dexterous Hand and Humanoid",
     "next_summary_index": null,
     "log": [
+      {
+        "date": "2026-08-19",
+        "index": 572,
+        "title": "Handroid: Bridging Dexterous Hand and Humanoid",
+        "folder": "papers/12_Hardware_Design/Handroid__Bridging_Dexterous_Hand_and_Humanoid",
+        "module": "12_Hardware_Design",
+        "arxiv": "2607.16187",
+        "project_page": "https://handroid.org",
+        "code": "https://github.com/ruoguliii/handroid",
+        "source": "🌟 开源(MIT，代码/文档标注 Coming Soon 尚未完整释出，CAD@OnShape + BOM 已开放) · github.com/ruoguliii/handroid · 项目页 handroid.org · 桌面尺度可重构双形态机器人：同一批机电模块在 20-DoF 灵巧手与 25-DoF 桌面人形间物理重装，整机 27-DoF/0.33m/2.05kg · 统一控制学习栈(VisionPro+AnyTeleop 遥操作 / Diffusion Policy 抓取 / PPO@IsaacLab 手内操作 / ZMP+Mink IK+速度RL+Viser 关键帧运动)，共享 MuJoCo 仿真 sim-to-real · 遥操作抓取 10 物体平均 72%、仿真身体跟踪误差 0.0019m、长程任务串联形态重构→脱离 Franka→避障→推箱→重对接→灵巧取放 · Ruogu Li、Shuran Song、C. Karen Liu、Mingyu Ding 等 · 模块轮转（11_Simulation_Benchmark → 12_Hardware_Design）"
+      },
       {
         "date": "2026-08-15",
         "index": 569,
@@ -5704,6 +5715,16 @@
       "done_date": "2026-08-17",
       "route": "Sim-to-Real",
       "title_cn": "S3N：面向并联腿机构 Sim-to-Real 的仿真侧动力学归一化"
+    },
+    {
+      "title": "Handroid: Bridging Dexterous Hand and Humanoid",
+      "folder": "papers/12_Hardware_Design/Handroid__Bridging_Dexterous_Hand_and_Humanoid",
+      "note_file": "Handroid__Bridging_Dexterous_Hand_and_Humanoid.md",
+      "status": "done",
+      "arxiv": "2607.16187",
+      "pdf_file": "",
+      "route": "硬件设计",
+      "title_cn": "Handroid：贯通灵巧手与人形机器人的双形态可重构平台"
     }
   ]
 }
