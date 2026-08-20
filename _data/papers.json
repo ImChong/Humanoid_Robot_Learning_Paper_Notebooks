@@ -3326,6 +3326,17 @@
     "display_name": "Physics-Based Animation",
     "papers": [
       {
+        "title": "Lambda-Hold Control: Human-Like Movement Emerges from a Minimal Task Reward in Predictive Musculoskeletal Simulation",
+        "path": "papers/13_Physics-Based_Animation/Lambda-Hold_Control__Human-Like_Movement_from_Minimal_Task_Reward/Lambda-Hold_Control__Human-Like_Movement_from_Minimal_Task_Reward.md",
+        "url": "/papers/13_Physics-Based_Animation/Lambda-Hold_Control__Human-Like_Movement_from_Minimal_Task_Reward/Lambda-Hold_Control__Human-Like_Movement_from_Minimal_Task_Reward.html",
+        "dir": "Lambda-Hold_Control__Human-Like_Movement_from_Minimal_Task_Reward",
+        "arxiv": "2608.17030",
+        "published_date_zh": "2026年8月17日（arXiv v1）",
+        "published_date_en": "Aug 17, 2026 (arXiv v1)",
+        "zhname": "λ-Hold 控制：极简任务奖励下从肌肉骨骼仿真中涌现出类人运动",
+        "zh_title": "λ-Hold 控制：极简任务奖励下从肌肉骨骼仿真中涌现出类人运动"
+      },
+      {
         "title": "BFMTrack: Latent Sequence Optimization for Physics-Based Motion Tracking with Behavioral Foundation Models",
         "path": "papers/13_Physics-Based_Animation/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking.md",
         "url": "/papers/13_Physics-Based_Animation/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking/BFMTrack__Latent_Sequence_Optimization_for_Physics-Based_Motion_Tracking.html",

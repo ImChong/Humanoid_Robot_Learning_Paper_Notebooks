@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 572,
-      "last_title": "Handroid: Bridging Dexterous Hand and Humanoid (arXiv:2607.16187)",
-      "next_module": "13_Physics-Based_Animation",
-      "last_completed_date": "2026-08-19",
-      "note": "12_Hardware_Design 模块推进最新发表且尚无笔记的《Handroid: Bridging Dexterous Hand and Humanoid》(arXiv:2607.16187, 2026-07-17, Ruogu Li、Chenyang Ma、Sikai Li、Yunchao Yao、Haochen Shi、C. Karen Liu、Shuran Song、Mingyu Ding 等)——桌面尺度、可重构、全开源的双形态机器人：把「躯干—四肢」和「手掌—手指」都抽象成从紧凑中心结构分叉的关节链，于是同一批机电模块可在「20-DoF 灵巧手」与「25-DoF 桌面人形」两种形态间物理重装（关节 9/26 齿条-齿轮棱柱副切换），整机 27-DoF、0.33m/2.05kg；① 自研 40×80mm 主板 ESP32-S3 经 TTL 总线驱动三型 Dynamixel(XC330/XM430/2XC430)，主板+指尖/足端 IMU 本体感知，140W PD 供电，电磁法兰(~180N)与外部机械臂(Franka)快速对接/脱离；② 统一控制/学习栈跨两形态共享传感·仿真·部署接口——遥操作(VisionPro 手追+AnyTeleop 重定向 >20Hz)、抓取(Diffusion Policy+PointNet++ 点云)、手内操作(PPO@IsaacLab 学方块重定向+域随机化)、运动(ZMP 步态+Mink IK / 无参考速度 RL / Viser 关键帧编辑)；③ 统一 MuJoCo 仿真做 sim-to-real。实验：遥操作抓取 10 物体平均成功率 72%、仿真身体位置跟踪误差 0.0019m、速度跟踪误差 0.052m/s，长程任务串联「形态重构→脱离 Franka→避障→推箱→重对接→灵巧取放」。含整体流程 mermaid + 系统运行时序图（官方代码仓库标 Coming Soon 尚未完整释出，CAD/BOM 已开源，故时序图依论文描述绘制）。同步 DAILY_SUMMARY_LOG.md / progress.json / PROGRESS.md / _data/papers.json（Hardware Design 39→40 篇，新增索引 572），模块轮转 11_Simulation_Benchmark → 12_Hardware_Design，下一篇轮转到 13_Physics-Based_Animation。"
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 573,
+      "last_title": "Lambda-Hold Control: Human-Like Movement Emerges from a Minimal Task Reward (arXiv:2608.17030)",
+      "next_module": "14_Human_Motion",
+      "last_completed_date": "2026-08-20",
+      "note": "13_Physics-Based_Animation 模块推进最新发表且尚无笔记的《Lambda-Hold Control: Human-Like Movement Emerges from a Minimal Task Reward in Predictive Musculoskeletal Simulation》(arXiv:2608.17030, 2026-08-17, Jun Hyuk Lee、Chihyeong Lee、Jooeun Ahn，首尔国立大学)——受平衡点假说(EP hypothesis)启发，策略输出每块肌肉的阈值长度 λ 而非兴奋度，由固定的牵张反射募集律自动换算激活；并把 λ 只在着地/离地等地反力事件点重采样、其余时间保持不变(每步态周期约 8 次决策)。于是关节级协调从骨骼耦合中「涌现」，仅凭「前向速度」这一极简奖励(无模仿/无能耗/无对称)，就在 H2190(21 DoF·90 肌腱单元·SCONE+Hyfydy)上约 1 小时学出类人冲刺(~4.7 m/s)，显著优于 Plain SAC / Excitation-hold / DEP-RL / Synergy 四基线。代码标注 TBA 暂未开源，故本篇未附源码运行时序图；含整体流程 mermaid。下一天轮到 14_Human_Motion 模块。"
     },
     "last_summary_index": 572,
     "last_summary_date": "2026-08-19",
