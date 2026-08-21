@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "13_Physics-Based_Animation",
-      "last_index": 573,
-      "last_title": "Lambda-Hold Control: Human-Like Movement Emerges from a Minimal Task Reward (arXiv:2608.17030)",
-      "next_module": "14_Human_Motion",
-      "last_completed_date": "2026-08-20",
-      "note": "13_Physics-Based_Animation 模块推进最新发表且尚无笔记的《Lambda-Hold Control: Human-Like Movement Emerges from a Minimal Task Reward in Predictive Musculoskeletal Simulation》(arXiv:2608.17030, 2026-08-17, Jun Hyuk Lee、Chihyeong Lee、Jooeun Ahn，首尔国立大学)——受平衡点假说(EP hypothesis)启发，策略输出每块肌肉的阈值长度 λ 而非兴奋度，由固定的牵张反射募集律自动换算激活；并把 λ 只在着地/离地等地反力事件点重采样、其余时间保持不变(每步态周期约 8 次决策)。于是关节级协调从骨骼耦合中「涌现」，仅凭「前向速度」这一极简奖励(无模仿/无能耗/无对称)，就在 H2190(21 DoF·90 肌腱单元·SCONE+Hyfydy)上约 1 小时学出类人冲刺(~4.7 m/s)，显著优于 Plain SAC / Excitation-hold / DEP-RL / Synergy 四基线。代码标注 TBA 暂未开源，故本篇未附源码运行时序图；含整体流程 mermaid。下一天轮到 14_Human_Motion 模块。"
+      "last_module": "14_Human_Motion",
+      "last_index": 574,
+      "last_title": "UniMoFlow: Grounding Instruction-Driven 3D Human Motion Editing in Generation (arXiv:2608.09143)",
+      "next_module": "04_Loco-Manipulation_and_WBC",
+      "last_completed_date": "2026-08-21",
+      "note": "14_Human_Motion 模块推进最新发表且尚无笔记的《UniMoFlow: Grounding Instruction-Driven 3D Human Motion Editing in Generation》(arXiv:2608.09143, 2026-08-10, Yilei Hua、Yawei Luo、Wei Yang 等)——把指令驱动的 3D 人体动作编辑「接地」到文本到动作生成之内，在数据/架构/推理三层统一：数据层用「Qwen3-8B 生成候选→基座 DiT+FlowEdit 合成→阈值过滤」闭环产出 Omni-MoEdit(55,641 编辑三元组、约3.5×既有、五类编辑含反向指令)；架构层 UniMoFlow 用统一潜空间流匹配骨干(单 9 层 Transformer、模态+时间标签相加、生成/编辑各一轻量头)共享生成与编辑知识；推理层 SAFE 源锚定流编辑以源为轨迹起点+条件、漂移强度 w 调「编辑↔保源」免重训。含整体流程 mermaid + 源码运行时序图。下一篇轮转回 04_Loco-Manipulation_and_WBC。"
     },
     "last_summary_index": 572,
     "last_summary_date": "2026-08-19",
