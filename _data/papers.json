@@ -3470,6 +3470,18 @@
     "display_name": "Human Motion",
     "papers": [
       {
+        "title": "UniMoFlow: Grounding Instruction-Driven 3D Human Motion Editing in Generation",
+        "path": "papers/14_Human_Motion/UniMoFlow__Grounding_Instruction-Driven_3D_Human_Motion_Editing_in_Generation/UniMoFlow__Grounding_Instruction-Driven_3D_Human_Motion_Editing_in_Generation.md",
+        "url": "/papers/14_Human_Motion/UniMoFlow__Grounding_Instruction-Driven_3D_Human_Motion_Editing_in_Generation/UniMoFlow__Grounding_Instruction-Driven_3D_Human_Motion_Editing_in_Generation.html",
+        "dir": "UniMoFlow__Grounding_Instruction-Driven_3D_Human_Motion_Editing_in_Generation",
+        "arxiv": "2608.09143",
+        "has_open_source": true,
+        "published_date_zh": "2026年8月10日（arXiv v1）",
+        "published_date_en": "Aug 10, 2026 (arXiv v1)",
+        "zhname": "UniMoFlow：把指令驱动的 3D 人体动作编辑「接地」到文本到动作生成里",
+        "zh_title": "UniMoFlow：把指令驱动的 3D 人体动作编辑「接地」到文本到动作生成里"
+      },
+      {
         "title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
         "path": "papers/14_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion.md",
         "url": "/papers/14_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion.html",
