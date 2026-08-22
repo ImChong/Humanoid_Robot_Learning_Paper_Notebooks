@@ -566,6 +566,17 @@
     "display_name": "Loco-Manipulation and WBC",
     "papers": [
       {
+        "title": "GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction",
+        "path": "papers/04_Loco-Manipulation_and_WBC/GigaBrain-WBC-0.5__A_Behavior_World_Model_for_Robust_Whole-Body_Control/GigaBrain-WBC-0.5__A_Behavior_World_Model_for_Robust_Whole-Body_Control.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/GigaBrain-WBC-0.5__A_Behavior_World_Model_for_Robust_Whole-Body_Control/GigaBrain-WBC-0.5__A_Behavior_World_Model_for_Robust_Whole-Body_Control.html",
+        "dir": "GigaBrain-WBC-0.5__A_Behavior_World_Model_for_Robust_Whole-Body_Control",
+        "arxiv": "2608.18234",
+        "published_date_zh": "2026年8月18日（arXiv v1）",
+        "published_date_en": "Aug 18, 2026 (arXiv v1)",
+        "zhname": "GigaBrain-WBC-0.5：面向带环境交互的鲁棒人形全身控制的行为世界模型",
+        "zh_title": "GigaBrain-WBC-0.5：面向带环境交互的鲁棒人形全身控制的行为世界模型"
+      },
+      {
         "title": "SplitAdapter: Load-Aware Humanoid Loco-Manipulation via Factorized Adaptation",
         "path": "papers/04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.md",
         "url": "/papers/04_Loco-Manipulation_and_WBC/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation/SplitAdapter__Load-Aware_Humanoid_Loco-Manipulation_via_Factorized_Adaptation.html",

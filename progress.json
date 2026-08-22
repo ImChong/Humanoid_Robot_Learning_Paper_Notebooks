@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "14_Human_Motion",
-      "last_index": 574,
-      "last_title": "UniMoFlow: Grounding Instruction-Driven 3D Human Motion Editing in Generation (arXiv:2608.09143)",
-      "next_module": "04_Loco-Manipulation_and_WBC",
-      "last_completed_date": "2026-08-21",
-      "note": "14_Human_Motion 模块推进最新发表且尚无笔记的《UniMoFlow: Grounding Instruction-Driven 3D Human Motion Editing in Generation》(arXiv:2608.09143, 2026-08-10, Yilei Hua、Yawei Luo、Wei Yang 等)——把指令驱动的 3D 人体动作编辑「接地」到文本到动作生成之内，在数据/架构/推理三层统一：数据层用「Qwen3-8B 生成候选→基座 DiT+FlowEdit 合成→阈值过滤」闭环产出 Omni-MoEdit(55,641 编辑三元组、约3.5×既有、五类编辑含反向指令)；架构层 UniMoFlow 用统一潜空间流匹配骨干(单 9 层 Transformer、模态+时间标签相加、生成/编辑各一轻量头)共享生成与编辑知识；推理层 SAFE 源锚定流编辑以源为轨迹起点+条件、漂移强度 w 调「编辑↔保源」免重训。含整体流程 mermaid + 源码运行时序图。下一篇轮转回 04_Loco-Manipulation_and_WBC。"
+      "last_module": "04_Loco-Manipulation_and_WBC",
+      "last_index": 575,
+      "last_title": "GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction (arXiv:2608.18234)",
+      "next_module": "05_Locomotion",
+      "last_completed_date": "2026-08-22",
+      "note": "04_Loco-Manipulation_and_WBC 模块推进最新发表且尚无笔记的《GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction》(arXiv:2608.18234, 2026-08-18, Ziyang Cheng、Zheng Zhu、Jiwen Lu 等，清华大学 × GigaAI)——把人形全身运动跟踪从纯反应式「照抄指令」升级为行为世界模型(BWM)：6 层因果 Transformer 在预测下一步动作(29 维 PD)之外，同时预测下一步本体状态(67 维)与「下一步合法行为指令的分布」(4 分量高斯混合)，显式建模行为可行边界；数据侧自动从动作重定向反解 3D 接触地形(减速特征检测接触+穿透过滤+DBSCAN 聚类+有向包围盒，200 条人工审核 92%)造出椅/桌/箱/台阶真实几何用于交互训练；部署侧用无记忆越界指令检测(马氏距离+径向投影回安全椭球，<1ms/20ms 周期)拦截分布外指令。Unitree G1 地形交互 81.3%(4.3×基线)/越界鲁棒 83.1%/跌倒恢复 99.3%/平地 MPKPE 76.6mm 最优，可迁移 Maker L01。代码官方标注 Coming Soon 暂未开源、故本篇未附源码运行时序图；含整体流程 mermaid。下一天轮到 05_Locomotion 模块。"
     },
     "last_summary_index": 572,
     "last_summary_date": "2026-08-19",
