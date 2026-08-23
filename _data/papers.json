@@ -2175,6 +2175,18 @@
     "display_name": "Locomotion",
     "papers": [
       {
+        "title": "Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion",
+        "path": "papers/05_Locomotion/Tac4Loco__Spatiotemporal_Plantar_Pressure_Representations_for_Humanoid_Locomotion/Tac4Loco__Spatiotemporal_Plantar_Pressure_Representations_for_Humanoid_Locomotion.md",
+        "url": "/papers/05_Locomotion/Tac4Loco__Spatiotemporal_Plantar_Pressure_Representations_for_Humanoid_Locomotion/Tac4Loco__Spatiotemporal_Plantar_Pressure_Representations_for_Humanoid_Locomotion.html",
+        "dir": "Tac4Loco__Spatiotemporal_Plantar_Pressure_Representations_for_Humanoid_Locomotion",
+        "arxiv": "2608.15766",
+        "has_open_source": false,
+        "published_date_zh": "2026年8月16日（arXiv v1）",
+        "published_date_en": "Aug 16, 2026 (arXiv v1)",
+        "zhname": "Tac4Loco：把足底压力当直接反馈的人形鲁棒行走",
+        "zh_title": "Tac4Loco：把足底压力当直接反馈的人形鲁棒行走"
+      },
+      {
         "title": "Biomechanical Comparisons Reveal Divergence of Human and Humanoid Gaits",
         "path": "papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.md",
         "url": "/papers/05_Locomotion/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits/Biomechanical_Comparisons_Reveal_Divergence_of_Human_and_Humanoid_Gaits.html",

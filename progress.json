@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 575,
-      "last_title": "GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction (arXiv:2608.18234)",
-      "next_module": "05_Locomotion",
-      "last_completed_date": "2026-08-22",
-      "note": "04_Loco-Manipulation_and_WBC 模块推进最新发表且尚无笔记的《GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction》(arXiv:2608.18234, 2026-08-18, Ziyang Cheng、Zheng Zhu、Jiwen Lu 等，清华大学 × GigaAI)——把人形全身运动跟踪从纯反应式「照抄指令」升级为行为世界模型(BWM)：6 层因果 Transformer 在预测下一步动作(29 维 PD)之外，同时预测下一步本体状态(67 维)与「下一步合法行为指令的分布」(4 分量高斯混合)，显式建模行为可行边界；数据侧自动从动作重定向反解 3D 接触地形(减速特征检测接触+穿透过滤+DBSCAN 聚类+有向包围盒，200 条人工审核 92%)造出椅/桌/箱/台阶真实几何用于交互训练；部署侧用无记忆越界指令检测(马氏距离+径向投影回安全椭球，<1ms/20ms 周期)拦截分布外指令。Unitree G1 地形交互 81.3%(4.3×基线)/越界鲁棒 83.1%/跌倒恢复 99.3%/平地 MPKPE 76.6mm 最优，可迁移 Maker L01。代码官方标注 Coming Soon 暂未开源、故本篇未附源码运行时序图；含整体流程 mermaid。下一天轮到 05_Locomotion 模块。"
+      "last_module": "05_Locomotion",
+      "last_index": 576,
+      "last_title": "Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion (arXiv:2608.15766)",
+      "next_module": "06_Manipulation",
+      "last_completed_date": "2026-08-23",
+      "note": "05_Locomotion 模块推进最新发表且尚无笔记的《Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion》(arXiv:2608.15766, 2026-08-16, Ziyun Liu、Jinni Zhou、Jun Ma 等，香港科技大学(广州)×港大×南洋理工)——把多阵列足底压力当「直接反馈」接进 RL 行走策略，解决斜面/台阶边缘/部分/非对称支撑与柔顺地面易踩空跌倒：观测把每脚 60 阵元 FSR 原始压力经非均匀分箱量化为 31 个有序等级(保拓扑序数表示)，只留相对大小秩序以对齐仿真↔真机、跨过标定/噪声鸿沟；双分支编码器——空间分支 CNN token+以本体为条件的多头交叉注意力抽「此刻压力分布」、时间分支对 8 包(近密远疏)历史做 1D 卷积取最新/均值/差分抽「支撑动态变化」；非对称 actor-critic(critic 用接触/地形特权信息)、PPO+地形课程、50Hz 策略/200Hz PD、mjlab GPU 并行每脚 60 接触球生成压力监督；四组奖励含足底支撑对齐。Unitree G1 仿真斜面存活 22%→77.9%、随机支撑 71.7%→96.5%，真机侧向 9° 上坡 1/10→8/10、15°/9° 坡切换 0/10→10/10、零样本泡沫 0/10→7/10。代码/配置「将开源」但暂未给出仓库链接、故本篇未附源码运行时序图；含整体流程 mermaid。下一天轮到 06_Manipulation 模块。"
     },
     "last_summary_index": 572,
     "last_summary_date": "2026-08-19",
