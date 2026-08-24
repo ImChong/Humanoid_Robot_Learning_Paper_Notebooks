@@ -361,7 +361,7 @@
 | 525  | [Benchmarking Potential Based Rewards for Learning Humanoid Locomotion](https://arxiv.org/abs/2307.10142)                                                      | 2023.07 |     | ⏳ 待读 |
 
 
-### Manipulation（59篇）
+### Manipulation（60篇）
 
 
 | #   | 论文                                                                                                                                                        | 日期      | 🌟  | 状态   |
@@ -427,6 +427,7 @@
 | 526  | [Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids](https://toruowo.github.io/recipe/) | 2025.02 |  | ⏳ 待读 |
 | 542  | [Learning Versatile Humanoid Manipulation with Touch Dreaming](https://arxiv.org/abs/2604.13015) ✅ [笔记](06_Manipulation/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming/HTD__Learning_Versatile_Humanoid_Manipulation_with_Touch_Dreaming.md) | 2026.04 | 2026-06-16 | ✅ 已总结 |
 | 567  | [RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation](https://arxiv.org/abs/2606.31836) ✅ [笔记](06_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation.md) | 2026.06 | 2026-08-13 | ✅ 已总结 |
+| 577  | [RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience](https://arxiv.org/abs/2608.18948) ✅ [笔记](06_Manipulation/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience.md) | 2026.08 | 2026-08-24 | ✅ 已总结 |
 
 
 ### Teleoperation（26篇）

@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 576,
-      "last_title": "Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion (arXiv:2608.15766)",
-      "next_module": "06_Manipulation",
-      "last_completed_date": "2026-08-23",
-      "note": "05_Locomotion 模块推进最新发表且尚无笔记的《Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion》(arXiv:2608.15766, 2026-08-16, Ziyun Liu、Jinni Zhou、Jun Ma 等，香港科技大学(广州)×港大×南洋理工)——把多阵列足底压力当「直接反馈」接进 RL 行走策略，解决斜面/台阶边缘/部分/非对称支撑与柔顺地面易踩空跌倒：观测把每脚 60 阵元 FSR 原始压力经非均匀分箱量化为 31 个有序等级(保拓扑序数表示)，只留相对大小秩序以对齐仿真↔真机、跨过标定/噪声鸿沟；双分支编码器——空间分支 CNN token+以本体为条件的多头交叉注意力抽「此刻压力分布」、时间分支对 8 包(近密远疏)历史做 1D 卷积取最新/均值/差分抽「支撑动态变化」；非对称 actor-critic(critic 用接触/地形特权信息)、PPO+地形课程、50Hz 策略/200Hz PD、mjlab GPU 并行每脚 60 接触球生成压力监督；四组奖励含足底支撑对齐。Unitree G1 仿真斜面存活 22%→77.9%、随机支撑 71.7%→96.5%，真机侧向 9° 上坡 1/10→8/10、15°/9° 坡切换 0/10→10/10、零样本泡沫 0/10→7/10。代码/配置「将开源」但暂未给出仓库链接、故本篇未附源码运行时序图；含整体流程 mermaid。下一天轮到 06_Manipulation 模块。"
+      "last_module": "06_Manipulation",
+      "last_index": 577,
+      "last_title": "RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience (arXiv:2608.18948)",
+      "next_module": "07_Teleoperation",
+      "last_completed_date": "2026-08-24",
+      "note": "06_Manipulation 模块推进最新发表且尚无笔记的《RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience》(arXiv:2608.18948, 2026-08-19)；把人类操作视频改写成对齐 3D 手部状态的机器人视频，配 RoboEdit-ADC 流水线与 RoboEdit-14M 数据集。论文刚发布暂无公开代码，故无源码运行时序图。下一篇轮转到 07_Teleoperation。"
     },
     "last_summary_index": 572,
     "last_summary_date": "2026-08-19",
@@ -1795,8 +1795,8 @@
     {
       "title": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
       "arxiv": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_",
-      "note_file": "MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking_and_.md",
+      "folder": "papers/10_Sim-to-Real/MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking",
+      "note_file": "MOSAIC__Bridging_the_Sim-to-Real_Gap_in_Generalist_Humanoid_Motion_Tracking.md",
       "pdf_file": "MOSAIC.pdf",
       "status": "done",
       "start_date": null,
@@ -2170,7 +2170,7 @@
       "folder": "papers/04_Loco-Manipulation_and_WBC/HAFO__A_Force-Adaptive_Control_Framework_for_Humanoid_Robots_in_Intense_Interact",
       "note_file": "HAFO__A_Force-Adaptive_Control_Framework_for_Humanoid_Robots_in_Intense_Interact.md",
       "pdf_file": "HAFO.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -2323,10 +2323,10 @@
     {
       "title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",
       "arxiv": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",
-      "folder": "papers/04_Loco-Manipulation_and_WBC/BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control_Using_Un",
-      "note_file": "BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control_Using_Un.md",
+      "folder": "papers/04_Loco-Manipulation_and_WBC/BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control",
+      "note_file": "BFM-Zero__A_Promptable_Behavioral_Foundation_Model_for_Humanoid_Control.md",
       "pdf_file": "BFM-Zero.pdf",
-      "status": "pending",
+      "status": "done",
       "start_date": null,
       "done_date": null,
       "route": "Loco-Manipulation",
@@ -5725,6 +5725,76 @@
       "pdf_file": "",
       "route": "硬件设计",
       "title_cn": "Handroid：贯通灵巧手与人形机器人的双形态可重构平台"
+    },
+    {
+      "title": "Learning to Grasp Anything by Playing with Random Toys",
+      "folder": "papers/06_Manipulation/LEGO__Learning_to_Grasp_Anything_by_Playing_with_Random_Toys",
+      "note_file": "LEGO__Learning_to_Grasp_Anything_by_Playing_with_Random_Toys.md",
+      "status": "done",
+      "arxiv": "2510.12866",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience",
+      "folder": "papers/06_Manipulation/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience",
+      "note_file": "RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience.md",
+      "status": "done",
+      "arxiv": "2608.18948",
+      "pdf_file": "",
+      "route": "Manipulation",
+      "title_cn": ""
+    },
+    {
+      "title": "Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning",
+      "folder": "papers/07_Teleoperation/Miniature_Humanoid_Tele-Loco-Manipulation_using_VR_and_RL",
+      "note_file": "Miniature_Humanoid_Tele-Loco-Manipulation_using_VR_and_RL.md",
+      "status": "done",
+      "arxiv": "2607.20399",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": ""
+    },
+    {
+      "title": "ARMOR: Egocentric Perception for Humanoid Robot Collision Avoidance and Motion Planning",
+      "folder": "papers/08_Navigation/ARMOR__Egocentric_Perception_for_Humanoid_Robot_Collision_Avoidance",
+      "note_file": "ARMOR__Egocentric_Perception_for_Humanoid_Robot_Collision_Avoidance.md",
+      "status": "done",
+      "arxiv": "2412.00396",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "HumanoidPano: Hybrid Spherical Panoramic-LiDAR Cross-Modal Perception for Humanoid Robots",
+      "folder": "papers/08_Navigation/HumanoidPano__Hybrid_Spherical_Panoramic-LiDAR_Cross-Modal_Perception",
+      "note_file": "HumanoidPano__Hybrid_Spherical_Panoramic-LiDAR_Cross-Modal_Perception.md",
+      "status": "done",
+      "arxiv": "2503.09010",
+      "pdf_file": "",
+      "route": "Navigation",
+      "title_cn": ""
+    },
+    {
+      "title": "MIDAS Hand: Modular low-Impedance Direct-drive Anthropomorphic Sensing Hand",
+      "folder": "papers/12_Hardware_Design/MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand",
+      "note_file": "MIDAS_Hand__Modular_low-Impedance_Direct-drive_Anthropomorphic_Sensing_Hand.md",
+      "status": "done",
+      "arxiv": "2607.14487",
+      "pdf_file": "",
+      "route": "硬件设计",
+      "title_cn": ""
+    },
+    {
+      "title": "Toward Humanoid Brain-Body Co-design: Joint Optimization of Control and Morphology for Fall Recovery",
+      "folder": "papers/12_Hardware_Design/RoboCraft_Humanoid_Brain-Body_Co-design_for_Fall_Recovery",
+      "note_file": "RoboCraft_Humanoid_Brain-Body_Co-design_for_Fall_Recovery.md",
+      "status": "done",
+      "arxiv": "2510.22336",
+      "pdf_file": "",
+      "route": "硬件设计",
+      "title_cn": ""
     }
   ]
 }
