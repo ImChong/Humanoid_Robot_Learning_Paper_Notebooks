@@ -41,12 +41,12 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "06_Manipulation",
-      "last_index": 577,
-      "last_title": "RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience (arXiv:2608.18948)",
-      "next_module": "07_Teleoperation",
-      "last_completed_date": "2026-08-24",
-      "note": "06_Manipulation 模块推进最新发表且尚无笔记的《RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience》(arXiv:2608.18948, 2026-08-19)；把人类操作视频改写成对齐 3D 手部状态的机器人视频，配 RoboEdit-ADC 流水线与 RoboEdit-14M 数据集。论文刚发布暂无公开代码，故无源码运行时序图。下一篇轮转到 07_Teleoperation。"
+      "last_module": "07_Teleoperation",
+      "last_index": 578,
+      "last_title": "Event-Based Upper-Body Humanoid Teleoperation Under Challenging Illumination (arXiv:2607.29227)",
+      "next_module": "08_Navigation",
+      "last_completed_date": "2026-08-25",
+      "note": "07_Teleoperation 模块推进最新发表且尚无笔记的《Event-Based Upper-Body Humanoid Teleoperation Under Challenging Illumination》(arXiv:2607.29227, 2026-07-31, Haoyu Fu、Zhou Ge 等，上海大学 × 长春理工大学)——用神经形态事件相机(Prophesee EVK4，>120dB 动态范围·异步微秒响应)替代 RGB 做上肢人-人形动作模仿，破解强逆光/<5 lux 极暗/快速运动下 RGB 过曝欠曝运动模糊「跟丢」：轻量时间面表征(5ms 窗/1ms 步长)生 256×256 稀疏张量、类 MediaPipe 3D 骨干(2.1M 参数)回归 17 关节+置信度(V2E 转 Human3.6M+DHP19 微调、TensorRT FP16 >100Hz、MPJPE 31.8mm)、头戴 IMU 重力对齐 + One-Euro 抑抖 + 置信度自适应、TWIST 因果重定向(3–5 迭代/10ms)驱 18-DoF 上半身；端到端光子到动作 23–34ms，逆光成功率 93.8%(RGB 38.6)、<5 lux 84.7%(49.2)、快速运动丢帧 2.9%(10.8)，光照良好静态 RGB 的 MPJPE 略优。论文未给出公开代码/项目页，故无源码运行时序图；含整体流程 mermaid。下一篇轮转到 08_Navigation。"
     },
     "last_summary_index": 572,
     "last_summary_date": "2026-08-19",
@@ -5795,6 +5795,16 @@
       "pdf_file": "",
       "route": "硬件设计",
       "title_cn": ""
+    },
+    {
+      "title": "Event-Based Upper-Body Humanoid Teleoperation Under Challenging Illumination",
+      "folder": "papers/07_Teleoperation/Event-Based_Upper-Body_Humanoid_Teleoperation_Under_Challenging_Illumination",
+      "note_file": "Event-Based_Upper-Body_Humanoid_Teleoperation_Under_Challenging_Illumination.md",
+      "status": "done",
+      "arxiv": "2607.29227",
+      "pdf_file": "",
+      "route": "Teleoperation",
+      "title_cn": "极端光照下的事件相机上肢人形遥操作"
     }
   ]
 }

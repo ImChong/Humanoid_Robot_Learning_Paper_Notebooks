@@ -1318,6 +1318,17 @@
     "display_name": "Manipulation",
     "papers": [
       {
+        "title": "RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience",
+        "path": "papers/06_Manipulation/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience.md",
+        "url": "/papers/06_Manipulation/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience.html",
+        "dir": "RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience",
+        "arxiv": "2608.18948",
+        "published_date_zh": "2026年8月19日（arXiv 首发）",
+        "published_date_en": "Aug 19, 2026 (arXiv 首发)",
+        "zhname": "RoboEdit：把人类操作视频改写成可规模化的机器人经验",
+        "zh_title": "RoboEdit：把人类操作视频改写成可规模化的机器人经验"
+      },
+      {
         "title": "RoboTacDex: A Dexterous Visual-Tactile-Action Dataset for Humanoid Manipulation",
         "path": "papers/06_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation.md",
         "url": "/papers/06_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation/RoboTacDex__A_Dexterous_Visual-Tactile-Action_Dataset_for_Humanoid_Manipulation.html",
@@ -1865,17 +1876,6 @@
         "published_date_en": "Apr 2024",
         "zhname": "用两只多指手学习视触觉技能",
         "zh_title": "用两只多指手学习视触觉技能"
-      },
-      {
-        "title": "RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience",
-        "path": "papers/06_Manipulation/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience.md",
-        "url": "/papers/06_Manipulation/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience.html",
-        "dir": "RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience",
-        "arxiv": "2608.18948",
-        "published_date_zh": "2026年8月19日（arXiv）",
-        "published_date_en": "Aug 19, 2026 (arXiv)",
-        "zhname": "RoboEdit：把人类操作视频改写成可规模化的机器人经验",
-        "zh_title": "RoboEdit：把人类操作视频改写成可规模化的机器人经验"
       }
     ],
     "zhname": "灵巧操作",
@@ -1896,6 +1896,17 @@
         "published_date_en": "Aug 3, 2026 (arXiv)",
         "zhname": "Teleopit：用一副 VR 头显统管身-手-头的全体感人形遥操作系统",
         "zh_title": "Teleopit：用一副 VR 头显统管身-手-头的全体感人形遥操作系统"
+      },
+      {
+        "title": "Event-Based Upper-Body Humanoid Teleoperation Under Challenging Illumination",
+        "path": "papers/07_Teleoperation/Event-Based_Upper-Body_Humanoid_Teleoperation_Under_Challenging_Illumination/Event-Based_Upper-Body_Humanoid_Teleoperation_Under_Challenging_Illumination.md",
+        "url": "/papers/07_Teleoperation/Event-Based_Upper-Body_Humanoid_Teleoperation_Under_Challenging_Illumination/Event-Based_Upper-Body_Humanoid_Teleoperation_Under_Challenging_Illumination.html",
+        "dir": "Event-Based_Upper-Body_Humanoid_Teleoperation_Under_Challenging_Illumination",
+        "arxiv": "2607.29227",
+        "published_date_zh": "2026年7月（arXiv v1，2026年7月31日）",
+        "published_date_en": "Jul 2026 (arXiv v1, Jul 31, 2026)",
+        "zhname": "极端光照下的事件相机上肢人形遥操作",
+        "zh_title": "极端光照下的事件相机上肢人形遥操作"
       },
       {
         "title": "Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning",
@@ -2191,7 +2202,6 @@
         "url": "/papers/05_Locomotion/Tac4Loco__Spatiotemporal_Plantar_Pressure_Representations_for_Humanoid_Locomotion/Tac4Loco__Spatiotemporal_Plantar_Pressure_Representations_for_Humanoid_Locomotion.html",
         "dir": "Tac4Loco__Spatiotemporal_Plantar_Pressure_Representations_for_Humanoid_Locomotion",
         "arxiv": "2608.15766",
-        "has_open_source": false,
         "published_date_zh": "2026年8月16日（arXiv v1）",
         "published_date_en": "Aug 16, 2026 (arXiv v1)",
         "zhname": "Tac4Loco：把足底压力当直接反馈的人形鲁棒行走",
