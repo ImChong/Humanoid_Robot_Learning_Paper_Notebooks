@@ -2397,6 +2397,17 @@
     "display_name": "Navigation",
     "papers": [
       {
+        "title": "HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments",
+        "path": "papers/08_Navigation/HumanoidVLN__Physics-Grounded_Simulator_and_Benchmark_for_Vision-Language_Navigation/HumanoidVLN__Physics-Grounded_Simulator_and_Benchmark_for_Vision-Language_Navigation.md",
+        "url": "/papers/08_Navigation/HumanoidVLN__Physics-Grounded_Simulator_and_Benchmark_for_Vision-Language_Navigation/HumanoidVLN__Physics-Grounded_Simulator_and_Benchmark_for_Vision-Language_Navigation.html",
+        "dir": "HumanoidVLN__Physics-Grounded_Simulator_and_Benchmark_for_Vision-Language_Navigation",
+        "arxiv": "2608.12860",
+        "published_date_zh": "2026年8月13日（arXiv v1）",
+        "published_date_en": "Aug 13, 2026 (arXiv v1)",
+        "zhname": "HumanoidVLN：面向多样人形本体的物理接地视觉-语言导航仿真器与基准",
+        "zh_title": "HumanoidVLN：面向多样人形本体的物理接地视觉-语言导航仿真器与基准"
+      },
+      {
         "title": "DA-Nav: Direction-Aware City-Scale Vision-Language Navigation",
         "path": "papers/08_Navigation/DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation/DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation.md",
         "url": "/papers/08_Navigation/DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation/DA-Nav__Direction-Aware_City-Scale_Vision-Language_Navigation.html",
