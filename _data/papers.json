@@ -2687,6 +2687,17 @@
         "zh_title": "OCELOT：面向足式机器人的纯本体感知腿部里程计与接触估计"
       },
       {
+        "title": "PRIME: Physically-consistent Robotic Inertial and Motion Estimation for Legged and Humanoid Robots",
+        "path": "papers/09_State_Estimation/PRIME__Physically-consistent_Robotic_Inertial_and_Motion_Estimation/PRIME__Physically-consistent_Robotic_Inertial_and_Motion_Estimation.md",
+        "url": "/papers/09_State_Estimation/PRIME__Physically-consistent_Robotic_Inertial_and_Motion_Estimation/PRIME__Physically-consistent_Robotic_Inertial_and_Motion_Estimation.html",
+        "dir": "PRIME__Physically-consistent_Robotic_Inertial_and_Motion_Estimation",
+        "arxiv": "2605.17681",
+        "published_date_zh": "2026年5月17日（arXiv）",
+        "published_date_en": "May 17, 2026 (arXiv)",
+        "zhname": "PRIME：面向足式与人形机器人的物理一致惯性与运动估计",
+        "zh_title": "PRIME：面向足式与人形机器人的物理一致惯性与运动估计"
+      },
+      {
         "title": "Iterated Invariant EKF for Quadruped Robot Odometry",
         "path": "papers/09_State_Estimation/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry.md",
         "url": "/papers/09_State_Estimation/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry.html",

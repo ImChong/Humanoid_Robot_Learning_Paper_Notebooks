@@ -492,13 +492,14 @@
 | 579  | [HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments](https://arxiv.org/abs/2608.12860) ✅ [笔记](08_Navigation/HumanoidVLN__Physics-Grounded_Simulator_and_Benchmark_for_Vision-Language_Navigation/HumanoidVLN__Physics-Grounded_Simulator_and_Benchmark_for_Vision-Language_Navigation.md) | 2026-08-13 | 2026-08-26 | ✅ 已总结 |
 
 
-### State Estimation（16篇）
+### State Estimation（17篇）
 
 
 | #   | 论文                                                                                                                                       | 日期      | 🌟  | 状态   |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | ---- |
 | —    | [Iterated Invariant EKF for Quadruped Robot Odometry](https://arxiv.org/abs/2604.15449) ✅ [笔记](09_State_Estimation/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry/Iterated_Invariant_EKF_for_Quadruped_Robot_Odometry.md) | 2026-04-16 | 2026-08-16 | ✅ 已总结 |
 | —    | [OCELOT: Odometry and Contact Estimation for Legged Robots](https://arxiv.org/abs/2605.21863) ✅ [笔记](09_State_Estimation/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots/OCELOT__Odometry_and_Contact_Estimation_for_Legged_Robots.md) | 2026-05-21 | 2026-08-05 | ✅ 已总结 |
+| —    | [PRIME: Physically-consistent Robotic Inertial and Motion Estimation for Legged and Humanoid Robots](https://arxiv.org/abs/2605.17681) ✅ [笔记](09_State_Estimation/PRIME__Physically-consistent_Robotic_Inertial_and_Motion_Estimation/PRIME__Physically-consistent_Robotic_Inertial_and_Motion_Estimation.md) | 2026-05-17 | 2026-08-27 | ✅ 已总结 |
 | 543  | [Learning Contact Representation for Leg Odometry](https://arxiv.org/abs/2606.05501) ✅ [笔记](09_State_Estimation/Learning_Contact_Representation_for_Leg_Odometry/Learning_Contact_Representation_for_Leg_Odometry.md) | 2026-06-03 |     | ✅ 已总结 |
 | 539  | [Adaptive Invariant Extended Kalman Filter for Legged Robot State Estimation](https://arxiv.org/abs/2510.16755) ✅ [笔记](09_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation/Adaptive_Invariant_Extended_Kalman_Filter_for_Legged_Robot_State_Estimation.md) | 2025.10 |     | ✅ 已总结 |
 | 368  | [AutoOdom: Learning Auto-regressive Proprioceptive Odometry for Legged Locomotion](https://arxiv.org/abs/2511.18857) ✅ [笔记](09_State_Estimation/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio/AutoOdom__Learning_Auto-regressive_Proprioceptive_Odometry_for_Legged_Locomotio.md)                     | 2025.11 |     | ✅ 完成 |
