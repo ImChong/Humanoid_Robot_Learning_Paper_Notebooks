@@ -1,4 +1,4 @@
-# 项目待办计划 v3：Humanoid Robot Learning Paper Notebooks
+# 项目待办计划 v3：Robot Learning Paper Notebooks
 
 > **版本**：v3（继承自 `TODO_v2.md`；v2 计划于 2026-04-19 部分执行）
 > **上一版定位**：从 5 个新分类的"骨架先覆盖"扩到 4 个剩余空分类、并把工具链补齐。

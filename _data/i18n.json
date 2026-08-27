@@ -1,19 +1,19 @@
 {
   "site_title": {
-    "en": "Humanoid Robot Learning Paper Notebooks",
-    "zh": "人形机器人学习论文笔记"
+    "en": "Robot Learning Paper Notebooks",
+    "zh": "机器人学习论文笔记"
   },
   "site_title_full": {
-    "en": "📚 Humanoid Robot Learning Paper Notebooks",
-    "zh": "📚 人形机器人学习论文笔记"
+    "en": "📚 Robot Learning Paper Notebooks",
+    "zh": "📚 机器人学习论文笔记"
   },
   "index_header_h1": {
-    "en": "Humanoid Robot Learning Paper Notebooks",
-    "zh": "人形机器人学习论文笔记"
+    "en": "Robot Learning Paper Notebooks",
+    "zh": "机器人学习论文笔记"
   },
   "index_header_p": {
-    "en": "Paper reading notes on humanoid robot reinforcement learning",
-    "zh": "人形机器人强化学习论文阅读笔记"
+    "en": "Paper reading notes on robot learning",
+    "zh": "机器人学习论文阅读笔记"
   },
   "total_papers": {
     "en": "{count} papers",

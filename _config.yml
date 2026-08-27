@@ -1,7 +1,7 @@
-title: "Humanoid Robot Learning Paper Notebooks"
-description: "人形机器人强化学习论文笔记"
+title: "Robot Learning Paper Notebooks"
+description: "机器人学习论文笔记"
 url: "https://imchong.github.io"
-baseurl: "/Humanoid_Robot_Learning_Paper_Notebooks"
+baseurl: "/Robot_Learning_Paper_Notebooks"
 
 markdown: kramdown
 kramdown:

@@ -1,11 +1,11 @@
 # 📚 每日论文阅读计划
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen.svg)](https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen.svg)](https://imchong.github.io/Robot_Learning_Paper_Notebooks/)
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](LICENSE)
 [![Papers](https://img.shields.io/badge/Papers-726-orange.svg)](papers/PROGRESS.md)
 [![Notes](https://img.shields.io/badge/Notes-330-green.svg)](papers/)
 
-人形机器人学习方向的每日论文精读笔记，逐篇部署为 [在线网页](https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/)。
+人形机器人学习方向的每日论文精读笔记，逐篇部署为 [在线网页](https://imchong.github.io/Robot_Learning_Paper_Notebooks/)。
 
 **来源**：[awesome-humanoid-robot-learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning) · **待读清单**：[papers/PROGRESS.md](papers/PROGRESS.md)
 
@@ -112,7 +112,7 @@ papers/          # 论文笔记，按方向分 14 个目录（01_基础RL … 14
                  # 另含 PROGRESS.md（全量进度表）与 todos/（开发待办）
 scripts/         # prepare_pages.py 等预处理 / 部署脚本
 _data/ _includes/ _layouts/ assets/   # Jekyll 站点数据、模板与样式
-_config.yml      # Jekyll 配置（baseurl = /Humanoid_Robot_Learning_Paper_Notebooks）
+_config.yml      # Jekyll 配置（baseurl = /Robot_Learning_Paper_Notebooks）
 ```
 
 > 协作与工程规范（Spec/TDD、Code Review、站点构建与截图验收等）见 [AGENTS.md](AGENTS.md)。

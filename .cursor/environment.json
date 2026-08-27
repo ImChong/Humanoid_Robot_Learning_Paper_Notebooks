@@ -1,11 +1,11 @@
 {
-  "name": "Humanoid Robot Learning Paper Notebooks",
+  "name": "Robot Learning Paper Notebooks",
   "install": "bash .cursor/install.sh",
   "terminals": [
     {
       "name": "jekyll-serve",
       "command": "python3 scripts/prepare_pages.py && bundle exec jekyll serve --host 0.0.0.0 --port 4000",
-      "description": "Regenerates paper front matter/_data index, then serves the site at http://localhost:4000/Humanoid_Robot_Learning_Paper_Notebooks/ (auto-rebuilds on file changes)."
+      "description": "Regenerates paper front matter/_data index, then serves the site at http://localhost:4000/Robot_Learning_Paper_Notebooks/ (auto-rebuilds on file changes)."
     }
   ],
   "ports": [

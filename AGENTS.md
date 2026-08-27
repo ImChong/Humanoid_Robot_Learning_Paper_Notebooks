@@ -108,7 +108,7 @@ pip3 install -r requirements-dev.txt
    - **站点 HTML 消毒脚本依赖**：`pip3 install -r requirements-site.txt`（与 Deploy 流程一致）。
 
 1. **Preprocess**: `python3 scripts/prepare_pages.py` (must run before Jekyll build whenever paper `.md` files change).
-2. **Serve**: `bundle exec jekyll serve --host 0.0.0.0 --port 4000` — site is at `http://localhost:4000/Humanoid_Robot_Learning_Paper_Notebooks/`.
+2. **Serve**: `bundle exec jekyll serve --host 0.0.0.0 --port 4000` — site is at `http://localhost:4000/Robot_Learning_Paper_Notebooks/`.
 3. Jekyll auto-rebuilds on file changes (LiveReload not configured; refresh browser manually).
 4. **Optional (match production HTML)**: After `bundle exec jekyll build`, run `python3 scripts/sanitize_paper_html.py _site` (install deps once with `pip3 install -r requirements-site.txt`). GitHub Pages deploy runs this automatically; `jekyll serve` alone does not.
 
@@ -123,7 +123,7 @@ pip3 install -r requirements-dev.txt
 - `python` is not symlinked on this VM — always use `python3`.
 - `bundle install` must run with `sudo` (gems install to `/var/lib/gems/`); `bundle exec jekyll ...` does NOT need sudo.
 - There is no `Gemfile.lock` committed; Bundler resolves versions fresh on each install.
-- The `baseurl` in `_config.yml` is `/Humanoid_Robot_Learning_Paper_Notebooks` — local URLs always include this prefix.
+- The `baseurl` in `_config.yml` is `/Robot_Learning_Paper_Notebooks` — local URLs always include this prefix.
 
 ### Pull Request：须附「修复页」渲染截图
 
