@@ -1,7 +1,7 @@
 [project]
-name = "humanoid-robot-learning-paper-notebooks"
+name = "robot-learning-paper-notebooks"
 version = "0.0.0"
-description = "Maintenance scripts for the Jekyll-based humanoid robot learning paper notebook site."
+description = "Maintenance scripts for the Jekyll-based robot learning paper notebook site."
 requires-python = ">=3.10"
 
 [tool.ruff]

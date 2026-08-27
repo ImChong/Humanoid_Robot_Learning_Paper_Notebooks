@@ -3,7 +3,7 @@ layout: default
 title: "Home"
 ---
 <div class="index-header">
-  <h1 data-en="📚 Humanoid Robot Learning Paper Notebooks" data-zh="📚 人形机器人学习论文笔记">📚 Humanoid Robot Learning Paper Notebooks</h1>
+  <h1 data-en="📚 {{ site.title | escape }}" data-zh="📚 {{ site.description | escape }}">📚 {{ site.title | escape }}</h1>
   {% assign paper_count = 0 %}
   {% for cat in site.data.papers %}
     {% assign cat_papers_size = cat[1].papers | size %}

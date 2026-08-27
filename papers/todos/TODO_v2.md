@@ -1,4 +1,4 @@
-# 项目待办计划 v2：Humanoid Robot Learning Paper Notebooks
+# 项目待办计划 v2：Robot Learning Paper Notebooks
 
 > **版本**：v2（继承自 `TODO_v1.md`；v1 计划于 2026-04-18 本轮执行）
 > **上一版定位**：把 `papers/` 主干从"骨架蔓生"收敛到"路线图可读"。

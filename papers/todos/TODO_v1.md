@@ -1,8 +1,8 @@
-# 项目待办计划：Humanoid Robot Learning Paper Notebooks
+# 项目待办计划：Robot Learning Paper Notebooks
 
 ## Context（背景）
 
-本项目是一个基于 Jekyll 的双语（中/英）人形机器人强化学习论文笔记站点，通过 GitHub Pages 部署到 <https://imchong.github.io/Humanoid_Robot_Learning_Paper_Notebooks/>。README 已列出明确的学习路线图（基础 RL → 精确模仿 → 风格学习 → 技能组合 → 扩散终点 → Sim-to-Real），但当前笔记完成情况与路线图仍有差距：部分路线图论文仅有骨架（🚧 标记待核对），部分旧 stub 已扩写完毕，10 个分类目录中仅 `05_Locomotion` 起步了 1 篇骨架，其余仍为空。本计划基于 git 日志、`papers/` 目录与 README 路线图对比生成，目标是把学习路线图主干补齐到"能发布"的状态，并沉淀下一步的长期扩展方向。
+本项目是一个基于 Jekyll 的双语（中/英）机器人学习论文笔记站点，通过 GitHub Pages 部署到 <https://imchong.github.io/Robot_Learning_Paper_Notebooks/>。README 已列出明确的学习路线图（基础 RL → 精确模仿 → 风格学习 → 技能组合 → 扩散终点 → Sim-to-Real），但当前笔记完成情况与路线图仍有差距：部分路线图论文仅有骨架（🚧 标记待核对），部分旧 stub 已扩写完毕，10 个分类目录中仅 `05_Locomotion` 起步了 1 篇骨架，其余仍为空。本计划基于 git 日志、`papers/` 目录与 README 路线图对比生成，目标是把学习路线图主干补齐到"能发布"的状态，并沉淀下一步的长期扩展方向。
 
 ## 当前快照（2026-04-18，复核后）
 
