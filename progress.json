@@ -41,12 +41,14 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "08_Navigation",
-      "last_index": 579,
-      "last_title": "HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments (arXiv:2608.12860)",
-      "next_module": "09_State_Estimation",
+      "last_module": "09_State_Estimation",
+      "last_index": 580,
+      "last_title": "PRIME: Physically-consistent Robotic Inertial and Motion Estimation for Legged and Humanoid Robots (arXiv:2605.17681)",
+      "next_module": "10_Sim-to-Real",
       "last_completed_date": "2026-08-26",
-      "note": "08_Navigation 模块推进最新发表且尚无笔记的《HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments》(arXiv:2608.12860, 2026-08-13, Quan-Dung Pham、Quan Nguyen 等)——把人形视觉-语言导航(VLN)真正放进物理运动闭环评测：基于 NVIDIA Isaac Sim 搭可扩展人形 VLN 仿真器与基准，底层 RL 运动策略 + 可换 PD/MPC 路径跟踪器、上层可插拔 VLN 模型(NaVILA/DualVLN/StreamVLN/JanusVLN)，覆盖 4 台人形(G1/H1/Internal-A/B，下肢 10–12 DoF、身高 1.17–1.80m)；场景取自艺术家设计与 3DGS 重建(可导航面积 >100㎡)，指令由「生成器–审阅器 + 改写器」多智能体流水线加人在环校验产出 933 条防碰撞参考轨迹(1 细粒度 + 3 粗粒度风格)。JanusVLN 平均成功率最优 43.55%/nDTW 48.38；20 集真机试点仿真↔真机导航误差强相关 r=0.935、MAD 0.68m。代码/基准/数据标注「接收后释出」，截至当前未见公开仓库，故无源码运行时序图；含整体流程 mermaid。下一篇轮转到 09_State_Estimation。"
+      "note": "08_Navigation 模块推进最新发表且尚无笔记的《HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments》(arXiv:2608.12860, 2026-08-13, Quan-Dung Pham、Quan Nguyen 等)——把人形视觉-语言导航(VLN)真正放进物理运动闭环评测：基于 NVIDIA Isaac Sim 搭可扩展人形 VLN 仿真器与基准，底层 RL 运动策略 + 可换 PD/MPC 路径跟踪器、上层可插拔 VLN 模型(NaVILA/DualVLN/StreamVLN/JanusVLN)，覆盖 4 台人形(G1/H1/Internal-A/B，下肢 10–12 DoF、身高 1.17–1.80m)；场景取自艺术家设计与 3DGS 重建(可导航面积 >100㎡)，指令由「生成器–审阅器 + 改写器」多智能体流水线加人在环校验产出 933 条防碰撞参考轨迹(1 细粒度 + 3 粗粒度风格)。JanusVLN 平均成功率最优 43.55%/nDTW 48.38；20 集真机试点仿真↔真机导航误差强相关 r=0.935、MAD 0.68m。代码/基准/数据标注「接收后释出」，截至当前未见公开仓库，故无源码运行时序图；含整体流程 mermaid。下一篇轮转到 09_State_Estimation。",
+      "last_date": "2026-08-27",
+      "next_candidate": null
     },
     "last_summary_index": 572,
     "last_summary_date": "2026-08-19",
