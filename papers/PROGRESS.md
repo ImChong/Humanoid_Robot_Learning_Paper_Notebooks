@@ -536,7 +536,7 @@
 | 385  | [DiffCoTune: Differentiable Co-Tuning for Cross-domain Robot Control](https://arxiv.org/abs/2505.24068)                                        | 2025.05 |     | ⏳ 待读 |
 | 385a | [Sampling-Based System Identification with Active Exploration for Legged Robot Sim2Real Learning](https://arxiv.org/abs/2505.14266) ✅ [笔记](10_Sim-to-Real/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration/SPI-Active__Sampling-Based_System_Identification_with_Active_Exploration.md) | 2025.05 | 🌟 | ✅ 已总结 |
 | 386  | [Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection](https://arxiv.org/abs/2504.06585) ✅ [笔记](10_Sim-to-Real/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection/Sim-to-Real_Humanoid_Locomotion_via_Joint_Torque_Space_Perturbation_Injection.md) | 2025.04 |     | ✅ 已总结 |
-| 387  | [Bridging the Sim-to-Real Gap for Athletic Loco-Manipulation](https://arxiv.org/abs/2502.10894)                                                | 2025.02 |     | ⏳ 待读 |
+| 387  | [Bridging the Sim-to-Real Gap for Athletic Loco-Manipulation](https://arxiv.org/abs/2502.10894) ✅ [笔记](10_Sim-to-Real/Bridging_the_Sim-to-Real_Gap_for_Athletic_Loco-Manipulation/Bridging_the_Sim-to-Real_Gap_for_Athletic_Loco-Manipulation.md) | 2025.02 | 🌟 | ✅ 已总结 |
 | 388  | [Learning Agile and Dynamic Motor Skills for Legged Robots](https://arxiv.org/abs/1901.08652)                                                  | 2019.01 |     | ⏳ 待读 |
 
 
