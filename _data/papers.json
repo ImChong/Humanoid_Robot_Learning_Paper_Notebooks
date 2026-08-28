@@ -2955,6 +2955,18 @@
         "published_date_en": "Apr 9, 2025 (arXiv v1)",
         "zhname": "在关节力矩空间注入「状态相关随机扰动」，逼策略学会扛住域随机化覆盖不到的现实差",
         "zh_title": "在关节力矩空间注入「状态相关随机扰动」，逼策略学会扛住域随机化覆盖不到的现实差"
+      },
+      {
+        "title": "Bridging the Sim-to-Real Gap for Athletic Loco-Manipulation",
+        "path": "papers/10_Sim-to-Real/Bridging_the_Sim-to-Real_Gap_for_Athletic_Loco-Manipulation/Bridging_the_Sim-to-Real_Gap_for_Athletic_Loco-Manipulation.md",
+        "url": "/papers/10_Sim-to-Real/Bridging_the_Sim-to-Real_Gap_for_Athletic_Loco-Manipulation/Bridging_the_Sim-to-Real_Gap_for_Athletic_Loco-Manipulation.html",
+        "dir": "Bridging_the_Sim-to-Real_Gap_for_Athletic_Loco-Manipulation",
+        "arxiv": "2502.10894",
+        "has_open_source": true,
+        "published_date_zh": "2025年2月15日（arXiv v1）",
+        "published_date_en": "Feb 15, 2025 (arXiv v1)",
+        "zhname": "UAN：面向竞技型运动操作的 Sim-to-Real 无监督执行器网络",
+        "zh_title": "UAN：面向竞技型运动操作的 Sim-to-Real 无监督执行器网络"
       }
     ],
     "subtitle": "Core theory and algorithms are under 01 Foundational RL (Domain Randomization, LCP). This category will host Sim-to-Real-specific works (Real-to-Sim, ADR, Privileged Learning, etc.).",
