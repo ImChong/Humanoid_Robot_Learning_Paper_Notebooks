@@ -3122,6 +3122,18 @@
     "display_name": "Simulation Benchmark",
     "papers": [
       {
+        "title": "CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators",
+        "path": "papers/11_Simulation_Benchmark/CLAP__Cross-Embodiment_Video_World_Models_are_Zero-Shot_Physical_Simulators/CLAP__Cross-Embodiment_Video_World_Models_are_Zero-Shot_Physical_Simulators.md",
+        "url": "/papers/11_Simulation_Benchmark/CLAP__Cross-Embodiment_Video_World_Models_are_Zero-Shot_Physical_Simulators/CLAP__Cross-Embodiment_Video_World_Models_are_Zero-Shot_Physical_Simulators.html",
+        "dir": "CLAP__Cross-Embodiment_Video_World_Models_are_Zero-Shot_Physical_Simulators",
+        "arxiv": "2608.27406",
+        "has_open_source": true,
+        "published_date_zh": "2026年8月27日（arXiv v1）",
+        "published_date_en": "Aug 27, 2026 (arXiv v1)",
+        "zhname": "CLAP：跨本体视频世界模型即零样本物理仿真器",
+        "zh_title": "CLAP：跨本体视频世界模型即零样本物理仿真器"
+      },
+      {
         "title": "ThorArena: Benchmarking Humanoid Physical Interaction with Human Motion-Force Demonstrations",
         "path": "papers/11_Simulation_Benchmark/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations.md",
         "url": "/papers/11_Simulation_Benchmark/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations/ThorArena__Benchmarking_Humanoid_Physical_Interaction_with_Motion-Force_Demonstrations.html",
