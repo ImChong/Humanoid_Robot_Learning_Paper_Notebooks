@@ -41,18 +41,18 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "11_Simulation_Benchmark",
-      "last_index": 582,
-      "last_title": "CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators (arXiv:2608.27406)",
-      "next_module": "12_Hardware_Design",
-      "last_completed_date": "2026-08-29",
-      "note": "11_Simulation_Benchmark 模块推进最新发表且尚无笔记的《CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators》(arXiv:2608.27406, 2026-08-27, Kechen Liu、Ola Shorinwa)——最强动作条件视频模型都被绑死在单一机器人本体、用不上占比最大却无动作标签的人类视频；CLAP 洞见「物理规律与谁在动无关」，把动作条件视频生成扩展到跨人/机器人本体训练：用三种表征调和异构动作空间——末端位姿 EE(7 维+夹爪，跨本体通用可部署)、潜在动作 LAM(自监督 32 维，让无标注视频也能作为动作条件)、语言(CLIP 文本)；课程式两阶段先用潜在动作在无标注跨本体视频上学通用物理先验，再接地到 EE 动作空间做零样本部署。SVD 式 UNet 骨架，训练于 OXE+EgoDex，覆盖跨本体/DROID/Bridge/双臂 YAM/G1 人形。在 DROID 用更少领域内样本匹配甚至超过单本体模型，少样本自适应进一步放大优势，支持推理期跨策略规划把世界模型当零样本物理仿真器提升真机基线。含整体流程 mermaid + 源码运行时序图(依据开源仓库 omni-CLAP/clap)。🌟 全部代码与模型开源，项目页 omni-clap.github.io。下一篇轮转到 12_Hardware_Design。",
-      "last_date": "2026-08-29",
+      "last_module": "12_Hardware_Design",
+      "last_index": 583,
+      "last_title": "Embracing Evolution: A Call for Body-Control Co-Design in Embodied Humanoid Robot (arXiv:2510.03081)",
+      "next_module": "13_Physics-Based_Animation",
+      "last_completed_date": "2026-08-30",
+      "note": "12_Hardware_Design 模块推进最新发表且尚无笔记的立场/展望论文《Embracing Evolution: A Call for Body-Control Co-Design in Embodied Humanoid Robot》(arXiv:2510.03081, 2025-10-03, Guiliang Liu、Bo Yue、Yi Jin Kim、Kui Jia)——反对「固定身体、只学控制」，借生物进化视角主张让机械形态(身体)与控制策略(大脑)在同一循环协同进化，并给出联合优化不劣于分步优化的论证。三条可落地方法路线：受约束的策略性探索(结构搜索建模为 MDP + 贝叶斯/UCB + 有界设计空间)、Sim2Real 评估范式(MuJoCo/Isaac Gym + 域随机化 + 高保真仿真器 + 世界函数模型)、元策略学习(目标条件策略跨形态泛化)。三视角(方法论/应用/社区)论证必要性，并给短期(形态表征/标准化基准/设计感知策略)与长期(结合 WFM 缩小 Sim2Real、推理+动作+形态联合优化)研究议程。与 RoboCraft(2510.22336)互为方法论宣言与实验落地。含整体流程 mermaid；立场论文无公开代码，故无源码运行时序图。下一篇轮转到 13_Physics-Based_Animation。",
+      "last_date": "2026-08-30",
       "next_candidate": null
     },
-    "last_summary_index": 572,
-    "last_summary_date": "2026-08-19",
-    "last_summary_title": "Handroid: Bridging Dexterous Hand and Humanoid",
+    "last_summary_index": 583,
+    "last_summary_date": "2026-08-30",
+    "last_summary_title": "Embracing Evolution: A Call for Body-Control Co-Design in Embodied Humanoid Robot",
     "next_summary_index": null,
     "log": [
       {
@@ -1440,9 +1440,18 @@
         "source_repo": "https://github.com/midas-hand-org",
         "project_page": "https://midas-hand.com",
         "source": "🌟 开源(CC BY 4.0) · 直驱+低反驱扭矩+分布式触觉的仿人灵巧手 · 16 DoF(13 主动)/283 三轴 taxel/700g/BoM<3000美元/3D打印<3h装配 · current-based 位置控制(模式5)接触顺从 · 开源四件套 api/mujoco/retargeter/teleop(MediaPipe→重定向→API,50Hz) · UCLA RoMeLa(Dennis Hong) · 含整体流程 mermaid + 源码运行时序图 · 模块轮转（11_Simulation_Benchmark → 12_Hardware_Design）"
+      },
+      {
+        "date": "2026-08-30",
+        "index": 583,
+        "title": "Embracing Evolution: A Call for Body-Control Co-Design in Embodied Humanoid Robot",
+        "folder": "papers/12_Hardware_Design/Embracing_Evolution_A_Call_for_Body-Control_Co-Design_in_Embodied_Humanoid_Robot",
+        "module": "12_Hardware_Design",
+        "arxiv": "2510.03081",
+        "has_open_source": false
       }
     ],
-    "last_completed_index": 565,
+    "last_completed_index": 583,
     "next_index": null
   },
   "papers": [
