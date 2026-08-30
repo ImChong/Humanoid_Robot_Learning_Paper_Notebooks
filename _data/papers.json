@@ -3112,6 +3112,17 @@
         "published_date_en": "Oct 25, 2025 (arXiv v1); Nov 5, 2025 (v2)",
         "zhname": "RoboCraft：面向摔倒恢复的人形机器人脑-体协同设计",
         "zh_title": "RoboCraft：面向摔倒恢复的人形机器人脑-体协同设计"
+      },
+      {
+        "title": "Embracing Evolution: A Call for Body-Control Co-Design in Embodied Humanoid Robot",
+        "path": "papers/12_Hardware_Design/Embracing_Evolution_A_Call_for_Body-Control_Co-Design_in_Embodied_Humanoid_Robot/Embracing_Evolution_A_Call_for_Body-Control_Co-Design_in_Embodied_Humanoid_Robot.md",
+        "url": "/papers/12_Hardware_Design/Embracing_Evolution_A_Call_for_Body-Control_Co-Design_in_Embodied_Humanoid_Robot/Embracing_Evolution_A_Call_for_Body-Control_Co-Design_in_Embodied_Humanoid_Robot.html",
+        "dir": "Embracing_Evolution_A_Call_for_Body-Control_Co-Design_in_Embodied_Humanoid_Robot",
+        "arxiv": "2510.03081",
+        "published_date_zh": "2025年10月3日（arXiv v1）",
+        "published_date_en": "Oct 3, 2025 (arXiv v1)",
+        "zhname": "拥抱进化：面向具身人形机器人的「身体-控制」协同设计倡议",
+        "zh_title": "拥抱进化：面向具身人形机器人的「身体-控制」协同设计倡议"
       }
     ],
     "zhname": "硬件设计",
