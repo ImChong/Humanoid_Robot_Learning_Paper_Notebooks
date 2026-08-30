@@ -98,7 +98,7 @@ arxiv: "2510.03081"
 
 ## 🗺️ 论文内容流程图
 
-```mermaid
+<div class="mermaid">
 flowchart TD
     A["现状：固定身体 · 只学控制<br/>性能被形态天花板锁死"] --> B{"核心主张<br/>身体-控制协同进化 Co-Design"}
     B --> C["统一形式化<br/>max_ψ max_π 𝒥(π, ℳ_ψ)  s.t. f_c(ψ)≤ε"]
@@ -123,7 +123,7 @@ flowchart TD
 
     F1 --> G["愿景：可自我进化的<br/>下一代通用人形具身智能"]
     F2 --> G
-```
+</div>
 
 ---
 
