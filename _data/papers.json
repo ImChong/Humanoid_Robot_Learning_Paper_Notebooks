@@ -3561,6 +3561,17 @@
         "published_date_en": "2010 (SIGGRAPH 2010 / ACM TOG 29 (4))",
         "zhname": "保持空间关系的角色运动适配",
         "zh_title": "保持空间关系的角色运动适配"
+      },
+      {
+        "title": "Humanoid Robot Acrobatics Utilizing Complete Articulated Rigid Body Dynamics",
+        "path": "papers/13_Physics-Based_Animation/Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics/Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics.md",
+        "url": "/papers/13_Physics-Based_Animation/Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics/Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics.html",
+        "dir": "Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics",
+        "arxiv": "2508.08258",
+        "published_date_zh": "2025年8月（arXiv v1）",
+        "published_date_en": "Aug 2025 (arXiv v1)",
+        "zhname": "利用完整多刚体动力学的人形机器人杂技动作",
+        "zh_title": "利用完整多刚体动力学的人形机器人杂技动作"
       }
     ],
     "zhname": "物理动画",

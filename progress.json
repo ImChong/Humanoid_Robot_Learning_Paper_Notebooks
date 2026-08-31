@@ -41,18 +41,18 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "12_Hardware_Design",
-      "last_index": 583,
-      "last_title": "Embracing Evolution: A Call for Body-Control Co-Design in Embodied Humanoid Robot (arXiv:2510.03081)",
-      "next_module": "13_Physics-Based_Animation",
-      "last_completed_date": "2026-08-30",
-      "note": "12_Hardware_Design 模块推进最新发表且尚无笔记的立场/展望论文《Embracing Evolution: A Call for Body-Control Co-Design in Embodied Humanoid Robot》(arXiv:2510.03081, 2025-10-03, Guiliang Liu、Bo Yue、Yi Jin Kim、Kui Jia)——反对「固定身体、只学控制」，借生物进化视角主张让机械形态(身体)与控制策略(大脑)在同一循环协同进化，并给出联合优化不劣于分步优化的论证。三条可落地方法路线：受约束的策略性探索(结构搜索建模为 MDP + 贝叶斯/UCB + 有界设计空间)、Sim2Real 评估范式(MuJoCo/Isaac Gym + 域随机化 + 高保真仿真器 + 世界函数模型)、元策略学习(目标条件策略跨形态泛化)。三视角(方法论/应用/社区)论证必要性，并给短期(形态表征/标准化基准/设计感知策略)与长期(结合 WFM 缩小 Sim2Real、推理+动作+形态联合优化)研究议程。与 RoboCraft(2510.22336)互为方法论宣言与实验落地。含整体流程 mermaid；立场论文无公开代码，故无源码运行时序图。下一篇轮转到 13_Physics-Based_Animation。",
-      "last_date": "2026-08-30",
+      "last_module": "13_Physics-Based_Animation",
+      "last_index": 455,
+      "last_title": "Humanoid Robot Acrobatics Utilizing Complete Articulated Rigid Body Dynamics (arXiv:2508.08258)",
+      "next_module": "14_Human_Motion",
+      "last_completed_date": "2026-08-31",
+      "note": "13_Physics-Based_Animation 模块推进最新发表且尚无笔记的论文《Humanoid Robot Acrobatics Utilizing Complete Articulated Rigid Body Dynamics》(arXiv:2508.08258, 2025-08, Gerald Brantner)——本模块理论上今天该轮到的最新论文 InterPrior(2602.06035) 已有笔记(2026-06-27 完成)，按「已有内容则跳过」规则顺延到下一篇最新且无笔记者。让人形做空翻/转体这类高动态杂技，难在起跳-腾空-落地全程强非线性；传统做法把机器人简化成质点/单刚体或线性化动力学，会丢掉「腾空改构型即可改转速」这一关键物理。本文坚持在完整多刚体动力学上求解：①模型抽象 SSDP(Strangely Supported Deformable Potato)把整机聚合成「总质量/质心不变、但转动惯量随构型可变形」的等效单刚体、支撑与惯量解耦，兼得低维好优化与不丢真实惯量；②三相轨迹优化(IPOPT)——起跳 min Σ接触力²(摩擦锥/CoP/质心路径,变量仅质心+角动量+接触力)、腾空角动量守恒 h=I·ζ̇=const 并惯量塑形定落地朝向、落地接触力耗散能量;③分层操作空间全身控制 OPWBC(任务层质心/角动量 + 约束层关节限位与 Firas 避碰 + 姿态层零空间);④腾空控制器用惯量雅可比 J_I=∂I/∂q「改构型→改惯量→改转速」补偿起跳误差。MuJoCo 3.2·24DoF(18 关节+浮动基)·1ms 完成箱跳/360°前空翻(带避碰)/180°转体跳,50 次试验质心落地误差 0.888cm、朝向误差 0.094°。纯模型驱动/可解释,与 RL 空翻跑酷路线互补。含整体流程 mermaid;论文未给出公开代码/项目页,故无源码运行时序图。下一篇轮转到 14_Human_Motion。",
+      "last_date": "2026-08-31",
       "next_candidate": null
     },
-    "last_summary_index": 583,
-    "last_summary_date": "2026-08-30",
-    "last_summary_title": "Embracing Evolution: A Call for Body-Control Co-Design in Embodied Humanoid Robot",
+    "last_summary_index": 455,
+    "last_summary_date": "2026-08-31",
+    "last_summary_title": "Humanoid Robot Acrobatics Utilizing Complete Articulated Rigid Body Dynamics",
     "next_summary_index": null,
     "log": [
       {
@@ -1449,9 +1449,18 @@
         "module": "12_Hardware_Design",
         "arxiv": "2510.03081",
         "has_open_source": false
+      },
+      {
+        "date": "2026-08-31",
+        "index": 455,
+        "title": "Humanoid Robot Acrobatics Utilizing Complete Articulated Rigid Body Dynamics",
+        "folder": "papers/13_Physics-Based_Animation/Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics",
+        "module": "13_Physics-Based_Animation",
+        "arxiv": "2508.08258",
+        "has_open_source": false
       }
     ],
-    "last_completed_index": 583,
+    "last_completed_index": 455,
     "next_index": null
   },
   "papers": [
@@ -5826,6 +5835,26 @@
       "pdf_file": "",
       "route": "Navigation",
       "title_cn": "HumanoidVLN：面向多样人形本体的物理接地视觉-语言导航仿真器与基准"
+    },
+    {
+      "title": "Embracing Evolution: A Call for Body-Control Co-Design in Embodied Humanoid Robot",
+      "folder": "papers/12_Hardware_Design/Embracing_Evolution_A_Call_for_Body-Control_Co-Design_in_Embodied_Humanoid_Robot",
+      "note_file": "Embracing_Evolution_A_Call_for_Body-Control_Co-Design_in_Embodied_Humanoid_Robot.md",
+      "status": "done",
+      "arxiv": "2510.03081",
+      "pdf_file": "",
+      "route": "硬件设计",
+      "title_cn": ""
+    },
+    {
+      "title": "Humanoid Robot Acrobatics Utilizing Complete Articulated Rigid Body Dynamics",
+      "folder": "papers/13_Physics-Based_Animation/Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics",
+      "note_file": "Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics.md",
+      "status": "done",
+      "arxiv": "2508.08258",
+      "pdf_file": "",
+      "route": "物理动画",
+      "title_cn": ""
     }
   ]
 }
