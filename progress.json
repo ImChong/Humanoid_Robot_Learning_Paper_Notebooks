@@ -41,18 +41,18 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "13_Physics-Based_Animation",
-      "last_index": 455,
-      "last_title": "Humanoid Robot Acrobatics Utilizing Complete Articulated Rigid Body Dynamics (arXiv:2508.08258)",
-      "next_module": "14_Human_Motion",
-      "last_completed_date": "2026-08-31",
-      "note": "13_Physics-Based_Animation 模块推进最新发表且尚无笔记的论文《Humanoid Robot Acrobatics Utilizing Complete Articulated Rigid Body Dynamics》(arXiv:2508.08258, 2025-08, Gerald Brantner)——本模块理论上今天该轮到的最新论文 InterPrior(2602.06035) 已有笔记(2026-06-27 完成)，按「已有内容则跳过」规则顺延到下一篇最新且无笔记者。让人形做空翻/转体这类高动态杂技，难在起跳-腾空-落地全程强非线性；传统做法把机器人简化成质点/单刚体或线性化动力学，会丢掉「腾空改构型即可改转速」这一关键物理。本文坚持在完整多刚体动力学上求解：①模型抽象 SSDP(Strangely Supported Deformable Potato)把整机聚合成「总质量/质心不变、但转动惯量随构型可变形」的等效单刚体、支撑与惯量解耦，兼得低维好优化与不丢真实惯量；②三相轨迹优化(IPOPT)——起跳 min Σ接触力²(摩擦锥/CoP/质心路径,变量仅质心+角动量+接触力)、腾空角动量守恒 h=I·ζ̇=const 并惯量塑形定落地朝向、落地接触力耗散能量;③分层操作空间全身控制 OPWBC(任务层质心/角动量 + 约束层关节限位与 Firas 避碰 + 姿态层零空间);④腾空控制器用惯量雅可比 J_I=∂I/∂q「改构型→改惯量→改转速」补偿起跳误差。MuJoCo 3.2·24DoF(18 关节+浮动基)·1ms 完成箱跳/360°前空翻(带避碰)/180°转体跳,50 次试验质心落地误差 0.888cm、朝向误差 0.094°。纯模型驱动/可解释,与 RL 空翻跑酷路线互补。含整体流程 mermaid;论文未给出公开代码/项目页,故无源码运行时序图。下一篇轮转到 14_Human_Motion。",
-      "last_date": "2026-08-31",
+      "last_module": "14_Human_Motion",
+      "last_index": 580,
+      "last_title": "AnchorRoute: Human Motion Synthesis with Interval-Routed Sparse Control (arXiv:2605.14716)",
+      "next_module": "04_Loco-Manipulation_and_WBC",
+      "last_completed_date": "2026-09-01",
+      "note": "14_Human_Motion 模块推进最新发表且尚无笔记的论文《AnchorRoute: Human Motion Synthesis with Interval-Routed Sparse Control》(arXiv:2605.14716, 2026-05, Pengcheng Fang 等)——本模块原列表内的人体动作合成/重建论文均已有笔记，按「已有内容则跳过」规则，沿用前几次（ARDY/MoGeFlow/UniMoFlow）自 arXiv 补录最新同主题论文的做法，选此篇尚无笔记者。稀疏锚点(几个根位置/平面轨迹采样/身体点目标)给人体动作创作一个紧凑接口，难在既要满足稀疏空间约束又不破坏预训练文本到动作先验的质量。AnchorRoute 两段式：①生成阶段把锚点转成条件特征、经 AnchorKV(每层低秩投影出的额外键/值)注入一个完全冻结的 Transition Masked Diffusion 文本到动作先验，并用双上下文(文本语义/锚点空间)分离条件，只训 1.2M 参数即得稀疏空间控制、几乎不损生成质量；②生成后用 RouteSolver 把每个锚点当残差评估、用锚点时间戳划出精修区间，再把优化更新投影到区间定义的分段仿射基上、按残差活性加权，做局部可控强度的残差精修(只更新软 token、带信赖域约束)。支持 root-3D/planar-root/body-point 三种控制。HumanML3D 上六点关键关节设置 AnchorRoute+RS500 控制误差 0.019/FID 0.115/Top-3 R-Prec 0.792 均优于 SFControl；AnchorKV(1.2M)优于 ControlNet 式(30M)。含整体流程 mermaid；论文未给出公开代码/项目页，故无源码运行时序图。下一篇轮转回到 04_Loco-Manipulation_and_WBC。",
+      "last_date": "2026-09-01",
       "next_candidate": null
     },
-    "last_summary_index": 455,
-    "last_summary_date": "2026-08-31",
-    "last_summary_title": "Humanoid Robot Acrobatics Utilizing Complete Articulated Rigid Body Dynamics",
+    "last_summary_index": 580,
+    "last_summary_date": "2026-09-01",
+    "last_summary_title": "AnchorRoute: Human Motion Synthesis with Interval-Routed Sparse Control",
     "next_summary_index": null,
     "log": [
       {

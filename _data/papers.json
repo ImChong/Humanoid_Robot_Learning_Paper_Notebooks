@@ -3553,16 +3553,6 @@
         "zh_title": "SimGenHOI：用生成建模 + 强化学习做物理真实的全身人-物交互"
       },
       {
-        "title": "Spatial Relationship Preserving Character Motion Adaptation",
-        "path": "papers/13_Physics-Based_Animation/Spatial_Relationship_Preserving_Character_Motion_Adaptation/Spatial_Relationship_Preserving_Character_Motion_Adaptation.md",
-        "url": "/papers/13_Physics-Based_Animation/Spatial_Relationship_Preserving_Character_Motion_Adaptation/Spatial_Relationship_Preserving_Character_Motion_Adaptation.html",
-        "dir": "Spatial_Relationship_Preserving_Character_Motion_Adaptation",
-        "published_date_zh": "2010 年（SIGGRAPH 2010 / ACM TOG 29（4））",
-        "published_date_en": "2010 (SIGGRAPH 2010 / ACM TOG 29 (4))",
-        "zhname": "保持空间关系的角色运动适配",
-        "zh_title": "保持空间关系的角色运动适配"
-      },
-      {
         "title": "Humanoid Robot Acrobatics Utilizing Complete Articulated Rigid Body Dynamics",
         "path": "papers/13_Physics-Based_Animation/Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics/Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics.md",
         "url": "/papers/13_Physics-Based_Animation/Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics/Humanoid_Robot_Acrobatics_Utilizing_Complete_Articulated_Rigid_Body_Dynamics.html",
@@ -3572,6 +3562,16 @@
         "published_date_en": "Aug 2025 (arXiv v1)",
         "zhname": "利用完整多刚体动力学的人形机器人杂技动作",
         "zh_title": "利用完整多刚体动力学的人形机器人杂技动作"
+      },
+      {
+        "title": "Spatial Relationship Preserving Character Motion Adaptation",
+        "path": "papers/13_Physics-Based_Animation/Spatial_Relationship_Preserving_Character_Motion_Adaptation/Spatial_Relationship_Preserving_Character_Motion_Adaptation.md",
+        "url": "/papers/13_Physics-Based_Animation/Spatial_Relationship_Preserving_Character_Motion_Adaptation/Spatial_Relationship_Preserving_Character_Motion_Adaptation.html",
+        "dir": "Spatial_Relationship_Preserving_Character_Motion_Adaptation",
+        "published_date_zh": "2010 年（SIGGRAPH 2010 / ACM TOG 29（4））",
+        "published_date_en": "2010 (SIGGRAPH 2010 / ACM TOG 29 (4))",
+        "zhname": "保持空间关系的角色运动适配",
+        "zh_title": "保持空间关系的角色运动适配"
       }
     ],
     "zhname": "物理动画",
@@ -3616,6 +3616,17 @@
         "published_date_en": "Jun 10, 2026 (arXiv v1)· Jun 25, 2026 (v2)",
         "zhname": "MoGeFlow：在运动码本几何上做流匹配的文本到动作生成",
         "zh_title": "MoGeFlow：在运动码本几何上做流匹配的文本到动作生成"
+      },
+      {
+        "title": "AnchorRoute: Human Motion Synthesis with Interval-Routed Sparse Control",
+        "path": "papers/14_Human_Motion/AnchorRoute__Human_Motion_Synthesis_with_Interval-Routed_Sparse_Control/AnchorRoute__Human_Motion_Synthesis_with_Interval-Routed_Sparse_Control.md",
+        "url": "/papers/14_Human_Motion/AnchorRoute__Human_Motion_Synthesis_with_Interval-Routed_Sparse_Control/AnchorRoute__Human_Motion_Synthesis_with_Interval-Routed_Sparse_Control.html",
+        "dir": "AnchorRoute__Human_Motion_Synthesis_with_Interval-Routed_Sparse_Control",
+        "arxiv": "2605.14716",
+        "published_date_zh": "2026年5月14日（arXiv v1）·2026年5月15日（v2）",
+        "published_date_en": "May 14, 2026 (arXiv v1)·May 15, 2026 (v2)",
+        "zhname": "AnchorRoute：用「区间路由的稀疏锚点」做可控人体动作合成",
+        "zh_title": "AnchorRoute：用「区间路由的稀疏锚点」做可控人体动作合成"
       },
       {
         "title": "Kimodo: Scaling Controllable Human Motion Generation",

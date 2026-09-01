@@ -720,6 +720,7 @@
 | 563  | [ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation](https://arxiv.org/abs/2607.08741) ✅ [笔记](14_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion/ARDY__Autoregressive_Diffusion_with_Hybrid_Representation_for_Interactive_Human_Motion.md) | 2026-07-09 | 🌟 | ✅ 已总结 |
 | 566  | [MoGeFlow: Flowing Through Motion Codebook Geometry for Text-to-Motion Generation](https://arxiv.org/abs/2606.11656) ✅ [笔记](14_Human_Motion/MoGeFlow__Flowing_Through_Motion_Codebook_Geometry_for_Text-to-Motion_Generation/MoGeFlow__Flowing_Through_Motion_Codebook_Geometry_for_Text-to-Motion_Generation.md) | 2026-06-25 | 🌟 | ✅ 已总结 |
 | 574  | [UniMoFlow: Grounding Instruction-Driven 3D Human Motion Editing in Generation](https://arxiv.org/abs/2608.09143) ✅ [笔记](14_Human_Motion/UniMoFlow__Grounding_Instruction-Driven_3D_Human_Motion_Editing_in_Generation/UniMoFlow__Grounding_Instruction-Driven_3D_Human_Motion_Editing_in_Generation.md) | 2026-08-10 | 🌟 | ✅ 已总结 |
+| 580  | [AnchorRoute: Human Motion Synthesis with Interval-Routed Sparse Control](https://arxiv.org/abs/2605.14716) ✅ [笔记](14_Human_Motion/AnchorRoute__Human_Motion_Synthesis_with_Interval-Routed_Sparse_Control/AnchorRoute__Human_Motion_Synthesis_with_Interval-Routed_Sparse_Control.md) | 2026-09-01 |  | ✅ 已总结 |
 
 
 ### Archived（自发现，待上游收录）
