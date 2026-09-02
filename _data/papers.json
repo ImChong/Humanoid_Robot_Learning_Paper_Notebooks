@@ -1308,6 +1308,17 @@
         "published_date_en": "Nov 6, 2025 (arXiv v1)",
         "zhname": "BFM-Zero：用无监督强化学习的前向-后向表征打造「可提示」的人形全身控制行为基础模型",
         "zh_title": "BFM-Zero：用无监督 RL 的前向-后向表征打造可提示的人形全身控制行为基础模型"
+      },
+      {
+        "title": "Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots",
+        "path": "papers/04_Loco-Manipulation_and_WBC/Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots/Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots.md",
+        "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots/Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots.html",
+        "dir": "Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots",
+        "arxiv": "2511.03996",
+        "published_date_zh": "2025年11月（arXiv v1）· 2026年8月（v2）· 发表于 Science Robotics 11，eaed1152（2026）",
+        "published_date_en": "Nov 2025 (arXiv v1)· Aug 2026 (v2)· 发表于 Science Robotics 11, eaed1152 (2026)",
+        "zhname": "视觉驱动的人形机器人反应式足球技能学习",
+        "zh_title": "视觉驱动的人形机器人反应式足球技能学习"
       }
     ],
     "zhname": "运动操作与全身控制",
