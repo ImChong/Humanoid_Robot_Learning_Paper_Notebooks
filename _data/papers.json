@@ -1315,8 +1315,8 @@
         "url": "/papers/04_Loco-Manipulation_and_WBC/Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots/Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots.html",
         "dir": "Learning_Vision-Driven_Reactive_Soccer_Skills_for_Humanoid_Robots",
         "arxiv": "2511.03996",
-        "published_date_zh": "2025年11月（arXiv v1）· 2026年8月（v2）· 发表于 Science Robotics 11，eaed1152（2026）",
-        "published_date_en": "Nov 2025 (arXiv v1)· Aug 2026 (v2)· 发表于 Science Robotics 11, eaed1152 (2026)",
+        "published_date_zh": "2025年11月（arXiv v1）· 2026年8月（v2）",
+        "published_date_en": "Nov 2025 (arXiv v1)· Aug 2026 (v2)",
         "zhname": "视觉驱动的人形机器人反应式足球技能学习",
         "zh_title": "视觉驱动的人形机器人反应式足球技能学习"
       }
@@ -2363,6 +2363,18 @@
         "published_date_en": "Jan 8, 2026 (arXiv v1)",
         "zhname": "SKATER：用轮滑「葫芦步」实现高效通行的人形机器人",
         "zh_title": "SKATER：用轮滑「葫芦步」实现高效通行的人形机器人"
+      },
+      {
+        "title": "Do You Have Freestyle? Expressive Humanoid Locomotion via Audio Control",
+        "path": "papers/05_Locomotion/Do_You_Have_Freestyle__Expressive_Humanoid_Locomotion_via_Audio_Control/Do_You_Have_Freestyle__Expressive_Humanoid_Locomotion_via_Audio_Control.md",
+        "url": "/papers/05_Locomotion/Do_You_Have_Freestyle__Expressive_Humanoid_Locomotion_via_Audio_Control/Do_You_Have_Freestyle__Expressive_Humanoid_Locomotion_via_Audio_Control.html",
+        "dir": "Do_You_Have_Freestyle__Expressive_Humanoid_Locomotion_via_Audio_Control",
+        "arxiv": "2512.23650",
+        "has_open_source": true,
+        "published_date_zh": "2025年12月29日（v1） / 2026年1月4日（v2）",
+        "published_date_en": "Dec 29, 2025 (v1) / Jan 4, 2026 (v2)",
+        "zhname": "RoboPerform：音频直驱的人形即兴表达运动",
+        "zh_title": "RoboPerform：音频直驱的人形即兴表达运动"
       },
       {
         "title": "Extreme Parkour with Legged Robots",
