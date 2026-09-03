@@ -41,18 +41,18 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "04_Loco-Manipulation_and_WBC",
-      "last_index": 84,
-      "last_title": "Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots (arXiv:2511.03996)",
-      "next_module": "05_Locomotion",
-      "last_completed_date": "2026-09-02",
-      "note": "04_Loco-Manipulation_and_WBC 模块推进最新发表且尚无笔记的论文《Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots》(arXiv:2511.03996, 2025-11 v1 / 2026-08 v2, 发表于 Science Robotics 2026, 清华 Mingguo Zhao 组 × 字节跳动, Booster T1)——本模块 arXiv 更新的多篇 WBC/loco-manip 论文已有笔记, 按「已有内容则跳过」规则顺延到本篇最新且无笔记者(PROGRESS 第 84 项)。人形踢球比的是「看得准+反应快」, 但真机单目相机视场窄、有噪声还会漏检, 传统「检测→估计→规划」两段式管线误差累积、响应慢。本文用单一端到端 RL 策略把视觉感知直接耦进全身控制, 端到端学出找球/追球/多方向踢球这套反应式技能。核心创新是虚拟感知系统: 在 Isaac Gym 里按真机相机特性污染球观测——FOV 视锥裁剪(H87°/V58°)、随距离衰减漏检(p≈2.475−0.225·dist)、距离相关高斯噪声(σ≈0.149+0.124·dist)、每2步更新+随机延迟+约1%偶发误检——把感知不确定性写进训练分布, 逼出主动转头找球与抗噪行为。编码器把50帧带噪历史压成64维嵌入、解码器重建特权真值状态(真球位/球速/基座线速度/外力)做隐式在线状态估计; AMP 判别器给风格奖励(WGAN-GP 梯度惩罚)保证动作自然; 双 Critic 非对称结构分别评估任务奖励与风格奖励; PPO+对称损失+重建损失联合优化。Actor 含头部2DoF可主动控制视线、15维动作、8192 env、50Hz 控制。球位估计误差比规则基线降46%、踢球启动时间最多降64%、前场成功率约90%、真实 RoboCup 多变环境零改动运行。含整体流程 mermaid + 源码运行时序图(基于 Zenodo 开源代码 Isaac Gym+rsl_rl: train/play/play_mujoco + utils/runner·model·buffer·motion + envs/t1·T1.yaml)。下一篇轮转到 05_Locomotion。",
-      "last_date": "2026-09-02",
+      "last_module": "05_Locomotion",
+      "last_index": 200,
+      "last_title": "Do You Have Freestyle? Expressive Humanoid Locomotion via Audio Control (arXiv:2512.23650)",
+      "next_module": "06_Manipulation",
+      "last_completed_date": "2026-09-03",
+      "note": "05_Locomotion 模块推进最新发表且尚无笔记的论文《Do You Have Freestyle? Expressive Humanoid Locomotion via Audio Control》(RoboPerform, arXiv:2512.23650, v1 2025-12-29 / v2 2026-01-04, CVPR 2026 Highlight; BAAI×悉尼大学×哈工大×HKUST×SJTU×PKU; Unitree G1)。本模块 2608/2602/2601 的多篇 locomotion 论文已有笔记，按「已有内容则跳过」规则顺延到本篇最新且无笔记者(PROGRESS 第 200 项)。人天生随乐而动，但现有人形只会跑预设动作/稀疏指令，缺即兴表达；传统「音频→生成动作→重定向」两段式管线级联误差累积、延迟高、声-动割裂。RoboPerform 提出首个统一音频→运动框架，秉持「运动=内容+风格」：内容来自预训练文生动作先验 LaMP-T2M(喂固定 prompt「正在跳舞/演讲」)，风格来自音频(音乐 librosa / 语音 EMAGE-TCN 编码 → 6 层 Transformer + InfoNCE 对齐到动作 latent)，把音频当隐式风格信号直接注入、彻底取消显式动作重建。ResMoE(ΔMoE)教师 4 专家残差融合 a=w₁a₁+Σwᵢ(aᵢ−aᵢ₋₁) 保证无冗余、稳健适配多样运动模式，PPO 训练；扩散学生 MLP 逐层注入 oᵢ=Layerᵢ(oᵢ₋₁,l_motion)+α·l_audio、DAgger 蒸馏、部署 2 步 DDIM 单步 ≈5.3ms 实时。IsaacGym/Isaac Lab 训练 + MuJoCo 零样本，50Hz 策略/500Hz 底层，FineDance(7.7h 舞蹈)+BEAT2(76h 语音手势)。跟踪成功率 93%(IsaacGym)/67%(MuJoCo)、MPJPE 0.18rad、MPKPE 0.16m、音频检索 R@1 音乐 66.7%/语音 64.6%、节拍对齐 0.214，延迟远低于重定向基线。含整体流程 mermaid + 源码运行时序图(基于开源 gentlefress/RoboPerform：whole_body_tracking + scripts/rsl_rl/train·play_student + deploy TRT/mujoco/real)。下一篇轮转到 06_Manipulation。",
+      "last_date": "2026-09-03",
       "next_candidate": null
     },
-    "last_summary_index": 84,
-    "last_summary_date": "2026-09-02",
-    "last_summary_title": "Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots",
+    "last_summary_index": 200,
+    "last_summary_date": "2026-09-03",
+    "last_summary_title": "Do You Have Freestyle? Expressive Humanoid Locomotion via Audio Control",
     "next_summary_index": null,
     "log": [
       {
