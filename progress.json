@@ -41,18 +41,18 @@
         "13_Physics-Based_Animation",
         "14_Human_Motion"
       ],
-      "last_module": "05_Locomotion",
-      "last_index": 200,
-      "last_title": "Do You Have Freestyle? Expressive Humanoid Locomotion via Audio Control (arXiv:2512.23650)",
-      "next_module": "06_Manipulation",
-      "last_completed_date": "2026-09-03",
-      "note": "05_Locomotion 模块推进最新发表且尚无笔记的论文《Do You Have Freestyle? Expressive Humanoid Locomotion via Audio Control》(RoboPerform, arXiv:2512.23650, v1 2025-12-29 / v2 2026-01-04, CVPR 2026 Highlight; BAAI×悉尼大学×哈工大×HKUST×SJTU×PKU; Unitree G1)。本模块 2608/2602/2601 的多篇 locomotion 论文已有笔记，按「已有内容则跳过」规则顺延到本篇最新且无笔记者(PROGRESS 第 200 项)。人天生随乐而动，但现有人形只会跑预设动作/稀疏指令，缺即兴表达；传统「音频→生成动作→重定向」两段式管线级联误差累积、延迟高、声-动割裂。RoboPerform 提出首个统一音频→运动框架，秉持「运动=内容+风格」：内容来自预训练文生动作先验 LaMP-T2M(喂固定 prompt「正在跳舞/演讲」)，风格来自音频(音乐 librosa / 语音 EMAGE-TCN 编码 → 6 层 Transformer + InfoNCE 对齐到动作 latent)，把音频当隐式风格信号直接注入、彻底取消显式动作重建。ResMoE(ΔMoE)教师 4 专家残差融合 a=w₁a₁+Σwᵢ(aᵢ−aᵢ₋₁) 保证无冗余、稳健适配多样运动模式，PPO 训练；扩散学生 MLP 逐层注入 oᵢ=Layerᵢ(oᵢ₋₁,l_motion)+α·l_audio、DAgger 蒸馏、部署 2 步 DDIM 单步 ≈5.3ms 实时。IsaacGym/Isaac Lab 训练 + MuJoCo 零样本，50Hz 策略/500Hz 底层，FineDance(7.7h 舞蹈)+BEAT2(76h 语音手势)。跟踪成功率 93%(IsaacGym)/67%(MuJoCo)、MPJPE 0.18rad、MPKPE 0.16m、音频检索 R@1 音乐 66.7%/语音 64.6%、节拍对齐 0.214，延迟远低于重定向基线。含整体流程 mermaid + 源码运行时序图(基于开源 gentlefress/RoboPerform：whole_body_tracking + scripts/rsl_rl/train·play_student + deploy TRT/mujoco/real)。下一篇轮转到 06_Manipulation。",
-      "last_date": "2026-09-03",
+      "last_module": "06_Manipulation",
+      "last_index": 581,
+      "last_title": "AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization (arXiv:2608.29242)",
+      "next_module": "07_Teleoperation",
+      "last_completed_date": "2026-09-04",
+      "note": "06_Manipulation 模块推进最新发表且尚无笔记的论文《AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization》(arXiv:2608.29242, v1 2026-08-29 / v2 2026-09-01; 小鹏机器人 XPeng Robotics 等; 真机 IRON 人形 + 仿真 RoboCasa GR1)。本模块已有笔记者中最新为 RoboEdit(2608.18948, 08-19)，AnyWorld(08-29)更新且无笔记，故取为本篇(PROGRESS 新增第 581 项)。机器人最缺数据、人类第一人称视频却用不完，但因「人手+人视角」没法直接喂给机器人；成对人-机重定向贵且难扩，直接视频改写又把动作/相机/本体纠缠在一起不可控。AnyWorld 把一次交互因子化成三路彼此独立可替换的条件：动作渲染成像素空间骨架控制视频(本体无关，可跨形态复用)、相机用 Plücker 射线嵌入编码(把相机运动与物体/手运动分离，视角可换)、本体用目标首帧图像+文本标签指定(外观/场景/物体布局+机器人类型)。世界模型以 Wan2.1 Combined-Control(14B)潜空间扩散视频为底座，差异化注入：动作与带噪视频 latent 拼接为输入通道、相机经轻量 adapter 加到 patch embedding、本体标签经 Transformer 交叉注意力注入，推理按 V̂=G_θ(Ĩ⁰,A,C,τ) 生成机器人自视角、保留交互动力学的 rollout。两阶段训练：阶段一在 20 万段 EgoDex 人类交互片段上训 30K 步学动作-相机先验；阶段二用 EgoDex/RoboCasa GR1/IRON 非成对数据微调 5K 步把先验接地到机器人外观(无需成对人-机片段)。配套 image_editing 逆向伪配对本体编辑器(基于 Qwen-Image-Edit)造目标本体首帧。生成数据增强下游 VLA：可控性总分 0.778(基线 WAN Fun-Control 0.609)、动作对齐 0.659/相机对齐 0.789/本体正确率 0.886，RoboCasa GR1 桌面 49.8%→54.6%(+4.8pt)、真机 IRON 抓取 20%→55%(+35pt)，并支持状态条件策略修复与空间指令接地。含整体流程 mermaid + 源码运行时序图(基于开源 xpeng-robotics/AnyWorld：image_editing 本体编辑器 + world_model 因子化世界模型推理 + scripts 启动器)。下一篇轮转到 07_Teleoperation。",
+      "last_date": "2026-09-04",
       "next_candidate": null
     },
-    "last_summary_index": 200,
-    "last_summary_date": "2026-09-03",
-    "last_summary_title": "Do You Have Freestyle? Expressive Humanoid Locomotion via Audio Control",
+    "last_summary_index": 581,
+    "last_summary_date": "2026-09-04",
+    "last_summary_title": "AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization",
     "next_summary_index": null,
     "log": [
       {

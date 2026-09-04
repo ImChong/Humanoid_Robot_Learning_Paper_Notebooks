@@ -1329,6 +1329,18 @@
     "display_name": "Manipulation",
     "papers": [
       {
+        "title": "AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization",
+        "path": "papers/06_Manipulation/AnyWorld__Factorized_Egocentric_World_Models_for_Cross-Embodiment_Generalization/AnyWorld__Factorized_Egocentric_World_Models_for_Cross-Embodiment_Generalization.md",
+        "url": "/papers/06_Manipulation/AnyWorld__Factorized_Egocentric_World_Models_for_Cross-Embodiment_Generalization/AnyWorld__Factorized_Egocentric_World_Models_for_Cross-Embodiment_Generalization.html",
+        "dir": "AnyWorld__Factorized_Egocentric_World_Models_for_Cross-Embodiment_Generalization",
+        "arxiv": "2608.29242",
+        "has_open_source": true,
+        "published_date_zh": "2026年8月29日（v1） / 2026年9月1日（v2）",
+        "published_date_en": "Aug 29, 2026 (v1) / Sep 1, 2026 (v2)",
+        "zhname": "AnyWorld：可分解的第一人称世界模型，把人类视频改写成跨本体机器人经验",
+        "zh_title": "AnyWorld：可分解的第一人称世界模型，把人类视频改写成跨本体机器人经验"
+      },
+      {
         "title": "RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience",
         "path": "papers/06_Manipulation/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience.md",
         "url": "/papers/06_Manipulation/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience/RoboEdit__Turning_Human_Manipulation_Videos_into_Scalable_Robot_Experience.html",
