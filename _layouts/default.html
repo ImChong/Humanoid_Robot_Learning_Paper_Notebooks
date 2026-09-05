@@ -138,6 +138,70 @@
   </button>
   <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
+  <!-- 回到顶部：右下角 FAB，与左下角 #sidebar-toggle 关于页面中轴线镜面对称 -->
+  <button type="button" class="back-to-top" id="back-to-top"
+          data-en-aria-label="Back to top" data-zh-aria-label="回到顶部"
+          aria-label="Back to top" aria-hidden="true" tabindex="-1">
+    <span class="back-to-top-arrow" aria-hidden="true">↑</span>
+  </button>
+
+  <script>
+    /* ─── Back to Top ───────────────────────────────── */
+    (function() {
+      var btn = document.getElementById('back-to-top');
+      if (!btn) return;
+
+      var visible = false;
+      var lastProgress = -1;
+
+      function update() {
+        var doc = document.documentElement;
+        var scrolled = window.pageYOffset || doc.scrollTop || 0;
+        var scrollable = doc.scrollHeight - window.innerHeight;
+        var progress = scrollable > 0 ? Math.min(1, Math.max(0, scrolled / scrollable)) : 0;
+        // Quantise to 1% before writing back, so the ring is not repainted every frame
+        var rounded = Math.round(progress * 100) / 100;
+        if (rounded !== lastProgress) {
+          lastProgress = rounded;
+          btn.style.setProperty('--btt-progress', String(rounded));
+        }
+        // Appear after 0.6 viewport, or 35% of a short page's scroll range;
+        // pages with under 240px of scroll never get the button.
+        var shouldShow = scrollable >= 240 &&
+          scrolled > Math.min(window.innerHeight * 0.6, scrollable * 0.35);
+        if (shouldShow !== visible) {
+          visible = shouldShow;
+          btn.classList.toggle('is-visible', shouldShow);
+          btn.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
+          btn.tabIndex = shouldShow ? 0 : -1;
+        }
+      }
+
+      var ticking = false;
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function() {
+          update();
+          ticking = false;
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+
+      btn.addEventListener('click', function() {
+        var reduce = false;
+        try {
+          reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        } catch (e) { /* old browsers without matchMedia: keep smooth scrolling */ }
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      });
+
+      update();
+    })();
+  </script>
+
   <script>
     /* ─── Sidebar Logic ────────────────────────────────────── */
     (function() {
