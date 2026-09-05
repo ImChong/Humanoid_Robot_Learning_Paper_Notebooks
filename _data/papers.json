@@ -2210,6 +2210,18 @@
         "published_date_en": "Jun 2024 (arXiv)",
         "zhname": "HumanPlus：人形机器人对人类的影子跟随与模仿",
         "zh_title": "HumanPlus：人形机器人对人类的影子跟随与模仿"
+      },
+      {
+        "title": "Deep Imitation Learning for Humanoid Loco-manipulation through Human Teleoperation",
+        "path": "papers/07_Teleoperation/TRILL__Deep_Imitation_Learning_for_Humanoid_Loco-manipulation_through_Human_Teleoperation/TRILL__Deep_Imitation_Learning_for_Humanoid_Loco-manipulation_through_Human_Teleoperation.md",
+        "url": "/papers/07_Teleoperation/TRILL__Deep_Imitation_Learning_for_Humanoid_Loco-manipulation_through_Human_Teleoperation/TRILL__Deep_Imitation_Learning_for_Humanoid_Loco-manipulation_through_Human_Teleoperation.html",
+        "dir": "TRILL__Deep_Imitation_Learning_for_Humanoid_Loco-manipulation_through_Human_Teleoperation",
+        "arxiv": "2309.01952",
+        "has_open_source": true,
+        "published_date_zh": "2023年9月（arXiv v1）· 2023年11月（v2）· IEEE-RAS Humanoids 2023",
+        "published_date_en": "Sep 2023 (arXiv v1) · Nov 2023 (v2) · IEEE-RAS Humanoids 2023",
+        "zhname": "TRILL：通过人类遥操作的人形移动操作深度模仿学习",
+        "zh_title": "TRILL：通过人类遥操作的人形移动操作深度模仿学习"
       }
     ],
     "zhname": "遥操作",
