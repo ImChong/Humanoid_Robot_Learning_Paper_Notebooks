@@ -454,7 +454,7 @@
 | 344  | [NuExo: A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots](https://arxiv.org/abs/2503.10554) | 2025.03 |     | ⏳ 待读 |
 | 345  | [Generalizable Humanoid Manipulation with 3D Diffusion Policies](https://arxiv.org/abs/2410.10803)                                                             | 2024.10 |     | ⏳ 待读 |
 | 346  | [High-Speed and Impact Resilient Teleoperation of Humanoid Robots](https://arxiv.org/abs/2409.04639v1)                                                         | 2024.09 |     | ⏳ 待读 |
-| 347  | [Deep Imitation Learning for Humanoid Loco-manipulation through Human Teleoperation](https://arxiv.org/abs/2309.01952)                                         | 2023.09 |     | ⏳ 待读 |
+| 347  | [Deep Imitation Learning for Humanoid Loco-manipulation through Human Teleoperation](https://arxiv.org/abs/2309.01952) ✅ [笔记](07_Teleoperation/TRILL__Deep_Imitation_Learning_for_Humanoid_Loco-manipulation_through_Human_Teleoperation/TRILL__Deep_Imitation_Learning_for_Humanoid_Loco-manipulation_through_Human_Teleoperation.md) | 2023.09 | 2026-09-05 | ✅ 已总结 |
 | 348  | [Teleoperation of Humanoid Robots: A Survey](https://arxiv.org/abs/2301.04317)                                                                                 | 2023.01 |     | ⏳ 待读 |
 | 349  | [iCub3 Avatar System: Enabling Remote Fully-Immersive Embodiment of Humanoid Robots](https://arxiv.org/abs/2203.06972)                                         | 2022.03 |     | ⏳ 待读 |
 | 535  | [EgoPoser: Robust Real-Time Egocentric Pose Estimation from Sparse and Intermittent Observations Everywhere](https://arxiv.org/pdf/2308.06493) 🌟              | ECCV 2024 |     | ⏳ 待读 |
